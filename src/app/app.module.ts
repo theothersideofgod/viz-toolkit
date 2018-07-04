@@ -8,6 +8,7 @@ import { MatNativeDateModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { APP_ROUTES } from './routes';
+import { ExampleModule } from '../assets/examples';
 
 import { HomepageModule } from './pages/homepage/homepage';
 import { ComponentSidenavComponent } from './pages/component-sidenav/component-sidenav';
@@ -27,9 +28,11 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatNativeDateModule,
     HttpClientModule,
+    ExampleModule,
     RouterModule.forRoot(APP_ROUTES),
     HomepageModule,
     ComponentViewerModule,
+    
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]

@@ -65,7 +65,7 @@ export class DocViewer implements OnDestroy {
   private updateDocument(document: string) {
     this._elementRef.nativeElement.innerHTML = document;
     this.textContent = this._elementRef.nativeElement.textContent;
-    this._loadComponents('material-docs-example', ExampleViewer);
+    this._loadComponents('app-docs-example', ExampleViewer);
     this._loadComponents('header-link', HeaderLink);
     this._fixFragmentUrls();
     this.contentLoaded.next();
@@ -83,7 +83,7 @@ export class DocViewer implements OnDestroy {
     // the wrong place in the DOM after switching tabs. This function is a workaround to
     // put the live examples back in the right place.
     this._clearLiveExamples();
-    this._loadComponents('material-docs-example', ExampleViewer);
+    this._loadComponents('app-docs-example', ExampleViewer);
     this._loadComponents('header-link', HeaderLink);
   }
 
