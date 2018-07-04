@@ -4,9 +4,11 @@
 /dist
 /tmp
 /out-tsc
+/libs/viz-toolkit
 
 # dependencies
 /node_modules
+yarn.lock
 
 # IDEs and editors
 /.idea
