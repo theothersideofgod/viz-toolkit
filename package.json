@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib": "ng-packagr -p libs/package.json && mkdir libs/viz-toolkit/assets && mkdir libs/viz-toolkit/assets/img && cp -r libs/assets/img/ libs/viz-toolkit/assets/img"
+    "build:lib": "ng-packagr -p libs/package.json"
   },
   "private": true,
   "dependencies": {
