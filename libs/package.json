@@ -6,6 +6,9 @@
     "lib": {
       "entryFile": "index.ts"
     },
+    "externals": {
+      "svgjs": "SVG"
+    },
     "dest": "viz-toolkit"
   }
 }

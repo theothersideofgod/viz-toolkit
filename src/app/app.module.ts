@@ -14,8 +14,7 @@ import { HomepageModule } from './pages/homepage/homepage';
 import { ComponentSidenavComponent } from './pages/component-sidenav/component-sidenav';
 import { ComponentViewerModule } from './pages/component-viewer/component-viewer';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { VizHeaderMudule } from '../../libs'
 
 @NgModule({
   declarations: [
@@ -32,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(APP_ROUTES),
     HomepageModule,
     ComponentViewerModule,
-    
+    VizHeaderMudule,
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]

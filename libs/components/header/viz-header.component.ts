@@ -1,6 +1,6 @@
 import { Input, Component, Output, EventEmitter } from "@angular/core";
-
 export type VizHeaderType = 'primary' | 'rightMenu';
+
 @Component({
   selector: 'viz-header',
   templateUrl: './viz-header.component.html',
@@ -13,7 +13,7 @@ export class VizHeaderComponent {
   @Input() userName: string;
   @Input() brandLink: String;
   @Input() svgIcon: String;
-  @Input() vizType: VizHeaderType;
+  @Input() type: VizHeaderType;
   @Output() rightBtnClick = new EventEmitter();
   @Output() hamburgerClick = new EventEmitter();
   isDrop: Boolean = false;
