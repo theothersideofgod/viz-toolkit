@@ -1,0 +1,28 @@
+:host {
+  .mat-tab-nav-bar {
+    height: 100%;
+    line-height: 100%;
+    border-bottom: none;
+    ::ng-deep {
+      .mat-tab-links {
+        height: 100%;
+        .mat-tab-link {
+          height: 100%;
+          font-size: 13px;
+          padding: 0 0 0 0;
+          margin-right: 30px;
+          min-width: 100px;
+          &.mat-tab-label-active {
+            font-weight: bold;
+            color: black;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .github-link {
+      line-height: 72px;
+      font-size: 13px;
+    }
+  }
+}

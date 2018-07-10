@@ -1,2 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'styles/material-dark.scss'
+@import 'styles/material-dark.scss';
+@font-face {
+  font-family: 'Soleto';
+  font-weight: 400;
+  src: url("./assets/fonts/SoletoRegular.eot");
+  src: url("./assets/fonts/SoletoRegular.eot") format("embedded-opentype"), url("./assets/fonts/SoletoRegular.woff2") format("woff2"), url("./assets/fonts/SoletoRegular.woff") format("woff"), url("./assets/fonts/SoletoRegular.ttf") format("truetype"), url("./assets/fonts/SoletoRegular.svg#SoletoRegular") format("svg"); }
+
+@font-face {
+  font-family: 'Soleto';
+  font-weight: 700;
+  src: url("./assets/fonts/SoletoBold.eot");
+  src: url("./assets/fonts/SoletoBold.eot") format("embedded-opentype"), url("./assets/fonts/SoletoBold.woff2") format("woff2"), url("./assets/fonts/SoletoBold.woff") format("woff"), url("./assets/fonts/SoletoBold.ttf") format("truetype"), url("./assets/fonts/SoletoBold.svg#SoletoBold") format("svg"); }
+
+@font-face {
+  font-family: 'Soleto';
+  font-weight: 200;
+  src: url("./assets/fonts/SoletoThin.eot");
+  src: url("./assets/fonts/SoletoThin.eot") format("embedded-opentype"), url("./assets/fonts/SoletoThin.woff2") format("woff2"), url("./assets/fonts/SoletoThin.woff") format("woff"), url("./assets/fonts/SoletoThin.ttf") format("truetype"), url("./assets/fonts/SoletoThin.svg#SoletoThin") format("svg"); }
+
+@font-face {
+  font-family: 'Soleto';
+  font-weight: 500;
+  src: url("./assets/fonts/SoletoMedium.eot");
+  src: url("./assets/fonts/SoletoMedium.eot") format("embedded-opentype"), url("./assets/fonts/SoletoMedium.woff2") format("woff2"), url("./assets/fonts/SoletoMedium.woff") format("woff"), url("./assets/fonts/SoletoMedium.ttf") format("truetype"), url("./assets/fonts/SoletoMedium.svg#SoletoMedium") format("svg"); }
+
+@font-face {
+  font-family: 'Soleto';
+  font-weight: 300;
+  src: url("./assets/fonts/SoletoLight.eot");
+  src: url("./assets/fonts/SoletoLight.eot") format("embedded-opentype"), url("./assets/fonts/SoletoLight.woff2") format("woff2"), url("./assets/fonts/SoletoLight.woff") format("woff"), url("./assets/fonts/SoletoLight.ttf") format("truetype"), url("./assets/fonts/SoletoLight.svg#SoletoLight") format("svg"); }
+
+@font-face {
+  font-family: 'Soleto';
+  font-style: italic;
+  src: url("./assets/fonts/SoletoItalic.eot");
+  src: url("./assets/fonts/SoletoItalic.eot") format("embedded-opentype"), url("./assets/fonts/SoletoItalic.woff2") format("woff2"), url("./assets/fonts/SoletoItalic.woff") format("woff"), url("./assets/fonts/SoletoItalic.ttf") format("truetype"), url("./assets/fonts/SoletoItalic.svg#SoletoItalic") format("svg"); }
+body {
+  margin: 0 0 0 0;
+  font-family: "Soleto", Arial, sans-serif;
+}
