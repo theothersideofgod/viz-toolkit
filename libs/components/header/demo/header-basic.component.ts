@@ -11,6 +11,7 @@ export class HeaderBasicComponent {
 	title = 'MDA Data Intake Portal';
 	brandLink = '/dashboard';
 	svgIcon = 'assets/img/vizient-logo.svg';
+	vizType = 'primary';
 
 	rightBtnOnClick() {
 		console.log('rightBtnOnClick')
