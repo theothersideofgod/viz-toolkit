@@ -1,1 +1,1 @@
-export * from './components/header/viz-header-module'
+export * from './components/header/viz-header.module'
