@@ -15,7 +15,8 @@ import { HomepageModule } from './pages/homepage/homepage';
 import { ComponentSidenavComponent } from './pages/component-sidenav/component-sidenav';
 import { ComponentViewerModule } from './pages/component-viewer/component-viewer';
 import { HttpClientModule } from '@angular/common/http';
-import { VizHeaderMudule } from 'viz-toolkit';
+// import { VizHeaderMudule } from 'viz-toolkit';
+import { VizHeaderMudule } from '../../libs';
 
 @NgModule({
   declarations: [
