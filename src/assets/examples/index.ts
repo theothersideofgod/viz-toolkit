@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonBasicComponent, ButtonBasicData } from './button-basic/button-basic.component';
 import { VizDateRangePickerMudule, VizSelectModule } from '../../../libs';
