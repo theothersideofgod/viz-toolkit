@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /libs/viz-toolkit
+/libs/node_modules
 
 # dependencies
 /node_modules
