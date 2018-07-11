@@ -15,8 +15,8 @@ import { HomepageModule } from './pages/homepage/homepage';
 import { ComponentSidenavComponent } from './pages/component-sidenav/component-sidenav';
 import { ComponentViewerModule } from './pages/component-viewer/component-viewer';
 import { HttpClientModule } from '@angular/common/http';
-import { VizHeaderMudule, VizDateRangePickerMudule, VizSelectModule } from '../../libs';
-// import { VizHeaderMudule, VizDateRangePickerMudule } from 'viz-toolkit';
+import { VizHeaderMudule } from '../../libs';
+// import { VizHeaderMudule } from 'viz-toolkit';
 
 @NgModule({
   declarations: [
@@ -33,10 +33,8 @@ import { VizHeaderMudule, VizDateRangePickerMudule, VizSelectModule } from '../.
     RouterModule.forRoot(APP_ROUTES),
     HomepageModule,
     ComponentViewerModule,
-    VizHeaderMudule,
     MaterialModule,
-    VizDateRangePickerMudule,
-    VizSelectModule
+    VizHeaderMudule,
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
