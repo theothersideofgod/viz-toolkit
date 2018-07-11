@@ -14,7 +14,7 @@
 }
 .date-range-picker {
   ::ng-deep .mat-form-field-flex {
-    width: 180px;
+    width: 100%;
   }
   @media only screen and (max-width: 600px) {
     ::ng-deep .mat-form-field-flex {
