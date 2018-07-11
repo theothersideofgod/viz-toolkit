@@ -1,24 +1,31 @@
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonBasicComponent, buttonBasicData } from './button-basic/button-basic.component';
+import { ButtonBasicComponent, ButtonBasicData } from './button-basic/button-basic.component';
+import { DatePickerBasicComponent, DatePickerBasicData } from './date-picker-basic/date-picker-basic.component'
+import { VizDateRangePickerMudule } from '../../../libs';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
     component: ButtonBasicComponent,
-    data: buttonBasicData
+    data: ButtonBasicData
+  },
+  'date-picker-basic' : {
+    component: DatePickerBasicComponent,
+    data: DatePickerBasicData
   }
 }
-
 @NgModule({
   declarations: [
-    ButtonBasicComponent
+    ButtonBasicComponent,
+    DatePickerBasicComponent,
   ],
   imports: [
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    VizDateRangePickerMudule
   ],
   providers: [],
-  entryComponents: [ButtonBasicComponent]
+  entryComponents: [ButtonBasicComponent, DatePickerBasicComponent]
 })
 export class ExampleModule { }

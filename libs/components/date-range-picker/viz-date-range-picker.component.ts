@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, Input, Pipe, PipeTransform, Optional 
 import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from "mat-range-datepicker";
 
 @Component({
-  selector: 'viz-app-date-range-picker',
+  selector: 'viz-date-range-picker',
   templateUrl: './viz-date-range-picker.component.html',
   styleUrls: ['./viz-date-range-picker.component.scss']
 })
