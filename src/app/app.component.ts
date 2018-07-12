@@ -10,19 +10,18 @@ export class AppComponent {
   options = [
     {
       "id": 1,
-      "title": "Option1"
+      "title": "Contact",
+      "link": "Contact"
     },
     {
       "id": 2,
-      "title": "Option2"
+      "title": "Vizient",
+      "link": "Vizient"
     },
     {
       "id": 3,
-      "title": "Option3"
-    },
-    {
-      "id": 4,
-      "title": "Option4"
+      "title": "Additional Brands",
+      "link": "Additional Brands"
     }
   ]
 }
