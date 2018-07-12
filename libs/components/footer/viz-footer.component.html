@@ -1,0 +1,22 @@
+<div class="footer-bar">
+  <div class="footer-wrapper">
+    <div class="footer-left">
+      <ul class="nav">
+        <li *ngFor="let brand of leftBrands">
+          <a href={{brand.link}}>{{brand.title}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <ul class="nav">
+        <li *ngFor="let brand of rightBrands">
+          <a href={{brand.link}}>{{brand.title}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-center">
+    <p>Vizient MDA</p>
+    <p>&copy; 2018 Vizient & iLabs. All Rights Reserved.</p>
+  </div>
+</div>

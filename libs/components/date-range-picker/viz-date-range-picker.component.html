@@ -1,0 +1,18 @@
+<div class="application-dropdown">
+  <form class='date-range-picker vizient-input'>
+    <mat-form-field>
+        <input matInput
+          placeholder="Date"
+          [matRangeDatepicker]="resultPicker"
+          [ngModel]="date"
+          (ngModelChange)="date = $event"
+          name="date"
+          (dateInput)="onDateInput($event)"
+          (dateChange)="onDateChange($event)">
+        <mat-range-datepicker
+          #resultPicker [rangeMode]="true" opened="">
+        </mat-range-datepicker>
+        <mat-range-datepicker-toggle matSuffix [for]="resultPicker"></mat-range-datepicker-toggle>
+    </mat-form-field>
+  </form>
+</div>

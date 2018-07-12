@@ -33,8 +33,7 @@ export class ComponentViewer implements OnDestroy {
               private router: Router,
               public docItems: DocumentationItems,
               ) {
-    // Listen to changes on the current route for the doc id (e.g. button/checkbox) and the
-    // parent route for the section (material/cdk).
+    // Listen to changes on the current route for the doc id (e.g. button/checkbox)
     combineLatest(_route.params).pipe(
         map((p: [Params, Params]) => ({id: p[0]['id']})),
         map(p => ({doc: docItems.getItemById(p.id)}),

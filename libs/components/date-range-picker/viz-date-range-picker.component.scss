@@ -1,0 +1,42 @@
+:host {
+  .mat-input-element {
+    color: black;
+  }
+  .mat-form-field {
+    width: 100%;
+    .date-range-picker .mat-form-field-flex {
+      width: 100% !important;
+      .mat-form-field-infix {
+        width: 100%;
+      }
+    }
+  }
+}
+.date-range-picker {
+  ::ng-deep .mat-form-field-flex {
+    width: 100%;
+  }
+  @media only screen and (max-width: 600px) {
+    ::ng-deep .mat-form-field-flex {
+      width: 100%;
+    }
+  }
+}
+::ng-deep {
+  .quick-select-sec {
+    .select-title {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .calendar-button-sec {
+      line-height: 84px !important;
+      padding: 4px 24px !important;
+    }
+    .mat-datepicker-content {
+      height: 501px !important;
+    }
+  }
+}

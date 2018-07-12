@@ -14,6 +14,6 @@ export class ButtonBasicComponent implements OnInit {
 
 }
 
-export const buttonBasicData = {
+export const ButtonBasicData = {
   name: 'Button'
 }

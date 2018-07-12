@@ -9,13 +9,14 @@ import { MatNativeDateModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { APP_ROUTES } from './routes';
 import { ExampleModule } from '../assets/examples';
+import { MaterialModule } from './material.module';
 
 import { HomepageModule } from './pages/homepage/homepage';
 import { ComponentSidenavComponent } from './pages/component-sidenav/component-sidenav';
 import { ComponentViewerModule } from './pages/component-viewer/component-viewer';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { VizHeaderMudule, VizFooterMudule } from '../../libs';
+// import { VizHeaderMudule, VizFooterMudule } from 'viz-toolkit';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(APP_ROUTES),
     HomepageModule,
     ComponentViewerModule,
-    
+    MaterialModule,
+    VizHeaderMudule,
+    VizFooterMudule,
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]

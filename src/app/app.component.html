@@ -1,2 +1,39 @@
+<viz-header 
+  title="Toolkit"
+  brandLink="/" 
+  type="rightMenu"
+>
+  <nav mat-tab-nav-bar class='detail-navigator pc-header'>
+    <a mat-tab-link
+      routerLink="/toolkit"
+      routerLinkActive 
+      #rla1="routerLinkActive"
+      [active]="rla1.isActive">
+      <span class="tab-item">TOOLKIT</span>
+    </a>
+    <a mat-tab-link
+      routerLink="/principles"
+      routerLinkActive 
+      #rla2="routerLinkActive"
+      [active]="rla2.isActive">
+      <span class="tab-item">PRINCIPLES</span>
+    </a>
+    <a mat-tab-link
+      routerLink="/components/button/overview"
+      routerLinkActive 
+      #rla3="routerLinkActive"
+      [active]="rla3.isActive">
+      <span class="tab-item">COMPONENTS</span>
+    </a>
+    <a mat-tab-link
+      routerLink="/documentation"
+      routerLinkActive 
+      #rla4="routerLinkActive"
+      [active]="rla4.isActive">
+      <span class="tab-item">DOCUMENTATION</span>
+    </a>
+    <a mat-button color="primary" target="_blank" class="github-link" routerLink="https://github.com/greycats/vizient-toolkit">VIEW ON GITHUB</a>
+  </nav>
+</viz-header>
 <router-outlet></router-outlet>
-
+<viz-footer [brands] = "options"></viz-footer>

@@ -22,9 +22,10 @@ const DOCS: {[key: string]: DocCategory[]} = {
       name: 'Button & Indicatiors',
       items: [
         {id: 'button', name: 'Button', examples: ['button-basic']},
+        {id: 'datepicker', name: 'DatePicker', examples: ['date-picker-basic']},
+        {id: 'select', name: 'Select', examples: ['select-basic']},
       ]
     },
-    
   ],
 };
 
