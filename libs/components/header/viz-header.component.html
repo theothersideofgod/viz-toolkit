@@ -13,8 +13,8 @@
         </a>
       </span>
     </div>
-    <div class="navbar-right" *ngIf="type === 'primary'">
-      <div class="navbar-welcome" (click)='rightBtnOnClick()'>
+    <div class="navbar-right">
+      <div class="navbar-welcome" (click)='rightBtnOnClick()' *ngIf="type === 'primary'">
         <span>Welcome, {{userName}}</span>
         <mat-icon>{{isDrop? "arrow_drop_up":"arrow_drop_down"}}</mat-icon>
       </div>
@@ -24,6 +24,8 @@
         <span class="icon-bar"></span>
       </div>
     </div>
-    <ng-content *ngIf="type === 'rightMenu'"></ng-content>
+    <div class="navbar-Menu">
+      <ng-content *ngIf="type === 'rightMenu'"></ng-content>
+    </div>
   </div>
 </header>
