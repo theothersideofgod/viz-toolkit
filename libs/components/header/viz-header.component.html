@@ -24,8 +24,8 @@
         <span class="icon-bar"></span>
       </div>
     </div>
-    <div class="navbar-Menu">
-      <ng-content *ngIf="type === 'rightMenu'"></ng-content>
+    <div class="navbar-Menu" *ngIf="type === 'rightMenu'">
+      <ng-content></ng-content>
     </div>
   </div>
 </header>
