@@ -11,7 +11,7 @@ import {
 export const APP_ROUTES: Routes = [
   {path: '', component: HomepageComponent, pathMatch: 'full', data: {}},
   {
-    path: 'components',
+    path: 'documentation',
     component: ComponentSidenavComponent,
     children: [
       {path: '', redirectTo: 'categories', pathMatch: 'full'},
