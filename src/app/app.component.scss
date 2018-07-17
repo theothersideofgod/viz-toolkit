@@ -26,4 +26,8 @@
       font-size: 13px;
     }
   }
+  .main-sec {
+    min-height: calc(100vh - 146px);
+    overflow: auto;//fix div collapse
+  }
 }
