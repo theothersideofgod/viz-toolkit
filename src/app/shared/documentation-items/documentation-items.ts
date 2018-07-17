@@ -24,6 +24,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'button', name: 'Button', examples: ['button-basic']},
         {id: 'datepicker', name: 'DatePicker', examples: ['date-picker-basic']},
         {id: 'select', name: 'Select', examples: ['select-basic']},
+        {id: 'checkbox', name: 'Checkbox', examples: ['checkbox-basic']}
       ]
     },
   ],
