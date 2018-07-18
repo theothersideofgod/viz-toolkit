@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonBasicComponent, ButtonBasicData } from './button-basic/button-basic.component';
-import * as vizModules from '../../../libs';
+import * as VizModules from '../../../libs';
 
 import { DatePickerBasicComponent, DatePickerBasicData } from './date-picker-basic/date-picker-basic.component'
 import { SelectBasicComponent, SelectBasicData } from './select-basic/select-basic.component'
@@ -42,7 +42,7 @@ export const ALL_EXAMPLE_ITEMS = {
   imports: [
     BrowserAnimationsModule,
     MaterialModule,
-    ...(Object.keys(vizModules).map(i => vizModules[i])),
+    ...(Object.keys(VizModules).map(i => VizModules[i])),
   ],
   providers: [],
   entryComponents: [
