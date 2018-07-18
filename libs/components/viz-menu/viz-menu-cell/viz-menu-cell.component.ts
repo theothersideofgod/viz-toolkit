@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'viz-menu-cell',
@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class VizMenuCellComponent implements OnInit {
 
   @Input() list
-
+  @ViewChild('testChild') testChild:ElementRef
 
   constructor() { }
 
