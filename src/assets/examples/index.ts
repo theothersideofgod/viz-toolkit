@@ -8,6 +8,7 @@ import { SelectBasicComponent, SelectBasicData } from './select-basic/select-bas
 import { CheckboxBasicComponent, CheckboxBasicData } from './checkbox-basic/checkbox-basic.component';
 import { MenuBasicComponent, MenuBasicData } from './menu-basic/menu-basic.component';
 import { FormFieldBasicComponent, FormFieldBasicData } from './form-field-basic/form-field-basic.component';
+import { RadioButtonBasicComponent, RadioButtonBasicData } from './radio-button-basic/radio-button-basic.component';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -33,6 +34,10 @@ export const ALL_EXAMPLE_ITEMS = {
   'form-field-basic': {
     component: FormFieldBasicComponent,
     data: FormFieldBasicData
+  },
+  'radio-button-basic': {
+    component: RadioButtonBasicComponent,
+    data: RadioButtonBasicData
   }
 }
 @NgModule({
@@ -42,7 +47,8 @@ export const ALL_EXAMPLE_ITEMS = {
     SelectBasicComponent,
     CheckboxBasicComponent,
     MenuBasicComponent,
-    FormFieldBasicComponent
+    FormFieldBasicComponent,
+    RadioButtonBasicComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -57,6 +63,7 @@ export const ALL_EXAMPLE_ITEMS = {
     CheckboxBasicComponent,
     MenuBasicComponent,
     FormFieldBasicComponent,
+    RadioButtonBasicComponent,
   ]
 })
 export class ExampleModule { }

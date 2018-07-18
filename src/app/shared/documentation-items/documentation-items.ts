@@ -27,6 +27,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'checkbox', name: 'Checkbox', examples: ['checkbox-basic']},
         {id: 'menu', name: 'Menu', examples: ['menu-basic']},
         {id: 'formfield', name: 'Form field', examples: ['form-field-basic']},
+        {id: 'radio', name: 'Radio button', examples: ['radio-button-basic']},
       ]
     },
   ],
