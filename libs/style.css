@@ -1,4 +1,12 @@
 .cdk-overlay-pane .mat-menu-panel{
-  background-color: red
+  padding: 0px;
+  max-width: none;
+  width: 280px;  
+}
+.cdk-overlay-pane .mat-menu-panel .mat-menu-content{
+  padding: 0px;
 }
 
+.cdk-overlay-pane .mat-menu-panel .mat-menu-content .mat-menu-item:hover{
+  color: #8667bd
+}
