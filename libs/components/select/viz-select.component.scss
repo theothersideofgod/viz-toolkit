@@ -106,6 +106,10 @@
   
   ::ng-deep{
     .mat-menu-panel.select-dropdown_menu{
-      margin-top:1px
+      margin-top:1px;
+      width: 280px;
+      .mat-menu-content{
+        padding: 0px;
+      }
     }
   }
