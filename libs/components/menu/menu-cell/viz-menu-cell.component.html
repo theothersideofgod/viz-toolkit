@@ -1,0 +1,22 @@
+<mat-menu #childMenu="matMenu" [overlapTrigger]="false">
+  <!-- iterater all child -->
+  <span *ngFor="let item of list; let i=index">
+    <!-- if has children need to add next menu -->
+    <span *ngIf="item.children.length > 0">
+
+      <button mat-menu-item color="primary" [matMenuTriggerFor]="menu.childMenu">{{item.name}}</button>
+
+      <viz-menu-cell #menu [list]="item.children"></viz-menu-cell>
+
+    </span>
+
+    <span *ngIf="item.children.length == 0">
+
+      <button mat-menu-item color="primary">{{item.name}}</button>
+
+    </span>
+
+
+
+  </span>
+</mat-menu>

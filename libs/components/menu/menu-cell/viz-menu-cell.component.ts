@@ -6,17 +6,14 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./viz-menu-cell.component.scss']
 })
 export class VizMenuCellComponent implements OnInit {
+  @Input() list;
+  @ViewChild('childMenu') public childMenu: ElementRef;
 
-  @Input() list
-  @ViewChild('testChild') testChild:ElementRef
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   testfunction() {
-    console.log('waefawfjo')
+    console.log('waefawfjo');
   }
-
 }

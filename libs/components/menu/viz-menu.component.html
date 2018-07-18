@@ -1,1 +1,2 @@
-<viz-menu-cell #test [list]="testList"></viz-menu-cell>
+<button mat-button [matMenuTriggerFor]="menu.childMenu">{{menuList.name}}</button>
+<viz-menu-cell #menu [list]="menuList.children"></viz-menu-cell>
