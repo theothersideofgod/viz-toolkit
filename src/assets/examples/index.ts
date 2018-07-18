@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonBasicComponent, ButtonBasicData } from './button-basic/button-basic.component';
 import * as VizModules from '../../../libs';
-
+import { ButtonBasicComponent, ButtonBasicData } from './button-basic/button-basic.component';
 import { DatePickerBasicComponent, DatePickerBasicData } from './date-picker-basic/date-picker-basic.component'
 import { SelectBasicComponent, SelectBasicData } from './select-basic/select-basic.component'
 import { CheckboxBasicComponent, CheckboxBasicData } from './checkbox-basic/checkbox-basic.component';
 import { MenuBasicComponent, MenuBasicData } from './menu-basic/menu-basic.component';
+import { FormFieldBasicComponent, FormFieldBasicData } from './form-field-basic/form-field-basic.component';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -29,6 +29,10 @@ export const ALL_EXAMPLE_ITEMS = {
   'menu-basic': {
     component: MenuBasicComponent,
     data: MenuBasicData
+  },
+  'form-field-basic': {
+    component: FormFieldBasicComponent,
+    data: FormFieldBasicData
   }
 }
 @NgModule({
@@ -37,7 +41,8 @@ export const ALL_EXAMPLE_ITEMS = {
     DatePickerBasicComponent,
     SelectBasicComponent,
     CheckboxBasicComponent,
-    MenuBasicComponent
+    MenuBasicComponent,
+    FormFieldBasicComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -50,7 +55,8 @@ export const ALL_EXAMPLE_ITEMS = {
     DatePickerBasicComponent, 
     SelectBasicComponent, 
     CheckboxBasicComponent,
-    MenuBasicComponent
+    MenuBasicComponent,
+    FormFieldBasicComponent,
   ]
 })
 export class ExampleModule { }
