@@ -1,3 +1,4 @@
+import './style.scss'
 export * from './components/header/viz-header.module'
 export * from './components/date-range-picker/viz-date-range-picker.module'
 export * from './components/select/viz-select.module'
