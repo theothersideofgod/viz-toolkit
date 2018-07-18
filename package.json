@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib": "ng-packagr -p libs/package.json"
+    "build:lib": "ng-packagr -p libs/package.json && mkdir libs/viz-toolkit/themes && cp libs/style.css libs/viz-toolkit/themes/index.theme.css"
   },
   "private": true,
   "dependencies": {

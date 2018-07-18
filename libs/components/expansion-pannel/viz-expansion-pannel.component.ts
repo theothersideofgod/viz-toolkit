@@ -1,12 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NgModule } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
 @Component({
 	selector: 'viz-expansion-pannel',
 	templateUrl: './viz-expansion-pannel.component.html',
 	styleUrls: ['./viz-expansion-pannel.component.scss']
 })
 
-export class Vizexpansion-pannelComponent implements OnInit {
+export class VizExpansionPannelComponent implements OnInit {
 
 	ngOnInit() { 
 		this.splitBrands()
@@ -37,3 +38,16 @@ export interface BrandType {
 	link: string;
 	title: string;
 }
+
+@NgModule({
+  imports: [
+    CommonModule,
+  ],
+  exports: [
+    VizExpansionPannelComponent
+  ],
+  declarations: [
+    VizExpansionPannelComponent
+  ],
+})
+export class VizExpansionPannelMudule {}
