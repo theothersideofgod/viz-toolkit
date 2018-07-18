@@ -1,3 +1,4 @@
+@import '../styles/constants';
 :host {
   .mat-tab-nav-bar {
     height: 100%;
@@ -27,7 +28,7 @@
     }
   }
   .main-sec {
-    min-height: calc(100vh - 146px);
+    min-height: $contentHeight;
     overflow: auto;//fix div collapse
   }
 }
