@@ -1,0 +1,22 @@
+<div class="expansion-pannel-bar">
+  <div class="expansion-pannel-wrapper">
+    <div class="expansion-pannel-left">
+      <ul class="nav">
+        <li *ngFor="let brand of leftBrands">
+          <a href={{brand.link}}>{{brand.title}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="expansion-pannel-right">
+      <ul class="nav">
+        <li *ngFor="let brand of rightBrands">
+          <a href={{brand.link}}>{{brand.title}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="expansion-pannel-center">
+    <p>Vizient MDA</p>
+    <p>&copy; 2018 Vizient & iLabs. All Rights Reserved.</p>
+  </div>
+</div>
