@@ -5,14 +5,10 @@ import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   imports: [
-    CommonModule,
     MatButtonModule,
   ],
   exports: [
-    VizButtonComponent
-  ],
-  declarations: [
-    VizButtonComponent
-  ],
+    MatButtonModule
+  ]
 })
-export class VizButtonModule { }
+export class VizButtonModule {};
