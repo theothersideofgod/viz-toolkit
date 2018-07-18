@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+// import { NgModule } from '@angular/core';
+// import { CommonModule } from '@angular/common';
 
-import { VizCheckboxComponent } from './viz-checkbox.component';
+// import { VizCheckboxComponent } from './viz-checkbox.component';
 import { MatCheckboxModule } from '@angular/material';
 
 // @NgModule({

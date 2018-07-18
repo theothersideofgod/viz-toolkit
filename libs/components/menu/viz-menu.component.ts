@@ -13,7 +13,7 @@ interface MenuItem {
 })
 export class VizMenuComponent implements OnInit {
   
-  @Input() menuList: MenuItem;
+  @Input() list: MenuItem;
 
   @ViewChild('test') test;
 
