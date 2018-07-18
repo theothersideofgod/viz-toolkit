@@ -1,0 +1,21 @@
+.cdk-overlay-pane {
+  .mat-menu-panel {
+    .mat-menu-content {
+      max-width: none;
+      width: 280px;
+      padding: 0px;
+      .mat-menu-item {
+        color: #696969;
+        font-weight: 300;
+        &:hover {
+          color: #8667bd;
+        }
+      }
+      .mat-menu-item-submenu-trigger{
+        &:hover::after{
+          color: white;
+        }
+      }
+    }
+  }
+}
