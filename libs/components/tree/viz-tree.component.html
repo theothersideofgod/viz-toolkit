@@ -11,22 +11,30 @@
 </div> -->
 
 
-<!-- <h1>Angular 2 Recursive List</h1>
-<ul>
+<div>
   <ng-template #recursiveList
                let-tree>
-    <li *ngFor="let node of tree">
-      <button mat-icon-button (click)="collapse()">
-        >
-      </button>
-      <ng-template *ngTemplateOutlet="itemTemplate context: { $implicit: node }"></ng-template>
-      <ul *ngIf="node.children.length > 0">
+    <div class="viz-tree-cell"
+         *ngFor="let node of tree">
+      <div class="viz-tree-cell-node">
+        <mat-icon (click)="node.isExpanded = !node.isExpanded"
+                  *ngIf="node.children.length>0">
+          {{node.isExpanded ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+        <div [class.viz-tree-cell-node-content]="!node.children.length>0">
+          <ng-template *ngTemplateOutlet="itemTemplate context: { $implicit: node }"></ng-template>
+        </div>
+      </div>
+
+      <div *ngIf="node.children.length > 0"
+           [class.hideChildren]=!node.isExpanded
+           class="viz-tree-cell-child">
         <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: node.children }"></ng-container>
-      </ul>
-    </li>
+      </div>
+    </div>
   </ng-template>
   <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: tree }"></ng-container>
-</ul> -->
+</div>
 
 
-<viz-tree-cell *ngFor="let node of tree; let i=index" [node]="node"></viz-tree-cell>
+<!-- <viz-tree-cell *ngFor="let node of tree; let i=index" [node]="node"></viz-tree-cell> -->

@@ -1,10 +1,14 @@
 <div>
-  <button (click)="toggleCollapse()">></button>
-  <span>{{node.name}}</span>
+  <mat-icon (click)="node.isExpanded = !node.isExpanded"
+            *ngIf="node.children.length>0">
+    {{node.isExpanded ? 'expand_more' : 'chevron_right'}}
+  </mat-icon>
+  <span class='viz-tree-cell-name'>{{node.name}}</span>
 </div>
 
-<ul [class.hideChildren]=collapse>
-  <li *ngFor="let node of node.children; let i=index">
+<div [class.hideChildren]=node.isExpanded
+     class='viz-tree-child'>
+  <div *ngFor="let node of node.children; let i=index">
     <viz-tree-cell [node]="node"></viz-tree-cell>
-  </li>
-</ul>
+  </div>
+</div>

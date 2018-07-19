@@ -1,5 +1,7 @@
 <viz-tree [tree]="tree">
   <ng-template let-node>
-    <mat-checkbox>{{node.name}}</mat-checkbox>
+    <mat-checkbox [checked]="descendantsAllSelected(node)"
+                  [indeterminate]="descendantsPartiallySelected(node)"
+                  (change)="toggle(node)">{{node.name}}</mat-checkbox>
   </ng-template>
 </viz-tree>

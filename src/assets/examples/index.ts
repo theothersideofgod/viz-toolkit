@@ -12,6 +12,7 @@ import { RadioButtonBasicComponent, RadioButtonBasicData } from './radio-button-
 import { TreeBasicComponent, TreeBasicData } from './tree-basic/tree-basic.component';
 import { SliderBasicComponent, SliderBasicData } from './slider-basic/slider-basic.component';
 import { SlideToggleBasicComponent, SlideToggleBasicData } from './slide-toggle-basic/slide-toggle-basic.component';
+import { IconBasicComponent, IconBasicData } from './icon-basic/icon-basic.component';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -53,6 +54,10 @@ export const ALL_EXAMPLE_ITEMS = {
   'slide-toggle-basic': {
     component: SlideToggleBasicComponent,
     data: SlideToggleBasicData
+  },
+  'icon-basic': {
+    component: IconBasicComponent,
+    data: IconBasicData
   }
 }
 @NgModule({
@@ -67,6 +72,7 @@ export const ALL_EXAMPLE_ITEMS = {
     TreeBasicComponent,
     SliderBasicComponent,
     SlideToggleBasicComponent,
+    IconBasicComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -85,6 +91,7 @@ export const ALL_EXAMPLE_ITEMS = {
     TreeBasicComponent,
     SliderBasicComponent,
     SlideToggleBasicComponent,
+    IconBasicComponent
   ]
 })
 export class ExampleModule { }
