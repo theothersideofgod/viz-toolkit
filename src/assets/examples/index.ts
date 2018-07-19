@@ -13,6 +13,7 @@ import { TreeBasicComponent, TreeBasicData } from './tree-basic/tree-basic.compo
 import { SliderBasicComponent, SliderBasicData } from './slider-basic/slider-basic.component';
 import { SlideToggleBasicComponent, SlideToggleBasicData } from './slide-toggle-basic/slide-toggle-basic.component';
 import { ExpansionPanelBasicComponent, ExpansionPanelBasicData } from './expansion-panel-basic/expansion-panel-basic.component';
+import { ToolbarBasicComponent, ToolbarBasicData } from './toolbar-basic/toolbar-basic.component';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -58,6 +59,10 @@ export const ALL_EXAMPLE_ITEMS = {
   'expansion-panel-basic': {
     component: ExpansionPanelBasicComponent,
     data: ExpansionPanelBasicData
+  },
+  'toolbar-basic': {
+    component: ToolbarBasicComponent,
+    data: ToolbarBasicData
   }
 }
 @NgModule({
@@ -73,6 +78,7 @@ export const ALL_EXAMPLE_ITEMS = {
     SliderBasicComponent,
     SlideToggleBasicComponent,
     ExpansionPanelBasicComponent,
+    ToolbarBasicComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -92,6 +98,7 @@ export const ALL_EXAMPLE_ITEMS = {
     SliderBasicComponent,
     SlideToggleBasicComponent,
     ExpansionPanelBasicComponent,
+    ToolbarBasicComponent,
   ]
 })
 export class ExampleModule { }
