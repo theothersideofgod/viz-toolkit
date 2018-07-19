@@ -9,6 +9,7 @@ import { CheckboxBasicComponent, CheckboxBasicData } from './checkbox-basic/chec
 import { MenuBasicComponent, MenuBasicData } from './menu-basic/menu-basic.component';
 import { FormFieldBasicComponent, FormFieldBasicData } from './form-field-basic/form-field-basic.component';
 import { RadioButtonBasicComponent, RadioButtonBasicData } from './radio-button-basic/radio-button-basic.component';
+import { TreeBasicComponent, TreeBasicData } from './tree-basic/tree-basic.component';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -38,6 +39,10 @@ export const ALL_EXAMPLE_ITEMS = {
   'radio-button-basic': {
     component: RadioButtonBasicComponent,
     data: RadioButtonBasicData
+  },
+  'tree-basic': {
+    component: TreeBasicComponent,
+    data: TreeBasicData
   }
 }
 @NgModule({
@@ -49,6 +54,7 @@ export const ALL_EXAMPLE_ITEMS = {
     MenuBasicComponent,
     FormFieldBasicComponent,
     RadioButtonBasicComponent,
+    TreeBasicComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -64,6 +70,7 @@ export const ALL_EXAMPLE_ITEMS = {
     MenuBasicComponent,
     FormFieldBasicComponent,
     RadioButtonBasicComponent,
+    TreeBasicComponent
   ]
 })
 export class ExampleModule { }

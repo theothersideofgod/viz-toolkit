@@ -1,0 +1,32 @@
+<!-- <div *ngFor="let node of tree template: itemTemplate">
+  <ng-template *ngIf="node.children.length==0">
+    <ng-template *ngTemplateOutlet="itemTemplate context: { $implicit: node }"></ng-template>ƒƒ
+  </ng-template>
+  <ng-template *ngIf="node.children.length>0">
+    <button>{{node.name}}</button>
+    <div *ngFor="let subNode of node.children template: itemTemplate">
+      <ng-template *ngTemplateOutlet="itemTemplate context: { $implicit: subNode }"></ng-template>
+    </div>
+  </ng-template>
+</div> -->
+
+
+<!-- <h1>Angular 2 Recursive List</h1>
+<ul>
+  <ng-template #recursiveList
+               let-tree>
+    <li *ngFor="let node of tree">
+      <button mat-icon-button (click)="collapse()">
+        >
+      </button>
+      <ng-template *ngTemplateOutlet="itemTemplate context: { $implicit: node }"></ng-template>
+      <ul *ngIf="node.children.length > 0">
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: node.children }"></ng-container>
+      </ul>
+    </li>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: tree }"></ng-container>
+</ul> -->
+
+
+<viz-tree-cell *ngFor="let node of tree; let i=index" [node]="node"></viz-tree-cell>

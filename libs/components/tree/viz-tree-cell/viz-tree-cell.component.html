@@ -1,0 +1,10 @@
+<div>
+  <button (click)="toggleCollapse()">></button>
+  <span>{{node.name}}</span>
+</div>
+
+<ul [class.hideChildren]=collapse>
+  <li *ngFor="let node of node.children; let i=index">
+    <viz-tree-cell [node]="node"></viz-tree-cell>
+  </li>
+</ul>
