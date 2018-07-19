@@ -10,6 +10,7 @@ import { MenuBasicComponent, MenuBasicData } from './menu-basic/menu-basic.compo
 import { FormFieldBasicComponent, FormFieldBasicData } from './form-field-basic/form-field-basic.component';
 import { RadioButtonBasicComponent, RadioButtonBasicData } from './radio-button-basic/radio-button-basic.component';
 import { SliderBasicComponent, SliderBasicData } from './slider-basic/slider-basic.component';
+import { SlideToggleBasicComponent, SlideToggleBasicData } from './slide-toggle-basic/slide-toggle-basic.component';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -43,6 +44,10 @@ export const ALL_EXAMPLE_ITEMS = {
   'slider-basic': {
     component: SliderBasicComponent,
     data: SliderBasicData
+  },
+  'slide-toggle-basic': {
+    component: SlideToggleBasicComponent,
+    data: SlideToggleBasicData
   }
 }
 @NgModule({
@@ -55,6 +60,7 @@ export const ALL_EXAMPLE_ITEMS = {
     FormFieldBasicComponent,
     RadioButtonBasicComponent,
     SliderBasicComponent,
+    SlideToggleBasicComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -71,6 +77,7 @@ export const ALL_EXAMPLE_ITEMS = {
     FormFieldBasicComponent,
     RadioButtonBasicComponent,
     SliderBasicComponent,
+    SlideToggleBasicComponent,
   ]
 })
 export class ExampleModule { }
