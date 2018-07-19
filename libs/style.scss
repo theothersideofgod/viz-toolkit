@@ -1,3 +1,222 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$small-breakpoint-width: 720px;
+
+/* For desktop, the content should be aligned with the page title. */
+$content-padding-side: 70px;
+$content-padding-side-xs: 15px;
+
+$font-grey: #696969;
+$bg-grey: #F8F8F8;
+$orange: #FF9933;
+$red: #FF3333;
+$yellow: #FFC02E;
+$green: #9CD020;
+
+$contentHeight: calc(100vh - 146px);
+
+$mat-vpurple: (
+  50 : #f0ecf7,
+  100 : #d9cfea,
+  200 : #bfafdd,
+  300 : #a58ecf,
+  400 : #9276c4,
+  500 : #7f5eba,
+  600 : #7756b3,
+  700 : #6c4cab,
+  800 : #6242a3,
+  900 : #4f3194,
+  A100 : #e6dcff,
+  A200 : #c2a9ff,
+  A400 : #9d76ff,
+  A700 : #8b5dff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  )
+);
+$mat-vblue: (
+  50 : #e1f5f5,
+  100 : #b3e6e6,
+  200 : #80d6d5,
+  300 : #4dc6c4,
+  400 : #27b9b8,
+  500 : #01adab,
+  600 : #01a6a4,
+  700 : #019c9a,
+  800 : #019391,
+  900 : #008380,
+  A100 : #b0fffd,
+  A200 : #7dfffc,
+  A400 : #4afffa,
+  A700 : #30fffa,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$mat-vred: (
+  50 : #ffe7e7,
+  100 : #ffc2c2,
+  200 : #ff9999,
+  300 : #ff7070,
+  400 : #ff5252,
+  500 : #ff3333,
+  600 : #ff2e2e,
+  700 : #ff2727,
+  800 : #ff2020,
+  900 : #ff1414,
+  A100 : #ffffff,
+  A200 : #fffbfb,
+  A400 : #ffc8c8,
+  A700 : #ffaeae,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+)
+);
+$mat-vgrey: (
+  50 : #ededed,
+  100 : #d2d2d2,
+  200 : #b4b4b4,
+  300 : #969696,
+  400 : #808080,
+  500 : #696969,
+  600 : #616161,
+  700 : #565656,
+  800 : #4c4c4c,
+  900 : #3b3b3b,
+  A100 : #f4a0a0,
+  A200 : #ef7272,
+  A400 : #ff3030,
+  A700 : #ff1616,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+
+// $viz-app-basic: mat-palette($mat-vgrey);
+
+$viz-app-primary: mat-palette($mat-vpurple);
+$viz-app-accent:  mat-palette($mat-vblue);
+
+// The warn palette is optional (defaults to red).
+$viz-app-warn:  mat-palette($mat-vred);
+$viz-app-foreground:  mat-palette($mat-vgrey);
+
+$viz-app-theme: mat-light-theme($viz-app-primary, $viz-app-accent, $viz-app-warn);
+
+$viz-app-theme2: mat-light-theme($viz-app-accent, $viz-app-accent, $viz-app-warn);
+
+$viz-typography: mat-typography-config(
+  $font-family: Soleto
+);
+
+//do it like this for own components
+// @mixin viz-menu-theme($theme) {
+//   // Extract whichever individual palettes you need from the theme.
+//   $primary: map-get($theme, primary);
+//   $accent: map-get($theme, accent);
+
+//   // Use mat-color to extract individual colors from a palette as necessary.
+//   .viz-menu {
+//     background-color: mat-color($primary);
+//     border-color: mat-color($accent, A400);
+//   }
+// }
+@include mat-core($viz-typography);
+@include angular-material-theme($viz-app-theme);
+@include mat-stepper-theme($viz-app-theme2);
+// @include viz-menu-theme($viz-app-theme);
+// .mat-menu-item:hover:not([disabled]) {
+//   background-color: #f0ecf7;
+// }
+
+
+
+// .mat-expansion-indicator::after {
+//   color: #01adab;
+// }
+// .mat-button-toggle-checked {
+//   background-color: #01adab;
+// }
+.mat-simple-snackbar-action {
+  color: #FF4E00;
+}
+.mat-focused .mat-form-field-required-marker {
+  color: #ff3333;
+}
+.mat-input-element, .mat-select-value {
+  color: $font-grey;
+}
+.mat-tab-label {
+  display: -ms-inline-flexbox;
+}
+td.mat-cell, .mat-header-cell {
+  border-bottom-color: #E9E9E9 !important;
+}
+.mat-raised-button:not([class*=mat-elevation-z]){
+  font-weight: 400;
+  box-shadow: none !important;
+}
+.mat-sort-header-arrow {
+  margin-left: 4px !important;
+}
+.mat-button-wrapper {
+  font-weight: 300 !important;
+}
+
 .cdk-overlay-pane {
   .mat-menu-panel {
     .mat-menu-content {
