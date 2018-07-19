@@ -29,6 +29,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'formfield', name: 'Form field', examples: ['form-field-basic']},
         {id: 'radio', name: 'Radio button', examples: ['radio-button-basic']},
         {id: 'tree', name: 'Tree', examples: ['tree-basic']},
+        {id: 'slider', name: 'Slider', examples: ['slider-basic']},
+        {id: 'slidetoggle', name: 'Slide toggle', examples: ['slide-toggle-basic']},
       ]
     },
   ],

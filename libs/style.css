@@ -1,12 +1,11 @@
-.cdk-overlay-pane .mat-menu-panel{
-  padding: 0px;
+.cdk-overlay-pane .mat-menu-panel .mat-menu-content {
   max-width: none;
-  width: 280px;  
-}
-.cdk-overlay-pane .mat-menu-panel .mat-menu-content{
-  padding: 0px;
-}
-
-.cdk-overlay-pane .mat-menu-panel .mat-menu-content .mat-menu-item:hover{
-  color: #8667bd
-}
+  width: 280px;
+  padding: 0px; }
+  .cdk-overlay-pane .mat-menu-panel .mat-menu-content .mat-menu-item {
+    color: #696969;
+    font-weight: 300; }
+    .cdk-overlay-pane .mat-menu-panel .mat-menu-content .mat-menu-item:hover {
+      color: #8667bd; }
+  .cdk-overlay-pane .mat-menu-panel .mat-menu-content .mat-menu-item-submenu-trigger:hover::after {
+    color: white; }
