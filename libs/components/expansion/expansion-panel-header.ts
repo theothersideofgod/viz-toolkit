@@ -24,7 +24,7 @@ import {filter} from 'rxjs/operators';
 import {matExpansionAnimations} from './expansion-animations';
 import {MatExpansionPanel} from './expansion-panel';
 
-
+declare var module: {id: string};
 /**
  * `<mat-expansion-panel-header>`
  *
@@ -32,7 +32,7 @@ import {MatExpansionPanel} from './expansion-panel';
  */
 @Component({
   moduleId: module.id,
-  selector: 'mat-expansion-panel-header',
+  selector: 'viz-expansion-panel-header',
   styleUrls: ['./expansion-panel-header.scss'],
   templateUrl: './expansion-panel-header.html',
   encapsulation: ViewEncapsulation.None,
@@ -139,7 +139,7 @@ export class MatExpansionPanelHeader implements OnDestroy {
  * This directive is to be used inside of the MatExpansionPanelHeader component.
  */
 @Directive({
-  selector: 'mat-panel-description',
+  selector: 'viz-panel-description',
   host : {
     class: 'mat-expansion-panel-header-description'
   }
@@ -152,7 +152,7 @@ export class MatExpansionPanelDescription {}
  * This directive is to be used inside of the MatExpansionPanelHeader component.
  */
 @Directive({
-  selector: 'mat-panel-title',
+  selector: 'viz-panel-title',
   host : {
     class: 'mat-expansion-panel-header-title'
   }

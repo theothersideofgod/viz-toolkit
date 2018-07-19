@@ -36,7 +36,7 @@ import {MatExpansionPanelContent} from './expansion-panel-content';
 
 /** MatExpansionPanel's states. */
 export type MatExpansionPanelState = 'expanded' | 'collapsed';
-
+declare var module: {id: string};
 /** Counter for generating unique element ids. */
 let uniqueId = 0;
 
@@ -91,7 +91,7 @@ export class MatExpansionPanel extends CdkAccordionItem
   _portal: TemplatePortal;
 
   /** ID for the associated header element. Used for a11y labelling. */
-  _headerId = `mat-expansion-panel-header-${uniqueId++}`;
+  _headerId = `viz-expansion-panel-header-${uniqueId++}`;
 
   constructor(@Optional() @SkipSelf() accordion: MatAccordion,
               _changeDetectorRef: ChangeDetectorRef,
@@ -162,9 +162,9 @@ export class MatExpansionPanel extends CdkAccordionItem
 }
 
 @Directive({
-  selector: 'mat-action-row',
+  selector: 'viz-action-row',
   host: {
-    class: 'mat-action-row'
+    class: 'viz-action-row'
   }
 })
 export class MatExpansionPanelActionRow {}

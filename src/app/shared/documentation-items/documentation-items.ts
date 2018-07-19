@@ -32,6 +32,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'slider', name: 'Slider', examples: ['slider-basic']},
         {id: 'slidetoggle', name: 'Slide toggle', examples: ['slide-toggle-basic']},
         {id: 'icon', name: 'Icon', examples: ['icon-basic']},
+        {id: 'expansionpanel', name: 'Expansion Panel', examples: ['expansion-panel-basic']},
+        {id: 'toolbar', name: 'Toolbar', examples: ['toolbar-basic']},
       ]
     },
   ],

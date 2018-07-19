@@ -11,6 +11,7 @@ import {PortalModule} from '@angular/cdk/portal';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {MatAccordion} from './accordion';
+import { MatExpansionModule }  from '@angular/material'
 import {MatExpansionPanel, MatExpansionPanelActionRow} from './expansion-panel';
 import {MatExpansionPanelContent} from './expansion-panel-content';
 import {
@@ -21,7 +22,7 @@ import {
 
 
 @NgModule({
-  imports: [CommonModule, CdkAccordionModule, PortalModule],
+  imports: [CommonModule, CdkAccordionModule, PortalModule, MatExpansionModule],
   exports: [
     MatAccordion,
     MatExpansionPanel,
@@ -41,4 +42,4 @@ import {
     MatExpansionPanelContent,
   ],
 })
-export class MatExpansionModule {}
+export class VizExpansionModule {}
