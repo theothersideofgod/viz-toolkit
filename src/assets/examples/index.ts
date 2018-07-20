@@ -17,6 +17,8 @@ import { ExpansionPanelBasicComponent, ExpansionPanelBasicData } from './expansi
 import { ToolbarBasicComponent, ToolbarBasicData } from './toolbar-basic/toolbar-basic.component';
 import { ListBasicComponent, ListBasicData } from './list-basic/list-basic.component';
 import { ChipBasicComponent, ChipBasicData } from './chip-basic/chip-basic.component';
+import { BadgeBasicComponent, BadgeBasicData } from './badge-basic/badge-basic.component';
+import { ProgressBarBasicComponent, ProgressBarBasicData } from './progress-bar-basic/progress-bar-basic.component';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -78,6 +80,14 @@ export const ALL_EXAMPLE_ITEMS = {
   'chip-basic': {
     component: ChipBasicComponent,
     data: ChipBasicData
+  },
+  'badge-basic': {
+    component: BadgeBasicComponent,
+    data: BadgeBasicData
+  },
+  'progress-bar-basic': {
+    component: ProgressBarBasicComponent,
+    data: ProgressBarBasicData
   }
 }
 @NgModule({
@@ -96,7 +106,9 @@ export const ALL_EXAMPLE_ITEMS = {
     ExpansionPanelBasicComponent,
     ToolbarBasicComponent,
     ListBasicComponent,
-    ChipBasicComponent
+    ChipBasicComponent,
+    BadgeBasicComponent,
+    ProgressBarBasicComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -119,7 +131,9 @@ export const ALL_EXAMPLE_ITEMS = {
     ExpansionPanelBasicComponent,
     ToolbarBasicComponent,
     ListBasicComponent,
-    ChipBasicComponent
+    ChipBasicComponent,
+    BadgeBasicComponent,
+    ProgressBarBasicComponent
   ]
 })
 export class ExampleModule { }
