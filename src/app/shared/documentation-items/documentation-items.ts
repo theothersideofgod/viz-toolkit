@@ -34,6 +34,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'icon', name: 'Icon', examples: ['icon-basic']},
         {id: 'expansionpanel', name: 'Expansion Panel', examples: ['expansion-panel-basic']},
         {id: 'toolbar', name: 'Toolbar', examples: ['toolbar-basic']},
+        {id: 'list', name: 'List', examples: ['list-basic']},
+        {id: 'chip', name: 'Chip', examples: ['chip-basic']}
       ]
     },
   ],

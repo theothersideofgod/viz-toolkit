@@ -15,6 +15,8 @@ import { SlideToggleBasicComponent, SlideToggleBasicData } from './slide-toggle-
 import { IconBasicComponent, IconBasicData } from './icon-basic/icon-basic.component';
 import { ExpansionPanelBasicComponent, ExpansionPanelBasicData } from './expansion-panel-basic/expansion-panel-basic.component';
 import { ToolbarBasicComponent, ToolbarBasicData } from './toolbar-basic/toolbar-basic.component';
+import { ListBasicComponent, ListBasicData } from './list-basic/list-basic.component';
+import { ChipBasicComponent, ChipBasicData } from './chip-basic/chip-basic.component';
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -68,6 +70,14 @@ export const ALL_EXAMPLE_ITEMS = {
   'toolbar-basic': {
     component: ToolbarBasicComponent,
     data: ToolbarBasicData
+  },
+  'list-basic': {
+    component: ListBasicComponent,
+    data: ListBasicData
+  },
+  'chip-basic': {
+    component: ChipBasicComponent,
+    data: ChipBasicData
   }
 }
 @NgModule({
@@ -85,6 +95,8 @@ export const ALL_EXAMPLE_ITEMS = {
     IconBasicComponent,
     ExpansionPanelBasicComponent,
     ToolbarBasicComponent,
+    ListBasicComponent,
+    ChipBasicComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -106,6 +118,8 @@ export const ALL_EXAMPLE_ITEMS = {
     IconBasicComponent,
     ExpansionPanelBasicComponent,
     ToolbarBasicComponent,
+    ListBasicComponent,
+    ChipBasicComponent
   ]
 })
 export class ExampleModule { }
