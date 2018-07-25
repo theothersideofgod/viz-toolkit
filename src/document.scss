@@ -9,7 +9,8 @@
 }
 .doc-title-1 {
   /* Checkbox: */
-  font-family: SoletoTrial-Light;
+  font-family: Soleto;
+  font-weight: 300;
   font-size: 48px;
   color: #000000;
   letter-spacing: 0;
@@ -17,32 +18,32 @@
 }
 .doc-desc-1 {
   /* Checkboxes allow the: */
-  font-family: SoletoTrial-Light;
+  font-family: Soleto;
+  font-weight: 300;
   font-size: 20px;
   color: #696969;
   letter-spacing: 0;
   line-height: 30px;
 }
-
 .doc-divider {
   height: 1px;
   /* Divider: */
   background: #f1f1f1;
   margin: 48px 0px;
 }
-
 .doc-title-2 {
   /* Examples: */
-  font-family: SoletoTrial-Light;
+  font-family: Soleto;
+  font-weight: 300;
   font-size: 28px;
   color: #28292b;
   letter-spacing: 0;
   margin-bottom: 16px;
 }
-
 .doc-desc-2 {
   /* Use in forms to togg: */
-  font-family: SoletoTrial-Light;
+  font-family: Soleto;
+  font-weight: 300;
   font-size: 16px;
   color: #696969;
   letter-spacing: 0;
@@ -54,14 +55,12 @@
   background: #f3f3f3;
   padding-right: 44px;
 }
-
 .doc-example-container {
   /* Rectangle 3: */
   background: #ffffff;
   border: 1px solid #efefef;
   height: 280px;
 }
-
 .doc-props-table {
   border-collapse: collapse;
   thead {
@@ -86,15 +85,59 @@
   }
   td {
     /* disabled state of ch: */
-    font-family: SoletoTrial-Light;
+    font-family: Soleto;
+    font-weight: 300;
     font-size: 16px;
     color: #696969;
-    padding: 18px 24px
+    padding: 18px 24px;
   }
 }
-
-.doc-list{
-  li{
+.doc-list {
+  li {
     margin-bottom: 24px;
   }
+}
+.doc-spec {
+  height: 280px;
+  width: 800px;
+}
+
+//spec
+.doc-spec {
+  height: 280px;
+  width: 800px;
+}
+.datepicker-spec{
+  height: 635px;
+  width: 800px;
+}
+
+//css for guide line and usage
+.checkbox-usage {
+  width: 388px;
+  height: 160px;
+  &:nth-child(2) {
+    margin-left: 24px;
+  }
+}
+.datepicker-usage {
+  width: 388px;
+  height: 291px;
+  &:nth-child(2) {
+    margin-left: 24px;
+  }
+}
+.guideline-pic-w100{
+  width: 800px;
+  height: 160px;
+}
+.guideline-pic-w50{
+  width: 388px;
+  height: 160px;
+}
+.doc-mt24{
+  margin-top: 24px;
+}
+.doc-mb24{
+  margin-top: 24px;
 }
