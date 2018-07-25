@@ -14,7 +14,7 @@ export const APP_ROUTES: Routes = [
     path: 'documentation',
     component: ComponentSidenavComponent,
     children: [
-      {path: '', redirectTo: 'categories', pathMatch: 'full'},
+      {path: '', redirectTo: 'checkbox', pathMatch: 'full'},
       // {
       //   path: 'categories',
       //   children: [

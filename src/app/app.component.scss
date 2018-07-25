@@ -30,5 +30,7 @@
   .main-sec {
     min-height: $contentHeight;
     overflow: auto;//fix div collapse
+    height: auto;
+    position: relative;
   }
 }

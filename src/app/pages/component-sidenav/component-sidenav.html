@@ -1,5 +1,15 @@
 <div class="documentation-nav">
-
+  <div class="nav-sec" *ngFor="let group of navList;">
+    <p class="nav-title">{{group.name}}</p>
+    <p 
+      class="nav-sub-title" *ngFor="let item of group.subs;" 
+      [routerLink]="'/documentation/' + item.value"
+      routerLinkActive #rla="routerLinkActive" 
+      [class.active]="rla.isActive"
+    >
+      {{item.name}}
+    </p>
+  </div>
 </div>
 <div class="documentation-main">
   <router-outlet></router-outlet>
