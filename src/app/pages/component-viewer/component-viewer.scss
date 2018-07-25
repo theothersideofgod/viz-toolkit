@@ -27,7 +27,8 @@ app-component-viewer {
   // Display outlet components with toc as flex and switch to
   // vertical direction on small screens
   component-overview, component-api {
-    
+    display: flex;
+    align-items: flex-start;
 
     @media (max-width: $small-breakpoint-width) {
       display: flex;
