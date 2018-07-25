@@ -37,6 +37,7 @@ export class TableOfContents implements OnInit {
   private _scrollContainer: any;
   private _destroyed = new Subject();
   private _urlFragment = '';
+  private _latestClick = '';
 
   constructor(private _router: Router,
               private _route: ActivatedRoute,
@@ -96,6 +97,14 @@ export class TableOfContents implements OnInit {
     }
   }
 
+  clickNav(i) {
+    this._latestClick = i
+    this._clickScroll()
+    setTimeout(() => {
+      this._latestClick = ''
+    }, 1000)
+  }
+
   /** Gets the scroll offset of the scroll container */
   private getScrollOffset(): number {
     const {top} = this._element.nativeElement.getBoundingClientRect();
@@ -130,9 +139,20 @@ export class TableOfContents implements OnInit {
   }
 
   private onScroll(): void {
-    for (let i = 0; i < this.links.length; i++) {
-      this.links[i].active = this.isLinkActive(this.links[i], this.links[i + 1]);
+    console.log('123123')
+    if (this._latestClick === '') {
+      for (let i = 0; i < this.links.length; i++) {
+        this.links[i].active = this.isLinkActive(this.links[i], this.links[i + 1]);
+      }
+    } else {
+      this._clickScroll()
     }
+  }
+
+  private _clickScroll() {
+    this.links = this.links.map((item, i) => ({...item, active: (
+      i === +this._latestClick ? true : false
+    )}))
   }
 
   private isLinkActive(currentLink: any, nextLink: any): boolean {
