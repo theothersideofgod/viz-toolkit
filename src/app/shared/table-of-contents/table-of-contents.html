@@ -3,6 +3,7 @@
     <a [href]="_rootUrl + '#' + link.id"
       *ngFor="let link of links; let i = index"
       class="docs-level-{{link.type}} docs-link"
+      (click)="clickNav(i)"
       [class.docs-active]="link.active">
       {{link.name}}
     </a>
