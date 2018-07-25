@@ -1,6 +1,15 @@
 :host {
   display: block;
-  padding: 20px 0;
+  padding: 0 0;
+  border: 1px solid #efefef;
+  ::ng-deep {
+    .mat-tab-label {
+      padding: 0 0;
+      max-width: 80px;
+      min-width: 0;
+      margin-left: 20px;
+    }
+  }
 }
 
 .docs-example-viewer-wrapper {
@@ -23,21 +32,30 @@
 
 .docs-example-source-copy {
   position: absolute;
-  top: 8px;
-  display: none;
-}
-
-.docs-example-source-wrapper:hover {
-  .docs-example-source-copy {
-    display: inline-block;
+  top: 12px;
+  right: 10px;
+  color: #C3C3C3;
+  mat-icon {
+    height: 16px;
+    width: 16px;
+    font-size: 16px;
+    line-height: 1;
   }
 }
 
 .docs-example-source {
-  padding: 0 30px 10px 30px;
-  min-height: 150px;
+  padding: 16px 20px;
+  min-height: 64px;
+  line-height: 30px;
+  background: #F8F8F8;
+  margin: 0 0 0 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .docs-example-viewer-body {
-  padding: 30px;
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #efefef;
 }
