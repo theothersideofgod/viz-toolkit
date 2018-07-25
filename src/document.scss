@@ -118,6 +118,19 @@
 }
 
 //css for guide line and usage
+
+
+.docs-usage-w50{
+  display: inline-block;
+  overflow: hidden;
+  width: 49%;
+  &:nth-child(2){
+    
+  }
+}
+.docs-usage-w100{
+  width: 100%;
+}
 .docs-usage-center {
   img {
     position: absolute;
