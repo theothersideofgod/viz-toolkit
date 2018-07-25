@@ -3,7 +3,7 @@
   // Width is container width minus content width
   width: 19%;
   position: sticky;
-  top: 0;
+  top: 1000;
   padding-left: 25px;
   box-sizing: border-box;
   display: inline-flex;
@@ -23,15 +23,27 @@
 
 a {
   line-height: 16px;
-  margin: 8px 0 0;
+  font-size: 12px;
+  margin: 20px 0 0;
   position: relative;
   text-decoration: none;
   display: block;
   text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
+  color: #9F9F9F;
+  &.docs-active {
+    font-size: 14px;
+    color: black;
+  }
 }
 
 .docs-level-h4 {
   margin-left: 12px;
 }
+::ng-deep {
+  .docs-markdown-h3 {
+    opacity: 0;
+  }
+}
+
