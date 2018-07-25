@@ -105,14 +105,63 @@
 //spec
 .doc-spec {
   height: 280px;
+  // width: 800px;
+  width: 100%;
+}
+.datepicker-spec {
+  height: 635px;
   width: 800px;
 }
-.datepicker-spec{
-  height: 635px;
+.expansionpanel-spec {
+  height: 369px;
   width: 800px;
 }
 
 //css for guide line and usage
+.docs-usage-center {
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.docs-usage-do {
+  position: relative;
+  background-color: #fafafa;
+  overflow: hidden;
+  &::before {
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background-color: #4caf4f;
+  }
+}
+.docs-usage-dont {
+  position: relative;
+  background-color: #fafafa;
+  overflow: hidden;
+  &::before {
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background-color: #ff3333;
+  }
+}
+.docs-usage-warn {
+  position: relative;
+  background-color: #fafafa;
+  overflow: hidden;
+  &::before {
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background-color: #ffc02e;
+  }
+}
 .checkbox-usage {
   width: 388px;
   height: 160px;
@@ -127,17 +176,27 @@
     margin-left: 24px;
   }
 }
-.guideline-pic-w100{
+.expansionpanel-usage {
+  width: 800px;
+  height: 352px;
+  &:nth-child(2) {
+    margin-top: 24px;
+  }
+}
+.guideline-pic-w100 {
   width: 800px;
   height: 160px;
 }
-.guideline-pic-w50{
+.guideline-pic-w50 {
   width: 388px;
   height: 160px;
 }
-.doc-mt24{
+.docs-mt24 {
   margin-top: 24px;
 }
-.doc-mb24{
+.docs-mb24 {
   margin-top: 24px;
+}
+.docs-mt16{
+  margin-top: 16px;
 }
