@@ -123,10 +123,9 @@
 .docs-usage-w50{
   display: inline-block;
   overflow: hidden;
-  width: calc( 49% - 12px );
+  width: calc( 50% - 5px - 12px );
   &:nth-child(2){
     margin-left: 24px;
-    
   }
 }
 .docs-usage-w100{
