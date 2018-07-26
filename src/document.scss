@@ -123,8 +123,9 @@
 .docs-usage-w50{
   display: inline-block;
   overflow: hidden;
-  width: 49%;
+  width: calc( 49% - 12px );
   &:nth-child(2){
+    margin-left: 24px;
     
   }
 }
@@ -145,6 +146,11 @@
     margin: auto;
     transform: scale(.5);
   }
+}
+.docs-usage-spec {
+  position: relative;
+  width: 100%;
+  background-color: #fafafa;
 }
 .docs-usage-do {
   position: relative;
