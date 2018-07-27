@@ -47,7 +47,7 @@ export class ExampleViewer {
   }
 
   exampleFileUrl(extension: string) {
-    return `/assets/examples/${this.example}/${this.example}.example.${extension.toLowerCase()}`;
+    return `/assets/examples/${this.example}/${this.example}.example.${extension.toLowerCase()}${extension.toLowerCase() === 'html' ? '': '.html'}`;
   }
 
   copySource(text: string) {
