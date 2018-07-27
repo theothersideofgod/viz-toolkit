@@ -4,17 +4,23 @@
   
   <body>
     <pre><code class="html">
+        <mat-checkbox checked=true></mat-checkbox>
+        <mat-checkbox [indeterminate]=true></mat-checkbox>
+        <mat-checkbox></mat-checkbox>
     </code></pre>
     <pre><code class="css"></code></pre>
     <pre><code class="typescript">
-      import { Component, OnInit } from '@angular/core';
-
-      @Component({
-        selector: 'app-badge-basic',
-        templateUrl: './badge-basic.component.html',
-        styleUrls: ['./badge-basic.component.css']
-      })
-      export class BadgeBasicComponent implements OnInit {}
+        import { Component } from '@angular/core';
+        @Component({
+          selector: 'app-checkbox-basic',
+          templateUrl: './checkbox-basic.component.html',
+          styleUrls: ['./checkbox-basic.component.scss']
+        })
+        export class CheckboxBasicComponent {
+          constructor() { }
+          ngOnInit() {
+          }
+        }
   </code></pre>
   </body>
   <script>
