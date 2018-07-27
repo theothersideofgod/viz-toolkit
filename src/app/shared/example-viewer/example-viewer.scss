@@ -42,12 +42,18 @@
     line-height: 1;
   }
 }
+.docs-example-viewer-source {
+  ::ng-deep {
+    .mat-tab-body-wrapper {
+      background: #F8F8F8;
+    }
+  }
+}
 
 .docs-example-source {
   padding: 16px 20px;
   min-height: 64px;
   line-height: 30px;
-  background: #F8F8F8;
   margin: 0 0 0 0;
   box-sizing: border-box;
   font-size: 16px;
