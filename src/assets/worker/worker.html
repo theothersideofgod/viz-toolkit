@@ -4,28 +4,22 @@
   
   <body>
     <pre><code class="html">
-        <viz-date-range-picker [date]="dateRange" (onApply)="applyDateRange($event)"></viz-date-range-picker>
+        <mat-checkbox checked=true></mat-checkbox>
+        <mat-checkbox [indeterminate]=true></mat-checkbox>
+        <mat-checkbox></mat-checkbox>
     </code></pre>
     <pre><code class="css"></code></pre>
     <pre><code class="typescript">
         import { Component } from '@angular/core';
-        import { matRangeDatepickerRangeValue, DateAdapter } from "mat-range-datepicker";
         @Component({
-          selector: 'app-date-picker-basic',
-          templateUrl: './date-picker-basic.component.html',
-          styleUrls: ['./date-picker-basic.component.scss']
+          selector: 'app-checkbox-basic',
+          templateUrl: './checkbox-basic.component.html',
+          styleUrls: ['./checkbox-basic.component.scss']
         })
-        export class DatePickerBasicComponent {
-          dateRange: matRangeDatepickerRangeValue<Date>;
-          constructor(
-            private _dateAdapter: DateAdapter<Date>,
-          ) { 
-            this.dateRange = {
-              begin: this._dateAdapter.addCalendarMonths(this._dateAdapter.today(), -3),
-              end: this._dateAdapter.today(),
-            }
+        export class CheckboxBasicComponent {
+          constructor() { }
+          ngOnInit() {
           }
-          applyDateRange(event) {}
         }
   </code></pre>
   </body>
