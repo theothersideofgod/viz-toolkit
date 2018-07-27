@@ -97,6 +97,14 @@
     margin-bottom: 24px;
   }
 }
+.doc-list-bold {
+  // /* • Logical: Trees sho: */
+  font-family: SoletoTrial-Bold;
+  font-size: 16px;
+  color: #696969;
+  letter-spacing: 0;
+  line-height: 24px;
+}
 .doc-spec {
   height: 280px;
   width: 800px;
@@ -119,16 +127,15 @@
 
 //css for guide line and usage
 
-
-.docs-usage-w50{
+.docs-usage-w50 {
   display: inline-block;
   overflow: hidden;
-  width: calc( 50% - 5px - 12px );
-  &:nth-child(2){
+  width: calc(50% - 5px - 12px);
+  &:nth-child(2) {
     margin-left: 24px;
   }
 }
-.docs-usage-w100{
+.docs-usage-w100 {
   width: 100%;
 }
 .docs-usage-center {
@@ -143,7 +150,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 }
 .docs-usage-spec {
@@ -222,6 +229,6 @@
 .docs-mb24 {
   margin-top: 24px;
 }
-.docs-mt16{
+.docs-mt16 {
   margin-top: 16px;
 }
