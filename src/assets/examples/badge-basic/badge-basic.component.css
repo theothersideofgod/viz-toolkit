@@ -1,4 +1,3 @@
-div{
-    float:left;
-    margin-right: 30px
+span, button, mat-icon {
+  margin: 0 40px;
 }
