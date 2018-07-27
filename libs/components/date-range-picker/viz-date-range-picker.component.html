@@ -5,12 +5,12 @@
           placeholder="Date"
           [matRangeDatepicker]="resultPicker"
           [ngModel]="date"
-          (ngModelChange)="date = $event"
+          (ngModelChange)="onInputDate($event)"
           name="date"
           (dateInput)="onDateInput($event)"
           (dateChange)="onDateChange($event)">
         <mat-range-datepicker
-          #resultPicker [rangeMode]="true" opened="">
+          #resultPicker [rangeMode]="true" (closed)="this.onClose($event)">
         </mat-range-datepicker>
         <mat-range-datepicker-toggle matSuffix [for]="resultPicker"></mat-range-datepicker-toggle>
     </mat-form-field>

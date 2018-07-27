@@ -4,17 +4,29 @@
   
   <body>
     <pre><code class="html">
+        <viz-date-range-picker [date]="dateRange" (onApply)="applyDateRange($event)"></viz-date-range-picker>
     </code></pre>
     <pre><code class="css"></code></pre>
     <pre><code class="typescript">
-      import { Component, OnInit } from '@angular/core';
-
-      @Component({
-        selector: 'app-badge-basic',
-        templateUrl: './badge-basic.component.html',
-        styleUrls: ['./badge-basic.component.css']
-      })
-      export class BadgeBasicComponent implements OnInit {}
+        import { Component } from '@angular/core';
+        import { matRangeDatepickerRangeValue, DateAdapter } from "mat-range-datepicker";
+        @Component({
+          selector: 'app-date-picker-basic',
+          templateUrl: './date-picker-basic.component.html',
+          styleUrls: ['./date-picker-basic.component.scss']
+        })
+        export class DatePickerBasicComponent {
+          dateRange: matRangeDatepickerRangeValue<Date>;
+          constructor(
+            private _dateAdapter: DateAdapter<Date>,
+          ) { 
+            this.dateRange = {
+              begin: this._dateAdapter.addCalendarMonths(this._dateAdapter.today(), -3),
+              end: this._dateAdapter.today(),
+            }
+          }
+          applyDateRange(event) {}
+        }
   </code></pre>
   </body>
   <script>

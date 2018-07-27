@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Input, Pipe, PipeTransform, Optional } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input, Pipe, PipeTransform, Optional, Output, EventEmitter } from '@angular/core';
 import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from "mat-range-datepicker";
 
 @Component({
@@ -11,11 +11,43 @@ export class VizDateRangePickerComponent {
   date: matRangeDatepickerRangeValue<Date> ;
   lastDateInput: matRangeDatepickerRangeValue<Date> | null;
   lastDateChange: matRangeDatepickerRangeValue<Date> | null;
+  dateShot: matRangeDatepickerRangeValue<Date> | null;
 
-  onDateInput = (e: matRangeDatepickerInputEvent<Date>) => this.lastDateInput = e.value as matRangeDatepickerRangeValue<Date>;
+  @Output() onApply = new EventEmitter<any> ();
+
+  constructor(
+    private _dateAdapter: DateAdapter<Date>,
+  ) {}
+
+  ngOnInit() {
+    this.dateShot = this.date;
+  }
+
+  onDateInput = (e: matRangeDatepickerInputEvent<Date>) => {
+    console.log('input', this.lastDateInput === e.value)
+    this.lastDateInput = e.value as matRangeDatepickerRangeValue<Date>
+  }
   onDateChange = (e: matRangeDatepickerInputEvent<Date>) => {
-    console.log('date', e.value);
+    console.log('select', this.lastDateInput === e.value)
     this.lastDateChange = e.value as matRangeDatepickerRangeValue<Date>;
+  }
+  onInputDate($event) {
+    this.date = $event
+  }
+  onClose(event) {
+    console.log(this.dateShot, this.date)
+    if (!this.dateShot || !this.date) return
+    if (
+      this._dateAdapter.sameDate(this.dateShot.begin, this.date.begin)
+      &&
+      this._dateAdapter.sameDate(this.dateShot.end, this.date.end)
+    ) {
+
+    } else {
+      this.dateShot = this.date
+      this.onApply.emit(this.date)
+    }
+    
   }
 }
 
