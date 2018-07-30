@@ -3,14 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-select-basic',
   templateUrl: './select-basic.component.html',
-  styleUrls: ['./select-basic.component.css']
+  styleUrls: ['./select-basic.component.scss']
 })
 export class SelectBasicComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   options = [
     {
@@ -30,7 +29,6 @@ export class SelectBasicComponent implements OnInit {
       "title": "Option4"
     }
   ]
-
 }
 
 export const SelectBasicData = {
