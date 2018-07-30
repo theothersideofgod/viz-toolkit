@@ -249,6 +249,18 @@ td.mat-cell, .mat-header-cell {
     }
   }
 }
+.select-option{
+  .mat-list{
+    // padding-top: 0px;
+    .mat-list-item{
+      // background-color: #ffffff;
+      border-bottom: none;
+      &:first-child{
+        border-top:none
+      }
+    }
+  }
+}
 //chip style
 .mat-chip{
   &.mat-standard-chip{
