@@ -1,0 +1,32 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'app-select-basic'</span>,
+  templateUrl: <span class="hljs-string">'./select-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'./select-basic.component.scss'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {}
+
+  ngOnInit() {}
+
+  options = [
+    {
+      <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-string">"title"</span>: <span class="hljs-string">"Option1"</span>
+    },
+    {
+      <span class="hljs-string">"id"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-string">"title"</span>: <span class="hljs-string">"Option2"</span>
+    },
+    {
+      <span class="hljs-string">"id"</span>: <span class="hljs-number">3</span>,
+      <span class="hljs-string">"title"</span>: <span class="hljs-string">"Option3"</span>
+    },
+    {
+      <span class="hljs-string">"id"</span>: <span class="hljs-number">4</span>,
+      <span class="hljs-string">"title"</span>: <span class="hljs-string">"Option4"</span>
+    }
+  ]
+}

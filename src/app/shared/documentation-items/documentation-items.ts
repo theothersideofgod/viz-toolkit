@@ -38,6 +38,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'chip', name: 'Chip', examples: ['chip-basic']},
         {id: 'badge', name: 'Badge', examples: ['badge-basic']},
         {id: 'progressbar', name: 'Progress Bar', examples: ['progress-bar-basic']},
+        {id: 'headerfooter', name: 'Header Footer', examples: ['header-footer-basic']},
       ]
     },
   ],

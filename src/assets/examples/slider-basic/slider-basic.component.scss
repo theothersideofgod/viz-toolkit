@@ -1,4 +1,5 @@
-.mat-slider-horizontal {
-	width: 100%;
-	min-width: 142px;
+:host {
+  mat-slider {
+    width: 142px;
+  }
 }
