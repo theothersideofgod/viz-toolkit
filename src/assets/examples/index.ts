@@ -19,6 +19,7 @@ import { ListBasicComponent, ListBasicData } from './list-basic/list-basic.compo
 import { ChipBasicComponent, ChipBasicData } from './chip-basic/chip-basic.component';
 import { BadgeBasicComponent, BadgeBasicData } from './badge-basic/badge-basic.component';
 import { ProgressBarBasicComponent, ProgressBarBasicData } from './progress-bar-basic/progress-bar-basic.component';
+import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-footer-basic/header-footer-basic.component'
 
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
@@ -88,6 +89,10 @@ export const ALL_EXAMPLE_ITEMS = {
   'progress-bar-basic': {
     component: ProgressBarBasicComponent,
     data: ProgressBarBasicData
+  },
+  'header-footer-basic': {
+    component: HeaderFooterBasicComponent,
+    data: HeaderFooterBasicData
   }
 }
 @NgModule({
@@ -108,7 +113,8 @@ export const ALL_EXAMPLE_ITEMS = {
     ListBasicComponent,
     ChipBasicComponent,
     BadgeBasicComponent,
-    ProgressBarBasicComponent
+    ProgressBarBasicComponent,
+    HeaderFooterBasicComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -133,7 +139,8 @@ export const ALL_EXAMPLE_ITEMS = {
     ListBasicComponent,
     ChipBasicComponent,
     BadgeBasicComponent,
-    ProgressBarBasicComponent
+    ProgressBarBasicComponent,
+    HeaderFooterBasicComponent,
   ]
 })
 export class ExampleModule { }
