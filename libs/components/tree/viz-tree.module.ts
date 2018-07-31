@@ -11,7 +11,17 @@ import { VizTreeLeafDefDirective } from './viz-tree-leaf-def.directive';
 
 @NgModule({
   imports: [CommonModule, MatIconModule],
-  exports: [VizTreeComponent, VizTreeCellComponent],
-  declarations: [VizTreeComponent, VizTreeCellComponent, VizTreeNodeDefDirective, VizTreeLeafDefDirective]
+  exports: [
+    VizTreeComponent,
+    VizTreeCellComponent,
+    VizTreeNodeDefDirective,
+    VizTreeLeafDefDirective
+  ],
+  declarations: [
+    VizTreeComponent,
+    VizTreeCellComponent,
+    VizTreeNodeDefDirective,
+    VizTreeLeafDefDirective
+  ]
 })
 export class VizTreeModule {}

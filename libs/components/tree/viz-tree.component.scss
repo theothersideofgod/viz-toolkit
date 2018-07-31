@@ -2,15 +2,16 @@
   display: none;
 }
 .viz-tree-cell-node {
-  display: flex;
-  margin-bottom: 16px;
+  // display: flex;
+  margin-bottom: 10px;
 }
 .viz-tree-cell-child {
-  margin-left: 24px;
-  margin-bottom: 16px;
+  margin-left: 40px;
+  // margin-bottom: 16px;
 }
 .viz-tree-cell-node-content{
-    margin-left: 24px;
+    margin-left: 40px;
+    margin-bottom: 16px;
 }
 .viz-tree-cell-node-content-hidden{
   display: none

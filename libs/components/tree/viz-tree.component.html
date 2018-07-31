@@ -21,11 +21,11 @@
         </mat-icon> -->
 
         <ng-container *ngIf="node.children.length>0">
-          <ng-container *ngTemplateOutlet="nodeDef; context: { $implicit: node }"></ng-container>
+          <ng-container *ngTemplateOutlet="vizTreeNodeTemplate; context: { $implicit: node }"></ng-container>
         </ng-container>
         <ng-container *ngIf="node.children.length==0">
           <div [class.viz-tree-cell-node-content]="!node.children.length>0">
-            <ng-container *ngTemplateOutlet="leafDef; context: { $implicit: node }"></ng-container>
+            <ng-container *ngTemplateOutlet="vizTreeLeafTemplate; context: { $implicit: node }"></ng-container>
           </div>
         </ng-container>
 

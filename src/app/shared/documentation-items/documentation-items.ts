@@ -21,9 +21,10 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
-        {id: 'chipprimary', name: 'ChipPrimary', examples: ['chip-primary']},
-        {id: 'listnodivider', name: 'ListNodivider', examples: ['list-nodivider']},
-        {id: 'menunested', name: 'MenuNested', examples: ['menu-nested']},
+        {id: 'tabs', name: 'Tabs', examples: ['tabs']},
+        // {id: 'chipprimary', name: 'ChipPrimary', examples: ['chip-primary']},
+        // {id: 'listnodivider', name: 'ListNodivider', examples: ['list-nodivider']},
+        // {id: 'menunested', name: 'MenuNested', examples: ['menu-nested']},
         {id: 'button', name: 'Button', examples: ['button-basic']},
         {id: 'datepicker', name: 'DatePicker', examples: ['date-picker-basic']},
         {id: 'select', name: 'Select', examples: ['select-basic']},

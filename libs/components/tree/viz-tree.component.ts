@@ -22,14 +22,12 @@ export class VizTreeComponent implements OnInit, AfterViewInit {
   vizTreeNodeTemplate: TemplateRef<any>;
   @ContentChild(VizTreeLeafDefDirective, { read: TemplateRef })
   vizTreeLeafTemplate: TemplateRef<any>;
-  @ContentChild('nodeDef') nodeDef: TemplateRef<any>
-  @ContentChild('leafDef') leafDef: TemplateRef<any>
   constructor() {}
 
   ngOnInit() {
     console.log(this.vizTreeNodeTemplate);
   }
   ngAfterViewInit() {
-    console.log(this.vizTreeNodeTemplate)
+    console.log(this.vizTreeNodeTemplate);
   }
 }

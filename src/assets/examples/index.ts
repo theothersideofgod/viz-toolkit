@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { TabsComponent, TabsData } from './tabs/tabs.component';
 import { ChipPrimaryComponent, ChipPrimaryData } from './chip-primary/chip-primary.component';
 import { ListNodividerComponent, ListNodividerData } from './list-nodivider/list-nodivider.component';
 import { MenuNestedComponent, MenuNestedData } from './menu-nested/menu-nested.component';
@@ -27,6 +28,10 @@ import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-foot
 
 
 export const ALL_EXAMPLE_ITEMS = {
+  'tabs' : {
+    component: TabsComponent,
+    data: TabsData
+  },
   'chip-primary' : {
     component: ChipPrimaryComponent,
     data: ChipPrimaryData
@@ -114,6 +119,7 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    TabsComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
     MenuNestedComponent,
@@ -143,6 +149,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TabsComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
     MenuNestedComponent,
