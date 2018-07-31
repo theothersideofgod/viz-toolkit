@@ -1,0 +1,20 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'app-list-basic'</span>,
+  templateUrl: <span class="hljs-string">'./list-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'./list-basic.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ListBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  messages:<span class="hljs-built_in">any</span>[] = [<span class="hljs-string">'list1'</span>,<span class="hljs-string">'list2'</span>,<span class="hljs-string">'list3'</span>,<span class="hljs-string">'list4'</span>]
+  typesOfShoes: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'Boots'</span>, <span class="hljs-string">'Clogs'</span>, <span class="hljs-string">'Loafers'</span>, <span class="hljs-string">'Moccasins'</span>, <span class="hljs-string">'Sneakers'</span>];
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) { }
+
+  ngOnInit() {
+  }
+
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ListBasicData = {
+  name: <span class="hljs-string">'List'</span>
+};

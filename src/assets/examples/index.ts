@@ -21,6 +21,8 @@ import { BadgeBasicComponent, BadgeBasicData } from './badge-basic/badge-basic.c
 import { ProgressBarBasicComponent, ProgressBarBasicData } from './progress-bar-basic/progress-bar-basic.component';
 import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-footer-basic/header-footer-basic.component'
 
+
+
 export const ALL_EXAMPLE_ITEMS = {
   'button-basic' : {
     component: ButtonBasicComponent,
@@ -114,7 +116,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ChipBasicComponent,
     BadgeBasicComponent,
     ProgressBarBasicComponent,
-    HeaderFooterBasicComponent,
+    HeaderFooterBasicComponent
   ],
   imports: [
     BrowserAnimationsModule,

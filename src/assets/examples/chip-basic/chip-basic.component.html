@@ -1,26 +1,8 @@
-<mat-chip-list>
-  <mat-chip *ngFor="let chip of chips; let i=index"
-            [selected]="chip.selected"
-            (click)="toggleChip(chip)">
-    <mat-icon matChipAvatar
-              *ngIf="chip.selected">check</mat-icon>
-    {{chip.name}}
-  </mat-chip>
-</mat-chip-list>
-
-
 
 <mat-chip-list>
+  <mat-chip>Input Chip</mat-chip>
   <mat-chip>
-    Chip 01
-    <mat-icon matChipRemove>cancel</mat-icon>
-  </mat-chip>
-  <mat-chip>
-    Chip 02
-    <mat-icon matChipRemove>cancel</mat-icon>
-  </mat-chip>
-  <mat-chip>
-    Chip 03
+    Choise Chip
     <mat-icon matChipRemove>cancel</mat-icon>
   </mat-chip>
 </mat-chip-list>

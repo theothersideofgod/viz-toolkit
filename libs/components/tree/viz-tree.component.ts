@@ -1,18 +1,33 @@
-import { Component, OnInit, TemplateRef, ContentChild } from '@angular/core';
-import { Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  TemplateRef,
+  ContentChild,
+  AfterViewInit,
+  AfterContentInit,
+  ElementRef,
+  Input
+} from '@angular/core';
+import { VizTreeNodeDefDirective } from './viz-tree-node-def.directive';
+import { VizTreeLeafDefDirective } from './viz-tree-leaf-def.directive';
 
 @Component({
   selector: 'viz-tree',
   templateUrl: './viz-tree.component.html',
   styleUrls: ['./viz-tree.component.scss']
 })
-export class VizTreeComponent implements OnInit {
+export class VizTreeComponent implements OnInit, AfterViewInit {
   @Input() tree: any;
-  @ContentChild(TemplateRef) itemTemplate: TemplateRef<any>;
+  @ContentChild(VizTreeNodeDefDirective, { read: TemplateRef })
+  vizTreeNodeTemplate: TemplateRef<any>;
+  @ContentChild(VizTreeLeafDefDirective, { read: TemplateRef })
+  vizTreeLeafTemplate: TemplateRef<any>;
   constructor() {}
 
-  ngOnInit() {}
-  collapse(){
-    
+  ngOnInit() {
+    console.log(this.vizTreeNodeTemplate);
+  }
+  ngAfterViewInit() {
+    console.log(this.vizTreeNodeTemplate)
   }
 }

@@ -46,21 +46,93 @@
         <th>default</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>ghost</td>
-        <td>make background transparent and invert text and border colors</td>
-        <td>boolean</td>
+    <tbody><tr>
+        <td>ariaOrientation</td>
+        <td>Orientation of the chip list.</td>
+        <td>String</td>
+        <td>'horizontal' | 'vertical'</td>
+      </tr><tr>
+        <td>compareWith</td>
+        <td>A function to compare the option values with the selected values. The first argument is a value from an option. The second is a value from the selection. A boolean should be returned.</td>
+        <td>(o1: any, o2: any) => boolean</td>
+        <td>Function</td>
+      </tr><tr>
+        <td>errorStateMatcher</td>
+        <td>An object used to control when error messages are shown.</td>
+        <td> ErrorStateMatcher</td>
+        <td>None</td>
+      </tr><tr>
+        <td>multiple</td>
+        <td>Whether the user should be allowed to select multiple chips.</td>
+        <td> boolean</td>
         <td>false</td>
-      </tr>
-      <tr>
-        <td>disabled</td>
-        <td>disabled state of button</td>
-        <td>boolean</td>
+      </tr><tr>
+        <td>selectable</td>
+        <td>Whether or not this chip list is selectable. When a chip list is not selectable, the selected states for all the chips inside the chip list are always ignored.</td>
+        <td> boolean</td>
         <td>false</td>
-      </tr>
-    </tbody>
-  </table>
+      </tr><tr>
+        <td>change</td>
+        <td>Event emitted when the selected chip list value has been changed by the user.</td>
+        <td> EventEmitter<MatChipListChange></td>
+        <td></td>
+      </tr><tr>
+        <td>autofilled</td>
+        <td>Whether the input is currently in an autofilled state. If property is not present on the control it is assumed to be false.</td>
+        <td> boolean</td>
+        <td>false</td>
+      </tr><tr>
+        <td>chipBlurChanges</td>
+        <td>Combined stream of all of the child chips' blur change events.</td>
+        <td> Observable<MatChipEvent></td>
+        <td></td>
+      </tr><tr>
+        <td>chipFocusChanges</td>
+        <td>Combined stream of all of the child chips' focus change events.</td>
+        <td> Observable<MatChipEvent></td>
+        <td></td>
+      </tr><tr>
+        <td>chipRemoveChanges</td>
+        <td>Combined stream of all of the child chips' remove change events.</td>
+        <td> Observable<MatChipEvent></td>
+        <td></td>
+      </tr><tr>
+        <td>chipSelectionChanges</td>
+        <td>Combined stream of all of the child chips' selection change events.</td>
+        <td> Observable<MatChipSelectionChange></td>
+        <td></td>
+      </tr><tr>
+        <td>chips</td>
+        <td>The chip components contained within this chip list.</td>
+        <td> QueryList<MatChip></td>
+        <td></td>
+      </tr><tr>
+        <td>errorState</td>
+        <td>Whether the control is in an error state.</td>
+        <td> boolean</td>
+        <td>false</td>
+      </tr><tr>
+        <td>focused</td>
+        <td>Whether any chips or the matChipInput inside of this chip-list has focus.</td>
+        <td> boolean</td>
+        <td>false</td>
+      </tr><tr>
+        <td>role</td>
+        <td>The ARIA role applied to the chip list.</td>
+        <td> string | null</td>
+        <td></td>
+      </tr><tr>
+        <td>selected</td>
+        <td>The array of selected chips inside chip list.</td>
+        <td> MatChip[] | MatChip</td>
+        <td></td>
+      </tr><tr>
+        <td>stateChanges</td>
+        <td>Stream that emits whenever the state of the control changes such that the parent�MatFormField�needs to run change detection.</td>
+        <td> Observable\<void\></td>
+        <td></td>
+      </tr></tbody>
+    </table>
   <div class="doc-divider"></div>
   <div class="doc-title-2">
     Best Practices

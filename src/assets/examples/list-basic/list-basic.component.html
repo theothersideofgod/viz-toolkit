@@ -1,28 +1,29 @@
-<mat-list >
-  <mat-list-item>
-    <div class="inner-content">
-      List item 1
-      <span class="chip purple">1</span>
-    </div>
-  </mat-list-item>
-  <mat-list-item>
-    <div class="inner-content">
-      List item 2
-      <span class="chip orange">33</span>
-    </div>
-  </mat-list-item>
-  <mat-list-item>
-    <div class="inner-content">
-      List item 3
-      <span class="chip purple">20</span>
-    </div>
-  </mat-list-item>
-  <mat-list-item>
-    <div class="inner-content">
-      List item 4
-      <span class="chip red">42</span>
-    </div>
-  </mat-list-item>
- </mat-list>
+<div class="list-example">
 
- 
+
+  <div class="list-basic-wrap">
+    <mat-list>
+      <mat-divider></mat-divider>
+      <ng-container *ngFor="let message of messages">
+        <mat-list-item>
+          <mat-icon matListIcon>folder</mat-icon>
+          <h3> {{message}} </h3>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-list>
+  </div>
+
+  <div class="list-basic-wrap">
+
+    <mat-selection-list #shoes>
+      <mat-divider></mat-divider>
+      <ng-container *ngFor="let shoe of typesOfShoes">
+        <mat-list-option>
+          {{shoe}}
+        </mat-list-option>
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-selection-list>
+  </div>
+</div>

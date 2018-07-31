@@ -240,37 +240,33 @@ td.mat-cell, .mat-header-cell {
 }
 //list style
 .mat-list{
-  padding-top: 0px;
+  // padding-top: 0px;
   .mat-list-item{
-    background-color: #ffffff;
-    border-bottom: 1px solid gray;
-    &:first-child{
-      border-top: 1px solid gray;
+    color: #696969;
+    // background-color: #ffffff;
+    // border-bottom: 1px solid gray;
+    // &:first-child{
+    //   border-top: 1px solid gray;
+    // }
+    .mat-icon{
+      color: #9f9f9f;
     }
-  }
-}
-.select-option{
-  .mat-list{
-    // padding-top: 0px;
-    .mat-list-item{
-      // background-color: #ffffff;
-      border-bottom: none;
-      &:first-child{
-        border-top:none
-      }
+    .mat-list-item-content{
+      color: #9f9f9f;
+      font-family:Soleto;
     }
   }
 }
 //chip style
-.mat-chip{
-  &.mat-standard-chip{
-    border-radius: 0px;
-    &.mat-chip-selected.mat-primary{
-      background-color: #e0e0e0 !important;
-      color: #7f5eba !important;
-    }
-  }
-}
+// .mat-chip{
+//   &.mat-standard-chip{
+//     border-radius: 0px;
+//     &.mat-chip-selected.mat-primary{
+//       background-color: #e0e0e0 !important;
+//       color: #7f5eba !important;
+//     }
+//   }
+// }
 // .material-icons.material-icons--outline {
 //   font-family: 'Material Icons Outline';
 // }

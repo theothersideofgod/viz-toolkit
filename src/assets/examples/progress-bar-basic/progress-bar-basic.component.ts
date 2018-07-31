@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-progress-bar-basic',
   templateUrl: './progress-bar-basic.component.html',
-  styleUrls: ['./progress-bar-basic.component.css']
+  styleUrls: ['./progress-bar-basic.component.scss']
 })
 export class ProgressBarBasicComponent implements OnInit {
 
