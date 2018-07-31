@@ -1,0 +1,133 @@
+<html>
+
+<head></head>
+
+<body>
+  <div class="doc-category-title">
+    Get Started
+    <span class="docs-markdown-h3" id="contents">
+      <span header-link="contents"></span>contents</span>
+  </div>
+  <div class="doc-title-1">
+    Developers
+  </div>
+  <div class="doc-desc-1">
+    For help getting started with a new Angular app, check out the <a href="https://cli.angular.io/" class="docs-markdown-a">Angular CLI</a>.
+    For existing apps, follow these steps to begin using Vizient Toolkit.
+  </div>
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Step 1: Install Vizient ToolKit
+    <span class="docs-markdown-h3" id="step1">
+      <span header-link="step1"></span>Step 1: Install Vizient ToolKit</span>
+  </div>
+  <div class="doc-desc-2">
+    Cause Vizient Toolkit is not published into npm. You have to install it via local file.
+  </div>
+  <div class="doc-bold-title">
+    Put libs/viz-toolkit in root folder. Add this line into your package.json.
+  </div>
+  <div class="doc-code-sec">
+    "viz-toolkit": "file:./libs/viz-toolkit",
+  </div>
+  <div class="doc-bold-title">
+    Run npm/yarn install.
+  </div>
+  <div class="doc-code-sec">
+    npm install
+  </div>
+  <div class="doc-divider"></div>
+
+  <div class="doc-title-2">
+    Step 2: Include CSS
+    <span class="docs-markdown-h3" id="step2">
+      <span header-link="step2"></span>Step 2: Include CSS</span>
+  </div>
+  <div class="doc-desc-2">
+    Import the basic theme viz-toolkit provides.
+  </div>
+  <div class="doc-bold-title">
+    Put this line into angular.json
+  </div>
+  <div class="doc-code-sec">
+    "styles": ["node_modules/viz-toolkit/themes/index.theme.css", "src/styles.css"]
+  </div>
+  <div class="doc-divider"></div>
+
+  <div class="doc-title-2">
+    Step 3: Import the component modules
+    <span class="docs-markdown-h3" id="step3">
+      <span header-link="step3"></span>Step 3: Import the component modules</span>
+  </div>
+  <div class="doc-desc-2">
+    Import the component modules.
+  </div>
+  <pre class="doc-code-sec">
+    <span class="hljs-keyword">import</span> { 
+      VizDateRangePickerMudule,
+      VizHeaderMudule,
+      VizButtonModule,
+      VizFooterMudule
+    } <span class="hljs-keyword">from</span> <span class="hljs-string">'viz-toolkit'</span>;
+    <span class="hljs-meta">@NgModule</span>({
+      ...
+      imports: [
+        VizDateRangePickerMudule,
+        VizHeaderMudule,
+        VizButtonModule,
+        VizFooterMudule
+      ],
+      ...
+    })
+    <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule { }
+  </pre>
+  <div class="doc-divider"></div>
+
+  <div class="doc-title-2">
+    Step 4: Animations
+    <span class="docs-markdown-h3" id="step4">
+      <span header-link="step4"></span>Step 4: Animations</span>
+  </div>
+  <div class="doc-desc-2">
+    Some Material components depend on the Angular animations module in order to be able to do more advanced transitions. If you want these animations to work in your app, you have to install the  <span class="doc-desc-2-highlight">@angular/animations</span>
+  </div>
+  <div class="doc-bold-title">
+    NPM
+  </div>
+  <div class="doc-code-sec">
+    npm install --save @angular/animations
+  </div>
+
+  <pre class="doc-code-sec">
+    <span class="hljs-keyword">import</span> {BrowserAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser/animations'</span>;
+
+    <span class="hljs-meta">@NgModule</span>({
+      ...
+      imports: [BrowserAnimationsModule],
+      ...
+    })
+    <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule { }
+  </pre>
+    
+  </div>
+  <div class="doc-divider"></div>
+
+  <div class="doc-title-2">
+    Step 5: Add Material Icons
+    <span class="docs-markdown-h3" id="step5">
+      <span header-link="step5"></span>Step 5: Add Material Icons</span>
+  </div>
+  <div class="doc-desc-2">
+      If you want to use the <span class="doc-desc-2-highlight">mat-icon</span> component with the official <a href="https://material.io/icons/" class="docs-markdown-a">Material Design Icons</a>, load the icon font in your index.html.
+  </div>
+  <div class="doc-bold-title">
+    Put this line into angular.json
+  </div>
+  <div class="doc-code-sec">
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+  </div>
+  <div class="doc-divider"></div>
+  
+</body>
+
+</html>
