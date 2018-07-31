@@ -52,26 +52,26 @@ export class VizDateRangePickerComponent {
 }
 
 
-@Pipe({name: 'lastdays'})
-export class LastDaysPipe<D> implements PipeTransform {
+// @Pipe({name: 'lastdays'})
+// export class LastDaysPipe<D> implements PipeTransform {
 
-  constructor(
-    @Optional() private _dateAdapter: DateAdapter<Date>,
-  ) {}
+//   constructor(
+//     @Optional() private _dateAdapter: DateAdapter<Date>,
+//   ) {}
 
-  transform(value: matRangeDatepickerRangeValue<Date> | D | null, options: string): any {
-    if (value && value.hasOwnProperty('begin')) {
-      let _value = <matRangeDatepickerRangeValue<Date>> value;
-      if (this._dateAdapter.sameDate(this._dateAdapter.today(), _value.end)) {
-        // return "Last ? Days";
-        return _value;
+//   transform(value: matRangeDatepickerRangeValue<Date> | D | null, options: string): any {
+//     if (value && value.hasOwnProperty('begin')) {
+//       let _value = <matRangeDatepickerRangeValue<Date>> value;
+//       if (this._dateAdapter.sameDate(this._dateAdapter.today(), _value.end)) {
+//         // return "Last ? Days";
+//         return _value;
         
-      } else {
-        return _value;
-      }
-    } else {
-      return value;
-    }
-  }
-}
+//       } else {
+//         return _value;
+//       }
+//     } else {
+//       return value;
+//     }
+//   }
+// }
 
