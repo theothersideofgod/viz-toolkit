@@ -21,10 +21,10 @@
         </mat-icon> -->
         <div [class.viz-tree-cell-node-content]="!node.children.length>0">
           <ng-container *ngIf="node.children.length>0">
-            <ng-container *ngTemplateOutlet="vizTreeNodeTemplate; context: { $implicit: node }"></ng-container>
+            <ng-container *ngTemplateOutlet="nodeDef; context: { $implicit: node }"></ng-container>
           </ng-container>
           <ng-container *ngIf="node.children.length==0">
-            <ng-container *ngTemplateOutlet="vizTreeLeafTemplate; context: { $implicit: node }"></ng-container>
+            <ng-container *ngTemplateOutlet="leafDef; context: { $implicit: node }"></ng-container>
           </ng-container>
         </div>
       </div>
@@ -32,6 +32,7 @@
       <div *ngIf="node.children.length > 0" [class.hideChildren]=!node.isExpanded class="viz-tree-cell-child">
         <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: node.children }"></ng-container>
       </div>
+      
     </div>
   </ng-template>
   <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: tree }"></ng-container>
