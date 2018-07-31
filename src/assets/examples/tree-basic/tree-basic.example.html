@@ -1,1 +1,29 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">tree</span> <span class="hljs-attr">mat-tree</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-name">tree</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">viz-tree</span> [<span class="hljs-attr">tree</span>]=<span class="hljs-string">"tree"</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- &lt;div *VizTreeLeafDef="let node"&gt;
+    &lt;mat-checkbox [checked]="descendantsAllSelected(node)" [indeterminate]="descendantsPartiallySelected(node)" (change)="toggle(node)"&gt;{{node.name}}&lt;/mat-checkbox&gt;
+  &lt;/div&gt;
+
+  &lt;div *VizTreeNodeDef="let node"&gt;
+    &lt;mat-icon (click)="node.isExpanded = !node.isExpanded"&gt;
+      {{node.isExpanded ? 'expand_more' : 'chevron_right'}}
+    &lt;/mat-icon&gt;
+    &lt;mat-checkbox [checked]="descendantsAllSelected(node)" [indeterminate]="descendantsPartiallySelected(node)" (change)="toggle(node)"&gt;{{node.name}}&lt;/mat-checkbox&gt;
+
+  &lt;/div&gt; --&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">VizTreeNodeDef</span>=<span class="hljs-string">"let node;"</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">nodeDef</span> <span class="hljs-attr">let-node</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"node.isExpanded = !node.isExpanded"</span>&gt;</span>
+      {{node.isExpanded ? 'arrow_drop_down' : 'arrow_drop_up'}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"descendantsAllSelected(node)"</span> [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"descendantsPartiallySelected(node)"</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"toggle(node)"</span>&gt;</span>{{node.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">leafDef</span> <span class="hljs-attr">let-node</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"descendantsAllSelected(node)"</span> [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"descendantsPartiallySelected(node)"</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"toggle(node)"</span>&gt;</span>{{node.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">viz-tree</span>&gt;</span>

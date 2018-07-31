@@ -12,6 +12,10 @@
 
   </div> -->
 
+  <ng-container *VizTreeNodeDef="let node;">
+
+  </ng-container>
+
 
   <ng-template #nodeDef let-node>
     <mat-icon (click)="node.isExpanded = !node.isExpanded">
