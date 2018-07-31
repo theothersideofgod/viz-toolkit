@@ -13,9 +13,11 @@
   </div>
   <div class="doc-desc-1">
     <p>Menus display a list of choices on a transient sheet of material.</p>
-    <p>Menus appear upon interaction with a button, action, or other control. They display a list of choices, with one choice per line.</p>
-    <p>Menu items may be disabled if not applicable to a certain context. Contextual menus dynamically change their available menu items based on the current state of the app.</p>
-    <p>Menus should not be used as a primary method for navigation within an app.</p>  
+    <p>Menus appear upon interaction with a button, action, or other control. They display a list of choices, with one choice
+      per line.</p>
+    <p>Menu items may be disabled if not applicable to a certain context. Contextual menus dynamically change their available
+      menu items based on the current state of the app.</p>
+    <p>Menus should not be used as a primary method for navigation within an app.</p>
   </div>
   <div class="doc-divider">
   </div>
@@ -25,12 +27,12 @@
       <span header-link="examples"></span>Examples</span>
   </div>
   <div class="doc-desc-2">
-    Menus allow users make a selection from multiple options.  </div>
+    Menus allow users make a selection from multiple options. </div>
   <div class="doc-example-container">
     <div app-docs-example="menu-basic"></div>
   </div>
-  <div class="doc-example-container">
-    <div app-docs-example="menu-basic"></div>
+  <div class="doc-example-container" style="margin-top:16px">
+    <div app-docs-example="menu-nested"></div>
   </div>
   <div class="doc-divider">
   </div>
@@ -54,16 +56,59 @@
     </thead>
     <tbody>
       <tr>
-        <td>checked</td>
-        <td>Specifies whether the checkbox is selected</td>
-        <td>boolean</td>
-        <td>false</td>
+        <td>backdropClass</td>
+        <td>Class to be added to the backdrop element.</td>
+        <td>string</td>
+        <td></td>
       </tr>
       <tr>
-        <td>disabled</td>
-        <td>disabled state of checkbox</td>
+        <td>hasBackdrop</td>
+        <td>Whether the menu has a backdrop.</td>
+        <td>boolean | undefined</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>overlapTrigger</td>
+        <td>Whether the menu should overlap its trigger.</td>
         <td>boolean</td>
-        <td>false</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>panelClass</td>
+        <td>This method takes classes set on the host mat-menu element and applies them on the menu template that displays in
+          the overlay container. Otherwise, it's difficult to style the containing menu from outside the component.</td>
+        <td>string</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>xPosition</td>
+        <td>Position of the menu in the X axis.</td>
+        <td>MenuPositionX</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>yPosition</td>
+        <td>Position of the menu in the Y axis.</td>
+        <td>MenuPositionY</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>closed</td>
+        <td>EventEmitter</td>
+        <td>Event emitted when the menu is closed.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>direction</td>
+        <td>Layout direction of the menu.</td>
+        <td>Direction</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>parentMenu</td>
+        <td>Parent menu of the current menu panel.</td>
+        <td>MatMenuPanel</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -75,7 +120,8 @@
   </div>
 
   <div class="doc-desc-2">
-    A menu displays a list of choices on a temporary surface. They appear when users interact with a button, action, or other control.
+    A menu displays a list of choices on a temporary surface. They appear when users interact with a button, action, or other
+    control.
     <ul class="doc-list">
       <li>Nimble: Menus should be easy to open, close, and interact with.</li>
       <li>Contextual: Menu content should be suited to user needs.</li>
@@ -95,7 +141,8 @@
   </div>
 
   <div class="doc-desc-2">
-    Dropdown menus display a list of options, triggered by an icon, button, or action. Be clearly stated which item is selected and which item is available to be selected.
+    Dropdown menus display a list of options, triggered by an icon, button, or action. Be clearly stated which item is selected
+    and which item is available to be selected.
   </div>
 
   <div style="margin-bottom:24px">
@@ -108,7 +155,7 @@
   </div>
 
 
-  
+
 
   <div class="doc-divider">
 

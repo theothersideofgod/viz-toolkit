@@ -42,63 +42,37 @@ const partialCheckedNode = node => {
 export class TreeBasicComponent implements OnInit {
   tree: any = [
     {
-      name: 1,
+      name: 'Group1',
       isExpanded: false,
       checked: false,
       children: [
         {
-          name: 2,
-          isExpanded: false,
-          checked: false,
-          children: [
-            {
-              name: 3,
-              isExpanded: false,
-              checked: false,
-              children: []
-            },
-            {
-              name: 4,
-              isExpanded: false,
-              checked: false,
-              children: []
-            }
-          ]
-        },
-        {
-          name: 22,
-          isExpanded: false,
-          checked: false,
-          children: [
-            {
-              name: 33,
-              isExpanded: false,
-              checked: false,
-              children: []
-            },
-            {
-              name: 44,
-              isExpanded: false,
-              checked: false,
-              children: []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'aaa',
-      isExpanded: false,
-      checked: false,
-      children: [
-        {
-          name: 'bbb',
+          name: 'item1',
           isExpanded: false,
           checked: false,
           children: []
         },
         {
-          name: 'ccc',
+          name: 'item2',
+          isExpanded: false,
+          checked: false,
+          children: []
+        }
+      ]
+    },
+    {
+      name: 'Group2',
+      isExpanded: false,
+      checked: false,
+      children: [
+        {
+          name: 'item3',
+          isExpanded: false,
+          checked: false,
+          children: []
+        },
+        {
+          name: 'item4',
           isExpanded: false,
           checked: false,
           children: []

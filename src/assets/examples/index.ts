@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import * as VizModules from 'libs';
+import * as VizModules from 'libs'
+import { ChipPrimaryComponent, ChipPrimaryData } from './chip-primary/chip-primary.component';
+import { ListNodividerComponent, ListNodividerData } from './list-nodivider/list-nodivider.component';
+import { MenuNestedComponent, MenuNestedData } from './menu-nested/menu-nested.component';
 import { ButtonBasicComponent, ButtonBasicData } from './button-basic/button-basic.component';
 import { DatePickerBasicComponent, DatePickerBasicData } from './date-picker-basic/date-picker-basic.component'
 import { SelectBasicComponent, SelectBasicData } from './select-basic/select-basic.component'
@@ -24,6 +27,18 @@ import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-foot
 
 
 export const ALL_EXAMPLE_ITEMS = {
+  'chip-primary' : {
+    component: ChipPrimaryComponent,
+    data: ChipPrimaryData
+  },
+  'list-nodivider' : {
+    component: ListNodividerComponent,
+    data: ListNodividerData
+  },
+  'menu-nested' : {
+    component: MenuNestedComponent,
+    data: MenuNestedData
+  },
   'button-basic' : {
     component: ButtonBasicComponent,
     data: ButtonBasicData
@@ -99,6 +114,9 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    ChipPrimaryComponent,
+    ListNodividerComponent,
+    MenuNestedComponent,
     ButtonBasicComponent,
     DatePickerBasicComponent,
     SelectBasicComponent,
@@ -125,6 +143,9 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ChipPrimaryComponent,
+    ListNodividerComponent,
+    MenuNestedComponent,
     ButtonBasicComponent, 
     DatePickerBasicComponent, 
     SelectBasicComponent, 

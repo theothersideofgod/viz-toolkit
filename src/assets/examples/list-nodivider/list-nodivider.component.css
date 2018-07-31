@@ -1,0 +1,9 @@
+.list-basic-wrap {
+    width: 330px;
+  }
+  
+  .list-example{
+    display:flex;
+    justify-content: space-around
+  }
+  
