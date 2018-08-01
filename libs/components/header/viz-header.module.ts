@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material';
     MatIconModule
   ],
   exports: [
-    VizHeaderComponent
+    VizHeaderComponent,
   ],
   declarations: [
     VizHeaderComponent
