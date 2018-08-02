@@ -1,5 +1,9 @@
 <div class="viz-toolbar"> 
-  <span>{{title}}</span>
+  <mat-form-field floatLabel="never">
+    <input matInput 
+    placeholder={{placeholderText}}
+    [(ngModel)]="value">
+  </mat-form-field>
   <div class="search" (click)="searchOnclick()">
     <mat-icon>search</mat-icon>
   </div>

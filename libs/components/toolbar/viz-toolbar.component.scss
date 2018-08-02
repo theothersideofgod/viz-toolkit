@@ -4,6 +4,7 @@
     line-height: 64px;
     flex-direction: row;
     justify-content: space-between;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
     padding: 0 24px;
     .search {
       display: inline-flex;
@@ -14,5 +15,11 @@
         color: #9F9F9F;
       }
     }
+  }
+}
+
+::ng-deep {
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    display: none;
   }
 }

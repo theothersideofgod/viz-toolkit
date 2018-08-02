@@ -10,8 +10,8 @@ export class ToolbarBasicComponent implements OnInit {
 
   ngOnInit() { }
   
-  seachOnClick() {
-    
+  seachOnClick(value) {
+    console.log(value)
   }
 }
 
