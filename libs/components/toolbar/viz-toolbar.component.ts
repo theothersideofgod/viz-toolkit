@@ -8,12 +8,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export class VizToolbarComponent implements OnInit {
 
-  @Input() title: String;
-  @Output() searchBtnClick = new EventEmitter()
+  @Input() placeholderText: String;
+  @Output() searchBtnClick = new EventEmitter();
+  value: String = ""
 
   ngOnInit() { }
   
   searchOnclick() {
-    this.searchBtnClick.emit()
+    this.searchBtnClick.emit(this.value)
   }
 }

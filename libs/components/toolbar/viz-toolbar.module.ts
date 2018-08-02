@@ -1,18 +1,22 @@
 import { NgModule } from "@angular/core";
 import { VizToolbarComponent } from './viz-toolbar.component'
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ],
   exports: [
     VizToolbarComponent
   ],
   declarations: [
-    VizToolbarComponent
+    VizToolbarComponent,
   ],
 })
 export class VizToolbarMudule {}
