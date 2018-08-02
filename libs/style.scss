@@ -257,16 +257,15 @@ td.mat-cell, .mat-header-cell {
     }
   }
 }
-//chip style
-// .mat-chip{
-//   &.mat-standard-chip{
-//     border-radius: 0px;
-//     &.mat-chip-selected.mat-primary{
-//       background-color: #e0e0e0 !important;
-//       color: #7f5eba !important;
-//     }
-//   }
-// }
-// .material-icons.material-icons--outline {
-//   font-family: 'Material Icons Outline';
-// }
+
+
+//snackbar style
+@media screen and (max-width: 375px) {
+  .vizient-snackbar .mat-simple-snackbar{
+    flex-direction: column;
+  }
+  .vizient-snackbar .mat-simple-snackbar-action{
+    align-self: flex-end;
+    margin-top: 16px;
+  }
+}

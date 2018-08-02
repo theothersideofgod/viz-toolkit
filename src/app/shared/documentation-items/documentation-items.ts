@@ -21,6 +21,10 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'snackbarmobile', name: 'SnackbarMobile', examples: ['snackbar-mobile']},
+        {id: 'snackbar', name: 'SnackbarBasic', examples: ['snackbar-basic']},
+        {id: 'dialog', name: 'DialogBasic', examples: ['dialog-basic']},
+        {id: 'tabsnarrow', name: 'TabsNarrow', examples: ['tabs-narrow']},
         {id: 'tabs', name: 'Tabs', examples: ['tabs']},
         // {id: 'chipprimary', name: 'ChipPrimary', examples: ['chip-primary']},
         // {id: 'listnodivider', name: 'ListNodivider', examples: ['list-nodivider']},

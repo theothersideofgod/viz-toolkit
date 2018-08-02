@@ -1,0 +1,173 @@
+<html>
+
+<head></head>
+
+<body>
+  <div class="doc-category-title ">
+    Popups & Modals
+    <span class="docs-markdown-h3" id="contents">
+      <span header-link="contents"></span>Contents</span>
+  </div>
+  <div class="doc-title-1">
+    Dialog
+  </div>
+  <div class="doc-desc-1">
+    <p>
+      Dialogs inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks.
+    </p>
+    <p>
+      Dialogs contain text and UI controls. They retain focus until dismissed or a required action has been taken. Use dialogs
+      sparingly because they are interruptive.
+    </p>
+  </div>
+  <div class="doc-divider">
+  </div>
+  <div class="doc-title-2">
+    Examples
+    <span class="docs-markdown-h3" id="examples">
+      <span header-link="examples"></span>Examples</span>
+  </div>
+  <div class="doc-desc-2">
+    Dialogs should be used for: Errors that block an app’s normal operation. Critical information that requires a specific user
+    task, decision, or acknowledgement.</div>
+  <div class="doc-example-container">
+    <div app-docs-example="dialog-basic"></div>
+  </div>
+
+  <div class="doc-divider">
+  </div>
+  <div class="doc-title-2">
+    Props
+    <span class="docs-markdown-h3" id="props">
+      <span header-link="props"></span>Props</span>
+  </div>
+  <div class="doc-desc-2">
+    To get a customized dialog, just set
+    <span class="doc-desc-2-highlight">afterAllClosed/afterOpen/openDialogs</span>
+  </div>
+  <table class="doc-props-table">
+    <thead>
+      <tr>
+        <th>property</th>
+        <th>description</th>
+        <th>type</th>
+        <th>default</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+      <tr>
+        <td>afterAllClosed</td>
+        <td>Stream that emits when all open dialog have finished closing. Will emit on subscribe if there are no open dialogs
+          to begin with.
+
+        </td>
+        <td>Observable&lt;void&gt;></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>afterOpen</td>
+        <td>Stream that emits when a dialog has been opened.</td>
+        <td>Subject&lt;MatDialogRef&lt;any&gt;&gt;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>openDialogs</td>
+        <td>Keeps track of the currently-open dialogs.
+
+        </td>
+        <td>MatDialogRef&lt;any&gt;[ ]</td>
+        <td></td>
+      </tr>
+
+    </tbody>
+  </table>
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Best Practices
+    <span class="docs-markdown-h3" id="best_practices">
+      <span header-link="best_practices"></span>Best Practices</span>
+  </div>
+
+  <div class="doc-desc-2">
+    <p>A dialog is a type of modal window that appears in front of app content to provide critical information or ask for a
+      decision. Dialogs disable all app functionality when they appear, and remain on screen until confirmed, dismissed,
+      or a required action has been taken.</p>
+    <p>Dialogs are purposefully interruptive, so they should be used sparingly.</p>
+    <ul class="doc-list">
+      <li>
+        Focused: Dialogs focus user attention to ensure their content is addressed.</li>
+      <li>
+        Direct: Dialogs should be direct in communicating information and dedicated to completing a task.</li>
+      <li>
+        Helpful: Dialogs should appear in response to a user task or an action, with relevant or contextual information.</li>
+    </ul>
+  </div>
+
+  <div class="doc-divider">
+
+  </div>
+
+
+  <div class="doc-title-2">
+    Usage &amp; Content guidelines
+    <span class="docs-markdown-h3" id="content_guidelines">
+      <span header-link="content_guidelines"></span>Content guidelines</span>
+  </div>
+
+  <div class="doc-desc-2">
+    This dialog title poses a specific question, concisely explains what’s involved in the request, and provides clear actions.
+    Don’t use dialog titles that pose an ambiguous question.
+  </div>
+
+  <div style="margin-bottom:24px">
+    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:712px">
+      <img src="assets/img/doc/dialog-title-do.png" alt="">
+    </div>
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:712px">
+      <img src="assets/img/doc/dialog-title-dont.png" alt="">
+    </div>
+  </div>
+
+  <div class="doc-desc-2">
+    Disable confirming actions (1) until a choice is made. Dismissive actions are never disabled. Dismissive actions (1) are
+    placed to the left of confirming actions.
+  </div>
+
+  <div style="margin-bottom:24px">
+    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:712px">
+      <img src="assets/img/doc/dialog-confirm-do.png" alt="">
+    </div>
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:712px">
+      <img src="assets/img/doc/dialog-confirm-dont.png" alt="">
+    </div>
+  </div>
+
+
+
+  <div class="doc-divider">
+
+  </div>
+
+  <div class="doc-title-2">
+    Design specs
+    <span class="docs-markdown-h3" id="design_specs">
+      <span header-link="design_specs"></span>Design specs</span>
+  </div>
+
+
+  <div class="docs-usage-spec docs-usage-center" style="height:790px">
+    <img src="assets/img/doc/dialog-spec.png" alt="">
+  </div>
+
+
+
+  <div class="doc-divider">
+
+  </div>
+
+
+</body>
+
+</html>

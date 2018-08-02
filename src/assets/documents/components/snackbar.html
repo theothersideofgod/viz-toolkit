@@ -1,0 +1,206 @@
+<html>
+
+<head></head>
+
+<body>
+  <div class="doc-category-title ">
+    Popups & Modals
+    <span class="docs-markdown-h3" id="contents">
+      <span header-link="contents"></span>Contents</span>
+  </div>
+  <div class="doc-title-1">
+    Snackbar
+  </div>
+  <div class="doc-desc-1">
+    Snackbars provide brief feedback about an operation through a message - typically at the bottom of the screen. They appear
+    temporarily, towards the bottom of the screen. They shouldn’t interrupt the user experience, and they don’t require user
+    input to disappear. They may contain a text action, but no icons. Only one snackbar may be displayed at a time.
+  </div>
+  <div class="doc-divider">
+  </div>
+  <div class="doc-title-2">
+    Examples
+    <span class="docs-markdown-h3" id="examples">
+      <span header-link="examples"></span>Examples</span>
+  </div>
+  <div class="doc-desc-2">
+    Snackbars contain a text label that directly relates to the process being performed. On mobile, the text label can contain
+    up to two lines of text.</div>
+  <div class="doc-example-container">
+    <div app-docs-example="snackbar-basic"></div>
+  </div>
+
+
+  <div class="doc-example-container docs-mt32">
+    <div app-docs-example="snackbar-mobile"></div>
+  </div>
+
+  <div class="doc-divider">
+  </div>
+  <div class="doc-title-2">
+    Props
+    <span class="docs-markdown-h3" id="props">
+      <span header-link="props"></span>Props</span>
+  </div>
+  <div class="doc-desc-2">
+    <!-- To get a customized snack bar, just set
+    <span class="doc-desc-2-highlight">afterAllClosed/afterOpen/openDialogs</span> -->
+  </div>
+  <table class="doc-props-table">
+    <thead>
+      <tr>
+        <th>property</th>
+        <th>description</th>
+        <th>type</th>
+        <th>default</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+      <tr>
+        <td>dismiss</td>
+        <td>Dismisses the currently-visible snack bar.
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>open</td>
+        <td>Opens a snackbar with a message and an optional action.
+
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>openDialogs</td>
+        <td>Keeps track of the currently-open dialogs.
+
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>openFromComponent</td>
+        <td>Creates and dispatches a snack bar with a custom component for the content, removing any currently opened snack bars.
+
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>openFromTemplate</td>
+        <td>Creates and dispatches a snack bar with a custom template for the content, removing any currently opened snack bars.
+
+
+
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Best Practices
+    <span class="docs-markdown-h3" id="best_practices">
+      <span header-link="best_practices"></span>Best Practices</span>
+  </div>
+
+  <div class="doc-desc-2">
+    Snackbars should:
+    <ul class="doc-list">
+      <li>
+        Informational: Snackbars provide updates on an app’s processes.</li>
+      <li>
+        Temporary: Snackbars appear temporarily, and disappear on their own without requiring user input to be dismissed.</li>
+      <li>
+        Contextual: Snackbars are placed in the most suitable area of the UI.</li>
+    </ul>
+  </div>
+
+  <div class="doc-divider">
+
+  </div>
+
+
+  <div class="doc-title-2">
+    Usage &amp; Content guidelines
+    <span class="docs-markdown-h3" id="content_guidelines">
+      <span header-link="content_guidelines"></span>Content guidelines</span>
+  </div>
+
+  <div class="doc-desc-2">
+    On mobile, use up to two lines of text to communicate the snackbar message. In wide UIs like desktop and tablet, snackbars
+    should have only a single line of text.
+  </div>
+
+  <div style="margin-bottom:24px">
+    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/snack-pc-do.png" alt="">
+    </div>
+    <div class="docs-usage-do docs-usage-w100 docs-usage-center docs-mt16" style="height:160px">
+      <img src="assets/img/doc/snack-mobile-do.png" alt="">
+    </div>
+  </div>
+
+  <div class="doc-desc-2">
+      Don’t place icons in snackbars. If your message needs an icon, consider using an alert.
+  </div>
+
+  <div style="margin-bottom:24px">
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/snack-icon-dont.png" alt="">
+    </div>
+  </div>
+
+
+  <div class="doc-desc-2">
+      The text label shouldn’t share the same color as the text button.
+  </div>
+
+  <div style="margin-bottom:24px">
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/snack-color-same-dont.png" alt="">
+    </div>
+  </div>
+
+
+  <div class="doc-desc-2">
+      Don’t use a filled or elevated button in a snackbar, as it draws too much attention.
+  </div>
+
+  <div style="margin-bottom:24px">
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/snack-primary-color-dont.png" alt="">
+    </div>
+  </div>
+
+  <div class="doc-divider">
+
+  </div>
+
+  <div class="doc-title-2">
+    Design specs
+    <span class="docs-markdown-h3" id="design_specs">
+      <span header-link="design_specs"></span>Design specs</span>
+  </div>
+
+
+  <div class="docs-usage-spec docs-usage-center" style="height:280px">
+    <img src="assets/img/doc/snack-pc-spec.png" alt="">
+  </div>
+
+  <div class="docs-usage-spec docs-usage-center docs-mt16" style="height:280px">
+      <img src="assets/img/doc/snack-mobile-spec.png" alt="">
+    </div>
+
+  <div class="doc-divider">
+
+  </div>
+
+
+</body>
+
+</html>

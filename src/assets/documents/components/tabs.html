@@ -4,16 +4,16 @@
 
 <body>
   <div class="doc-category-title ">
-    Form Control
+    Layout
     <span class="docs-markdown-h3" id="contents">
       <span header-link="contents"></span>Contents</span>
   </div>
   <div class="doc-title-1">
-    Select
+    Tabs
   </div>
   <div class="doc-desc-1">
-    Select allows users to select from a single-option menu. Select is a form control for selecting a value from a set of options.
-    </div>
+    Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
+  </div>
   <div class="doc-divider">
   </div>
   <div class="doc-title-2">
@@ -22,10 +22,14 @@
       <span header-link="examples"></span>Examples</span>
   </div>
   <div class="doc-desc-2">
-    In simple select, option menus positioned under their emitting elements such that the currently selected menu item appears
-    under of the emitting element. </div>
+    Default tabs contain more than 3 items within a wide column. </div>
   <div class="doc-example-container">
     <div app-docs-example="tabs"></div>
+  </div>
+  <div class="doc-desc-2 docs-mt24">
+    Simple tabs contain a few items within a narrow column. </div>
+  <div class="doc-example-container">
+    <div app-docs-example="tabs-narrow"></div>
   </div>
   <div class="doc-divider">
   </div>
@@ -35,8 +39,8 @@
       <span header-link="props"></span>Props</span>
   </div>
   <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
+    To get a customized tabs, just set
+    <span class="doc-desc-2-highlight">ariaLabel/ariaLabelledby/disabled/textLabel/isActive/origin/position/number/templateLabel/MatTabLabelÎ</span>
   </div>
   <table class="doc-props-table">
     <thead>
@@ -49,15 +53,58 @@
     </thead>
     <tbody>
       <tr>
-        <td>options</td>
-        <td>Array of Options</td>
-        <td>Array</td>
+        <td>ariaLabel</td>
+        <td>Aria label for the tab.</td>
+        <td>string</td>
         <td></td>
       </tr>
       <tr>
-        <td>placeholder</td>
-        <td>Title of select</td>
+        <td>ariaLabelledby</td>
+        <td>Reference to the element that the tab is labelled by. Will be cleared if aria-label is set at the same time.</td>
         <td>string</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>Whether the component is disabled.</td>
+        <td>boolean</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>textLabel</td>
+        <td>Plain text label for the tab, used when there is no template label.</td>
+        <td>string</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>isActive</td>
+        <td>Whether the tab is currently active.</td>
+        <td>boolean</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>origin</td>
+        <td>The initial relatively index origin of the tab if it was created and selected after there was already a selected
+          tab. Provides context of what position the tab should originate from.
+
+        </td>
+        <td>number </td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>position</td>
+        <td>The relatively indexed position where 0 represents the center, negative is left, and positive represents the right.
+
+        </td>
+        <td>number</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>templateLabel</td>
+        <td>Content for the tab label given by &lt;ng-template mat-tab-label&gt;.
+
+        </td>
+        <td>MatTabLabel</td>
         <td></td>
       </tr>
     </tbody>
@@ -70,12 +117,11 @@
   </div>
 
   <div class="doc-desc-2">
-    Use radio button to:
+    Tabs should be:
     <ul class="doc-list">
-      <li>Scannable: It should be visible at a glance if a selection has been selected, and selected items should be more visually
-        prominent than unselected items.</li>
-      <li>Contextual: Select content should be suited to user needs.</li>
-      <li>Nimble: Selects should be easy to open, close, and interact with.</li>
+      <li><span class="doc-bold-title">Scalable: </span>As tabs can horizontally scroll, a UI can have as many tabs as needed.</li>
+      <li><span class="doc-bold-title">Informative: </span>Tabs organize content into categories to help users easily find different types of information.</li>
+      <li><span class="doc-bold-title">Peers: </span>Tabs are displayed next to each other as peers, in categories of equal importance.</li>
     </ul>
   </div>
 
@@ -91,17 +137,32 @@
   </div>
 
   <div class="doc-desc-2">
-    Select menu should be short, clear, and fully visible. It shouldn’t be truncated.
+    Don’t use simple tabs within a wide column, even when there are just a few items.
   </div>
 
   <div style="margin-bottom:24px">
-    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/select-do.png" alt="">
+    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:282px">
+      <img src="assets/img/doc/tabs-do.png" alt="">
     </div>
-    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/select-dont.png" alt="">
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:282px">
+      <img src="assets/img/doc/tabs-dont.png" alt="">
     </div>
   </div>
+
+  <div class="doc-desc-2">
+    Don’t use simple tabs within a wide column, even when there are just a few items.
+  </div>
+
+  <div style="margin-bottom:24px">
+    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:282px">
+      <img src="assets/img/doc/tabs-scroll-do.png" alt="">
+    </div>
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:282px">
+      <img src="assets/img/doc/tabs-scroll-dont.png" alt="">
+    </div>
+  </div>
+
+
 
   <div class="doc-divider">
 
@@ -114,8 +175,8 @@
   </div>
 
 
-  <div class="docs-usage-spec docs-usage-center" style="height:280px">
-    <img src="assets/img/doc/select-spec.png" alt="">
+  <div class="docs-usage-spec docs-usage-center" style="height:346px">
+    <img src="assets/img/doc/tabs-spec.png" alt="">
   </div>
 
 

@@ -1,0 +1,28 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { MatSnackBar } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-meta">@Component</span>({
+	selector: <span class="hljs-string">'snackbar-mobile'</span>,
+  templateUrl: <span class="hljs-string">'snackbar-mobile.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'snackbar-mobile.component.css'</span>],
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackbarMobileComponent <span class="hljs-keyword">implements</span> OnInit {
+  message: <span class="hljs-built_in">string</span> =
+    <span class="hljs-string">'Greyhound divisively hello coldly wonderfully marginally far upon excluing.'</span>;
+  action: <span class="hljs-built_in">string</span> = <span class="hljs-string">'button'</span>;
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> snackBar: MatSnackBar</span>) {}
+
+  openSnackBar(message: <span class="hljs-built_in">string</span>, action: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">this</span>.snackBar.open(<span class="hljs-keyword">this</span>.message, <span class="hljs-keyword">this</span>.action, {
+      panelClass: <span class="hljs-string">'vizient-snackbar'</span>,
+      duration: <span class="hljs-number">60000</span>
+    });
+  }
+
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SnackbarMobileData = {
+	name: <span class="hljs-string">'SnackbarMobile'</span>
+}

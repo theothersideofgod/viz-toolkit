@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { SnackbarMobileComponent, SnackbarMobileData } from './snackbar-mobile/snackbar-mobile.component';
+import { SnackbarBasicComponent, SnackbarBasicData } from './snackbar-basic/snackbar-basic.component';
+import { DialogBasicComponent, DialogBasicData, DialogDataExampleDialog } from './dialog-basic/dialog-basic.component';
+import { TabsNarrowComponent, TabsNarrowData } from './tabs-narrow/tabs-narrow.component';
 import { TabsComponent, TabsData } from './tabs/tabs.component';
 import { ChipPrimaryComponent, ChipPrimaryData } from './chip-primary/chip-primary.component';
 import { ListNodividerComponent, ListNodividerData } from './list-nodivider/list-nodivider.component';
@@ -28,6 +32,22 @@ import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-foot
 
 
 export const ALL_EXAMPLE_ITEMS = {
+  'snackbar-mobile' : {
+    component: SnackbarMobileComponent,
+    data: SnackbarMobileData
+  },
+  'snackbar-basic' : {
+    component: SnackbarBasicComponent,
+    data: SnackbarBasicData
+  },
+  'dialog-basic' : {
+    component: DialogBasicComponent,
+    data: DialogBasicData
+  },
+  'tabs-narrow' : {
+    component: TabsNarrowComponent,
+    data: TabsNarrowData
+  },
   'tabs' : {
     component: TabsComponent,
     data: TabsData
@@ -119,6 +139,11 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    SnackbarMobileComponent,
+    SnackbarBasicComponent,
+    DialogDataExampleDialog,
+    DialogBasicComponent,
+    TabsNarrowComponent,
     TabsComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
@@ -149,6 +174,11 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SnackbarMobileComponent,
+    SnackbarBasicComponent,
+    DialogDataExampleDialog,
+    DialogBasicComponent,
+    TabsNarrowComponent,
     TabsComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
