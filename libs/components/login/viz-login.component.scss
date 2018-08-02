@@ -1,0 +1,42 @@
+:host {
+  .viz-login {
+    display: flex;
+    justify-content: center; 
+    width: 448px;
+    height: 354px;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+    .wrapper {
+      display: inline-flex;
+      width: 280px;
+      justify-content: flex-start; 
+      align-items: center;
+      flex-direction: column;
+    }
+    .logo {
+      line-height: 116px;
+      display: inline-block;
+    }
+    .mat-form-field {
+      display: inline-block;
+      width: 280px;
+    }
+    .login-btn {
+      height: 44px;
+      line-height: 44px;
+      width: 100%;
+    }
+    .forgot-pwd-link {
+      color: #7f5eba;
+      margin-top: 16px;
+      display: block;
+    }
+  }
+}
+
+::ng-deep {
+  .mat-raised-button[disabled] {
+    background: #ccbee5 !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+  }
+}

@@ -48,6 +48,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'progressbar', name: 'Progress Bar', examples: ['progress-bar-basic']},
         {id: 'headerfooter', name: 'Header Footer', examples: ['header-footer-basic']},
         {id: 'developers', name: 'Developers'},
+        {id: 'login', name: 'Login', examples: ['login-basic']},
       ]
     },
   ],

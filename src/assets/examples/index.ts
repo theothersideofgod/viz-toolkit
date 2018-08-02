@@ -28,8 +28,7 @@ import { ChipBasicComponent, ChipBasicData } from './chip-basic/chip-basic.compo
 import { BadgeBasicComponent, BadgeBasicData } from './badge-basic/badge-basic.component';
 import { ProgressBarBasicComponent, ProgressBarBasicData } from './progress-bar-basic/progress-bar-basic.component';
 import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-footer-basic/header-footer-basic.component'
-
-
+import { LoginBasicComponent, LoginBasicData} from './login-basic/login-basic.component'
 
 export const ALL_EXAMPLE_ITEMS = {
   'snackbar-mobile' : {
@@ -135,6 +134,10 @@ export const ALL_EXAMPLE_ITEMS = {
   'header-footer-basic': {
     component: HeaderFooterBasicComponent,
     data: HeaderFooterBasicData
+  },
+  'login-basic': {
+    component: LoginBasicComponent,
+    data: LoginBasicData
   }
 }
 @NgModule({
@@ -165,7 +168,8 @@ export const ALL_EXAMPLE_ITEMS = {
     ChipBasicComponent,
     BadgeBasicComponent,
     ProgressBarBasicComponent,
-    HeaderFooterBasicComponent
+    HeaderFooterBasicComponent,
+    LoginBasicComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -201,6 +205,7 @@ export const ALL_EXAMPLE_ITEMS = {
     BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
+    LoginBasicComponent,
   ]
 })
 export class ExampleModule { }
