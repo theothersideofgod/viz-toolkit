@@ -78,10 +78,10 @@ const initNavList = [
         name: 'Toolbar',
         value: 'toolbar'
       },
-      {
-        name: 'Header & Footer',
-        value: 'headerfooter'
-      },
+      // {
+      //   name: 'Header & Footer',
+      //   value: 'headerfooter'
+      // },
       {
         name: 'Header',
         value: 'header'

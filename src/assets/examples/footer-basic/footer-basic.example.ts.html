@@ -1,0 +1,31 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'footer-basic'</span>,
+  templateUrl: <span class="hljs-string">'footer-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'footer-basic.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FooterBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  options = [
+    {
+      id: <span class="hljs-number">1</span>,
+      title: <span class="hljs-string">'Contact'</span>,
+      link: <span class="hljs-string">'Contact'</span>
+    },
+    {
+      id: <span class="hljs-number">2</span>,
+      title: <span class="hljs-string">'Vizient'</span>,
+      link: <span class="hljs-string">'Vizient'</span>
+    },
+    {
+      id: <span class="hljs-number">3</span>,
+      title: <span class="hljs-string">'Additional Brands'</span>,
+      link: <span class="hljs-string">'Additional Brands'</span>
+    }
+  ];
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FooterBasicData = {
+  name: <span class="hljs-string">'FooterBasic'</span>
+};
