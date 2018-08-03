@@ -10,7 +10,8 @@ export class VizLoginComponent implements OnInit {
 
   @Input() forgetPasswordLink: String = "";
   @Output() loginOnClick = new EventEmitter();
-
+  username:string
+  password:string
   ngOnInit() { }
   
   onLogin() {
