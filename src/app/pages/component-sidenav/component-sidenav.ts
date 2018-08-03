@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-component-sidenav',
   templateUrl: './component-sidenav.html',
@@ -10,16 +9,11 @@ import { Router } from '@angular/router';
 export class ComponentSidenavComponent implements OnInit {
   navList = initNavList;
 
-  constructor(
-    private _router: Router
-  ) { 
-    console.log(_router.url)
+  constructor(private _router: Router) {
+    console.log(_router.url);
   }
 
-  ngOnInit() {
-
-  }
-
+  ngOnInit() {}
 }
 
 const initNavList = [
@@ -66,7 +60,7 @@ const initNavList = [
       {
         name: 'Slide Toggle',
         value: 'slidetoggle'
-      },
+      }
     ]
   },
   {
@@ -88,6 +82,14 @@ const initNavList = [
         name: 'Header & Footer',
         value: 'headerfooter'
       },
+      {
+        name: 'Header',
+        value: 'header'
+      },
+      {
+        name: 'Footer',
+        value: 'footer'
+      }
     ]
   },
   {
@@ -112,7 +114,7 @@ const initNavList = [
       {
         name: 'Tree',
         value: 'tree'
-      },
+      }
     ]
   },
   {
@@ -141,7 +143,7 @@ const initNavList = [
       {
         name: 'Progress Bar',
         value: 'progressbar'
-      },
+      }
     ]
   },
   {
@@ -166,7 +168,7 @@ const initNavList = [
       {
         name: 'Login',
         value: 'login'
-      },
+      }
     ]
   },
   {
@@ -179,7 +181,7 @@ const initNavList = [
       {
         name: 'Table',
         value: 'table'
-      },
+      }
     ]
   }
-]
+];

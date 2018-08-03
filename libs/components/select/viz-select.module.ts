@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MatIconModule, MatFormFieldModule, MatListModule, MatMenuModule, MatInputModule } from '@angular/material';
+import { MatIconModule, MatFormFieldModule, MatListModule, MatMenuModule, MatInputModule, MatButtonModule } from '@angular/material';
 import { VizSelectComponent } from "./viz-select.component";
 
 
@@ -12,7 +12,8 @@ import { VizSelectComponent } from "./viz-select.component";
     MatFormFieldModule,
     MatListModule,
     MatMenuModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   exports: [
     VizSelectComponent

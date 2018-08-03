@@ -2457,3 +2457,10 @@ td.mat-cell, .mat-header-cell {
   .mat-list .mat-list-item .mat-list-item-content {
     color: #9f9f9f;
     font-family: Soleto; }
+
+@media screen and (max-width: 375px) {
+  .vizient-snackbar .mat-simple-snackbar {
+    flex-direction: column; }
+  .vizient-snackbar .mat-simple-snackbar-action {
+    align-self: flex-end;
+    margin-top: 16px; } }

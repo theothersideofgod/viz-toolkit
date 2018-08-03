@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { FooterBasicComponent, FooterBasicData } from './footer-basic/footer-basic.component';
+import { HeaderBasicComponent, HeaderBasicData } from './header-basic/header-basic.component';
 import { SnackbarMobileComponent, SnackbarMobileData } from './snackbar-mobile/snackbar-mobile.component';
 import { SnackbarBasicComponent, SnackbarBasicData } from './snackbar-basic/snackbar-basic.component';
 import { DialogBasicComponent, DialogBasicData, DialogDataExampleDialog } from './dialog-basic/dialog-basic.component';
@@ -31,6 +33,14 @@ import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-foot
 import { LoginBasicComponent, LoginBasicData} from './login-basic/login-basic.component'
 
 export const ALL_EXAMPLE_ITEMS = {
+  'footer-basic' : {
+    component: FooterBasicComponent,
+    data: FooterBasicData
+  },
+  'header-basic' : {
+    component: HeaderBasicComponent,
+    data: HeaderBasicData
+  },
   'snackbar-mobile' : {
     component: SnackbarMobileComponent,
     data: SnackbarMobileData
@@ -142,6 +152,8 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    FooterBasicComponent,
+    HeaderBasicComponent,
     SnackbarMobileComponent,
     SnackbarBasicComponent,
     DialogDataExampleDialog,
@@ -178,6 +190,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    FooterBasicComponent,
+    HeaderBasicComponent,
     SnackbarMobileComponent,
     SnackbarBasicComponent,
     DialogDataExampleDialog,

@@ -27,8 +27,6 @@ export class VizSelectComponent implements OnInit {
   ngOnInit() {
     this.selected = this.options[0]
   }
-
-
   showMenu() {
     this.menuShown = true;
   }
@@ -43,4 +41,8 @@ export class VizSelectComponent implements OnInit {
   message() {
     return this.selected.title;
   }
+
+
+
+  
 }
