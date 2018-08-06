@@ -1,4 +1,5 @@
 import { HomepageComponent } from './pages/homepage/homepage';
+import { PrinciplesComponent } from './pages/principles/principles.component';
 import { ComponentSidenavComponent } from './pages/component-sidenav/component-sidenav';
 // import { ComponentList } from './pages/component-list';
 // import { GuideList } from './pages/guide-list';
@@ -33,5 +34,6 @@ export const APP_ROUTES: Routes = [
       },
     ],
   },
+  {path: 'principles', component: PrinciplesComponent, pathMatch: 'full', data: {}},
   {path: '**', redirectTo: ''}
 ];

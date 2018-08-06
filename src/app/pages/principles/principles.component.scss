@@ -1,0 +1,44 @@
+:host {
+  .principles-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 135px;
+  }
+  .principles-sec {
+    &-1, &-2 {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-bottom: 1px #F1F1F1 solid;
+      padding: 48px 0;
+      p {
+        margin: 19px 0 0 0;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  h1 {
+    display: inline;
+    margin: 0;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 63px;
+    color: #000000
+  }
+  %normal-font {
+    font-weight: 200;
+    color: #696969;
+    line-height: 1.5;
+  }
+  #large {
+    @extend %normal-font;
+    font-size: 20px;
+  }
+
+  #small {
+    @extend %normal-font;
+    font-size: 16px;
+  }
+}
