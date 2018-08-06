@@ -63,7 +63,7 @@ export class ExampleViewer {
   }
 
   ngOnInit() {
-    // this.iframe.nativeElement.src = "/"
+    // this.iframe.nativeElement.src = "http://a.html"
   }
 
   

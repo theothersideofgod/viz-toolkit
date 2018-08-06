@@ -22,8 +22,15 @@
 
     </iframe> -->
 
-    <ng-container *ngComponentOutlet="exampleData.component"></ng-container>
+
+    <!-- <iframe #iframe frameborder="0"></iframe> -->
+
+    <!-- <ng-container *ngComponentOutlet="exampleData.component"></ng-container> -->
     <!-- <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template> -->
+
+    <example-viewport [componentType]="exampleData.component" [platform]="platform"></example-viewport>
+
+
   </div>
 
   <div class="docs-example-viewer-source">

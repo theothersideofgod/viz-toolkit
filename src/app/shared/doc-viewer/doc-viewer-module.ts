@@ -1,5 +1,6 @@
 import { DocViewer } from './doc-viewer';
 import { ExampleViewer } from '../example-viewer/example-viewer';
+import { ExampleViewport } from '../example-viewport/example-viewport';
 import { 
   MatButtonModule,
   MatIconModule,
@@ -14,6 +15,7 @@ import { HeaderLink } from './header-link';
 import { CopierService } from '../copier/copier.service';
 
 
+
 // ExampleViewer is included in the DocViewerModule because they have a circular dependency.
 @NgModule({
   imports: [
@@ -26,7 +28,7 @@ import { CopierService } from '../copier/copier.service';
     PortalModule,
   ],
   providers: [CopierService],
-  declarations: [DocViewer, ExampleViewer, HeaderLink],
+  declarations: [DocViewer, ExampleViewer, HeaderLink, ExampleViewport],
   entryComponents: [ExampleViewer, HeaderLink],
   exports: [DocViewer, ExampleViewer, HeaderLink],
 })
