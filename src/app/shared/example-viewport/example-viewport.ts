@@ -29,7 +29,9 @@ export class ExampleViewport implements OnInit {
     private resolver: ComponentFactoryResolver
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.injectHead();
+  }
 
   injectHead() {
     //inject header
@@ -38,26 +40,23 @@ export class ExampleViewport implements OnInit {
     viewportIframeDoc.getElementsByTagName('head')[0].remove();
     viewportIframeDoc.getElementsByTagName('html')[0].prepend(head);
 
-    
-
     //inject view container
     let containerDiv = document.createElement('div');
     containerDiv.id = 'viewport-container';
-    
+    containerDiv.style.textAlign = 'center';
+
     //inject component
     setTimeout(() => {
       this.componentRef = this.createComponent(this.componentType);
       containerDiv.appendChild(this.componentRef.location.nativeElement);
 
-
-      viewportIframeDoc.body.appendChild(containerDiv);
       viewportIframeDoc.body.appendChild(containerDiv);
 
       //watch inner div change or not
 
       new ResizeSensor(containerDiv, () => {
         this.viewportIframe.nativeElement.height =
-        containerDiv.offsetHeight + 'px';
+          containerDiv.offsetHeight + 'px';
       });
     }, 0);
   }
@@ -71,12 +70,8 @@ export class ExampleViewport implements OnInit {
   }
   createComponent(componentType) {
     const compFactory = this.resolver.resolveComponentFactory(componentType);
-    this.vcRef.clear()
+    this.vcRef.clear();
     return this.vcRef.createComponent(compFactory);
-  }
-
-  ngAfterViewInit() {
-    this.injectHead();
   }
 
   getBreakpoint(platform) {
@@ -85,6 +80,10 @@ export class ExampleViewport implements OnInit {
       tablet_mac: 768,
       phone_iphone: 375
     }[platform];
+  }
+
+  ngAfterViewInit() {
+    this.injectHead();
   }
 
   ngAfterViewChecked() {}

@@ -1,18 +1,20 @@
-.hideChildren {
-  display: none;
-}
-.viz-tree-cell-node {
-  // display: flex;
-  margin-bottom: 10px;
-}
-.viz-tree-cell-child {
-  margin-left: 40px;
-  // margin-bottom: 16px;
-}
-.viz-tree-cell-node-content{
+:host {
+  .hideChildren {
+    display: none;
+  }
+  .viz-tree-cell-node {
+    // display: flex;
+    margin-bottom: 10px;
+  }
+  .viz-tree-cell-child {
+    margin-left: 40px;
+    // margin-bottom: 16px;
+  }
+  .viz-tree-cell-node-content {
     margin-left: 40px;
     margin-bottom: 16px;
-}
-.viz-tree-cell-node-content-hidden{
-  display: none
+  }
+  .viz-tree-cell-node-content-hidden {
+    display: none;
+  }
 }
