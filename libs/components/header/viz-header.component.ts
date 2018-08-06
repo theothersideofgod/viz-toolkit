@@ -13,9 +13,11 @@ export class VizHeaderComponent {
   @Input() userName: string;
   @Input() brandLink: String;
   @Input() svgIcon: String;
+  @Input() badge: Number = 0; 
   @Input() type: VizHeaderType;
   @Output() rightBtnClick = new EventEmitter();
   @Output() hamburgerClick = new EventEmitter();
+  @Output() moreClick = new EventEmitter();
   isDrop: Boolean = false;
 
   constructor() {}
@@ -27,5 +29,10 @@ export class VizHeaderComponent {
 
   hamburgerOnClick() {
     this.hamburgerClick.emit()
+  }
+
+  moreOnclick() {
+    this.badge = 0
+    this.moreClick.emit()
   }
 }

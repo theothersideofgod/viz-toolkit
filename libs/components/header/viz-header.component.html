@@ -14,6 +14,10 @@
       </span>
     </div>
     <div class="navbar-right">
+      <div class="more" (click)='moreOnclick()' *ngIf="type === 'primary'">
+          <mat-icon *ngIf="badge" [matBadge]="badge" matBadgePosition="above after" matBadgeColor="warn">apps</mat-icon>
+          <mat-icon *ngIf="!badge"matBadgePosition="above after" matBadgeColor="warn">apps</mat-icon>
+      </div>
       <div class="navbar-welcome" (click)='rightBtnOnClick()' *ngIf="type === 'primary'">
         <span>{{userName}}</span>
         <mat-icon>{{isDrop? "arrow_drop_up":"arrow_drop_down"}}</mat-icon>
