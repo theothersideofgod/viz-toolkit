@@ -134,7 +134,6 @@ export class TableOfContents implements OnInit {
         });
       }
     }
-
     return links;
   }
 

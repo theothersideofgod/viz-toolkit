@@ -1,6 +1,5 @@
 import { DocViewer } from './doc-viewer';
 import { ExampleViewer } from '../example-viewer/example-viewer';
-import { ExampleViewport } from '../example-viewport/example-viewport';
 import { 
   MatButtonModule,
   MatIconModule,
@@ -28,7 +27,7 @@ import { CopierService } from '../copier/copier.service';
     PortalModule,
   ],
   providers: [CopierService],
-  declarations: [DocViewer, ExampleViewer, HeaderLink, ExampleViewport],
+  declarations: [DocViewer, ExampleViewer, HeaderLink],
   entryComponents: [ExampleViewer, HeaderLink],
   exports: [DocViewer, ExampleViewer, HeaderLink],
 })

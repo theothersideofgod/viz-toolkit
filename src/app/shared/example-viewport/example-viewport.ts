@@ -12,8 +12,6 @@ import {
   ViewContainerRef,
   ComponentFactoryResolver
 } from '@angular/core';
-import { ResizeSensor } from 'css-element-queries';
-import { iframeResizerContentWindow, iframeResizer } from 'iframe-resizer';
 import { MatNativeDateModule } from '@angular/material';
 import { query } from '@angular/animations';
 
