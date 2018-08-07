@@ -32,6 +32,7 @@ import { ProgressBarBasicComponent, ProgressBarBasicData } from './progress-bar-
 import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-footer-basic/header-footer-basic.component'
 import { LoginBasicComponent, LoginBasicData} from './login-basic/login-basic.component'
 import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-datepicker';
+import { FormsModule } from '@angular/forms';
 
 export const ALL_EXAMPLE_ITEMS = {
   'footer-basic' : {
@@ -187,6 +188,7 @@ export const ALL_EXAMPLE_ITEMS = {
   imports: [
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
     MatRangeDatepickerModule,
     MatRangeNativeDateModule,
     ...(Object.keys(VizModules).map(i => VizModules[i])),

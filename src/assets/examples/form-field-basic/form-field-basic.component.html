@@ -1,7 +1,7 @@
 <mat-form-field>
-	<input matInput placeholder="Member">
+	<input matInput placeholder="Member" autocomplete="false">
 </mat-form-field>
 <mat-form-field floatLabel="always">
 	<mat-label>Member</mat-label>
-	<input matInput placeholder="All Members">
+	<input type="text" matInput autocomplete="false" (focus)="value=''" [(ngModel)]="value" (blur)="value='All Member'">
 </mat-form-field>
