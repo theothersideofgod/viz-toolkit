@@ -22,6 +22,7 @@
       <mat-tab *ngFor="let extension of ['HTML', 'TS']" [label]="extension === 'TS' ? 'AngularJS' : extension">
         <div class="docs-example-source-wrapper">
           <button mat-icon-button type="button" class="docs-example-source-copy" title="Copy example source" aria-label="Copy example source to clipboard"
+            matTooltip="Copy code"
             (click)="copySource(viewer.textContent)">
             <img src="assets/img/copy-icon.svg" alt="">
           </button>
