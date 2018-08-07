@@ -33,10 +33,7 @@ export class ExampleViewer {
 
   constructor(
     private snackbar: MatSnackBar,
-    private copier: CopierService,
-    //lucas
-    private vcRef: ViewContainerRef,
-    private resolver: ComponentFactoryResolver) { }
+    private copier: CopierService) { }
     
 
   get example() {
