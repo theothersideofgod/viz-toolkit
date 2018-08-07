@@ -31,6 +31,7 @@ import { BadgeBasicComponent, BadgeBasicData } from './badge-basic/badge-basic.c
 import { ProgressBarBasicComponent, ProgressBarBasicData } from './progress-bar-basic/progress-bar-basic.component';
 import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-footer-basic/header-footer-basic.component'
 import { LoginBasicComponent, LoginBasicData} from './login-basic/login-basic.component'
+import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-datepicker';
 
 export const ALL_EXAMPLE_ITEMS = {
   'footer-basic' : {
@@ -186,6 +187,8 @@ export const ALL_EXAMPLE_ITEMS = {
   imports: [
     BrowserAnimationsModule,
     MaterialModule,
+    MatRangeDatepickerModule,
+    MatRangeNativeDateModule,
     ...(Object.keys(VizModules).map(i => VizModules[i])),
   ],
   providers: [],
