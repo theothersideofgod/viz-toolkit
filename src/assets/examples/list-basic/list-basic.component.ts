@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-basic.component.css']
 })
 export class ListBasicComponent implements OnInit {
-  messages:any[] = ['list1','list2','list3','list4']
+  messages:any[] = ['list item 1','list item 2','list item 3','list item 4']
   typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins'];
   constructor() { }
 
