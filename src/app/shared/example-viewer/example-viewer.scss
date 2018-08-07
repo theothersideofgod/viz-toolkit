@@ -85,11 +85,50 @@
 }
 
 .doc-example-viewer-phone {
-  width: 375px
+  width: 375px;
 }
 .doc-example-viewer-tablet {
-  width: 768px
+  width: 768px;
 }
 .doc-example-viewer-desktop {
-  width: 1200px
+  width: 1200px;
+}
+::ng-deep {
+  .header-basic {
+    &.desktop_mac {
+    }
+    &.tablet_mac {
+      .more {
+        display: none;
+      }
+      .navbar-welcome {
+        display: none !important;
+      }
+      .navbar-hamburger {
+        display: block !important;
+      }
+    }
+    &.phone_iphone {
+      .page-name {
+        display: none;
+      }
+      .more {
+        display: none;
+      }
+      .navbar-welcome {
+        display: none !important;
+      }
+      .navbar-hamburger {
+        display: block !important;
+      }
+    }
+  }
+  .footer-basic {
+    &.phone_iphone{
+      .footer-bar{
+        width: 320px;
+        margin:0 auto;
+      }
+    }
+  }
 }

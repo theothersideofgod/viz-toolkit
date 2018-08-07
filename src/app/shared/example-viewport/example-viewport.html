@@ -1,1 +1,5 @@
-<iframe frameborder="0" #viewportIframe [width]="getBreakpoint(platform)" scrolling="no"></iframe>
+<iframe [src]="templateURL" class="example-viewport"
+        frameborder="0"
+        #viewportIframe
+        [width]="getBreakpoint(platform)"
+        scrolling="no"></iframe>
