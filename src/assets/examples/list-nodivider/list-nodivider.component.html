@@ -1,17 +1,22 @@
 <div class="list-example">
   <div class="list-basic-wrap">
     <mat-list>
-      <mat-list-item *ngFor="let message of messages">
-        <mat-icon matListIcon>folder</mat-icon>
-        <h3> {{message}} </h3>
-      </mat-list-item>
+      <ng-container *ngFor="let message of messages">
+        <mat-list-item>
+          <mat-icon>folder</mat-icon>
+          {{message}}
+        </mat-list-item>
+      </ng-container>
     </mat-list>
   </div>
+
   <div class="list-basic-wrap">
     <mat-selection-list #shoes>
-      <mat-list-option *ngFor="let shoe of typesOfShoes">
-        {{shoe}}
-      </mat-list-option>
+      <ng-container *ngFor="let message of messages">
+        <mat-list-option>
+          {{message}}
+        </mat-list-option>
+      </ng-container>
     </mat-selection-list>
   </div>
 </div>
