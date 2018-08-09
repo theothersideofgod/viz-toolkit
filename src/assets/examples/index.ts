@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { CardBasicComponent, CardBasicData } from './card-basic/card-basic.component';
+import { PaginatorBasicComponent, PaginatorBasicData } from './paginator-basic/paginator-basic.component';
+import { TooltipBasicComponent, TooltipBasicData } from './tooltip-basic/tooltip-basic.component';
 import { FooterBasicComponent, FooterBasicData } from './footer-basic/footer-basic.component';
 import { HeaderBasicComponent, HeaderBasicData } from './header-basic/header-basic.component';
 import { SnackbarMobileComponent, SnackbarMobileData } from './snackbar-mobile/snackbar-mobile.component';
@@ -35,6 +38,18 @@ import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-da
 import { FormsModule } from '@angular/forms';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'card-basic' : {
+    component: CardBasicComponent,
+    data: CardBasicData
+  },
+  'paginator-basic' : {
+    component: PaginatorBasicComponent,
+    data: PaginatorBasicData
+  },
+  'tooltip-basic' : {
+    component: TooltipBasicComponent,
+    data: TooltipBasicData
+  },
   'footer-basic' : {
     component: FooterBasicComponent,
     data: FooterBasicData
@@ -154,6 +169,9 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    CardBasicComponent,
+    PaginatorBasicComponent,
+    TooltipBasicComponent,
     FooterBasicComponent,
     HeaderBasicComponent,
     SnackbarMobileComponent,
@@ -195,6 +213,9 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    CardBasicComponent,
+    PaginatorBasicComponent,
+    TooltipBasicComponent,
     FooterBasicComponent,
     HeaderBasicComponent,
     SnackbarMobileComponent,

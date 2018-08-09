@@ -21,6 +21,9 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'card', name: 'CardBasic', examples: ['card-basic']},
+        {id: 'paginator', name: 'PaginatorBasic', examples: ['paginator-basic']},
+        {id: 'tooltip', name: 'TooltipBasic', examples: ['tooltip-basic']},
         {id: 'footer', name: 'FooterBasic', examples: ['footer-basic']},
         {id: 'header', name: 'HeaderBasic', examples: ['header-basic']},
         {id: 'snackbarmobile', name: 'SnackbarMobile', examples: ['snackbar-mobile']},
