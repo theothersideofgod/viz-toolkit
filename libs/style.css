@@ -2450,13 +2450,18 @@ td.mat-cell, .mat-header-cell {
   .cdk-overlay-pane .mat-menu-panel .mat-menu-content .mat-menu-item-submenu-trigger:hover::after {
     color: white; }
 
-.mat-list .mat-list-item {
-  color: #696969; }
-  .mat-list .mat-list-item .mat-icon {
-    color: #9f9f9f; }
-  .mat-list .mat-list-item .mat-list-item-content {
-    color: #9f9f9f;
-    font-family: Soleto; }
+.mat-list .mat-list-item .mat-list-item-content {
+  color: #9f9f9f;
+  font-family: Soleto;
+  font-weight: 300;
+  font-size: 14px; }
+
+.mat-selection-list .mat-list-item .mat-list-item-content .mat-list-text {
+  flex-direction: row;
+  color: #9f9f9f;
+  font-family: Soleto;
+  font-weight: 300;
+  font-size: 14px; }
 
 @media screen and (max-width: 375px) {
   .vizient-snackbar .mat-simple-snackbar {
@@ -2464,3 +2469,9 @@ td.mat-cell, .mat-header-cell {
   .vizient-snackbar .mat-simple-snackbar-action {
     align-self: flex-end;
     margin-top: 16px; } }
+
+.mat-radio-label-content {
+  font-size: 14px; }
+
+.mat-checkbox-label {
+  font-size: 14px; }
