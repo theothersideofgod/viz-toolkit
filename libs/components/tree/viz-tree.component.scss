@@ -2,9 +2,12 @@
   .hideChildren {
     display: none;
   }
+  .viz-tree-cell{
+  }
   .viz-tree-cell-node {
-    // display: flex;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    // margin-bottom: 10px;
   }
   .viz-tree-cell-child {
     margin-left: 40px;
@@ -12,9 +15,17 @@
   }
   .viz-tree-cell-node-content {
     margin-left: 40px;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
   }
   .viz-tree-cell-node-content-hidden {
     display: none;
+  }
+  ::ng-deep {
+    .mat-checkbox-label{
+      white-space: pre-line;
+    }
+    .mat-checkbox-inner-container{
+      margin-top: 2px;
+    }
   }
 }
