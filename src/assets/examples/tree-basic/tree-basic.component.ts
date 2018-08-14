@@ -43,18 +43,18 @@ export class TreeBasicComponent implements OnInit {
   tree: any = [
     {
       name: 'Group1',
-      isExpanded: false,
+      isExpanded: true,
       checked: false,
       children: [
         {
           name: 'item1',
-          isExpanded: false,
+          isExpanded: true,
           checked: false,
           children: []
         },
         {
           name: 'item2',
-          isExpanded: false,
+          isExpanded: true,
           checked: false,
           children: []
         }
@@ -62,18 +62,18 @@ export class TreeBasicComponent implements OnInit {
     },
     {
       name: 'Group2',
-      isExpanded: false,
+      isExpanded: true,
       checked: false,
       children: [
         {
           name: 'item3',
-          isExpanded: false,
+          isExpanded: true,
           checked: false,
           children: []
         },
         {
           name: 'item4',
-          isExpanded: false,
+          isExpanded: true,
           checked: false,
           children: []
         }
