@@ -1,0 +1,77 @@
+.benchmark-card {
+  display: inline-block;
+  padding: 0px;
+  width: 330px;
+  text-align: left;
+}
+.benchmark {
+  padding: 24px;
+  border-bottom: 1px solid #d7dde5;
+}
+.benchmark-title {
+  /* New Patient Visits: */
+  font-family: Soleto;
+  font-size: 20px;
+  color: #212121;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.benchmark-value {
+  /* 24.72%: */
+  font-family: Soleto;
+  font-size: 48px;
+  color: #99cc33;
+  line-height: 48px;
+  font-weight: 400;
+  padding-right: 8px;
+  border-right: 1px solid #d7dde5;
+  display: inline-block;
+}
+.benchmark-targetwrap {
+  padding-left: 8px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.benchmark-targetvalue {
+  /* 22.30%: */
+  font-family: Soleto;
+  font-size: 17px;
+  color: #696969;
+  text-align: left;
+  font-weight: 500;
+}
+.benchmark-target {
+  /* Benchmark target: */
+  font-family: Soleto;
+  font-size: 10px;
+  color: #696969;
+  font-weight: 300;
+}
+.patient-information {
+  padding: 24px;
+}
+.patient-title {
+  /* Your Opportunity: */
+  font-family: Soleto;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.patient-subtitle {
+  /* Potential additional: */
+  font-family: Soleto;
+  font-size: 12px;
+  color: #696969;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.patient-value {
+  /* 38,403 / 169,340: */
+  font-family: Soleto;
+  font-size: 28px;
+  color: #000000;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
