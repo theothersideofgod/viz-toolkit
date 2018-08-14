@@ -321,3 +321,10 @@ body{
 
   }
 }
+
+//dialog (modal)
+.cdk-overlay-pane{
+  .mat-dialog-container{
+    padding: 0px;
+  } 
+}

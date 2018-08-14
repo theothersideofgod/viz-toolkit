@@ -1,0 +1,41 @@
+<div class="modal">
+  <div class="modal-container">
+    <div class="modal-title">
+      Add New Group
+    </div>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Group Name *" value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Filter" value="">
+    </mat-form-field>
+
+
+    <div class="modal-checkbox-wrap">
+      <mat-checkbox class="modal-selectall">Select All</mat-checkbox>
+
+      <viz-tree [tree]="tree">
+
+        <ng-container *VizTreeLeafDef="let node">
+          <mat-checkbox [checked]="descendantsAllSelected(node)" [indeterminate]="descendantsPartiallySelected(node)" (change)="toggle(node)">{{node.name}}</mat-checkbox>
+        </ng-container>
+
+        <ng-container *VizTreeNodeDef="let node">
+          <mat-checkbox [checked]="descendantsAllSelected(node)" [indeterminate]="descendantsPartiallySelected(node)" (change)="toggle(node)">{{node.name}}</mat-checkbox>
+        </ng-container>
+
+      </viz-tree>
+    </div>
+
+
+
+
+  </div>
+
+
+  <div class="modal-footer">
+    <button mat-button color="primary">Cancel</button>
+    <button mat-flat-button color="primary" class="modal-addbtn">Add</button>
+  </div>
+</div>
