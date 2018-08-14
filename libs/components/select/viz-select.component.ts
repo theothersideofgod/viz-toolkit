@@ -18,7 +18,7 @@ export class VizSelectComponent implements OnInit {
   @Input()options:Array<DateType> = []
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
   @Output() select = new EventEmitter<DateType>()
-  value: string;
+  value: string = "";
   menuShown: boolean = false;
   selected: DateType;
 

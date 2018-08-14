@@ -21,6 +21,10 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'sidenav', name: 'SidenavBasic', examples: ['sidenav-basic']},
+        {id: 'feedbackindicatorwarning', name: 'FeedbackIndicatorWarning', examples: ['feedback-indicator-warning']},
+        {id: 'feedbackindicator', name: 'FeedbackIndicatorBasic', examples: ['feedback-indicator-basic']},
+        {id: 'nodata', name: 'NodataBasic', examples: ['nodata-basic']},
         {id: 'card', name: 'CardBasic', examples: ['card-basic']},
         {id: 'paginator', name: 'PaginatorBasic', examples: ['paginator-basic']},
         {id: 'tooltip', name: 'TooltipBasic', examples: ['tooltip-basic']},

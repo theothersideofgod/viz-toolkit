@@ -293,3 +293,22 @@ td.mat-cell, .mat-header-cell {
 .mat-checkbox-label{
   font-size: 14px;
 }
+
+//input font-size
+body{
+  font-size: 14px;
+}
+.mat-form-field {
+  font-size: 14px;
+}
+
+//snackbar style
+.mat-simple-snackbar{
+  font-family: Soleto;
+  font-weight: 300;
+
+
+  .mat-button{
+    color: #ffffff;
+  }
+}

@@ -202,3 +202,45 @@
     }
   }
 }
+
+:host {
+  .viz-select-wrap {
+    .viz-select {
+      font-size: 14px;
+      
+    }
+  }
+  
+}
+::ng-deep{
+  .mat-menu-panel.viz-select-option {
+    position: absolute;
+    top: -16px;
+
+
+    .viz-select-option-cell{
+      height: 40px;
+      line-height: 40px;
+      padding-left: 24px;
+      color: #979797;
+
+      /* Options: */
+      font-family: Soleto;
+      font-weight: 300;
+      font-size: 14px;
+      
+      text-align: left;
+      line-height: 40px;
+      &:hover{
+        background-color: #F1F1F1;
+        color: #7F5EBA;
+      }
+
+      &-active{
+        background-color: #F1F1F1;
+        color: #7F5EBA;
+      }
+    }
+
+  }
+}

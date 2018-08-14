@@ -1,0 +1,67 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'sidenav-basic'</span>,
+  templateUrl: <span class="hljs-string">'sidenav-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'sidenav-basic.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  navList = [
+    {
+      name: <span class="hljs-string">'Getting started'</span>,
+      subs: [
+        {
+          name: <span class="hljs-string">'Designers'</span>,
+          value: <span class="hljs-string">'/documentation/designers'</span>
+        },
+        {
+          name: <span class="hljs-string">'Developers'</span>,
+          value: <span class="hljs-string">'/documentation/developers'</span>
+        }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'Form Controls'</span>,
+      subs: [
+        {
+          name: <span class="hljs-string">'Sidenav'</span>,
+          value: <span class="hljs-string">'/documentation/sidenav'</span>
+        },
+        {
+          name: <span class="hljs-string">'Checkbox'</span>,
+          value: <span class="hljs-string">'/documentation/checkbox'</span>
+        },
+        {
+          name: <span class="hljs-string">'Datepicker'</span>,
+          value: <span class="hljs-string">'/documentation/datepicker'</span>
+        },
+        {
+          name: <span class="hljs-string">'Form Field'</span>,
+          value: <span class="hljs-string">'/documentation/formfield'</span>
+        },
+        {
+          name: <span class="hljs-string">'Radio Buttons'</span>,
+          value: <span class="hljs-string">'/documentation/radio'</span>
+        },
+        {
+          name: <span class="hljs-string">'Select'</span>,
+          value: <span class="hljs-string">'/documentation/select'</span>
+        },
+        {
+          name: <span class="hljs-string">'Slider'</span>,
+          value: <span class="hljs-string">'/documentation/slider'</span>
+        },
+        {
+          name: <span class="hljs-string">'Slide Toggle'</span>,
+          value: <span class="hljs-string">'/documentation/slidetoggle'</span>
+        }
+      ]
+    }
+  ];
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {}
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SidenavBasicData = {
+  name: <span class="hljs-string">'SidenavBasic'</span>
+};

@@ -1,0 +1,49 @@
+:host {
+  display: inline-flex;
+  .viz-sidenav {
+    text-align: left;
+    width: 304px;
+    background: #ffffff;
+    box-shadow: 1px 0 0 0 #f1f1f1;
+
+    &-group {
+      padding: 32px;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    &-title {
+      font-family: Soleto;
+      font-size: 16px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 24px;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    &-link {
+      cursor: pointer;
+      font-family: Soleto;
+      font-size: 14px;
+      color: #696969;
+      line-height: 18px;
+      font-weight: 300;
+      margin-bottom: 16px;
+      &:last-child{
+        margin-bottom: 0px;
+      }
+      &:focus {
+        outline: none;
+      }
+      &.active {
+        // color: black;
+        // font-weight: 500;
+
+        /* Body 2: */
+        font-family: Soleto;
+        font-size: 14px;
+        color: #000000;
+        line-height: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}

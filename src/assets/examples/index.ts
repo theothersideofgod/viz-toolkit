@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { SidenavBasicComponent, SidenavBasicData } from './sidenav-basic/sidenav-basic.component';
+import { FeedbackIndicatorWarningComponent, FeedbackIndicatorWarningData } from './feedback-indicator-warning/feedback-indicator-warning.component';
+import { FeedbackIndicatorBasicComponent, FeedbackIndicatorBasicData } from './feedback-indicator-basic/feedback-indicator-basic.component';
+import { NodataBasicComponent, NodataBasicData } from './nodata-basic/nodata-basic.component';
 import { CardBasicComponent, CardBasicData } from './card-basic/card-basic.component';
 import { PaginatorBasicComponent, PaginatorBasicData } from './paginator-basic/paginator-basic.component';
 import { TooltipBasicComponent, TooltipBasicData } from './tooltip-basic/tooltip-basic.component';
@@ -38,6 +42,22 @@ import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-da
 import { FormsModule } from '@angular/forms';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'sidenav-basic' : {
+    component: SidenavBasicComponent,
+    data: SidenavBasicData
+  },
+  'feedback-indicator-warning' : {
+    component: FeedbackIndicatorWarningComponent,
+    data: FeedbackIndicatorWarningData
+  },
+  'feedback-indicator-basic' : {
+    component: FeedbackIndicatorBasicComponent,
+    data: FeedbackIndicatorBasicData
+  },
+  'nodata-basic' : {
+    component: NodataBasicComponent,
+    data: NodataBasicData
+  },
   'card-basic' : {
     component: CardBasicComponent,
     data: CardBasicData
@@ -169,6 +189,10 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    SidenavBasicComponent,
+    FeedbackIndicatorWarningComponent,
+    FeedbackIndicatorBasicComponent,
+    NodataBasicComponent,
     CardBasicComponent,
     PaginatorBasicComponent,
     TooltipBasicComponent,
@@ -213,6 +237,10 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SidenavBasicComponent,
+    FeedbackIndicatorWarningComponent,
+    FeedbackIndicatorBasicComponent,
+    NodataBasicComponent,
     CardBasicComponent,
     PaginatorBasicComponent,
     TooltipBasicComponent,

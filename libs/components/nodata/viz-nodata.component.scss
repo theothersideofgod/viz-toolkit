@@ -1,0 +1,33 @@
+:host {
+  // height: 100%;
+  // width: 100%;
+
+  // .viz-nodata {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
+  .viz-nodata-wrap {
+    height: 100%;
+    width: 100%;
+  }
+  .viz-nodata-title {
+    /* Title: */
+    font-family: Soleto;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .viz-nodata-info {
+    /* All reports will app: */
+    font-family: Soleto;
+    font-weight: 300;
+    font-size: 14px;
+    color: #696969;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}

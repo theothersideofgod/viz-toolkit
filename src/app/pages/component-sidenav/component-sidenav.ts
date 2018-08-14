@@ -162,10 +162,6 @@ const initNavList = [
         value: 'tooltip'
       },
       {
-        name: 'No Data',
-        value: 'nodata'
-      },
-      {
         name: 'Login',
         value: 'login'
       }
@@ -181,6 +177,14 @@ const initNavList = [
       {
         name: 'Table',
         value: 'table'
+      },
+      {
+        name: 'No Data',
+        value: 'nodata'
+      },
+      {
+        name: 'Feedback Indicator',
+        value: 'feedbackindicator'
       }
     ]
   }

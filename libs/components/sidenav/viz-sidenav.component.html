@@ -1,0 +1,12 @@
+<div class="viz-sidenav">
+  <div class="viz-sidenav-group" *ngFor="let group of navList; let i=index">
+    <p class="viz-sidenav-title">{{group.name}}</p>
+    <p class="viz-sidenav-link" 
+      *ngFor="let route of group.subs; let i=index"
+      [routerLink]="route.value"
+      routerLinkActive #rla="routerLinkActive" 
+      [class.active]="rla.isActive">
+      {{route.name}}
+    </p>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 
 @Component({
@@ -9,12 +9,14 @@ import { MatSnackBar } from '@angular/material';
 export class SnackbarBasicComponent implements OnInit {
   message: string = 'Greyhound divisively hello.';
   action: string = 'button';
+  @ViewChild('snackbarBasic',{read: ViewContainerRef}) snackbarBasic: ViewContainerRef
   constructor(public snackBar: MatSnackBar) {}
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(this.message, this.action, {
       panelClass: 'vizient-snackbar',
-      duration: 3000
+      duration: 30000,
+      viewContainerRef: this.snackbarBasic
     });
   }
 

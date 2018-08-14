@@ -1,0 +1,41 @@
+:host {
+  .viz-feedback-indicator-wrap {
+    position: relative;
+    box-sizing: border-box;
+    padding: 16px 16px 16px 42px;
+    height: 72px;
+    width: 362px;
+    display: inline-flex;
+    .viz-feedback-indicator-icon {
+      position: absolute;
+      font-size: 18px;
+      height: 18px;
+      width: 18px;
+      top: 16px;
+      left: 16px;
+    }
+    .viz-feedback-indicator-message {
+      width: 100%;
+      white-space: pre-line;
+      text-align: left;
+      font-family: Soleto;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &-error {
+      border: 2px solid #ff3333;
+      background-color: #FFF7F7;
+      .viz-feedback-indicator-icon {
+        color: #ff3333;
+      }
+    }
+    &-warning {
+      border: 2px solid #ffc02e;
+      background-color: #FFFDF7;
+      .viz-feedback-indicator-icon {
+        color: #ffc02e;
+      }
+    }
+  }
+}
