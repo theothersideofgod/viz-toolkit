@@ -17,13 +17,20 @@
 .docs-toc-heading {
   margin: 0;
   padding: 0;
-  font-size: 13px;
-  font-weight: bold;
-}
 
-a {
-  line-height: 16px;
+  /* Contents: */
+  font-family: Soleto;
   font-size: 12px;
+  color: #9f9f9f;
+  letter-spacing: 0.2px;
+  text-align: left;
+  line-height: 16px;
+  font-weight: 400;
+}
+.docs-link {
+  cursor: pointer;
+}
+a {
   margin: 20px 0 0;
   position: relative;
   text-decoration: none;
@@ -31,10 +38,17 @@ a {
   text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
-  color: #9F9F9F;
+
+  /* Body 2 Copy 20: */
+  font-family: Soleto;
+  font-size: 14px;
+  color: #696969;
+  line-height: 18px;
+  font-weight: 300;
   &.docs-active {
-    font-size: 14px;
     color: black;
+    /* Body 2 Copy 17: */
+    font-weight: 400;
   }
 }
 
@@ -46,4 +60,3 @@ a {
     opacity: 0;
   }
 }
-

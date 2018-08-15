@@ -44,24 +44,24 @@ export class TableOfContents implements OnInit {
               private _element: ElementRef,
               @Inject(DOCUMENT) private _document: Document) {
 
-    this._router.events.pipe(takeUntil(this._destroyed)).subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        const rootUrl = _router.url.split('#')[0];
-        if (rootUrl !== this._rootUrl) {
-          this.links = this.createLinks();
-          this._rootUrl = rootUrl;
-        }
-      }
-    });
+    // this._router.events.pipe(takeUntil(this._destroyed)).subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     const rootUrl = _router.url.split('#')[0];
+    //     if (rootUrl !== this._rootUrl) {
+    //       this.links = this.createLinks();
+    //       this._rootUrl = rootUrl;
+    //     }
+    //   }
+    // });
 
-    this._route.fragment.pipe(takeUntil(this._destroyed)).subscribe(fragment => {
-      this._urlFragment = fragment;
+    // this._route.fragment.pipe(takeUntil(this._destroyed)).subscribe(fragment => {
+    //   this._urlFragment = fragment;
 
-      const target = document.getElementById(this._urlFragment);
-      if (target) {
-        target.scrollIntoView();
-      }
-    });
+    //   const target = document.getElementById(this._urlFragment);
+    //   if (target) {
+    //     target.scrollIntoView();
+    //   }
+    // });
   }
 
   ngOnInit(): void {
@@ -120,6 +120,9 @@ export class TableOfContents implements OnInit {
     const headers =
         Array.from(this._document.querySelectorAll(this.headerSelectors)) as HTMLElement[];
 
+        headers.shift()
+
+
     if (headers.length) {
       for (const header of headers) {
         // remove the 'link' icon name from the inner text
@@ -159,6 +162,17 @@ export class TableOfContents implements OnInit {
     // being scrolled passed the next link
     const scrollOffset = this.getScrollOffset();
     return scrollOffset >= currentLink.top && !(nextLink && nextLink.top < scrollOffset);
+  }
+
+  redirect(id) {
+    
+    let target = document.getElementById(id)
+    console.log(target)
+    if(target){
+      target.scrollIntoView({block:'start',behavior:'smooth'})
+    }
+   
+    // location.hash = id
   }
 
 }
