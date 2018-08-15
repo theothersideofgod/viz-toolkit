@@ -14,17 +14,26 @@
           padding: 0 0 0 0;
           margin-right: 30px;
           min-width: 100px;
+
+          /* Components: */
+          font-family: Soleto;
+          color: #9f9f9f;
+          letter-spacing: 0.4px;
+          font-weight: 500;
           &.mat-tab-label-active {
-            font-weight: bold;
-            color: black;
-            opacity: 1;
+            color: #212121;
           }
         }
       }
     }
     .github-link {
+      height: 72px;
       line-height: 72px;
       font-size: 13px;
+      /* Components: */
+      font-family: Soleto;
+      letter-spacing: 0.4px;
+      font-weight: 500;
     }
   }
   .main-sec {
