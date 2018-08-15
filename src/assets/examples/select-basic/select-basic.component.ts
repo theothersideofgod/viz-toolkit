@@ -14,19 +14,19 @@ export class SelectBasicComponent implements OnInit {
   options = [
     {
       "id": 1,
-      "title": "Option1"
+      "title": "Date Received"
     },
     {
       "id": 2,
-      "title": "Option2"
+      "title": "Dsicharge Date"
     },
     {
       "id": 3,
-      "title": "Option3"
+      "title": "Invoice Date"
     },
     {
       "id": 4,
-      "title": "Option4"
+      "title": "Placeholder..."
     }
   ]
 }
