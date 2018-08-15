@@ -3,6 +3,19 @@
     display: none;
   }
   .viz-tree-cell{
+    color: #696969;
+    font-family: soleto;
+    font-weight: 300;
+    @mixin md-icon-size($size: 24px) {
+      font-size: $size;
+      height: $size;
+      width: $size;
+    }
+    
+    .mat-icon {
+      @include md-icon-size(24px);
+      color: #9f9f9f;
+    }
   }
   .viz-tree-cell-node {
     display: flex;
