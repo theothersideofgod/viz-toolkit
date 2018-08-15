@@ -3,9 +3,14 @@
   <div class="docs-example-platform">
 
 
-    <button mat-icon-button *ngFor="let item of ['desktop_mac','tablet_mac','phone_iphone']; let i=index" (click)="platform = item;">
+    <!-- <button mat-icon-button *ngFor="let item of ['desktop_mac','tablet_mac','phone_iphone']; let i=index" (click)="platform = item;">
       <mat-icon [ngClass]="{'active': platform == item }">{{item}}</mat-icon>
-    </button>
+    </button> -->
+
+
+    <mat-icon [ngClass]="{'active': platform == item }" *ngFor="let item of ['desktop_mac','tablet_mac','phone_iphone']; let i=index" (click)="platform = item;">{{item}}</mat-icon>
+
+
 
   </div>
 

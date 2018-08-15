@@ -94,6 +94,17 @@
   width: 1200px;
 }
 ::ng-deep {
+  @mixin md-icon-size($size: 18px) {
+    font-size: $size;
+    height: $size !important;
+    width: $size !important;
+  }
+  
+  .mat-icon {
+    @include md-icon-size(18px) ;
+    margin-right: 12px;
+    cursor: pointer;
+  }
   .header-basic {
     &.desktop_mac {
     }
