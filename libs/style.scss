@@ -369,3 +369,27 @@ body{
     }
   }
 }
+
+
+
+//tabs
+.mat-tab-list{
+  .mat-tab-labels{
+    padding: 0px 24px;
+    .mat-tab-label{
+      margin-right: 40px;
+      margin-left: 0px;
+    }
+  }
+  .mat-ink-bar{
+    height: 4px;
+  }
+  .mat-tab-label{
+    color: #c3c3c3;
+    font-family: soleto;
+    font-weight: 500;
+  }
+  .mat-tab-label-active{
+    color: #696969;
+  }
+}
