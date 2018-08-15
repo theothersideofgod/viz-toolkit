@@ -114,6 +114,10 @@ const initNavList = [
       {
         name: 'Tree',
         value: 'tree'
+      },
+      {
+        name: 'Stepper',
+        value: 'stepper'
       }
     ]
   },
@@ -143,6 +147,10 @@ const initNavList = [
       {
         name: 'Progress Bar',
         value: 'progressbar'
+      },
+      {
+        name: 'Feedback Indicator',
+        value: 'feedbackindicator'
       }
     ]
   },
@@ -183,8 +191,17 @@ const initNavList = [
         value: 'nodata'
       },
       {
-        name: 'Feedback Indicator',
-        value: 'feedbackindicator'
+        name: 'Bottom Sheet',
+        value: 'bottomsheet'
+      }
+    ]
+  },
+  {
+    name: 'Pages',
+    subs: [
+      {
+        name: 'Login',
+        value: 'login'
       }
     ]
   }
