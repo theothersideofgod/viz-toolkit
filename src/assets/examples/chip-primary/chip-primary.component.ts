@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ChipPrimaryComponent implements OnInit {
+  chip:boolean=true
+  constructor() {}
 
-  ngOnInit() { }
-  
-  seachOnClick() {
-    
+  ngOnInit() {}
+  remove(){
+    this.chip = false
   }
 }
 

@@ -1,7 +1,7 @@
 <mat-chip-list>
-  <mat-chip>
+  <mat-chip *ngIf="chip" removable (removed)="remove()" >
     Input Chip
-    <mat-icon matChipRemove>cancel</mat-icon>
+    <mat-icon matChipRemove >cancel</mat-icon>
   </mat-chip>
   <mat-chip>Choise Chip</mat-chip>
 </mat-chip-list>

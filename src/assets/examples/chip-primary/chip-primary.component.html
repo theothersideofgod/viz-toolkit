@@ -1,5 +1,5 @@
 <mat-chip-list>
-    <mat-chip color="primary" selected>
+    <mat-chip color="primary" selected *ngIf="chip" removable (removed)="remove()">
         Input Chip
         <mat-icon matChipRemove>cancel</mat-icon>
     </mat-chip>
