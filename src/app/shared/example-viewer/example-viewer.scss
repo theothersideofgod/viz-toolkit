@@ -55,6 +55,11 @@
     font-size: 16px;
     line-height: 1;
   }
+  &-active {
+    mat-icon {
+      color: #000000;
+    }
+  }
 }
 .docs-example-viewer-source {
   ::ng-deep {
@@ -95,17 +100,20 @@
   width: 1200px;
 }
 ::ng-deep {
-  @mixin md-icon-size($size: 18px) {
-    font-size: $size;
-    height: $size !important;
-    width: $size !important;
+  .docs-example-platform{
+    @mixin md-icon-size($size: 18px) {
+      font-size: $size;
+      height: $size !important;
+      width: $size !important;
+    }
+    
+    .mat-icon {
+      @include md-icon-size(18px) ;
+      margin-left: 12px;
+      cursor: pointer;
+    }
   }
   
-  .mat-icon {
-    @include md-icon-size(18px) ;
-    margin-left: 12px;
-    cursor: pointer;
-  }
   .header-basic {
     &.desktop_mac {
     }

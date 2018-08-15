@@ -25,7 +25,7 @@ export class ExampleViewer {
 
   //lucas
   platform:string = 'desktop_mac'
-  compRef:any
+  copyFocus: boolean = false
   @ViewChild('iframe') iframe: ElementRef;
   @ViewChild('exampleViewBody') exampleViewBody: ElementRef;
   //lucas
@@ -65,4 +65,9 @@ export class ExampleViewer {
   getViewportClass() {
     return `${this._example} ${this.platform}`
   }
+
+  copySource() {
+    this.copyFocus = !this.copyFocus
+  }
+
 }
