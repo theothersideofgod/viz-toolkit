@@ -134,4 +134,9 @@
       }
     }
   }
+  .mat-tab-list{
+    .mat-ink-bar{
+      transition: none;
+    }
+  }
 }
