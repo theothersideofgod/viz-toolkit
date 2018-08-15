@@ -328,3 +328,34 @@ body{
     padding: 0px;
   } 
 }
+
+//badge
+.mat-badge-content{
+  width: max-content !important;
+  border-radius: 11px !important;
+  padding: 0 3px;
+  min-width: 22px;
+}
+.mat-badge-medium.mat-badge-overlap{
+  &.mat-badge-after {
+    .mat-badge-content{
+      right: auto;
+      left: 50%;
+    }
+  }
+  &.mat-badge-above{
+    .mat-badge-content{
+      top: -50%;
+    }
+  }
+  &.mat-badge-before{
+    .mat-badge-content{
+      left: -50% !important
+    }
+  }
+  &.mat-badge-below{
+    .mat-badge-content{
+      top: 50%;
+    }
+  }
+}
