@@ -216,7 +216,7 @@ td.mat-cell, .mat-header-cell {
 .mat-button-wrapper {
   font-weight: 300 !important;
 }
-//menu style
+// menu style
 .cdk-overlay-pane {
   .mat-menu-panel {
     .mat-menu-content {
@@ -252,19 +252,26 @@ td.mat-cell, .mat-header-cell {
     //   color: #9f9f9f;
     // }
     .mat-list-item-content{
-      color: #9f9f9f;
+      color: #696969;
       font-family:Soleto;
       font-weight:300;
       font-size: 14px;
+      .mat-icon {
+        color: #9f9f9f;
+        margin-right: 8px;
+      }
     }
   }
 }
 .mat-selection-list{
   .mat-list-item{
     .mat-list-item-content{
+      .mat-pseudo-checkbox{
+        color: #9f9f9f;
+      }
       .mat-list-text {
         flex-direction: row;
-        color: #9f9f9f;
+        color: #696969;
         font-family:Soleto;
         font-weight:300;
         font-size: 14px;
