@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { ProgressSpinnerBasicComponent, ProgressSpinnerBasicData } from './progress-spinner-basic/progress-spinner-basic.component';
 import { SidenavBasicComponent, SidenavBasicData } from './sidenav-basic/sidenav-basic.component';
 import { FeedbackIndicatorWarningComponent, FeedbackIndicatorWarningData } from './feedback-indicator-warning/feedback-indicator-warning.component';
 import { FeedbackIndicatorBasicComponent, FeedbackIndicatorBasicData } from './feedback-indicator-basic/feedback-indicator-basic.component';
@@ -42,6 +43,10 @@ import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-da
 import { FormsModule } from '@angular/forms';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'progress-spinner-basic' : {
+    component: ProgressSpinnerBasicComponent,
+    data: ProgressSpinnerBasicData
+  },
   'sidenav-basic' : {
     component: SidenavBasicComponent,
     data: SidenavBasicData
@@ -189,6 +194,7 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    ProgressSpinnerBasicComponent,
     SidenavBasicComponent,
     FeedbackIndicatorWarningComponent,
     FeedbackIndicatorBasicComponent,
@@ -237,6 +243,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ProgressSpinnerBasicComponent,
     SidenavBasicComponent,
     FeedbackIndicatorWarningComponent,
     FeedbackIndicatorBasicComponent,

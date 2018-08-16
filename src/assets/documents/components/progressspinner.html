@@ -1,0 +1,163 @@
+<html>
+
+<head></head>
+
+<body>
+  <div class="doc-category-title ">
+    Button & Indicatiors
+    <span class="docs-markdown-h3" id="contents">
+      <span header-link="contents"></span>Contents</span>
+  </div>
+  <div class="doc-title-1">
+    Progress spinner
+  </div>
+  <div class="doc-desc-1">
+    Circular progress indicators display progress by animating an indicator along an invisible circular track in a clockwise
+    direction. They can be applied directly to a surface, such as a button or card. </div>
+  <div class="doc-divider">
+  </div>
+  <div class="doc-title-2">
+    Examples
+    <span class="docs-markdown-h3" id="examples">
+      <span header-link="examples"></span>Examples</span>
+  </div>
+  <div class="doc-desc-2">
+    Circular progress indicators support both determinate and indeterminate processes.</div>
+  <div class="doc-example-container">
+    <div app-docs-example="progress-spinner-basic"></div>
+  </div>
+  <div class="doc-divider">
+  </div>
+  <div class="doc-title-2">
+    Props
+    <span class="docs-markdown-h3" id="props">
+      <span header-link="props"></span>Props</span>
+  </div>
+  <div class="doc-desc-2">
+    To get a customized checkbox, just set
+    <span class="doc-desc-2-highlight">bufferValue/color/mode/value/nubmer/progressbarId/</span>
+  </div>
+  <table class="doc-props-table">
+    <thead>
+      <tr>
+        <th>property</th>
+        <th>description</th>
+        <th>type</th>
+        <th>default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>color</td>
+        <td>Theme color palette for the component.
+
+        </td>
+        <td>ThemePalette</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>diameter</td>
+        <td>The diameter of the progress spinner (will set width and height of svg).
+
+        </td>
+        <td>number</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>mode</td>
+        <td>Mode of the progress circle
+
+        </td>
+        <td>ProgressSpinnerMode</td>
+        <td>'determinate' | 'indeterminate'</td>
+      </tr>
+      <tr>
+        <td>strokeWidth</td>
+        <td>Stroke width of the progress spinner.
+
+
+        </td>
+        <td>value</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>progressbarId</td>
+        <td>Value of the progress circle.
+
+
+
+        </td>
+        <td>number</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Best Practices
+    <span class="docs-markdown-h3" id="best_practices">
+      <span header-link="best_practices"></span>Best Practices</span>
+  </div>
+
+  <div class="doc-desc-2">
+    Progress spinnder should:
+    <ul class="doc-list">
+      <li>Determinate circular indicators fill the invisible, circular track with color, as the indicator moves from 0 to 360
+        degrees.
+      </li>
+      <li>Indeterminate circular indicators grow and shrink in size while moving along the invisible track.</li>
+
+    </ul>
+  </div>
+
+  <div class="doc-divider">
+
+  </div>
+
+
+  <div class="doc-title-2">
+    Usage &amp; Content guidelines
+    <span class="docs-markdown-h3" id="content_guidelines">
+      <span header-link="content_guidelines"></span>Content guidelines</span>
+  </div>
+
+  <div class="doc-desc-2">
+    Use circular indicators for short, indeterminate activities (
+    < 5 seconds) requiring user attention. Don’t apply progress
+      indicators to every button in your app. They can unnecessarily interrupt the user’s task.</div>
+
+      <div style="margin-bottom:24px">
+        <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:489px">
+          <img src="assets/img/doc/progressspinner-do.png" alt="">
+        </div>
+        <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:489px">
+          <img src="assets/img/doc/progressspinner-dont.png" alt="">
+        </div>
+      </div>
+
+
+
+
+      <div class="doc-divider">
+
+      </div>
+
+      <div class="doc-title-2">
+        Design specs
+        <span class="docs-markdown-h3" id="design_specs">
+          <span header-link="design_specs"></span>Design specs</span>
+      </div>
+
+
+      <div class="docs-usage-spec docs-usage-center" style="height:280px">
+        <img src="assets/img/doc/progressspinner-spec.png" alt="">
+      </div>
+
+
+
+
+
+
+</body>
+
+</html>
