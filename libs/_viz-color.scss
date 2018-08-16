@@ -1,0 +1,28 @@
+@import '../node_modules/@angular/material/theming';
+@include mat-core();
+//Primary colors
+$viz-purple: #7f5eba;
+$viz-orange: #ff4e00;
+
+//Secondary colors
+$viz-blue: #01Adab;
+$viz-yellow: #ffc02e;
+$viz-green: #9cd020;
+$viz-gray: #696969;
+$viz-black: #000000;
+
+//Tertiary Colors
+$chart-teal: #00cc99;
+$chart-purple: #9966ff;
+$chart-orange: #ff9933;
+$chart-blue: #3399ff;
+$chart-green: #99cc33;
+$chart-pink: #ff6699;
+$chart-yellow: #ffff33;
+$chart-red: #ff3333;
+ 
+//Text colors
+$viz-dark-gray: #9f9f9f;
+$viz-light-gray: #c3c3c3;
+$viz-extra-light-gray: #e9e9e9;
+
