@@ -1,0 +1,55 @@
+@import '../../_viz-color.scss';
+:host {
+  .viz-step {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      /* ↳ Content: */
+      font-family: Soleto;
+      font-size: 14px;
+      color: #000000;
+      text-align: left;
+      line-height: 24px;
+      font-weight: 400;
+    }
+    &-icon {
+      margin: 0px 8px;
+      color: #ffffff;
+      border-radius: 50%;
+      height: 24px;
+      width: 24px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+      &-finish {
+        background-color: $viz-green;
+      }
+      &-progress {
+        background-color: $viz-blue;
+      }
+      &-waiting {
+        background-color: $viz-light-gray;
+      }
+    }
+    &-label {
+    }
+    &-horizantal-line {
+      border-top-width: 1px;
+      border-top-style: solid;
+      flex: auto;
+      height: 0;
+      min-width: 32px;
+      border-color: $viz-extra-light-gray;
+      margin-left: 8px;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
