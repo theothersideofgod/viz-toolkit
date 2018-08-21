@@ -1,0 +1,103 @@
+.component-wrapper {
+  width: 100%;
+  padding: 48px 9.3056vw 0 9.3056vw;
+  box-sizing: border-box;
+
+  ::ng-deep {
+    .mat-icon {
+      color: #696969;
+    }
+  }
+
+  .component {
+    &-title {
+      &-1 {
+        /* Components: */
+        font-family: Soleto;
+        font-size: 48px;
+        color: #000000;
+        letter-spacing: 0;
+        font-weight: 300;
+      }
+      &-2 {
+        /* Form Controls: */
+        font-family: Soleto;
+        font-size: 28px;
+        color: #28292b;
+        letter-spacing: 0;
+        font-weight: 300;
+        text-transform: capitalize;
+      }
+      &-3 {
+        /* Checkbox: */
+        font-family: Soleto;
+        font-size: 16px;
+        color: #000000;
+        letter-spacing: 0;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+    }
+    &-sub {
+      &-1 {
+        /* Get up and running w: */
+        font-family: Soleto;
+        font-size: 20px;
+        color: #696969;
+        letter-spacing: 0;
+        line-height: 30px;
+        font-weight: 300;
+      }
+      &-2 {
+        /* All states of checkb: */
+        font-family: Soleto;
+        font-size: 16px;
+        color: #696969;
+        letter-spacing: 0;
+        line-height: 24px;
+        font-weight: 300;
+      }
+    }
+    &-class{
+      width: calc( ( 100vw - 18.6111vw ) / 3 );
+    }
+    &-class-wrapper {
+      display: flex;
+      justify-content: space-between;
+      column-count: 3;
+      flex-wrap: wrap;
+    }
+
+    &-header {
+      margin-top: 48px;
+      display: flex;
+      margin-bottom: 30px;
+      align-items: center;
+
+      &-svg {
+        margin-right: 16px;
+      }
+    }
+
+    &-list {
+      list-style-type: none;
+      padding: 0px;
+    }
+    &-list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &-mb10 {
+      margin-bottom: 10px;
+    }
+    &-mr19 {
+      margin-right: 19px;
+    }
+    &-mr16 {
+      margin-right: 16px;
+    }
+  }
+}

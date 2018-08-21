@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="32px" viewBox="0 0 26 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-136.000000, -272.000000)">
+            <g id="Form-Controls" transform="translate(134.000000, 273.000000)">
+                <g id="Group-10">
+                    <g>
+                        <g id="Group-27">
+                            <polygon id="Shape" points="0 0 30 0 30 30 0 30"></polygon>
+                            <g id="single-folded-content-outline-64" transform="translate(3.000000, 0.000000)" stroke-width="2">
+                                <polyline id="Shape" stroke="#FF4E00" points="16 0 16 8 24 8"></polyline>
+                                <polygon id="Shape" stroke="#FF4E00" stroke-linecap="square" points="16 0 0 0 0 30 24 30 24 8"></polygon>
+                                <path d="M6,23 L18,23" id="Shape" stroke="#00CC99" stroke-linecap="square"></path>
+                                <path d="M6,18 L18,18" id="Shape" stroke="#00CC99" stroke-linecap="square"></path>
+                                <path d="M6,13 L18,13" id="Shape" stroke="#00CC99" stroke-linecap="square"></path>
+                                <path d="M6,8 L10,8" id="Shape" stroke="#00CC99" stroke-linecap="square"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

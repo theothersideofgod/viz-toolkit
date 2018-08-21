@@ -8,6 +8,7 @@ import {
   ComponentViewer,
   ComponentOverview
  } from './pages/component-viewer/component-viewer';
+import { ComponentsComponent } from './pages/components/components.component';
 
 export const APP_ROUTES: Routes = [
   {path: '', component: HomepageComponent, pathMatch: 'full', data: {}},
@@ -35,5 +36,6 @@ export const APP_ROUTES: Routes = [
     ],
   },
   {path: 'principles', component: PrinciplesComponent, pathMatch: 'full', data: {}},
+  {path: 'components', component: ComponentsComponent, pathMatch: 'full', data: {}},
   {path: '**', redirectTo: ''}
 ];

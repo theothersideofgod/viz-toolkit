@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="26px" viewBox="0 0 30 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 15@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-934.000000, -913.000000)">
+            <g id="Data-Table" transform="translate(934.000000, 911.000000)">
+                <g id="No-Data">
+                    <g id="Group-15">
+                        <g id="baseline-navigation-24px-copy">
+                            <polygon id="Shape" points="0 0 30 0 30 30 0 30"></polygon>
+                            <rect id="Rectangle-path" stroke="#00CC99" stroke-width="2" x="4" y="13" width="22" height="11"></rect>
+                            <path d="M4,6 L6,6" id="Shape" stroke="#00CC99" stroke-width="2" stroke-linecap="square"></path>
+                            <path d="M9,6 L11,6" id="Shape" stroke="#00CC99" stroke-width="2" stroke-linecap="square"></path>
+                            <path d="M21,6 L26,6" id="Shape" stroke="#00CC99" stroke-width="2" stroke-linecap="square"></path>
+                            <path d="M0,9 L30,9" id="Shape" stroke="#FF4E00" stroke-width="2"></path>
+                            <rect id="Rectangle-path" stroke="#FF4E00" stroke-width="2" x="1" y="3" width="28" height="24"></rect>
+                            <path d="M3,16 L27,16" id="Shape" stroke="#00CC99" stroke-width="2"></path>
+                            <path d="M8.5,16 L8.5,25" id="Shape" stroke="#00CC99" stroke-width="2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

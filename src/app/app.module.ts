@@ -17,6 +17,7 @@ import { ComponentSidenavComponent } from './pages/component-sidenav/component-s
 import { ComponentViewerModule } from './pages/component-viewer/component-viewer';
 import { HttpClientModule } from '@angular/common/http';
 import { VizHeaderMudule, VizFooterMudule } from 'libs';
+import { ComponentsModule } from './pages/components/components.component';
 // import { VizHeaderMudule, VizFooterMudule } from 'viz-toolkit';
 
 @NgModule({
@@ -37,7 +38,8 @@ import { VizHeaderMudule, VizFooterMudule } from 'libs';
     MaterialModule,
     VizHeaderMudule,
     VizFooterMudule,
-    PrinciplesModule
+    PrinciplesModule,
+    ComponentsModule
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]

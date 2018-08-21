@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="24px" viewBox="0 0 32 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 16@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-133.000000, -1500.000000)">
+            <g id="Templates" transform="translate(134.000000, 1497.000000)">
+                <g id="Group-16">
+                    <g>
+                        <g id="sidebar">
+                            <rect id="Rectangle-path" stroke="#FF4E00" stroke-width="2" stroke-linecap="square" x="0" y="4" width="30" height="22"></rect>
+                            <path d="M18,4 L18,26" id="Shape" stroke="#FF4E00" stroke-width="2" stroke-linecap="square"></path>
+                            <path d="M22,10 L26,10" id="Shape" stroke="#00CC99" stroke-width="2" stroke-linecap="square"></path>
+                            <path d="M22,15 L26,15" id="Shape" stroke="#00CC99" stroke-width="2" stroke-linecap="square"></path>
+                            <path d="M22,20 L26,20" id="Shape" stroke="#00CC99" stroke-width="2" stroke-linecap="square"></path>
+                            <rect id="Rectangle" x="0" y="0" width="30" height="30"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

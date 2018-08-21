@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="24px" viewBox="0 0 26 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 12@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-936.000000, -276.000000)">
+            <g id="Layout" transform="translate(934.000000, 273.000000)">
+                <g id="Group-12">
+                    <g>
+                        <g id="baseline-view_quilt-24px">
+                            <polygon id="Path" stroke="#00CC99" stroke-width="2" points="15 26 19 26 19 18 15 18"></polygon>
+                            <polygon id="Path" stroke="#00CC99" stroke-width="2" points="23 26 27 26 27 18 23 18"></polygon>
+                            <polygon id="Path" stroke="#00CC99" stroke-width="2" points="15 4 15 14 27 14 27 4"></polygon>
+                            <polygon id="Path" stroke="#FF4E00" stroke-width="2" points="3 26 11 26 11 4 3 4"></polygon>
+                            <polygon id="Shape" points="0 0 30 0 30 30 0 30"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
