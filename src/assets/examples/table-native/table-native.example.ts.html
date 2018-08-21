@@ -1,0 +1,111 @@
+<span class="hljs-keyword">import</span> { Component, OnInit, ViewChild } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Sort } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> { MatSort, MatTableDataSource } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Dessert {
+  calories: <span class="hljs-built_in">number</span>;
+  carbs: <span class="hljs-built_in">number</span>;
+  fat: <span class="hljs-built_in">number</span>;
+  name: <span class="hljs-built_in">string</span>;
+  protein: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-comment">/**
+ * @title Sorting overview
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'table-native.component'</span>,
+  templateUrl: <span class="hljs-string">'table-native.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'table-native.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableNativeComponent {
+  desserts = [
+    {
+      contract: <span class="hljs-string">'Zipper Hips &amp; Knees'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(3).txt'</span>
+        }
+      ]
+    },
+    {
+      contract: <span class="hljs-string">'Howmedica Ostenonics (stryker) Hips &amp; Knees'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(3).txt'</span>
+        }
+      ]
+    },
+    {
+      contract: <span class="hljs-string">'Johnson &amp; Johnson (Dupuy Synthes)'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'johnson-johnson(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'johnson-johnson(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'johnson-johnson(3).txt'</span>
+        }
+      ]
+    }
+  ];
+
+  sortedData;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">this</span>.sortedData = <span class="hljs-keyword">this</span>.desserts.slice();
+  }
+
+  sortData(sort: Sort) {
+
+
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">this</span>.desserts.slice();
+    <span class="hljs-keyword">if</span> (!sort.active || sort.direction === <span class="hljs-string">''</span>) {
+      <span class="hljs-keyword">this</span>.sortedData = data;
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">this</span>.sortedData = data.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+
+      
+
+      <span class="hljs-keyword">const</span> isAsc = sort.direction === <span class="hljs-string">'asc'</span>;
+      <span class="hljs-keyword">switch</span> (sort.active) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'contract'</span>:
+          <span class="hljs-keyword">return</span> compare(a.contract, b.contract, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'type'</span>:
+          <span class="hljs-keyword">return</span> compare(a.type, b.type, isAsc);
+       
+        <span class="hljs-keyword">default</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+      }
+    });
+
+    <span class="hljs-built_in">console</span>.log(sort)
+
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compare</span>(<span class="hljs-params">a, b, isAsc</span>) </span>{
+  <span class="hljs-keyword">return</span> (a &lt; b ? <span class="hljs-number">-1</span> : <span class="hljs-number">1</span>) * (isAsc ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>);
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> TableNativeData = {
+  name: <span class="hljs-string">'TableNative'</span>
+};

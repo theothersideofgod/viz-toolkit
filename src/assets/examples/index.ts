@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { TableNativeComponent, TableNativeData } from './table-native/table-native.component';
+import { TableBasicComponent, TableBasicData } from './table-basic/table-basic.component';
 import { ProgressSpinnerBasicComponent, ProgressSpinnerBasicData } from './progress-spinner-basic/progress-spinner-basic.component';
 import { SidenavBasicComponent, SidenavBasicData } from './sidenav-basic/sidenav-basic.component';
 import { FeedbackIndicatorWarningComponent, FeedbackIndicatorWarningData } from './feedback-indicator-warning/feedback-indicator-warning.component';
@@ -43,6 +45,14 @@ import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-da
 import { FormsModule } from '@angular/forms';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'table-native' : {
+    component: TableNativeComponent,
+    data: TableNativeData
+  },
+  'table-basic' : {
+    component: TableBasicComponent,
+    data: TableBasicData
+  },
   'progress-spinner-basic' : {
     component: ProgressSpinnerBasicComponent,
     data: ProgressSpinnerBasicData
@@ -194,6 +204,8 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    TableNativeComponent,
+    TableBasicComponent,
     ProgressSpinnerBasicComponent,
     SidenavBasicComponent,
     FeedbackIndicatorWarningComponent,
@@ -243,6 +255,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TableNativeComponent,
+    TableBasicComponent,
     ProgressSpinnerBasicComponent,
     SidenavBasicComponent,
     FeedbackIndicatorWarningComponent,

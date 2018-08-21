@@ -1,0 +1,30 @@
+.mat-sort-header-container {
+  /* align-items: center; */
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+}
+
+.subtable {
+  width: 100%;
+  table, tr{
+    width: 100%;
+  }
+}
+
+// td, th{
+//   width: 500px;
+// }
+
+.width25{
+  width: 25%;
+  text-align: left;
+}
+.width50{
+  width: 50%;
+  text-align: left;
+}

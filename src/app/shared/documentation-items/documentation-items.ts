@@ -21,6 +21,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'tablenative', name: 'TableNative', examples: ['table-native']},
+        {id: 'table', name: 'TableBasic', examples: ['table-basic']},
         {id: 'progressspinner', name: 'ProgressSpinnerBasic', examples: ['progress-spinner-basic']},
         {id: 'sidenav', name: 'SidenavBasic', examples: ['sidenav-basic']},
         {id: 'feedbackindicatorwarning', name: 'FeedbackIndicatorWarning', examples: ['feedback-indicator-warning']},
