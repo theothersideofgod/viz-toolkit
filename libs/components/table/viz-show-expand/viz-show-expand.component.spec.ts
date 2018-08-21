@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VizDetailRowExpandComponent } from './viz-detail-row-expand.component';
+import { VizShowExpandComponent } from './viz-show-expand.component';
 
-describe('VizDetailRowExpandComponent', () => {
-  let component: VizDetailRowExpandComponent;
-  let fixture: ComponentFixture<VizDetailRowExpandComponent>;
+describe('VizShowExpandComponent', () => {
+  let component: VizShowExpandComponent;
+  let fixture: ComponentFixture<VizShowExpandComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VizDetailRowExpandComponent ]
+      declarations: [ VizShowExpandComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VizDetailRowExpandComponent);
+    fixture = TestBed.createComponent(VizShowExpandComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,19 @@
+<div class="example-container mat-elevation-z2">
+  <ng-container *ngFor="let dessert of desserts">
+    <div class="viz-table-row">
+      <div class="viz-table-cell w70 example-first-col" vizShowExpand #test>
+        {{dessert.contract}}</div>
+      <div class="viz-table-cell w30">{{dessert.type}}</div>
+    </div>
+    <div class="viz-table-row" [vizExpand]="test.isExpanded" style="overflow:hidden">
+      <div class="viz-table">
+        <div class="viz-table-expand-row" *ngFor="let subItem of dessert.subs; let i=index">
+          <div class="viz-table-cell w100">
+            <mat-icon class="expand-icon">insert_drive_file</mat-icon>
+            {{subItem.file}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

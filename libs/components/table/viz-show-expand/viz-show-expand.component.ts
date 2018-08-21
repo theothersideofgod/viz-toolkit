@@ -7,10 +7,11 @@ import {
   animate,
   transition
 } from '@angular/animations';
+
 @Component({
-  selector: '[viz-detail-row-expand]',
-  templateUrl: './viz-detail-row-expand.component.html',
-  styleUrls: ['./viz-detail-row-expand.component.scss'],
+  selector: '[vizShowExpand]',
+  templateUrl: './viz-show-expand.component.html',
+  styleUrls: ['./viz-show-expand.component.scss'],
   animations: [
     trigger('expandState', [
       state('expand', style({
@@ -24,7 +25,7 @@ import {
     ])
   ]
 })
-export class VizDetailRowExpandComponent implements OnInit {
+export class VizShowExpandComponent implements OnInit {
   isExpanded: boolean = false;
   expandState: string = 'collapse'
   @Output() toggleExpandRow: EventEmitter<boolean> = new EventEmitter<boolean>()
@@ -36,4 +37,5 @@ export class VizDetailRowExpandComponent implements OnInit {
     this.expandState = this.isExpanded ? "expand" : "collapse"
     this.toggleExpandRow.emit(this.isExpanded)
   }
+
 }

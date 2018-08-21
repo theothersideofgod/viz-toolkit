@@ -1,0 +1,18 @@
+@mixin md-icon-size($size: 18px) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+  
+  .mat-icon {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    @include md-icon-size(18px);
+  }
+  
+  :host{
+    // display: inline-flex;
+    // align-items: center;
+    position: relative;
+  }

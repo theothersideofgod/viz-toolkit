@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { StepperBasicComponent, StepperBasicData } from './stepper-basic/stepper-basic.component';
+import { ExpansionPanelTableComponent, ExpansionPanelTableData } from './expansion-panel-table/expansion-panel-table.component';
 import { TableNativeComponent, TableNativeData } from './table-native/table-native.component';
 import { TableBasicComponent, TableBasicData } from './table-basic/table-basic.component';
 import { ProgressSpinnerBasicComponent, ProgressSpinnerBasicData } from './progress-spinner-basic/progress-spinner-basic.component';
@@ -45,6 +47,14 @@ import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-da
 import { FormsModule } from '@angular/forms';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'stepper-basic' : {
+    component: StepperBasicComponent,
+    data: StepperBasicData
+  },
+  'expansion-panel-table' : {
+    component: ExpansionPanelTableComponent,
+    data: ExpansionPanelTableData
+  },
   'table-native' : {
     component: TableNativeComponent,
     data: TableNativeData
@@ -204,6 +214,8 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    StepperBasicComponent,
+    ExpansionPanelTableComponent,
     TableNativeComponent,
     TableBasicComponent,
     ProgressSpinnerBasicComponent,
@@ -255,6 +267,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    StepperBasicComponent,
+    ExpansionPanelTableComponent,
     TableNativeComponent,
     TableBasicComponent,
     ProgressSpinnerBasicComponent,

@@ -1,0 +1,66 @@
+<span class="hljs-keyword">import</span> { Component, OnInit, ViewChild } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'expansion-panel-table.component'</span>,
+  templateUrl: <span class="hljs-string">'expansion-panel-table.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'expansion-panel-table.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExpansionPanelTableComponent {
+  desserts = [
+    {
+      contract: <span class="hljs-string">'Zipper Hips &amp; Knees'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(3).txt'</span>
+        }
+      ]
+    },
+    {
+      contract: <span class="hljs-string">'Howmedica Ostenonics (stryker) Hips &amp; Knees'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(3).txt'</span>
+        }
+      ]
+    },
+    {
+      contract: <span class="hljs-string">'Johnson &amp; Johnson (Dupuy Synthes)'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'johnson-johnson(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'johnson-johnson(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'johnson-johnson(3).txt'</span>
+        }
+      ]
+    }
+  ];
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+  }
+}
+
+
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ExpansionPanelTableData = {
+	name: <span class="hljs-string">'ExpansionPanelTable'</span>
+}
