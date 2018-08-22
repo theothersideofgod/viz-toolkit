@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { BottomsheetBasicComponent, BottomsheetBasicData } from './bottomsheet-basic/bottomsheet-basic.component';
 import { StepperBasicComponent, StepperBasicData } from './stepper-basic/stepper-basic.component';
 import { ExpansionPanelTableComponent, ExpansionPanelTableData } from './expansion-panel-table/expansion-panel-table.component';
 import { TableNativeComponent, TableNativeData } from './table-native/table-native.component';
@@ -47,6 +48,10 @@ import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-da
 import { FormsModule } from '@angular/forms';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'bottomsheet-basic' : {
+    component: BottomsheetBasicComponent,
+    data: BottomsheetBasicData
+  },
   'stepper-basic' : {
     component: StepperBasicComponent,
     data: StepperBasicData
@@ -214,6 +219,7 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    BottomsheetBasicComponent,
     StepperBasicComponent,
     ExpansionPanelTableComponent,
     TableNativeComponent,
@@ -267,6 +273,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    BottomsheetBasicComponent,
     StepperBasicComponent,
     ExpansionPanelTableComponent,
     TableNativeComponent,
