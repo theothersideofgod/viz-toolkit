@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xGroup 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Principles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Principles" transform="translate(-735.000000, -640.000000)">
+            <g id="Our-Value" transform="translate(135.000000, 371.000000)">
+                <g id="Cultural-cornerstones" transform="translate(600.000000, 269.000000)">
+                    <g id="Group-5">
+                        <g id="molecule-outline-16">
+                            <rect id="Rectangle" x="0" y="0" width="90" height="90"></rect>
+                            <circle id="Oval" stroke="#FF4E00" stroke-width="6" cx="15" cy="15" r="12"></circle>
+                            <circle id="Oval" stroke="#FF4E00" stroke-width="6" cx="15" cy="75" r="12"></circle>
+                            <circle id="Oval" stroke="#FF4E00" stroke-width="6" cx="72" cy="45" r="15"></circle>
+                            <path d="M15,36 L15,54" id="Shape" stroke="#00CC99" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M34,24 L51,32" id="Shape" stroke="#00CC99" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M34,66 L51,58" id="Shape" stroke="#00CC99" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

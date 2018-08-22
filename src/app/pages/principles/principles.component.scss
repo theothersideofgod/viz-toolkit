@@ -1,44 +1,116 @@
 :host {
-  .principles-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 0 135px;
-  }
-  .principles-sec {
-    &-1, &-2 {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      border-bottom: 1px #F1F1F1 solid;
-      padding: 48px 0;
-      p {
-        margin: 19px 0 0 0;
-      }
-    }
-  }
 }
 
-::ng-deep {
-  h1 {
-    display: inline;
-    margin: 0;
+.principles {
+  &-wrapper {
+    font-family: Soleto;
     font-weight: 300;
-    font-size: 48px;
-    line-height: 63px;
-    color: #000000
-  }
-  %normal-font {
-    font-weight: 200;
-    color: #696969;
-    line-height: 1.5;
-  }
-  #large {
-    @extend %normal-font;
-    font-size: 20px;
+    padding: 48px 135px;
+    box-sizing: border-box;
+    width: 100%;
   }
 
-  #small {
-    @extend %normal-font;
+  &-title-1 {
+    font-size: 48px;
+    color: #000000;
+    letter-spacing: 0;
+  }
+  &-desc-1 {
+    font-size: 20px;
+    color: #696969;
+    letter-spacing: 0;
+    line-height: 30px;
+    width: 800px;
+  }
+
+  &-title-2 {
+    font-size: 28px;
+    color: #28292b;
+    letter-spacing: 0;
+    margin: 24px 0px 12px 0px;
+  }
+  &-desc-2 {
     font-size: 16px;
+    color: #696969;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+
+  &-card {
+    width: 470px;
+    margin-right: 115px;
+    float: left;
+
+    &-wrapper {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+    }
+
+    &-img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+ 
+  &-strategy {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding-left: 1em;
+      text-indent: -0.7em;
+    }
+    li::before {
+      content: '• ';
+      color: #ff4e00;
+      margin-right: 16px;
+    }
+  }
+  &-orange {
+    font-size: 16px;
+    color: #ff4e00;
+    letter-spacing: 0;
+    line-height: 16px;
+    font-weight: 500;
+  }
+
+  &-performance-sub-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-horizantal-line {
+    height: 1px;
+    background-color: #f1f1f1;
+    margin: 48px 0px;
+  }
+
+  &-mt24 {
+    margin-top: 24px;
+  }
+  &-mr24 {
+    margin-right: 24px;
+  }
+  &-mb24 {
+    margin-bottom: 24px;
+  }
+  &-ml24 {
+    margin-left: 24px;
+  }
+  &-mb20 {
+    margin-bottom: 20px;
+  }
+  &-mb48 {
+    margin-bottom: 48px;
+  }
+  &-mb16{
+    margin-bottom: 16px;
+  }
+  &-width800{
+    width: 800px;
   }
 }
