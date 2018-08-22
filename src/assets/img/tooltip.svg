@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xGroup 35</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.96875,6.984375 L10.96875,4.96875 L9,4.96875 L9,6.984375 L10.96875,6.984375 Z M10.96875,15 L10.96875,9 L9,9 L9,15 L10.96875,15 Z M2.90625,2.953125 C4.87500984,0.984365156 7.23436125,0 9.984375,0 C12.7343888,0 15.0859277,0.976552734 17.0390625,2.9296875 C18.9921973,4.88282227 19.96875,7.23436125 19.96875,9.984375 C19.96875,12.7343888 18.9921973,15.0859277 17.0390625,17.0390625 C15.0859277,18.9921973 12.7343888,19.96875 9.984375,19.96875 C7.23436125,19.96875 4.88282227,18.9921973 2.9296875,17.0390625 C0.976552734,15.0859277 0,12.7343888 0,9.984375 C0,7.23436125 0.968740313,4.89063469 2.90625,2.953125 Z" id="path-1"></path>
+    </defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.400000006">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-537.000000, -1157.000000)">
+            <g id="Popups-&amp;-Modals" transform="translate(534.000000, 911.000000)">
+                <g id="Tooltip" transform="translate(3.000000, 218.000000)">
+                    <g id="Group-35" transform="translate(0.000000, 28.000000)">
+                        <g id="baseline-format_list_numbered-24px-copy">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="info" fill="#696969" xlink:href="#path-1"></use>
+                            <polygon id="Shape" mask="url(#mask-2)" points="-2 -2 22 -2 22 22 -2 22"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

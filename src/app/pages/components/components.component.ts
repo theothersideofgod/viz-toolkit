@@ -95,22 +95,22 @@ export class ComponentsComponent implements OnInit {
       ]
     },
     {
-      title: 'Buttons & Indicators',
+      title: 'buttons & indicators',
       components: [
         {
-          title: 'Button',
+          title: 'button',
           desc: 'All states of button'
         },
         {
-          title: 'Badge',
+          title: 'badge',
           desc: 'Small status descriptors'
         },
         {
-          title: 'Chip',
+          title: 'chip',
           desc: 'A list of values as individual'
         },
         {
-          title: 'Icon',
+          title: 'icon',
           desc: 'Icon usage'
         },
         {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="26px" viewBox="0 0 30 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 17@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-534.000000, -1499.000000)">
+            <g id="Pages" transform="translate(534.000000, 1497.000000)">
+                <g id="Group-17">
+                    <g id="webpage">
+                        <rect id="Rectangle-path" stroke="#00CC99" stroke-width="2" stroke-linecap="square" x="4" y="11" width="22" height="13"></rect>
+                        <path d="M4,15 L26,15" id="Shape" stroke="#00CC99" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M10,24 L10,15" id="Shape" stroke="#00CC99" stroke-width="2" stroke-linecap="square"></path>
+                        <rect id="Rectangle-path" stroke="#FF4E00" stroke-width="2" x="1" y="3" width="28" height="24"></rect>
+                        <path d="M0,7 L30,7" id="Shape" stroke="#FF4E00" stroke-width="2"></path>
+                        <path d="M6,2 L6,7" id="Shape" stroke="#FF4E00" stroke-width="2"></path>
+                        <rect id="Rectangle" x="0" y="0" width="30" height="30"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

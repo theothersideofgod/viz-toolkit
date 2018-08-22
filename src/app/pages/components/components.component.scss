@@ -59,8 +59,8 @@
         font-weight: 300;
       }
     }
-    &-class{
-      width: calc( ( 100vw - 18.6111vw ) / 3 );
+    &-class {
+      width: calc((100% - 18.6111vw) / 3);
     }
     &-class-wrapper {
       display: flex;
@@ -77,12 +77,28 @@
 
       &-svg {
         margin-right: 16px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
 
     &-list {
       list-style-type: none;
       padding: 0px;
+
+      &-svg {
+        width: 30px;
+        height: 30px;
+        margin-right: 16px;
+        padding: 3px;
+        box-sizing: border-box;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
     &-list-item {
       display: flex;

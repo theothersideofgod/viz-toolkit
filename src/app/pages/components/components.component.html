@@ -10,13 +10,15 @@
     <div class="component-class" *ngFor="let class of componentClass; let i=index">
       <div class="component-header">
         <div class="component-header-svg">
-          <!-- <img src="assets/img/{{class.title}}.svg" alt="{{class.title}}"> -->
+          <img src="assets/img/{{class.title}}.svg" alt="{{class.title}}">
         </div>
         <div class="component-title-2">{{class.title}}</div>
       </div>
       <ul class="component-list">
         <li *ngFor="let component of class.components; let i=index" class="component-list-item">
-          <!-- <mat-icon class="component-mr19 component-class-icon">{{component.title}}</mat-icon> -->
+          <div class="component-list-svg">
+            <img src="assets/img/{{component.title}}.svg" alt="{{component.title}}">
+          </div>
           <div class="component-item">
             <div class="component-title-3">{{component.title}}</div>
             <div class="component-sub-2">{{component.desc}}</div>
