@@ -1,0 +1,41 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'search-basic'</span>,
+  templateUrl: <span class="hljs-string">'search-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'search-basic.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SearchBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  types: <span class="hljs-built_in">string</span>[] = [
+    <span class="hljs-string">'All'</span>,
+    <span class="hljs-string">'Medicare ID'</span>,
+    <span class="hljs-string">'HCO ID'</span>,
+    <span class="hljs-string">'Member name'</span>,
+    <span class="hljs-string">'Member ID'</span>,
+    <span class="hljs-string">'Shortname/Facility'</span>,
+    <span class="hljs-string">'Invoice Date'</span>
+  ];
+  results = [
+    {
+      name: <span class="hljs-string">'Johns Hopkins Hospital - 23145'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'All'</span>
+    },
+    {
+      name: <span class="hljs-string">'Johns Hopkins Facility 1 - 96251'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Medicare ID'</span>
+    },
+    {
+      name: <span class="hljs-string">'Johns Hopkins Facility 2 - 65291'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'HCO ID'</span>
+    },
+    {
+      name: <span class="hljs-string">'Johns Hopkins Facility 3 - 78291'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Member ID'</span>
+    }
+  ];
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SearchBasicData = {
+  name: <span class="hljs-string">'SearchBasic'</span>
+};
