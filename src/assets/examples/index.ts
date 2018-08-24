@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { SearchBasicComponent, SearchBasicData } from './search-basic/search-basic.component';
+import { BreadscrumbBasicComponent, BreadscrumbBasicData } from './breadscrumb-basic/breadscrumb-basic.component';
 import { BottomsheetBasicComponent, BottomsheetBasicData } from './bottomsheet-basic/bottomsheet-basic.component';
 import { StepperBasicComponent, StepperBasicData } from './stepper-basic/stepper-basic.component';
 import { ExpansionPanelTableComponent, ExpansionPanelTableData } from './expansion-panel-table/expansion-panel-table.component';
@@ -48,6 +50,14 @@ import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-da
 import { FormsModule } from '@angular/forms';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'search-basic' : {
+    component: SearchBasicComponent,
+    data: SearchBasicData
+  },
+  'breadscrumb-basic' : {
+    component: BreadscrumbBasicComponent,
+    data: BreadscrumbBasicData
+  },
   'bottomsheet-basic' : {
     component: BottomsheetBasicComponent,
     data: BottomsheetBasicData
@@ -219,6 +229,8 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    SearchBasicComponent,
+    BreadscrumbBasicComponent,
     BottomsheetBasicComponent,
     StepperBasicComponent,
     ExpansionPanelTableComponent,
@@ -273,6 +285,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SearchBasicComponent,
+    BreadscrumbBasicComponent,
     BottomsheetBasicComponent,
     StepperBasicComponent,
     ExpansionPanelTableComponent,

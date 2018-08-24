@@ -21,6 +21,9 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'search', name: 'SearchBasic', examples: ['search-basic']},
+        {id: 'misc', name: 'Misc'},
+        {id: 'breadscrumbbasic', name: 'BreadscrumbBasic', examples: ['breadscrumb-basic']},
         {id: 'bottomsheet', name: 'BottomsheetBasic', examples: ['bottomsheet-basic']},
         {id: 'stepper', name: 'StepperBasic', examples: ['stepper-basic']},
         {id: 'expansionpaneltable', name: 'ExpansionPanelTable', examples: ['expansion-panel-table']},

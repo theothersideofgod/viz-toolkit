@@ -1,0 +1,27 @@
+<span class="hljs-keyword">import</span> { Component, OnInit, ViewChild, TemplateRef } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { MatBottomSheet, MatBottomSheetRef } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'bottomsheet-basic'</span>,
+  templateUrl: <span class="hljs-string">'bottomsheet-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'bottomsheet-basic.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BottomsheetBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'tpl'</span>)
+  tpl: TemplateRef&lt;<span class="hljs-built_in">any</span>&gt;;
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> bottomSheet: MatBottomSheet</span>) {}
+
+  openBottomSheet(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.bottomSheet.open(<span class="hljs-keyword">this</span>.tpl);
+  }
+
+  openLink(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.bottomSheet.dismiss()
+  }
+
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> BottomsheetBasicData = {
+  name: <span class="hljs-string">'BottomsheetBasic'</span>
+};
