@@ -1,0 +1,71 @@
+<mat-form-field class="viz-search"
+                [class.mat-focused]="typeMenuTrigger.menuOpen">
+  <span matPrefix
+        [matMenuTriggerFor]="typeMenu"
+        #typeMenuTrigger="matMenuTrigger"
+        (click)="$event.stopPropagation()"
+        class="viz-search-type">
+    <span class="viz-search-type-name">{{type}}</span>
+    <button class="viz-search-type-drop-icon"
+            mat-button
+            mat-icon-button
+            (click)="value=''">
+      <mat-icon>{{typeMenuTrigger.menuOpen ? "arrow_drop_up" : "arrow_drop_down"}}</mat-icon>
+    </button>
+  </span>
+  <div [matMenuTriggerFor]="searchMenu"
+       #searchMenuTrigger="matMenuTrigger">
+    <input matInput
+           type="text"
+           autocomplete="off"
+           [value]="searchValue"
+           (focus)="onFocusSearch()"
+           (blur)="onBlurSearch()"
+           (keyup)="onKeyUp($event)"
+           (click)="$event.stopPropagation()">
+  </div>
+
+
+  <button mat-button
+          matSuffix
+          mat-icon-button
+          class="viz-search-type-search-icon">
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
+
+
+
+<mat-menu #typeMenu="matMenu"
+          [overlapTrigger]=false
+          class="viz-search-type-option mat-elevation-z8">
+  <mat-list role="list"
+            (click)="$event.stopPropagation()"
+            class="viz-search-type-list">
+    <mat-list-item class="viz-search-type-list-item"
+                   *ngFor="let item of types; let i=index"
+                   [class.viz-search-type-list-item-active]="item == type"
+                   (click)="selectType(item)">
+      {{item}}
+    </mat-list-item>
+  </mat-list>
+</mat-menu>
+
+
+<mat-menu #searchMenu="matMenu"
+          [overlapTrigger]=false
+          class="viz-search-search-option mat-elevation-z8">
+  <mat-list role="list"
+            (click)="$event.stopPropagation()"
+            class="viz-search-search-list">
+    <mat-list-item role="listitem"
+                   class="viz-search-search-list-item"
+                   *ngFor="let item of highlightResults"
+                   (click)="selectTargetResult(item.name)">
+      <div class="viz-search-search-highlight"
+           [innerHTML]="item.highlightName"></div>
+      <div class="viz-search-search-type">in {{item.type}}</div>
+    </mat-list-item>
+
+  </mat-list>
+</mat-menu>

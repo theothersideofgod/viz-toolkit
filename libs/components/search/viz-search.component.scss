@@ -1,0 +1,117 @@
+:host {
+  .viz-search {
+    &-type {
+      display: flex;
+    }
+    &-type-name {
+      line-height: 24px;
+      color: #000000;
+    }
+    &-type-drop-icon {
+      .mat-icon {
+        color: #9f9f9f;
+        font-size: 1.5em;
+      }
+    }
+    &-type-search-icon {
+      .mat-icon {
+        color: #9f9f9f;
+      }
+    }
+    &-type-option {
+    }
+    &.mat-focused {
+      .mat-icon {
+        color: #000000;
+      }
+    }
+    ::ng-deep {
+      .mat-form-field-prefix {
+        border-right: 1px solid #c3c3c3;
+        padding-right: 8px;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .cdk-overlay-pane {
+    .mat-menu-panel {
+      &.viz-search-type-option {
+        position: absolute;
+        top: 3px;
+        width: 200px;
+        .mat-menu-content {
+          width: 200px;
+        }
+        .mat-list {
+          padding-top: 0px;
+          .mat-list-item {
+            cursor: pointer;
+            height: 40px;
+          }
+          .mat-list-item-content {
+            width: 200px;
+            padding: 0px 24px;
+            &:hover {
+              background-color: #f1f1f1;
+              color: #7f5eba;
+            }
+          }
+        }
+        .viz-search-type-list-item-active {
+          .mat-list-item-content {
+            background-color: #f1f1f1;
+            color: #7f5eba;
+          }
+        }
+      }
+      &.viz-search-search-option {
+        position: absolute;
+        top: 7px;
+        left: -174px;
+        max-width: 375px;
+        .mat-menu-content {
+          width: 375px;
+          padding: 10px 0px;
+        }
+        .mat-list {
+          padding-top: 0px;
+          .mat-list-item {
+            cursor: pointer;
+            height: 30px;
+          }
+          .mat-list-item-content {
+            width: 375px;
+            padding: 0px 24px;
+            &:hover {
+              background-color: #f1f1f1;
+              // color: #7f5eba;
+            }
+          }
+        }
+        .viz-search-type-list-item-active {
+          .mat-list-item-content {
+            background-color: #f1f1f1;
+            color: #7f5eba;
+          }
+        }
+        .viz-search-search-highlight {
+          width: 213px;
+          margin-right: 24px;
+          font-size: 14px;
+          color: #696969;
+          font-weight: 500;
+        }
+        .viz-search-search-type {
+          /* Options: */
+          font-weight: 300;
+          font-size: 14px;
+          color: #9f9f9f;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
