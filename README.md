@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
+## Get started
+
+For help getting started with a new Angular app, check out the [Angular CLI](https://https://cli.angular.io/). For existing apps, follow these steps to begin using Vizient Toolkit.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
