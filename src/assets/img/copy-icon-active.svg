@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xCopy Code</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Documentation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation---List" transform="translate(-1111.000000, -1357.000000)">
+            <g id="Example" transform="translate(352.000000, 335.000000)">
+                <g id="Group-Copy" transform="translate(0.000000, 641.000000)">
+                    <g id="Code" transform="translate(0.000000, 358.000000)">
+                        <g id="Copy-Code" transform="translate(758.000000, 23.000000)">
+                            <polygon id="Shape" points="0 0 18 0 18 18 0 18"></polygon>
+                            <path d="M12,0.75 L3,0.75 C2.175,0.75 1.5,1.425 1.5,2.25 L1.5,12.75 L3,12.75 L3,2.25 L12,2.25 L12,0.75 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                            <path d="M11.25,3.75 L6,3.75 C5.175,3.75 4.5075,4.425 4.5075,5.25 L4.5,15.75 C4.5,16.575 5.1675,17.25 5.9925,17.25 L14.25,17.25 C15.075,17.25 15.75,16.575 15.75,15.75 L15.75,8.25 L11.25,3.75 Z M6,15.75 L6,5.25 L10.5,5.25 L10.5,9 L14.25,9 L14.25,15.75 L6,15.75 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
