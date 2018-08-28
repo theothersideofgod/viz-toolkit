@@ -407,9 +407,11 @@ td.mat-cell,
 //badge
 .mat-badge-content {
   width: max-content !important;
-  border-radius: 11px !important;
-  padding: 0 3px;
-  min-width: 22px;
+  border-radius: 12px !important;
+  // min-width: 24px;
+  height: 24px !important;
+  line-height: 24px !important;
+  padding: 0 9px;
 }
 .mat-badge-medium.mat-badge-overlap {
   &.mat-badge-after {
