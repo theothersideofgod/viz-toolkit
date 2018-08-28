@@ -67,7 +67,7 @@ export class ExampleViewer {
   }
 
   copySource() {
-    this.copyFocus = !this.copyFocus
+    this.copyFocus = false
   }
 
 }

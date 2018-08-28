@@ -29,7 +29,9 @@
           
           <button mat-icon-button type="button" class="docs-example-source-copy" [class.docs-example-source-copy-active]="copyFocus" title="Copy example source" aria-label="Copy example source to clipboard"
             matTooltip="Copy code"
-            (click)="copySource(viewer.textContent)">
+            (click)="copySource(viewer.textContent)"
+            (mouseover)="copyFocus = true"
+            (mouseleave)="copyFocus = false">
             <img *ngIf="!copyFocus" src="assets/img/copy-icon.svg" alt="">
             <img *ngIf="copyFocus" src="assets/img/copy-icon-active.svg" alt="">
           </button>
