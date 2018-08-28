@@ -34,18 +34,34 @@
 
 
 <div class="viz-select-wrap">
-  <mat-form-field class="viz-select" [matMenuTriggerFor]="selectMenu" #selectTrigger="matMenuTrigger" [class.mat-focused]="selectTrigger.menuOpen">
-    <mat-label>{{placeholder}}</mat-label>
-    <input matInput type="text" placeholder="Clearable input" [value]="selected.title" autocomplete="off">
-    <button class="select-direction" mat-button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-      <mat-icon>{{selectTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down'}}</mat-icon>
-    </button>
-  </mat-form-field>
+  <form class="vizient-input">
+    <mat-form-field class="viz-select"
+                    [matMenuTriggerFor]="selectMenu"
+                    #selectTrigger="matMenuTrigger"
+                    [class.mat-focused]="selectTrigger.menuOpen">
+      <mat-label>{{placeholder}}</mat-label>
+      <input matInput
+             type="text"
+             placeholder="Clearable input"
+             [value]="selected.title"
+             autocomplete="off">
+      <mat-icon class="select-direction"
+              mat-button
+              matSuffix>{{selectTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down'}}
+      </mat-icon>
+    </mat-form-field>
+  </form>
 
 
-  <mat-menu #selectMenu="matMenu" [overlapTrigger]=false class="viz-select-option">
+
+  <mat-menu #selectMenu="matMenu"
+            [overlapTrigger]=false
+            class="viz-select-option">
     <div (click)="$event.stopPropagation()">
-      <div class="viz-select-option-cell" *ngFor="let option of options; let i=index" (click)="selectOption(option)" [class.viz-select-option-cell-active]="selected.title == option.title">{{option.title}}</div>
+      <div class="viz-select-option-cell"
+           *ngFor="let option of options; let i=index"
+           (click)="selectOption(option)"
+           [class.viz-select-option-cell-active]="selected.title == option.title">{{option.title}}</div>
     </div>
   </mat-menu>
 </div>
