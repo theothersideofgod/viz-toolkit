@@ -8,52 +8,37 @@ import { Component, OnInit } from '@angular/core';
 export class SidenavBasicComponent implements OnInit {
   navList = [
     {
-      name: 'Getting started',
+      name: 'my orders',
       subs: [
         {
-          name: 'Designers',
-          value: '/documentation/designers'
+          name: 'Assigned',
+          value: '/documentation/designers',
+          icon: 'assignment_turned_in'
         },
         {
-          name: 'Developers',
-          value: '/documentation/developers'
+          name: 'Held Back',
+          value: '/documentation/developers',
+          icon: 'inbox'
+        },
+        {
+          name: 'Confirmed',
+          value: '/documentation/developers',
+          icon: 'confirmation_number'
         }
       ]
     },
     {
-      name: 'Form Controls',
+      name: 'held back',
       subs: [
         {
-          name: 'Sidenav',
-          value: '/documentation/sidenav'
+          name: 'All',
+          value: '/documentation/designers',
+          icon: 'folder'
         },
         {
-          name: 'Checkbox',
-          value: '/documentation/checkbox'
-        },
-        {
-          name: 'Datepicker',
-          value: '/documentation/datepicker'
-        },
-        {
-          name: 'Form Field',
-          value: '/documentation/formfield'
-        },
-        {
-          name: 'Radio Buttons',
-          value: '/documentation/radio'
-        },
-        {
-          name: 'Select',
-          value: '/documentation/select'
-        },
-        {
-          name: 'Slider',
-          value: '/documentation/slider'
-        },
-        {
-          name: 'Slide Toggle',
-          value: '/documentation/slidetoggle'
+          name: 'PO Nodtes',
+          value: '/documentation/developers',
+          icon: 'payment'
         }
       ]
     }

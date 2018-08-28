@@ -1,1 +1,16 @@
-<viz-sidenav [navList]="navList"></viz-sidenav>
+<div class="example-wrapper">
+  <div class="viz-sidenav viz-elevation-z4">
+    <div class="viz-sidenav-header">
+      Activity Overview
+    </div>
+    <div class="viz-sidenav-group" *ngFor="let nav of navList; let i=index">
+      <div class="viz-sidenav-group-header">
+        {{nav.name}}
+      </div>
+      <div class="viz-sidenav-group-item" *ngFor="let subNav of nav.subs; let i=index">
+        <mat-icon class="example-icon">{{subNav.icon}}</mat-icon>
+        {{subNav.name}}
+      </div>
+    </div>
+  </div>
+</div>

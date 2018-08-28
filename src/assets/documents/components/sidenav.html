@@ -12,7 +12,8 @@
     Sidenav
   </div>
   <div class="doc-desc-1">
-    The sidenav components are designed to add collapsible side content that are anchored to the left or right edge of the screen.</div>
+    The sidenav components are designed to provide access to destinations in your app. They can either be permanently on-screen
+    or controlled by a navigation menu icon.</div>
   <div class="doc-divider">
   </div>
   <div class="doc-title-2">
@@ -66,10 +67,11 @@
   <div class="doc-desc-2">
     Sidenav should:
     <ul class="doc-list">
-      <li>Supporting: Sidenavs contain content that supplements the screen’s primary UI region</li>
-      <li>Flexible: Sidenavs display a wide variety of content and layouts.</li>
-      <li>Contextual: Sidenavs can be visible or hidden based on screen size or user need, and they often become bottom sheets
-        on mobile.</li>
+      <li>The placement and list-style content of navigation drawers clearly identify them as navigation.</li>
+      <li>Sidenavs order destinations according to user importance, with frequent destinations first and related ones grouped
+        together.
+      </li>
+      <li>Contextual: Sidenavs can be visible or hidden based on screen size or user need, and accommodate different app layouts.</li>
     </ul>
   </div>
 
@@ -85,19 +87,30 @@
   </div>
 
   <div class="doc-desc-2">
-    A visible scrim informs users they cannot interact with the rest of the screen. Don’t use an invisible scrim can mislead
-    users about their ability to interact with the rest of the screen.
+    Use full-width dividers to separate groups of destinations. Don’t use dividers to separate individual destinations.
   </div>
 
   <div style="margin-bottom:24px">
     <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:500px">
-      <img src="assets/img/doc/sidenav-do.png" alt="">
+      <img src="assets/img/doc/sidenav-divide-do.png" alt="">
     </div>
     <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:500px">
-      <img src="assets/img/doc/sidenav-dont.png" alt="">
+      <img src="assets/img/doc/sidenav-divide-dont.png" alt="">
     </div>
   </div>
 
+  <div class="doc-desc-2">
+    Don’t apply icons to some destinations and not others. Icons should be used for all destinations, or none.
+  </div>
+
+  <div style="margin-bottom:24px">
+    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:500px">
+      <img src="assets/img/doc/sidenav-icon-do.png" alt="">
+    </div>
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:500px">
+      <img src="assets/img/doc/sidenav-icon-dont.png" alt="">
+    </div>
+  </div>
 
   <div class="doc-title-2">
     Design specs

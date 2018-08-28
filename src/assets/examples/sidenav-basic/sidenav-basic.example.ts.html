@@ -8,52 +8,37 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavBasicComponent <span class="hljs-keyword">implements</span> OnInit {
   navList = [
     {
-      name: <span class="hljs-string">'Getting started'</span>,
+      name: <span class="hljs-string">'my orders'</span>,
       subs: [
         {
-          name: <span class="hljs-string">'Designers'</span>,
-          value: <span class="hljs-string">'/documentation/designers'</span>
+          name: <span class="hljs-string">'Assigned'</span>,
+          value: <span class="hljs-string">'/documentation/designers'</span>,
+          icon: <span class="hljs-string">'assignment_turned_in'</span>
         },
         {
-          name: <span class="hljs-string">'Developers'</span>,
-          value: <span class="hljs-string">'/documentation/developers'</span>
+          name: <span class="hljs-string">'Held Back'</span>,
+          value: <span class="hljs-string">'/documentation/developers'</span>,
+          icon: <span class="hljs-string">'inbox'</span>
+        },
+        {
+          name: <span class="hljs-string">'Confirmed'</span>,
+          value: <span class="hljs-string">'/documentation/developers'</span>,
+          icon: <span class="hljs-string">'confirmation_number'</span>
         }
       ]
     },
     {
-      name: <span class="hljs-string">'Form Controls'</span>,
+      name: <span class="hljs-string">'held back'</span>,
       subs: [
         {
-          name: <span class="hljs-string">'Sidenav'</span>,
-          value: <span class="hljs-string">'/documentation/sidenav'</span>
+          name: <span class="hljs-string">'All'</span>,
+          value: <span class="hljs-string">'/documentation/designers'</span>,
+          icon: <span class="hljs-string">'folder'</span>
         },
         {
-          name: <span class="hljs-string">'Checkbox'</span>,
-          value: <span class="hljs-string">'/documentation/checkbox'</span>
-        },
-        {
-          name: <span class="hljs-string">'Datepicker'</span>,
-          value: <span class="hljs-string">'/documentation/datepicker'</span>
-        },
-        {
-          name: <span class="hljs-string">'Form Field'</span>,
-          value: <span class="hljs-string">'/documentation/formfield'</span>
-        },
-        {
-          name: <span class="hljs-string">'Radio Buttons'</span>,
-          value: <span class="hljs-string">'/documentation/radio'</span>
-        },
-        {
-          name: <span class="hljs-string">'Select'</span>,
-          value: <span class="hljs-string">'/documentation/select'</span>
-        },
-        {
-          name: <span class="hljs-string">'Slider'</span>,
-          value: <span class="hljs-string">'/documentation/slider'</span>
-        },
-        {
-          name: <span class="hljs-string">'Slide Toggle'</span>,
-          value: <span class="hljs-string">'/documentation/slidetoggle'</span>
+          name: <span class="hljs-string">'PO Nodtes'</span>,
+          value: <span class="hljs-string">'/documentation/developers'</span>,
+          icon: <span class="hljs-string">'payment'</span>
         }
       ]
     }
