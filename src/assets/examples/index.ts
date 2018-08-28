@@ -48,6 +48,7 @@ import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-foot
 import { LoginBasicComponent, LoginBasicData} from './login-basic/login-basic.component'
 import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-datepicker';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
   'search-basic' : {
@@ -276,6 +277,7 @@ export const ALL_EXAMPLE_ITEMS = {
     LoginBasicComponent,
   ],
   imports: [
+    RouterModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
