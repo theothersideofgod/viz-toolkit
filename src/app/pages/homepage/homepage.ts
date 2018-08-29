@@ -26,9 +26,10 @@ export class HomepageComponent implements OnInit, AfterContentInit {
     window[`__svgFunc`]();
   }
 
-  clickGetStart() {
-    this._route.navigate(['/documentation/developers'])
+  routeTo(route) {
+    this._route.navigate([route])
   }
+  
 
 }
 

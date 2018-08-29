@@ -1,6 +1,7 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 export interface Section {
   name: string;
@@ -19,31 +20,38 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'checkbox',
-          desc: 'All state of checkbox'
+          desc: 'All state of checkbox',
+          route: 'checkbox'
         },
         {
           title: 'datepicker',
-          desc: 'Pick a date or date range from the calendar'
+          desc: 'Pick a date or date range from the calendar',
+          route: 'datepicker'
         },
         {
           title: 'form field',
-          desc: 'All form field states & validation'
+          desc: 'All form field states & validation',
+          route: 'formfield'
         },
         {
           title: 'radio button',
-          desc: 'All states of radio button'
+          desc: 'All states of radio button',
+          route: 'radio'
         },
         {
           title: 'select',
-          desc: 'Dropdown & Selection'
+          desc: 'Dropdown & Selection',
+          route: 'select'
         },
         {
           title: 'slider',
-          desc: 'Selection of a value from a range'
+          desc: 'Selection of a value from a range',
+          route: 'slider'
         },
         {
           title: 'slide toggle',
-          desc: 'An on/off control'
+          desc: 'An on/off control',
+          route: 'slidetoggle'
         }
       ]
     },
@@ -52,19 +60,28 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'menu',
-          desc: 'Floating panel containing list of options'
+          desc: 'Floating panel containing list of options',
+          route: 'menu'
         },
         {
           title: 'sidenav',
-          desc: 'Add side content to a fullscreen app'
+          desc: 'Add side content to a fullscreen app',
+          route: 'sidenav'
         },
         {
           title: 'toolbar',
-          desc: 'Container for headers, titles, or actions'
+          desc: 'Container for headers, titles, or actions',
+          route: 'toolbar'
         },
         {
           title: 'header & footer',
-          desc: 'Global header & footer'
+          desc: 'Global header',
+          route: 'header'
+        },
+        {
+          title: 'header & footer',
+          desc: 'Global footer',
+          route: 'footer'
         }
       ]
     },
@@ -73,24 +90,29 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'card',
-          desc: 'A content container for different types of contents'
+          desc: 'A content container for different types of contents',
+          route: 'card'
         },
         {
           title: 'expansion panel',
-          desc: 'An expandable details-summary view'
+          desc: 'An expandable details-summary view',
+          route: 'expansionpanel'
         },
         {
           title: 'list',
           desc:
-            'Conainer compoennt that wraps and formats a series of line items'
+            'Conainer compoennt that wraps and formats a series of line items',
+          route: 'list'
         },
         {
           title: 'tabs',
-          desc: 'Organize content into separate views'
+          desc: 'Organize content into separate views',
+          route: 'tabs'
         },
         {
           title: 'tree',
-          desc: 'Styled tree that can be used to display hierachy data'
+          desc: 'Styled tree that can be used to display hierachy data',
+          route: 'tree'
         }
       ]
     },
@@ -99,27 +121,34 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'button',
-          desc: 'All states of button'
+          desc: 'All states of button',
+          route: 'button'
         },
         {
           title: 'badge',
-          desc: 'Small status descriptors'
+          desc: 'Small status descriptors',
+          route: 'badge'
         },
         {
           title: 'chip',
-          desc: 'A list of values as individual'
+          desc: 'A list of values as individual',
+          route: 'chip'
         },
         {
           title: 'icon',
-          desc: 'Icon usage'
+          desc: 'Icon usage',
+          route: 'icon'
         },
         {
           title: 'progress spinner',
-          desc: 'A circular indicators of progress and activity'
+          desc: 'A circular indicators of progress and activity',
+          route: 'progressspinner'
         },
         {
           title: 'progress bar',
-          desc: 'A horizontal progress-bar for indicating progress and activity'
+          desc:
+            'A horizontal progress-bar for indicating progress and activity',
+          route: 'progressbar'
         }
       ]
     },
@@ -128,16 +157,23 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'dialog',
-          desc: 'Modal dialogs'
+          desc: 'Modal dialogs',
+          route: 'dialog'
         },
-        { title: 'snackbar', desc: 'Snack-bar notification' },
+        {
+          title: 'snackbar',
+          desc: 'Snack-bar notification',
+          route: 'snackbar'
+        },
         {
           title: 'tooltip',
-          desc: 'Provides a text label that is displayed by hover interaction'
+          desc: 'Provides a text label that is displayed by hover interaction',
+          route: 'tooltip'
         },
         {
           title: 'login',
-          desc: 'Login modal'
+          desc: 'Login modal',
+          route: 'login'
         }
       ]
     },
@@ -146,16 +182,23 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'paginator',
-          desc: 'Providers navigation for paged information'
+          desc: 'Providers navigation for paged information',
+          route: 'paginator'
         },
         {
           title: 'table',
-          desc: 'Styled data-table taht can be used to display rows of data'
+          desc: 'Styled data-table taht can be used to display rows of data',
+          route: 'table'
         },
-        { title: 'no data', desc: 'Help the user know when there is no data' },
+        {
+          title: 'no data',
+          desc: 'Help the user know when there is no data',
+          route: 'nodata'
+        },
         {
           title: 'feedback indicator',
-          desc: 'Inform user about important changes or persistent conditions'
+          desc: 'Inform user about important changes or persistent conditions',
+          route: 'feedbackindicator'
         }
       ]
     },
@@ -169,9 +212,13 @@ export class ComponentsComponent implements OnInit {
     }
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
+
+  routeTo(route) {
+    this.router.navigate([`/documentation/${route}`]);
+  }
 }
 
 @NgModule({

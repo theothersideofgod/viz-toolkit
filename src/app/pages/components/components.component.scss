@@ -59,6 +59,9 @@
         font-weight: 300;
       }
     }
+    &-title-link {
+      cursor: pointer;
+    }
     &-class {
       width: calc((100% - 18.6111vw) / 3);
     }
