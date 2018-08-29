@@ -2,6 +2,12 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { BenchmarkChartBasicComponent, BenchmarkChartBasicData } from './benchmark-chart-basic/benchmark-chart-basic.component';
+import { ComparativeChartBasicComponent, ComparativeChartBasicData } from './comparative-chart-basic/comparative-chart-basic.component';
+import { DotPlotChartBasicComponent, DotPlotChartBasicData } from './dot-plot-chart-basic/dot-plot-chart-basic.component';
+import { ProgressBarChartBasicComponent, ProgressBarChartBasicData } from './progress-bar-chart-basic/progress-bar-chart-basic.component';
+import { BarChartBasicComponent, BarChartBasicData } from './bar-chart-basic/bar-chart-basic.component';
+import { LineChartBasicComponent, LineChartBasicData } from './line-chart-basic/line-chart-basic.component';
 import { SearchBasicComponent, SearchBasicData } from './search-basic/search-basic.component';
 import { BreadscrumbBasicComponent, BreadscrumbBasicData } from './breadscrumb-basic/breadscrumb-basic.component';
 import { BottomsheetBasicComponent, BottomsheetBasicData } from './bottomsheet-basic/bottomsheet-basic.component';
@@ -51,6 +57,30 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'benchmark-chart-basic' : {
+    component: BenchmarkChartBasicComponent,
+    data: BenchmarkChartBasicData
+  },
+  'comparative-chart-basic' : {
+    component: ComparativeChartBasicComponent,
+    data: ComparativeChartBasicData
+  },
+  'dot-plot-chart-basic' : {
+    component: DotPlotChartBasicComponent,
+    data: DotPlotChartBasicData
+  },
+  'progress-bar-chart-basic' : {
+    component: ProgressBarChartBasicComponent,
+    data: ProgressBarChartBasicData
+  },
+  'bar-chart-basic' : {
+    component: BarChartBasicComponent,
+    data: BarChartBasicData
+  },
+  'line-chart-basic' : {
+    component: LineChartBasicComponent,
+    data: LineChartBasicData
+  },
   'search-basic' : {
     component: SearchBasicComponent,
     data: SearchBasicData
@@ -230,6 +260,13 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    BenchmarkChartBasicComponent,
+    ComparativeChartBasicComponent,
+    DotPlotChartBasicComponent,
+    ProgressBarChartBasicComponent,
+    ProgressBarBasicComponent,
+    BarChartBasicComponent,
+    LineChartBasicComponent,
     SearchBasicComponent,
     BreadscrumbBasicComponent,
     BottomsheetBasicComponent,
@@ -287,6 +324,13 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    BenchmarkChartBasicComponent,
+    ComparativeChartBasicComponent,
+    DotPlotChartBasicComponent,
+    ProgressBarChartBasicComponent,
+    ProgressBarBasicComponent,
+    BarChartBasicComponent,
+    LineChartBasicComponent,
     SearchBasicComponent,
     BreadscrumbBasicComponent,
     BottomsheetBasicComponent,

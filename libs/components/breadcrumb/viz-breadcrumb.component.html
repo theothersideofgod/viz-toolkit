@@ -1,20 +1,8 @@
-<div class="viz-breadcrumb-page">
-  <span class="viz-breadcrumb-frompage" (click)="goto()">
-    <input type="text" [value]="value" (keyup)="onKeyUp($event)" />
-    
-    {{value}}
-    </span>
-  <mat-icon>keyboard_arrow_right</mat-icon>
-  <span class="viz-breadcrumb-topage">
+<div class="path-list">
+  <ng-container *ngFor="let bc of breadCrumbList; let index = index;">
+    <span class="path-link" *ngIf="!!bc.clickable" [routerLink]="bc.url">{{bc.label}}</span>
+    <span class="path-normal" *ngIf="!bc.clickable">{{bc.label}}</span>
 
-  </span>
-</div>
-<div class="viz-breadcrumb-item">
-  <span class="viz-breadcrumb-item">
-
-  </span>
-  <mat-icon>keyboard_arrow_right</mat-icon>
-  <span class="viz-breadcrumb-subitem">
-
-  </span>
+    <mat-icon class="navigate_next font-size-14" *ngIf="index < breadCrumbList.length - 1">navigate_next</mat-icon>
+  </ng-container>
 </div>

@@ -1,0 +1,94 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'bar-chart-basic'</span>,
+  templateUrl: <span class="hljs-string">'bar-chart-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'bar-chart-basic.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BarChartBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  chartOption = {
+    chart: {
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'column'</span>
+    },
+    colors: [
+      <span class="hljs-string">'#9966FF'</span>,
+      <span class="hljs-string">'#00CC99'</span>,
+      <span class="hljs-string">'#FF9933'</span>,
+      <span class="hljs-string">'#3399FF'</span>,
+      <span class="hljs-string">'#99CC33'</span>,
+      <span class="hljs-string">'#FF6699'</span>,
+      <span class="hljs-string">'#FFFF33'</span>,
+      <span class="hljs-string">'#FF3333'</span>
+    ],
+    title: {
+      text: <span class="hljs-string">'Bar Chart'</span>
+    },
+
+    <span class="hljs-comment">// subtitle: {</span>
+    <span class="hljs-comment">//   text: 'Source: thesolarfoundation.com'</span>
+    <span class="hljs-comment">// },</span>
+
+    yAxis: {
+      title: {
+        text: <span class="hljs-string">'Y-Axis label'</span>
+      }
+    },
+    xAxis: {
+      title: {
+        text: <span class="hljs-string">'X-Axis label'</span>
+      },
+      categories: [
+        <span class="hljs-string">'value1'</span>,
+        <span class="hljs-string">'value2'</span>,
+        <span class="hljs-string">'value3'</span>,
+        <span class="hljs-string">'value4'</span>,
+        <span class="hljs-string">'value5'</span>,
+        <span class="hljs-string">'value6'</span>,
+        <span class="hljs-string">'value7'</span>,
+        <span class="hljs-string">'value8'</span>
+      ]
+    },
+    legend: {
+      layout: <span class="hljs-string">'vertical'</span>,
+      align: <span class="hljs-string">'right'</span>,
+      verticalAlign: <span class="hljs-string">'middle'</span>,
+      enabled: <span class="hljs-literal">false</span>
+    },
+
+    plotOptions: {
+      series: {
+        label: {
+          connectorAllowed: <span class="hljs-literal">false</span>
+        }
+      }
+    },
+
+    series: [
+      {
+        data: [<span class="hljs-number">46.3</span>, <span class="hljs-number">34.0</span>, <span class="hljs-number">20.4</span>, <span class="hljs-number">8.8</span>, <span class="hljs-number">42.2</span>, <span class="hljs-number">18.8</span>, <span class="hljs-number">33.5</span>, <span class="hljs-number">15.2</span>]
+      }
+    ],
+
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: <span class="hljs-number">500</span>
+          },
+          chartOptions: {
+            legend: {
+              layout: <span class="hljs-string">'horizontal'</span>,
+              align: <span class="hljs-string">'center'</span>,
+              verticalAlign: <span class="hljs-string">'bottom'</span>
+            }
+          }
+        }
+      ]
+    }
+  };
+
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> BarChartBasicData = {
+  name: <span class="hljs-string">'BarChartBasic'</span>
+};

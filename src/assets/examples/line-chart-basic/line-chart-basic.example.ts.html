@@ -1,0 +1,102 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'line-chart-basic'</span>,
+  templateUrl: <span class="hljs-string">'line-chart-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'line-chart-basic.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> LineChartBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  chartOption = {
+    colors: [
+      <span class="hljs-string">'#00CC99'</span>,
+      <span class="hljs-string">'#9966FF'</span>,
+      <span class="hljs-string">'#FF9933'</span>,
+      <span class="hljs-string">'#3399FF'</span>,
+      <span class="hljs-string">'#99CC33'</span>,
+      <span class="hljs-string">'#FF6699'</span>,
+      <span class="hljs-string">'#FFFF33'</span>,
+      <span class="hljs-string">'#FF3333'</span>
+    ],
+    title: {
+      text: <span class="hljs-string">'Line Chart Label'</span>
+    },
+
+    <span class="hljs-comment">// subtitle: {</span>
+    <span class="hljs-comment">//   text: 'Source: thesolarfoundation.com'</span>
+    <span class="hljs-comment">// },</span>
+
+    yAxis: {
+      title: {
+        text: <span class="hljs-string">'Y-Axis label'</span>
+      }
+    },
+    xAxis: {
+      title: {
+        text: <span class="hljs-string">'X-Axis label'</span>
+      },
+      categories: [
+        <span class="hljs-string">'Jan'</span>,
+        <span class="hljs-string">'Feb'</span>,
+        <span class="hljs-string">'Mar'</span>,
+        <span class="hljs-string">'Apr'</span>,
+        <span class="hljs-string">'May'</span>,
+        <span class="hljs-string">'Jun'</span>,
+        <span class="hljs-string">'Jul'</span>,
+        <span class="hljs-string">'Aug'</span>,
+        <span class="hljs-string">'Sep'</span>,
+        <span class="hljs-string">'Oct'</span>,
+        <span class="hljs-string">'Nov'</span>,
+        <span class="hljs-string">'Dec'</span>
+      ]
+    },
+    legend: {
+      layout: <span class="hljs-string">'vertical'</span>,
+      align: <span class="hljs-string">'right'</span>,
+      verticalAlign: <span class="hljs-string">'middle'</span>
+    },
+
+    plotOptions: {
+      series: {
+        label: {
+          connectorAllowed: <span class="hljs-literal">false</span>
+        }
+      }
+    },
+
+    series: [
+      {
+        name: <span class="hljs-string">'value1'</span>,
+        data: [<span class="hljs-number">43934</span>, <span class="hljs-number">52503</span>, <span class="hljs-number">57177</span>, <span class="hljs-number">69658</span>, <span class="hljs-number">97031</span>, <span class="hljs-number">119931</span>, <span class="hljs-number">137133</span>, <span class="hljs-number">154175</span>]
+      },
+      {
+        name: <span class="hljs-string">'valu2'</span>,
+        data: [<span class="hljs-number">24916</span>, <span class="hljs-number">24064</span>, <span class="hljs-number">29742</span>, <span class="hljs-number">29851</span>, <span class="hljs-number">32490</span>, <span class="hljs-number">30282</span>, <span class="hljs-number">38121</span>, <span class="hljs-number">40434</span>]
+      },
+      {
+        name: <span class="hljs-string">'value3'</span>,
+        data: [<span class="hljs-number">11744</span>, <span class="hljs-number">17722</span>, <span class="hljs-number">16005</span>, <span class="hljs-number">19771</span>, <span class="hljs-number">20185</span>, <span class="hljs-number">24377</span>, <span class="hljs-number">32147</span>, <span class="hljs-number">39387</span>]
+      }
+    ],
+
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: <span class="hljs-number">500</span>
+          },
+          chartOptions: {
+            legend: {
+              layout: <span class="hljs-string">'horizontal'</span>,
+              align: <span class="hljs-string">'center'</span>,
+              verticalAlign: <span class="hljs-string">'bottom'</span>
+            }
+          }
+        }
+      ]
+    }
+  };
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> LineChartBasicData = {
+  name: <span class="hljs-string">'LineChartBasic'</span>
+};

@@ -1,24 +1,17 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Input } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, ActivatedRoute, NavigationEnd, Params } from '@angular/router';
+import { Observable, Subject } from 'rxjs';
+import { filter, distinctUntilChanged, map, takeUntil } from 'rxjs/operators';
+import * as _ from 'lodash';
 @Component({
   selector: 'viz-breadcrumb',
   templateUrl: './viz-breadcrumb.component.html',
-  styleUrls: ['./viz-breadcrumb.component.css']
+  styleUrls: ['./viz-breadcrumb.component.scss']
 })
-export class VizBreadcrumbComponent implements OnInit,AfterViewInit {
-  constructor(private _router: Router, private _activeRoute: ActivatedRoute) {}
+export class VizBreadcrumbComponent implements OnInit, OnDestroy {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {}
 
-  
-
-  ngAfterViewInit() {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-      console.log(this._activeRoute.root)
-  }
-
-  
+  ngOnDestroy() {}
 }

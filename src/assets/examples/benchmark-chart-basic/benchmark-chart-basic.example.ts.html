@@ -1,0 +1,82 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'benchmark-chart-basic'</span>,
+  templateUrl: <span class="hljs-string">'benchmark-chart-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'benchmark-chart-basic.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BenchmarkChartBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  chartOption = {
+    colors: [
+      <span class="hljs-string">'#00CC99'</span>,
+      <span class="hljs-string">'#9966FF'</span>,
+      <span class="hljs-string">'#FF9933'</span>,
+      <span class="hljs-string">'#3399FF'</span>,
+      <span class="hljs-string">'#99CC33'</span>,
+      <span class="hljs-string">'#FF6699'</span>,
+      <span class="hljs-string">'#FFFF33'</span>,
+      <span class="hljs-string">'#FF3333'</span>
+    ],
+    chart: {
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'column'</span>
+    },
+    title: {
+      text: <span class="hljs-string">'Benchmark Chart'</span>
+    },
+    <span class="hljs-comment">// subtitle: {</span>
+    <span class="hljs-comment">//   text: 'Source: WorldClimate.com'</span>
+    <span class="hljs-comment">// },</span>
+    xAxis: {
+      categories: [<span class="hljs-string">'Q1'</span>, <span class="hljs-string">'Q2'</span>, <span class="hljs-string">'Q3'</span>, <span class="hljs-string">'Q4'</span>, <span class="hljs-string">''</span>],
+      crosshair: <span class="hljs-literal">true</span>
+    },
+    yAxis: {
+      min: <span class="hljs-number">0</span>,
+      title: {
+        text: <span class="hljs-string">'values'</span>
+      },
+      plotLines: [
+        {
+          value: <span class="hljs-number">75</span>,
+          color: <span class="hljs-string">'black'</span>,
+          dashStyle: <span class="hljs-string">'solid'</span>,
+          width: <span class="hljs-number">2</span>
+        }
+      ]
+    },
+    tooltip: {
+      headerFormat: <span class="hljs-string">'&lt;span style="font-size:10px"&gt;{point.key}&lt;/span&gt;&lt;table&gt;'</span>,
+      pointFormat:
+        <span class="hljs-string">'&lt;tr&gt;&lt;td style="color:{series.color};padding:0"&gt;{series.name}: &lt;/td&gt;'</span> +
+        <span class="hljs-string">'&lt;td style="padding:0"&gt;&lt;b&gt;{point.y:.1f} mm&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;'</span>,
+      footerFormat: <span class="hljs-string">'&lt;/table&gt;'</span>,
+      shared: <span class="hljs-literal">true</span>,
+      useHTML: <span class="hljs-literal">true</span>
+    },
+    plotOptions: {
+      column: {
+        pointPadding: <span class="hljs-number">0.2</span>,
+        borderWidth: <span class="hljs-number">0</span>
+      }
+    },
+    series: [
+      {
+        name: <span class="hljs-string">'Marketing'</span>,
+        data: [<span class="hljs-number">49.9</span>, <span class="hljs-number">71.5</span>, <span class="hljs-number">106.4</span>, <span class="hljs-number">129.2</span>, <span class="hljs-number">144.0</span>]
+      },
+      {
+        name: <span class="hljs-string">'Research'</span>,
+        data: [<span class="hljs-number">83.6</span>, <span class="hljs-number">78.8</span>, <span class="hljs-number">98.5</span>, <span class="hljs-number">93.4</span>, <span class="hljs-number">106.0</span>]
+      },
+      {
+        name: <span class="hljs-string">'support'</span>,
+        data: [<span class="hljs-number">48.9</span>, <span class="hljs-number">38.8</span>, <span class="hljs-number">39.3</span>, <span class="hljs-number">41.4</span>, <span class="hljs-number">47.0</span>]
+      }
+    ]
+  };
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> BenchmarkChartBasicData = {
+  name: <span class="hljs-string">'BenchmarkChartBasic'</span>
+};

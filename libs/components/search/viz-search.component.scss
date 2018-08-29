@@ -1,36 +1,61 @@
 :host {
-  .viz-search {
-    &-type {
-      display: flex;
+  // .viz-search {
+  //   &-type {
+  //     display: flex;
+  //   }
+  //   &-type-name {
+  //     line-height: 24px;
+  //     color: #000000;
+  //   }
+  //   &-type-drop-icon {
+  //     .mat-icon {
+  //       color: #9f9f9f;
+  //       font-size: 1.5em;
+  //       margin-top: 0px
+  //     }
+  //   }
+  //   &-type-search-icon {
+  //     .mat-icon {
+  //       color: #9f9f9f;
+  //     }
+  //   }
+  //   &-type-option {
+  //   }
+  //   &.mat-focused {
+  //     .mat-icon {
+  //       color: #000000;
+  //     }
+  //   }
+  //   ::ng-deep {
+  //     .mat-form-field-prefix {
+  //       border-right: 1px solid #c3c3c3;
+  //       padding-right: 8px;
+  //       margin-right: 16px;
+  //     }
+  //   }
+  // }
+  ::ng-deep {
+    .mat-form-field .mat-form-field-flex {
+      align-items: baseline !important;
     }
-    &-type-name {
-      line-height: 24px;
+    .mat-form-field-prefix {
       color: #000000;
-    }
-    &-type-drop-icon {
-      .mat-icon {
+      border-right: 1px solid #c3c3c3;
+      padding-right: 8px;
+      margin-right: 16px;
+
+      .mat-icon-button {
         color: #9f9f9f;
-        font-size: 1.5em;
+        .mat-icon {
+          font-size: 24px !important;
+        }
       }
     }
-    &-type-search-icon {
-      .mat-icon {
-        color: #9f9f9f;
-      }
-    }
-    &-type-option {
-    }
-    &.mat-focused {
-      .mat-icon {
-        color: #000000;
-      }
-    }
-    ::ng-deep {
-      .mat-form-field-prefix {
-        border-right: 1px solid #c3c3c3;
-        padding-right: 8px;
-        margin-right: 16px;
-      }
+  }
+
+  .viz-search {
+    .mat-icon {
+      margin-top: 0px;
     }
   }
 }
