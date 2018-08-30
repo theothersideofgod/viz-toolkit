@@ -26,6 +26,7 @@
     "@angular/cdk": "^6.3.1",
     "@angular/material": "^6.3.1",
     "@angular/router": ">=6.0.2",
-    "mat-range-datepicker": "~1.0.5"
+    "mat-range-datepicker": "~1.0.5",
+    "rxjs": "^6.2.2"
   }
 }

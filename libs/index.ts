@@ -28,5 +28,4 @@ export * from './components/steppers/viz-steppers.module';
 export * from './components/bottom-sheet/viz-bottom-sheet.module';
 export * from './components/breadcrumb/viz-breadcrumb.module';
 export * from './components/search/viz-search.module';
-export * from './components/line-chart/viz-line-chart.module';
 export * from './components/chart/viz-chart.module';
