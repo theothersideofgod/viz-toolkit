@@ -603,6 +603,11 @@ td.mat-cell,
   }
 }
 
+//toolbar
+.mat-toolbar.mat-toolbar-single-row {
+  padding: 0px 24px;
+}
+
 //side nav
 .viz-sidenav {
   width: 300px;
