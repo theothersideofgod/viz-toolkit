@@ -284,6 +284,17 @@ td.mat-cell,
         font-weight: 300;
         font-size: 14px;
       }
+      .mat-ripple-element {
+        background-color: rgba(127, 94, 186, 0.16);
+      }
+    }
+  }
+  .mat-list-option {
+    &:hover {
+      background-color: rgba(127, 94, 186, 0.04);
+    }
+    &.mat-list-item-focus {
+      background-color: rgba(127, 94, 186, 0.12);
     }
   }
 }
@@ -669,20 +680,20 @@ td.mat-cell,
       background-color: rgba(127, 94, 186, 0.08);
       border-radius: 2px;
       & mat-icon {
-        color: #7f5eba
+        color: #7f5eba;
       }
       & .viz-sidenav-group-item-icon-close {
         display: block !important;
       }
     }
-    
+
     &.active {
       color: #7f5eba;
       background-color: rgba(127, 94, 186, 0.08);
       border-radius: 2px;
 
       .mat-icon {
-        color: #7f5eba
+        color: #7f5eba;
       }
     }
   }
