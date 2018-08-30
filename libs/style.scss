@@ -622,7 +622,7 @@ td.mat-cell,
     border-bottom: 1px solid #f1f1f1;
   }
   &-group {
-    padding: 24px;
+    padding: 24px 0px;
     border-bottom: 1px solid #f1f1f1;
   }
   &-group-header {
@@ -635,8 +635,11 @@ td.mat-cell,
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 8px;
+    margin-left: 24px;
   }
   &-group-item {
+    margin: 4px 8px;
+    padding: 0px 16px;
     display: flex;
     align-items: center;
     height: 48px;
@@ -647,7 +650,40 @@ td.mat-cell,
     line-height: 48px;
     outline: none;
     cursor: pointer;
-    /* ▶︎ CONTENT Copy: */
+    position: relative;
+
+    &-icon {
+      color: #c3c3c3;
+      margin-right: 16px;
+    }
+
+    &-icon-close {
+      position: absolute;
+      right: 16px;
+      display: none !important;
+    }
+
+    &:hover {
+      color: #7f5eba;
+      background-color: rgba(127, 94, 186, 0.08);
+      border-radius: 2px;
+      & mat-icon {
+        color: #7f5eba
+      }
+      & .viz-sidenav-group-item-icon-close {
+        display: block !important;
+      }
+    }
+    
+    &.active {
+      color: #7f5eba;
+      background-color: rgba(127, 94, 186, 0.08);
+      border-radius: 2px;
+
+      .mat-icon {
+        color: #7f5eba
+      }
+    }
   }
 }
 

@@ -39,6 +39,11 @@ export class SidenavBasicComponent implements OnInit {
           name: 'PO Nodtes',
           value: '/documentation/developers',
           icon: 'payment'
+        },
+        {
+          name: 'Side Nav',
+          value: '/documentation/sidenav',
+          icon: 'warning'
         }
       ]
     }
