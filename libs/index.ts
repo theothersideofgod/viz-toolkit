@@ -8,9 +8,9 @@ export * from './components/button/viz-button.module';
 export * from './components/form-field/viz-form-field.module';
 export * from './components/tree/viz-tree.module';
 export * from './components/slider/viz-slider.module';
-export * from './components/expansion/expansion-module';
+// export * from './components/expansion/expansion-module';
 export * from './components/toolbar/viz-toolbar.module';
-// export * from './components/expansion'
+// export * from './components/expansion';
 export * from './components/icon/viz-icon.module';
 export * from './components/list/viz-list.module';
 export * from './components/chip/viz-chip.module';

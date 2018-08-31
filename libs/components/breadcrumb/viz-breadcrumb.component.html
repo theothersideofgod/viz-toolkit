@@ -1,7 +1,7 @@
 <div class="path-list">
-  <ng-container *ngFor="let bc of breadcrumbs; let index = index;">
+  <ng-container *ngFor="let bc of bcs; let index = index;">
     <span class="path-link" [routerLink]="bc.url">{{bc.label}}</span>
     <!-- <span class="path-normal" *ngIf="!bc.clickable">{{bc.label}}</span> -->
-    <mat-icon class="navigate_next font-size-14" *ngIf="index < breadcrumbs.length - 1">navigate_next</mat-icon>
+    <mat-icon class="navigate_next font-size-14" *ngIf="index < bcs.length - 1">navigate_next</mat-icon>
   </ng-container>
 </div>

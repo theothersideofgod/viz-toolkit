@@ -5,7 +5,6 @@ import {
   ContentChild,
   AfterViewInit,
   AfterContentInit,
-  ElementRef,
   Input
 } from '@angular/core';
 import { VizTreeNodeDefDirective } from './viz-tree-node-def.directive';
