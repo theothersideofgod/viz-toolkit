@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center; 
     width: 448px;
-    height: 354px;
+    // height: 354px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
     .wrapper {
       display: inline-flex;
@@ -31,6 +31,7 @@
       color: #7f5eba;
       margin-top: 16px;
       display: block;
+      margin-bottom: 32px;
     }
   }
 }
