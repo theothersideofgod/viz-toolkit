@@ -1,3 +1,8 @@
+@mixin md-icon-size($size: 24px) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+}
 :host {
   .hideChildren {
     display: none;
@@ -6,11 +11,7 @@
     color: #696969;
     font-family: soleto;
     font-weight: 300;
-    @mixin md-icon-size($size: 24px) {
-      font-size: $size;
-      height: $size;
-      width: $size;
-    }
+   
     
     .mat-icon {
       @include md-icon-size(24px);
@@ -21,6 +22,15 @@
     display: flex;
     align-items: center;
     // margin-bottom: 10px;
+    ::ng-deep {
+      &.mat-icon {
+        @include md-icon-size(24px);
+        color: #9f9f9f;
+      }
+      &.mat-checkbox-frame {
+        border-color: #9f9f9f;
+      }
+    }
   }
   .viz-tree-cell-child {
     margin-left: 24px;
