@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class FormFieldBasicComponent implements OnInit {
-	value="All Members"
+	
 	ngOnInit() { }
 }
 
