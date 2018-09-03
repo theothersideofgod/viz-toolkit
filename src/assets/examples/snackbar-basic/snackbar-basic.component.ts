@@ -14,8 +14,8 @@ export class SnackbarBasicComponent implements OnInit {
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(this.message, this.action, {
-      panelClass: 'vizient-snackbar',
-      duration: 30000,
+      panelClass: 'viz-snackbar-desktop',
+      duration: 300000,
       viewContainerRef: this.snackbarBasic
     });
   }

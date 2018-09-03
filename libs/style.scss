@@ -315,7 +315,18 @@ td.mat-cell,
     margin-top: 16px;
   }
 }
-
+.viz-snackbar-mobile {
+  width: 343px !important;
+  .mat-simple-snackbar {
+    flex-direction: column;
+    .mat-simple-snackbar-action {
+      margin-left: auto;
+    }
+  }
+}
+.viz-snackbar-desktop {
+  width: 463px !important;
+}
 //radio button
 .mat-radio-label-content {
   font-size: 14px;
@@ -324,10 +335,9 @@ td.mat-cell,
 //tree style
 .mat-checkbox-label {
   font-size: 14px;
-  
 }
 .mat-checkbox-frame {
-  border-color: #9f9f9f !important
+  border-color: #9f9f9f !important;
 }
 //input font-size
 // body {
