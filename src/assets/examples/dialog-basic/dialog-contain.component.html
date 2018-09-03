@@ -13,8 +13,11 @@
 
 
     <div class="modal-checkbox-wrap">
-      <mat-checkbox class="modal-selectall">Select All</mat-checkbox>
 
+      <div class="modal-selectall">
+        <mat-checkbox class="modal-selectall">Select All</mat-checkbox>
+      </div>
+      
       <viz-tree [tree]="tree">
 
         <ng-container *VizTreeLeafDef="let node">

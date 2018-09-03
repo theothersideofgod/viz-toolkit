@@ -324,8 +324,11 @@ td.mat-cell,
 //tree style
 .mat-checkbox-label {
   font-size: 14px;
+  
 }
-
+.mat-checkbox-frame {
+  border-color: #9f9f9f !important
+}
 //input font-size
 // body {
 //   font-size: 14px;
@@ -422,6 +425,14 @@ td.mat-cell,
 }
 
 //badge
+.viz-text-badge {
+  display: inline-flex;
+  align-items: baseline;
+  span {
+    top: 0px !important;
+    right: -30px !important;
+  }
+}
 .mat-badge-content {
   width: max-content !important;
   border-radius: 12px !important;
