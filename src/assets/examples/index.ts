@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { FormFieldDisableComponent, FormFieldDisableData } from './form-field-disable/form-field-disable.component';
+import { FormFieldErrorComponent, FormFieldErrorData } from './form-field-error/form-field-error.component';
+import { FormFieldTextareaComponent, FormFieldTextareaData } from './form-field-textarea/form-field-textarea.component';
+import { FormFieldHintComponent, FormFieldHintData } from './form-field-hint/form-field-hint.component';
 import { CheckboxDisableComponent, CheckboxDisableData } from './checkbox-disable/checkbox-disable.component';
 import { CheckboxIndetermineComponent, CheckboxIndetermineData } from './checkbox-indetermine/checkbox-indetermine.component';
 import { BenchmarkChartBasicComponent, BenchmarkChartBasicData } from './benchmark-chart-basic/benchmark-chart-basic.component';
@@ -55,10 +59,26 @@ import { ProgressBarBasicComponent, ProgressBarBasicData } from './progress-bar-
 import { HeaderFooterBasicComponent, HeaderFooterBasicData } from './header-footer-basic/header-footer-basic.component'
 import { LoginBasicComponent, LoginBasicData} from './login-basic/login-basic.component'
 import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-datepicker';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'form-field-disable' : {
+    component: FormFieldDisableComponent,
+    data: FormFieldDisableData
+  },
+  'form-field-error' : {
+    component: FormFieldErrorComponent,
+    data: FormFieldErrorData
+  },
+  'form-field-textarea' : {
+    component: FormFieldTextareaComponent,
+    data: FormFieldTextareaData
+  },
+  'form-field-hint' : {
+    component: FormFieldHintComponent,
+    data: FormFieldHintData
+  },
   'checkbox-disable' : {
     component: CheckboxDisableComponent,
     data: CheckboxDisableData
@@ -270,6 +290,10 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    FormFieldDisableComponent,
+    FormFieldErrorComponent,
+    FormFieldTextareaComponent,
+    FormFieldHintComponent,
     CheckboxDisableComponent,
     CheckboxIndetermineComponent,
     BenchmarkChartBasicComponent,
@@ -330,12 +354,17 @@ export const ALL_EXAMPLE_ITEMS = {
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     MatRangeDatepickerModule,
     MatRangeNativeDateModule,
     ...(Object.keys(VizModules).map(i => VizModules[i])),
   ],
   providers: [],
   entryComponents: [
+    FormFieldDisableComponent,
+    FormFieldErrorComponent,
+    FormFieldTextareaComponent,
+    FormFieldHintComponent,
     CheckboxDisableComponent,
     CheckboxIndetermineComponent,
     BenchmarkChartBasicComponent,

@@ -356,9 +356,12 @@ td.mat-cell,
         color: #000000;
       }
     }
+    .mat-hint {
+      color: #7f5eba
+    }
   }
 
-  .mat-input-element {
+  input.mat-input-element {
     height: 24px;
     // padding: 5px 0px;
     line-height: 24px;
