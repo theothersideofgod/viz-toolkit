@@ -59,13 +59,14 @@ a {
   // padding-right: 44px;
 }
 .doc-desc-2-highlight-text {
-  color: #FF4E00
+  color: #ff4e00;
 }
 .doc-example-container {
   /* Rectangle 3: */
   background: #ffffff;
   // border: 1px solid #efefef;
   // height: 280px;
+  margin-bottom: 32px;
 }
 .doc-props-table {
   width: 100%;
@@ -252,7 +253,7 @@ a {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #000000
+  color: #000000;
 }
 .doc-code-sec {
   margin: 0 0 30px 0;
@@ -265,4 +266,13 @@ a {
   font-size: 16px;
   font-weight: 300;
   font-family: Soleto;
+}
+.docs-more-example {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7f5eba;
+  text-align: left;
+  line-height: 18px;
+  margin-left: 24px;
 }

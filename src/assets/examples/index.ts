@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { CheckboxDisableComponent, CheckboxDisableData } from './checkbox-disable/checkbox-disable.component';
+import { CheckboxIndetermineComponent, CheckboxIndetermineData } from './checkbox-indetermine/checkbox-indetermine.component';
 import { BenchmarkChartBasicComponent, BenchmarkChartBasicData } from './benchmark-chart-basic/benchmark-chart-basic.component';
 import { ComparativeChartBasicComponent, ComparativeChartBasicData } from './comparative-chart-basic/comparative-chart-basic.component';
 import { DotPlotChartBasicComponent, DotPlotChartBasicData } from './dot-plot-chart-basic/dot-plot-chart-basic.component';
@@ -57,6 +59,14 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'checkbox-disable' : {
+    component: CheckboxDisableComponent,
+    data: CheckboxDisableData
+  },
+  'checkbox-indetermine' : {
+    component: CheckboxIndetermineComponent,
+    data: CheckboxIndetermineData
+  },
   'benchmark-chart-basic' : {
     component: BenchmarkChartBasicComponent,
     data: BenchmarkChartBasicData
@@ -260,6 +270,8 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    CheckboxDisableComponent,
+    CheckboxIndetermineComponent,
     BenchmarkChartBasicComponent,
     ComparativeChartBasicComponent,
     DotPlotChartBasicComponent,
@@ -324,6 +336,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    CheckboxDisableComponent,
+    CheckboxIndetermineComponent,
     BenchmarkChartBasicComponent,
     ComparativeChartBasicComponent,
     DotPlotChartBasicComponent,
