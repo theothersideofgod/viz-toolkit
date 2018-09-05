@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { ButtonDisableComponent, ButtonDisableData } from './button-disable/button-disable.component';
+import { ButtonIconLeftComponent, ButtonIconLeftData } from './button-icon-left/button-icon-left.component';
+import { ButtonIconRightComponent, ButtonIconRightData } from './button-icon-right/button-icon-right.component';
+import { ButtonTextComponent, ButtonTextData } from './button-text/button-text.component';
+import { ButtonStrokedComponent, ButtonStrokedData } from './button-stroked/button-stroked.component';
 import { TreeCheckboxComponent, TreeCheckboxData } from './tree-checkbox/tree-checkbox.component';
 import { HeaderApplicationComponent, HeaderApplicationData } from './header-application/header-application.component';
 import { SlideToggleDisableComponent, SlideToggleDisableData } from './slide-toggle-disable/slide-toggle-disable.component';
@@ -68,6 +73,26 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'button-disable' : {
+    component: ButtonDisableComponent,
+    data: ButtonDisableData
+  },
+  'button-icon-left' : {
+    component: ButtonIconLeftComponent,
+    data: ButtonIconLeftData
+  },
+  'button-icon-right' : {
+    component: ButtonIconRightComponent,
+    data: ButtonIconRightData
+  },
+  'button-text' : {
+    component: ButtonTextComponent,
+    data: ButtonTextData
+  },
+  'button-stroked' : {
+    component: ButtonStrokedComponent,
+    data: ButtonStrokedData
+  },
   'tree-checkbox' : {
     component: TreeCheckboxComponent,
     data: TreeCheckboxData
@@ -315,6 +340,11 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    ButtonDisableComponent,
+    ButtonIconLeftComponent,
+    ButtonIconRightComponent,
+    ButtonTextComponent,
+    ButtonStrokedComponent,
     TreeCheckboxComponent,
     HeaderApplicationComponent,
     SlideToggleDisableComponent,
@@ -391,6 +421,11 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ButtonDisableComponent,
+    ButtonIconLeftComponent,
+    ButtonIconRightComponent,
+    ButtonTextComponent,
+    ButtonStrokedComponent,
     TreeCheckboxComponent,
     HeaderApplicationComponent,
     SlideToggleDisableComponent,

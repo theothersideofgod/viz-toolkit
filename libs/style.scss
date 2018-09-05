@@ -332,6 +332,28 @@ td.mat-cell,
   font-size: 14px;
 }
 
+//button
+.viz-button-left-icon {
+  display: inline-flex;
+  align-items: center;
+  .mat-icon {
+    font-size: 18px;
+    height: 18px;
+    width: 18px;
+    margin-right: 8px;
+  }
+}
+.viz-button-right-icon {
+  display: inline-flex;
+  align-items: center;
+  .mat-icon {
+    font-size: 18px;
+    height: 18px;
+    width: 18px;
+    margin-left: 8px;
+  }
+}
+
 //tree style
 .mat-checkbox-label {
   font-size: 14px;
@@ -357,7 +379,7 @@ td.mat-cell,
       }
     }
     .mat-hint {
-      color: #7f5eba
+      color: #7f5eba;
     }
   }
 
