@@ -15,6 +15,7 @@ export class VizHeaderComponent {
   @Input() svgIcon: String;
   @Input() badge: Number = 0; 
   @Input() type: VizHeaderType;
+  @Input() application: boolean;
   @Output() rightBtnClick = new EventEmitter();
   @Output() hamburgerClick = new EventEmitter();
   @Output() moreClick = new EventEmitter();

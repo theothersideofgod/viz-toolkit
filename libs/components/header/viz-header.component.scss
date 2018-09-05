@@ -64,10 +64,11 @@
       flex-direction: row;
       align-items: center;
       .more {
+        position: relative;
         @media (max-width: 991px) {
           display: none;
         }
-        padding: 24px;
+        padding: 22px;
         border-left: 1px #E9E9E9 solid;
         border-right: 1px #E9E9E9 solid;
         margin-right: 32px;
@@ -110,6 +111,16 @@
           margin-top: 3px;
         }
       }
+
+      
     }
+  }
+
+  
+}
+::ng-deep {
+  .cdk-overlay-pane .viz-header-application-dropdown{
+    position: absolute;
+    left: -210px;
   }
 }
