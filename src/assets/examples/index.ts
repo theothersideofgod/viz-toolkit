@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { SlideToggleDisableComponent, SlideToggleDisableData } from './slide-toggle-disable/slide-toggle-disable.component';
 import { SelectDisableComponent, SelectDisableData } from './select-disable/select-disable.component';
 import { RadioButtonDisableComponent, RadioButtonDisableData } from './radio-button-disable/radio-button-disable.component';
 import { FormFieldDisableComponent, FormFieldDisableData } from './form-field-disable/form-field-disable.component';
@@ -65,6 +66,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'slide-toggle-disable' : {
+    component: SlideToggleDisableComponent,
+    data: SlideToggleDisableData
+  },
   'select-disable' : {
     component: SelectDisableComponent,
     data: SelectDisableData
@@ -300,6 +305,7 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    SlideToggleDisableComponent,
     SelectDisableComponent,
     RadioButtonDisableComponent,
     FormFieldDisableComponent,
@@ -373,6 +379,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SlideToggleDisableComponent,
     SelectDisableComponent,
     RadioButtonDisableComponent,
     FormFieldDisableComponent,
