@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { TreeCheckboxComponent, TreeCheckboxData } from './tree-checkbox/tree-checkbox.component';
 import { HeaderApplicationComponent, HeaderApplicationData } from './header-application/header-application.component';
 import { SlideToggleDisableComponent, SlideToggleDisableData } from './slide-toggle-disable/slide-toggle-disable.component';
 import { SelectDisableComponent, SelectDisableData } from './select-disable/select-disable.component';
@@ -67,6 +68,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'tree-checkbox' : {
+    component: TreeCheckboxComponent,
+    data: TreeCheckboxData
+  },
   'header-application' : {
     component: HeaderApplicationComponent,
     data: HeaderApplicationData
@@ -310,6 +315,7 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    TreeCheckboxComponent,
     HeaderApplicationComponent,
     SlideToggleDisableComponent,
     SelectDisableComponent,
@@ -385,6 +391,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TreeCheckboxComponent,
     HeaderApplicationComponent,
     SlideToggleDisableComponent,
     SelectDisableComponent,

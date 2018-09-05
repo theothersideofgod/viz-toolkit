@@ -1,0 +1,116 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-keyword">const</span> nodeCount = <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> node.children.length;
+};
+
+<span class="hljs-keyword">const</span> checkedNodeCount = <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> {
+  <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+  node.children.forEach(<span class="hljs-function"><span class="hljs-params">subNode</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (subNode.checked) {
+      count++;
+    }
+  });
+  <span class="hljs-keyword">return</span> count;
+};
+
+<span class="hljs-keyword">const</span> toggleAllChildNode = <span class="hljs-function">(<span class="hljs-params">node, status</span>) =&gt;</span> {
+  node.children.forEach(<span class="hljs-function"><span class="hljs-params">subNode</span> =&gt;</span> {
+    subNode.checked = status;
+    toggleAllChildNode(subNode, status);
+  });
+};
+
+<span class="hljs-keyword">const</span> partialCheckedNode = <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> {
+  <span class="hljs-keyword">let</span> checkNodes = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
+    node.children.forEach(<span class="hljs-function"><span class="hljs-params">subNode</span> =&gt;</span> {
+      checkNodes += partialCheckedNode(subNode);
+    });
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node.checked) {
+    checkNodes++;
+  }
+  <span class="hljs-keyword">return</span> checkNodes;
+};
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tree-checkbox'</span>,
+  templateUrl: <span class="hljs-string">'tree-checkbox.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'tree-checkbox.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeCheckboxComponent <span class="hljs-keyword">implements</span> OnInit {
+  tree: <span class="hljs-built_in">any</span> = [
+    {
+      name: <span class="hljs-string">'Group1'</span>,
+      isExpanded: <span class="hljs-literal">true</span>,
+      checked: <span class="hljs-literal">false</span>,
+      children: [
+        {
+          name: <span class="hljs-string">'item1'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
+          children: []
+        },
+        {
+          name: <span class="hljs-string">'item2'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
+          children: []
+        }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'Group2'</span>,
+      isExpanded: <span class="hljs-literal">true</span>,
+      checked: <span class="hljs-literal">false</span>,
+      children: [
+        {
+          name: <span class="hljs-string">'item3'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
+          children: []
+        },
+        {
+          name: <span class="hljs-string">'item4'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
+          children: []
+        }
+      ]
+    }
+  ];
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {}
+
+  ngOnInit() {}
+
+  descendantsAllSelected(node) {
+    <span class="hljs-comment">//if node have children, count if checked node equal to node count</span>
+    <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">let</span> status = nodeCount(node) === checkedNodeCount(node);
+      node.checked = status;
+      <span class="hljs-keyword">return</span> status;
+    }
+    <span class="hljs-comment">//if node dont have children, just return the node check status</span>
+    <span class="hljs-keyword">return</span> node.checked;
+  }
+
+  descendantsPartiallySelected(node) {
+    <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> partialCheckedNode(node) &amp;&amp; !<span class="hljs-keyword">this</span>.descendantsAllSelected(node);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  toggle(node) {
+    <span class="hljs-comment">//if node have children, toggle all children node status</span>
+    <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
+      toggleAllChildNode(node, !node.checked);
+    }
+    <span class="hljs-comment">//if node dont have children, toggle itself</span>
+    node.checked = !node.checked;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> TreeCheckboxData = {
+  name: <span class="hljs-string">'TreeCheckbox'</span>
+};

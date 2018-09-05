@@ -1,0 +1,6 @@
+.example-container {
+  display: inline-flex;
+}
+viz-tree {
+  width: 150px;
+}
