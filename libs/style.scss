@@ -464,8 +464,11 @@ td.mat-cell,
   display: inline-flex;
   align-items: baseline;
   span {
+    position: relative;
     top: 0px !important;
-    right: -30px !important;
+    right: 0px !important;
+    margin-left: 4px;
+    font-weight:500;
   }
 }
 .mat-badge-content {

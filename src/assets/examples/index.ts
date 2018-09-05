@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { BadgeTabsComponent, BadgeTabsData } from './badge-tabs/badge-tabs.component';
+import { BadgeIconComponent, BadgeIconData } from './badge-icon/badge-icon.component';
 import { ButtonDisableComponent, ButtonDisableData } from './button-disable/button-disable.component';
 import { ButtonIconLeftComponent, ButtonIconLeftData } from './button-icon-left/button-icon-left.component';
 import { ButtonIconRightComponent, ButtonIconRightData } from './button-icon-right/button-icon-right.component';
@@ -73,6 +75,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'badge-tabs' : {
+    component: BadgeTabsComponent,
+    data: BadgeTabsData
+  },
+  'badge-icon' : {
+    component: BadgeIconComponent,
+    data: BadgeIconData
+  },
   'button-disable' : {
     component: ButtonDisableComponent,
     data: ButtonDisableData
@@ -340,6 +350,8 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    BadgeTabsComponent,
+    BadgeIconComponent,
     ButtonDisableComponent,
     ButtonIconLeftComponent,
     ButtonIconRightComponent,
@@ -421,6 +433,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    BadgeTabsComponent,
+    BadgeIconComponent,
     ButtonDisableComponent,
     ButtonIconLeftComponent,
     ButtonIconRightComponent,
