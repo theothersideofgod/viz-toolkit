@@ -14,6 +14,7 @@ export interface DateType {
   styleUrls: ['./viz-select.component.scss']
 })
 export class VizSelectComponent implements OnInit {
+  @Input()disabled:boolean;
   @Input()placeholder:string;
   @Input()options:Array<DateType> = []
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
