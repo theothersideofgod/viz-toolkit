@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { DatePickerSingleComponent, DatePickerSingleData } from './date-picker-single/date-picker-single.component';
 import { FeedbackIndicatorSuccessComponent, FeedbackIndicatorSuccessData } from './feedback-indicator-success/feedback-indicator-success.component';
 import { IconBigComponent, IconBigData } from './icon-big/icon-big.component';
 import { IconSmallComponent, IconSmallData } from './icon-small/icon-small.component';
@@ -80,6 +81,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'date-picker-single' : {
+    component: DatePickerSingleComponent,
+    data: DatePickerSingleData
+  },
   'feedback-indicator-success' : {
     component: FeedbackIndicatorSuccessComponent,
     data: FeedbackIndicatorSuccessData
@@ -375,6 +380,7 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    DatePickerSingleComponent,
     FeedbackIndicatorSuccessComponent,
     IconBigComponent,
     IconSmallComponent,
@@ -463,6 +469,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    DatePickerSingleComponent,
     FeedbackIndicatorSuccessComponent,
     IconBigComponent,
     IconSmallComponent,
