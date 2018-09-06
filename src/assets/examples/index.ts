@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { FeedbackIndicatorSuccessComponent, FeedbackIndicatorSuccessData } from './feedback-indicator-success/feedback-indicator-success.component';
 import { IconBigComponent, IconBigData } from './icon-big/icon-big.component';
 import { IconSmallComponent, IconSmallData } from './icon-small/icon-small.component';
 import { ChipDisableComponent, ChipDisableData } from './chip-disable/chip-disable.component';
@@ -79,6 +80,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'feedback-indicator-success' : {
+    component: FeedbackIndicatorSuccessComponent,
+    data: FeedbackIndicatorSuccessData
+  },
   'icon-big' : {
     component: IconBigComponent,
     data: IconBigData
@@ -370,6 +375,7 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    FeedbackIndicatorSuccessComponent,
     IconBigComponent,
     IconSmallComponent,
     ChipDisableComponent,
@@ -457,6 +463,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    FeedbackIndicatorSuccessComponent,
     IconBigComponent,
     IconSmallComponent,
     ChipDisableComponent,
