@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { ChipDisableComponent, ChipDisableData } from './chip-disable/chip-disable.component';
+import { ChipCloseComponent, ChipCloseData } from './chip-close/chip-close.component';
 import { BadgeTabsComponent, BadgeTabsData } from './badge-tabs/badge-tabs.component';
 import { BadgeIconComponent, BadgeIconData } from './badge-icon/badge-icon.component';
 import { ButtonDisableComponent, ButtonDisableData } from './button-disable/button-disable.component';
@@ -75,6 +77,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'chip-disable' : {
+    component: ChipDisableComponent,
+    data: ChipDisableData
+  },
+  'chip-close' : {
+    component: ChipCloseComponent,
+    data: ChipCloseData
+  },
   'badge-tabs' : {
     component: BadgeTabsComponent,
     data: BadgeTabsData
@@ -350,6 +360,8 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    ChipDisableComponent,
+    ChipCloseComponent,
     BadgeTabsComponent,
     BadgeIconComponent,
     ButtonDisableComponent,
@@ -433,6 +445,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ChipDisableComponent,
+    ChipCloseComponent,
     BadgeTabsComponent,
     BadgeIconComponent,
     ButtonDisableComponent,
