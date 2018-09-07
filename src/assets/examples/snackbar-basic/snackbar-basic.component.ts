@@ -8,7 +8,7 @@ import { MatSnackBar } from '@angular/material';
 })
 export class SnackbarBasicComponent implements OnInit {
   message: string = 'Greyhound divisively hello.';
-  action: string = 'button';
+  action: string = 'Button';
   @ViewChild('snackbarBasic',{read: ViewContainerRef}) snackbarBasic: ViewContainerRef
   constructor(public snackBar: MatSnackBar) {}
 
