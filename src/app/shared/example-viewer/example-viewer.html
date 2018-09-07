@@ -8,9 +8,11 @@
     </button> -->
 
 
+    <!-- <mat-icon [ngClass]="{'active': platform == item }" *ngFor="let item of ['desktop_mac','tablet_mac','phone_iphone']; let i=index"
+      (click)="platform = item;">{{item}}</mat-icon> -->
+    
     <mat-icon [ngClass]="{'active': platform == item }" *ngFor="let item of ['desktop_mac','tablet_mac','phone_iphone']; let i=index"
-      (click)="platform = item;">{{item}}</mat-icon>
-
+    >{{item}}</mat-icon>
 
 
   </div>
@@ -25,7 +27,7 @@
   <div class="docs-example-viewer-source" [@.disabled]="true">
     <mat-tab-group>
       <!-- TODO(jelbourn): don't hard-code the html + ts + css structure -->
-      <mat-tab *ngFor="let extension of ['HTML', 'TS']" [label]="extension === 'TS' ? 'AngularJS' : extension">
+      <mat-tab *ngFor="let extension of ['HTML', 'TS']" [label]="extension === 'TS' ? 'Angular' : extension">
         <button mat-icon-button type="button" class="docs-example-source-copy" [class.docs-example-source-copy-active]="copyFocus"
           title="Copy example source" aria-label="Copy example source to clipboard" matTooltip="Copy code" (click)="copySource(viewer.textContent)"
           (mouseover)="copyFocus = true" (mouseleave)="copyFocus = false">
