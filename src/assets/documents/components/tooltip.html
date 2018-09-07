@@ -15,219 +15,221 @@
     Tooltips are text labels that appear when the user hovers over, focuses on, or touches an element. A tooltip is displayed
     upon tapping and holding a screen element or component (on mobile) or hovering over it (desktop). Continuously display
     the tooltip as long as the user long-presses or hovers over the element.
-    <div class="doc-divider">
+  </div>
+  <div class="doc-desc-1" sketch-link></div>
+  <div class="doc-divider">
+  </div>
+  <div class="doc-title-2">
+    Examples
+    <span class="docs-markdown-h3" id="examples">
+      <span header-link="examples"></span>Examples</span>
+  </div>
+  <div class="doc-desc-2">
+    The tooltip can be displayed above, below, left, or right of the element. By default the position will be below.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="tooltip-basic"></div>
+  </div>
+  <div class="doc-divider">
+  </div>
+  <div class="doc-title-2">
+    Props
+    <span class="docs-markdown-h3" id="props">
+      <span header-link="props"></span>Props</span>
+  </div>
+  <div class="doc-desc-2">
+    To get a customized checkbox, just set
+    <span class="doc-desc-2-highlight">type/state/disabled</span>
+  </div>
+  <table class="doc-props-table">
+    <thead>
+      <tr>
+        <th>property</th>
+        <th>description</th>
+        <th>type</th>
+        <th>default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          matTooltipDisabled
+        </td>
+        <td>
+          Disables the display of the tooltip.
+
+
+        </td>
+        <td>
+          boolean
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          matTooltipHideDelay
+        </td>
+        <td>
+          The default delay in ms before hiding the tooltip after hide is called
+
+
+        </td>
+        <td>
+          this._defaultOptions.hideDelay
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          matTooltip
+        </td>
+        <td>
+          The message to be displayed in the tooltip
+
+
+        </td>
+        <td>
+          string
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          matTooltipPosition
+        </td>
+        <td>
+          Allows the user to define the position of the tooltip relative to the parent element
+
+
+        </td>
+        <td>
+          TooltipPosition
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          matTooltipShowDelay
+        </td>
+        <td>
+          The default delay in ms before showing the tooltip after show is called
+
+
+        </td>
+        <td>
+          this._defaultOptions.showDelay
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          matTooltipClass
+        </td>
+        <td>
+          Classes to be passed to the tooltip. Supports the same syntax as ngClass.
+
+
+        </td>
+        <td>
+          string | string[] | Set
+          <string> | { [key: string]: any; }
+        </td>
+        <td>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Best Practices
+    <span class="docs-markdown-h3" id="best_practices">
+      <span header-link="best_practices"></span>Best Practices</span>
+  </div>
+
+  <div class="doc-desc-2">
+    When activated, tooltips display a text label identifying an element, such as a description of its function:
+    <ul class="doc-list">
+      <li>
+        Transient: Tooltips appear on hover, focus, or touch, and disappear after a short duration.
+      </li>
+      <li>
+        Paired: Tooltips are always paired nearby the element with which they are associated.
+      </li>
+      <li>
+        Succinct: Tooltips only include short, descriptive text.
+      </li>
+      <li>
+        Display the tooltip for 1.5 seconds. If the user takes another action before that time ends, the tooltip will disappear.
+      </li>
+      <li>
+        Over 150ms, tooltips fade in and scale up using the deceleration curve. They fade out over 75ms.
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-divider">
+
+  </div>
+
+
+  <div class="doc-title-2">
+    Usage &amp; Content guidelines
+    <span class="docs-markdown-h3" id="content_guidelines">
+      <span header-link="content_guidelines"></span>Content guidelines</span>
+  </div>
+
+  <div class="doc-desc-2">
+    Don’t display shadows on tooltips
+  </div>
+
+  <div class="docs-guideline-group">
+    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/tooltip-shadow-do.png" alt="">
     </div>
-    <div class="doc-title-2">
-      Examples
-      <span class="docs-markdown-h3" id="examples">
-        <span header-link="examples"></span>Examples</span>
+    <div class="docs-usage-dont docs-usage-w50 docs-usage-center docs-ml24" style="height:160px">
+      <img src="assets/img/doc/tooltip-shadow-dont.png" alt="">
     </div>
-    <div class="doc-desc-2">
-      The tooltip can be displayed above, below, left, or right of the element. By default the position will be below.
+  </div>
+
+  <div class="doc-desc-2">
+    Don’t display rich information and imagery on tooltips
+  </div>
+
+  <div class="docs-guideline-group">
+    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/tooltip-image-do.png" alt="">
     </div>
-    <div class="doc-example-container">
-      <div app-docs-example="tooltip-basic"></div>
+    <div class="docs-usage-dont docs-usage-w50 docs-usage-center docs-ml24" style="height:160px">
+      <img src="assets/img/doc/tooltip-image-dont.png" alt="">
     </div>
-    <div class="doc-divider">
-    </div>
-    <div class="doc-title-2">
-      Props
-      <span class="docs-markdown-h3" id="props">
-        <span header-link="props"></span>Props</span>
-    </div>
-    <div class="doc-desc-2">
-      To get a customized checkbox, just set
-      <span class="doc-desc-2-highlight">type/state/disabled</span>
-    </div>
-    <table class="doc-props-table">
-      <thead>
-        <tr>
-          <th>property</th>
-          <th>description</th>
-          <th>type</th>
-          <th>default</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            matTooltipDisabled
-          </td>
-          <td>
-            Disables the display of the tooltip.
+  </div>
 
 
-          </td>
-          <td>
-            boolean
-          </td>
-          <td>
+  <div class="doc-divider">
 
-          </td>
-        </tr>
-        <tr>
-          <td>
-            matTooltipHideDelay
-          </td>
-          <td>
-            The default delay in ms before hiding the tooltip after hide is called
+  </div>
+
+  <div class="doc-title-2">
+    Design specs
+    <span class="docs-markdown-h3" id="design_specs">
+      <span header-link="design_specs"></span>Design specs</span>
+  </div>
 
 
-          </td>
-          <td>
-            this._defaultOptions.hideDelay
-          </td>
-          <td>
-
-          </td>
-        </tr>
-        <tr>
-          <td>
-            matTooltip
-          </td>
-          <td>
-            The message to be displayed in the tooltip
-
-
-          </td>
-          <td>
-            string
-          </td>
-          <td>
-
-          </td>
-        </tr>
-        <tr>
-          <td>
-            matTooltipPosition
-          </td>
-          <td>
-            Allows the user to define the position of the tooltip relative to the parent element
-
-
-          </td>
-          <td>
-            TooltipPosition
-          </td>
-          <td>
-
-          </td>
-        </tr>
-        <tr>
-          <td>
-            matTooltipShowDelay
-          </td>
-          <td>
-            The default delay in ms before showing the tooltip after show is called
-
-
-          </td>
-          <td>
-            this._defaultOptions.showDelay
-          </td>
-          <td>
-
-          </td>
-        </tr>
-        <tr>
-          <td>
-            matTooltipClass
-          </td>
-          <td>
-            Classes to be passed to the tooltip. Supports the same syntax as ngClass.
-
-
-          </td>
-          <td>
-            string | string[] | Set
-            <string> | { [key: string]: any; }
-          </td>
-          <td>
-
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="doc-divider"></div>
-    <div class="doc-title-2">
-      Best Practices
-      <span class="docs-markdown-h3" id="best_practices">
-        <span header-link="best_practices"></span>Best Practices</span>
-    </div>
-
-    <div class="doc-desc-2">
-      When activated, tooltips display a text label identifying an element, such as a description of its function:
-      <ul class="doc-list">
-        <li>
-          Transient: Tooltips appear on hover, focus, or touch, and disappear after a short duration.
-        </li>
-        <li>
-          Paired: Tooltips are always paired nearby the element with which they are associated.
-        </li>
-        <li>
-          Succinct: Tooltips only include short, descriptive text.
-        </li>
-        <li>
-          Display the tooltip for 1.5 seconds. If the user takes another action before that time ends, the tooltip will disappear.
-        </li>
-        <li>
-          Over 150ms, tooltips fade in and scale up using the deceleration curve. They fade out over 75ms.
-        </li>
-      </ul>
-    </div>
-
-    <div class="doc-divider">
-
-    </div>
-
-
-    <div class="doc-title-2">
-      Usage &amp; Content guidelines
-      <span class="docs-markdown-h3" id="content_guidelines">
-        <span header-link="content_guidelines"></span>Content guidelines</span>
-    </div>
-
-    <div class="doc-desc-2">
-      Don’t display shadows on tooltips
-    </div>
-
-    <div class="docs-guideline-group">
-      <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
-        <img src="assets/img/doc/tooltip-shadow-do.png" alt="">
-      </div>
-      <div class="docs-usage-dont docs-usage-w50 docs-usage-center docs-ml24" style="height:160px">
-        <img src="assets/img/doc/tooltip-shadow-dont.png" alt="">
-      </div>
-    </div>
-
-    <div class="doc-desc-2">
-      Don’t display rich information and imagery on tooltips
-    </div>
-
-    <div class="docs-guideline-group">
-      <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
-        <img src="assets/img/doc/tooltip-image-do.png" alt="">
-      </div>
-      <div class="docs-usage-dont docs-usage-w50 docs-usage-center docs-ml24" style="height:160px">
-        <img src="assets/img/doc/tooltip-image-dont.png" alt="">
-      </div>
-    </div>
-
-
-    <div class="doc-divider">
-
-    </div>
-
-    <div class="doc-title-2">
-      Design specs
-      <span class="docs-markdown-h3" id="design_specs">
-        <span header-link="design_specs"></span>Design specs</span>
-    </div>
-
-
-    <div class="docs-usage-spec docs-usage-center" style="height:280px">
-      <img src="assets/img/doc/tooltip-spec.png" alt="">
-    </div>
+  <div class="docs-usage-spec docs-usage-center" style="height:280px">
+    <img src="assets/img/doc/tooltip-spec.png" alt="">
+  </div>
 
 
 

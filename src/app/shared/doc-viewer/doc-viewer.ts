@@ -17,6 +17,7 @@ import { Subscription } from 'rxjs';
 import { ExampleViewer } from '../example-viewer/example-viewer';
 import { HeaderLink } from './header-link';
 import { DocViewerExtend } from './doc-viewer-extend';
+import { SketchLink } from '../sketch-link/sketch-link';
 
 @Component({
   selector: 'doc-viewer',
@@ -75,6 +76,8 @@ export class DocViewer implements OnDestroy {
     this._loadComponents('header-link', HeaderLink);
     //lucas
     this._loadComponents('doc-viewer-extend', DocViewerExtend);
+    this._loadComponents('sketch-link', SketchLink)
+
     this._fixFragmentUrls();
     this.contentLoaded.next();
   }
@@ -94,7 +97,9 @@ export class DocViewer implements OnDestroy {
     this._clearLiveExamples();
     this._loadComponents('app-docs-example', ExampleViewer);
     this._loadComponents('header-link', HeaderLink);
+    //lucas
     this._loadComponents('doc-viewer-extend', DocViewerExtend);
+    this._loadComponents('sketch-link', SketchLink)
   }
 
   /** Instantiate a ExampleViewer for each example. */

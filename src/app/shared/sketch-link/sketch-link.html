@@ -1,0 +1,8 @@
+<p>
+  Here is how you can add the component to your Sketch design file:
+  <ng-container *ngFor="let link of sketch_link; let i=index last as isLast">
+    <span class="sketch-link">{{link}}</span>
+    <span *ngIf="!isLast">/</span>
+  </ng-container>
+
+</p>
