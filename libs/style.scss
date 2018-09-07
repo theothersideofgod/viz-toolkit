@@ -470,7 +470,7 @@ td.mat-cell,
     top: 0px !important;
     right: 0px !important;
     margin-left: 4px;
-    font-weight:500;
+    font-weight: 500;
   }
 }
 .mat-badge-content {
@@ -555,6 +555,15 @@ td.mat-cell,
   font-size: 32px;
   height: 32px;
   width: 32px;
+}
+
+//chip
+mat-chip {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  
 }
 
 //paginator
