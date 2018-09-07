@@ -226,7 +226,9 @@ td.mat-cell,
 // }
 // menu style
 .cdk-overlay-pane {
+  transform: translateY(0) !important;
   .mat-menu-panel {
+    border-radius: 0px;
     .mat-menu-content {
       max-width: none;
       width: 280px;
