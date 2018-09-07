@@ -202,14 +202,14 @@ export class ComponentsComponent implements OnInit {
         }
       ]
     },
-    {
-      title: 'templates',
-      components: []
-    },
-    {
-      title: 'pages',
-      components: []
-    }
+    // {
+    //   title: 'templates',
+    //   components: []
+    // },
+    // {
+    //   title: 'pages',
+    //   components: []
+    // }
   ];
 
   constructor(private router: Router) {}
