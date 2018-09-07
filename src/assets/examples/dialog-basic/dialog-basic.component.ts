@@ -121,7 +121,7 @@ export class DialogDataExampleDialog {
       ]
     }
   ];
-
+  
   ngOnInit() {}
 
   descendantsAllSelected(node) {
@@ -149,6 +149,11 @@ export class DialogDataExampleDialog {
     }
     //if node dont have children, toggle itself
     node.checked = !node.checked;
+  }
+
+  selectAll(e) {
+    console.log(e.checked)
+    toggleAllChildNode({children:this.tree}, e.checked)
   }
 }
 
