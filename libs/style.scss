@@ -373,6 +373,11 @@ td.mat-cell,
   border-color: #9f9f9f !important;
 }
 //input font-size
+.mat-form-field-infix {
+  textarea {
+    color: #000000;
+  }
+}
 // body {
 //   font-size: 14px;
 // }
