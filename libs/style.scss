@@ -326,9 +326,12 @@ td.mat-cell,
 .viz-snackbar-mobile {
   width: 343px !important;
   .mat-simple-snackbar {
+    span {
+      width: 255px;
+    }
     flex-direction: column;
     .mat-simple-snackbar-action {
-      margin-left: auto;
+      margin-left: 230px;
     }
   }
 }
