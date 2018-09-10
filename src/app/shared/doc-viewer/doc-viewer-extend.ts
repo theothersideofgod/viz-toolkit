@@ -4,7 +4,7 @@ import { DOCUMENT } from '@angular/platform-browser';
   selector: 'doc-viewer-extend',
   template: `
    <span *ngIf="!showAllExamples">View All Examples</span>
-   <span *ngIf="showAllExamples">Hide All Examples</span>
+   <span *ngIf="showAllExamples">Show Less Examples</span>
   `
 })
 export class DocViewerExtend implements OnInit {
