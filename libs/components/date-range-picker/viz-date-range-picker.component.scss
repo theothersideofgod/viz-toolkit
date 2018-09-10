@@ -24,7 +24,7 @@
   }
 }
 ::ng-deep {
-  div[ng-reflect-ng-switch="multi-year"] {
+  div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
     .mat-calendar-table{
       margin-top: 38px;
     }
