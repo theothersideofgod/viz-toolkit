@@ -721,6 +721,12 @@ mat-chip {
   }
 }
 
+//date picker 
+mat-datepicker-content.mat-datepicker-content {
+  height: auto !important; 
+  width: auto;
+}
+
 //toolbar
 .mat-toolbar.mat-toolbar-single-row {
   padding: 0px 24px;
