@@ -10,7 +10,7 @@ import {
   ViewEncapsulation,
  } from '@angular/core';
 import { MatTabsModule } from '@angular/material';
-import { ActivatedRoute, Params, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Params, Router, RouterModule, NavigationEnd } from '@angular/router';
 import { combineLatest, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 import { DocViewerModule } from '../../shared/doc-viewer/doc-viewer-module';
@@ -24,7 +24,7 @@ import { TableOfContentsModule } from '../../shared/table-of-contents/table-of-c
   styleUrls: ['./component-viewer.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ComponentViewer implements OnDestroy {
+export class ComponentViewer implements OnDestroy, OnInit {
   componentDocItem: DocItem;
   sections: Set<string> = new Set(['overview', 'api']);
   private _destroyed = new Subject();
@@ -45,6 +45,18 @@ export class ComponentViewer implements OnDestroy {
             this.router.navigate(['/components']);
           }
         });
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo({ 
+        top: 0, 
+        behavior: "smooth" 
+    })
+  });
   }
 
   ngOnDestroy(): void {
