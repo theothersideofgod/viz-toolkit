@@ -20,7 +20,7 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'checkbox',
-          desc: 'All state of checkbox',
+          desc: 'All the states of the checkbox',
           route: 'checkbox'
         },
         {
@@ -35,7 +35,7 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'radio button',
-          desc: 'All states of radio button',
+          desc: 'All states of the radio button',
           route: 'radio'
         },
         {
@@ -45,7 +45,7 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'slider',
-          desc: 'Selection of a value from a range',
+          desc: 'Selection from a range of values',
           route: 'slider'
         },
         {
@@ -60,7 +60,7 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'menu',
-          desc: 'Floating panel containing list of options',
+          desc: 'Floating panel containing a list of options',
           route: 'menu'
         },
         {
@@ -75,12 +75,12 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'header & footer',
-          desc: 'Global header',
+          desc: 'Global header component',
           route: 'header'
         },
         {
           title: 'header & footer',
-          desc: 'Global footer',
+          desc: 'Global footer component',
           route: 'footer'
         }
       ]
@@ -90,18 +90,18 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'card',
-          desc: 'A content container for different types of contents',
+          desc: 'A container for different types of content',
           route: 'card'
         },
         {
           title: 'expansion panel',
-          desc: 'An expandable details-summary view',
+          desc: 'An expandable detail-summary view',
           route: 'expansionpanel'
         },
         {
           title: 'list',
           desc:
-            'Conainer compoennt that wraps and formats a series of line items',
+            'Container that wraps and formats a series of line items',
           route: 'list'
         },
         {
@@ -111,7 +111,7 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'tree',
-          desc: 'Styled tree that can be used to display hierachy data',
+          desc: 'Styled tree that can be used to display hierarchy of data',
           route: 'tree'
         }
       ]
@@ -121,7 +121,7 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'button',
-          desc: 'All states of button',
+          desc: 'All states and types of buttons',
           route: 'button'
         },
         {
@@ -131,23 +131,23 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'chip',
-          desc: 'A list of values as individual',
+          desc: 'A list of values as an individual component',
           route: 'chip'
         },
         {
           title: 'icon',
-          desc: 'Icon usage',
+          desc: 'Icons and recommended usage',
           route: 'icon'
         },
         {
           title: 'progress spinner',
-          desc: 'A circular indicators of progress and activity',
+          desc: 'A circular indicator of progress and activity',
           route: 'progressspinner'
         },
         {
           title: 'progress bar',
           desc:
-            'A horizontal progress-bar for indicating progress and activity',
+            'A horizontal bar for indicating progress and activity',
           route: 'progressbar'
         }
       ]
@@ -162,17 +162,17 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'snackbar',
-          desc: 'Snack-bar notification',
+          desc: 'Snack-bar notifications',
           route: 'snackbar'
         },
         {
           title: 'tooltip',
-          desc: 'Provides a text label that is displayed by hover interaction',
+          desc: 'Text label for displaying short-form information',
           route: 'tooltip'
         },
         {
           title: 'login',
-          desc: 'Login modal',
+          desc: 'Login modal component',
           route: 'login'
         }
       ]
@@ -182,26 +182,26 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'paginator',
-          desc: 'Providers navigation for paged information',
+          desc: 'Provides navigation for paged information',
           route: 'paginator'
         },
         {
           title: 'table',
-          desc: 'Styled data-table taht can be used to display rows of data',
+          desc: 'Styled data-table that can be used to display rows of data',
           route: 'table'
         },
         {
           title: 'no data',
-          desc: 'Help the user know when there is no data',
+          desc: 'Notification when there is no data',
           route: 'nodata'
         },
         {
           title: 'feedback indicator',
-          desc: 'Inform user about important changes or persistent conditions',
+          desc: 'Messaging for important changes or persistent conditions',
           route: 'feedbackindicator'
         }
       ]
-    },
+    }
     // {
     //   title: 'templates',
     //   components: []
