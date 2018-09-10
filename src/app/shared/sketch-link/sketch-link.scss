@@ -1,4 +1,15 @@
-.sketch-link {
-    color: black;
-    font-weight: 400;
+.sketch-link-container {
+  // height: 64px;
+  line-height: 24px;
+  background-color: #f8f8f8;
+  border: 1px solid #efefef;
+  font-size: 16px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  font-weight: 300;
+  margin-bottom: 24px;
+  color: #000000;
+}
+.sketch-link-splash {
+  color: #696969;
 }
