@@ -4,7 +4,6 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subject, fromEvent } from 'rxjs';
 import { debounceTime, takeUntil } from 'rxjs/operators';
 
-
 interface Link {
   /* id of the section*/
   id: string;
@@ -28,10 +27,12 @@ interface Link {
   templateUrl: './table-of-contents.html'
 })
 export class TableOfContents implements OnInit {
-
-  @Input() links: Link[] = [];
-  @Input() container: string;
-  @Input() headerSelectors = '.docs-markdown-h3,.docs-markdown-h4';
+  @Input()
+  links: Link[] = [];
+  @Input()
+  container: string;
+  @Input()
+  headerSelectors = '.docs-markdown-h3,.docs-markdown-h4';
 
   _rootUrl = this._router.url.split('#')[0];
   private _scrollContainer: any;
@@ -39,11 +40,12 @@ export class TableOfContents implements OnInit {
   private _urlFragment = '';
   private _latestClick = '';
 
-  constructor(private _router: Router,
-              private _route: ActivatedRoute,
-              private _element: ElementRef,
-              @Inject(DOCUMENT) private _document: Document) {
-
+  constructor(
+    private _router: Router,
+    private _route: ActivatedRoute,
+    private _element: ElementRef,
+    @Inject(DOCUMENT) private _document: Document
+  ) {
     // this._router.events.pipe(takeUntil(this._destroyed)).subscribe((event) => {
     //   if (event instanceof NavigationEnd) {
     //     const rootUrl = _router.url.split('#')[0];
@@ -53,10 +55,8 @@ export class TableOfContents implements OnInit {
     //     }
     //   }
     // });
-
     // this._route.fragment.pipe(takeUntil(this._destroyed)).subscribe(fragment => {
     //   this._urlFragment = fragment;
-
     //   const target = document.getElementById(this._urlFragment);
     //   if (target) {
     //     target.scrollIntoView();
@@ -68,14 +68,17 @@ export class TableOfContents implements OnInit {
     // On init, the sidenav content element doesn't yet exist, so it's not possible
     // to subscribe to its scroll event until next tick (when it does exist).
     Promise.resolve().then(() => {
-      this._scrollContainer = this.container ?
-        this._document.querySelectorAll(this.container)[0] : window;
+      this._scrollContainer = this.container
+        ? this._document.querySelectorAll(this.container)[0]
+        : window;
 
       if (this._scrollContainer) {
-        fromEvent(this._scrollContainer, 'scroll').pipe(
+        fromEvent(this._scrollContainer, 'scroll')
+          .pipe(
             takeUntil(this._destroyed),
-            debounceTime(10))
-            .subscribe(() => this.onScroll());
+            debounceTime(10)
+          )
+          .subscribe(() => this.onScroll());
       }
     });
   }
@@ -98,16 +101,16 @@ export class TableOfContents implements OnInit {
   }
 
   clickNav(i) {
-    this._latestClick = i
-    this._clickScroll()
+    this._latestClick = i;
+    this._clickScroll();
     setTimeout(() => {
-      this._latestClick = ''
-    }, 1000)
+      this._latestClick = '';
+    }, 1000);
   }
 
   /** Gets the scroll offset of the scroll container */
   private getScrollOffset(): number {
-    const {top} = this._element.nativeElement.getBoundingClientRect();
+    const { top } = this._element.nativeElement.getBoundingClientRect();
     if (typeof this._scrollContainer.scrollTop !== 'undefined') {
       return this._scrollContainer.scrollTop + top;
     } else if (typeof this._scrollContainer.pageYOffset !== 'undefined') {
@@ -117,17 +120,17 @@ export class TableOfContents implements OnInit {
 
   private createLinks(): Link[] {
     const links = [];
-    const headers =
-        Array.from(this._document.querySelectorAll(this.headerSelectors)) as HTMLElement[];
+    const headers = Array.from(
+      this._document.querySelectorAll(this.headerSelectors)
+    ) as HTMLElement[];
 
-        headers.shift()
-
+    headers.shift();
 
     if (headers.length) {
       for (const header of headers) {
         // remove the 'link' icon name from the inner text
         const name = header.innerText.trim().replace(/^link/, '');
-        const {top} = header.getBoundingClientRect();
+        const { top } = header.getBoundingClientRect();
         links.push({
           name,
           type: header.tagName.toLowerCase(),
@@ -141,38 +144,43 @@ export class TableOfContents implements OnInit {
   }
 
   private onScroll(): void {
-    console.log('123123')
+    console.log('123123');
     if (this._latestClick === '') {
       for (let i = 0; i < this.links.length; i++) {
-        this.links[i].active = this.isLinkActive(this.links[i], this.links[i + 1]);
+        this.links[i].active = this.isLinkActive(
+          this.links[i],
+          this.links[i + 1]
+        );
       }
     } else {
-      this._clickScroll()
+      this._clickScroll();
     }
   }
 
   private _clickScroll() {
-    this.links = this.links.map((item, i) => ({...item, active: (
-      i === +this._latestClick ? true : false
-    )}))
+    this.links = this.links.map((item, i) => ({
+      ...item,
+      active: i === +this._latestClick ? true : false
+    }));
   }
 
   private isLinkActive(currentLink: any, nextLink: any): boolean {
     // A link is considered active if the page is scrolled passed the anchor without also
     // being scrolled passed the next link
     const scrollOffset = this.getScrollOffset();
-    return scrollOffset >= currentLink.top && !(nextLink && nextLink.top < scrollOffset);
+    return (
+      scrollOffset >= currentLink.top &&
+      !(nextLink && nextLink.top < scrollOffset)
+    );
   }
 
   redirect(id) {
-    
-    let target = document.getElementById(id)
-    console.log(target)
-    if(target){
-      target.scrollIntoView({block:'start',behavior:'smooth'})
+    let target = document.getElementById(id);
+    console.log(target);
+    if (target) {
+      target.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
-   
+
     // location.hash = id
   }
-
 }
