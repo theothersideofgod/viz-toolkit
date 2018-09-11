@@ -319,7 +319,7 @@ td.mat-cell,
 }
 .cdk-overlay-pane {
   .mat-snack-bar-container {
-    border-radius: 0px
+    border-radius: 0px;
   }
 }
 
@@ -331,7 +331,12 @@ td.mat-cell,
     }
     flex-direction: column;
     .mat-simple-snackbar-action {
-      margin-left: 230px;
+      margin-left: 249px;
+      .mat-button {
+        min-width: auto;
+        width: fit-content;
+        padding: 0 8px;
+      }
     }
   }
 }
@@ -472,7 +477,7 @@ td.mat-cell,
 .cdk-overlay-pane {
   .mat-dialog-container {
     padding: 0px;
-    border-radius:0px;
+    border-radius: 0px;
   }
 }
 
@@ -579,7 +584,6 @@ mat-chip {
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-  
 }
 
 //paginator
@@ -721,9 +725,9 @@ mat-chip {
   }
 }
 
-//date picker 
+//date picker
 mat-datepicker-content.mat-datepicker-content {
-  height: auto !important; 
+  height: auto !important;
   width: auto;
 }
 

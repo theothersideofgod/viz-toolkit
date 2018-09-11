@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material';
 export class SnackbarMobileComponent implements OnInit {
   message: string =
     'Greyhound divisively hello coldly wonderfully marginally far upon excluing.';
-  action: string = 'button';
+  action: string = 'Button';
   constructor(public snackBar: MatSnackBar) {}
 
   openSnackBar(message: string, action: string) {
