@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { SliderRangeIconComponent, SliderRangeIconData } from './slider-range-icon/slider-range-icon.component';
+import { SliderRangeComponent, SliderRangeData } from './slider-range/slider-range.component';
+import { SliderContinueIconComponent, SliderContinueIconData } from './slider-continue-icon/slider-continue-icon.component';
+import { SliderContinueComponent, SliderContinueData } from './slider-continue/slider-continue.component';
+import { SliderBasicIconComponent, SliderBasicIconData } from './slider-basic-icon/slider-basic-icon.component';
 import { DatePickerSingleComponent, DatePickerSingleData } from './date-picker-single/date-picker-single.component';
 import { FeedbackIndicatorSuccessComponent, FeedbackIndicatorSuccessData } from './feedback-indicator-success/feedback-indicator-success.component';
 import { IconBigComponent, IconBigData } from './icon-big/icon-big.component';
@@ -81,6 +86,26 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'slider-range-icon' : {
+    component: SliderRangeIconComponent,
+    data: SliderRangeIconData
+  },
+  'slider-range' : {
+    component: SliderRangeComponent,
+    data: SliderRangeData
+  },
+  'slider-continue-icon' : {
+    component: SliderContinueIconComponent,
+    data: SliderContinueIconData
+  },
+  'slider-continue' : {
+    component: SliderContinueComponent,
+    data: SliderContinueData
+  },
+  'slider-basic-icon' : {
+    component: SliderBasicIconComponent,
+    data: SliderBasicIconData
+  },
   'date-picker-single' : {
     component: DatePickerSingleComponent,
     data: DatePickerSingleData
@@ -380,6 +405,11 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    SliderRangeIconComponent,
+    SliderRangeComponent,
+    SliderContinueIconComponent,
+    SliderContinueComponent,
+    SliderBasicIconComponent,
     DatePickerSingleComponent,
     FeedbackIndicatorSuccessComponent,
     IconBigComponent,
@@ -469,6 +499,11 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SliderRangeIconComponent,
+    SliderRangeComponent,
+    SliderContinueIconComponent,
+    SliderContinueComponent,
+    SliderBasicIconComponent,
     DatePickerSingleComponent,
     FeedbackIndicatorSuccessComponent,
     IconBigComponent,

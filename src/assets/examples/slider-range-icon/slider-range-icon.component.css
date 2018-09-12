@@ -1,0 +1,7 @@
+.example-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+viz-range-slider {
+  width: 150px;
+}
