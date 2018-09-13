@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as VizModules from 'libs'
+import { SliderRangeEventComponent, SliderRangeEventData } from './slider-range-event/slider-range-event.component';
+import { SliderEventComponent, SliderEventData } from './slider-event/slider-event.component';
+import { ToolbarColorComponent, ToolbarColorData } from './toolbar-color/toolbar-color.component';
+import { DatePickerEventComponent, DatePickerEventData } from './date-picker-event/date-picker-event.component';
 import { SliderRangeIconComponent, SliderRangeIconData } from './slider-range-icon/slider-range-icon.component';
 import { SliderRangeComponent, SliderRangeData } from './slider-range/slider-range.component';
 import { SliderContinueIconComponent, SliderContinueIconData } from './slider-continue-icon/slider-continue-icon.component';
@@ -86,6 +90,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 export const ALL_EXAMPLE_ITEMS = {
+  'slider-range-event' : {
+    component: SliderRangeEventComponent,
+    data: SliderRangeEventData
+  },
+  'slider-event' : {
+    component: SliderEventComponent,
+    data: SliderEventData
+  },
+  'toolbar-color' : {
+    component: ToolbarColorComponent,
+    data: ToolbarColorData
+  },
+  'date-picker-event' : {
+    component: DatePickerEventComponent,
+    data: DatePickerEventData
+  },
   'slider-range-icon' : {
     component: SliderRangeIconComponent,
     data: SliderRangeIconData
@@ -405,6 +425,10 @@ export const ALL_EXAMPLE_ITEMS = {
 }
 @NgModule({
   declarations: [
+    SliderRangeEventComponent,
+    SliderEventComponent,
+    ToolbarColorComponent,
+    DatePickerEventComponent,
     SliderRangeIconComponent,
     SliderRangeComponent,
     SliderContinueIconComponent,
@@ -499,6 +523,10 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SliderRangeEventComponent,
+    SliderEventComponent,
+    ToolbarColorComponent,
+    DatePickerEventComponent,
     SliderRangeIconComponent,
     SliderRangeComponent,
     SliderContinueIconComponent,
