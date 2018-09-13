@@ -21,4 +21,4 @@ import { RouterModule } from '@angular/router';
     VizLoginComponent
   ],
 })
-export class VizLoginMudule {}
+export class VizLoginModule {}

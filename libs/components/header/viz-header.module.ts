@@ -20,4 +20,4 @@ import { MatIconModule, MatBadgeModule, MatMenuModule, MatRippleModule } from '@
     VizHeaderComponent
   ],
 })
-export class VizHeaderMudule {}
+export class VizHeaderModule {}

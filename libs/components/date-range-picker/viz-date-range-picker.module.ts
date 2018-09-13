@@ -25,4 +25,4 @@ import { MatRangeDatepickerModule, MatRangeNativeDateModule } from "mat-range-da
     // LastDaysPipe
   ],
 })
-export class VizDateRangePickerMudule {}
+export class VizDateRangePickerModule {}

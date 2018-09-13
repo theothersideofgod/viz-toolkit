@@ -88,7 +88,7 @@ import { LoginBasicComponent, LoginBasicData} from './login-basic/login-basic.co
 import { MatRangeDatepickerModule, MatRangeNativeDateModule } from 'mat-range-datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { VizMenuCellComponent } from 'libs/components/menu/menu-cell/viz-menu-cell.component';
 export const ALL_EXAMPLE_ITEMS = {
   'slider-range-event' : {
     component: SliderRangeEventComponent,
@@ -610,4 +610,5 @@ export const ALL_EXAMPLE_ITEMS = {
     LoginBasicComponent,
   ]
 })
+
 export class ExampleModule { }

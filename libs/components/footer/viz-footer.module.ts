@@ -15,4 +15,4 @@ import { RouterModule } from '@angular/router';
     VizFooterComponent
   ],
 })
-export class VizFooterMudule {}
+export class VizFooterModule {}

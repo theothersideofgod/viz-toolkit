@@ -16,7 +16,7 @@ import { PrinciplesModule } from './pages/principles/principles.component'
 import { ComponentSidenavComponent } from './pages/component-sidenav/component-sidenav';
 import { ComponentViewerModule } from './pages/component-viewer/component-viewer';
 import { HttpClientModule } from '@angular/common/http';
-import { VizHeaderMudule, VizFooterMudule } from 'libs';
+import { VizHeaderModule, VizFooterModule } from 'libs';
 import { ComponentsModule } from './pages/components/components.component';
 // import { VizHeaderMudule, VizFooterMudule } from 'viz-toolkit';
 
@@ -36,8 +36,8 @@ import { ComponentsModule } from './pages/components/components.component';
     HomepageModule,
     ComponentViewerModule,
     MaterialModule,
-    VizHeaderMudule,
-    VizFooterMudule,
+    VizHeaderModule,
+    VizFooterModule,
     PrinciplesModule,
     ComponentsModule
   ],

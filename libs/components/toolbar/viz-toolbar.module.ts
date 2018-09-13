@@ -26,4 +26,4 @@ import { MatToolbarModule } from "@angular/material";
 
 
 
-export const VizToolbarMudule = MatToolbarModule
+export const VizToolbarModule = MatToolbarModule
