@@ -12,6 +12,7 @@ import { ComponentsComponent } from './pages/components/components.component';
 
 export const APP_ROUTES: Routes = [
   {path: '', component: HomepageComponent, pathMatch: 'full', data: {}},
+  
   {
     path: 'documentation',
     component: ComponentSidenavComponent,
@@ -24,6 +25,7 @@ export const APP_ROUTES: Routes = [
       //     {path: ':id', component: ComponentList},
       //   ],
       // },
+      // {path: 'documentation/:id', redirectTo: ':id', pathMatch: 'full', data: {}},
       {
         path: ':id',
         component: ComponentViewer,
@@ -32,7 +34,7 @@ export const APP_ROUTES: Routes = [
           {path: 'overview', component: ComponentOverview, pathMatch: 'full'},
           {path: '**', redirectTo: 'overview'},
         ],
-      },
+      }
     ],
   },
   {path: 'principles', component: PrinciplesComponent, pathMatch: 'full', data: {}},

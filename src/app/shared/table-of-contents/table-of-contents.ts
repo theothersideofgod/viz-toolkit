@@ -144,16 +144,11 @@ export class TableOfContents implements OnInit {
   }
 
   private onScroll(): void {
-    console.log('123123');
-    if (this._latestClick === '') {
-      for (let i = 0; i < this.links.length; i++) {
-        this.links[i].active = this.isLinkActive(
-          this.links[i],
-          this.links[i + 1]
-        );
-      }
-    } else {
-      this._clickScroll();
+    for (let i = 0; i < this.links.length; i++) {
+      this.links[i].active = this.isLinkActive(
+        this.links[i],
+        this.links[i + 1]
+      );
     }
   }
 
@@ -168,15 +163,14 @@ export class TableOfContents implements OnInit {
     // A link is considered active if the page is scrolled passed the anchor without also
     // being scrolled passed the next link
     const scrollOffset = this.getScrollOffset();
+
     return (
-      scrollOffset >= currentLink.top &&
-      !(nextLink && nextLink.top < scrollOffset)
+      scrollOffset >= currentLink.top && !(nextLink && nextLink.top < scrollOffset)
     );
   }
 
   redirect(id) {
     let target = document.getElementById(id);
-    console.log(target);
     if (target) {
       target.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }

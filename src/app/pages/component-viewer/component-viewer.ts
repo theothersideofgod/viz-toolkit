@@ -48,15 +48,7 @@ export class ComponentViewer implements OnDestroy, OnInit {
   }
 
   ngOnInit() {
-    this.router.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-          return;
-      }
-      window.scrollTo({ 
-        top: 0, 
-        behavior: "smooth" 
-    })
-  });
+    
   }
 
   ngOnDestroy(): void {
@@ -82,12 +74,17 @@ export class ComponentOverview implements OnInit {
   ngOnInit() {
     // 100ms timeout is used to allow the page to settle before moving focus for screen readers.
     setTimeout(() => this.focusTarget.nativeElement.focus(), 100);
+    console.log('do i fucking rerender?')
   }
 
   onContentLoaded() {
-    if (this.tableOfContents) {
-      this.tableOfContents.updateScrollPosition();
-    }
+    setTimeout(() => {
+      this.focusTarget.nativeElement.focus()
+      if (this.tableOfContents) {
+        this.tableOfContents.updateScrollPosition();
+      }
+    }, 100);
+    
   }
 }
 

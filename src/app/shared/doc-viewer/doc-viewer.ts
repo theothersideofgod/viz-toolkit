@@ -30,7 +30,7 @@ export class DocViewer implements OnDestroy {
   /** The URL of the document to display. */
   @Input()
   set documentUrl(url: string) {
-    console.log('here!!');
+    // console.log('here!!');
     this._fetchDocument(url);
   }
 
