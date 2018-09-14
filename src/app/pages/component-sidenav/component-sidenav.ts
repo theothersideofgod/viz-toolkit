@@ -208,14 +208,14 @@ const initNavList = [
         value: 'nodata'
       }
     ]
+  },
+  {
+    name: 'Pages',
+    subs: [
+      {
+        name: 'Login',
+        value: 'login'
+      }
+    ]
   }
-  // {
-  //   name: 'Pages',
-  //   subs: [
-  //     {
-  //       name: 'Login',
-  //       value: 'login'
-  //     }
-  //   ]
-  // }
 ];
