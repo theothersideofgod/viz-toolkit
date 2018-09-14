@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 28</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xbaseline-color_lens-24px copy</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-138.000000, -1068.000000)">
-            <g id="Button-&amp;-Indicatiors" transform="translate(134.000000, 911.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -1425.000000)">
+            <g id="Button-&amp;-Indicatiors" transform="translate(134.000000, 1269.000000)">
                 <g id="Badge" transform="translate(3.000000, 142.000000)">
-                    <g id="Group-28" transform="translate(0.000000, 14.000000)">
-                        <g id="baseline-color_lens-24px-copy">
-                            <circle id="Oval" fill="#696969" cx="12" cy="12" r="11"></circle>
-                            <text id="↳-1-to-2-Characters" font-family="SoletoTrial-Medium, Soleto Trial" font-size="12" font-weight="400" line-spacing="12" fill="#FFFFFF">
-                                <tspan x="5.952" y="16.3359985">1</tspan>
-                            </text>
-                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        </g>
+                    <g id="baseline-color_lens-24px-copy" transform="translate(0.000000, 14.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <circle id="Oval" stroke="#696969" stroke-width="2" cx="12" cy="12" r="11"></circle>
+                        <text id="↳-1-to-2-Characters" font-family="SoletoTrial-Bold, Soleto Trial" font-size="13" font-weight="bold" line-spacing="13" fill="#696969">
+                            <tspan x="5.578" y="16.1690063">1</tspan>
+                        </text>
                     </g>
                 </g>
             </g>

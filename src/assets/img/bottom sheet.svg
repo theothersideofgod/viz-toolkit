@@ -5,15 +5,15 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -831.000000)">
-            <g id="Form-Controls" transform="translate(134.000000, 575.000000)">
-                <g id="Form-Field" transform="translate(3.000000, 242.000000)">
-                    <g id="badge-15-outline-64" transform="translate(0.000000, 14.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-534.000000, -1613.000000)">
+            <g id="Popups-&amp;-Modals" transform="translate(534.000000, 1269.000000)">
+                <g id="Bottom-Sheet" transform="translate(0.000000, 318.000000)">
+                    <g id="badge-15-outline-64" transform="translate(0.000000, 26.000000)">
                         <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
                         <path d="M23,1 L1,1 L1,23 L23,23 L23,1 Z" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <path d="M5,5 L19,5" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                        <path d="M5,13 L19,13" id="Shape-Copy" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                        <path d="M5,9 L19,9" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M5,11 L19,11" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M5,19 L19,19" id="Shape-Copy" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M5,15 L19,15" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
                     </g>
                 </g>
             </g>

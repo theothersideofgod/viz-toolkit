@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 33</title>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xbaseline-speaker_notes-24px</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-539.000000, -993.000000)">
-            <g id="Popups-&amp;-Modals" transform="translate(534.000000, 911.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-537.000000, -1350.000000)">
+            <g id="Popups-&amp;-Modals" transform="translate(534.000000, 1269.000000)">
                 <g id="Dialog" transform="translate(3.000000, 66.000000)">
-                    <g id="Group-33" transform="translate(0.000000, 14.000000)">
-                        <g id="baseline-speaker_notes-24px">
-                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                            <path d="M20,2 L4,2 C2.9,2 2.01,2.9 2.01,4 L2,22 L6,18 L20,18 C21.1,18 22,17.1 22,16 L22,4 C22,2.9 21.1,2 20,2 Z M8,14 L6,14 L6,12 L8,12 L8,14 Z M8,11 L6,11 L6,9 L8,9 L8,11 Z M8,8 L6,8 L6,6 L8,6 L8,8 Z M15,14 L10,14 L10,12 L15,12 L15,14 Z M18,11 L10,11 L10,9 L18,9 L18,11 Z M18,8 L10,8 L10,6 L18,6 L18,8 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        </g>
+                    <g id="baseline-speaker_notes-24px" transform="translate(0.000000, 14.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M23,2 L1,2 L1,16.9230769 L8.48520918,16.9230769 L12,21.3841576 L15.5147908,16.9230769 L23,16.9230769 L23,2 Z" id="Shape" stroke="#696969" stroke-width="2"></path>
                     </g>
                 </g>
             </g>

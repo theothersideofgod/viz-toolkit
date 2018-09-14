@@ -16,6 +16,40 @@ export interface Section {
 export class ComponentsComponent implements OnInit {
   componentClass = [
     {
+      title: 'getting started',
+      components: [
+        {
+          title: 'designers',
+          desc: 'Introduction to Designers',
+          route: 'designers'
+        },
+        {
+          title: 'developers',
+          desc: 'Introduction to Developers',
+          route: 'designers'
+        }
+      ]
+    },
+    {
+      title: 'foundation',
+      components: [
+        {
+          title: 'colors',
+          desc: 'Color System',
+          route: 'colors'
+        },
+        {
+          title: 'typography',
+          desc: 'Typography system',
+          route: 'typography'
+        }
+      ]
+    },
+    {
+      title: '',
+      components: []
+    },
+    {
       title: 'form controls',
       components: [
         {
@@ -74,12 +108,12 @@ export class ComponentsComponent implements OnInit {
           route: 'toolbar'
         },
         {
-          title: 'header & footer',
+          title: 'header',
           desc: 'Global header component',
           route: 'header'
         },
         {
-          title: 'header & footer',
+          title: 'footer',
           desc: 'Global footer component',
           route: 'footer'
         }
@@ -100,8 +134,7 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'list',
-          desc:
-            'Container that wraps and formats a series of line items',
+          desc: 'Container that wraps and formats a series of line items',
           route: 'list'
         },
         {
@@ -113,6 +146,11 @@ export class ComponentsComponent implements OnInit {
           title: 'tree',
           desc: 'Styled tree that can be used to display hierarchy of data',
           route: 'tree'
+        },
+        {
+          title: 'stepper',
+          desc: 'Steppers convey progress through numbered steps.',
+          route: 'stepper'
         }
       ]
     },
@@ -146,9 +184,13 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'progress bar',
-          desc:
-            'A horizontal bar for indicating progress and activity',
+          desc: 'A horizontal bar for indicating progress and activity',
           route: 'progressbar'
+        },
+        {
+          title: 'feedback indicator',
+          desc: 'Messaging for important changes or persistent conditions',
+          route: 'feedbackindicator'
         }
       ]
     },
@@ -171,9 +213,9 @@ export class ComponentsComponent implements OnInit {
           route: 'tooltip'
         },
         {
-          title: 'login',
-          desc: 'Login modal component',
-          route: 'login'
+          title: 'bottom sheet',
+          desc: 'Bottom sheets slide up from the bottom of the screen to reveal more content.',
+          route: 'bottomsheet'
         }
       ]
     },
@@ -194,22 +236,27 @@ export class ComponentsComponent implements OnInit {
           title: 'no data',
           desc: 'Notification when there is no data',
           route: 'nodata'
-        },
-        {
-          title: 'feedback indicator',
-          desc: 'Messaging for important changes or persistent conditions',
-          route: 'feedbackindicator'
         }
       ]
+    },
+    {
+      title: 'pages',
+      components: [
+        {
+          title: 'login',
+          desc: 'Login Modal',
+          route: 'login'
+        }
+      ]
+    },
+    {
+      title: 'templates',
+      components: []
+    },
+    {
+      title: '',
+      components: []
     }
-    // {
-    //   title: 'templates',
-    //   components: []
-    // },
-    // {
-    //   title: 'pages',
-    //   components: []
-    // }
   ];
 
   constructor(private router: Router) {}

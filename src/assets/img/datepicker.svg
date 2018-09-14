@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 3@2x</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xGroup 3</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-140.000000, -431.000000)">
-            <g id="Form-Controls" transform="translate(134.000000, 273.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -731.000000)">
+            <g id="Form-Controls" transform="translate(134.000000, 575.000000)">
                 <g id="Datepicker" transform="translate(3.000000, 142.000000)">
                     <g id="Group-3" transform="translate(0.000000, 14.000000)">
-                        <path d="M18.984375,20.028169 L18.984375,8.99530516 L5.015625,8.99530516 L5.015625,20.028169 L18.984375,20.028169 Z M18.984375,3.97183099 C19.5156277,3.97183099 19.984373,4.17527183 20.390625,4.58215962 C20.796877,4.98904742 21,5.45852629 21,5.99061033 L21,20.028169 C21,20.5602531 20.796877,21.0219073 20.390625,21.4131455 C19.984373,21.8043838 19.5156277,22 18.984375,22 L5.015625,22 C4.45312219,22 3.97656445,21.8043838 3.5859375,21.4131455 C3.19531055,21.0219073 3,20.5602531 3,20.028169 L3,5.99061033 C3,5.45852629 3.19531055,4.98904742 3.5859375,4.58215962 C3.97656445,4.17527183 4.45312219,3.97183099 5.015625,3.97183099 L6,3.97183099 L6,2 L8.015625,2 L8.015625,3.97183099 L15.984375,3.97183099 L15.984375,2 L18,2 L18,3.97183099 L18.984375,3.97183099 Z M17.015625,11.0140845 L17.015625,12.9859155 L15,12.9859155 L15,11.0140845 L17.015625,11.0140845 Z M12.984375,11.0140845 L12.984375,12.9859155 L11.015625,12.9859155 L11.015625,11.0140845 L12.984375,11.0140845 Z M9,11.0140845 L9,12.9859155 L6.984375,12.9859155 L6.984375,11.0140845 L9,11.0140845 Z" id="" fill="#696969"></path>
                         <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <g id="calendar-57" transform="translate(0.000000, 1.000000)" stroke="#696969" stroke-width="2">
+                            <path d="M24,7 L0,7" id="Shape"></path>
+                            <rect id="Rectangle-path" x="1" y="2" width="22" height="20"></rect>
+                            <path d="M12,0 L12,4" id="Shape" stroke-linecap="square"></path>
+                            <path d="M4,0 L4,4" id="Shape" stroke-linecap="square"></path>
+                            <path d="M20,0 L20,4" id="Shape" stroke-linecap="square"></path>
+                        </g>
                     </g>
                 </g>
             </g>

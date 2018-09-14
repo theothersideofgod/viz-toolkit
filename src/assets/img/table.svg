@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="19px" height="14px" viewBox="0 0 19 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 38</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xbaseline-view_compact-24px</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-940.000000, -1084.000000)">
-            <g id="Data-Table" transform="translate(934.000000, 911.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-937.000000, -1437.000000)" stroke="#696969" stroke-width="2">
+            <g id="Data-Table" transform="translate(934.000000, 1269.000000)">
                 <g id="Table" transform="translate(3.000000, 142.000000)">
-                    <g id="Group-38" transform="translate(0.000000, 26.000000)">
-                        <g id="baseline-view_compact-24px">
-                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                            <path d="M3,19 L9,19 L9,12 L3,12 L3,19 Z M10,19 L22,19 L22,12 L10,12 L10,19 Z M3,5 L3,11 L22,11 L22,5 L3,5 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        </g>
+                    <g id="baseline-view_compact-24px" transform="translate(0.000000, 26.000000)">
+                        <path d="M1,1 L1,23 L23,23 L23,1 L1,1 Z" id="Shape"></path>
+                        <path d="M17,0 L17,24" id="Shape"></path>
+                        <path d="M0,8 L16.8,8" id="Shape"></path>
+                        <path d="M0,16 L16.8,16" id="Shape"></path>
                     </g>
                 </g>
             </g>

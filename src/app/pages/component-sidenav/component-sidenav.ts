@@ -31,6 +31,19 @@ const initNavList = [
     ]
   },
   {
+    name: 'Foundation',
+    subs: [
+      {
+        name: 'Colors',
+        value: 'colors'
+      },
+      {
+        name: 'Typography',
+        value: 'typography'
+      }
+    ]
+  },
+  {
     name: 'Form Controls',
     subs: [
       {
@@ -195,7 +208,7 @@ const initNavList = [
         value: 'nodata'
       }
     ]
-  },
+  }
   // {
   //   name: 'Pages',
   //   subs: [
