@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 
 export interface DialogData {
   animal: 'panda' | 'unicorn' | 'lion';
@@ -68,7 +68,8 @@ const partialCheckedNode = node => {
   styleUrls: ['dialog-contain.component.scss']
 })
 export class DialogDataExampleDialog {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  constructor(
+    public dialogRef: MatDialogRef<DialogDataExampleDialog>,@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
   tree: any = [
     {
       name: 'Hospitals of the University of Pennsylvania-Penn Presbyterian',
@@ -122,6 +123,10 @@ export class DialogDataExampleDialog {
     }
   ];
   
+  onNoClick() {
+    this.dialogRef.close()
+  }
+
   ngOnInit() {}
 
   descendantsAllSelected(node) {
