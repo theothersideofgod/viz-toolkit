@@ -815,6 +815,17 @@ mat-datepicker-content.mat-datepicker-content {
   }
 }
 
+//slider
+.mat-slider {
+  .mat-slider-thumb {
+    transform: scale(0.6) !important
+  }
+}
+
+.cdk-mouse-focused{
+  
+}
+
 //Typography: Styles
 .viz-h1 {
   /* Headline H1: */
