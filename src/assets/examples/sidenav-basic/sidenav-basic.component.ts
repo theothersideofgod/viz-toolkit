@@ -12,44 +12,58 @@ export class SidenavBasicComponent implements OnInit {
       subs: [
         {
           name: 'Assigned',
-          value: '/documentation/designers',
-          icon: 'assignment_turned_in'
+          value: '/documentation/menu',
+          icon: 'assignment_turned_in',
+          removable: false
         },
         {
           name: 'Held Back',
-          value: '/documentation/developers',
-          icon: 'inbox'
+          value: '/documentation/slider',
+          icon: 'inbox',
+          removable: false
         },
         {
           name: 'Confirmed',
-          value: '/documentation/developers',
-          icon: 'confirmation_number'
+          value: '/documentation/select',
+          icon: 'confirmation_number',
+          removable: false
         }
       ]
     },
     {
-      name: 'held back',
+      name: 'open orders',
       subs: [
         {
-          name: 'All',
-          value: '/documentation/designers',
-          icon: 'folder'
+          name: '84738273',
+          value: '/documentation/colors',
+          icon: 'warning',
+          removable: true
         },
         {
-          name: 'PO Nodtes',
+          name: '23497234',
           value: '/documentation/developers',
-          icon: 'payment'
+          icon: 'warning',
+          removable: true
         },
         {
-          name: 'Side Nav',
+          name: 'AH-398377',
           value: '/documentation/sidenav',
-          icon: 'warning'
+          icon: 'warning',
+          removable: true
         }
       ]
     }
   ];
   constructor() {}
   ngOnInit() {}
+  removeItem(navIndex, targetSub) {
+    let targetNav = this.navList[navIndex]
+
+    this.navList[navIndex].subs = targetNav.subs.filter(sub=>{
+      return sub.name !== targetSub.name
+    })
+
+  }
 }
 
 export const SidenavBasicData = {
