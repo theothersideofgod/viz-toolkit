@@ -26,6 +26,7 @@
       &.mat-icon {
         @include md-icon-size(24px);
         color: #9f9f9f;
+        margin-right: 8px;
       }
       &.mat-checkbox-frame {
         border-color: #9f9f9f;
