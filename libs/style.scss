@@ -287,16 +287,16 @@ td.mat-cell,
         font-size: 14px;
       }
       .mat-ripple-element {
-        background-color: rgba(127, 94, 186, 0.16);
+        background-color: rgba(1,173,171, 0.16);
       }
     }
   }
   .mat-list-option {
     &:hover {
-      background-color: rgba(127, 94, 186, 0.04);
+      background-color: rgba(1,173,171, 0.04);
     }
     &.mat-list-item-focus {
-      background-color: rgba(127, 94, 186, 0.12);
+      background-color: rgba(1,173,171, 0.12);
     }
   }
 }
