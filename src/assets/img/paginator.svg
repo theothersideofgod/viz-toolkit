@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xbaseline-looks_one-24px</title>
+    <title>@2xGroup 10</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-937.000000, -1349.000000)">
-            <g id="Data-Table" transform="translate(934.000000, 1269.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -1805.000000)">
+            <g id="Data-Table" transform="translate(134.000000, 1725.000000)">
                 <g id="Paginator" transform="translate(3.000000, 66.000000)">
-                    <g id="baseline-looks_one-24px" transform="translate(0.000000, 14.000000)">
-                        <path d="M1,1 L1,23 L23,23 L23,1 L1,1 Z" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <text id="↳-1-to-2-Characters" font-family="SoletoTrial-Bold, Soleto Trial" font-size="13" font-weight="bold" line-spacing="13" fill="#696969">
-                            <tspan x="1.769" y="17.1690063">25</tspan>
-                        </text>
+                    <g id="Group-10" transform="translate(0.000000, 14.000000)">
+                        <g id="baseline-looks_one-24px">
+                            <path d="M1,1 L1,23 L23,23 L23,1 L1,1 Z" id="Shape" stroke="#696969" stroke-width="2"></path>
+                            <text id="↳-1-to-2-Characters" font-family="SoletoTrial-Bold, Soleto Trial" font-size="13" font-weight="bold" line-spacing="13" fill="#696969">
+                                <tspan x="1.769" y="17.1690063">25</tspan>
+                            </text>
+                        </g>
                     </g>
                 </g>
             </g>

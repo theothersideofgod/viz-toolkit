@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xbaseline-format_list_numbered-24px copy</title>
+    <title>@2xGroup 5</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <path d="M3.49295775,3.54929577 C5.85916676,1.18308676 8.69481915,0 12,0 C15.3051808,0 18.1314437,1.17369718 20.4788732,3.52112676 C22.8263028,5.86855634 24,8.69481915 24,12 C24,15.3051808 22.8263028,18.1314437 20.4788732,20.4788732 C18.1314437,22.8263028 15.3051808,24 12,24 C8.69481915,24 5.86855634,22.8263028 3.52112676,20.4788732 C1.17369718,18.1314437 0,15.3051808 0,12 C0,8.69481915 1.16430761,5.87794592 3.49295775,3.54929577 Z" id="path-1"></path>
     </defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-534.000000, -1513.000000)">
-            <g id="Popups-&amp;-Modals" transform="translate(534.000000, 1269.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-948.000000, -1247.000000)">
+            <g id="Popups-&amp;-Modals" transform="translate(948.000000, 1003.000000)">
                 <g id="Tooltip" transform="translate(0.000000, 218.000000)">
-                    <g id="baseline-format_list_numbered-24px-copy" transform="translate(0.000000, 26.000000)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <path stroke="#696969" stroke-width="2" d="M4.20006453,4.25640256 C2.05914227,6.39732481 1,8.9597658 1,12 C1,15.0396356 2.0681089,17.6116418 4.22823354,19.7717665 C6.38835819,21.9318911 8.96036441,23 12,23 C15.0396356,23 17.6116418,21.9318911 19.7717665,19.7717665 C21.9318911,17.6116418 23,15.0396356 23,12 C23,8.96036441 21.9318911,6.38835819 19.7717665,4.22823354 C17.6116418,2.0681089 15.0396356,1 12,1 C8.96096299,1 6.37938479,2.0770823 4.20006453,4.25640256 Z"></path>
-                        <path d="M12,7 L12,13" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square" mask="url(#mask-2)"></path>
-                        <rect id="Rectangle-2" fill="#696969" fill-rule="nonzero" mask="url(#mask-2)" x="11" y="15" width="2" height="2"></rect>
+                    <g id="Group-5" transform="translate(0.000000, 26.000000)">
+                        <g id="baseline-format_list_numbered-24px-copy">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <path stroke="#696969" stroke-width="2" d="M4.20006453,4.25640256 C2.05914227,6.39732481 1,8.9597658 1,12 C1,15.0396356 2.0681089,17.6116418 4.22823354,19.7717665 C6.38835819,21.9318911 8.96036441,23 12,23 C15.0396356,23 17.6116418,21.9318911 19.7717665,19.7717665 C21.9318911,17.6116418 23,15.0396356 23,12 C23,8.96036441 21.9318911,6.38835819 19.7717665,4.22823354 C17.6116418,2.0681089 15.0396356,1 12,1 C8.96096299,1 6.37938479,2.0770823 4.20006453,4.25640256 Z"></path>
+                            <path d="M12,7 L12,13" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square" mask="url(#mask-2)"></path>
+                            <rect id="Rectangle-2" fill="#696969" fill-rule="nonzero" mask="url(#mask-2)" x="11" y="15" width="2" height="2"></rect>
+                        </g>
                     </g>
                 </g>
             </g>
