@@ -145,7 +145,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `npm run build:lib` to build the toolkit library. The build artifacts will be stored in the `libs/viz-toolkit` directory. Use the library `import { VizHeaderModule } from 'viz-toolkit'`
 
-Setting package.json
+Set package.json
 
 ```
 "devDependencies": {
