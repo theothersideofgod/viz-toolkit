@@ -26,7 +26,7 @@ export class DocViewerExtend implements OnInit {
 
   ngOnInit(): void {
     // console.log(this.example);
-    // this.hide();
+    this.hide();
   }
 
   show(): void {

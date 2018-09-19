@@ -2,3 +2,6 @@
     display: inline-flex;
     align-items: center;
 }
+viz-slider {
+    width: 150px;
+}
