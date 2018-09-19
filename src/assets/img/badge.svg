@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 9</title>
+    <title>baseline-color_lens-24px copy</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
         <g id="Toolkit-Documentation:-Components" transform="translate(-537.000000, -1159.000000)">
             <g id="Button-&amp;-Indicatiors" transform="translate(534.000000, 1003.000000)">
                 <g id="Badge" transform="translate(3.000000, 142.000000)">
-                    <g id="Group-9" transform="translate(0.000000, 14.000000)">
-                        <g id="baseline-color_lens-24px-copy">
-                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                            <circle id="Oval" stroke="#696969" stroke-width="2" cx="12" cy="12" r="11"></circle>
-                            <text id="↳-1-to-2-Characters" font-family="SoletoTrial-Bold, Soleto Trial" font-size="13" font-weight="bold" line-spacing="13" fill="#696969">
-                                <tspan x="8" y="16.1690063">1</tspan>
-                            </text>
-                        </g>
+                    <g id="baseline-color_lens-24px-copy" transform="translate(0.000000, 14.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <circle id="Oval" stroke="#696969" stroke-width="2" cx="12" cy="12" r="11"></circle>
+                        <polygon id="↳-1-to-2-Characters" fill="#696969" points="9.20703125 9.6015625 9.29589844 8.05908203 11.6254883 7.08154297 13.3647461 7.08154297 13.3647461 14.4638672 15.1992188 14.4638672 14.9897461 16 9.24511719 16 9.45458984 14.4638672 11.3779297 14.4638672 11.3779297 8.80810547"></polygon>
                     </g>
                 </g>
             </g>
