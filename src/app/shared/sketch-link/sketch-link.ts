@@ -85,7 +85,7 @@ let sketch_link = {
     'copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
   ],
   nodata: ['Insert / Toolkit Material Library / Components / No Data'],
-  login: ['Insert / Toolkit Material Library / Components / Checkbox']
+  login: ['copy from Toolkit Material Library.sketch / Toolkit Components / Popups & Modals: Login']
 };
 
 @Component({
