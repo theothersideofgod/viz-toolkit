@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SelectDisableComponent } from './select-disable.component';
+import { VizSelectModule } from 'libs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SelectDisableComponent', () => {
   let component: SelectDisableComponent;
@@ -8,6 +10,7 @@ describe('SelectDisableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizSelectModule, BrowserAnimationsModule],
       declarations: [SelectDisableComponent]
     }).compileComponents();
   }));

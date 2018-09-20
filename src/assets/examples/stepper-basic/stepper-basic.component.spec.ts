@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StepperBasicComponent } from './stepper-basic.component';
+import { VizSteppersModule } from 'libs';
 
 describe('StepperBasicComponent', () => {
   let component: StepperBasicComponent;
@@ -8,6 +9,7 @@ describe('StepperBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizSteppersModule],
       declarations: [StepperBasicComponent]
     }).compileComponents();
   }));

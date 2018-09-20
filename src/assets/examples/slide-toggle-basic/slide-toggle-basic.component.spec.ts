@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SlideToggleBasicComponent } from './slide-toggle-basic.component';
+import { MatSlideToggleModule } from '@angular/material';
 
 describe('SlideToggleBasicComponent', () => {
   let component: SlideToggleBasicComponent;
@@ -8,6 +9,7 @@ describe('SlideToggleBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatSlideToggleModule],
       declarations: [SlideToggleBasicComponent]
     }).compileComponents();
   }));

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ComparativeChartBasicComponent } from './comparative-chart-basic.component';
+import { VizChartModule } from 'libs';
 
 describe('ComparativeChartBasicComponent', () => {
   let component: ComparativeChartBasicComponent;
@@ -8,6 +9,7 @@ describe('ComparativeChartBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizChartModule],
       declarations: [ComparativeChartBasicComponent]
     }).compileComponents();
   }));

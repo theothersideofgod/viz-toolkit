@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SelectBasicComponent } from './select-basic.component';
+import { VizSelectModule } from 'libs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SelectBasicComponent', () => {
   let component: SelectBasicComponent;
@@ -8,6 +10,7 @@ describe('SelectBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizSelectModule, BrowserAnimationsModule],
       declarations: [SelectBasicComponent]
     }).compileComponents();
   }));

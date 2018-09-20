@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BottomsheetBasicComponent } from './bottomsheet-basic.component';
+import { MatNavList, MatBottomSheetRef, MatBottomSheetModule, MAT_BOTTOM_SHEET_DATA } from '@angular/material';
 
 describe('BottomsheetBasicComponent', () => {
   let component: BottomsheetBasicComponent;
@@ -8,7 +9,12 @@ describe('BottomsheetBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BottomsheetBasicComponent]
+      imports: [MatBottomSheetModule],
+      declarations: [BottomsheetBasicComponent, MatNavList],
+      providers: [
+        { provide: MatBottomSheetRef, useValue: {} },
+        { provide: MAT_BOTTOM_SHEET_DATA, useValue: {} }
+      ]
     }).compileComponents();
   }));
 
@@ -22,3 +28,5 @@ describe('BottomsheetBasicComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+

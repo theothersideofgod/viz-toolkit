@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DotPlotChartBasicComponent } from './dot-plot-chart-basic.component';
+import { VizChartModule } from 'libs';
 
 describe('DotPlotChartBasicComponent', () => {
   let component: DotPlotChartBasicComponent;
@@ -8,6 +9,7 @@ describe('DotPlotChartBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizChartModule],
       declarations: [DotPlotChartBasicComponent]
     }).compileComponents();
   }));

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RadioButtonBasicComponent } from './radio-button-basic.component';
+import { MatRadioModule } from '@angular/material';
 
 describe('RadioButtonBasicComponent', () => {
   let component: RadioButtonBasicComponent;
@@ -8,6 +9,7 @@ describe('RadioButtonBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatRadioModule],
       declarations: [RadioButtonBasicComponent]
     }).compileComponents();
   }));

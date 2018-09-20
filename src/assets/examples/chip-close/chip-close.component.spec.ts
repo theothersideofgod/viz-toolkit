@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChipCloseComponent } from './chip-close.component';
+import { MatChipsModule, MatIconModule } from '@angular/material';
 
 describe('ChipCloseComponent', () => {
   let component: ChipCloseComponent;
@@ -8,6 +9,7 @@ describe('ChipCloseComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatChipsModule, MatIconModule],
       declarations: [ChipCloseComponent]
     }).compileComponents();
   }));

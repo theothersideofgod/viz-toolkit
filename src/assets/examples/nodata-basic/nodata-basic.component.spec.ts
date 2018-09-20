@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NodataBasicComponent } from './nodata-basic.component';
+import { VizNodataModule } from 'libs';
 
 describe('NodataBasicComponent', () => {
   let component: NodataBasicComponent;
@@ -8,6 +9,7 @@ describe('NodataBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizNodataModule],
       declarations: [NodataBasicComponent]
     }).compileComponents();
   }));

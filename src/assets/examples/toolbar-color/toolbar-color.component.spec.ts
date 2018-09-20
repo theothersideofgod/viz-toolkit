@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolbarColorComponent } from './toolbar-color.component';
+import { MatIconModule, MatToolbarModule } from '@angular/material';
 
 describe('ToolbarColorComponent', () => {
   let component: ToolbarColorComponent;
@@ -8,6 +9,7 @@ describe('ToolbarColorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatToolbarModule, MatIconModule],
       declarations: [ToolbarColorComponent]
     }).compileComponents();
   }));

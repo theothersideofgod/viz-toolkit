@@ -23,7 +23,9 @@ export class HomepageComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit() {
-    window[`__svgFunc`]();
+    if (window[`__svgFunc`]) {
+      window[`__svgFunc`]();
+    }
   }
 
   routeTo(route) {

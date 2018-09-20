@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CheckboxDisableComponent } from './checkbox-disable.component';
+import { MatCheckboxModule } from '@angular/material';
 
 describe('CheckboxDisableComponent', () => {
   let component: CheckboxDisableComponent;
@@ -8,6 +9,7 @@ describe('CheckboxDisableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatCheckboxModule],
       declarations: [CheckboxDisableComponent]
     }).compileComponents();
   }));

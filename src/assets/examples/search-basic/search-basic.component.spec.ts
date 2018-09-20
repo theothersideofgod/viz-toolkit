@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchBasicComponent } from './search-basic.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VizSearchModule } from 'libs';
+import { MatSelectModule } from '@angular/material';
 
 describe('SearchBasicComponent', () => {
   let component: SearchBasicComponent;
@@ -8,6 +11,7 @@ describe('SearchBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizSearchModule, BrowserAnimationsModule],
       declarations: [SearchBasicComponent]
     }).compileComponents();
   }));

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BenchmarkChartBasicComponent } from './benchmark-chart-basic.component';
+import { VizChartComponent } from 'libs/components/chart/viz-chart.component';
 
 describe('BenchmarkChartBasicComponent', () => {
   let component: BenchmarkChartBasicComponent;
@@ -8,7 +9,7 @@ describe('BenchmarkChartBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BenchmarkChartBasicComponent]
+      declarations: [BenchmarkChartBasicComponent, VizChartComponent]
     }).compileComponents();
   }));
 

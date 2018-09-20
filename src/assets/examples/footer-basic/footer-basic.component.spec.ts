@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterBasicComponent } from './footer-basic.component';
+import { VizFooterModule } from 'libs';
 
 describe('FooterBasicComponent', () => {
   let component: FooterBasicComponent;
@@ -8,6 +9,7 @@ describe('FooterBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizFooterModule],
       declarations: [FooterBasicComponent]
     }).compileComponents();
   }));

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FeedbackIndicatorWarningComponent } from './feedback-indicator-warning.component';
+import { VizFeedbackIndicatorModule } from 'libs';
 
 describe('FeedbackIndicatorWarningComponent', () => {
   let component: FeedbackIndicatorWarningComponent;
@@ -8,6 +9,7 @@ describe('FeedbackIndicatorWarningComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizFeedbackIndicatorModule],
       declarations: [FeedbackIndicatorWarningComponent]
     }).compileComponents();
   }));

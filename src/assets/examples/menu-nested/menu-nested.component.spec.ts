@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuNestedComponent } from './menu-nested.component';
+import { MatMenuModule } from '@angular/material';
 
 describe('MenuNestedComponent', () => {
   let component: MenuNestedComponent;
@@ -8,6 +9,7 @@ describe('MenuNestedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatMenuModule],
       declarations: [MenuNestedComponent]
     }).compileComponents();
   }));

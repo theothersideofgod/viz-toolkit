@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidenavBasicComponent } from './sidenav-basic.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { VizSidenavModule } from 'libs';
+import { MatIconModule } from '@angular/material';
 
 describe('SidenavBasicComponent', () => {
   let component: SidenavBasicComponent;
@@ -8,6 +11,7 @@ describe('SidenavBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule, VizSidenavModule, MatIconModule],
       declarations: [SidenavBasicComponent]
     }).compileComponents();
   }));

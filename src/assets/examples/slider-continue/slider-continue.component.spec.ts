@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderContinueComponent } from './slider-continue.component';
+import { VizSliderModule } from 'libs';
 
 describe('SliderContinueComponent', () => {
   let component: SliderContinueComponent;
@@ -8,6 +9,7 @@ describe('SliderContinueComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizSliderModule],
       declarations: [SliderContinueComponent]
     }).compileComponents();
   }));

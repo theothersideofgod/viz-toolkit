@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TabsComponent } from './tabs.component';
+import { MatTabsModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TabsComponent', () => {
   let component: TabsComponent;
@@ -8,6 +10,7 @@ describe('TabsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatTabsModule, BrowserAnimationsModule],
       declarations: [TabsComponent]
     }).compileComponents();
   }));

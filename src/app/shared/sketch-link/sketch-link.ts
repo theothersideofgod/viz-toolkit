@@ -106,7 +106,7 @@ export class SketchLink implements OnInit {
     const componentName = this.router.url.split('/')[2];
     const splashTester = new RegExp('/', 'g');
     const orTester = new RegExp('or', 'g');
-    this.sketch_links = sketch_link[componentName].map(l => {
+    this.sketch_links = sketch_link[componentName] && sketch_link[componentName].map(l => {
       let newl = l;
       newl = newl.replace(
         splashTester,

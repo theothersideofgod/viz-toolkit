@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChipDisableComponent } from './chip-disable.component';
+import { MatChipsModule, MatIconModule } from '@angular/material';
 
 describe('ChipDisableComponent', () => {
   let component: ChipDisableComponent;
@@ -8,6 +9,7 @@ describe('ChipDisableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatChipsModule, MatIconModule],
       declarations: [ChipDisableComponent]
     }).compileComponents();
   }));

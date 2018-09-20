@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IconSmallComponent } from './icon-small.component';
+import { MatIconModule } from '@angular/material';
 
 describe('IconSmallComponent', () => {
   let component: IconSmallComponent;
@@ -8,6 +9,7 @@ describe('IconSmallComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatIconModule],
       declarations: [IconSmallComponent]
     }).compileComponents();
   }));

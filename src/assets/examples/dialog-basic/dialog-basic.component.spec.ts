@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DialogBasicComponent } from './dialog-basic.component';
+import { VizChartModule } from 'libs';
+import { MatDialogModule } from '@angular/material';
 
 describe('DialogBasicComponent', () => {
   let component: DialogBasicComponent;
@@ -8,6 +10,7 @@ describe('DialogBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizChartModule, MatDialogModule],
       declarations: [DialogBasicComponent]
     }).compileComponents();
   }));

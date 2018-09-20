@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderRangeComponent } from './slider-range.component';
+import { VizSliderModule } from 'libs';
 
 describe('SliderRangeComponent', () => {
   let component: SliderRangeComponent;
@@ -8,6 +9,7 @@ describe('SliderRangeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VizSliderModule],
       declarations: [SliderRangeComponent]
     }).compileComponents();
   }));
