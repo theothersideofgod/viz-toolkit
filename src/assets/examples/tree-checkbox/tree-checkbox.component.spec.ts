@@ -10,7 +10,7 @@ describe('TreeCheckboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [VizTreeModule, MatCheckboxModule, MatIconModule]
+      imports: [VizTreeModule, MatCheckboxModule, MatIconModule],
       declarations: [TreeCheckboxComponent]
     }).compileComponents();
   }));
