@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IconBigComponent } from './icon-big.component';
 
-describe('a icon-big component', () => {
-	let component: IconBigComponent;
+describe('IconBigComponent', () => {
+  let component: IconBigComponent;
+  let fixture: ComponentFixture<IconBigComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				IconBigComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [IconBigComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([IconBigComponent], (IconBigComponent) => {
-		component = IconBigComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(IconBigComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

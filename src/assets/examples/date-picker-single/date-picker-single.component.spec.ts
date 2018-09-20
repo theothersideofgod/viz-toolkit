@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DatePickerSingleComponent } from './date-picker-single.component';
 
-describe('a date-picker-single component', () => {
-	let component: DatePickerSingleComponent;
+describe('DatePickerSingleComponent', () => {
+  let component: DatePickerSingleComponent;
+  let fixture: ComponentFixture<DatePickerSingleComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				DatePickerSingleComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [DatePickerSingleComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([DatePickerSingleComponent], (DatePickerSingleComponent) => {
-		component = DatePickerSingleComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(DatePickerSingleComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

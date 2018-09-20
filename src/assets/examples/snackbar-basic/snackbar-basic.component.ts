@@ -7,9 +7,9 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['snackbar-basic.component.css']
 })
 export class SnackbarBasicComponent implements OnInit {
-  message: string = 'Greyhound divisively hello.';
-  action: string = 'Button';
-  @ViewChild('snackbarBasic',{read: ViewContainerRef}) snackbarBasic: ViewContainerRef
+  message = 'Greyhound divisively hello.';
+  action = 'Button';
+  @ViewChild('snackbarBasic', {read: ViewContainerRef}) snackbarBasic: ViewContainerRef;
   constructor(public snackBar: MatSnackBar) {}
 
   openSnackBar(message: string, action: string) {

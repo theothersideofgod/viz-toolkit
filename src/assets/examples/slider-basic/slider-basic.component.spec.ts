@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderBasicComponent } from './slider-basic.component';
 
-describe('a slider-basic component', () => {
-	let component: SliderBasicComponent;
+describe('SliderBasicComponent', () => {
+  let component: SliderBasicComponent;
+  let fixture: ComponentFixture<SliderBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SliderBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SliderBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SliderBasicComponent], (SliderBasicComponent) => {
-		component = SliderBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SliderBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BadgeIconComponent } from './badge-icon.component';
 
-describe('a badge-icon component', () => {
-	let component: BadgeIconComponent;
+describe('BadgeIconComponent', () => {
+  let component: BadgeIconComponent;
+  let fixture: ComponentFixture<BadgeIconComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				BadgeIconComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [BadgeIconComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([BadgeIconComponent], (BadgeIconComponent) => {
-		component = BadgeIconComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(BadgeIconComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

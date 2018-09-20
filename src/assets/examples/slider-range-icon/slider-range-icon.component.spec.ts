@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderRangeIconComponent } from './slider-range-icon.component';
 
-describe('a slider-range-icon component', () => {
-	let component: SliderRangeIconComponent;
+describe('SliderRangeIconComponent', () => {
+  let component: SliderRangeIconComponent;
+  let fixture: ComponentFixture<SliderRangeIconComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SliderRangeIconComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SliderRangeIconComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SliderRangeIconComponent], (SliderRangeIconComponent) => {
-		component = SliderRangeIconComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SliderRangeIconComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

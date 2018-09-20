@@ -4,7 +4,7 @@ import { ComponentSidenavComponent } from './pages/component-sidenav/component-s
 // import { ComponentList } from './pages/component-list';
 // import { GuideList } from './pages/guide-list';
 import { Routes } from '@angular/router';
-import { 
+import {
   ComponentViewer,
   ComponentOverview
  } from './pages/component-viewer/component-viewer';
@@ -12,7 +12,7 @@ import { ComponentsComponent } from './pages/components/components.component';
 
 export const APP_ROUTES: Routes = [
   {path: '', component: HomepageComponent, pathMatch: 'full', data: {}},
-  
+
   {
     path: 'documentation',
     component: ComponentSidenavComponent,

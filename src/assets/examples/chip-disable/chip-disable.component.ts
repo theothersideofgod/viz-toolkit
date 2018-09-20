@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['chip-disable.component.css']
 })
 export class ChipDisableComponent implements OnInit {
-  chip: boolean = true;
+  chip = true;
   constructor() {}
 
   ngOnInit() {}

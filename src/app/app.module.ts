@@ -12,7 +12,7 @@ import { ExampleModule } from '../assets/examples';
 import { MaterialModule } from './material.module';
 
 import { HomepageModule } from './pages/homepage/homepage';
-import { PrinciplesModule } from './pages/principles/principles.component'
+import { PrinciplesModule } from './pages/principles/principles.component';
 import { ComponentSidenavComponent } from './pages/component-sidenav/component-sidenav';
 import { ComponentViewerModule } from './pages/component-viewer/component-viewer';
 import { HttpClientModule } from '@angular/common/http';

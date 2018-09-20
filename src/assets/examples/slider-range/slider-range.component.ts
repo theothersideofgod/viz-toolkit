@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'slider-range',
+  selector: 'slider-range',
   templateUrl: 'slider-range.component.html',
-  styleUrls: ['slider-range.component.css'],
+  styleUrls: ['slider-range.component.css']
 })
-
 export class SliderRangeComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const SliderRangeData = {
-	name: 'SliderRange'
-}
+  name: 'SliderRange'
+};

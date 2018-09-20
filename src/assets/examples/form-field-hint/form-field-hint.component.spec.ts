@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormFieldHintComponent } from './form-field-hint.component';
 
-describe('a form-field-hint component', () => {
-	let component: FormFieldHintComponent;
+describe('FormFieldHintComponent', () => {
+  let component: FormFieldHintComponent;
+  let fixture: ComponentFixture<FormFieldHintComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				FormFieldHintComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [FormFieldHintComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([FormFieldHintComponent], (FormFieldHintComponent) => {
-		component = FormFieldHintComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FormFieldHintComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

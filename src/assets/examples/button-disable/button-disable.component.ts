@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'button-disable',
+  selector: 'button-disable',
   templateUrl: 'button-disable.component.html',
-  styleUrls: ['button-disable.component.css'],
+  styleUrls: ['button-disable.component.css']
 })
-
 export class ButtonDisableComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const ButtonDisableData = {
-	name: 'ButtonDisable'
-}
+  name: 'ButtonDisable'
+};

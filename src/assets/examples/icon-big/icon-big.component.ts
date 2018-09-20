@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'icon-big',
+  selector: 'icon-big',
   templateUrl: 'icon-big.component.html',
-  styleUrls: ['icon-big.component.css'],
+  styleUrls: ['icon-big.component.css']
 })
-
 export class IconBigComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const IconBigData = {
-	name: 'IconBig'
-}
+  name: 'IconBig'
+};

@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DialogBasicComponent } from './dialog-basic.component';
 
-describe('a dialog-basic component', () => {
-	let component: DialogBasicComponent;
+describe('DialogBasicComponent', () => {
+  let component: DialogBasicComponent;
+  let fixture: ComponentFixture<DialogBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				DialogBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [DialogBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([DialogBasicComponent], (DialogBasicComponent) => {
-		component = DialogBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(DialogBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

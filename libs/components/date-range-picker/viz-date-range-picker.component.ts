@@ -1,19 +1,19 @@
 import { Component, OnInit, AfterViewInit, Input, Pipe, PipeTransform, Optional, Output, EventEmitter } from '@angular/core';
-import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from "mat-range-datepicker";
+import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from 'mat-range-datepicker';
 
 @Component({
   selector: 'viz-date-range-picker',
   templateUrl: './viz-date-range-picker.component.html',
   styleUrls: ['./viz-date-range-picker.component.scss']
 })
-export class VizDateRangePickerComponent {
+export class VizDateRangePickerComponent implements OnInit {
   @Input()
   date: matRangeDatepickerRangeValue<Date> ;
   lastDateInput: matRangeDatepickerRangeValue<Date> | null;
   lastDateChange: matRangeDatepickerRangeValue<Date> | null;
   dateShot: matRangeDatepickerRangeValue<Date> | null;
 
-  @Output() onApply = new EventEmitter<any> ();
+  @Output() apply = new EventEmitter<any> ();
 
   constructor(
     private _dateAdapter: DateAdapter<Date>,
@@ -24,19 +24,19 @@ export class VizDateRangePickerComponent {
   }
 
   onDateInput = (e: matRangeDatepickerInputEvent<Date>) => {
-    console.log('input', this.lastDateInput === e.value)
-    this.lastDateInput = e.value as matRangeDatepickerRangeValue<Date>
+    console.log('input', this.lastDateInput === e.value);
+    this.lastDateInput = e.value as matRangeDatepickerRangeValue<Date>;
   }
   onDateChange = (e: matRangeDatepickerInputEvent<Date>) => {
-    console.log('select', this.lastDateInput === e.value)
+    console.log('select', this.lastDateInput === e.value);
     this.lastDateChange = e.value as matRangeDatepickerRangeValue<Date>;
   }
   onInputDate($event) {
-    this.date = $event
+    this.date = $event;
   }
   onClose(event) {
-    console.log(this.dateShot, this.date)
-    if (!this.dateShot || !this.date) return
+    console.log(this.dateShot, this.date);
+    if (!this.dateShot || !this.date) { return; }
     if (
       this._dateAdapter.sameDate(this.dateShot.begin, this.date.begin)
       &&
@@ -44,10 +44,10 @@ export class VizDateRangePickerComponent {
     ) {
 
     } else {
-      this.dateShot = this.date
-      this.onApply.emit(this.date)
+      this.dateShot = this.date;
+      this.apply.emit(this.date);
     }
-    
+
   }
 }
 
@@ -65,7 +65,7 @@ export class VizDateRangePickerComponent {
 //       if (this._dateAdapter.sameDate(this._dateAdapter.today(), _value.end)) {
 //         // return "Last ? Days";
 //         return _value;
-        
+
 //       } else {
 //         return _value;
 //       }

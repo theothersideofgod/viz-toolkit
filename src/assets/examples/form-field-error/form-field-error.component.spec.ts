@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormFieldErrorComponent } from './form-field-error.component';
 
-describe('a form-field-error component', () => {
-	let component: FormFieldErrorComponent;
+describe('FormFieldErrorComponent', () => {
+  let component: FormFieldErrorComponent;
+  let fixture: ComponentFixture<FormFieldErrorComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				FormFieldErrorComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [FormFieldErrorComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([FormFieldErrorComponent], (FormFieldErrorComponent) => {
-		component = FormFieldErrorComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FormFieldErrorComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

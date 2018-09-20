@@ -1,3 +1,3 @@
-import { MatChipsModule } from "@angular/material";
+import { MatChipsModule } from '@angular/material';
 
-export const VizChipModule = MatChipsModule
+export const VizChipModule = MatChipsModule;

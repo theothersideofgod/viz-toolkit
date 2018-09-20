@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'badge-tabs',
+  selector: 'badge-tabs',
   templateUrl: 'badge-tabs.component.html',
-  styleUrls: ['badge-tabs.component.css'],
+  styleUrls: ['badge-tabs.component.css']
 })
-
 export class BadgeTabsComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const BadgeTabsData = {
-	name: 'BadgeTabs'
-}
+  name: 'BadgeTabs'
+};

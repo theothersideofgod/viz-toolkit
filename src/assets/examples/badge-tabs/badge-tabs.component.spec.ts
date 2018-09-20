@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BadgeTabsComponent } from './badge-tabs.component';
 
-describe('a badge-tabs component', () => {
-	let component: BadgeTabsComponent;
+describe('BadgeTabsComponent', () => {
+  let component: BadgeTabsComponent;
+  let fixture: ComponentFixture<BadgeTabsComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				BadgeTabsComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [BadgeTabsComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([BadgeTabsComponent], (BadgeTabsComponent) => {
-		component = BadgeTabsComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(BadgeTabsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

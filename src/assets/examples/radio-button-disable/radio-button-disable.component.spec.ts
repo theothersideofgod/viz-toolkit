@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RadioButtonDisableComponent } from './radio-button-disable.component';
 
-describe('a radio-button-disable component', () => {
-	let component: RadioButtonDisableComponent;
+describe('RadioButtonDisableComponent', () => {
+  let component: RadioButtonDisableComponent;
+  let fixture: ComponentFixture<RadioButtonDisableComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				RadioButtonDisableComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [RadioButtonDisableComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([RadioButtonDisableComponent], (RadioButtonDisableComponent) => {
-		component = RadioButtonDisableComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(RadioButtonDisableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

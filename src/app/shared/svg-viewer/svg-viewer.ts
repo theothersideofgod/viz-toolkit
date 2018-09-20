@@ -1,16 +1,17 @@
-import {HttpClient} from '@angular/common/http';
-import {Component, ElementRef, Input, NgModule, OnInit} from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { Component, ElementRef, Input, NgModule, OnInit } from '@angular/core';
 
 @Component({
   selector: 'viz-svg-viewer',
-  template: '<div class="viz-svg-viewer" aria-hidden="true"></div>',
+  template: '<div class="viz-svg-viewer" aria-hidden="true"></div>'
 })
 export class SvgViewer implements OnInit {
-  @Input() src: string;
-  @Input() scaleToContainer: boolean;
+  @Input()
+  src: string;
+  @Input()
+  scaleToContainer: boolean;
 
-  constructor(private elementRef: ElementRef, private http: HttpClient) { }
+  constructor(private elementRef: ElementRef, private http: HttpClient) {}
 
   ngOnInit() {
     this.fetchAndInlineSvgContent(this.src);
@@ -20,7 +21,7 @@ export class SvgViewer implements OnInit {
     this.elementRef.nativeElement.innerHTML = template;
 
     if (this.scaleToContainer) {
-      let svg = this.elementRef.nativeElement.querySelector('svg');
+      const svg = this.elementRef.nativeElement.querySelector('svg');
       svg.setAttribute('width', '100%');
       svg.setAttribute('height', '100%');
       svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
@@ -28,7 +29,7 @@ export class SvgViewer implements OnInit {
   }
 
   private fetchAndInlineSvgContent(path: string): void {
-    this.http.get(path, {responseType: 'text'}).subscribe(svgResponse => {
+    this.http.get(path, { responseType: 'text' }).subscribe(svgResponse => {
       this.inlineSvgContent(svgResponse);
     });
   }
@@ -36,6 +37,6 @@ export class SvgViewer implements OnInit {
 
 @NgModule({
   exports: [SvgViewer],
-  declarations: [SvgViewer],
+  declarations: [SvgViewer]
 })
-export class SvgViewerModule { }
+export class SvgViewerModule {}

@@ -1,5 +1,13 @@
-import { Component, ElementRef, Inject, Input, OnInit } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
+import {
+  Component,
+  ElementRef,
+  Inject,
+  Input,
+  OnInit,
+  AfterViewInit,
+  OnDestroy
+} from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subject, fromEvent } from 'rxjs';
 import { debounceTime, takeUntil } from 'rxjs/operators';
@@ -26,7 +34,7 @@ interface Link {
   styleUrls: ['./table-of-contents.scss'],
   templateUrl: './table-of-contents.html'
 })
-export class TableOfContents implements OnInit {
+export class TableOfContents implements OnInit, AfterViewInit, OnDestroy {
   @Input()
   links: Link[] = [];
   @Input()
@@ -165,12 +173,13 @@ export class TableOfContents implements OnInit {
     const scrollOffset = this.getScrollOffset();
 
     return (
-      scrollOffset >= currentLink.top && !(nextLink && nextLink.top < scrollOffset)
+      scrollOffset >= currentLink.top &&
+      !(nextLink && nextLink.top < scrollOffset)
     );
   }
 
   redirect(id) {
-    let target = document.getElementById(id);
+    const target = document.getElementById(id);
     if (target) {
       target.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }

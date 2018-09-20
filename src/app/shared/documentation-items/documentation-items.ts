@@ -13,7 +13,7 @@ export interface DocCategory {
   items: DocItem[];
   summary?: string;
 }
-const COMPONENTS = 'components'
+const COMPONENTS = 'components';
 
 const DOCS: {[key: string]: DocCategory[]} = {
   [COMPONENTS]: [
@@ -75,8 +75,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
   ],
 };
 
-for (let category of DOCS[COMPONENTS]) {
-  for (let doc of category.items) {
+for (const category of DOCS[COMPONENTS]) {
+  for (const doc of category.items) {
     doc.packageName = 'material';
   }
 }

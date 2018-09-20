@@ -74,9 +74,9 @@ export class DocViewer implements OnDestroy {
     this.textContent = this._elementRef.nativeElement.textContent;
     this._loadComponents('app-docs-example', ExampleViewer);
     this._loadComponents('header-link', HeaderLink);
-    //lucas
+    // lucas
     this._loadComponents('doc-viewer-extend', DocViewerExtend);
-    this._loadComponents('sketch-link', SketchLink)
+    this._loadComponents('sketch-link', SketchLink);
 
     this._fixFragmentUrls();
     this.contentLoaded.next();
@@ -97,30 +97,30 @@ export class DocViewer implements OnDestroy {
     this._clearLiveExamples();
     this._loadComponents('app-docs-example', ExampleViewer);
     this._loadComponents('header-link', HeaderLink);
-    //lucas
+    // lucas
     this._loadComponents('doc-viewer-extend', DocViewerExtend);
-    this._loadComponents('sketch-link', SketchLink)
+    this._loadComponents('sketch-link', SketchLink);
   }
 
   /** Instantiate a ExampleViewer for each example. */
   private _loadComponents(componentName: string, componentClass: any) {
-    let exampleElements = this._elementRef.nativeElement.querySelectorAll(
+    const exampleElements = this._elementRef.nativeElement.querySelectorAll(
       `[${componentName}]`
     );
 
     Array.prototype.slice.call(exampleElements).forEach((element: Element) => {
-      let example = element.getAttribute(componentName);
-      let portalHost = new DomPortalHost(
+      const example = element.getAttribute(componentName);
+      const portalHost = new DomPortalHost(
         element,
         this._componentFactoryResolver,
         this._appRef,
         this._injector
       );
-      let examplePortal = new ComponentPortal(
+      const examplePortal = new ComponentPortal(
         componentClass,
         this._viewContainerRef
       );
-      let exampleViewer = portalHost.attach(examplePortal);
+      const exampleViewer = portalHost.attach(examplePortal);
       (exampleViewer.instance as ExampleViewer).example = example;
 
       this._portalHosts.push(portalHost);

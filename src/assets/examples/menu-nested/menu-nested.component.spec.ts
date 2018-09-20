@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuNestedComponent } from './menu-nested.component';
 
-describe('a menu-nested component', () => {
-	let component: MenuNestedComponent;
+describe('MenuNestedComponent', () => {
+  let component: MenuNestedComponent;
+  let fixture: ComponentFixture<MenuNestedComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				MenuNestedComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [MenuNestedComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([MenuNestedComponent], (MenuNestedComponent) => {
-		component = MenuNestedComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(MenuNestedComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

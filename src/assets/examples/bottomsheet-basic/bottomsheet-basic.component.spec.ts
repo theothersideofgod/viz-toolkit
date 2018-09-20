@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BottomsheetBasicComponent } from './bottomsheet-basic.component';
 
-describe('a bottomsheet-basic component', () => {
-	let component: BottomsheetBasicComponent;
+describe('BottomsheetBasicComponent', () => {
+  let component: BottomsheetBasicComponent;
+  let fixture: ComponentFixture<BottomsheetBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				BottomsheetBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [BottomsheetBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([BottomsheetBasicComponent], (BottomsheetBasicComponent) => {
-		component = BottomsheetBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(BottomsheetBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

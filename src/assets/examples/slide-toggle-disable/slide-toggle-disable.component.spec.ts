@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SlideToggleDisableComponent } from './slide-toggle-disable.component';
 
-describe('a slide-toggle-disable component', () => {
-	let component: SlideToggleDisableComponent;
+describe('SlideToggleDisableComponent', () => {
+  let component: SlideToggleDisableComponent;
+  let fixture: ComponentFixture<SlideToggleDisableComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SlideToggleDisableComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SlideToggleDisableComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SlideToggleDisableComponent], (SlideToggleDisableComponent) => {
-		component = SlideToggleDisableComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SlideToggleDisableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

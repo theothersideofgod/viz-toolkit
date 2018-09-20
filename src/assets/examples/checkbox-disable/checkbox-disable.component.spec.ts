@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CheckboxDisableComponent } from './checkbox-disable.component';
 
-describe('a checkbox-disable component', () => {
-	let component: CheckboxDisableComponent;
+describe('CheckboxDisableComponent', () => {
+  let component: CheckboxDisableComponent;
+  let fixture: ComponentFixture<CheckboxDisableComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				CheckboxDisableComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [CheckboxDisableComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([CheckboxDisableComponent], (CheckboxDisableComponent) => {
-		component = CheckboxDisableComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(CheckboxDisableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

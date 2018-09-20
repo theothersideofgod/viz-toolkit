@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TooltipBasicComponent } from './tooltip-basic.component';
 
-describe('a tooltip-basic component', () => {
-	let component: TooltipBasicComponent;
+describe('TooltipBasicComponent', () => {
+  let component: TooltipBasicComponent;
+  let fixture: ComponentFixture<TooltipBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				TooltipBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [TooltipBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([TooltipBasicComponent], (TooltipBasicComponent) => {
-		component = TooltipBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TooltipBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'feedback-indicator-success',
+  selector: 'feedback-indicator-success',
   templateUrl: 'feedback-indicator-success.component.html',
-  styleUrls: ['feedback-indicator-success.component.css'],
+  styleUrls: ['feedback-indicator-success.component.css']
 })
-
 export class FeedbackIndicatorSuccessComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const FeedbackIndicatorSuccessData = {
-	name: 'FeedbackIndicatorSuccess'
-}
+  name: 'FeedbackIndicatorSuccess'
+};

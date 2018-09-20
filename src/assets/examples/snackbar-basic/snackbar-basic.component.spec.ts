@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SnackbarBasicComponent } from './snackbar-basic.component';
 
-describe('a snackbar-basic component', () => {
-	let component: SnackbarBasicComponent;
+describe('SnackbarBasicComponent', () => {
+  let component: SnackbarBasicComponent;
+  let fixture: ComponentFixture<SnackbarBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SnackbarBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SnackbarBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SnackbarBasicComponent], (SnackbarBasicComponent) => {
-		component = SnackbarBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SnackbarBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

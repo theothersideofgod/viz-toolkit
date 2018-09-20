@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchBasicComponent } from './search-basic.component';
 
-describe('a search-basic component', () => {
-	let component: SearchBasicComponent;
+describe('SearchBasicComponent', () => {
+  let component: SearchBasicComponent;
+  let fixture: ComponentFixture<SearchBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SearchBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SearchBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SearchBasicComponent], (SearchBasicComponent) => {
-		component = SearchBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SearchBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

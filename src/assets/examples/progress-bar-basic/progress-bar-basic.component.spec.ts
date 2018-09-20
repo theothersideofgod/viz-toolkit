@@ -8,9 +8,8 @@ describe('ProgressBarBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProgressBarBasicComponent ]
-    })
-    .compileComponents();
+      declarations: [ProgressBarBasicComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

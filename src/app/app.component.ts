@@ -23,5 +23,5 @@ export class AppComponent {
     //   "title": "Additional Brands",
     //   "link": "Additional Brands"
     // }
-  ]
+  ];
 }

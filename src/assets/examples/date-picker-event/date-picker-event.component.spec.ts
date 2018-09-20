@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DatePickerEventComponent } from './date-picker-event.component';
 
-describe('a date-picker-event component', () => {
-	let component: DatePickerEventComponent;
+describe('DatePickerEventComponent', () => {
+  let component: DatePickerEventComponent;
+  let fixture: ComponentFixture<DatePickerEventComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				DatePickerEventComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [DatePickerEventComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([DatePickerEventComponent], (DatePickerEventComponent) => {
-		component = DatePickerEventComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(DatePickerEventComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

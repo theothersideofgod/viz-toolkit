@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ButtonDisableComponent } from './button-disable.component';
 
-describe('a button-disable component', () => {
-	let component: ButtonDisableComponent;
+describe('ButtonDisableComponent', () => {
+  let component: ButtonDisableComponent;
+  let fixture: ComponentFixture<ButtonDisableComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ButtonDisableComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ButtonDisableComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ButtonDisableComponent], (ButtonDisableComponent) => {
-		component = ButtonDisableComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ButtonDisableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

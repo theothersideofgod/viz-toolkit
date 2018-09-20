@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'checkbox-indetermine',
+  selector: 'checkbox-indetermine',
   templateUrl: 'checkbox-indetermine.component.html',
-  styleUrls: ['checkbox-indetermine.component.css'],
+  styleUrls: ['checkbox-indetermine.component.css']
 })
-
 export class CheckboxIndetermineComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const CheckboxIndetermineData = {
-	name: 'CheckboxIndetermine'
-}
+  name: 'CheckboxIndetermine'
+};

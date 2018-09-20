@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginBasicComponent } from './login-basic.component';
 
-describe('a login-basic component', () => {
-	let component: LoginBasicComponent;
+describe('LoginBasicComponent', () => {
+  let component: LoginBasicComponent;
+  let fixture: ComponentFixture<LoginBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				LoginBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [LoginBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([LoginBasicComponent], (LoginBasicComponent) => {
-		component = LoginBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(LoginBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

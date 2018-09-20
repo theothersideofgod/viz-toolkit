@@ -1,21 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'chip-close',
+  selector: 'chip-close',
   templateUrl: 'chip-close.component.html',
-  styleUrls: ['chip-close.component.css'],
+  styleUrls: ['chip-close.component.css']
 })
-
 export class ChipCloseComponent implements OnInit {
-  chip:boolean=true
+  chip = true;
   constructor() {}
 
   ngOnInit() {}
-  remove(){
-    this.chip = false
+  remove() {
+    this.chip = false;
   }
 }
 
 export const ChipCloseData = {
-	name: 'ChipClose'
-}
+  name: 'ChipClose'
+};

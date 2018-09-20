@@ -15,4 +15,4 @@ import { MatMenuModule } from '@angular/material';
 
 
 
-export const VizMenuModule = MatMenuModule
+export const VizMenuModule = MatMenuModule;

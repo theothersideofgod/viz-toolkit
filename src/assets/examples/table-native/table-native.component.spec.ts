@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TableNativeComponent } from './table-native.component';
 
-describe('a table-native component', () => {
-	let component: TableNativeComponent;
+describe('TableNativeComponent', () => {
+  let component: TableNativeComponent;
+  let fixture: ComponentFixture<TableNativeComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				TableNativeComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [TableNativeComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([TableNativeComponent], (TableNativeComponent) => {
-		component = TableNativeComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TableNativeComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

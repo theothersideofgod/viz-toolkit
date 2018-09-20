@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 
 @Component({
-	selector: 'snackbar-mobile',
+  selector: 'snackbar-mobile',
   templateUrl: 'snackbar-mobile.component.html',
-  styleUrls: ['snackbar-mobile.component.css'],
+  styleUrls: ['snackbar-mobile.component.css']
 })
-
 export class SnackbarMobileComponent implements OnInit {
-  message: string =
+  message =
     'Greyhound divisively hello coldly wonderfully marginally far upon excluing.';
-  action: string = 'Button';
+  action = 'Button';
   constructor(public snackBar: MatSnackBar) {}
 
   openSnackBar(message: string, action: string) {
@@ -24,5 +23,5 @@ export class SnackbarMobileComponent implements OnInit {
 }
 
 export const SnackbarMobileData = {
-	name: 'SnackbarMobile'
-}
+  name: 'SnackbarMobile'
+};

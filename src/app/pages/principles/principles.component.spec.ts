@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PrinciplesComponent } from './principles.component';
 
-describe('a principles component', () => {
-	let component: PrinciplesComponent;
+describe('PrinciplesComponent', () => {
+  let component: PrinciplesComponent;
+  let fixture: ComponentFixture<PrinciplesComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				PrinciplesComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [PrinciplesComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([PrinciplesComponent], (PrinciplesComponent) => {
-		component = PrinciplesComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(PrinciplesComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

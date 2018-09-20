@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ButtonTextComponent } from './button-text.component';
 
-describe('a button-text component', () => {
-	let component: ButtonTextComponent;
+describe('ButtonTextComponent', () => {
+  let component: ButtonTextComponent;
+  let fixture: ComponentFixture<ButtonTextComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ButtonTextComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ButtonTextComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ButtonTextComponent], (ButtonTextComponent) => {
-		component = ButtonTextComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ButtonTextComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

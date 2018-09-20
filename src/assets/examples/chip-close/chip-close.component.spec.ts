@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChipCloseComponent } from './chip-close.component';
 
-describe('a chip-close component', () => {
-	let component: ChipCloseComponent;
+describe('ChipCloseComponent', () => {
+  let component: ChipCloseComponent;
+  let fixture: ComponentFixture<ChipCloseComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ChipCloseComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ChipCloseComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ChipCloseComponent], (ChipCloseComponent) => {
-		component = ChipCloseComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ChipCloseComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

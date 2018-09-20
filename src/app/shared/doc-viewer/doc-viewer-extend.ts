@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, HostListener, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'doc-viewer-extend',
   template: `
@@ -11,7 +11,7 @@ export class DocViewerExtend implements OnInit {
   @Input()
   example: string;
 
-  showAllExamples: boolean = false;
+  showAllExamples = false;
 
   constructor(@Inject(DOCUMENT) private document: any) {}
   @HostListener('click')

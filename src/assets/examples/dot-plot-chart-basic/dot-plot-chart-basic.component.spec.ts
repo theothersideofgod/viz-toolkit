@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DotPlotChartBasicComponent } from './dot-plot-chart-basic.component';
 
-describe('a dot-plot-chart-basic component', () => {
-	let component: DotPlotChartBasicComponent;
+describe('DotPlotChartBasicComponent', () => {
+  let component: DotPlotChartBasicComponent;
+  let fixture: ComponentFixture<DotPlotChartBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				DotPlotChartBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [DotPlotChartBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([DotPlotChartBasicComponent], (DotPlotChartBasicComponent) => {
-		component = DotPlotChartBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(DotPlotChartBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

@@ -31,7 +31,7 @@ export class VizRangeSliderComponent implements OnInit {
   step: number;
 
   @Input('minGap')
-  minGap: number = 0;
+  minGap = 0;
 
   @Input('thumbLabel')
   thumbLabel: boolean;
@@ -77,9 +77,9 @@ export class VizRangeSliderComponent implements OnInit {
     this.change.emit([this.lowerValue, this.upperValue]);
   }
   upperValueChange(event: any) {
-    this.upperValue = event.value
+    this.upperValue = event.value;
     this.change.emit([this.lowerValue, this.upperValue]);
-    
+
     // if(this.upperValue <= (this.lowerValue + this.step)) {
     //   this.lowerValue = this.upperValue - this.step
     // }

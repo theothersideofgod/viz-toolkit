@@ -2,34 +2,6 @@ import { Component, OnInit, Inject } from '@angular/core';
 
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
-
-@Component({
-  selector: 'dialog-basic',
-  templateUrl: 'dialog-basic.component.html',
-  styleUrls: ['dialog-basic.component.css']
-})
-export class DialogBasicComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
-
-  openDialog() {
-    this.dialog.open(DialogDataExampleDialog, {
-      data: {
-        animal: 'panda'
-      }
-    });
-  };
-
-  ngOnInit() {}
-}
-
-
-
-
-
-
 const nodeCount = node => {
   return node.children.length;
 };
@@ -69,7 +41,9 @@ const partialCheckedNode = node => {
 })
 export class DialogDataExampleDialog {
   constructor(
-    public dialogRef: MatDialogRef<DialogDataExampleDialog>,@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    public dialogRef: MatDialogRef<DialogDataExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData
+  ) {}
   tree: any = [
     {
       name: 'Hospitals of the University of Pennsylvania-Penn Presbyterian',
@@ -122,21 +96,19 @@ export class DialogDataExampleDialog {
       ]
     }
   ];
-  
+
   onNoClick() {
-    this.dialogRef.close()
+    this.dialogRef.close();
   }
 
-  ngOnInit() {}
-
   descendantsAllSelected(node) {
-    //if node have children, count if checked node equal to node count
+    // if node have children, count if checked node equal to node count
     if (node.children.length > 0) {
-      let status = nodeCount(node) === checkedNodeCount(node);
+      const status = nodeCount(node) === checkedNodeCount(node);
       node.checked = status;
       return status;
     }
-    //if node dont have children, just return the node check status
+    // if node dont have children, just return the node check status
     return node.checked;
   }
 
@@ -148,18 +120,40 @@ export class DialogDataExampleDialog {
   }
 
   toggle(node) {
-    //if node have children, toggle all children node status
+    // if node have children, toggle all children node status
     if (node.children.length > 0) {
       toggleAllChildNode(node, !node.checked);
     }
-    //if node dont have children, toggle itself
+    // if node dont have children, toggle itself
     node.checked = !node.checked;
   }
 
   selectAll(e) {
-    console.log(e.checked)
-    toggleAllChildNode({children:this.tree}, e.checked)
+    console.log(e.checked);
+    toggleAllChildNode({ children: this.tree }, e.checked);
   }
+}
+export interface DialogData {
+  animal: 'panda' | 'unicorn' | 'lion';
+}
+
+@Component({
+  selector: 'dialog-basic',
+  templateUrl: 'dialog-basic.component.html',
+  styleUrls: ['dialog-basic.component.css']
+})
+export class DialogBasicComponent implements OnInit {
+  constructor(public dialog: MatDialog) {}
+
+  openDialog() {
+    this.dialog.open(DialogDataExampleDialog, {
+      data: {
+        animal: 'panda'
+      }
+    });
+  }
+
+  ngOnInit() {}
 }
 
 export const DialogBasicData = {

@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CheckboxIndetermineComponent } from './checkbox-indetermine.component';
 
-describe('a checkbox-indetermine component', () => {
-	let component: CheckboxIndetermineComponent;
+describe('CheckboxIndetermineComponent', () => {
+  let component: CheckboxIndetermineComponent;
+  let fixture: ComponentFixture<CheckboxIndetermineComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				CheckboxIndetermineComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [CheckboxIndetermineComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([CheckboxIndetermineComponent], (CheckboxIndetermineComponent) => {
-		component = CheckboxIndetermineComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(CheckboxIndetermineComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

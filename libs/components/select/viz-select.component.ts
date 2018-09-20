@@ -14,19 +14,19 @@ export interface DateType {
   styleUrls: ['./viz-select.component.scss']
 })
 export class VizSelectComponent implements OnInit {
-  @Input()disabled:boolean;
-  @Input()placeholder:string;
-  @Input()options:Array<DateType> = []
+  @Input()disabled: boolean;
+  @Input()placeholder: string;
+  @Input()options: Array<DateType> = [];
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
-  @Output() select = new EventEmitter<DateType>()
-  value: string = "";
-  menuShown: boolean = false;
+  @Output() select = new EventEmitter<DateType>();
+  value = '';
+  menuShown = false;
   selected: DateType;
 
   constructor() {}
 
   ngOnInit() {
-    this.selected = this.options[0]
+    this.selected = this.options[0];
   }
   showMenu() {
     this.menuShown = true;
@@ -36,7 +36,7 @@ export class VizSelectComponent implements OnInit {
   }
   selectOption(option) {
     this.selected = option;
-    this.select.emit(option)
+    this.select.emit(option);
     this.trigger.closeMenu();
   }
   message() {
@@ -45,5 +45,5 @@ export class VizSelectComponent implements OnInit {
 
 
 
-  
+
 }

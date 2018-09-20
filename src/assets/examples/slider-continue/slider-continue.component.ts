@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'slider-continue',
+  selector: 'slider-continue',
   templateUrl: 'slider-continue.component.html',
-  styleUrls: ['slider-continue.component.css'],
+  styleUrls: ['slider-continue.component.css']
 })
-
 export class SliderContinueComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const SliderContinueData = {
-	name: 'SliderContinue'
-}
+  name: 'SliderContinue'
+};

@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BarChartBasicComponent } from './bar-chart-basic.component';
 
-describe('a bar-chart-basic component', () => {
-	let component: BarChartBasicComponent;
+describe('BarChartBasicComponent', () => {
+  let component: BarChartBasicComponent;
+  let fixture: ComponentFixture<BarChartBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				BarChartBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [BarChartBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([BarChartBasicComponent], (BarChartBasicComponent) => {
-		component = BarChartBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(BarChartBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

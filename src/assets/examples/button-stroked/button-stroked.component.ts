@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'button-stroked',
+  selector: 'button-stroked',
   templateUrl: 'button-stroked.component.html',
-  styleUrls: ['button-stroked.component.css'],
+  styleUrls: ['button-stroked.component.css']
 })
-
 export class ButtonStrokedComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const ButtonStrokedData = {
-	name: 'ButtonStroked'
-}
+  name: 'ButtonStroked'
+};

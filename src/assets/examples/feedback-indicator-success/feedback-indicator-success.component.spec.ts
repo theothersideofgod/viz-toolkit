@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FeedbackIndicatorSuccessComponent } from './feedback-indicator-success.component';
 
-describe('a feedback-indicator-success component', () => {
-	let component: FeedbackIndicatorSuccessComponent;
+describe('FeedbackIndicatorSuccessComponent', () => {
+  let component: FeedbackIndicatorSuccessComponent;
+  let fixture: ComponentFixture<FeedbackIndicatorSuccessComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				FeedbackIndicatorSuccessComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [FeedbackIndicatorSuccessComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([FeedbackIndicatorSuccessComponent], (FeedbackIndicatorSuccessComponent) => {
-		component = FeedbackIndicatorSuccessComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FeedbackIndicatorSuccessComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

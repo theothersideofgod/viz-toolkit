@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'checkbox-disable',
+  selector: 'checkbox-disable',
   templateUrl: 'checkbox-disable.component.html',
-  styleUrls: ['checkbox-disable.component.css'],
+  styleUrls: ['checkbox-disable.component.css']
 })
-
 export class CheckboxDisableComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const CheckboxDisableData = {
-	name: 'CheckboxDisable'
-}
+  name: 'CheckboxDisable'
+};

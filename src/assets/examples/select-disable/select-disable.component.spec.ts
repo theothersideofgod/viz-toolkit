@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SelectDisableComponent } from './select-disable.component';
 
-describe('a select-disable component', () => {
-	let component: SelectDisableComponent;
+describe('SelectDisableComponent', () => {
+  let component: SelectDisableComponent;
+  let fixture: ComponentFixture<SelectDisableComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SelectDisableComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SelectDisableComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SelectDisableComponent], (SelectDisableComponent) => {
-		component = SelectDisableComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SelectDisableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

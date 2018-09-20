@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ButtonStrokedComponent } from './button-stroked.component';
 
-describe('a button-stroked component', () => {
-	let component: ButtonStrokedComponent;
+describe('ButtonStrokedComponent', () => {
+  let component: ButtonStrokedComponent;
+  let fixture: ComponentFixture<ButtonStrokedComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ButtonStrokedComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ButtonStrokedComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ButtonStrokedComponent], (ButtonStrokedComponent) => {
-		component = ButtonStrokedComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ButtonStrokedComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

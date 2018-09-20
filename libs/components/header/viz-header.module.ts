@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
-import { VizHeaderComponent } from './viz-header.component'
+import { NgModule } from '@angular/core';
+import { VizHeaderComponent } from './viz-header.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatIconModule, MatBadgeModule, MatMenuModule, MatRippleModule } from '@angular/material';

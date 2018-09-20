@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderContinueComponent } from './slider-continue.component';
 
-describe('a slider-continue component', () => {
-	let component: SliderContinueComponent;
+describe('SliderContinueComponent', () => {
+  let component: SliderContinueComponent;
+  let fixture: ComponentFixture<SliderContinueComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SliderContinueComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SliderContinueComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SliderContinueComponent], (SliderContinueComponent) => {
-		component = SliderContinueComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SliderContinueComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

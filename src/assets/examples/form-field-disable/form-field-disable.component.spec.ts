@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormFieldDisableComponent } from './form-field-disable.component';
 
-describe('a form-field-disable component', () => {
-	let component: FormFieldDisableComponent;
+describe('FormFieldDisableComponent', () => {
+  let component: FormFieldDisableComponent;
+  let fixture: ComponentFixture<FormFieldDisableComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				FormFieldDisableComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [FormFieldDisableComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([FormFieldDisableComponent], (FormFieldDisableComponent) => {
-		component = FormFieldDisableComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FormFieldDisableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

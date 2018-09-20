@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PaginatorBasicComponent } from './paginator-basic.component';
 
-describe('a paginator-basic component', () => {
-	let component: PaginatorBasicComponent;
+describe('PaginatorBasicComponent', () => {
+  let component: PaginatorBasicComponent;
+  let fixture: ComponentFixture<PaginatorBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				PaginatorBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [PaginatorBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([PaginatorBasicComponent], (PaginatorBasicComponent) => {
-		component = PaginatorBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(PaginatorBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

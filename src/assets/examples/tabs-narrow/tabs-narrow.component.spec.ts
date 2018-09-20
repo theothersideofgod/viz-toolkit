@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TabsNarrowComponent } from './tabs-narrow.component';
 
-describe('a tabs-narrow component', () => {
-	let component: TabsNarrowComponent;
+describe('TabsNarrowComponent', () => {
+  let component: TabsNarrowComponent;
+  let fixture: ComponentFixture<TabsNarrowComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				TabsNarrowComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [TabsNarrowComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([TabsNarrowComponent], (TabsNarrowComponent) => {
-		component = TabsNarrowComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TabsNarrowComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

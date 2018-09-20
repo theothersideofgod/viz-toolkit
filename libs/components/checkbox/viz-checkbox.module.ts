@@ -13,4 +13,4 @@ import { MatCheckboxModule } from '@angular/material';
 
 
 
-export const VizCheckboxModule = MatCheckboxModule
+export const VizCheckboxModule = MatCheckboxModule;

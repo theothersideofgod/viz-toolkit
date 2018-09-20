@@ -70,7 +70,7 @@ const _List = [
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-]
+];
 
 @NgModule({
   imports: [

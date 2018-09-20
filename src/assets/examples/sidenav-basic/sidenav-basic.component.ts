@@ -57,11 +57,11 @@ export class SidenavBasicComponent implements OnInit {
   constructor() {}
   ngOnInit() {}
   removeItem(navIndex, targetSub) {
-    let targetNav = this.navList[navIndex]
+    const targetNav = this.navList[navIndex];
 
-    this.navList[navIndex].subs = targetNav.subs.filter(sub=>{
-      return sub.name !== targetSub.name
-    })
+    this.navList[navIndex].subs = targetNav.subs.filter(sub => {
+      return sub.name !== targetSub.name;
+    });
 
   }
 }

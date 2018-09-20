@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChipDisableComponent } from './chip-disable.component';
 
-describe('a chip-disable component', () => {
-	let component: ChipDisableComponent;
+describe('ChipDisableComponent', () => {
+  let component: ChipDisableComponent;
+  let fixture: ComponentFixture<ChipDisableComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ChipDisableComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ChipDisableComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ChipDisableComponent], (ChipDisableComponent) => {
-		component = ChipDisableComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ChipDisableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'badge-icon',
+  selector: 'badge-icon',
   templateUrl: 'badge-icon.component.html',
-  styleUrls: ['badge-icon.component.css'],
+  styleUrls: ['badge-icon.component.css']
 })
-
 export class BadgeIconComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const BadgeIconData = {
-	name: 'BadgeIcon'
-}
+  name: 'BadgeIcon'
+};

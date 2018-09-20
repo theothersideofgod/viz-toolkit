@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolbarColorComponent } from './toolbar-color.component';
 
-describe('a toolbar-color component', () => {
-	let component: ToolbarColorComponent;
+describe('ToolbarColorComponent', () => {
+  let component: ToolbarColorComponent;
+  let fixture: ComponentFixture<ToolbarColorComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ToolbarColorComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ToolbarColorComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ToolbarColorComponent], (ToolbarColorComponent) => {
-		component = ToolbarColorComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ToolbarColorComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

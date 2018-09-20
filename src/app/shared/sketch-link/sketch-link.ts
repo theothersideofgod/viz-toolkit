@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
-let sketch_link = {
+const sketch_link = {
   checkbox: ['Insert / Toolkit Material Library / Components / Checkbox'],
   datepicker: [
     'Insert / Toolkit Material Library / Components / Daterange Picker / Default or Selected 1 or Selected 2',
@@ -85,7 +85,9 @@ let sketch_link = {
     'copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
   ],
   nodata: ['Insert / Toolkit Material Library / Components / No Data'],
-  login: ['copy from Toolkit Material Library.sketch / Toolkit Components / Popups & Modals: Login']
+  login: [
+    'copy from Toolkit Material Library.sketch / Toolkit Components / Popups & Modals: Login'
+  ]
 };
 
 @Component({
@@ -101,9 +103,9 @@ export class SketchLink implements OnInit {
   }
 
   ngOnInit() {
-    let componentName = this.router.url.split('/')[2];
-    let splashTester = new RegExp('/', 'g');
-    let orTester = new RegExp('or', 'g');
+    const componentName = this.router.url.split('/')[2];
+    const splashTester = new RegExp('/', 'g');
+    const orTester = new RegExp('or', 'g');
     this.sketch_links = sketch_link[componentName].map(l => {
       let newl = l;
       newl = newl.replace(

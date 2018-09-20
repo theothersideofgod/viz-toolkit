@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderBasicIconComponent } from './slider-basic-icon.component';
 
-describe('a slider-basic-icon component', () => {
-	let component: SliderBasicIconComponent;
+describe('SliderBasicIconComponent', () => {
+  let component: SliderBasicIconComponent;
+  let fixture: ComponentFixture<SliderBasicIconComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SliderBasicIconComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SliderBasicIconComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SliderBasicIconComponent], (SliderBasicIconComponent) => {
-		component = SliderBasicIconComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SliderBasicIconComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

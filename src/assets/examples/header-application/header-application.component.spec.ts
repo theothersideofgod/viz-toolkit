@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderApplicationComponent } from './header-application.component';
 
-describe('a header-application component', () => {
-	let component: HeaderApplicationComponent;
+describe('HeaderApplicationComponent', () => {
+  let component: HeaderApplicationComponent;
+  let fixture: ComponentFixture<HeaderApplicationComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				HeaderApplicationComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [HeaderApplicationComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([HeaderApplicationComponent], (HeaderApplicationComponent) => {
-		component = HeaderApplicationComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(HeaderApplicationComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

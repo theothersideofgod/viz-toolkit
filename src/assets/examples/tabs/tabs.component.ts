@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'tabs',
+  selector: 'tabs',
   templateUrl: 'tabs.component.html',
-  styleUrls: ['tabs.component.scss'],
+  styleUrls: ['tabs.component.scss']
 })
-
 export class TabsComponent implements OnInit {
   navLinks = [
     {
@@ -29,13 +28,11 @@ export class TabsComponent implements OnInit {
       width: '80px'
     }
   ];
-  ngOnInit() { }
-  
-  seachOnClick() {
-    
-  }
+  ngOnInit() {}
+
+  seachOnClick() {}
 }
 
 export const TabsData = {
-	name: 'Tabs'
-}
+  name: 'Tabs'
+};

@@ -1,25 +1,24 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderEventComponent } from './slider-event.component';
 
-describe('a slider-event component', () => {
-	let component: SliderEventComponent;
+describe('SliderEventComponent', () => {
+  let component: SliderEventComponent;
+  let fixture: ComponentFixture<SliderEventComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SliderEventComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SliderEventComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SliderEventComponent], (SliderEventComponent) => {
-		component = SliderEventComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SliderEventComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });
