@@ -1,7 +1,7 @@
 :host {
   .home-wrapper {
     display: block;
-    
+    height: calc(100vh - 72px - 72px);
     .home-sec-1 {
       display: flex;
       // justify-content: space-around;
