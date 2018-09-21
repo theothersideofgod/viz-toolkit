@@ -20,7 +20,7 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   @HostBinding('class') baseClass = 'viz-slider';
   @HostBinding('tabindex') baseTab = '-1';
 
-  dragging = false;
+  isDragging = false;
   thumbPosition: number;
   lowerThumbPosition: number;
   upperThumbPosition: number;
@@ -105,7 +105,7 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   private _sliderWrapper: ElementRef;
 
   onDragStart(event: any) {
-    this.dragging = true;
+    this.isDragging = true;
     if (event.target === this._sliderWrapper.nativeElement) {
       if (this.range) {
         if (this.thumbPositionControl(event.offsetX) === 'lower') {
@@ -128,7 +128,7 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   onDragging(event: any) {
     // console.log(event)
 
-    if (this.dragging && event.target === this._sliderWrapper.nativeElement) {
+    if (this.isDragging && event.target === this._sliderWrapper.nativeElement) {
       if (this.range) {
         if (this.thumbPositionControl(event.offsetX) === 'lower') {
           this.lowerThumbFocusState = 'pressed';
@@ -149,7 +149,7 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   }
 
   onDragEnd(event: any) {
-    this.dragging = false;
+    this.isDragging = false;
     if (this.range) {
       if (this.thumbPositionControl(event.offsetX) === 'lower') {
         this.lowerThumbFocusState = 'focused';

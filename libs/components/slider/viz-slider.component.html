@@ -19,7 +19,7 @@
          [ngStyle]="thumbFocusRingStyle">
 
     </div>
-    <div class="viz-slider-thumb-label" *ngIf="thumbLabel">
+    <div class="viz-slider-thumb-label" *ngIf="thumbLabel && isDragging">
       <span class="viz-slider-thumb-label-text">{{value}}</span>
     </div>
   </div>
@@ -32,7 +32,7 @@
          [ngStyle]="upperThumbFocusRingStyle">
 
     </div>
-    <div class="viz-slider-thumb-label" *ngIf="thumbLabel">
+    <div class="viz-slider-thumb-label" *ngIf="thumbLabel && isDragging">
       <span class="viz-slider-thumb-label-text">{{upperValue}}</span>
     </div>
   </div>
@@ -45,7 +45,7 @@
          [ngStyle]="lowerThumbFocusRingStyle">
 
     </div>
-    <div class="viz-slider-thumb-label" *ngIf="thumbLabel">
+    <div class="viz-slider-thumb-label" *ngIf="thumbLabel && isDragging">
       <span class="viz-slider-thumb-label-text">{{lowerValue}}</span>
     </div>
   </div>
