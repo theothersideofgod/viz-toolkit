@@ -10,7 +10,7 @@ $mat-slider-thumb-label-size: 28px !default;
     cursor: pointer;
     position: relative;
     height: 48px;
-    min-width: 150px
+    min-width: 150px;
   }
   &-track-wrapper {
     position: absolute;
@@ -38,7 +38,7 @@ $mat-slider-thumb-label-size: 28px !default;
     top: 50%;
     height: 2px;
     width: 100%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
   }
   &-ticks {
     height: 2px;
@@ -53,8 +53,8 @@ $mat-slider-thumb-label-size: 28px !default;
   &-thumb-container {
     position: absolute;
     top: 50%;
-    transition: transform .4s cubic-bezier(.25,.8,.25,1);
-    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    // pointer-events: none;
   }
   &-thumb {
     cursor: pointer;
@@ -66,6 +66,9 @@ $mat-slider-thumb-label-size: 28px !default;
     background-color: $viz-blue;
     border-radius: 50%;
     z-index: 1;
+    &:hover ~ .viz-slider-focus-ring {
+      display: block !important;
+    }
   }
   &-focus-ring {
     position: absolute;
@@ -83,7 +86,7 @@ $mat-slider-thumb-label-size: 28px !default;
     width: 28px;
     background-color: $viz-blue;
     border-radius: 50% 50% 0;
-    transform: translate(-14px,-40px)rotate(45deg);
+    transform: translate(-14px, -40px) rotate(45deg);
     top: -40px;
     left: -14px;
   }
@@ -92,9 +95,8 @@ $mat-slider-thumb-label-size: 28px !default;
     color: #ffffff;
     font-size: 12px;
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
-    transform:translate(-50%,-50%)rotate(-45deg)
-    
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }

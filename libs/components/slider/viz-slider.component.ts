@@ -287,10 +287,10 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
     if (this.tickInterval) {
       const range = this.rangeCheck(positionPercent);
 
-      if (positionPercent < range[1]) {
-        positionPercent = +range[0];
+      if (positionPercent < range.center) {
+        positionPercent = +range.start;
       } else {
-        positionPercent = +range[2];
+        positionPercent = +range.end;
       }
     }
 
@@ -298,12 +298,18 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   }
 
   rangeCheck(value) {
+    const validateValue = value < 0 ? 0 : value ;
     for (let i = 0; i < this.tickArray.length; i++) {
-      if (this.tickArray[i] <= value && value <= this.tickArray[i + 1]) {
+      if (this.tickArray[i] <= validateValue && validateValue <= this.tickArray[i + 1]) {
         const centerPoint: number =
           (parseFloat(this.tickArray[i]) + parseFloat(this.tickArray[i + 1])) *
           0.5;
-        return [this.tickArray[i], centerPoint, this.tickArray[i + 1]];
+
+        return {
+          start: this.tickArray[i],
+          center: centerPoint,
+          end: this.tickArray[i + 1]
+        };
       }
     }
   }
