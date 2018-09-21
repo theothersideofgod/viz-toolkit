@@ -590,6 +590,15 @@ mat-chip {
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
+
+  &.mat-chip-disabled {
+    color: #000000;
+    opacity: 0.4;
+    .mat-icon {
+      color: #9f9f9f;
+      opacity: 0.4;
+    }
+  }
 }
 .mat-chip-remove {
   opacity: 1 !important;
