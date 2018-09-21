@@ -599,11 +599,19 @@ mat-chip {
       opacity: 0.4;
     }
   }
+  &:not([color="primary"]) {
+    .mat-chip-remove {
+      color: #9f9f9f !important;
+      opacity: 1 !important;
+    }
+  }
+  &[color="primary"] {
+    .mat-chip-remove {
+      opacity: 1 !important;
+    }
+  }
 }
-.mat-chip-remove {
-  opacity: 1 !important;
-  color: #000000 !important;
-}
+
 //paginator
 // .mat-paginator {
 //   line-height: 24px;
