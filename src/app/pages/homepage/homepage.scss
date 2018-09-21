@@ -2,6 +2,7 @@
   .home-wrapper {
     display: block;
     height: calc(100vh - 72px - 72px);
+    margin: 0 9.375vw;
     @media screen and (min-width: 1400px) {
       width: 1170px;
       margin: 0 auto;
