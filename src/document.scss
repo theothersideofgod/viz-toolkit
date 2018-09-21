@@ -43,8 +43,8 @@ a {
   color: #28292b;
   letter-spacing: 0;
   margin-bottom: 16px;
-  // height: 34px;
-  // line-height:34px;
+  height: 34px;
+  line-height:34px;
 }
 .doc-desc-2 {
   /* Use in forms to togg: */
@@ -437,6 +437,15 @@ a {
   }
 }
 .doc-color-strip-wrapper {
+}
+.doc-download-link {
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-size: 16px;
+  display:inline-block;
+  color: $viz-purple;
+  font-weight: 300;
+  z-index: 1;
 }
 .doc-color-strip {
   border-radius: 5px;
