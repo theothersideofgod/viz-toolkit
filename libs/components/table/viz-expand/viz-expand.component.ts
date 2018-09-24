@@ -30,16 +30,16 @@ import {
   ]
 })
 export class VizExpandComponent implements OnInit {
-  isOpen: boolean = false;
-  
+  isOpen = false;
+
   @Input()
   set vizExpand(value: boolean) {
-    this.detailExpand = value ? "*" : "void"
+    this.detailExpand = value ? '*' : 'void';
   }
-  @HostBinding('@detailExpand') detailExpand = '*'
+  @HostBinding('@detailExpand') detailExpand = '*';
   constructor(
   ) {}
 
-  
+
   ngOnInit() {}
 }

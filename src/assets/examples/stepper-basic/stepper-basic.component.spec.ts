@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StepperBasicComponent } from './stepper-basic.component';
+import { VizSteppersModule } from 'libs';
 
-describe('a stepper-basic component', () => {
-	let component: StepperBasicComponent;
+describe('StepperBasicComponent', () => {
+  let component: StepperBasicComponent;
+  let fixture: ComponentFixture<StepperBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				StepperBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [VizSteppersModule],
+      declarations: [StepperBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([StepperBasicComponent], (StepperBasicComponent) => {
-		component = StepperBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(StepperBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

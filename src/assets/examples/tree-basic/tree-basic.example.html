@@ -1,20 +1,15 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">viz-tree</span> [<span class="hljs-attr">tree</span>]=<span class="hljs-string">"tree"</span>&gt;</span>
+
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">VizTreeLeafDef</span>=<span class="hljs-string">"let node"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"descendantsAllSelected(node)"</span> [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"descendantsPartiallySelected(node)"</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"toggle(node)"</span>&gt;</span>{{node.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      {{node.name}}
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">VizTreeNodeDef</span>=<span class="hljs-string">"let node"</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- &lt;mat-icon (click)="node.isExpanded = !node.isExpanded"&gt;
-        {{node.isExpanded ? 'arrow_drop_down' : 'arrow_drop_up'}}
-      &lt;/mat-icon&gt; --&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"node.isExpanded = !node.isExpanded"</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">"'toggle ' + node.name"</span> <span class="hljs-attr">matTreeNodeToggle</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-icon-rtl-mirror"</span>&gt;</span>
-          {{node.isExpanded ? 'arrow_drop_up' : 'arrow_drop_down'}}
-        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"descendantsAllSelected(node)"</span> [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"descendantsPartiallySelected(node)"</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"toggle(node)"</span>&gt;</span>{{node.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"node.isExpanded = !node.isExpanded"</span>&gt;</span> {{node.isExpanded ? 'arrow_drop_down' : 'arrow_drop_up'}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      {{node.name}}
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
   <span class="hljs-tag">&lt;/<span class="hljs-name">viz-tree</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

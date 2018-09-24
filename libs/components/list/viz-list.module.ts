@@ -1,3 +1,3 @@
-import { MatListModule } from "@angular/material";
+import { MatListModule } from '@angular/material';
 
-export const VizListModule = MatListModule
+export const VizListModule = MatListModule;

@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProgressBarChartBasicComponent } from './progress-bar-chart-basic.component';
+import { VizChartModule } from 'libs';
 
-describe('a progress-bar-chart-basic component', () => {
-	let component: ProgressBarChartBasicComponent;
+describe('ProgressBarChartBasicComponent', () => {
+  let component: ProgressBarChartBasicComponent;
+  let fixture: ComponentFixture<ProgressBarChartBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ProgressBarChartBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [VizChartModule],
+      declarations: [ProgressBarChartBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ProgressBarChartBasicComponent], (ProgressBarChartBasicComponent) => {
-		component = ProgressBarChartBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ProgressBarChartBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

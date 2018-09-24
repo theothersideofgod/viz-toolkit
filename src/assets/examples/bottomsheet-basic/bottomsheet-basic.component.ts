@@ -16,7 +16,7 @@ export class BottomsheetBasicComponent implements OnInit {
   }
 
   openLink(): void {
-    this.bottomSheet.dismiss()
+    this.bottomSheet.dismiss();
   }
 
   ngOnInit() {}

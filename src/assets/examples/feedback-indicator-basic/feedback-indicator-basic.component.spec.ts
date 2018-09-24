@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FeedbackIndicatorBasicComponent } from './feedback-indicator-basic.component';
+import { VizFeedbackIndicatorModule } from 'libs';
 
-describe('a feedback-indicator-basic component', () => {
-	let component: FeedbackIndicatorBasicComponent;
+describe('FeedbackIndicatorBasicComponent', () => {
+  let component: FeedbackIndicatorBasicComponent;
+  let fixture: ComponentFixture<FeedbackIndicatorBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				FeedbackIndicatorBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [VizFeedbackIndicatorModule],
+      declarations: [FeedbackIndicatorBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([FeedbackIndicatorBasicComponent], (FeedbackIndicatorBasicComponent) => {
-		component = FeedbackIndicatorBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FeedbackIndicatorBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

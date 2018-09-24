@@ -13,7 +13,7 @@ export interface DocCategory {
   items: DocItem[];
   summary?: string;
 }
-const COMPONENTS = 'components'
+const COMPONENTS = 'components';
 
 const DOCS: {[key: string]: DocCategory[]} = {
   [COMPONENTS]: [
@@ -21,6 +21,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'colors', name: ''},
+        {id: 'typography', name: ''},
         {id: 'search', name: 'SearchBasic', examples: ['search-basic']},
         {id: 'misc', name: 'Misc'},
         {id: 'breadscrumbbasic', name: 'BreadscrumbBasic', examples: ['breadscrumb-basic']},
@@ -73,8 +75,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
   ],
 };
 
-for (let category of DOCS[COMPONENTS]) {
-  for (let doc of category.items) {
+for (const category of DOCS[COMPONENTS]) {
+  for (const doc of category.items) {
     doc.packageName = 'material';
   }
 }

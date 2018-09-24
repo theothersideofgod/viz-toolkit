@@ -1,0 +1,20 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'chip-disable'</span>,
+  templateUrl: <span class="hljs-string">'chip-disable.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'chip-disable.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipDisableComponent <span class="hljs-keyword">implements</span> OnInit {
+  chip: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {}
+
+  ngOnInit() {}
+  remove() {
+    <span class="hljs-keyword">this</span>.chip = <span class="hljs-literal">false</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ChipDisableData = {
+  name: <span class="hljs-string">'ChipDisable'</span>
+};

@@ -1,3 +1,3 @@
-import { MatBadgeModule } from "@angular/material";
+import { MatBadgeModule } from '@angular/material';
 
-export const VizBadgeModule = MatBadgeModule
+export const VizBadgeModule = MatBadgeModule;

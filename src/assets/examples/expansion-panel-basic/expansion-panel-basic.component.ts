@@ -16,4 +16,4 @@ export class ExpansionPanelBasicComponent implements OnInit {
 
 export const ExpansionPanelBasicData = {
   name: ''
-}
+};

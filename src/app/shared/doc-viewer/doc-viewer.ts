@@ -1,6 +1,6 @@
 import { ComponentPortal, DomPortalHost } from '@angular/cdk/portal';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { 
+import {
   ApplicationRef,
   Component,
   ComponentFactoryResolver,
@@ -10,16 +10,18 @@ import {
   Input,
   OnDestroy,
   Output,
-  ViewContainerRef,
- } from '@angular/core';
+  ViewContainerRef
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ExampleViewer } from '../example-viewer/example-viewer';
 import { HeaderLink } from './header-link';
+import { DocViewerExtend } from './doc-viewer-extend';
+import { SketchLink } from '../sketch-link/sketch-link';
 
 @Component({
   selector: 'doc-viewer',
-  template: 'Loading document...',
+  template: 'Loading document...'
 })
 export class DocViewer implements OnDestroy {
   private _portalHosts: DomPortalHost[] = [];
@@ -28,22 +30,25 @@ export class DocViewer implements OnDestroy {
   /** The URL of the document to display. */
   @Input()
   set documentUrl(url: string) {
-    console.log('here!!')
-    this._fetchDocument(url); 
+    // console.log('here!!');
+    this._fetchDocument(url);
   }
 
-  @Output() contentLoaded = new EventEmitter<void>();
+  @Output()
+  contentLoaded = new EventEmitter<void>();
 
   /** The document text. It should not be HTML encoded. */
   textContent = '';
 
-  constructor(private _appRef: ApplicationRef,
-              private _componentFactoryResolver: ComponentFactoryResolver,
-              private _elementRef: ElementRef,
-              private _http: HttpClient,
-              private _injector: Injector,
-              private _viewContainerRef: ViewContainerRef,
-              private _router: Router) {}
+  constructor(
+    private _appRef: ApplicationRef,
+    private _componentFactoryResolver: ComponentFactoryResolver,
+    private _elementRef: ElementRef,
+    private _http: HttpClient,
+    private _injector: Injector,
+    private _viewContainerRef: ViewContainerRef,
+    private _router: Router
+  ) {}
 
   /** Fetch a document by URL. */
   private _fetchDocument(url: string) {
@@ -52,10 +57,12 @@ export class DocViewer implements OnDestroy {
       this._documentFetchSubscription.unsubscribe();
     }
 
-    this._documentFetchSubscription = this._http.get(url, {responseType: 'text'}).subscribe(
-      document => this.updateDocument(document),
-      error => this.showError(url, error)
-    );
+    this._documentFetchSubscription = this._http
+      .get(url, { responseType: 'text' })
+      .subscribe(
+        document => this.updateDocument(document),
+        error => this.showError(url, error)
+      );
   }
 
   /**
@@ -67,6 +74,10 @@ export class DocViewer implements OnDestroy {
     this.textContent = this._elementRef.nativeElement.textContent;
     this._loadComponents('app-docs-example', ExampleViewer);
     this._loadComponents('header-link', HeaderLink);
+    // lucas
+    this._loadComponents('doc-viewer-extend', DocViewerExtend);
+    this._loadComponents('sketch-link', SketchLink);
+
     this._fixFragmentUrls();
     this.contentLoaded.next();
   }
@@ -74,8 +85,9 @@ export class DocViewer implements OnDestroy {
   /** Show an error that ocurred when fetching a document. */
   private showError(url: string, error: HttpErrorResponse) {
     console.log(error);
-    this._elementRef.nativeElement.innerText =
-      `Failed to load document: ${url}. Error: ${error.statusText}`;
+    this._elementRef.nativeElement.innerText = `Failed to load document: ${url}. Error: ${
+      error.statusText
+    }`;
   }
 
   releadLiveExamples() {
@@ -85,19 +97,30 @@ export class DocViewer implements OnDestroy {
     this._clearLiveExamples();
     this._loadComponents('app-docs-example', ExampleViewer);
     this._loadComponents('header-link', HeaderLink);
+    // lucas
+    this._loadComponents('doc-viewer-extend', DocViewerExtend);
+    this._loadComponents('sketch-link', SketchLink);
   }
 
   /** Instantiate a ExampleViewer for each example. */
   private _loadComponents(componentName: string, componentClass: any) {
-    let exampleElements =
-        this._elementRef.nativeElement.querySelectorAll(`[${componentName}]`);
+    const exampleElements = this._elementRef.nativeElement.querySelectorAll(
+      `[${componentName}]`
+    );
 
     Array.prototype.slice.call(exampleElements).forEach((element: Element) => {
-      let example = element.getAttribute(componentName);
-      let portalHost = new DomPortalHost(
-          element, this._componentFactoryResolver, this._appRef, this._injector);
-      let examplePortal = new ComponentPortal(componentClass, this._viewContainerRef);
-      let exampleViewer = portalHost.attach(examplePortal);
+      const example = element.getAttribute(componentName);
+      const portalHost = new DomPortalHost(
+        element,
+        this._componentFactoryResolver,
+        this._appRef,
+        this._injector
+      );
+      const examplePortal = new ComponentPortal(
+        componentClass,
+        this._viewContainerRef
+      );
+      const exampleViewer = portalHost.attach(examplePortal);
       (exampleViewer.instance as ExampleViewer).example = example;
 
       this._portalHosts.push(portalHost);
@@ -118,14 +141,15 @@ export class DocViewer implements OnDestroy {
    */
   private _fixFragmentUrls() {
     const baseUrl = this._router.url.split('#')[0];
-    const anchorElements =
-      [].slice.call(this._elementRef.nativeElement.querySelectorAll('a')) as HTMLAnchorElement[];
+    const anchorElements = [].slice.call(
+      this._elementRef.nativeElement.querySelectorAll('a')
+    ) as HTMLAnchorElement[];
 
     // Update hash links that are referring to the same page and host. Links that are referring
     // to a different destination shouldn't be updated. For example the Google Fonts URL.
     anchorElements
       .filter(anchorEl => anchorEl.hash && anchorEl.host === location.host)
-      .forEach(anchorEl => anchorEl.href = `${baseUrl}${anchorEl.hash}`);
+      .forEach(anchorEl => (anchorEl.href = `${baseUrl}${anchorEl.hash}`));
   }
 
   ngOnDestroy() {

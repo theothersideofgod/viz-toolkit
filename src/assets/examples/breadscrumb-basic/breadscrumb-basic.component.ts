@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'breadscrumb-basic',
+  selector: 'breadscrumb-basic',
   templateUrl: 'breadscrumb-basic.component.html',
-  styleUrls: ['breadscrumb-basic.component.css'],
+  styleUrls: ['breadscrumb-basic.component.css']
 })
-
 export class BreadscrumbBasicComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const BreadscrumbBasicData = {
-	name: 'BreadscrumbBasic'
-}
+  name: 'BreadscrumbBasic'
+};

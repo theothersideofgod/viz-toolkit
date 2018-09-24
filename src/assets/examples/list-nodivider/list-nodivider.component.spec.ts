@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListNodividerComponent } from './list-nodivider.component';
+import { MatListModule, MatIconModule } from '@angular/material';
 
-describe('a list-nodivider component', () => {
-	let component: ListNodividerComponent;
+describe('ListNodividerComponent', () => {
+  let component: ListNodividerComponent;
+  let fixture: ComponentFixture<ListNodividerComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ListNodividerComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatListModule, MatIconModule],
+      declarations: [ListNodividerComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ListNodividerComponent], (ListNodividerComponent) => {
-		component = ListNodividerComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ListNodividerComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

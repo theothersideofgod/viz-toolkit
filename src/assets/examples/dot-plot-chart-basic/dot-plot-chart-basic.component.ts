@@ -48,7 +48,7 @@ export class DotPlotChartBasicComponent implements OnInit {
       x: 100,
       y: 70,
       floating: true,
-      backgroundColor:'#FFFFFF',
+      backgroundColor: '#FFFFFF',
       borderWidth: 1
     },
     plotOptions: {

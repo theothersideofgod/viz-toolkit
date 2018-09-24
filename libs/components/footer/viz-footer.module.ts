@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
-import { VizFooterComponent } from './viz-footer.component'
+import { NgModule } from '@angular/core';
+import { VizFooterComponent } from './viz-footer.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -15,4 +15,4 @@ import { RouterModule } from '@angular/router';
     VizFooterComponent
   ],
 })
-export class VizFooterMudule {}
+export class VizFooterModule {}

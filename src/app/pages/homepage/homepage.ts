@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterContentInit, NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material'
-import { SvgViewerModule } from '../../shared/svg-viewer/svg-viewer'
+import { MatButtonModule } from '@angular/material';
+import { SvgViewerModule } from '../../shared/svg-viewer/svg-viewer';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -15,7 +15,7 @@ export class HomepageComponent implements OnInit, AfterContentInit {
     private _route: Router
   ) {
     this._router.params.subscribe(params => {
-      console.log('home params', params)
+      console.log('home params', params);
     });
   }
 
@@ -23,13 +23,15 @@ export class HomepageComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit() {
-    window[`__svgFunc`]();
+    if (window[`__svgFunc`]) {
+      window[`__svgFunc`]();
+    }
   }
 
   routeTo(route) {
-    this._route.navigate([route])
+    this._route.navigate([route]);
   }
-  
+
 
 }
 

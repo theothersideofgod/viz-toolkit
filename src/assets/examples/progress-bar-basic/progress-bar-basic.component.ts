@@ -6,14 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./progress-bar-basic.component.scss']
 })
 export class ProgressBarBasicComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
 
 export const ProgressBarBasicData = {
-	name: 'Progress Bar'
-}
+  name: 'Progress Bar'
+};

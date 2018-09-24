@@ -1,5 +1,8 @@
-<div class="viz-feedback-indicator-wrap" [ngClass]="{'viz-feedback-indicator-wrap-warning': type=='warning'  , 'viz-feedback-indicator-wrap-error': type=='error'}">
-  <mat-icon class="viz-feedback-indicator-icon">warning</mat-icon>
+<div class="viz-feedback-indicator-wrap" 
+  [class.viz-feedback-indicator-wrap-warning]="type=='warning'"
+  [class.viz-feedback-indicator-wrap-error]="type=='error'"
+  [class.viz-feedback-indicator-wrap-success]="type=='success'">
+  <mat-icon class="viz-feedback-indicator-icon">{{iconType}}</mat-icon>
   <div class="viz-feedback-indicator-message">
     {{message}}
   </div>

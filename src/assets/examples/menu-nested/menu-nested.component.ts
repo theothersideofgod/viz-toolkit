@@ -1,20 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'menu-nested',
+  selector: 'menu-nested',
   templateUrl: 'menu-nested.component.html',
-  styleUrls: ['menu-nested.component.css'],
+  styleUrls: ['menu-nested.component.css']
 })
-
 export class MenuNestedComponent implements OnInit {
+  ngOnInit() {}
 
-  ngOnInit() { }
-  
-  seachOnClick() {
-    
-  }
+  seachOnClick() {}
 }
 
 export const MenuNestedData = {
-	name: 'MenuNested'
-}
+  name: 'MenuNested'
+};

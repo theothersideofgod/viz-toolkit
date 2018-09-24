@@ -1,20 +1,18 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material'
+import { MatButtonModule } from '@angular/material';
 
 @Component({
-	selector: 'principles',
+  selector: 'principles',
   templateUrl: 'principles.component.html',
   styleUrls: ['principles.component.scss']
 })
-
 export class PrinciplesComponent implements OnInit {
-
-	ngOnInit() { }
+  ngOnInit() {}
 }
 
 @NgModule({
   imports: [MatButtonModule],
   exports: [PrinciplesComponent],
-  declarations: [PrinciplesComponent],
+  declarations: [PrinciplesComponent]
 })
 export class PrinciplesModule {}

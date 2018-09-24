@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 30</title>
+<svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xbaseline-grade-24px</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-139.000000, -1221.000000)">
-            <g id="Button-&amp;-Indicatiors" transform="translate(134.000000, 911.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -1577.000000)">
+            <g id="Button-&amp;-Indicatiors" transform="translate(134.000000, 1269.000000)">
                 <g id="Icon" transform="translate(3.000000, 294.000000)">
-                    <g id="Group-30" transform="translate(0.000000, 14.000000)">
-                        <g id="baseline-grade-24px">
-                            <polygon id="Shape" fill="#696969" fill-rule="nonzero" points="12 17.27 18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21"></polygon>
-                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        </g>
+                    <g id="baseline-grade-24px" transform="translate(0.000000, 14.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <polygon id="Shape" stroke="#696969" stroke-width="2" fill-rule="nonzero" points="12 17.4663158 18.18 21 16.54 14.34 22 9.85894737 14.81 9.28105263 12 3 9.19 9.28105263 2 9.85894737 7.46 14.34 5.82 21"></polygon>
                     </g>
                 </g>
             </g>

@@ -14,24 +14,45 @@
   <div class="doc-desc-1">
     Chips are compact elements that represent an input, attribute, or action.
   </div>
+
   <div class="doc-divider"></div>
   <div class="doc-title-2">
     Examples
+    <span class="docs-more-example" doc-viewer-extend="exampleWrapper"></span>
     <span class="docs-markdown-h3" id="examples">
       <span header-link="examples"></span>Examples</span>
   </div>
+
   <div class="doc-desc-2">
-    Chip displays a list of values as individual, keyboard accessible
+    Use to represent a single selection in sets that contain at least two options.
   </div>
   <div class="doc-example-container">
     <div app-docs-example="chip-basic"></div>
   </div>
-  <div class="doc-desc-2 docs-mt24">
-      Chip displays a list of values as individual, keyboard accessible
+
+  <div id="exampleWrapper">
+    <div class="doc-desc-2 docs-mt24">
+      Use to represent information used in fields, such as an entity or different attributes.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="chip-close"></div>
+    </div>
+    <div class="doc-desc-2 docs-mt24">
+      Chip in alternative color.
     </div>
     <div class="doc-example-container">
       <div app-docs-example="chip-primary"></div>
     </div>
+    <div class="doc-desc-2 docs-mt24">
+      Use for chips that aren’t currently available.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="chip-disable"></div>
+    </div>
+  </div>
+
+
+
   <div class="doc-divider">
   </div>
   <div class="doc-title-2">
@@ -52,93 +73,130 @@
         <th>default</th>
       </tr>
     </thead>
-    <tbody><tr>
+    <tbody>
+      <tr>
         <td>ariaOrientation</td>
         <td>Orientation of the chip list.</td>
         <td>String</td>
         <td>'horizontal' | 'vertical'</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>compareWith</td>
-        <td>A function to compare the option values with the selected values. The first argument is a value from an option. The second is a value from the selection. A boolean should be returned.</td>
+        <td>A function to compare the option values with the selected values. The first argument is a value from an option. The
+          second is a value from the selection. A boolean should be returned.</td>
         <td>(o1: any, o2: any) => boolean</td>
         <td>Function</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>errorStateMatcher</td>
         <td>An object used to control when error messages are shown.</td>
         <td> ErrorStateMatcher</td>
         <td>None</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>multiple</td>
         <td>Whether the user should be allowed to select multiple chips.</td>
         <td> boolean</td>
         <td>false</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>selectable</td>
-        <td>Whether or not this chip list is selectable. When a chip list is not selectable, the selected states for all the chips inside the chip list are always ignored.</td>
+        <td>Whether or not this chip list is selectable. When a chip list is not selectable, the selected states for all the
+          chips inside the chip list are always ignored.</td>
         <td> boolean</td>
         <td>false</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>change</td>
         <td>Event emitted when the selected chip list value has been changed by the user.</td>
-        <td> EventEmitter<MatChipListChange></td>
+        <td> EventEmitter
+          <MatChipListChange>
+        </td>
         <td></td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>autofilled</td>
-        <td>Whether the input is currently in an autofilled state. If property is not present on the control it is assumed to be false.</td>
+        <td>Whether the input is currently in an autofilled state. If property is not present on the control it is assumed to
+          be false.</td>
         <td> boolean</td>
         <td>false</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>chipBlurChanges</td>
         <td>Combined stream of all of the child chips' blur change events.</td>
-        <td> Observable<MatChipEvent></td>
+        <td> Observable
+          <MatChipEvent>
+        </td>
         <td></td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>chipFocusChanges</td>
         <td>Combined stream of all of the child chips' focus change events.</td>
-        <td> Observable<MatChipEvent></td>
+        <td> Observable
+          <MatChipEvent>
+        </td>
         <td></td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>chipRemoveChanges</td>
         <td>Combined stream of all of the child chips' remove change events.</td>
-        <td> Observable<MatChipEvent></td>
+        <td> Observable
+          <MatChipEvent>
+        </td>
         <td></td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>chipSelectionChanges</td>
         <td>Combined stream of all of the child chips' selection change events.</td>
-        <td> Observable<MatChipSelectionChange></td>
+        <td> Observable
+          <MatChipSelectionChange>
+        </td>
         <td></td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>chips</td>
         <td>The chip components contained within this chip list.</td>
-        <td> QueryList<MatChip></td>
+        <td> QueryList
+          <MatChip>
+        </td>
         <td></td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>errorState</td>
         <td>Whether the control is in an error state.</td>
         <td> boolean</td>
         <td>false</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>focused</td>
         <td>Whether any chips or the matChipInput inside of this chip-list has focus.</td>
         <td> boolean</td>
         <td>false</td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>role</td>
         <td>The ARIA role applied to the chip list.</td>
         <td> string | null</td>
         <td></td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>selected</td>
         <td>The array of selected chips inside chip list.</td>
         <td> MatChip[] | MatChip</td>
         <td></td>
-      </tr><tr>
+      </tr>
+      <tr>
         <td>stateChanges</td>
-        <td>Stream that emits whenever the state of the control changes such that the parent�MatFormField�needs to run change detection.</td>
-        <td> Observable\<void\></td>
+        <td>Stream that emits whenever the state of the control changes such that the parent�MatFormField�needs to run change
+          detection.
+        </td>
+        <td> Observable\
+          <void\>
+        </td>
         <td></td>
-      </tr></tbody>
-    </table>
+      </tr>
+    </tbody>
+  </table>
   <div class="doc-divider"></div>
   <div class="doc-title-2">
     Best Practices
@@ -161,14 +219,14 @@
 
 
   <div class="doc-title-2">
-    Usage & Content guidelines
+    Usage & Content Guidelines
     <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content guidelines</span>
+      <span header-link="content_guidelines"></span>Content Guidelines</span>
   </div>
   <div class="doc-desc-2">
     Choice chips shouldn’t present only a single option.
   </div>
-  <div style="margin-bottom:24px">
+  <div class="docs-guideline-group">
     <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
       <img width="304" height="32" src="assets/img/doc/chip-list-do.png" alt="">
     </div>
@@ -180,7 +238,7 @@
     Horizontal placement of choice chips. Choice chips can wrap to a new row. However, using two or more rows of choice chips
     can make each chip harder to scan.
   </div>
-  <div style="margin-bottom:24px">
+  <div class="docs-guideline-group">
     <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:160px">
       <img width="432" height="32" src="assets/img/doc/chip-horizatal-do.png" alt="">
     </div>
@@ -190,16 +248,26 @@
   </div>
   <div class="doc-divider"></div>
   <div class="doc-title-2">
-    Design specs
+    Design Specs
     <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design specs</span>
+      <span header-link="design_specs"></span>Design Specs</span>
   </div>
 
-  
+
   <div class="docs-usage-spec docs-usage-center" style="height:280px">
-    <img src="assets/img/doc/chip-spec.png"
-    alt="">
+    <img src="assets/img/doc/chip-spec.png" alt="">
   </div>
+
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Component Location for Designers
+    <span class="docs-markdown-h3" id="component_location_for_designers">
+      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
+  </div>
+  <div class="doc-desc-2">
+    For designers, to add this component to your design, follow this path within the Sketch App UI:
+  </div>
+  <div sketch-link></div>
 
 </body>
 

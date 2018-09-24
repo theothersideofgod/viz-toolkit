@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'nodata-basic',
+  selector: 'nodata-basic',
   templateUrl: 'nodata-basic.component.html',
-  styleUrls: ['nodata-basic.component.css'],
+  styleUrls: ['nodata-basic.component.css']
 })
-
 export class NodataBasicComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
 }
 
 export const NodataBasicData = {
-	name: 'NodataBasic'
-}
+  name: 'NodataBasic'
+};

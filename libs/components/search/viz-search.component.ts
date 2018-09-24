@@ -33,7 +33,7 @@ export class VizSearchComponent implements OnInit {
 
   type;
 
-  searchValue: string = 'Search...';
+  searchValue = 'Search...';
 
   ngOnInit() {
     this.type = this.types[0];
@@ -53,12 +53,12 @@ export class VizSearchComponent implements OnInit {
   }
 
   onKeyUp(e) {
-    let value = e.target.value;
+    const value = e.target.value;
 
     this.highlightResults = this.results
       .filter(r => new RegExp(`${value}`, 'i').test(r.name))
       .map(nr => {
-        let tester = new RegExp(`${value}`, 'i');
+        const tester = new RegExp(`${value}`, 'i');
         return {
           ...nr,
           highlightName: nr.name.replace(

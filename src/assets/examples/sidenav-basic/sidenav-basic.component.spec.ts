@@ -1,25 +1,28 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidenavBasicComponent } from './sidenav-basic.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { VizSidenavModule } from 'libs';
+import { MatIconModule } from '@angular/material';
 
-describe('a sidenav-basic component', () => {
-	let component: SidenavBasicComponent;
+describe('SidenavBasicComponent', () => {
+  let component: SidenavBasicComponent;
+  let fixture: ComponentFixture<SidenavBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SidenavBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule, VizSidenavModule, MatIconModule],
+      declarations: [SidenavBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SidenavBasicComponent], (SidenavBasicComponent) => {
-		component = SidenavBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SidenavBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

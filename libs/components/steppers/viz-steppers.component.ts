@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./viz-steppers.component.scss']
 })
 export class VizSteppersComponent implements OnInit {
-  @Input() steps
+  @Input() steps;
   constructor() { }
 
   ngOnInit() {

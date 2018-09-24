@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 35</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>baseline-format_list_numbered-24px copy</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M10.96875,6.984375 L10.96875,4.96875 L9,4.96875 L9,6.984375 L10.96875,6.984375 Z M10.96875,15 L10.96875,9 L9,9 L9,15 L10.96875,15 Z M2.90625,2.953125 C4.87500984,0.984365156 7.23436125,0 9.984375,0 C12.7343888,0 15.0859277,0.976552734 17.0390625,2.9296875 C18.9921973,4.88282227 19.96875,7.23436125 19.96875,9.984375 C19.96875,12.7343888 18.9921973,15.0859277 17.0390625,17.0390625 C15.0859277,18.9921973 12.7343888,19.96875 9.984375,19.96875 C7.23436125,19.96875 4.88282227,18.9921973 2.9296875,17.0390625 C0.976552734,15.0859277 0,12.7343888 0,9.984375 C0,7.23436125 0.968740313,4.89063469 2.90625,2.953125 Z" id="path-1"></path>
-    </defs>
-    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.400000006">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-537.000000, -1157.000000)">
-            <g id="Popups-&amp;-Modals" transform="translate(534.000000, 911.000000)">
-                <g id="Tooltip" transform="translate(3.000000, 218.000000)">
-                    <g id="Group-35" transform="translate(0.000000, 28.000000)">
-                        <g id="baseline-format_list_numbered-24px-copy">
-                            <mask id="mask-2" fill="white">
-                                <use xlink:href="#path-1"></use>
-                            </mask>
-                            <use id="info" fill="#696969" xlink:href="#path-1"></use>
-                            <polygon id="Shape" mask="url(#mask-2)" points="-2 -2 22 -2 22 22 -2 22"></polygon>
-                        </g>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-948.000000, -1247.000000)">
+            <g id="Popups-&amp;-Modals" transform="translate(948.000000, 1003.000000)">
+                <g id="Tooltip" transform="translate(0.000000, 218.000000)">
+                    <g id="baseline-format_list_numbered-24px-copy" transform="translate(0.000000, 26.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M4.20006453,4.25640256 C2.05914227,6.39732481 1,8.9597658 1,12 C1,15.0396356 2.0681089,17.6116418 4.22823354,19.7717665 C6.38835819,21.9318911 8.96036441,23 12,23 C15.0396356,23 17.6116418,21.9318911 19.7717665,19.7717665 C21.9318911,17.6116418 23,15.0396356 23,12 C23,8.96036441 21.9318911,6.38835819 19.7717665,4.22823354 C17.6116418,2.0681089 15.0396356,1 12,1 C8.96096299,1 6.37938479,2.0770823 4.20006453,4.25640256 Z" id="info" stroke="#696969" stroke-width="2"></path>
+                        <path d="M12,7 L12,13" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <rect id="Rectangle-2" fill="#696969" fill-rule="nonzero" x="11" y="15" width="2" height="2"></rect>
                     </g>
                 </g>
             </g>

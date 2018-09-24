@@ -83,7 +83,7 @@ export class TableNativeComponent {
 
     this.sortedData = data.sort((a, b) => {
 
-      
+
 
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
@@ -91,13 +91,13 @@ export class TableNativeComponent {
           return compare(a.contract, b.contract, isAsc);
         case 'type':
           return compare(a.type, b.type, isAsc);
-       
+
         default:
           return 0;
       }
     });
 
-    console.log(sort)
+    console.log(sort);
 
   }
 }

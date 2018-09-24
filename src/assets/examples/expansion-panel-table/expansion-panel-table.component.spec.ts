@@ -1,25 +1,28 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExpansionPanelTableComponent } from './expansion-panel-table.component';
+import { MatIconModule } from '@angular/material';
+import { VizTableModule } from 'libs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('a expansion-panel-table component', () => {
-	let component: ExpansionPanelTableComponent;
+describe('ExpansionPanelTableComponent', () => {
+  let component: ExpansionPanelTableComponent;
+  let fixture: ComponentFixture<ExpansionPanelTableComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ExpansionPanelTableComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatIconModule, VizTableModule, BrowserAnimationsModule],
+      declarations: [ExpansionPanelTableComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ExpansionPanelTableComponent], (ExpansionPanelTableComponent) => {
-		component = ExpansionPanelTableComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ExpansionPanelTableComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

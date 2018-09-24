@@ -37,5 +37,12 @@
         color: #ffc02e;
       }
     }
+    &-success {
+      border: 2px solid #9cd020;
+      background-color: #FFF7F7;
+      .viz-feedback-indicator-icon {
+        color: #9cd020;
+      }
+    }
   }
 }

@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SnackbarMobileComponent } from './snackbar-mobile.component';
+import { MatSnackBarModule } from '@angular/material';
 
-describe('a snackbar-mobile component', () => {
-	let component: SnackbarMobileComponent;
+describe('SnackbarMobileComponent', () => {
+  let component: SnackbarMobileComponent;
+  let fixture: ComponentFixture<SnackbarMobileComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SnackbarMobileComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatSnackBarModule],
+      declarations: [SnackbarMobileComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SnackbarMobileComponent], (SnackbarMobileComponent) => {
-		component = SnackbarMobileComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SnackbarMobileComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

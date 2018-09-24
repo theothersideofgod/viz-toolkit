@@ -13,8 +13,11 @@
 
 
     <div class="modal-checkbox-wrap">
-      <mat-checkbox class="modal-selectall">Select All</mat-checkbox>
 
+      <div class="modal-selectall">
+        <mat-checkbox class="modal-selectall" [checked]="descendantsAllSelected({children: tree})" [indeterminate]="descendantsPartiallySelected({children: tree})" (change)="selectAll($event)">Select All</mat-checkbox>
+      </div>
+      
       <viz-tree [tree]="tree">
 
         <ng-container *VizTreeLeafDef="let node">
@@ -35,7 +38,7 @@
 
 
   <div class="modal-footer">
-    <button mat-button color="primary">Cancel</button>
-    <button mat-flat-button color="primary" class="modal-addbtn">Add</button>
+    <button mat-button color="primary" (click)="onNoClick()">Cancel</button>
+    <button mat-flat-button color="primary" class="modal-addbtn" (click)="onNoClick()">Add</button>
   </div>
 </div>

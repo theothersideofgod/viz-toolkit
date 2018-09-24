@@ -8,7 +8,7 @@ import { Input } from '@angular/core';
 })
 export class VizTreeCellComponent implements OnInit {
   @Input() node;
-  collapse: boolean = true;
+  collapse = true;
   constructor() {}
 
   ngOnInit() {}

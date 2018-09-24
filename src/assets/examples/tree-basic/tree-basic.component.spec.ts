@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TreeBasicComponent } from './tree-basic.component';
+import { VizTreeModule } from 'libs';
+import { MatIconModule } from '@angular/material';
 
 describe('TreeBasicComponent', () => {
   let component: TreeBasicComponent;
@@ -8,9 +10,9 @@ describe('TreeBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TreeBasicComponent ]
-    })
-    .compileComponents();
+      imports: [VizTreeModule, MatIconModule],
+      declarations: [TreeBasicComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xGroup 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -731.000000)">
+            <g id="Foundation" transform="translate(134.000000, 575.000000)">
+                <g id="Typography" transform="translate(3.000000, 142.000000)">
+                    <g id="Group-3" transform="translate(0.000000, 14.000000)">
+                        <polygon id="Shape" points="0 1 24 1 24 25 0 25"></polygon>
+                        <rect id="Rectangle-path" stroke="#696969" stroke-width="2" x="1" y="1" width="22" height="22"></rect>
+                        <polyline id="Shape" stroke="#696969" stroke-width="2" points="6 19 11.25 5 12.75 5 18 19"></polyline>
+                        <path d="M8,13 L16,13" id="Shape" stroke="#696969" stroke-width="2"></path>
+                        <path d="M5,19 L7,19" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M17,19 L19,19" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

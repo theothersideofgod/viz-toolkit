@@ -6,14 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button-basic.component.scss']
 })
 export class ButtonBasicComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
 
 export const ButtonBasicData = {
   name: 'Button'
-}
+};
