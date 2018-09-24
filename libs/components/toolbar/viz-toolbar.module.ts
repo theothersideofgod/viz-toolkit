@@ -1,4 +1,4 @@
-import { MatToolbarModule } from "@angular/material";
+import { MatToolbarModule } from '@angular/material';
 
 // import { NgModule } from "@angular/core";
 // import { VizToolbarComponent } from './viz-toolbar.component'
@@ -26,4 +26,4 @@ import { MatToolbarModule } from "@angular/material";
 
 
 
-export const VizToolbarMudule = MatToolbarModule
+export const VizToolbarModule = MatToolbarModule;

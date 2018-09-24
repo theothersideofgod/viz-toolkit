@@ -1,25 +1,27 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChipPrimaryComponent } from './chip-primary.component';
+import { MatChipsModule, MatIconModule } from '@angular/material';
 
-describe('a chip-primary component', () => {
-	let component: ChipPrimaryComponent;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ChipPrimaryComponent
-			]
-		});
-	});
+describe('ChipPrimaryComponent', () => {
+  let component: ChipPrimaryComponent;
+  let fixture: ComponentFixture<ChipPrimaryComponent>;
 
-	// instantiation through framework injection
-	beforeEach(inject([ChipPrimaryComponent], (ChipPrimaryComponent) => {
-		component = ChipPrimaryComponent;
-	}));
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatChipsModule, MatIconModule],
+      declarations: [ChipPrimaryComponent]
+    }).compileComponents();
+  }));
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ChipPrimaryComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

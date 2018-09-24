@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolbarBasicComponent } from './toolbar-basic.component';
+import { MatToolbarModule, MatIconModule } from '@angular/material';
 
-describe('a toolbar-basic component', () => {
-	let component: ToolbarBasicComponent;
+describe('ToolbarBasicComponent', () => {
+  let component: ToolbarBasicComponent;
+  let fixture: ComponentFixture<ToolbarBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ToolbarBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatToolbarModule, MatIconModule],
+      declarations: [ToolbarBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ToolbarBasicComponent], (ToolbarBasicComponent) => {
-		component = ToolbarBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ToolbarBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

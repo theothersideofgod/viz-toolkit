@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 22</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xbadge-15-outline-64</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-937.000000, -369.000000)">
-            <g id="Layout" transform="translate(934.000000, 273.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-937.000000, -667.000000)">
+            <g id="Layout" transform="translate(934.000000, 575.000000)">
                 <g id="Card" transform="translate(3.000000, 66.000000)">
-                    <g id="Group-22" transform="translate(0.000000, 26.000000)">
-                        <g id="badge-15-outline-64">
-                            <rect id="Rectangle-path" stroke="#696969" stroke-width="2" x="5" y="10" width="4" height="4"></rect>
-                            <path d="M23,5 L1,5 L1,19 L23,19 L23,5 Z" id="Shape" stroke="#696969" stroke-width="2"></path>
-                            <path d="M13,10 L19,10" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                            <path d="M13,14 L19,14" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        </g>
+                    <g id="badge-15-outline-64" transform="translate(0.000000, 26.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <rect id="Rectangle-path" stroke="#696969" stroke-width="2" x="5" y="5" width="4" height="4"></rect>
+                        <path d="M23,1 L1,1 L1,23 L23,23 L23,1 Z" id="Shape" stroke="#696969" stroke-width="2"></path>
+                        <path d="M13,5 L19,5" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M5,13 L19,13" id="Shape-Copy" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M5,17 L19,17" id="Shape-Copy-2" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M13,9 L19,9" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
                     </g>
                 </g>
             </g>

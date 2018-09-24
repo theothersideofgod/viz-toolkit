@@ -1,1 +1,52 @@
-<div class="viz-slider"> Hello VizSliderComponent! </div>
+<div class="viz-slider-wrapper"
+     #sliderWrapper>
+  <div class="viz-slider-track-wrapper">
+    <div class="viz-slider-track-background"></div>
+    <div class="viz-slider-track-fill"
+         [ngStyle]="trackFillStyle"></div>
+  </div>
+  <div class="viz-slider-ticks-container" *ngIf="showTicks">
+    <div class="viz-slider-ticks" *ngFor="let position of tickArray; let i=index" [ngStyle]="{'left': position+'%'}">
+      
+    </div>
+  </div>
+  <div class="viz-slider-thumb-container"
+       [ngStyle]="thumbContainerStyle" *ngIf="!range">
+    <div class="viz-slider-thumb">
+
+    </div>
+    <div class="viz-slider-focus-ring"
+         [ngStyle]="thumbFocusRingStyle">
+
+    </div>
+    <div class="viz-slider-thumb-label" *ngIf="thumbLabel">
+      <span class="viz-slider-thumb-label-text">{{value}}</span>
+    </div>
+  </div>
+  <div class="viz-slider-thumb-container"
+       [ngStyle]="upperThumbContainerStyle" *ngIf="range">
+    <div class="viz-slider-thumb">
+
+    </div>
+    <div class="viz-slider-focus-ring"
+         [ngStyle]="upperThumbFocusRingStyle">
+
+    </div>
+    <div class="viz-slider-thumb-label" *ngIf="thumbLabel">
+      <span class="viz-slider-thumb-label-text">{{upperValue}}</span>
+    </div>
+  </div>
+  <div class="viz-slider-thumb-container"
+       [ngStyle]="lowerThumbContainerStyle" *ngIf="range">
+    <div class="viz-slider-thumb">
+
+    </div>
+    <div class="viz-slider-focus-ring"
+         [ngStyle]="lowerThumbFocusRingStyle">
+
+    </div>
+    <div class="viz-slider-thumb-label" *ngIf="thumbLabel">
+      <span class="viz-slider-thumb-label-text">{{lowerValue}}</span>
+    </div>
+  </div>
+</div>

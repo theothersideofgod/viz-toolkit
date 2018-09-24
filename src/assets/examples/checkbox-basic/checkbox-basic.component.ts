@@ -16,4 +16,4 @@ export class CheckboxBasicComponent implements OnInit {
 
 export const CheckboxBasicData = {
   name: 'Checkbox'
-}
+};

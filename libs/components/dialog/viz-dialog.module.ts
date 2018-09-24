@@ -1,3 +1,3 @@
-import { MatDialogModule } from "@angular/material";
+import { MatDialogModule } from '@angular/material';
 
-export const VizDialogModule = MatDialogModule
+export const VizDialogModule = MatDialogModule;

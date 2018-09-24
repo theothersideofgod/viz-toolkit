@@ -3,7 +3,7 @@
     <div class="viz-sidenav-header">
       Activity Overview
     </div>
-    <div class="viz-sidenav-group" *ngFor="let nav of navList; let i=index">
+    <div class="viz-sidenav-group" *ngFor="let nav of navList; let navIndex=index">
       <div class="viz-sidenav-group-header">
         {{nav.name}}
       </div>
@@ -13,7 +13,7 @@
         #rla="routerLinkActive" [class.active]="rla.isActive">
         <mat-icon class="viz-sidenav-group-item-icon">{{subNav.icon}}</mat-icon>
         {{subNav.name}}
-        <mat-icon class="viz-sidenav-group-item-icon-close">close</mat-icon>
+        <mat-icon *ngIf="subNav.removable" class="viz-sidenav-group-item-icon-close" (click)="removeItem(navIndex, subNav);$event.stopPropagation();">close</mat-icon>
       </div>
     </div>
   </div>

@@ -1,0 +1,10 @@
+<mat-form-field>
+  <input type="text"
+         matInput
+         autocomplete="off"
+         (focus)="value=''"
+         [(ngModel)]="value"
+         (blur)="value='All Member'"
+         placeholder="Member"
+         disabled="true">
+</mat-form-field>

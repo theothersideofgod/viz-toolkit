@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChipBasicComponent } from './chip-basic.component';
+import { MatChipsModule } from '@angular/material';
 
 describe('ChipBasicComponent', () => {
   let component: ChipBasicComponent;
@@ -8,9 +9,9 @@ describe('ChipBasicComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChipBasicComponent ]
-    })
-    .compileComponents();
+      imports: [MatChipsModule],
+      declarations: [ChipBasicComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

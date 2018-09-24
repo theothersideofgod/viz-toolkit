@@ -1,25 +1,25 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardBasicComponent } from './card-basic.component';
+import { MatCardModule } from '@angular/material';
+describe('CardBasicComponent', () => {
+  let component: CardBasicComponent;
+  let fixture: ComponentFixture<CardBasicComponent>;
 
-describe('a card-basic component', () => {
-	let component: CardBasicComponent;
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatCardModule],
+      declarations: [CardBasicComponent]
+    }).compileComponents();
+  }));
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				CardBasicComponent
-			]
-		});
-	});
+  beforeEach(() => {
+    fixture = TestBed.createComponent(CardBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	// instantiation through framework injection
-	beforeEach(inject([CardBasicComponent], (CardBasicComponent) => {
-		component = CardBasicComponent;
-	}));
-
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

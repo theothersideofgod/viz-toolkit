@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterBasicComponent } from './footer-basic.component';
+import { VizFooterModule } from 'libs';
 
-describe('a footer-basic component', () => {
-	let component: FooterBasicComponent;
+describe('FooterBasicComponent', () => {
+  let component: FooterBasicComponent;
+  let fixture: ComponentFixture<FooterBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				FooterBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [VizFooterModule],
+      declarations: [FooterBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([FooterBasicComponent], (FooterBasicComponent) => {
-		component = FooterBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FooterBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

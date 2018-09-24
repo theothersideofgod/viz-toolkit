@@ -1,3 +1,3 @@
-import { MatTabsModule } from "@angular/material";
+import { MatTabsModule } from '@angular/material';
 
-export const VizTabsModule = MatTabsModule
+export const VizTabsModule = MatTabsModule;

@@ -2,4 +2,4 @@
 import { MatProgressBarModule } from '@angular/material';
 
 
-export const VizProgressSpinnerModule = MatProgressBarModule
+export const VizProgressSpinnerModule = MatProgressBarModule;

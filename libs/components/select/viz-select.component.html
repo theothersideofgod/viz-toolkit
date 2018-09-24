@@ -44,7 +44,8 @@
              type="text"
              placeholder="Clearable input"
              [value]="selected.title"
-             autocomplete="off">
+             autocomplete="off"
+             [disabled]="disabled">
       <mat-icon class="select-direction"
               mat-button
               matSuffix>{{selectTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down'}}

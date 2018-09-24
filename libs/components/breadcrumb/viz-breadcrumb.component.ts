@@ -4,8 +4,6 @@ import { Observable, Subject } from 'rxjs';
 import { filter, distinctUntilChanged, map, takeUntil } from 'rxjs/operators';
 import * as _ from 'lodash';
 
-
-
 @Component({
   selector: 'viz-breadcrumb',
   templateUrl: './viz-breadcrumb.component.html',
@@ -32,7 +30,10 @@ export class VizBreadcrumbComponent implements OnInit, OnDestroy {
       .map((route, index) => {
         return {
           label: route,
-          url: `/${this.router.url.split('/').slice(1, index+2).join('/')}`,
+          url: `/${this.router.url
+            .split('/')
+            .slice(1, index + 2)
+            .join('/')}`
         };
       });
   }

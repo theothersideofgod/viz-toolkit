@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+<svg width="24px" height="12px" viewBox="0 0 24 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>@2xGroup 7</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -733.000000)">
-            <g id="Form-Controls" transform="translate(134.000000, 273.000000)">
-                <g id="Slider" transform="translate(3.000000, 446.000000)">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -1090.000000)">
+            <g id="Form-Controls" transform="translate(134.000000, 575.000000)">
+                <g id="Slider" transform="translate(3.000000, 494.000000)">
                     <g id="Group-7" transform="translate(0.000000, 14.000000)">
-                        <path d="M13,3 L24,3" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <path d="M0,3 L3.2,3" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <path d="M20,12 L24,12" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <path d="M0,12 L13,12" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <circle id="Oval" fill="#696969" cx="6" cy="3" r="3"></circle>
-                        <path d="M13,21 L24,21" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <path d="M0,21 L3.2,21" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <circle id="Oval" fill="#696969" cx="6" cy="21" r="3"></circle>
-                        <circle id="Oval" fill="#696969" cx="15" cy="12" r="3"></circle>
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M1,13 L9,13" id="Shape" stroke="#696969" stroke-width="2"></path>
+                        <polyline id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square" points="5.5 17 1.5 13 5.5 9"></polyline>
+                        <path d="M23,13 L15,13" id="Shape" stroke="#696969" stroke-width="2"></path>
+                        <polyline id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square" points="18.5 17 22.5 13 18.5 9"></polyline>
+                        <circle id="Oval" stroke="#696969" stroke-width="2" cx="12" cy="13" r="3"></circle>
                     </g>
                 </g>
             </g>

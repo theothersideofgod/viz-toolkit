@@ -1,0 +1,32 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'select-disable'</span>,
+  templateUrl: <span class="hljs-string">'select-disable.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-disable.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectDisableComponent <span class="hljs-keyword">implements</span> OnInit {
+  options = [
+    {
+      id: <span class="hljs-number">1</span>,
+      title: <span class="hljs-string">'Date Received'</span>
+    },
+    {
+      id: <span class="hljs-number">2</span>,
+      title: <span class="hljs-string">'Dsicharge Date'</span>
+    },
+    {
+      id: <span class="hljs-number">3</span>,
+      title: <span class="hljs-string">'Invoice Date'</span>
+    },
+    {
+      id: <span class="hljs-number">4</span>,
+      title: <span class="hljs-string">'Placeholder...'</span>
+    }
+  ];
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SelectDisableData = {
+  name: <span class="hljs-string">'SelectDisable'</span>
+};

@@ -1,25 +1,32 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BottomsheetBasicComponent } from './bottomsheet-basic.component';
+import { MatNavList, MatBottomSheetRef, MatBottomSheetModule, MAT_BOTTOM_SHEET_DATA } from '@angular/material';
 
-describe('a bottomsheet-basic component', () => {
-	let component: BottomsheetBasicComponent;
+describe('BottomsheetBasicComponent', () => {
+  let component: BottomsheetBasicComponent;
+  let fixture: ComponentFixture<BottomsheetBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				BottomsheetBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatBottomSheetModule],
+      declarations: [BottomsheetBasicComponent, MatNavList],
+      providers: [
+        { provide: MatBottomSheetRef, useValue: {} },
+        { provide: MAT_BOTTOM_SHEET_DATA, useValue: {} }
+      ]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([BottomsheetBasicComponent], (BottomsheetBasicComponent) => {
-		component = BottomsheetBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(BottomsheetBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });
+
+

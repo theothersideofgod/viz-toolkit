@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProgressSpinnerBasicComponent } from './progress-spinner-basic.component';
+import { MatProgressSpinnerModule } from '@angular/material';
 
-describe('a progress-spinner-basic component', () => {
-	let component: ProgressSpinnerBasicComponent;
+describe('ProgressSpinnerBasicComponent', () => {
+  let component: ProgressSpinnerBasicComponent;
+  let fixture: ComponentFixture<ProgressSpinnerBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				ProgressSpinnerBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatProgressSpinnerModule],
+      declarations: [ProgressSpinnerBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([ProgressSpinnerBasicComponent], (ProgressSpinnerBasicComponent) => {
-		component = ProgressSpinnerBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ProgressSpinnerBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

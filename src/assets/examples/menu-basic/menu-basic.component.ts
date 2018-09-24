@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-basic.component.css']
 })
 export class MenuBasicComponent implements OnInit {
-  
+
   constructor() {}
 
   ngOnInit() {}

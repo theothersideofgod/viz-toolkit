@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 5</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xGroup 4</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-139.000000, -583.000000)">
-            <g id="Form-Controls" transform="translate(134.000000, 273.000000)">
-                <g id="Radio-Button" transform="translate(3.000000, 294.000000)">
-                    <g id="Group-5" transform="translate(0.000000, 14.000000)">
-                        <path d="M12,2 C6.48,2 2,6.48 2,12 C2,17.52 6.48,22 12,22 C17.52,22 22,17.52 22,12 C22,6.48 17.52,2 12,2 Z M12,20 C7.58,20 4,16.42 4,12 C4,7.58 7.58,4 12,4 C16.42,4 20,7.58 20,12 C20,16.42 16.42,20 12,20 Z M12,17 C14.7614237,17 17,14.7614237 17,12 C17,9.23857625 14.7614237,7 12,7 C9.23857625,7 7,9.23857625 7,12 C7,14.7614237 9.23857625,17 12,17 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -907.000000)">
+            <g id="Form-Controls" transform="translate(134.000000, 575.000000)">
+                <g id="Radio-Button" transform="translate(3.000000, 318.000000)">
+                    <g id="Group-4" transform="translate(0.000000, 14.000000)">
                         <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M12,1 C5.92828475,1 1,5.92828475 1,12 C1,18.0717153 5.92828475,23 12,23 C18.0717153,23 23,18.0717153 23,12 C23,5.92828475 18.0717153,1 12,1 Z" id="Shape" stroke="#696969" stroke-width="2" fill-rule="nonzero"></path>
+                        <circle id="Oval-path" fill="#696969" fill-rule="nonzero" cx="12" cy="12" r="6"></circle>
                     </g>
                 </g>
             </g>

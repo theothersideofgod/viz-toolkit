@@ -1,0 +1,15 @@
+<div class="example-container">
+  <viz-tree [tree]="tree">
+
+    <ng-container *VizTreeLeafDef="let node">
+      <mat-icon></mat-icon>
+      <mat-checkbox [checked]="descendantsAllSelected(node)" [indeterminate]="descendantsPartiallySelected(node)" (change)="toggle(node)">{{node.name}}</mat-checkbox>
+    </ng-container>
+
+    <ng-container *VizTreeNodeDef="let node">
+      <mat-icon (click)="node.isExpanded = !node.isExpanded"> {{node.isExpanded ? 'arrow_drop_down' : 'arrow_drop_up'}}</mat-icon>
+      <mat-checkbox [checked]="descendantsAllSelected(node)" [indeterminate]="descendantsPartiallySelected(node)" (change)="toggle(node)">{{node.name}}</mat-checkbox>
+    </ng-container>
+    
+  </viz-tree>
+</div>

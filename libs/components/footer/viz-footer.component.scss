@@ -13,6 +13,7 @@
   }
 
   .footer-center {
+    font-weight: 300;
     z-index: 1;
     position: absolute;
     top: 48px;
@@ -27,7 +28,8 @@
     p {
       padding: 0;
       margin: 0;
-      line-height: 24px
+      line-height: 20px;
+      font-size: 14px;
     }
   }
 

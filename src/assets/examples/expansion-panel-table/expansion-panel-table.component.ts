@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-
 @Component({
   selector: 'expansion-panel-table.component',
   templateUrl: 'expansion-panel-table.component.html',
@@ -55,12 +54,9 @@ export class ExpansionPanelTableComponent {
     }
   ];
 
-  constructor() {
-  }
+  constructor() {}
 }
-
-
 
 export const ExpansionPanelTableData = {
-	name: 'ExpansionPanelTable'
-}
+  name: 'ExpansionPanelTable'
+};

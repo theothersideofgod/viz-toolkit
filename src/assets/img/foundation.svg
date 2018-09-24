@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="32px" viewBox="0 0 26 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xbutton-power copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-536.000000, -281.000000)">
+            <g id="Foundation" transform="translate(534.000000, 281.000000)">
+                <g id="button-power-copy">
+                    <g>
+                        <polygon id="Shape" points="0 0 30 0 30 30 0 30"></polygon>
+                        <path d="M3,5.09090909 L3,26.9090909 C3,29.1590909 8.4,31 15,31 C21.6,31 27,29.1590909 27,26.9090909 L27,5.09090909" id="Shape" stroke="#FF4E00" stroke-width="2"></path>
+                        <ellipse id="Oval" stroke="#01ADAB" stroke-width="2" stroke-linecap="square" cx="15" cy="5.09090909" rx="12" ry="4.09090909"></ellipse>
+                        <path d="M27,16 C27,18.25 21.6,20.0909091 15,20.0909091 C8.4,20.0909091 3,18.25 3,16" id="Shape" stroke="#FF4E00" stroke-width="2" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

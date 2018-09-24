@@ -31,7 +31,9 @@
         }
         .button-sec {
           @extend %normal-font;
-          
+          button:nth-child(2) {
+            margin-left: 8px;
+          }
           margin-top: 30px;
         }
       }

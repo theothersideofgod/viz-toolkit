@@ -26,16 +26,16 @@ import {
   ]
 })
 export class VizShowExpandComponent implements OnInit {
-  isExpanded: boolean = false;
-  expandState: string = 'collapse'
-  @Output() toggleExpandRow: EventEmitter<boolean> = new EventEmitter<boolean>()
+  isExpanded = false;
+  expandState = 'collapse';
+  @Output() toggleExpandRow: EventEmitter<boolean> = new EventEmitter<boolean>();
   constructor() {}
 
   ngOnInit() {}
   toggleExpand() {
-    this.isExpanded = !this.isExpanded
-    this.expandState = this.isExpanded ? "expand" : "collapse"
-    this.toggleExpandRow.emit(this.isExpanded)
+    this.isExpanded = !this.isExpanded;
+    this.expandState = this.isExpanded ? 'expand' : 'collapse';
+    this.toggleExpandRow.emit(this.isExpanded);
   }
 
 }

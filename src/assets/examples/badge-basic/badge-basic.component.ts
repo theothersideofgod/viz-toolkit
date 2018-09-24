@@ -15,4 +15,4 @@ export class BadgeBasicComponent implements OnInit {
 }
 export const BadgeBasicData = {
   name: 'Badge'
-}
+};

@@ -55,6 +55,16 @@ a {
 .docs-level-h4 {
   margin-left: 12px;
 }
+
+.docs-sketch-link {
+  height: 18px;
+  width: 200px;
+  color: #ff4e00;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
 ::ng-deep {
   .docs-markdown-h3 {
     opacity: 0;

@@ -1,17 +1,24 @@
-import { Component, Input, ViewChild, ElementRef, ComponentFactoryResolver, ViewContainerRef, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  ViewChild,
+  ElementRef,
+  ComponentFactoryResolver,
+  ViewContainerRef,
+  OnInit
+} from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 import { ComponentPortal } from '@angular/cdk/portal';
 
 import { ALL_EXAMPLE_ITEMS } from '../../../assets/examples';
 import { CopierService } from '../copier/copier.service';
 
-
-@Component({ 
+@Component({
   selector: 'example-viewer',
   templateUrl: './example-viewer.html',
   styleUrls: ['./example-viewer.scss']
 })
-export class ExampleViewer {
+export class ExampleViewer implements OnInit {
   /** Component portal for the currently displayed example. */
   selectedPortal: ComponentPortal<any>;
 
@@ -23,18 +30,16 @@ export class ExampleViewer {
   /** Whether the source for the example is being displayed. */
   showSource = false;
 
-  //lucas
-  platform:string = 'desktop_mac'
-  copyFocus: boolean = false
-  @ViewChild('iframe') iframe: ElementRef;
-  @ViewChild('exampleViewBody') exampleViewBody: ElementRef;
-  //lucas
+  // lucas
+  platform = 'desktop_mac';
+  copyFocus = false;
+  @ViewChild('iframe')
+  iframe: ElementRef;
+  @ViewChild('exampleViewBody')
+  exampleViewBody: ElementRef;
+  // lucas
 
-
-  constructor(
-    private snackbar: MatSnackBar,
-    private copier: CopierService) { }
-    
+  constructor(private snackbar: MatSnackBar, private copier: CopierService) {}
 
   get example() {
     return this._example;
@@ -56,18 +61,20 @@ export class ExampleViewer {
   }
 
   exampleFileUrl(extension: string) {
-    return `/assets/examples/${this.example}/${this.example}.example.${extension.toLowerCase()}${extension.toLowerCase() === 'html' ? '': '.html'}`;
+    return `/assets/examples/${this.example}/${
+      this.example
+    }.example.${extension.toLowerCase()}${
+      extension.toLowerCase() === 'html' ? '' : '.html'
+    }`;
   }
 
-  ngOnInit() {
-  }
- 
+  ngOnInit() {}
+
   getViewportClass() {
-    return `${this._example} ${this.platform}`
+    return `${this._example} ${this.platform}`;
   }
 
   copySource() {
-    this.copyFocus = false
+    this.copyFocus = false;
   }
-
 }

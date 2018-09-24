@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class VizFeedbackIndicatorComponent implements OnInit {
   @Input('message') message: string;
   @Input('type') type: string;
+  @Input('iconType') iconType: string;
   constructor() { }
 
   ngOnInit() {

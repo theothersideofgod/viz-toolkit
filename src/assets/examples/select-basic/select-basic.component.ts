@@ -6,31 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-basic.component.scss']
 })
 export class SelectBasicComponent implements OnInit {
-
+  options = [
+    {
+      id: 1,
+      title: 'Date Received'
+    },
+    {
+      id: 2,
+      title: 'Dsicharge Date'
+    },
+    {
+      id: 3,
+      title: 'Invoice Date'
+    },
+    {
+      id: 4,
+      title: 'Placeholder...'
+    }
+  ];
   constructor() {}
 
   ngOnInit() {}
-
-  options = [
-    {
-      "id": 1,
-      "title": "Date Received"
-    },
-    {
-      "id": 2,
-      "title": "Dsicharge Date"
-    },
-    {
-      "id": 3,
-      "title": "Invoice Date"
-    },
-    {
-      "id": 4,
-      "title": "Placeholder..."
-    }
-  ]
 }
 
 export const SelectBasicData = {
   name: 'Select'
-}
+};

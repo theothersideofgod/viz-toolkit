@@ -1,6 +1,6 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
-import { 
+import {
   Component,
   ElementRef,
   NgModule,
@@ -10,7 +10,7 @@ import {
   ViewEncapsulation,
  } from '@angular/core';
 import { MatTabsModule } from '@angular/material';
-import { ActivatedRoute, Params, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Params, Router, RouterModule, NavigationEnd } from '@angular/router';
 import { combineLatest, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 import { DocViewerModule } from '../../shared/doc-viewer/doc-viewer-module';
@@ -24,7 +24,7 @@ import { TableOfContentsModule } from '../../shared/table-of-contents/table-of-c
   styleUrls: ['./component-viewer.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ComponentViewer implements OnDestroy {
+export class ComponentViewer implements OnDestroy, OnInit {
   componentDocItem: DocItem;
   sections: Set<string> = new Set(['overview', 'api']);
   private _destroyed = new Subject();
@@ -45,6 +45,10 @@ export class ComponentViewer implements OnDestroy {
             this.router.navigate(['/components']);
           }
         });
+  }
+
+  ngOnInit() {
+
   }
 
   ngOnDestroy(): void {
@@ -70,12 +74,17 @@ export class ComponentOverview implements OnInit {
   ngOnInit() {
     // 100ms timeout is used to allow the page to settle before moving focus for screen readers.
     setTimeout(() => this.focusTarget.nativeElement.focus(), 100);
+    console.log('do i fucking rerender?');
   }
 
   onContentLoaded() {
-    if (this.tableOfContents) {
-      this.tableOfContents.updateScrollPosition();
-    }
+    setTimeout(() => {
+      this.focusTarget.nativeElement.focus();
+      if (this.tableOfContents) {
+        this.tableOfContents.updateScrollPosition();
+      }
+    }, 100);
+
   }
 }
 

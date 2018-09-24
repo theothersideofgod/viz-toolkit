@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chip-basic.component.css']
 })
 export class ChipBasicComponent implements OnInit {
-  chip:boolean=true
+  chip = true;
   constructor() {}
 
   ngOnInit() {}
-  remove(){
-    this.chip = false
+  remove() {
+    this.chip = false;
   }
 }
 export const ChipBasicData = {

@@ -1,0 +1,8 @@
+<div class="viz-range-slider-container">
+  <div class="viz-range-slider-left">
+    <mat-slider [step]="step" [(ngModel)]="lowerValue" [min]="min" [max]="max" (input)="lowerValueChange($event)" [thumbLabel]="thumbLabel"></mat-slider>
+  </div>
+  <div class="viz-range-slider-right" [ngStyle]="{width: _upperWidth}">
+    <mat-slider [step]="step" [(ngModel)]="upperValue" [min]="lowerValue" [max]="max" (input)="upperValueChange($event)" [thumbLabel]="thumbLabel"></mat-slider>
+  </div>
+</div>

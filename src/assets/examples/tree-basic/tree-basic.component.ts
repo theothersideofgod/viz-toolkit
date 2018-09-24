@@ -85,13 +85,13 @@ export class TreeBasicComponent implements OnInit {
   ngOnInit() {}
 
   descendantsAllSelected(node) {
-    //if node have children, count if checked node equal to node count
+    // if node have children, count if checked node equal to node count
     if (node.children.length > 0) {
-      let status = nodeCount(node) === checkedNodeCount(node);
+      const status = nodeCount(node) === checkedNodeCount(node);
       node.checked = status;
       return status;
     }
-    //if node dont have children, just return the node check status
+    // if node dont have children, just return the node check status
     return node.checked;
   }
 
@@ -103,11 +103,11 @@ export class TreeBasicComponent implements OnInit {
   }
 
   toggle(node) {
-    //if node have children, toggle all children node status
+    // if node have children, toggle all children node status
     if (node.children.length > 0) {
       toggleAllChildNode(node, !node.checked);
     }
-    //if node dont have children, toggle itself
+    // if node dont have children, toggle itself
     node.checked = !node.checked;
   }
 }

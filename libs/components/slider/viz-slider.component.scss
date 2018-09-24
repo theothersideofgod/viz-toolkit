@@ -1,0 +1,100 @@
+@import '../../_viz-color.scss';
+
+$mat-slider-thumb-label-size: 28px !default;
+:host {
+  outline: 0px;
+  width: 100%;
+}
+.viz-slider {
+  &-wrapper {
+    cursor: pointer;
+    position: relative;
+    height: 48px;
+    min-width: 150px
+  }
+  &-track-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 100%;
+  }
+  &-track-background {
+    background-color: $viz-blue;
+    opacity: 0.24;
+    width: 100%;
+    position: absolute;
+    height: 2px;
+  }
+  &-track-fill {
+    background-color: $viz-blue;
+    height: 2px;
+    width: 0%;
+    z-index: 1;
+    position: absolute;
+  }
+  &-ticks-container {
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 100%;
+    transform: translateY(-50%)
+  }
+  &-ticks {
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: -1px;
+    opacity: 0.5;
+  }
+  &-thumb-container {
+    position: absolute;
+    top: 50%;
+    transition: transform .4s cubic-bezier(.25,.8,.25,1);
+    pointer-events: none;
+  }
+  &-thumb {
+    cursor: pointer;
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    top: -6px;
+    left: -6px;
+    background-color: $viz-blue;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  &-focus-ring {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: -20px;
+    left: -20px;
+    background-color: $viz-blue;
+    opacity: 0.08;
+    border-radius: 50%;
+    display: none;
+  }
+  &-thumb-label {
+    height: 28px;
+    width: 28px;
+    background-color: $viz-blue;
+    border-radius: 50% 50% 0;
+    transform: translate(-14px,-40px)rotate(45deg);
+    top: -40px;
+    left: -14px;
+  }
+  &-thumb-label-text {
+    // transform: rotate(-45deg);
+    color: #ffffff;
+    font-size: 12px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%)rotate(-45deg)
+    
+  }
+}

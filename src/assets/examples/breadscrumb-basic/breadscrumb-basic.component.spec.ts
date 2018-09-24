@@ -1,25 +1,28 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BreadscrumbBasicComponent } from './breadscrumb-basic.component';
+import { VizBreadcrumbComponent } from 'libs/components/breadcrumb/viz-breadcrumb.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { VizBreadcrumbModule } from 'libs';
+import { MatIconModule } from '@angular/material';
+describe('BreadscrumbBasicComponent', () => {
+  let component: BreadscrumbBasicComponent;
+  let fixture: ComponentFixture<BreadscrumbBasicComponent>;
 
-describe('a breadscrumb-basic component', () => {
-	let component: BreadscrumbBasicComponent;
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule, VizBreadcrumbModule, MatIconModule],
+      declarations: [BreadscrumbBasicComponent]
+    }).compileComponents();
+  }));
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				BreadscrumbBasicComponent
-			]
-		});
-	});
+  beforeEach(() => {
+    fixture = TestBed.createComponent(BreadscrumbBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	// instantiation through framework injection
-	beforeEach(inject([BreadscrumbBasicComponent], (BreadscrumbBasicComponent) => {
-		component = BreadscrumbBasicComponent;
-	}));
-
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

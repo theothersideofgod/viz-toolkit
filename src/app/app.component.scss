@@ -44,7 +44,9 @@
   .main-sec {
     min-height: $contentHeight;
     // overflow: auto;//fix div collapse
-    height: auto;
+    // height: auto;
+    height: calc(100vh - 72px);
+    overflow: auto;
     position: relative;
   }
 }

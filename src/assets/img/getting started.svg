@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xbutton-power</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-133.000000, -280.000000)">
+            <g id="Getting-Started" transform="translate(134.000000, 281.000000)">
+                <g id="button-power">
+                    <g>
+                        <polygon id="Shape" points="0 0 30 0 30 30 0 30"></polygon>
+                        <path d="M22.5,2 C27,4.62734584 30,9.43163539 30,14.9865952 C30,23.2439678 23.25,30 15,30 C6.75,30 0,23.2439678 0,14.9865952 C0,9.43163539 3,4.55227882 7.5,2" id="Shape" stroke="#FF4E00" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M15,0 L15,10.5" id="Shape" stroke="#01ADAB" stroke-width="2" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

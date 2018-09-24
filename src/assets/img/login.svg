@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="26px" viewBox="0 0 20 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 36</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xlock-open-outline-64</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-539.000000, -1252.000000)">
-            <g id="Popups-&amp;-Modals" transform="translate(534.000000, 911.000000)">
-                <g id="Login" transform="translate(3.000000, 328.000000)">
-                    <g id="Group-36" transform="translate(0.000000, 14.000000)">
-                        <g id="lock-open-outline-64">
-                            <path d="M16.6,4.8 C16.6,2.1492 14.4508,0 11.8,0 C9.1492,0 7,2.1492 7,4.8 L7,7.6" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                            <path d="M19,24 L4.6,24 C3.7164,24 3,23.2836 3,22.4 L3,11.2 C3,10.3164 3.7164,9.6 4.6,9.6 L19,9.6 C19.8836,9.6 20.6,10.3164 20.6,11.2 L20.6,22.4 C20.6,23.2836 19.8836,24 19,24 Z" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                            <path d="M11.8,18 L11.8,20.4" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                            <circle id="Oval" stroke="#696969" stroke-width="2" stroke-linecap="square" cx="11.8" cy="15.6" r="2.4"></circle>
-                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        </g>
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -2071.000000)">
+            <g id="Pages" transform="translate(134.000000, 1991.000000)">
+                <g id="Login" transform="translate(3.000000, 66.000000)">
+                    <g id="lock-open-outline-64" transform="translate(0.000000, 14.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <rect id="Rectangle-path" stroke="#696969" stroke-width="2" x="1" y="10" width="22" height="13"></rect>
+                        <path d="M17,6.05263158 C17,3.26231579 14.76125,1 12,1 C9.23875,1 7,3.26231579 7,6.05263158 L7,9" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M12,18 L12,20" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <circle id="Oval" stroke="#696969" stroke-width="2" stroke-linecap="square" cx="12" cy="15" r="2"></circle>
                     </g>
                 </g>
             </g>

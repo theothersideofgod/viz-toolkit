@@ -1,25 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SlideToggleBasicComponent } from './slide-toggle-basic.component';
+import { MatSlideToggleModule } from '@angular/material';
 
-describe('a slide-toggle-basic component', () => {
-	let component: SlideToggleBasicComponent;
+describe('SlideToggleBasicComponent', () => {
+  let component: SlideToggleBasicComponent;
+  let fixture: ComponentFixture<SlideToggleBasicComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				SlideToggleBasicComponent
-			]
-		});
-	});
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [MatSlideToggleModule],
+      declarations: [SlideToggleBasicComponent]
+    }).compileComponents();
+  }));
 
-	// instantiation through framework injection
-	beforeEach(inject([SlideToggleBasicComponent], (SlideToggleBasicComponent) => {
-		component = SlideToggleBasicComponent;
-	}));
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SlideToggleBasicComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

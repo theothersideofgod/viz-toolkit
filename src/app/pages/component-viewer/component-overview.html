@@ -6,4 +6,5 @@
     class="docs-component-view-text-content docs-component-overview"
     (contentLoaded)="onContentLoaded()">
 </doc-viewer>
-<table-of-contents #toc ></table-of-contents>
+<!-- <table-of-contents #toc ></table-of-contents> -->
+<table-of-contents #toc container=".main-sec" *ngIf="showToc | async"></table-of-contents>

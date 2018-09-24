@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xGroup 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-135.000000, -360.000000)">
+            <g id="Getting-Started" transform="translate(134.000000, 281.000000)">
+                <g id="Designers" transform="translate(3.000000, 66.000000)">
+                    <g id="Group-2" transform="translate(0.000000, 14.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M11.5862069,8.68965517 L15.3103448,12.4137931" id="Shape" stroke="#696969" stroke-width="2"></path>
+                        <rect id="Rectangle-path" stroke="#696969" stroke-width="1.99998082" stroke-linecap="square" transform="translate(9.103136, 14.896657) rotate(-45.000000) translate(-9.103136, -14.896657) " x="-1.13752395" y="12.2633026" width="20.4813208" height="5.26670811"></rect>
+                        <path d="M9.51724138,4.55172414 L7.86206897,2.89655172" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M14.4827586,2.48275862 L14.4827586,0" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M19.4482759,4.55172414 L21.1034483,2.89655172" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M21.5172414,9.51724138 L24,9.51724138" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M19.4482759,14.4827586 L21.1034483,16.137931" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -30,7 +30,10 @@ export class VizChartComponent
   ngOnInit() {}
 
   renderChart() {
-    this._highchartInstance && this._highchartInstance.destroy();
+    if (this._highchartInstance) {
+      this._highchartInstance.destroy();
+    }
+
     this._highchartInstance = Highcharts.chart(
       this.chart.nativeElement,
       this.chartOption
@@ -38,20 +41,20 @@ export class VizChartComponent
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
+    // Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+    // Add '${implements OnChanges}' to the class.
     this.renderChart();
   }
 
   ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
+    // Called once, before the instance is destroyed.
+    // Add 'implements OnDestroy' to the class.
     this._highchartInstance.destroy();
   }
 
   ngAfterViewInit() {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
+    // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    // Add 'implements AfterViewInit' to the class.
     this.renderChart();
   }
 }

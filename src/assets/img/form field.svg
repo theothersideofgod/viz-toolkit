@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 4</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xbadge-15-outline-64</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-138.000000, -506.000000)">
-            <g id="Form-Controls" transform="translate(134.000000, 273.000000)">
-                <g id="Form-Field" transform="translate(3.000000, 218.000000)">
-                    <g id="Group-4" transform="translate(0.000000, 14.000000)">
-                        <path d="M20.5,19 C20.224,19 20,18.7909333 20,18.5333333 L20,5.46666667 C20,5.20906667 20.224,5 20.5,5 C20.776,5 21,5.20906667 21,5.46666667 L21,18.5333333 C21,18.7909333 20.776,19 20.5,19 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        <path d="M18.5172414,4 L5.48275862,4 C5.21627586,4 5,3.776 5,3.5 C5,3.224 5.21627586,3 5.48275862,3 L18.5172414,3 C18.7837241,3 19,3.224 19,3.5 C19,3.776 18.7837241,4 18.5172414,4 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        <path d="M18.5333333,21 L5.46666667,21 C5.20906667,21 5,20.776 5,20.5 C5,20.224 5.20906667,20 5.46666667,20 L18.5333333,20 C18.7909333,20 19,20.224 19,20.5 C19,20.776 18.7909333,21 18.5333333,21 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        <path d="M3.5,19 C3.224,19 3,18.7909333 3,18.5333333 L3,5.46666667 C3,5.20906667 3.224,5 3.5,5 C3.776,5 4,5.20906667 4,5.46666667 L4,18.5333333 C4,18.7909333 3.776,19 3.5,19 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        <path d="M5.5,6 L1.5,6 C1.224,6 1,5.776 1,5.5 L1,1.5 C1,1.224 1.224,1 1.5,1 L5.5,1 C5.776,1 6,1.224 6,1.5 L6,5.5 C6,5.776 5.776,6 5.5,6 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        <path d="M22.5,6 L18.5,6 C18.224,6 18,5.776 18,5.5 L18,1.5 C18,1.224 18.224,1 18.5,1 L22.5,1 C22.776,1 23,1.224 23,1.5 L23,5.5 C23,5.776 22.776,6 22.5,6 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        <path d="M22.5,23 L18.5,23 C18.224,23 18,22.776 18,22.5 L18,18.5 C18,18.224 18.224,18 18.5,18 L22.5,18 C22.776,18 23,18.224 23,18.5 L23,22.5 C23,22.776 22.776,23 22.5,23 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        <path d="M5.5,23 L1.5,23 C1.224,23 1,22.776 1,22.5 L1,18.5 C1,18.224 1.224,18 1.5,18 L5.5,18 C5.776,18 6,18.224 6,18.5 L6,22.5 C6,22.776 5.776,23 5.5,23 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
-                        <path d="M14.5,14.7692308 C14.776,14.7692308 15,14.5624615 15,14.3076923 C15,14.0529231 14.776,13.8461538 14.5,13.8461538 L12.5,13.8461538 L12.5,8.76923077 C12.5,7.75107692 13.397,6.92307692 14.5,6.92307692 C14.776,6.92307692 15,6.71630769 15,6.46153846 C15,6.20676923 14.776,6 14.5,6 C13.457,6 12.538,6.49430769 12,7.24153846 C11.462,6.49384615 10.543,6 9.5,6 C9.224,6 9,6.20676923 9,6.46153846 C9,6.71630769 9.224,6.92307692 9.5,6.92307692 C10.603,6.92307692 11.5,7.75107692 11.5,8.76923077 L11.5,13.8461538 L9.5,13.8461538 C9.224,13.8461538 9,14.0529231 9,14.3076923 C9,14.5624615 9.224,14.7692308 9.5,14.7692308 L11.5,14.7692308 L11.5,15.2307692 C11.5,16.2489231 10.603,17.0769231 9.5,17.0769231 C9.224,17.0769231 9,17.2836923 9,17.5384615 C9,17.7932308 9.224,18 9.5,18 C10.543,18 11.462,17.5056923 12,16.7584615 C12.538,17.5061538 13.457,18 14.5,18 C14.776,18 15,17.7932308 15,17.5384615 C15,17.2836923 14.776,17.0769231 14.5,17.0769231 C13.397,17.0769231 12.5,16.2489231 12.5,15.2307692 L12.5,14.7692308 L14.5,14.7692308 Z" id="Shape" fill="#696969" fill-rule="nonzero"></path>
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -831.000000)">
+            <g id="Form-Controls" transform="translate(134.000000, 575.000000)">
+                <g id="Form-Field" transform="translate(3.000000, 242.000000)">
+                    <g id="badge-15-outline-64" transform="translate(0.000000, 14.000000)">
                         <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M23,1 L1,1 L1,23 L23,23 L23,1 Z" id="Shape" stroke="#696969" stroke-width="2"></path>
+                        <path d="M5,5 L19,5" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M5,13 L19,13" id="Shape-Copy" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M5,9 L19,9" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
                     </g>
                 </g>
             </g>

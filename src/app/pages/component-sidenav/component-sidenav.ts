@@ -1,21 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-@Component({
-  selector: 'app-component-sidenav',
-  templateUrl: './component-sidenav.html',
-  styleUrls: ['./component-sidenav.scss']
-})
-export class ComponentSidenavComponent implements OnInit {
-  navList = initNavList;
-
-  constructor(private _router: Router) {
-    console.log(_router.url);
-  }
-
-  ngOnInit() {}
-}
-
 const initNavList = [
   {
     name: 'Getting started',
@@ -27,6 +12,19 @@ const initNavList = [
       {
         name: 'Developers',
         value: 'developers'
+      }
+    ]
+  },
+  {
+    name: 'Foundation',
+    subs: [
+      {
+        name: 'Colors',
+        value: 'colors'
+      },
+      {
+        name: 'Typography',
+        value: 'typography'
       }
     ]
   },
@@ -172,6 +170,10 @@ const initNavList = [
       {
         name: 'Bottom Sheet',
         value: 'bottomsheet'
+      },
+      {
+        name: 'Login',
+        value: 'login'
       }
     ]
   },
@@ -202,3 +204,17 @@ const initNavList = [
     ]
   }
 ];
+@Component({
+  selector: 'app-component-sidenav',
+  templateUrl: './component-sidenav.html',
+  styleUrls: ['./component-sidenav.scss']
+})
+export class ComponentSidenavComponent implements OnInit {
+  navList = initNavList;
+
+  constructor(private _router: Router) {
+    console.log(_router.url);
+  }
+
+  ngOnInit() {}
+}
