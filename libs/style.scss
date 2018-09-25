@@ -647,14 +647,20 @@ mat-chip {
       height: 24px;
       width: 24px;
       margin-top: -3px;
+      color: #000000;
+      &[disabled] {
+        color: #9f9f9f;
+      }
       .mat-paginator-icon {
         width: 24px;
+        
       }
     }
   }
   .mat-paginator-navigation-next {
     margin-left: 24px;
   }
+  
 }
 
 // div[ng-reflect-klass="mat-select-panel mat-primary"] {
