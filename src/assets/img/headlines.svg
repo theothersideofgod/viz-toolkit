@@ -6,19 +6,17 @@
     <defs>
         <rect id="path-1" x="0" y="0" width="800" height="300"></rect>
         <rect id="path-3" x="0" y="0" width="400" height="662"></rect>
-        <filter x="-34.9%" y="-14.4%" width="169.8%" height="142.1%" filterUnits="objectBoundingBox" id="filter-5">
-            <feMorphology radius="3.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
-            <feOffset dx="0" dy="11" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMorphology radius="4" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter2"></feMorphology>
-            <feOffset dx="0" dy="9" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
-            <feGaussianBlur stdDeviation="23" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
-            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter3"></feMorphology>
-            <feOffset dx="0" dy="24" in="shadowSpreadOuter3" result="shadowOffsetOuter3"></feOffset>
-            <feGaussianBlur stdDeviation="19" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+        <filter x="-6.1%" y="-2.6%" width="112.2%" height="107.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="0.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.07 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
             <feMerge>
                 <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
                 <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
@@ -39,7 +37,7 @@
                             <rect stroke="#EFEFEF" x="0.5" y="0.5" width="799" height="299"></rect>
                             <g id="Delete-Submission" mask="url(#mask-2)">
                                 <g transform="translate(344.000000, 56.000000)">
-                                    <g id="✱-/-Shadow-/-24dp">
+                                    <g id="✱-/-Shadow-/-04dp">
                                         <mask id="mask-4" fill="white">
                                             <use xlink:href="#path-3"></use>
                                         </mask>
