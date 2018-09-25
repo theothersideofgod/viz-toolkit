@@ -152,12 +152,12 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
     this.isDragging = false;
     if (this.range) {
       if (this.thumbPositionControl(event.offsetX) === 'lower') {
-        this.lowerThumbFocusState = 'focused';
+        this.lowerThumbFocusState = 'resting';
       } else {
-        this.upperThumbFocusState = 'focused';
+        this.upperThumbFocusState = 'resting';
       }
     } else {
-      this.thumbFocusState = 'focused';
+      this.thumbFocusState = 'resting';
     }
 
     console.log('drag stop');
@@ -202,21 +202,21 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
     }
   }
 
-  @HostListener('focus') onFocus() {
-    console.log('i am focus');
-    // this.showTicks = true;
-    this.upperThumbFocusState = 'focused';
-    this.lowerThumbFocusState = 'focused';
-    this.thumbFocusState = 'focused';
-  }
+  // @HostListener('focus') onFocus() {
+  //   console.log('i am focus');
+  //   // this.showTicks = true;
+  //   this.upperThumbFocusState = 'focused';
+  //   this.lowerThumbFocusState = 'focused';
+  //   this.thumbFocusState = 'focused';
+  // }
 
-  @HostListener('blur') onBlur() {
-    console.log('i am not focus');
-    // this.showTicks = false;
-    this.upperThumbFocusState = 'resting';
-    this.lowerThumbFocusState = 'resting';
-    this.thumbFocusState = 'resting';
-  }
+  // @HostListener('blur') onBlur() {
+  //   console.log('i am not focus');
+  //   // this.showTicks = false;
+  //   this.upperThumbFocusState = 'resting';
+  //   this.lowerThumbFocusState = 'resting';
+  //   this.thumbFocusState = 'resting';
+  // }
 
   get thumbFocusRingStyle(): { [key: string]: string } {
     return this.focusRingState[this.thumbFocusState];

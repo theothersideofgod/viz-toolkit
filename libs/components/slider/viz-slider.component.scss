@@ -54,9 +54,10 @@ $mat-slider-thumb-label-size: 28px !default;
     position: absolute;
     top: 50%;
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    // pointer-events: none;
+    pointer-events: none;
   }
   &-thumb {
+    pointer-events: all;
     cursor: pointer;
     position: absolute;
     height: 12px;
