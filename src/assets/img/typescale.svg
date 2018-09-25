@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="703px" height="1017px" viewBox="0 0 703 1017" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg width="703px" height="1017px" viewBox="0 0 703 1017" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>@2xGroup 9</title>
     <desc>Created with Sketch.</desc>
@@ -164,151 +164,151 @@
                             <rect id="dash-copy-66" transform="translate(1.000000, 1074.000000) rotate(-180.000000) translate(-1.000000, -1074.000000) " x="0" y="1072" width="2" height="4"></rect>
                             <rect id="dash-copy-67" transform="translate(1.000000, 1082.000000) rotate(-180.000000) translate(-1.000000, -1082.000000) " x="0" y="1080" width="2" height="4"></rect>
                         </g>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="123">Soleto</tspan>
                         </text>
-                        <text id="Scale-Categories" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000">
+                        <text id="Scale-Categories" font-family="Roboto, Mono" font-size="10" font-weight="300" fill="#000000">
                             <tspan x="24" y="25">Scale Categories</tspan>
                         </text>
-                        <text id="Typeface" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000">
+                        <text id="Typeface" font-family="Roboto, Mono" font-size="10" font-weight="normal" fill="#000000">
                             <tspan x="395" y="25">Typeface</tspan>
                         </text>
-                        <text id="Weight" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000">
+                        <text id="Weight" font-family="Roboto, Mono" font-size="10" font-weight="normal" fill="#000000">
                             <tspan x="506" y="25">Weight</tspan>
                         </text>
-                        <text id="Size" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000">
+                        <text id="Size" font-family="Roboto, Mono" font-size="10" font-weight="normal" fill="#000000">
                             <tspan x="617" y="25">Size</tspan>
                         </text>
-                        <text id="Medium" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Medium" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="123">Medium</tspan>
                         </text>
-                        <text id="52" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="52" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="123">52</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="207">Soleto</tspan>
                         </text>
-                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="207">Regular</tspan>
                         </text>
-                        <text id="46" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="46" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="207">46 </tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="283">Soleto</tspan>
                         </text>
-                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="283">Regular</tspan>
                         </text>
-                        <text id="40" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="40" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="283">40</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="351">Soleto</tspan>
                         </text>
-                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="351">Regular</tspan>
                         </text>
-                        <text id="34" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="34" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="351">34</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="415">Soleto</tspan>
                         </text>
-                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="415">Regular</tspan>
                         </text>
-                        <text id="28" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="28" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="415">28</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="479">Soleto</tspan>
                         </text>
-                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="479">Regular</tspan>
                         </text>
-                        <text id="20" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="20" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="479">20</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="539">Soleto</tspan>
                         </text>
-                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="539">Light</tspan>
                         </text>
-                        <text id="20" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="20" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="539">20</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="599">Soleto</tspan>
                         </text>
-                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="599">Light</tspan>
                         </text>
-                        <text id="18" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="18" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="599">18</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="659">Soleto</tspan>
                         </text>
-                        <text id="Medium" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Medium" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="659">Medium</tspan>
                         </text>
-                        <text id="17" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="17" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="659">17</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="719">Soleto</tspan>
                         </text>
-                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="719">Light</tspan>
                         </text>
-                        <text id="16" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="16" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="719">16</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="835">Soleto</tspan>
                         </text>
-                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="835">Light</tspan>
                         </text>
-                        <text id="14" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="14" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="835">14</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="891">Soleto</tspan>
                         </text>
-                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="891">Light</tspan>
                         </text>
-                        <text id="13" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="13" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="891">13</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="947">Soleto</tspan>
                         </text>
-                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Regular" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="947">Regular</tspan>
                         </text>
-                        <text id="12" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="12" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="947">12</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="1003">Soleto</tspan>
                         </text>
-                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="1003">Light</tspan>
                         </text>
-                        <text id="11" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="11" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="1003">11</tspan>
                         </text>
-                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Soleto" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="395" y="779">Soleto</tspan>
                         </text>
-                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="Light" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="506" y="779">Light</tspan>
                         </text>
-                        <text id="15" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#000000" fill-opacity="0.6">
+                        <text id="15" font-family=".AppleSystemUIFont" font-size="10" font-weight="normal" fill="#696969">
                             <tspan x="617" y="779">15</tspan>
                         </text>
                         <text id="Big-Body" font-family="SoletoTrial-Light, Soleto Trial" font-size="16" font-weight="300" line-spacing="20" fill="#696969">
@@ -321,7 +321,7 @@
                             <tspan x="24" y="846">Body</tspan>
                         </text>
                         <text id="Small-Body" font-family="SoletoTrial-Light, Soleto Trial" font-size="13" font-weight="300" line-spacing="20" fill="#696969">
-                            <tspan x="24" y="901">Small Body</tspan>
+                            <tspan x="24" y="903">Small Body</tspan>
                         </text>
                         <text id="Small-Label" font-family="SoletoTrial-Regular, Soleto Trial" font-size="12" font-weight="normal" fill="#696969">
                             <tspan x="24" y="959">Small Label</tspan>
@@ -330,7 +330,7 @@
                             <tspan x="24" y="1014">Tiny</tspan>
                         </text>
                         <text id="Headline-H3" font-family="SoletoTrial-Regular, Soleto Trial" font-size="40" font-weight="normal" line-spacing="50" fill="#696969">
-                            <tspan x="24" y="296">Headline H3</tspan>
+                            <tspan x="24" y="294">Headline H3</tspan>
                         </text>
                         <text id="Headline-H4" font-family="SoletoTrial-Regular, Soleto Trial" font-size="34" font-weight="normal" line-spacing="44" fill="#696969">
                             <tspan x="24" y="363">Headline H4</tspan>
@@ -342,19 +342,19 @@
                             <tspan x="24" y="490">Headline H6</tspan>
                         </text>
                         <text id="Display" font-family="SoletoTrial-Light, Soleto Trial" font-size="20" font-weight="300" line-spacing="30" fill="#000000">
-                            <tspan x="24" y="548">Display</tspan>
+                            <tspan x="24" y="550">Display</tspan>
                         </text>
                         <text id="Subhead" font-family="SoletoTrial-Light, Soleto Trial" font-size="18" font-weight="300" line-spacing="30" fill="#000000">
-                            <tspan x="24" y="607">Subhead</tspan>
+                            <tspan x="24" y="610">Subhead</tspan>
                         </text>
                         <text id="Title" font-family="SoletoTrial-Medium, Soleto Trial" font-size="17" font-weight="400" line-spacing="30" fill="#696969">
-                            <tspan x="24" y="666">Title</tspan>
+                            <tspan x="24" y="670">Title</tspan>
                         </text>
                         <text id="Headline-H2" font-family="SoletoTrial-Regular, Soleto Trial" font-size="46" font-weight="normal" line-spacing="58" fill="#696969">
-                            <tspan x="24" y="220">Headline H2</tspan>
+                            <tspan x="24" y="218">Headline H2</tspan>
                         </text>
-                        <text id="Headline-H1" font-family="SoletoTrial-Medium, Soleto Trial" font-size="52" font-weight="400" line-spacing="66" fill="#696969">
-                            <tspan x="24" y="137">Headline H1</tspan>
+                        <text id="Headline-H1" font-family="SoletoTrial-Medium, Soleto Trial" font-size="52" font-weight="400" line-spacing="66" fill="#696969" text-anchor="bottom">
+                            <tspan x="24" y="135">Headline H1</tspan>
                         </text>
                         <rect id="Rectangle-9" stroke="#000000" opacity="0.119999997" fill-rule="nonzero" x="0.5" y="0.5" width="702" height="1014"></rect>
                     </g>
