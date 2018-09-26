@@ -1,13 +1,19 @@
 :host {
   .home-wrapper {
     display: block;
-    
+    height: calc(100vh - 72px - 72px);
+    margin: 0 9.375vw;
+    overflow: hidden;
+    @media screen and (min-width: 1400px) {
+      width: 1170px;
+      margin: 0 auto;
+    }
     .home-sec-1 {
       display: flex;
       // justify-content: space-around;
-      // padding: 50px 100px; 
+      // padding: 50px 100px;
       justify-content: space-between;
-      padding: 50px 9.375vw; 
+      padding: 50px 0;
       .text-item {
         padding-top: 50px;
         width: 50%;
@@ -49,8 +55,8 @@
       // margin: 0 100px;
       // padding: 50px 25px;
       justify-content: space-between;
-      padding: 50px 9.375vw;
-      &>div {
+      padding: 50px 0;
+      & > div {
         width: 360px;
         .docs-feature-thumb {
           width: 96px;
@@ -60,17 +66,18 @@
             height: 96px;
             width: 96px;
           }
-          &>div, &>img {
+          & > div,
+          & > img {
             position: absolute;
             top: 0;
             left: 0;
           }
-          &>div {
+          & > div {
             z-index: 2;
             opacity: 0;
-            transition: opacity .3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
             @extend %box-size;
-            &>svg {
+            & > svg {
               height: 100%;
               width: 100%;
             }
@@ -81,19 +88,18 @@
               width: 137px;
             }
           }
-          &>img {
+          & > img {
             @extend %box-size;
             opacity: 1;
             display: block;
             z-index: 1;
           }
-          &:hover>div {
+          &:hover > div {
             opacity: 1;
           }
           // &:hover>img {
           //   opacity: 0;
           // }
-          
         }
         h3 {
           font-size: 28px;

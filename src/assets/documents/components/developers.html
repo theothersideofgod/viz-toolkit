@@ -28,7 +28,7 @@
     Put libs/viz-toolkit in root folder. Add this line into your package.json.
   </div>
   <div class="doc-code-sec">
-    "viz-toolkit": "file:./libs/viz-toolkit",
+    &quot;viz-toolkit&quot;: &quot;file:./libs/viz-toolkit&quot;,
   </div>
   <div class="doc-bold-title">
     Run npm/yarn install.
@@ -50,7 +50,7 @@
     Put this line into angular.json
   </div>
   <div class="doc-code-sec">
-    "styles": ["node_modules/viz-toolkit/themes/index.theme.css", "src/styles.css"]
+    &quot;styles&quot;: [&quot;node_modules/viz-toolkit/themes/index.theme.css&quot;, &quot;src/styles.css&quot;]
   </div>
   <div class="doc-divider"></div>
 
@@ -62,8 +62,7 @@
   <div class="doc-desc-2">
     Import the component modules.
   </div>
-  <pre class="doc-code-sec">
-    <span class="hljs-keyword">import</span> { 
+  <pre class="doc-code-sec">    <span class="hljs-keyword">import</span> { 
       VizHeaderModule,
       VizDateRangePickerModule,
       VizSelectModule,
@@ -93,7 +92,7 @@
       VizSearchModule,
       VizChartModule,
       VizRangeSliderModule
-    } <span class="hljs-keyword">from</span> <span class="hljs-string">'viz-toolkit'</span>;
+    } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;viz-toolkit&apos;</span>;
     <span class="hljs-meta">@NgModule</span>({
       ...
       imports: [
@@ -139,7 +138,7 @@
       <span header-link="step4"></span>Step 4: Animations</span>
   </div>
   <div class="doc-desc-2">
-    Some Material components depend on the Angular animations module in order to be able to do more advanced transitions. If you want these animations to work in your app, you have to install the  <span class="doc-desc-2-highlight">@angular/animations</span>
+    Some Material components depend on the Angular animations module in order to be able to do more advanced transitions. If you want these animations to work in your app, you have to install the <span class="doc-desc-2-highlight">@angular/animations</span>
   </div>
   <div class="doc-bold-title">
     NPM
@@ -148,8 +147,7 @@
     npm install --save @angular/animations
   </div>
 
-  <pre class="doc-code-sec">
-    <span class="hljs-keyword">import</span> {BrowserAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser/animations'</span>;
+  <pre class="doc-code-sec">    <span class="hljs-keyword">import</span> {BrowserAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@angular/platform-browser/animations&apos;</span>;
 
     <span class="hljs-meta">@NgModule</span>({
       ...
@@ -158,8 +156,8 @@
     })
     <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule { }
   </pre>
-    
-  </div>
+
+
   <div class="doc-divider"></div>
 
   <div class="doc-title-2">
@@ -168,16 +166,20 @@
       <span header-link="step5"></span>Step 5: Add Material Icons</span>
   </div>
   <div class="doc-desc-2">
-      If you want to use the <span class="doc-desc-2-highlight">mat-icon</span> component with the official <a href="https://material.io/icons/" class="docs-markdown-a">Material Design Icons</a>, load the icon font in your index.html.
+    If you want to use the <span class="doc-desc-2-highlight">mat-icon</span> component with the official <a href="https://material.io/icons/" class="docs-markdown-a">Material Design Icons</a>, load the icon font in your index.html.
   </div>
   <div class="doc-bold-title">
     Put this line into angular.json
   </div>
   <div class="doc-code-sec">
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span>
   </div>
-  
-  
+
+
+
+
+
+
 </body>
 
 </html>

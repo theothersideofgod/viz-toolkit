@@ -20,7 +20,7 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   @HostBinding('class') baseClass = 'viz-slider';
   @HostBinding('tabindex') baseTab = '-1';
 
-  dragging = false;
+  isDragging = false;
   thumbPosition: number;
   lowerThumbPosition: number;
   upperThumbPosition: number;
@@ -105,7 +105,7 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   private _sliderWrapper: ElementRef;
 
   onDragStart(event: any) {
-    this.dragging = true;
+    this.isDragging = true;
     if (event.target === this._sliderWrapper.nativeElement) {
       if (this.range) {
         if (this.thumbPositionControl(event.offsetX) === 'lower') {
@@ -128,7 +128,7 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   onDragging(event: any) {
     // console.log(event)
 
-    if (this.dragging && event.target === this._sliderWrapper.nativeElement) {
+    if (this.isDragging && event.target === this._sliderWrapper.nativeElement) {
       if (this.range) {
         if (this.thumbPositionControl(event.offsetX) === 'lower') {
           this.lowerThumbFocusState = 'pressed';
@@ -149,15 +149,15 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   }
 
   onDragEnd(event: any) {
-    this.dragging = false;
+    this.isDragging = false;
     if (this.range) {
       if (this.thumbPositionControl(event.offsetX) === 'lower') {
-        this.lowerThumbFocusState = 'focused';
+        this.lowerThumbFocusState = 'resting';
       } else {
-        this.upperThumbFocusState = 'focused';
+        this.upperThumbFocusState = 'resting';
       }
     } else {
-      this.thumbFocusState = 'focused';
+      this.thumbFocusState = 'resting';
     }
 
     console.log('drag stop');
@@ -202,21 +202,21 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
     }
   }
 
-  @HostListener('focus') onFocus() {
-    console.log('i am focus');
-    // this.showTicks = true;
-    this.upperThumbFocusState = 'focused';
-    this.lowerThumbFocusState = 'focused';
-    this.thumbFocusState = 'focused';
-  }
+  // @HostListener('focus') onFocus() {
+  //   console.log('i am focus');
+  //   // this.showTicks = true;
+  //   this.upperThumbFocusState = 'focused';
+  //   this.lowerThumbFocusState = 'focused';
+  //   this.thumbFocusState = 'focused';
+  // }
 
-  @HostListener('blur') onBlur() {
-    console.log('i am not focus');
-    // this.showTicks = false;
-    this.upperThumbFocusState = 'resting';
-    this.lowerThumbFocusState = 'resting';
-    this.thumbFocusState = 'resting';
-  }
+  // @HostListener('blur') onBlur() {
+  //   console.log('i am not focus');
+  //   // this.showTicks = false;
+  //   this.upperThumbFocusState = 'resting';
+  //   this.lowerThumbFocusState = 'resting';
+  //   this.thumbFocusState = 'resting';
+  // }
 
   get thumbFocusRingStyle(): { [key: string]: string } {
     return this.focusRingState[this.thumbFocusState];
@@ -287,10 +287,10 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
     if (this.tickInterval) {
       const range = this.rangeCheck(positionPercent);
 
-      if (positionPercent < range[1]) {
-        positionPercent = +range[0];
+      if (positionPercent < range.center) {
+        positionPercent = +range.start;
       } else {
-        positionPercent = +range[2];
+        positionPercent = +range.end;
       }
     }
 
@@ -298,12 +298,18 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   }
 
   rangeCheck(value) {
+    const validateValue = value < 0 ? 0 : value ;
     for (let i = 0; i < this.tickArray.length; i++) {
-      if (this.tickArray[i] <= value && value <= this.tickArray[i + 1]) {
+      if (this.tickArray[i] <= validateValue && validateValue <= this.tickArray[i + 1]) {
         const centerPoint: number =
           (parseFloat(this.tickArray[i]) + parseFloat(this.tickArray[i + 1])) *
           0.5;
-        return [this.tickArray[i], centerPoint, this.tickArray[i + 1]];
+
+        return {
+          start: this.tickArray[i],
+          center: centerPoint,
+          end: this.tickArray[i + 1]
+        };
       }
     }
   }

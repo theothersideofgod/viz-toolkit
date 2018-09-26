@@ -170,10 +170,6 @@ const initNavList = [
       {
         name: 'Bottom Sheet',
         value: 'bottomsheet'
-      },
-      {
-        name: 'Login',
-        value: 'login'
       }
     ]
   },

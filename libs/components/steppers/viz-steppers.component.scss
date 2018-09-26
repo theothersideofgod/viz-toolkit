@@ -22,18 +22,22 @@
       border-radius: 50%;
       height: 24px;
       width: 24px;
-      align-items: center;
-      justify-content: center;
-      display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // display: flex;
+      text-align: center;
 
       &-finish {
-        background-color: $viz-green;
+        // background-color: $viz-green;
+        border: 2px solid $viz-blue;
+        color: $viz-blue;
       }
       &-progress {
         background-color: $viz-blue;
       }
       &-waiting {
-        background-color: $viz-light-gray;
+        border: 2px solid $viz-extra-light-gray;
+        color: $viz-dark-gray;
       }
     }
     &-label {
