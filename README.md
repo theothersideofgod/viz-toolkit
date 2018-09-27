@@ -37,7 +37,40 @@ Import the basic theme viz-toolkit provides
 Import the component modules.
 
 ```
-    import { 
+  import { 
+    VizHeaderModule,
+    VizDateRangePickerModule,
+    VizSelectModule,
+    VizFooterModule,
+    VizMenuModule,
+    VizCheckboxModule,
+    VizButtonModule,
+    VizFormFieldModule,
+    VizTreeModule,
+    VizSliderModule,
+    VizToolbarModule,
+    VizIconModule,
+    VizListModule,
+    VizChipModule,
+    VizBadgeModule,
+    VizTabsModule,
+    VizDialogModule,
+    VizLoginModule,
+    VizNodataModule,
+    VizFeedbackIndicatorModule,
+    VizSidenavModule,
+    VizProgressSpinnerModule,
+    VizTableModule,
+    VizSteppersModule,
+    VizBottomSheetModue,
+    VizBreadcrumbModule,
+    VizSearchModule,
+    VizChartModule,
+    VizRangeSliderModule
+  } from 'viz-toolkit';
+  @NgModule({
+    ...
+    imports: [
       VizHeaderModule,
       VizDateRangePickerModule,
       VizSelectModule,
@@ -48,7 +81,6 @@ Import the component modules.
       VizFormFieldModule,
       VizTreeModule,
       VizSliderModule,
-      VizExpansionModule,
       VizToolbarModule,
       VizIconModule,
       VizListModule,
@@ -62,40 +94,16 @@ Import the component modules.
       VizSidenavModule,
       VizProgressSpinnerModule,
       VizTableModule,
-      VizSteppersModule
-    } from 'viz-toolkit';
-    @NgModule({
-      ...
-      imports: [
-        VizHeaderModule,
-        VizDateRangePickerModule,
-        VizSelectModule,
-        VizFooterModule,
-        VizMenuModule,
-        VizCheckboxModule,
-        VizButtonModule,
-        VizFormFieldModule,
-        VizTreeModule,
-        VizSliderModule,
-        VizExpansionModule,
-        VizToolbarModule,
-        VizIconModule,
-        VizListModule,
-        VizChipModule,
-        VizBadgeModule,
-        VizTabsModule,
-        VizDialogModule,
-        VizLoginModule,
-        VizNodataModule,
-        VizFeedbackIndicatorModule,
-        VizSidenavModule,
-        VizProgressSpinnerModule,
-        VizTableModule,
-        VizSteppersModule
-      ],
-      ...
-    })
-    export class AppModule { }
+      VizSteppersModule,
+      VizBottomSheetModue,
+      VizBreadcrumbModule,
+      VizSearchModule,
+      VizChartModule,
+      VizRangeSliderModule
+    ],
+    ...
+  })
+  export class AppModule { }
 ```
 
 ### Step 4: Animations
