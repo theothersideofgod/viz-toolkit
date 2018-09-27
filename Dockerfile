@@ -10,6 +10,8 @@ WORKDIR /app
 COPY package.json /app/
 COPY libs/package.json /app/libs/
 
+RUN npm install
+
 RUN cd libs && npm install && cd /app
 
 ARG buildno=1
@@ -17,8 +19,6 @@ ARG buildno=1
 COPY . .
 
 RUN npm run build:lib
-
-RUN npm install
 
 # RUN npm run ng -- test --watch=false --progress=false --browsers ChromeCustom
 
