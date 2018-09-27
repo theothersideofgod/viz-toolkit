@@ -1,0 +1,9 @@
+version: '3'
+services:
+  uiux:
+    build: ./
+    image: docker.corp.vizientinc.com/uiux-toolkit-site:${IMG_VERSION:-latest}
+    ports: ["4200:80"]
+    volumes:
+      - /app/node_modules
+

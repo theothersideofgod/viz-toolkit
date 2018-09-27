@@ -1,0 +1,9 @@
+version: '3'
+services:
+  uiux:
+    entrypoint: "/bin/sh -c"
+    command: ["cp -rf /usr/share/nginx/html/* /out"]
+    volumes:
+      - ./out/toolkit-site:/out
+      - /app/node_modules/
+    ports: []
