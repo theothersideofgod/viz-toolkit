@@ -8,14 +8,19 @@ RUN apt-get update && apt-get install -y google-chrome-stable
 WORKDIR /app
 
 COPY package.json /app/
+COPY libs/package.json /app/libs/
 
 RUN npm install
+
+RUN cd libs && npm install && cd /app
 
 ARG buildno=1
 
 COPY . .
 
 # RUN npm run ng -- test --watch=false --progress=false --browsers ChromeCustom
+
+RUN npm run build:lib --prod
 
 RUN npm run build --prod
 
