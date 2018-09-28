@@ -65,8 +65,7 @@ Import the component modules.
     VizBottomSheetModue,
     VizBreadcrumbModule,
     VizSearchModule,
-    VizChartModule,
-    VizRangeSliderModule
+    VizChartModule
   } from 'viz-toolkit';
   @NgModule({
     ...
@@ -98,8 +97,7 @@ Import the component modules.
       VizBottomSheetModue,
       VizBreadcrumbModule,
       VizSearchModule,
-      VizChartModule,
-      VizRangeSliderModule
+      VizChartModule
     ],
     ...
   })
