@@ -10,9 +10,4 @@ import { MatMenuModule } from '@angular/material';
 //   declarations: [VizMenuComponent, VizMenuCellComponent]
 // })
 // export class VizMenuModule {}
-
-
-
-
-
 export const VizMenuModule = MatMenuModule;

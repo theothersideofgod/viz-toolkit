@@ -12,7 +12,7 @@ export class SnackbarMobileComponent implements OnInit {
   action = 'Button';
   constructor(public snackBar: MatSnackBar) {}
 
-  openSnackBar(message: string, action: string) {
+  openSnackBar() {
     this.snackBar.open(this.message, this.action, {
       panelClass: 'viz-snackbar-mobile',
       duration: 3000
