@@ -6,19 +6,21 @@ import {
   Input,
   AfterViewInit,
   HostBinding,
-  HostListener
+  HostListener,
+  OnDestroy
 } from '@angular/core';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { fromEvent } from 'rxjs';
 @Component({
   selector: 'viz-slider',
   templateUrl: 'viz-slider.component.html',
-  styleUrls: ['./viz-slider.component.scss'],
+  styleUrls: ['./viz-slider.component.scss']
 })
-export class VizSliderComponent implements OnInit, AfterViewInit {
-
-  @HostBinding('class') baseClass = 'viz-slider';
-  @HostBinding('tabindex') baseTab = '-1';
+export class VizSliderComponent implements OnInit, AfterViewInit, OnDestroy {
+  @HostBinding('class')
+  baseClass = 'viz-slider';
+  @HostBinding('tabindex')
+  baseTab = '-1';
 
   isDragging = false;
   thumbPosition: number;
@@ -101,57 +103,79 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   private _thumbLabel = false;
   private _value = 0;
 
+  private _mouseDown$;
+  private _mouseUp$;
+  private _mouseMove$;
+
   @ViewChild('sliderWrapper')
   private _sliderWrapper: ElementRef;
 
   onDragStart(event: any) {
     this.isDragging = true;
-    if (event.target === this._sliderWrapper.nativeElement) {
-      if (this.range) {
-        if (this.thumbPositionControl(event.offsetX) === 'lower') {
-          this.lowerThumbFocusState = 'focused';
-          this.lowerThumbPosition = this.getThumbPosition(event.offsetX);
-          this.lowerValue = this.positionToValue(this.lowerThumbPosition);
-        } else {
-          this.upperThumbFocusState = 'focused';
-          this.upperThumbPosition = this.getThumbPosition(event.offsetX);
-          this.upperValue = this.positionToValue(this.upperThumbPosition);
-        }
+    console.log(this.getOffsetLocationX(event.clientX));
+
+    if (this.range) {
+      if (
+        this.thumbPositionControl(this.getOffsetLocationX(event.clientX)) ===
+        'lower'
+      ) {
+        this.lowerThumbFocusState = 'focused';
+        this.lowerThumbPosition = this.getThumbPosition(
+          this.getOffsetLocationX(event.clientX)
+        );
+        this.lowerValue = this.positionToValue(this.lowerThumbPosition);
       } else {
-        this.thumbFocusState = 'focused';
-        this.thumbPosition = this.getThumbPosition(event.offsetX);
-        this.value = this.positionToValue(this.thumbPosition);
+        this.upperThumbFocusState = 'focused';
+        this.upperThumbPosition = this.getThumbPosition(
+          this.getOffsetLocationX(event.clientX)
+        );
+        this.upperValue = this.positionToValue(this.upperThumbPosition);
       }
+    } else {
+      this.thumbFocusState = 'focused';
+      this.thumbPosition = this.getThumbPosition(
+        this.getOffsetLocationX(event.clientX)
+      );
+      this.value = this.positionToValue(this.thumbPosition);
     }
   }
 
   onDragging(event: any) {
-    // console.log(event)
-
-    if (this.isDragging && event.target === this._sliderWrapper.nativeElement) {
+    if (this.isDragging) {
       if (this.range) {
-        if (this.thumbPositionControl(event.offsetX) === 'lower') {
+        if (
+          this.thumbPositionControl(this.getOffsetLocationX(event.clientX)) ===
+          'lower'
+        ) {
           this.lowerThumbFocusState = 'pressed';
-          this.lowerThumbPosition = this.getThumbPosition(event.offsetX);
+          this.lowerThumbPosition = this.getThumbPosition(
+            this.getOffsetLocationX(event.clientX)
+          );
           this.lowerValue = this.positionToValue(this.lowerThumbPosition);
         } else {
           this.upperThumbFocusState = 'pressed';
-          this.upperThumbPosition = this.getThumbPosition(event.offsetX);
+          this.upperThumbPosition = this.getThumbPosition(
+            this.getOffsetLocationX(event.clientX)
+          );
           this.upperValue = this.positionToValue(this.upperThumbPosition);
         }
       } else {
         this.thumbFocusState = 'pressed';
-        this.thumbPosition = this.getThumbPosition(event.offsetX);
+        this.thumbPosition = this.getThumbPosition(
+          this.getOffsetLocationX(event.clientX)
+        );
         this.value = this.positionToValue(this.thumbPosition);
       }
     }
-    return;
   }
 
   onDragEnd(event: any) {
     this.isDragging = false;
     if (this.range) {
-      if (this.thumbPositionControl(event.offsetX) === 'lower') {
+      if (
+        this.thumbPositionControl(this.getOffsetLocationX(event.clientX)) ===
+        'lower'
+      ) {
         this.lowerThumbFocusState = 'resting';
       } else {
         this.upperThumbFocusState = 'resting';
@@ -298,9 +322,12 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
   }
 
   rangeCheck(value) {
-    const validateValue = value < 0 ? 0 : value ;
+    const validateValue = value < 0 ? 0 : value;
     for (let i = 0; i < this.tickArray.length; i++) {
-      if (this.tickArray[i] <= validateValue && validateValue <= this.tickArray[i + 1]) {
+      if (
+        this.tickArray[i] <= validateValue &&
+        validateValue <= this.tickArray[i + 1]
+      ) {
         const centerPoint: number =
           (parseFloat(this.tickArray[i]) + parseFloat(this.tickArray[i + 1])) *
           0.5;
@@ -312,6 +339,28 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
         };
       }
     }
+  }
+
+  getOffsetLocationX(clientX) {
+    const elementPosition = this.getElementOffset(
+      this._sliderWrapper.nativeElement
+    );
+    const location = clientX - elementPosition.left;
+    if (location < 0) {
+      return 0;
+    } else if (location > this._sliderWrapper.nativeElement.offsetWidth) {
+      return this._sliderWrapper.nativeElement.offsetWidth;
+    } else {
+      return location;
+    }
+  }
+
+  getElementOffset(el) {
+    const rect = el.getBoundingClientRect();
+    const scrollLeft =
+      window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
   }
 
   ngOnInit() {
@@ -329,18 +378,20 @@ export class VizSliderComponent implements OnInit, AfterViewInit {
     }
     this.createTickArray();
 
-    fromEvent(this._sliderWrapper.nativeElement, 'mousedown').subscribe(event =>
-      this.onDragStart(event)
-    );
-    fromEvent(this._sliderWrapper.nativeElement, 'mouseup').subscribe(event =>
-      this.onDragEnd(event)
-    );
-    fromEvent(this._sliderWrapper.nativeElement, 'mousemove').subscribe(event =>
-      this.onDragging(event)
-    );
+    this._mouseDown$ = fromEvent(
+      this._sliderWrapper.nativeElement,
+      'mousedown'
+    ).subscribe(event => this.onDragStart(event));
+    this._mouseMove$ = fromEvent(this._sliderWrapper.nativeElement, 'mousemove').subscribe(event => this.onDragging(event));
+    this._mouseUp$ = fromEvent(this._sliderWrapper.nativeElement, 'mouseup').subscribe(event => this.onDragEnd(event));
   }
   ngAfterViewInit(): void {
     // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     // Add 'implements AfterViewInit' to the class.
+  }
+  ngOnDestroy(): void {
+    // Called once, before the instance is destroyed.
+    // Add 'implements OnDestroy' to the class.
+    this._mouseDown$.unsubscribe();
   }
 }
