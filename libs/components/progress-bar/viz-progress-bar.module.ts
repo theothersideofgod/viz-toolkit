@@ -1,3 +1,10 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material';
 
-const VizProgressBarModule = MatProgressBarModule;
+@NgModule({
+  imports: [CommonModule],
+  declarations: [],
+  exports: [MatProgressBarModule]
+})
+export class VizProgressBarModule {}
