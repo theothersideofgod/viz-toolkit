@@ -12,6 +12,18 @@
   .viz-nodata-wrap {
     height: 100%;
     width: 100%;
+    position: relative;
+    min-width: 178px;
+    min-height: 214px;
+  }
+  .viz-nodata {
+    height: 214px;
+    width: 178px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
   .viz-nodata-title {
     /* Title: */
@@ -31,4 +43,5 @@
     letter-spacing: 0;
     text-align: center;
   }
+  
 }
