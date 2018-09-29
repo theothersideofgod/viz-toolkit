@@ -1,3 +1,10 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material';
 
-export const VizCardModule = MatCardModule;
+@NgModule({
+  imports: [CommonModule],
+  declarations: [],
+  exports: [MatCardModule]
+})
+export class VizCardModule {}
