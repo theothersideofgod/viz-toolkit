@@ -129,7 +129,7 @@ npm install --save @angular/animations
 
 If you want to use the mat-icon component with the official [Material Design Icons](https://material.io/tools/icons/?style=baseline), load the icon font in your index.html.
 
-#### Put this line into angular.json
+#### Put this line into index.html
 
 ```
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
