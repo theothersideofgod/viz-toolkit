@@ -1,6 +1,7 @@
 @import '../node_modules/@angular/material/theming';
 @include mat-core();
 @import 'viz-color';
+@import 'viz-font';
 $small-breakpoint-width: 720px;
 
 /* For desktop, the content should be aligned with the page title. */
