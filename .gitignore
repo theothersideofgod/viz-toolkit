@@ -37,6 +37,7 @@ yarn-error.log
 testem.log
 /typings
 upload.sh
+uploadLib.sh
 
 # System Files
 .DS_Store

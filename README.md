@@ -22,7 +22,7 @@ npm install viz-toolkit --registry http://artifacts.corp.vizientinc.com/artifact
 "viz-toolkit": "file:./libs/viz-toolkit",
 ```
 
-### Step 2: Include CSS 
+### Step 2: Include CSS
 
 Import the basic theme viz-toolkit provides
 
@@ -37,7 +37,7 @@ Import the basic theme viz-toolkit provides
 Import the component modules.
 
 ```
-  import { 
+  import {
     VizHeaderModule,
     VizDateRangePickerModule,
     VizSelectModule,
@@ -65,7 +65,15 @@ Import the component modules.
     VizBottomSheetModue,
     VizBreadcrumbModule,
     VizSearchModule,
-    VizChartModule
+    VizChartModule,
+    VizDatepickerModule,
+    VizRadioModule,
+    VizSlideToggleModule,
+    VizCardModule,
+    VizProgressBarModule,
+    VizPaginatorModule,
+    VizSnackBarModule,
+    VizBottomSheetModue
   } from 'viz-toolkit';
   @NgModule({
     ...
@@ -97,7 +105,15 @@ Import the component modules.
       VizBottomSheetModue,
       VizBreadcrumbModule,
       VizSearchModule,
-      VizChartModule
+      VizChartModule,
+      VizDatepickerModule,
+      VizRadioModule,
+      VizSlideToggleModule,
+      VizCardModule,
+      VizProgressBarModule,
+      VizPaginatorModule,
+      VizSnackBarModule,
+      VizBottomSheetModue
     ],
     ...
   })
@@ -125,7 +141,7 @@ npm install --save @angular/animations
     export class AppModule { }
 ```
 
-### Step 5: Add Material Icons 
+### Step 5: Add Material Icons
 
 If you want to use the mat-icon component with the official [Material Design Icons](https://material.io/tools/icons/?style=baseline), load the icon font in your index.html.
 
@@ -157,7 +173,7 @@ Set package.json
 "devDependencies": {
   ...,
   "viz-toolkit":"file:./libs/viz-toolkit"
-  ...,    
+  ...,
 },
 ```
 
