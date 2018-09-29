@@ -1,7 +1,39 @@
 import { NgModule } from '@angular/core';
 import { MaterialModule } from '../../app/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import * as VizModules from 'libs';
+// import * as VizModules from 'libs';
+
+import {
+  VizHeaderModule,
+  VizDateRangePickerModule,
+  VizSelectModule,
+  VizFooterModule,
+  VizMenuModule,
+  VizCheckboxModule,
+  VizButtonModule,
+  VizFormFieldModule,
+  VizTreeModule,
+  VizSliderModule,
+  VizToolbarModule,
+  VizIconModule,
+  VizListModule,
+  VizChipModule,
+  VizBadgeModule,
+  VizTabsModule,
+  VizDialogModule,
+  VizLoginModule,
+  VizNodataModule,
+  VizFeedbackIndicatorModule,
+  VizSidenavModule,
+  VizProgressSpinnerModule,
+  VizTableModule,
+  VizSteppersModule,
+  VizBottomSheetModue,
+  VizBreadcrumbModule,
+  VizSearchModule,
+  VizChartModule
+} from 'libs';
+
 import {
   SliderRangeEventComponent,
   SliderRangeEventData
@@ -335,7 +367,6 @@ import {
 } from 'mat-range-datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { VizMenuCellComponent } from 'libs/components/menu/menu-cell/viz-menu-cell.component';
 export const ALL_EXAMPLE_ITEMS = {
   'slider-range-event': {
     component: SliderRangeEventComponent,
@@ -670,6 +701,7 @@ export const ALL_EXAMPLE_ITEMS = {
     data: LoginBasicData
   }
 };
+// console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
     SliderRangeEventComponent,
@@ -766,7 +798,34 @@ export const ALL_EXAMPLE_ITEMS = {
     ReactiveFormsModule,
     MatRangeDatepickerModule,
     MatRangeNativeDateModule,
-    ...Object.keys(VizModules).map(i => VizModules[i])
+    VizHeaderModule,
+    VizDateRangePickerModule,
+    VizSelectModule,
+    VizFooterModule,
+    VizMenuModule,
+    VizCheckboxModule,
+    VizButtonModule,
+    VizFormFieldModule,
+    VizTreeModule,
+    VizSliderModule,
+    VizToolbarModule,
+    VizIconModule,
+    VizListModule,
+    VizChipModule,
+    VizBadgeModule,
+    VizTabsModule,
+    VizDialogModule,
+    VizLoginModule,
+    VizNodataModule,
+    VizFeedbackIndicatorModule,
+    VizSidenavModule,
+    VizProgressSpinnerModule,
+    VizTableModule,
+    VizSteppersModule,
+    VizBottomSheetModue,
+    VizBreadcrumbModule,
+    VizSearchModule,
+    VizChartModule
   ],
   providers: [],
   entryComponents: [

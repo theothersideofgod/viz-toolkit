@@ -71,6 +71,20 @@
     }
     &-class {
       width: calc((100%) / 3);
+
+
+      &:nth-child(3n + 1) {
+        // background-color: red;
+        ul {
+          padding-right: 30px;
+        }
+      }
+      &:nth-child(3n + 2) {
+        // background-color: blue;
+        ul {
+          padding-right: 48px;
+        }
+      }
     }
     &-class-wrapper {
       display: flex;
@@ -96,7 +110,8 @@
 
     &-list {
       list-style-type: none;
-      padding: 0px;
+      padding-left: 0px;
+      // padding: 0px;
 
       &-svg {
         width: 30px;

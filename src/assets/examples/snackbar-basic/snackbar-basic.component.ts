@@ -12,7 +12,7 @@ export class SnackbarBasicComponent implements OnInit {
   @ViewChild('snackbarBasic', {read: ViewContainerRef}) snackbarBasic: ViewContainerRef;
   constructor(public snackBar: MatSnackBar) {}
 
-  openSnackBar(message: string, action: string) {
+  openSnackBar() {
     this.snackBar.open(this.message, this.action, {
       panelClass: 'viz-snackbar-desktop',
       duration: 3000,
