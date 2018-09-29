@@ -8,9 +8,9 @@
         {{nav.name}}
       </div>
       <div class="viz-sidenav-group-item" *ngFor="let subNav of nav.subs; let i=index" 
-        [routerLink]="subNav.value" 
+        (click)="redirectTo(subNav)"
         routerLinkActive
-        #rla="routerLinkActive" [class.active]="rla.isActive">
+        #rla="routerLinkActive" [class.active]="subNav.isActive">
         <mat-icon class="viz-sidenav-group-item-icon">{{subNav.icon}}</mat-icon>
         {{subNav.name}}
         <mat-icon *ngIf="subNav.removable" class="viz-sidenav-group-item-icon-close" (click)="removeItem(navIndex, subNav);$event.stopPropagation();">close</mat-icon>

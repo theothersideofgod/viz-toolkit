@@ -10,7 +10,7 @@
     <div class="component-class" *ngFor="let class of componentClass; let i=index">
       <div class="component-header">
         <div class="component-header-svg">
-          <img src="assets/img/{{class.title}}.svg" alt="{{class.title}}">
+          <img src="assets/img/{{class.title}}.svg" alt="{{class.title}}" *ngIf="!!class.title">
         </div>
         <div class="component-title-2">{{class.title}}</div>
       </div>

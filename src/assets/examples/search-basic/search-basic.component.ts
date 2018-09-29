@@ -34,6 +34,7 @@ export class SearchBasicComponent implements OnInit {
     }
   ];
   ngOnInit() {}
+  searchResult() {}
 }
 
 export const SearchBasicData = {
