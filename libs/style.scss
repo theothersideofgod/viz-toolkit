@@ -490,6 +490,9 @@ td.mat-cell,
 
 //badge
 .viz-text-badge {
+  color: #251e1e;
+  font-size: 14px;
+  font-weight: 300;
   display: inline-flex;
   align-items: baseline;
   span {
@@ -576,6 +579,9 @@ td.mat-cell,
 }
 
 //icon
+.mat-icon {
+  color: $viz-gray;
+}
 .viz-icon-small {
   font-size: 18px;
 }
