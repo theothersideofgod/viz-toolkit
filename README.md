@@ -8,7 +8,7 @@ For help getting started with a new Angular app, check out the [Angular CLI](htt
 
 ### Step 1: Install Vizient ToolKit link
 
-Cause Vizient Toolkit is not published into npm. You have to install it via local file.
+npm install viz-toolkit --registry http://artifacts.corp.vizientinc.com/artifactory/api/npm/npm
 
 #### Put libs/viz-toolkit in root folder. Add this line into your package.json.
 
