@@ -1,25 +1,14 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { VizSlideToggleModule } from './viz-slide-toggle.module';
 
-import { VizSlideToggleComponent } from './viz-slide-toggle.component';
+describe('VizSlideToggleModule', () => {
+  let vizSlideToggleModule: VizSlideToggleModule;
 
-describe('a viz-slide-toggle component', () => {
-	let component: VizSlideToggleComponent;
+  beforeEach(() => {
+    vizSlideToggleModule = new VizSlideToggleModule();
+  });
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				VizSlideToggleComponent
-			]
-		});
-	});
-
-	// instantiation through framework injection
-	beforeEach(inject([VizSlideToggleComponent], (VizSlideToggleComponent) => {
-		component = VizSlideToggleComponent;
-	}));
-
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+  it('should create an instance', () => {
+    expect(vizSlideToggleModule).toBeTruthy();
+  });
 });
+

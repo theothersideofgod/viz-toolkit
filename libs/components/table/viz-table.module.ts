@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import {
   MatTableModule,
   MatIconModule,
-  MatButtonModule
+  MatButtonModule,
+  MatSortModule
 } from '@angular/material';
 import { VizExpandComponent } from './viz-expand/viz-expand.component';
 import { VizShowExpandComponent } from './viz-show-expand/viz-show-expand.component';
@@ -11,6 +12,11 @@ import { VizShowExpandComponent } from './viz-show-expand/viz-show-expand.compon
 @NgModule({
   imports: [CommonModule, MatTableModule, MatIconModule, MatButtonModule],
   declarations: [VizExpandComponent, VizShowExpandComponent],
-  exports: [MatTableModule, VizExpandComponent, VizShowExpandComponent]
+  exports: [
+    MatTableModule,
+    VizExpandComponent,
+    VizShowExpandComponent,
+    MatSortModule
+  ]
 })
 export class VizTableModule {}

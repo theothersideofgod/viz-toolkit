@@ -16,45 +16,45 @@ import * as Highcharts from 'highcharts';
 })
 export class VizChartComponent
   implements OnInit, AfterViewInit, OnDestroy, OnChanges {
-  @Input()
-  height;
-  @Input()
-  width;
+  // @Input()
+  // height;
+  // @Input()
+  // width;
   @Input()
   chartOption;
-  @ViewChild('chart')
-  chart: ElementRef;
-  _highchartInstance;
+  // @ViewChild('chart')
+  // chart: ElementRef;
+  // _highchartInstance;
   constructor() {}
 
   ngOnInit() {}
 
   renderChart() {
-    if (this._highchartInstance) {
-      this._highchartInstance.destroy();
-    }
+    // if (this._highchartInstance) {
+    //   this._highchartInstance.destroy();
+    // }
 
-    this._highchartInstance = Highcharts.chart(
-      this.chart.nativeElement,
-      this.chartOption
-    );
+    // this._highchartInstance = Highcharts.chart(
+    //   this.chart.nativeElement,
+    //   this.chartOption
+    // );
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     // Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     // Add '${implements OnChanges}' to the class.
-    this.renderChart();
+    // this.renderChart();
   }
 
   ngOnDestroy(): void {
     // Called once, before the instance is destroyed.
     // Add 'implements OnDestroy' to the class.
-    this._highchartInstance.destroy();
+    // this._highchartInstance.destroy();
   }
 
   ngAfterViewInit() {
     // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     // Add 'implements AfterViewInit' to the class.
-    this.renderChart();
+    // this.renderChart();
   }
 }
