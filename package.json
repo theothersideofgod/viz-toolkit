@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-css": "node-sass-chokidar libs/style.scss libs/style.css",
-    "build:lib": "npm run build-css && ng-packagr -p libs/package.json && mkdir libs/viz-toolkit/themes && cp libs/style.css libs/viz-toolkit/themes/index.theme.css"
+    "build-css": "node-sass-chokidar libs/style.scss libs/style.css --output-style compressed",
+    "build:lib": "npm run build-css && ng-packagr -p libs/package.json && mkdir libs/viz-toolkit/themes && cp libs/style.css libs/viz-toolkit/themes/index.theme.css && mkdir libs/viz-toolkit/themes/assets && cp -R libs/assets libs/viz-toolkit/themes/"
   },
   "private": true,
   "dependencies": {

@@ -1,6 +1,7 @@
 @import '../node_modules/@angular/material/theming';
 @include mat-core();
 @import 'viz-color';
+@import 'viz-font';
 $small-breakpoint-width: 720px;
 
 /* For desktop, the content should be aligned with the page title. */
@@ -489,6 +490,9 @@ td.mat-cell,
 
 //badge
 .viz-text-badge {
+  color: #251e1e;
+  font-size: 14px;
+  font-weight: 300;
   display: inline-flex;
   align-items: baseline;
   span {
@@ -575,6 +579,9 @@ td.mat-cell,
 }
 
 //icon
+.mat-icon {
+  color: $viz-gray;
+}
 .viz-icon-small {
   font-size: 18px;
 }

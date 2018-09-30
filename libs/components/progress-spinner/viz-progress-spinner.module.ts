@@ -1,5 +1,10 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatProgressSpinnerModule } from '@angular/material';
 
-import { MatProgressBarModule } from '@angular/material';
-
-
-export const VizProgressSpinnerModule = MatProgressBarModule;
+@NgModule({
+  imports: [CommonModule],
+  declarations: [],
+  exports: [MatProgressSpinnerModule]
+})
+export class VizProgressSpinnerModule {}

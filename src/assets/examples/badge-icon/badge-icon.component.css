@@ -1,6 +1,4 @@
-span,
-button,
-mat-icon {
+.mat-badge {
   margin: 0 40px;
 }
 mat-icon {
