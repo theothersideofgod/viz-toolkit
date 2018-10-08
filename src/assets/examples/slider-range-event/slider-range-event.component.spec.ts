@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SliderRangeEventComponent } from './slider-range-event.component';
-import { VizRangeSliderModule } from 'libs';
+import { VizSliderModule } from 'libs';
 
 describe('SliderRangeEventComponent', () => {
   let component: SliderRangeEventComponent;
@@ -9,7 +9,7 @@ describe('SliderRangeEventComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [VizRangeSliderModule],
+      imports: [VizSliderModule],
       declarations: [SliderRangeEventComponent]
     }).compileComponents();
   }));
