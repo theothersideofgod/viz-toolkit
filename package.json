@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "build-watch":"ng-packagr -w libs/package.json",
     "build-css": "node-sass-chokidar libs/style.scss libs/style.css --output-style compressed",
     "build:lib": "npm run build-css && ng-packagr -p libs/package.json && mkdir libs/viz-toolkit/themes && cp libs/style.css libs/viz-toolkit/themes/index.theme.css && mkdir libs/viz-toolkit/themes/assets && cp -R libs/assets libs/viz-toolkit/themes/"
   },
@@ -31,7 +32,7 @@
     "lottie-web": "^5.1.20",
     "mat-range-datepicker": "^1.0.5",
     "moment": "^2.22.1",
-    "ng-packagr": "^3.0.3",
+    "ng-packagr": "^4.2.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
