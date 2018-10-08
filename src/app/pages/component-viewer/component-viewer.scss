@@ -11,7 +11,9 @@ app-component-viewer {
     padding-right: $content-padding-side-xs;
   }
 }
-
+.docs-component-viewer {
+  width: 100%;
+}
 .docs-component-viewer-section-tab {
   text-transform: uppercase;
 }
@@ -38,8 +40,12 @@ app-component-viewer {
   }
 
   table-of-contents {
-    top: 60px;
-    position: sticky;
+    // top: 60px;
+    // position: sticky;
+    top: 132px;
+    position: fixed;
+    right: 0px;
+
 
     // Reposition on top of content on small screens and remove
     // sticky positioning
@@ -53,7 +59,7 @@ app-component-viewer {
 }
 
 .docs-component-view-text-content {
-  flex-grow: 1;
+  // flex-grow: 1;
   width: 100%;
 }
 

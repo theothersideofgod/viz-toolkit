@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { fromEvent } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
 
 const initNavList = [
   {
@@ -207,10 +209,28 @@ const initNavList = [
 })
 export class ComponentSidenavComponent implements OnInit {
   navList = initNavList;
-
-  constructor(private _router: Router) {
+  scrollContainer: any;
+  documentContent: any;
+  isScrollBottom = false;
+  constructor(
+    private _router: Router,
+    @Inject(DOCUMENT) private document: any
+  ) {
     console.log(_router.url);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.scrollContainer = this.document.querySelector('.main-sec');
+    this.documentContent = this.document.querySelector('.documentation-main');
+    fromEvent(this.scrollContainer, 'scroll').subscribe(() => {
+      if (this.scrollContainer.scrollTop >= (this.documentContent.offsetHeight - this.scrollContainer.offsetHeight)) {
+        this.isScrollBottom = true;
+      } else {
+        this.isScrollBottom = false;
+      }
+    });
+
+  }
+
+
 }
