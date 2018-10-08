@@ -4,6 +4,11 @@
     height: calc(100vh - 72px - 72px);
     margin: 0 9.375vw;
     overflow: hidden;
+
+    #hero {
+      height: 100%;
+    }
+
     @media screen and (min-width: 1400px) {
       width: 1170px;
       margin: 0 auto;
@@ -46,6 +51,9 @@
       .svg-item {
         max-width: 555px;
         width: 50%;
+
+        
+
       }
     }
     .home-sec-2 {
