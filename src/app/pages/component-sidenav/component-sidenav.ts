@@ -228,7 +228,6 @@ export class ComponentSidenavComponent implements OnInit {
       } else {
         this.isScrollBottom = false;
       }
-      console.log(this.isScrollBottom);
     });
 
   }
