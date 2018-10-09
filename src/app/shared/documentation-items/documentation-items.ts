@@ -21,6 +21,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'okta', name: ''},
         {id: 'applicationtemplates', name: ''},
         {id: 'colors', name: ''},
         {id: 'typography', name: ''},

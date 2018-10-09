@@ -1,0 +1,1070 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <div class="doc-category-title">
+    Okta
+    <span class="docs-markdown-h3"
+          id="contents">
+      <span header-link="contents"></span>Contents</span>
+  </div>
+  <div class="doc-title-1">
+    OKTA
+  </div>
+  <div class="doc-desc-1">
+    Replace JS and SCSS
+  </div>
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    OKTA JS
+    <span class="docs-markdown-h3"
+          id="oktajs">
+      <span header-link="oktajs"></span>OKTA JS</span>
+  </div>
+  <pre class="doc-code-sec oktajs-code">
+    signInWidgetConfig = {
+      <span class="hljs-comment">// Enable or disable widget functionality with the following options. Some of these features require additional configuration in your Okta admin settings. Detailed information can be found here: https://github.com/okta/okta-signin-widget#okta-sign-in-widget</span>
+      <span class="hljs-comment">// Look and feel changes:</span>
+      logo: <span class="hljs-string">'http://vizient-toolkit.interactivelabs.com/assets/img/logo.svg'</span>, <span class="hljs-comment">// Try changing "okta.com" to other domains, like: "workday.com", "splunk.com", or "delmonte.com"</span>
+      language: <span class="hljs-string">'en'</span>,                       <span class="hljs-comment">// Try: [fr, de, es, ja, zh-CN] Full list: https://github.com/okta/okta-signin-widget#language-and-text</span>
+      i18n: {
+        <span class="hljs-comment">//Overrides default text when using English. Override other languages by adding additional sections.</span>
+        <span class="hljs-string">'en'</span>: {
+          <span class="hljs-string">'primaryauth.title'</span>: <span class="hljs-string">'Login'</span>,   <span class="hljs-comment">// Changes the sign in text</span>
+          <span class="hljs-string">'primaryauth.submit'</span>: <span class="hljs-string">'Login'</span>,  <span class="hljs-comment">// Changes the sign in button</span>
+          <span class="hljs-string">'needhelp'</span>: <span class="hljs-string">'Forget your password?'</span>
+          <span class="hljs-comment">// More e.g. [primaryauth.username.placeholder,  primaryauth.password.placeholder, needhelp, etc.].</span>
+          <span class="hljs-comment">// Full list here: https://github.com/okta/okta-signin-widget/blob/master/packages/@okta/i18n/dist/properties/login.properties</span>
+        }
+      },
+      <span class="hljs-comment">// Changes to widget functionality</span>
+      features: {
+        <span class="hljs-attr">registration</span>: <span class="hljs-literal">true</span>,                 <span class="hljs-comment">// Enable self-service registration flow</span>
+        rememberMe: <span class="hljs-literal">false</span>,                   <span class="hljs-comment">// Setting to false will remove the checkbox to save username</span>
+        <span class="hljs-comment">//multiOptionalFactorEnroll: true,  // Allow users to enroll in multiple optional factors before finishing the authentication flow.</span>
+        <span class="hljs-comment">//selfServiceUnlock: true,          // Will enable unlock in addition to forgotten password</span>
+        <span class="hljs-comment">//smsRecovery: true,                // Enable SMS-based account recovery</span>
+        <span class="hljs-comment">//callRecovery: true,               // Enable voice call-based account recovery</span>
+        router: <span class="hljs-literal">true</span>,                       <span class="hljs-comment">// Leave this set to true for the API demo</span>
+      },
+      <span class="hljs-attr">baseUrl</span>: <span class="hljs-string">'https://live-widget.oktapreview.com'</span>,
+      <span class="hljs-attr">clientId</span>: <span class="hljs-string">'0oaexo9c530ZUVuOj0h7'</span>,
+      <span class="hljs-attr">redirectUri</span>: <span class="hljs-string">'https://developer.okta.com/live-widget'</span>,
+      <span class="hljs-attr">authParams</span>: {
+        <span class="hljs-attr">issuer</span>: <span class="hljs-string">'https://live-widget.oktapreview.com/oauth2/ausexqn31sz3HMxdf0h7'</span>,
+        <span class="hljs-attr">responseType</span>: [<span class="hljs-string">'id_token'</span>, <span class="hljs-string">'token'</span>],
+        <span class="hljs-attr">scopes</span>: [<span class="hljs-string">'openid'</span>, <span class="hljs-string">'email'</span>, <span class="hljs-string">'profile'</span>],
+      },
+    };
+    
+    signInWidget = <span class="hljs-keyword">new</span> OktaSignIn(signInWidgetConfig);
+    
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">widgetSuccessCallback</span>(<span class="hljs-params">res</span>) </span>{
+      <span class="hljs-keyword">var</span> key = <span class="hljs-string">''</span>;
+      <span class="hljs-keyword">if</span> (res[<span class="hljs-number">0</span>]) {
+        key = <span class="hljs-built_in">Object</span>.keys(res[<span class="hljs-number">0</span>])[<span class="hljs-number">0</span>];
+        signInWidget.tokenManager.add(key, res[<span class="hljs-number">0</span>]);
+      }
+      <span class="hljs-keyword">if</span> (res[<span class="hljs-number">1</span>]) {
+        key = <span class="hljs-built_in">Object</span>.keys(res[<span class="hljs-number">1</span>])[<span class="hljs-number">0</span>];
+        signInWidget.tokenManager.add(key, res[<span class="hljs-number">1</span>]);
+      }
+      <span class="hljs-keyword">if</span> (res.status === <span class="hljs-string">'SUCCESS'</span>) {
+        <span class="hljs-keyword">var</span> token = signInWidget.tokenManager.get(key);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Logged in to Okta and issued token:"</span>);
+        <span class="hljs-built_in">console</span>.log(token);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Reload this page to start over."</span>);
+        alert(<span class="hljs-string">"Logged in! Check your developer console for details"</span>);
+      }
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">widgetErrorCallback</span> (<span class="hljs-params">err</span>) </span>{
+    }
+    
+    signInWidget.renderEl({<span class="hljs-attr">el</span>: <span class="hljs-string">'#widget-container'</span>}, widgetSuccessCallback, widgetErrorCallback);
+            
+  </pre>
+
+
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    OKTA SCSS
+    <span class="docs-markdown-h3"
+          id="oktascss">
+      <span header-link="oktascss"></span>OKTA SCSS</span>
+  </div>
+  <pre class="doc-code-sec">
+<span class="hljs-comment">// Page Properties</span>
+<span class="hljs-variable">$fonts</span>: <span class="hljs-string">'montserrat'</span>, Arial, Helvetica, sans-serif;
+<span class="hljs-variable">$default-border-radius</span>: <span class="hljs-number">3px</span>;
+<span class="hljs-variable">$container-width</span>: <span class="hljs-number">400px</span>;
+<span class="hljs-variable">$container-min-width</span>: <span class="hljs-number">300px</span>;
+<span class="hljs-variable">$num-tabs</span>: <span class="hljs-number">5</span>;
+
+<span class="hljs-comment">// Font Size</span>
+<span class="hljs-variable">$font-size</span>: <span class="hljs-number">13px</span>;
+<span class="hljs-variable">$font-size-small</span>: <span class="hljs-number">12px</span>;
+<span class="hljs-variable">$font-size-header</span>: <span class="hljs-number">14px</span>;
+<span class="hljs-variable">$font-size-footer</span>: <span class="hljs-number">11px</span>;
+<span class="hljs-variable">$font-size-default</span>: <span class="hljs-number">14px</span>;
+
+<span class="hljs-comment">// Font Weight</span>
+<span class="hljs-variable">$font-weight-body</span>: normal;
+<span class="hljs-variable">$font-weight-header</span>: bold;
+
+<span class="hljs-comment">// Theme Color</span>
+<span class="hljs-variable">$primary-bg-color</span>: <span class="hljs-number">#fff</span>;
+<span class="hljs-variable">$secondary-bg-color</span>: <span class="hljs-number">#f9f9f9</span>;
+
+<span class="hljs-comment">// Text Color</span>
+<span class="hljs-variable">$header-text-color</span>: <span class="hljs-number">#5e5e5e</span>;
+<span class="hljs-variable">$dark-text-color</span>: <span class="hljs-number">#696969</span>;
+<span class="hljs-variable">$medium-text-color</span>: <span class="hljs-number">#777</span>;
+<span class="hljs-variable">$light-text-color</span>: <span class="hljs-number">#a7a7a7</span>;
+<span class="hljs-variable">$link-text-color</span>: <span class="hljs-number">#0074b3</span>;
+<span class="hljs-variable">$placeholder-text-color</span>: <span class="hljs-number">#aaa</span>;
+<span class="hljs-variable">$error-text-color</span>: <span class="hljs-number">#e34843</span>;
+
+<span class="hljs-comment">// Button Color</span>
+<span class="hljs-variable">$icon-button-bg-color</span>: <span class="hljs-number">#fff</span>;
+<span class="hljs-variable">$button-bg-color</span>: <span class="hljs-number">#fbfbfb</span>;
+<span class="hljs-variable">$dark-button-bg-color</span>: <span class="hljs-number">#929292</span>;
+<span class="hljs-variable">$primary-button-bg-color</span>: <span class="hljs-number">#7f5eba</span>;
+<span class="hljs-variable">$success-button-bg-color</span>: <span class="hljs-number">#4cbf9c</span>;
+<span class="hljs-variable">$negative-button-bg-color</span>: <span class="hljs-number">#c35151</span>;
+<span class="hljs-variable">$disabled-button-text-color</span>: <span class="hljs-number">#aaa</span>;
+<span class="hljs-variable">$disabled-primary-button-text-color</span>: <span class="hljs-number">#fff</span>;
+<span class="hljs-variable">$disabled-primary-button-bg-color</span>: <span class="hljs-number">#63b1d7</span>;
+<span class="hljs-variable">$disabled-primary-border-color</span>: <span class="hljs-number">#3096c9</span>;
+
+<span class="hljs-comment">// Social Auth Button Colors</span>
+<span class="hljs-variable">$facebook-icon-bg-color</span>: <span class="hljs-number">#304879</span>; <span class="hljs-comment">// fb brand color - #3B5998</span>
+<span class="hljs-variable">$facebook-label-bg-color</span>: <span class="hljs-number">#406094</span>;
+<span class="hljs-variable">$facebook-border-color</span>: <span class="hljs-number">#375685</span>;
+<span class="hljs-variable">$google-icon-bg-color</span>: <span class="hljs-number">#d43722</span>; <span class="hljs-comment">// google brand color - #DC4E41</span>
+<span class="hljs-variable">$google-label-bg-color</span>: <span class="hljs-number">#de4937</span>;
+<span class="hljs-variable">$google-border-color</span>: <span class="hljs-number">#b63c33</span>;
+<span class="hljs-variable">$linkedin-icon-bg-color</span>: <span class="hljs-number">#04659a</span>; <span class="hljs-comment">// linkedin brand color - #0077B5</span>
+<span class="hljs-variable">$linkedin-label-bg-color</span>: <span class="hljs-number">#0077b5</span>;
+<span class="hljs-variable">$linkedin-border-color</span>: <span class="hljs-number">#0f608f</span>;
+<span class="hljs-variable">$microsoft-icon-bg-color</span>: <span class="hljs-number">#4294de</span>; <span class="hljs-comment">// microsoft brand color - #00A1F1</span>
+<span class="hljs-variable">$microsoft-label-bg-color</span>: <span class="hljs-number">#00a1f1</span>;
+<span class="hljs-variable">$microsoft-border-color</span>: <span class="hljs-number">#447199</span>;
+
+<span class="hljs-comment">//Default Custom Button Colors</span>
+<span class="hljs-variable">$default-custom-button-background-color</span>: <span class="hljs-number">#ff5f73</span>;
+<span class="hljs-variable">$default-custom-button-border-color</span>: <span class="hljs-number">#d6001a</span>;
+
+<span class="hljs-comment">// Button Size</span>
+<span class="hljs-variable">$input-height</span>: <span class="hljs-number">40px</span>;
+<span class="hljs-variable">$button-height</span>: <span class="hljs-number">50px</span>;
+<span class="hljs-variable">$button-line-height</span>: <span class="hljs-variable">$input-height</span> - <span class="hljs-number">4px</span>;
+<span class="hljs-variable">$button-padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">15px</span>;
+
+<span class="hljs-comment">// Input field</span>
+<span class="hljs-variable">$input-bg-color</span>: <span class="hljs-number">#fff</span>;
+<span class="hljs-variable">$input-border-color</span>: <span class="hljs-number">#696969</span>;
+<span class="hljs-variable">$input-border-color-hover</span>: <span class="hljs-number">#000000</span>;
+<span class="hljs-variable">$input-border-color-focus</span>: <span class="hljs-number">#7f5eba</span>;
+
+<span class="hljs-comment">// Modal</span>
+<span class="hljs-variable">$modal-bg-color</span>: <span class="hljs-number">#f9f9f9</span>;
+
+<span class="hljs-comment">// Footer</span>
+
+<span class="hljs-comment">// Other</span>
+
+<span class="hljs-comment">// @import 'variables';</span>
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'helpers'</span>;
+
+@<span class="hljs-keyword">mixin</span> light-button-template(<span class="hljs-variable">$bg-color</span>) {
+  @<span class="hljs-keyword">include</span> button-template(<span class="hljs-variable">$bg-color</span>, 1%, <span class="hljs-variable">$dark-text-color</span>, 22%, 25%);
+  @<span class="hljs-keyword">include</span> button-shadow(<span class="hljs-number">0.05</span>);
+  &amp;:hover,
+  &amp;:focus,
+  &amp;:active,
+  &amp;:focus {
+  <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    <span class="hljs-attribute">box-shadow</span>: none;
+  }
+}
+
+@<span class="hljs-keyword">mixin</span> dark-button-template(<span class="hljs-variable">$bg-color</span>) {
+  @<span class="hljs-keyword">include</span> button-template(<span class="hljs-variable">$bg-color</span>, 3%, <span class="hljs-number">#fff</span>, 15%, 17%);
+  @<span class="hljs-keyword">include</span> button-shadow(<span class="hljs-number">0.15</span>);
+  &amp;:hover,
+  &amp;:focus,
+  &amp;:active,
+  &amp;:focus {
+  <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    <span class="hljs-attribute">box-shadow</span>: none;
+  }
+}
+
+@<span class="hljs-keyword">mixin</span> button-shadow(<span class="hljs-variable">$drop-shadow-opacity</span>) {
+  <span class="hljs-attribute">box-shadow</span>: rgba(<span class="hljs-number">#000</span>, <span class="hljs-variable">$drop-shadow-opacity</span>) <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span>, rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.1</span>) <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> inset;
+}
+
+@<span class="hljs-keyword">mixin</span> button-template(<span class="hljs-variable">$bg-color</span>, <span class="hljs-variable">$gradient-factor</span>, <span class="hljs-variable">$text-color</span>, <span class="hljs-variable">$border-factor</span>, <span class="hljs-variable">$border-bottom-factor</span>) {
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$text-color</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$bg-color</span>;
+  <span class="hljs-attribute">background</span>: -o-linear-gradient(top, <span class="hljs-variable">$bg-color</span> <span class="hljs-number">0%</span>, darken(<span class="hljs-variable">$bg-color</span>, <span class="hljs-variable">$gradient-factor</span>) <span class="hljs-number">100%</span>); <span class="hljs-comment">/* Opera 11.10+ */</span>
+  <span class="hljs-attribute">background</span>: -ms-linear-gradient(top, <span class="hljs-variable">$bg-color</span> <span class="hljs-number">0%</span>, darken(<span class="hljs-variable">$bg-color</span>, <span class="hljs-variable">$gradient-factor</span>) <span class="hljs-number">100%</span>); <span class="hljs-comment">/* IE10+ */</span>
+  <span class="hljs-attribute">background</span>: linear-gradient(<span class="hljs-variable">$bg-color</span>, darken(<span class="hljs-variable">$bg-color</span>, <span class="hljs-variable">$gradient-factor</span>));
+  <span class="hljs-attribute">border-color</span>: darken(<span class="hljs-variable">$bg-color</span>, <span class="hljs-variable">$border-factor</span>);
+  <span class="hljs-attribute">border-bottom-color</span>: darken(<span class="hljs-variable">$bg-color</span>, <span class="hljs-variable">$border-bottom-factor</span>);
+
+  &amp;:hover,
+  &amp;:focus,
+  &amp;:active,
+  &amp;:focus {
+  <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    <span class="hljs-variable">$hover-bg-color</span>: lighten(<span class="hljs-variable">$bg-color</span>, <span class="hljs-number">3%</span>);
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$hover-bg-color</span>;
+    <span class="hljs-attribute">background</span>: -o-linear-gradient(top, <span class="hljs-variable">$hover-bg-color</span> <span class="hljs-number">0%</span>, darken(<span class="hljs-variable">$hover-bg-color</span>, <span class="hljs-variable">$gradient-factor</span>) <span class="hljs-number">100%</span>); <span class="hljs-comment">/* Opera 11.10+ */</span>
+    <span class="hljs-attribute">background</span>: -ms-linear-gradient(top, <span class="hljs-variable">$hover-bg-color</span> <span class="hljs-number">0%</span>, darken(<span class="hljs-variable">$hover-bg-color</span>, <span class="hljs-variable">$gradient-factor</span>) <span class="hljs-number">100%</span>); <span class="hljs-comment">/* IE10+ */</span>
+    <span class="hljs-attribute">background-image</span>: linear-gradient(<span class="hljs-variable">$hover-bg-color</span>, darken(<span class="hljs-variable">$hover-bg-color</span>, <span class="hljs-variable">$gradient-factor</span>));
+    <span class="hljs-attribute">border-color</span>: darken(<span class="hljs-variable">$bg-color</span>, <span class="hljs-variable">$border-factor</span> * <span class="hljs-number">1.3</span>);
+    <span class="hljs-attribute">border-bottom-color</span>: darken(<span class="hljs-variable">$bg-color</span>, <span class="hljs-variable">$border-bottom-factor</span> * <span class="hljs-number">1.2</span>);
+    <span class="hljs-attribute">text-decoration</span>: none;
+    <span class="hljs-attribute">cursor</span>: pointer;
+  }
+}
+
+<span class="hljs-selector-id">#okta-sign-in</span> <span class="hljs-selector-class">.o-form-button-bar</span> <span class="hljs-selector-class">.button</span> {
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">44px</span> <span class="hljs-meta">!important</span>;
+}
+<span class="hljs-selector-id">#okta-sign-in</span> <span class="hljs-selector-class">.o-form-theme</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0px</span> <span class="hljs-meta">!important</span>
+}
+#okta-sign-in .o-form-button-bar {
+  padding: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span>
+}
+.registration-container {
+  display: none
+}
+
+.auth-footer {
+  margin-bottom: <span class="hljs-number">32px</span> <span class="hljs-meta">!important</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#7f5eba</span> <span class="hljs-meta">!important</span>;
+  }
+}
+
+<span class="hljs-comment">// scss-lint:disable IdSelector</span>
+<span class="hljs-selector-id">#okta-sign-in</span><span class="hljs-selector-class">.auth-container</span> {
+<span class="hljs-comment">// scss-lint:enable IdSelector</span>
+
+  <span class="hljs-selector-class">.auth-content</span> {
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0px</span> <span class="hljs-number">42px</span>;
+  }
+
+  &amp;<span class="hljs-selector-class">.main-container</span> {
+  <span class="hljs-comment">/* -- Fonts and Text Colors -- */</span>
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$fonts</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$medium-text-color</span>;
+  }
+
+  <span class="hljs-selector-tag">h2</span>,
+  <span class="hljs-selector-tag">h3</span> {
+  <span class="hljs-comment">/* -- Fonts and Text Colors -- */</span>
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-header</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$header-text-color</span>;
+    <span class="hljs-attribute">display</span>: none;
+  }
+
+  <span class="hljs-selector-class">.okta-sign-in-header</span> {
+  <span class="hljs-comment">/* -- Fonts and Text Colors -- */</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$header-text-color</span>;
+
+    &amp;<span class="hljs-selector-class">.auth-header</span> {
+      <span class="hljs-attribute">border-bottom</span>: none;
+    }
+  }
+
+  <span class="hljs-selector-class">.okta-form-subtitle</span>,
+  <span class="hljs-selector-class">.okta-form-label</span> {
+  <span class="hljs-comment">/* -- Fonts and Text Colors -- */</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$medium-text-color</span>;
+  }
+
+  <span class="hljs-selector-class">.link</span> {
+  <span class="hljs-comment">/* -- Fonts and Text Colors: links -- */</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$medium-text-color</span>;
+
+    &amp;:link,
+    &amp;:visited,
+    &amp;:hover,
+    &amp;:active {
+    <span class="hljs-comment">/* -- Fonts and Text Colors: links -- */</span>
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$medium-text-color</span>;
+    }
+  }
+
+  <span class="hljs-selector-class">.inline-link</span> {
+  <span class="hljs-comment">/* -- Fonts and Text Colors: links -- */</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$link-text-color</span>;
+
+    &amp;:link,
+    &amp;:visited,
+    &amp;:hover,
+    &amp;:active {
+    <span class="hljs-comment">/* -- Fonts and Text Colors: links -- */</span>
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$link-text-color</span>;
+    }
+  }
+
+  <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type="submit"]</span>,
+  <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type="button"]</span> {
+    <span class="hljs-comment">/* -- Submit Buttons' Fonts -- */</span>
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$fonts</span>;
+  }
+
+
+  &amp;<span class="hljs-selector-class">.main-container</span> {
+  <span class="hljs-comment">/* -- Main Background and Border Colors -- */</span>
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$primary-bg-color</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#ddd</span> <span class="hljs-number">#ddd</span> <span class="hljs-number">#d8d8d8</span>;
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">175</span>, <span class="hljs-number">175</span>, <span class="hljs-number">175</span>, <span class="hljs-number">0.12</span>);
+
+    @<span class="hljs-keyword">include</span> mobile {
+      <span class="hljs-attribute">border-width</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">box-shadow</span>: none;
+    }
+
+    <span class="hljs-selector-class">.bg-helper</span> {
+    <span class="hljs-comment">/* -- Main Background and Border Colors -- */</span>
+    <span class="hljs-comment">/* set the helper's color value to the same color as the main-container's background */</span>
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$primary-bg-color</span>;
+    }
+  }
+
+  <span class="hljs-selector-class">.okta-sign-in-header</span> {
+  <span class="hljs-comment">/* -- Main Background and Border Colors -- */</span>
+    <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#ddd</span>;
+  }
+
+  <span class="hljs-selector-class">.okta-sign-in-beacon-border</span> {
+  <span class="hljs-comment">/* -- Main Background and Border Colors -- */</span>
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#a7a7a7</span>;
+  }
+
+  <span class="hljs-selector-class">.okta-form-divider</span> {
+  <span class="hljs-comment">/* -- Main Background and Border Colors -- */</span>
+    <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#e8e8e8</span>;
+  }
+
+  <span class="hljs-selector-class">.factor-icon</span>,
+  <span class="hljs-selector-class">.qrcode-image</span> {
+  <span class="hljs-comment">/* -- Main Background and Border Colors -- */</span>
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#ccc</span>;
+  }
+
+
+  <span class="hljs-selector-class">.mfa-okta-verify-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-okta-verify</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): Okta Verify -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/oktaVerify_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Okta Verify -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/oktaVerify_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-okta-verify</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): Okta Verify -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/oktaVerify_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Okta Verify -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/oktaVerify@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-google-auth-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-google-auth</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): Google Authenticator -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/googleAuth_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Google Authenticator -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/googleAuth_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-google-auth</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): Google Authenticator -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/googleAuth_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Google Authenticator  -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/googleAuth@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-symantec-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-symantec</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): Symantec VIP -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/symantec_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Symantec VIP -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/symantec_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-symantec</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): Symantec VIP -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/symantec_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Symantec VIP -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/symantec@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-rsa-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-rsa</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): RSA SecurID -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/rsa_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): RSA SecurID -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/rsa_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-rsa</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): RSA SecurID -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/rsa_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): RSA SecurID -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/rsa@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-onprem-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-onprem</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): OnPrem -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/onprem_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): OnPrem -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/onprem_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-onprem</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): OnPrem -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/onprem_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): OnPrem -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/onprem@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-duo-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-duo</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): DUO -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/duo_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): DUO -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/duo_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-duo</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): DUO -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/duo_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): DUO -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/duo@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-yubikey-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-yubikey</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): Yubikey -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/yubico_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Yubikey -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/yubico_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-yubikey</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): Yubikey -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/yubico_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Yubikey -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/yubico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-sms-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-okta-sms</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): SMS -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/sms_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): SMS -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/sms_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-okta-sms</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): SMS -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/sms_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): SMS -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/sms@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-call-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-okta-call</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): CALL -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/voicecall_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): CALL -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/voicecall_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-okta-call</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): CALL -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/voicecall_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): CALL -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/voicecall@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-email-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-okta-email</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): EMAIL -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/email_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): EMAIL -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/email_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-okta-email</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): EMAIL -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/email_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): EMAIL -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/email@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-question-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-okta-security-question</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): Security Question -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/question_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Security Question -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/question_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-okta-security-question</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): Security Question -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/question_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Security Question -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/question@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-windows-hello-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-windows-hello</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): Windows Hello -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/windowsHello_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Windows Hello -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/windowsHello_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-windows-hello</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): Windows Hello -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/windowsHello_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Windows Hello -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/windowsHello@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-u2f-30</span>,
+  <span class="hljs-selector-class">.enroll-factor-row</span> <span class="hljs-selector-class">.mfa-u2f</span> {
+    <span class="hljs-comment">/* -- Factor Icons (small): U2F -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/u2f_38x38.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): U2F -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/u2f_ico@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-u2f</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): U2F -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/u2f_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): U2F -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/u2f@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.mfa-okta-password</span> {
+    <span class="hljs-comment">/* -- Factor Icons (large): Password -- */</span>
+    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/password_70x70.png'</span>);
+
+    @<span class="hljs-keyword">media</span>
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      <span class="hljs-comment">/* -- Factor Icons (high DPI): Password -- */</span>
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../img/icons/mfa/password@2x.png'</span>);
+    }
+  }
+
+  <span class="hljs-selector-class">.button</span> {
+  <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    @<span class="hljs-keyword">include</span> light-button-template(<span class="hljs-variable">$button-bg-color</span>);
+
+    &amp;:focus {
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$input-border-color-focus</span>;
+    }
+  }
+
+  <span class="hljs-selector-class">.button-dark</span> {
+    <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    @<span class="hljs-keyword">include</span> dark-button-template(<span class="hljs-variable">$dark-button-bg-color</span>);
+  }
+
+  <span class="hljs-selector-class">.button-primary</span> {
+  <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    @<span class="hljs-keyword">include</span> dark-button-template(<span class="hljs-variable">$primary-button-bg-color</span>);
+  }
+
+  <span class="hljs-selector-class">.button-success</span> {
+  <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    @<span class="hljs-keyword">include</span> dark-button-template(<span class="hljs-variable">$success-button-bg-color</span>);
+  }
+
+  <span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.link-button-disabled</span> {
+    <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$disabled-button-text-color</span>;
+
+    &amp;:hover,
+    &amp;:focus,
+    &amp;:active,
+    &amp;:focus {
+    <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+      <span class="hljs-attribute">cursor</span>: default;
+      <span class="hljs-attribute">background-image</span>: none;
+    }
+  }
+
+  <span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.button-primary</span><span class="hljs-selector-class">.link-button-disabled</span> {
+    <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$disabled-primary-button-text-color</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$disabled-primary-button-bg-color</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$disabled-primary-button-bg-color</span>;
+    <span class="hljs-attribute">background-image</span>: none;
+    <span class="hljs-attribute">box-shadow</span>: none;
+
+    &amp;:hover,
+    &amp;:focus,
+    &amp;:active,
+    &amp;:focus {
+    <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+      <span class="hljs-attribute">cursor</span>: default;
+      <span class="hljs-attribute">background-image</span>: none;
+    }
+  }
+
+  <span class="hljs-selector-class">.icon-button</span> {
+  <span class="hljs-comment">/* -- Buttons' Colors -- */</span>
+    @<span class="hljs-keyword">include</span> button-template(<span class="hljs-variable">$icon-button-bg-color</span>, 0%, <span class="hljs-variable">$dark-text-color</span>, 23%, 26%);
+  }
+
+
+  <span class="hljs-selector-class">.okta-dropdown-list</span> {
+  <span class="hljs-comment">/* -- Dropdown Colors -- */</span>
+    <span class="hljs-comment">/* background: #fff; */</span>
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$input-border-color-hover</span>;
+  }
+
+  <span class="hljs-selector-class">.factors-dropdown-wrap</span> <span class="hljs-selector-class">.okta-dropdown-list</span> {
+  <span class="hljs-comment">/* -- Dropdown Colors -- */</span>
+    <span class="hljs-comment">// scss-lint:disable DuplicateProperty</span>
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#ccc</span>;
+    <span class="hljs-attribute">border-color</span>: rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>);
+    <span class="hljs-comment">// scss-lint:disable DuplicateProperty</span>
+  }
+
+  <span class="hljs-selector-class">.okta-dropdown-option</span> {
+  <span class="hljs-comment">/* -- Dropdown Colors -- */</span>
+    <span class="hljs-comment">/* background: transparent; */</span>
+    <span class="hljs-comment">/* border-bottom-color: #fff; */</span>
+
+    &amp;:hover {
+    <span class="hljs-comment">/* -- Dropdown Colors -- */</span>
+      <span class="hljs-comment">/* background: #f9f9f9; */</span>
+    }
+
+    &amp;<span class="hljs-selector-class">.dropdown-list-title</span>:hover {
+    <span class="hljs-comment">/* -- Dropdown Colors -- */</span>
+      <span class="hljs-attribute">background</span>: transparent;
+    }
+
+    <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-comment">/* -- Dropdown Colors -- */</span>
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$dark-text-color</span>;
+    }
+  }
+
+
+  <span class="hljs-selector-class">.okta-infobox-error</span> {
+  <span class="hljs-comment">/* -- Error Infobox Colors -- */</span>
+    <span class="hljs-comment">/* background-color: #fff; */</span>
+    <span class="hljs-comment">/* border: 1px solid #ddd; */</span>
+
+    &amp;:before {
+    <span class="hljs-comment">/* -- Error Infobox Colors -- */</span>
+      <span class="hljs-comment">/* background-color: #e34843; */</span>
+    }
+
+    <span class="hljs-selector-class">.error-16</span>:before {
+    <span class="hljs-comment">/* -- Error Infobox Colors: error icon -- */</span>
+      <span class="hljs-comment">/* color: #fff; */</span>
+
+      <span class="hljs-comment">/* Use the rules below to replace an error icon in error infoboxes */</span>
+      <span class="hljs-comment">/* content: ''; */</span>
+      <span class="hljs-comment">/* width: 16px; */</span>
+      <span class="hljs-comment">/* height: 16px; */</span>
+      <span class="hljs-comment">/* background-image: none; */</span>
+    }
+
+  }
+
+  <span class="hljs-selector-class">.enroll-required-factor-list</span> {
+    <span class="hljs-selector-class">.enroll-factor-row-min</span> <span class="hljs-selector-class">.enroll-factor-description</span> {
+      <span class="hljs-selector-tag">h3</span> {
+        <span class="hljs-comment">/* -- Enroll required factors, factors that are not the current step -- */</span>
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$light-text-color</span>;
+      }
+    }
+
+  }
+
+  <span class="hljs-selector-class">.okta-form-input-field</span> {
+  <span class="hljs-comment">/* -- Input Fields -- */</span>
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$input-bg-color</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$input-border-color</span>;
+    &amp;<span class="hljs-selector-class">.input-fix</span> {
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span> solid <span class="hljs-variable">$input-border-color</span>;
+        <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">1px</span>;
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0px</span> <span class="hljs-meta">!important</span>;
+        <span class="hljs-selector-class">.input-tooltip</span> {
+          <span class="hljs-attribute">display</span>: none;
+        };
+        <span class="hljs-selector-class">.input-icon</span> {
+          <span class="hljs-attribute">display</span>: none;
+        }
+        <span class="hljs-selector-class">.input-icon</span>+<span class="hljs-selector-tag">input</span> {
+          <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0px</span>;
+          <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0px</span>;
+        };
+        <span class="hljs-selector-tag">input</span> {
+          <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+        }
+        &amp;::after {
+          <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
+          <span class="hljs-attribute">display</span>: block;
+          <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">height</span>: <span class="hljs-number">2px</span>;
+          <span class="hljs-attribute">background</span>: <span class="hljs-number">#7f5eba</span>;
+          <span class="hljs-attribute">transition</span>: width .<span class="hljs-number">3s</span>;
+        }
+    }
+    
+    &amp;:hover {
+    <span class="hljs-comment">/* -- Input Fields -- */</span>
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$input-border-color-hover</span>;
+    }
+
+    &amp;<span class="hljs-selector-class">.focused-input</span> {
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$input-border-color-focus</span>;
+      <span class="hljs-selector-tag">input</span> {
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#000000</span>;
+      }
+      
+
+      &amp;::after {
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+      }
+
+    }
+
+    <span class="hljs-selector-tag">input</span> {
+    <span class="hljs-comment">/* -- Input Fields -- */</span>
+      <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$fonts</span>;
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$dark-text-color</span>;
+
+      &amp;::-webkit-input-placeholder {
+      /* -- Input Fields: placeholder -- */
+        font-family: <span class="hljs-variable">$fonts</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$placeholder-text-color</span>;
+      }
+
+      &amp;::-moz-placeholder {
+      /* -- Input Fields: placeholder -- */
+        font-family: <span class="hljs-variable">$fonts</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$placeholder-text-color</span>;
+      }
+
+      &amp;:-ms-input-placeholder {
+      /* -- Input Fields: placeholder -- */
+        font-family: <span class="hljs-variable">$fonts</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$placeholder-text-color</span>;
+      }
+
+      &amp;<span class="hljs-selector-attr">[disabled]</span> {
+      <span class="hljs-comment">/* -- Input Fields: disabled input field -- */</span>
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">$medium-text-color</span>;
+        -webkit-text-fill-<span class="hljs-attribute">color</span>: <span class="hljs-variable">$medium-text-color</span>;
+        <span class="hljs-comment">/* background: #f4f4f4; */</span>
+      }
+
+      &amp;<span class="hljs-selector-attr">[type="password"]</span> {
+      <span class="hljs-comment">/* -- Input Fields: password input field -- */</span>
+        <span class="hljs-attribute">font-family</span>: Verdana, sans-serif;
+      }
+
+    }
+
+    placeholder {
+    <span class="hljs-comment">/* -- Input Fields: placeholder -- */</span>
+      <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$fonts</span>;
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$placeholder-text-color</span>;
+    }
+  }
+
+  <span class="hljs-selector-class">.input-icon</span>:before,
+  <span class="hljs-selector-class">.input-tooltip</span>:before {
+  <span class="hljs-comment">/* -- Input Fields: icons -- */</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$light-text-color</span>;
+  }
+
+  <span class="hljs-selector-class">.okta-form-label-inline</span> {
+  <span class="hljs-comment">/* -- Input Fields -- */</span>
+    <span class="hljs-comment">/* background-color: #f2f2f2; */</span>
+    <span class="hljs-comment">/* border-color: #c8c8c8; */</span>
+    <span class="hljs-comment">/* color: #999; */</span>
+  }
+
+  <span class="hljs-selector-class">.okta-form-input-error</span> {
+  <span class="hljs-comment">/* -- Input Fields: error highlight -- */</span>
+    <span class="hljs-comment">/* color: #d93934; */</span>
+
+    <span class="hljs-selector-class">.error-16-small</span>:before {
+    <span class="hljs-comment">/* -- Input Fields: error icon -- */</span>
+      <span class="hljs-comment">/* color: #e34843; */</span>
+
+      <span class="hljs-comment">/* Use the rules below to replace input fields error icon */</span>
+      <span class="hljs-comment">/* content: ''; */</span>
+      <span class="hljs-comment">/* width: 16px; */</span>
+      <span class="hljs-comment">/* height: 16px; */</span>
+      <span class="hljs-comment">/* background-image: none; */</span>
+    }
+  }
+
+
+  <span class="hljs-selector-class">.chzn-single</span> {
+  <span class="hljs-comment">/* -- Input Fields: Select Input -- */</span>
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$input-bg-color</span>;
+    <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$input-border-color</span>;
+
+    <span class="hljs-selector-tag">span</span> {
+    <span class="hljs-comment">/* -- Input Fields: Select Input -- */</span>
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$medium-text-color</span>;
+    }
+
+    &amp;:hover {
+    <span class="hljs-comment">/* -- Input Fields: Select Input -- */</span>
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$input-border-color-hover</span>;
+    }
+  }
+
+  <span class="hljs-selector-class">.chzn-with-drop</span> {
+    <span class="hljs-selector-class">.chzn-single</span>,
+    <span class="hljs-selector-class">.chzn-drop</span> {
+    <span class="hljs-comment">/* -- Input Fields: Select Input -- */</span>
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$input-bg-color</span>;
+      <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$input-border-color-hover</span>;
+    }
+
+    <span class="hljs-selector-class">.chzn-results</span> {
+
+      <span class="hljs-selector-tag">li</span> {
+      <span class="hljs-comment">/* -- Input Fields: Select Input -- */</span>
+        <span class="hljs-comment">/* border-color: #fff; */</span>
+      }
+
+      <span class="hljs-selector-class">.highlighted</span> {
+      <span class="hljs-comment">/* -- Input Fields: Select Input -- */</span>
+        <span class="hljs-comment">/* background-color: #f9f9f9; */</span>
+      }
+    }
+  }
+
+  <span class="hljs-selector-class">.primary-auth</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.password-expired</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.password-reset</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.password-reset-email-sent</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.forgot-password</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.account-unlock</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.account-unlock-email-sent</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.recovery-challenge</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.recovery-loading</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.recovery-question</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.refresh-auth-state</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+
+  <span class="hljs-selector-class">.enroll-choices</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-totp</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.barcode-totp</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.activate-totp</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-manual-totp</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.barcode-push</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.activate-push</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-manual-push</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-activation-link-sent</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-symantec</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-rsa</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-onprem</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-duo</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-sms</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-call</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.enroll-question</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+
+  <span class="hljs-selector-class">.mfa-verify-duo</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.mfa-verify</span> { <span class="hljs-comment">/* -- Page specific top level selectors: all challenge pages except duo -- */</span> }
+  <span class="hljs-selector-class">.mfa-verify-totp</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.mfa-verify-push</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.mfa-verify-totp-inline</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.mfa-verify-question</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.mfa-verify-passcode</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+  <span class="hljs-selector-class">.mfa-verify-password</span> { <span class="hljs-comment">/* -- Page specific top level selectors -- */</span> }
+
+}
+
+
+<span class="hljs-selector-class">.okta-sign-in-tooltip</span><span class="hljs-selector-class">.qtip-custom</span> {
+<span class="hljs-comment">/* -- Tooltips -- */</span>
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$fonts</span>;
+  <span class="hljs-comment">/* background-color: #4d4d4d; */</span>
+  <span class="hljs-comment">/* border-color: #303030; */</span>
+
+  <span class="hljs-selector-class">.qtip-content</span> {
+  <span class="hljs-comment">/* -- Tooltips -- */</span>
+    <span class="hljs-comment">/* color: #f3f3f3; */</span>
+  }
+
+  <span class="hljs-selector-class">.qtip-titlebar</span> {
+  <span class="hljs-comment">/* -- Tooltips -- */</span>
+    <span class="hljs-comment">/* background-color: #404040 */</span>
+  }
+}
+
+<span class="hljs-selector-class">.okta-sign-in-security-image-tooltip</span><span class="hljs-selector-class">.qtip-custom</span> {
+  <span class="hljs-comment">/* -- Tooltips -- */</span>
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$fonts</span>;
+  <span class="hljs-comment">/* background-color: #4d4d4d; */</span>
+  <span class="hljs-comment">/* border-color: #303030; */</span>
+
+  <span class="hljs-selector-class">.qtip-content</span> {
+    <span class="hljs-comment">/* -- Tooltips -- */</span>
+    <span class="hljs-comment">/* color: #f3f3f3; */</span>
+  }
+}
+      
+    </pre>
+</body>
+
+</html>
