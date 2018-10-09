@@ -251,7 +251,13 @@ export class ComponentsComponent implements OnInit {
     },
     {
       title: 'templates',
-      components: []
+      components: [
+        {
+          title: 'application templates',
+          desc: 'not yet',
+          route: 'applicationtemplates'
+        }
+      ]
     },
     {
       title: '',

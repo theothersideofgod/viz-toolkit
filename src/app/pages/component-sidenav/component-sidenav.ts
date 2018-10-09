@@ -200,6 +200,15 @@ const initNavList = [
         value: 'login'
       }
     ]
+  },
+  {
+    name: 'Templates',
+    subs: [
+      {
+        name: 'Application Templates',
+        value: 'applicationtemplates'
+      }
+    ]
   }
 ];
 @Component({
@@ -223,14 +232,14 @@ export class ComponentSidenavComponent implements OnInit {
     this.scrollContainer = this.document.querySelector('.main-sec');
     this.documentContent = this.document.querySelector('.documentation-main');
     fromEvent(this.scrollContainer, 'scroll').subscribe(() => {
-      if (this.scrollContainer.scrollTop >= (this.documentContent.offsetHeight - this.scrollContainer.offsetHeight)) {
+      if (
+        this.scrollContainer.scrollTop >=
+        this.documentContent.offsetHeight - this.scrollContainer.offsetHeight - 100
+      ) {
         this.isScrollBottom = true;
       } else {
         this.isScrollBottom = false;
       }
     });
-
   }
-
-
 }

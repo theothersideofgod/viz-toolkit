@@ -1,4 +1,4 @@
-<div class="sketch-link-container" *ngFor="let link of sketch_links; let i=index" [innerHTML]="link">
+<div class="sketch-link-container" [innerHTML]="sketch_links">
   <!-- <ng-container *ngFor="let path of link; let i=index last as isLast">
     <span class="sketch-link">{{path}}</span>
     <span class="sketch-link-splash" *ngIf="!isLast">/</span>
