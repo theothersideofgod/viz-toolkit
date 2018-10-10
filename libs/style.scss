@@ -388,6 +388,7 @@ td.mat-cell,
 .mat-form-field-infix {
   textarea {
     color: #000000;
+    white-space: pre-wrap;
   }
 }
 // body {
@@ -473,6 +474,9 @@ td.mat-cell,
 
 //card style
 .mat-card {
+  background: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.07),
+    0 2px 1px -1px rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
   &:hover {
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
@@ -504,7 +508,7 @@ td.mat-cell,
   }
 }
 .mat-badge-content {
-  width: max-content !important;
+  width: auto !important;
   border-radius: 12px !important;
   // min-width: 24px;
   height: 24px !important;
@@ -515,7 +519,7 @@ td.mat-cell,
 .mat-badge-medium.mat-badge-overlap {
   &.mat-badge-after {
     .mat-badge-content {
-      right: auto;
+      right: auto !important;
       left: 50%;
     }
   }
@@ -579,9 +583,9 @@ td.mat-cell,
 }
 
 //icon
-.mat-icon {
-  color: $viz-gray;
-}
+// .mat-icon {
+//   color: $viz-gray;
+// }
 .viz-icon-small {
   font-size: 18px;
 }
@@ -671,17 +675,17 @@ mat-chip {
   
 }
 
-// div[ng-reflect-klass="mat-select-panel mat-primary"] {
-//   .mat-select-content {
-//     .mat-option {
-//       height: 40px;
-//       line-height: 40px;
-//       .mat-option-text {
-//         font-size: 14px;
-//       }
-//     }
-//   }
-// }
+div[ng-reflect-klass="mat-select-panel mat-primary"] {
+  .mat-select-content {
+    .mat-option {
+      // height: 40px;
+      // line-height: 40px;
+      .mat-option-text {
+        font-size: 14px;
+      }
+    }
+  }
+}
 
 
 //table
@@ -840,6 +844,7 @@ mat-datepicker-content.mat-datepicker-content {
 
     &-icon-close {
       position: absolute;
+      top: 12px;
       right: 16px;
       display: none !important;
     }
@@ -878,6 +883,72 @@ mat-datepicker-content.mat-datepicker-content {
 .cdk-mouse-focused{
   
 }
+
+//hide scrollbar
+/*webkit内核*/
+.hide-scroll::-webkit-scrollbar {
+  width:0px;
+  height:0px;
+}
+.hide-scroll::-webkit-scrollbar-button    {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-webkit-scrollbar-track     {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-webkit-scrollbar-track-piece {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-webkit-scrollbar-thumb{
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-webkit-scrollbar-corner {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-webkit-scrollbar-resizer  {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+/*o内核*/
+.hide-scroll .-o-scrollbar{
+  -moz-appearance: none !important;   
+  background: rgba(0,255,0,0) !important;  
+}
+.hide-scroll::-o-scrollbar-button    {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-o-scrollbar-track     {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-o-scrollbar-track-piece {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-o-scrollbar-thumb{
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-o-scrollbar-corner {
+  background-color:rgba(0,0,0,0);
+}
+.hide-scroll::-o-scrollbar-resizer  {
+  background-color:rgba(0,0,0,0);
+}
+/*IE10,IE11,IE12*/
+.hide-scroll{
+  -ms-scroll-chaining: chained;
+  -ms-overflow-style: none;
+  -ms-content-zooming: zoom;
+  -ms-scroll-rails: none;
+  -ms-content-zoom-limit-min: 100%;
+  -ms-content-zoom-limit-max: 500%;
+  -ms-scroll-snap-type: proximity;
+  -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+  -ms-overflow-style: none;
+  overflow: auto;
+}
+
 
 //Typography: Styles
 .viz-h1 {

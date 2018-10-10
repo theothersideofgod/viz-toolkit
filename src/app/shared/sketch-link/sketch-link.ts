@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 const sketch_link = {
@@ -87,6 +87,11 @@ const sketch_link = {
   nodata: ['Insert / Toolkit Material Library / Components / No Data'],
   login: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Popups & Modals: Login'
+  ],
+  applicationtemplates: [
+    'Toolkit Material Library.sketch / Templates / Template: Blank',
+    'Toolkit Material Library.sketch / Templates / Template: Dashboard',
+    'Toolkit Material Library.sketch / Templates / Template: Form'
   ]
 };
 
@@ -94,9 +99,10 @@ const sketch_link = {
   selector: 'sketch-link',
   templateUrl: './sketch-link.html',
   styleUrls: ['./sketch-link.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class SketchLink implements OnInit {
+  @Input() example;
   sketch_links: string[][];
   constructor(private router: Router) {
     // console.log(this.router.url)
@@ -106,17 +112,34 @@ export class SketchLink implements OnInit {
     const componentName = this.router.url.split('/')[2];
     const splashTester = new RegExp('/', 'g');
     const orTester = new RegExp('or', 'g');
-    this.sketch_links = sketch_link[componentName] && sketch_link[componentName].map(l => {
-      let newl = l;
-      newl = newl.replace(
-        splashTester,
-        `<span class="sketch-link-splash">/</span>`
-      );
-      newl = newl.replace(
-        orTester,
-        `<span class="sketch-link-splash">or</span>`
-      );
-      return newl;
-    });
+    // this.sketch_links = sketch_link[componentName] && sketch_link[componentName][this.example].map(l => {
+    //   let newl = l;
+    //   newl = newl.replace(
+    //     splashTester,
+    //     `<span class="sketch-link-splash">/</span>`
+    //   );
+    //   newl = newl.replace(
+    //     orTester,
+    //     `<span class="sketch-link-splash">or</span>`
+    //   );
+    //   return newl;
+    // });
+
+    this.example = this.example === '' ? 0 : this.example;
+
+
+    let newl = sketch_link[componentName] && sketch_link[componentName][this.example];
+    console.log(newl);
+    newl = newl.replace(
+      splashTester,
+      `<span class="sketch-link-splash">/</span>`
+    );
+    newl = newl.replace(
+      orTester,
+      `<span class="sketch-link-splash">or</span>`
+    );
+    this.sketch_links = newl;
+
+
   }
 }

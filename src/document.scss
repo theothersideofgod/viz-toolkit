@@ -178,12 +178,13 @@ a {
     transform: scale(0.5);
   }
 }
-.docs-usage-center {
+.docs-usage-center-no-scale {
   position: relative;
   & > * {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%)
+    top: 50%;
+    transform: translate(-50%,-50%);
   }
 }
 .docs-usage-spec {
@@ -271,11 +272,17 @@ a {
 .docs-ml24 {
   margin-left: 24px;
 }
+.docs-mr24 {
+  margin-right: 24px;
+}
 .docs-mb24 {
   margin-bottom: 24px;
 }
 .docs-mt16 {
   margin-top: 16px;
+}
+.docs-mb16 {
+  margin-bottom: 16px;
 }
 .doc-bold-title {
   font-size: 16px;
@@ -310,12 +317,16 @@ a {
 .doc-fl {
   float: left;
 }
+.doc-color-containers-wrapper {
+  margin-bottom: -24px;
+}
 .doc-color-container {
   display: inline-block;
   width: 350px;
   font-size: 16px;
   color: #000000;
   font-weight: 300;
+  vertical-align:top;
 }
 
 .doc-color-block {
@@ -441,6 +452,7 @@ a {
   }
 }
 .doc-color-strip-wrapper {
+  margin-bottom: -24px;
 }
 .doc-download-link {
   cursor: pointer;
@@ -458,11 +470,8 @@ a {
   width: 350px;
   display: inline-block;
   box-sizing: border-box;
-
-  &:nth-child(2n) {
-    margin-left: 24px;
-    vertical-align: top;
-  }
+  vertical-align:top;
+  
   span {
     font-size: 16px;
     line-height: 24px;
@@ -473,4 +482,20 @@ a {
       float: right;
     }
   }
+}
+.template-live-link {
+  color: #ffffff;
+  width: 150px;
+  height: 36px;
+  background-color: $viz-purple;
+  line-height: 36px;
+  font-size: 14px;
+  border-radius: 2px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 300;
+}
+
+.oktajs-code {
+  overflow: auto;
 }

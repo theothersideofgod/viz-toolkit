@@ -34,7 +34,7 @@
 
 
 <div class="viz-select-wrap">
-  <form class="vizient-input">
+  <form class="vizient-input" *ngIf="!disabled">
     <mat-form-field class="viz-select"
                     [matMenuTriggerFor]="selectMenu"
                     #selectTrigger="matMenuTrigger"
@@ -45,10 +45,27 @@
              placeholder="Clearable input"
              [value]="selected.title"
              autocomplete="off"
-             [disabled]="disabled">
+             readonly>
       <mat-icon class="select-direction"
-              mat-button
-              matSuffix>{{selectTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down'}}
+                mat-button
+                matSuffix>{{selectTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down'}}
+      </mat-icon>
+    </mat-form-field>
+  </form>
+
+  <form class="vizient-input" *ngIf="disabled">
+    <mat-form-field class="viz-select">
+      <mat-label>{{placeholder}}</mat-label>
+      <input matInput
+             type="text"
+             placeholder="Clearable input"
+             [value]="selected.title"
+             autocomplete="off"
+             disabled="disabled"
+             readonly>
+      <mat-icon class="select-direction"
+                mat-button
+                matSuffix>arrow_drop_down
       </mat-icon>
     </mat-form-field>
   </form>

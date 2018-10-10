@@ -251,7 +251,13 @@ export class ComponentsComponent implements OnInit {
     },
     {
       title: 'templates',
-      components: []
+      components: [
+        {
+          title: 'application templates',
+          desc: 'Vizient UX framework',
+          route: 'applicationtemplates'
+        }
+      ]
     },
     {
       title: '',
