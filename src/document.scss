@@ -272,6 +272,9 @@ a {
 .docs-ml24 {
   margin-left: 24px;
 }
+.docs-mr24 {
+  margin-right: 24px;
+}
 .docs-mb24 {
   margin-bottom: 24px;
 }
@@ -314,12 +317,16 @@ a {
 .doc-fl {
   float: left;
 }
+.doc-color-containers-wrapper {
+  margin-bottom: -24px;
+}
 .doc-color-container {
   display: inline-block;
   width: 350px;
   font-size: 16px;
   color: #000000;
   font-weight: 300;
+  vertical-align:top;
 }
 
 .doc-color-block {
@@ -445,6 +452,7 @@ a {
   }
 }
 .doc-color-strip-wrapper {
+  margin-bottom: -24px;
 }
 .doc-download-link {
   cursor: pointer;
@@ -462,11 +470,8 @@ a {
   width: 350px;
   display: inline-block;
   box-sizing: border-box;
-
-  &:nth-child(2n) {
-    margin-left: 24px;
-    vertical-align: top;
-  }
+  vertical-align:top;
+  
   span {
     font-size: 16px;
     line-height: 24px;
