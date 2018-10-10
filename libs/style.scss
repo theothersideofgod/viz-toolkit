@@ -671,17 +671,17 @@ mat-chip {
   
 }
 
-// div[ng-reflect-klass="mat-select-panel mat-primary"] {
-//   .mat-select-content {
-//     .mat-option {
-//       height: 40px;
-//       line-height: 40px;
-//       .mat-option-text {
-//         font-size: 14px;
-//       }
-//     }
-//   }
-// }
+div[ng-reflect-klass="mat-select-panel mat-primary"] {
+  .mat-select-content {
+    .mat-option {
+      // height: 40px;
+      // line-height: 40px;
+      .mat-option-text {
+        font-size: 14px;
+      }
+    }
+  }
+}
 
 
 //table
