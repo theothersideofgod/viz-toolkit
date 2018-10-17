@@ -6,6 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./viz-footer.component.scss']
 })
 export class VizFooterComponent implements OnInit {
+  @Input('title')
+  title;
   @Input()
   brands = [];
   @Input()
