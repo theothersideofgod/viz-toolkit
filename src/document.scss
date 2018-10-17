@@ -314,6 +314,13 @@ a {
 #exampleWrapper {
   display: block;
 }
+
+.hide-document {
+  height: 0px;
+  visibility: hidden;
+}
+
+
 .doc-fl {
   float: left;
 }

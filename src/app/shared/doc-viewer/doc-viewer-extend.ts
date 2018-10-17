@@ -30,9 +30,11 @@ export class DocViewerExtend implements OnInit {
   }
 
   show(): void {
-    this.document.querySelector(`#${this.example}`).style.display = 'block';
+    // this.document.querySelector(`#${this.example}`).style.display = 'block';
+    this.document.querySelector(`#${this.example}`).classList.remove('hide-document');
   }
   hide(): void {
-    this.document.querySelector(`#${this.example}`).style.display = 'none';
+    // this.document.querySelector(`#${this.example}`).style.display = 'none';
+    this.document.querySelector(`#${this.example}`).classList.add('hide-document');
   }
 }
