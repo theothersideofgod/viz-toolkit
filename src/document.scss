@@ -316,7 +316,8 @@ a {
 }
 
 .hide-document {
-  height: 0px;
+  position: absolute;
+  top: -999em;
   visibility: hidden;
 }
 
