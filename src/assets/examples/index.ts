@@ -28,7 +28,7 @@ import {
   VizProgressSpinnerModule,
   VizTableModule,
   VizSteppersModule,
-  VizBottomSheetModue,
+  VizBottomSheetModule,
   VizBreadcrumbModule,
   VizSearchModule,
   VizChartModule
@@ -822,7 +822,7 @@ export const ALL_EXAMPLE_ITEMS = {
     VizProgressSpinnerModule,
     VizTableModule,
     VizSteppersModule,
-    VizBottomSheetModue,
+    VizBottomSheetModule,
     VizBreadcrumbModule,
     VizSearchModule,
     VizChartModule

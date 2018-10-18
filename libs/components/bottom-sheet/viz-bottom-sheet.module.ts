@@ -7,4 +7,4 @@ import { MatBottomSheetModule } from '@angular/material';
   declarations: [],
   exports: [MatBottomSheetModule]
 })
-export class VizBottomSheetModue {}
+export class VizBottomSheetModule {}

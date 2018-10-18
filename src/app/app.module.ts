@@ -18,6 +18,7 @@ import { ComponentViewerModule } from './pages/component-viewer/component-viewer
 import { HttpClientModule } from '@angular/common/http';
 import { VizHeaderModule, VizFooterModule } from 'libs';
 import { ComponentsModule } from './pages/components/components.component';
+import { HttpStatusPageModule } from './pages/http-status-page/http-status-page.component';
 // import { VizHeaderMudule, VizFooterMudule } from 'viz-toolkit';
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ComponentsModule } from './pages/components/components.component';
     VizHeaderModule,
     VizFooterModule,
     PrinciplesModule,
-    ComponentsModule
+    ComponentsModule,
+    HttpStatusPageModule
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]

@@ -36,4 +36,5 @@ export * from './components/card/viz-card.module';
 export * from './components/paginator/viz-paginator.module';
 export * from './components/snackbar/viz-snackbar.module';
 export * from './components/bottom-sheet/viz-bottom-sheet.module';
+export * from './components/http-status/viz-http-status.module';
 export * from './util';

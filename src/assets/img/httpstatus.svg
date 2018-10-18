@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>@2xlock-open-outline-64</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-540.000000, -1821.000000)">
+            <g id="Pages" transform="translate(537.000000, 1725.000000)">
+                <g id="Login" transform="translate(3.000000, 66.000000)">
+                    <g id="lock-open-outline-64" transform="translate(0.000000, 26.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M19.9525022,19 C21.6617093,18.8256926 23,17.34334 23,15.6 C23,13.813004 21.6508097,12.3521566 19.8726163,12.1961747 L19.0465673,12.1237143 L18.9648657,11.2985281 C18.6121533,7.73613273 15.6119151,5 12,5 C8.91031335,5 6.20925445,7.04349774 5.3165325,9.97162576 L5.13472058,10.5679688 L4.51923244,10.6672411 C2.49066444,10.9944295 1,12.7239825 1,14.8 C1,16.9915125 2.7113467,18.8413496 4.8,19 L19.9525022,19 Z" id="Path" stroke="#696969" stroke-width="2"></path>
+                        <path d="M12,9 L12,13" id="Path" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <circle id="Oval" fill="#696969" cx="12" cy="16" r="1"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

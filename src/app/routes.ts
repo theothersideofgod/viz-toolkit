@@ -7,17 +7,18 @@ import { Routes } from '@angular/router';
 import {
   ComponentViewer,
   ComponentOverview
- } from './pages/component-viewer/component-viewer';
+} from './pages/component-viewer/component-viewer';
 import { ComponentsComponent } from './pages/components/components.component';
+import { HttpStatusPageComponent } from './pages/http-status-page/http-status-page.component';
 
 export const APP_ROUTES: Routes = [
-  {path: '', component: HomepageComponent, pathMatch: 'full', data: {}},
+  { path: '', component: HomepageComponent, pathMatch: 'full', data: {} },
 
   {
     path: 'documentation',
     component: ComponentSidenavComponent,
     children: [
-      {path: '', redirectTo: 'designers', pathMatch: 'full'},
+      { path: '', redirectTo: 'designers', pathMatch: 'full' },
       // {
       //   path: 'categories',
       //   children: [
@@ -30,14 +31,30 @@ export const APP_ROUTES: Routes = [
         path: ':id',
         component: ComponentViewer,
         children: [
-          {path: '', redirectTo: 'overview', pathMatch: 'full'},
-          {path: 'overview', component: ComponentOverview, pathMatch: 'full'},
-          {path: '**', redirectTo: 'overview'},
-        ],
+          { path: '', redirectTo: 'overview', pathMatch: 'full' },
+          { path: 'overview', component: ComponentOverview, pathMatch: 'full' },
+          { path: '**', redirectTo: 'overview' }
+        ]
       }
-    ],
+    ]
   },
-  {path: 'principles', component: PrinciplesComponent, pathMatch: 'full', data: {}},
-  {path: 'components', component: ComponentsComponent, pathMatch: 'full', data: {}},
-  {path: '**', redirectTo: ''}
+  {
+    path: 'principles',
+    component: PrinciplesComponent,
+    pathMatch: 'full',
+    data: {}
+  },
+  {
+    path: 'components',
+    component: ComponentsComponent,
+    pathMatch: 'full',
+    data: {}
+  },
+  {
+    path: ':type',
+    component: HttpStatusPageComponent,
+    pathMatch: 'full',
+    data: {}
+  },
+  { path: '**', redirectTo: '' }
 ];

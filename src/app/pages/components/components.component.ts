@@ -21,12 +21,14 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'designers',
           desc: 'Introduction to Designers',
-          route: 'designers'
+          route: 'designers',
+          img: 'designers'
         },
         {
           title: 'developers',
           desc: 'Introduction to Developers',
-          route: 'designers'
+          route: 'designers',
+          img: 'developers'
         }
       ]
     },
@@ -36,56 +38,62 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'colors',
           desc: 'Color System',
-          route: 'colors'
+          route: 'colors',
+          img: 'colors'
         },
         {
           title: 'typography',
           desc: 'Typography system',
-          route: 'typography'
+          route: 'typography',
+          img: 'typography'
         }
       ]
     },
-    {
-      title: '',
-      components: []
-    },
+    { title: '', components: [] },
     {
       title: 'form controls',
       components: [
         {
           title: 'checkbox',
           desc: 'All the states of the checkbox',
-          route: 'checkbox'
+          route: 'checkbox',
+          img: 'checkbox'
         },
         {
           title: 'datepicker',
           desc: 'Pick a date or date range from the calendar',
-          route: 'datepicker'
+          route: 'datepicker',
+          img: 'datepicker'
         },
         {
           title: 'form field',
           desc: 'All form field states & validation',
-          route: 'formfield'
+          route: 'formfield',
+          img: 'form field'
         },
         {
           title: 'radio button',
           desc: 'All states of the radio button',
-          route: 'radio'
+          route: 'radio',
+          img: 'radio button'
         },
         {
           title: 'select',
           desc: 'Dropdown & Selection',
-          route: 'select'
+          route: 'select',
+          img: 'select'
         },
         {
           title: 'slider',
           desc: 'Selection from a range of values',
-          route: 'slider'
+          route: 'slider',
+          img: 'slider'
         },
         {
           title: 'slide toggle',
           desc: 'An on/off control',
-          route: 'slidetoggle'
+          route: 'slidetoggle',
+          img: 'slide toggle'
         }
       ]
     },
@@ -95,27 +103,32 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'menu',
           desc: 'Floating panel containing a list of options',
-          route: 'menu'
+          route: 'menu',
+          img: 'menu'
         },
         {
           title: 'sidenav',
           desc: 'Add side content to a fullscreen app',
-          route: 'sidenav'
+          route: 'sidenav',
+          img: 'sidenav'
         },
         {
           title: 'toolbar',
           desc: 'Container for headers, titles, or actions',
-          route: 'toolbar'
+          route: 'toolbar',
+          img: 'toolbar'
         },
         {
           title: 'header',
           desc: 'Global header component',
-          route: 'header'
+          route: 'header',
+          img: 'header'
         },
         {
           title: 'footer',
           desc: 'Global footer component',
-          route: 'footer'
+          route: 'footer',
+          img: 'footer'
         }
       ]
     },
@@ -125,32 +138,38 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'card',
           desc: 'A container for different types of content',
-          route: 'card'
+          route: 'card',
+          img: 'card'
         },
         {
           title: 'expansion panel',
           desc: 'An expandable detail-summary view',
-          route: 'expansionpanel'
+          route: 'expansionpanel',
+          img: 'expansion panel'
         },
         {
           title: 'list',
           desc: 'Container that wraps and formats a series of line items',
-          route: 'list'
+          route: 'list',
+          img: 'list'
         },
         {
           title: 'tabs',
           desc: 'Organize content into separate views',
-          route: 'tabs'
+          route: 'tabs',
+          img: 'tabs'
         },
         {
           title: 'tree',
           desc: 'Styled tree that can be used to display hierarchy of data',
-          route: 'tree'
+          route: 'tree',
+          img: 'tree'
         },
         {
           title: 'stepper',
           desc: 'Steppers convey progress through numbered steps.',
-          route: 'stepper'
+          route: 'stepper',
+          img: 'stepper'
         }
       ]
     },
@@ -160,37 +179,44 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'button',
           desc: 'All states and types of buttons',
-          route: 'button'
+          route: 'button',
+          img: 'button'
         },
         {
           title: 'badge',
           desc: 'Small status descriptors',
-          route: 'badge'
+          route: 'badge',
+          img: 'badge'
         },
         {
           title: 'chip',
           desc: 'A list of values as an individual component',
-          route: 'chip'
+          route: 'chip',
+          img: 'chip'
         },
         {
           title: 'icon',
           desc: 'Icons and recommended usage',
-          route: 'icon'
+          route: 'icon',
+          img: 'icon'
         },
         {
           title: 'progress spinner',
           desc: 'A circular indicator of progress and activity',
-          route: 'progressspinner'
+          route: 'progressspinner',
+          img: 'progress spinner'
         },
         {
           title: 'progress bar',
           desc: 'A horizontal bar for indicating progress and activity',
-          route: 'progressbar'
+          route: 'progressbar',
+          img: 'progress bar'
         },
         {
           title: 'feedback indicator',
           desc: 'Messaging for important changes or persistent conditions',
-          route: 'feedbackindicator'
+          route: 'feedbackindicator',
+          img: 'feedback indicator'
         }
       ]
     },
@@ -200,22 +226,27 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'dialog',
           desc: 'Modal dialogs',
-          route: 'dialog'
+          route: 'dialog',
+          img: 'dialog'
         },
         {
           title: 'snackbar',
           desc: 'Snack-bar notifications',
-          route: 'snackbar'
+          route: 'snackbar',
+          img: 'snackbar'
         },
         {
           title: 'tooltip',
           desc: 'Text label for displaying short-form information',
-          route: 'tooltip'
+          route: 'tooltip',
+          img: 'tooltip'
         },
         {
           title: 'bottom sheet',
-          desc: 'Bottom sheets slide up from the bottom of the screen to reveal more content.',
-          route: 'bottomsheet'
+          desc:
+            'Bottom sheets slide up from the bottom of the screen to reveal more content.',
+          route: 'bottomsheet',
+          img: 'bottom sheet'
         }
       ]
     },
@@ -225,28 +256,38 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'paginator',
           desc: 'Provides navigation for paged information',
-          route: 'paginator'
+          route: 'paginator',
+          img: 'paginator'
         },
         {
           title: 'table',
           desc: 'Styled data-table that can be used to display rows of data',
-          route: 'table'
+          route: 'table',
+          img: 'table'
         },
         {
           title: 'no data',
           desc: 'Notification when there is no data',
-          route: 'nodata'
+          route: 'nodata',
+          img: 'no data'
+        }
+      ]
+    },
+    {
+      title: 'global errors',
+      components: [
+        {
+          title: 'HTTP status codes: error states',
+          img: 'httpstatus',
+          desc: 'An error state is a screen that is shown when things go wrong',
+          route: 'httpstatus'
         }
       ]
     },
     {
       title: 'pages',
       components: [
-        {
-          title: 'login',
-          desc: 'Login Modal',
-          route: 'login'
-        }
+        { title: 'login', desc: 'Login Modal', route: 'login', img: 'login' }
       ]
     },
     {
@@ -255,14 +296,12 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'application templates',
           desc: 'Vizient UX framework',
-          route: 'applicationtemplates'
+          route: 'applicationtemplates',
+          img: 'application templates'
         }
       ]
     },
-    {
-      title: '',
-      components: []
-    }
+    { title: '', components: [] }
   ];
 
   constructor(private router: Router) {}

@@ -1,0 +1,62 @@
+@import "../../_viz-color.scss";
+:host {
+  .http-status {
+    width: 100%;
+    min-width: 500px;
+    height: 100%;
+    min-height: 500px;
+    font-family: Soleto;
+    position: relative;
+
+
+
+    &-content {
+      width: 500px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    &-svg {
+      height: 112px;
+      width: 404px;
+      margin: 0 auto 32px;
+      
+    }
+
+    &-desc {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 36px;
+      height: 36px;
+      color: $viz-gray;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    &-contact {
+      color: $viz-gray;
+      font-weight: 300;
+      font-size: 16px;
+      height: 21px;
+      line-height: 21px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &-contact-link {
+      color: $viz-purple;
+    }
+
+    &-back {
+      position: relative;
+      & > * {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+  }
+}
