@@ -51,7 +51,7 @@ export const APP_ROUTES: Routes = [
     data: {}
   },
   {
-    path: ':type',
+    path: ':code',
     component: HttpStatusPageComponent,
     pathMatch: 'full',
     data: {}
