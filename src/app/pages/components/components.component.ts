@@ -7,7 +7,6 @@ export interface Section {
   name: string;
   updated: Date;
 }
-
 @Component({
   selector: 'app-components',
   templateUrl: './components.component.html',
@@ -15,7 +14,7 @@ export interface Section {
 })
 export class ComponentsComponent implements OnInit {
   componentClass = [
-    {
+    [{
       title: 'getting started',
       components: [
         {
@@ -27,7 +26,7 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'developers',
           desc: 'Introduction to Developers',
-          route: 'designers',
+          route: 'developers',
           img: 'developers'
         }
       ]
@@ -48,8 +47,7 @@ export class ComponentsComponent implements OnInit {
           img: 'typography'
         }
       ]
-    },
-    { title: '', components: [] },
+    }],
     {
       title: 'form controls',
       components: [
@@ -303,13 +301,15 @@ export class ComponentsComponent implements OnInit {
     },
     { title: '', components: [] }
   ];
-
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
   routeTo(route) {
     this.router.navigate([`/documentation/${route}`]);
+  }
+  isArray(item) {
+    return Array.isArray(item);
   }
 }
 
