@@ -1,1 +1,12 @@
-<viz-select [options]="options" placeholder='Date Type'></viz-select>
+<mat-form-field>
+    <mat-select placeholder="Date Type"
+                disableOptionCentering
+                disableRipple
+                panelClass="viz-select"
+                [(value)]="selected">
+        <mat-option *ngFor="let type of types"
+                    [value]="type">
+            {{type}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

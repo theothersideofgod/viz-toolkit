@@ -62,7 +62,7 @@ Import the component modules.
     VizProgressSpinnerModule,
     VizTableModule,
     VizSteppersModule,
-    VizBottomSheetModue,
+    VizBottomSheetModule,
     VizBreadcrumbModule,
     VizSearchModule,
     VizChartModule,
@@ -73,7 +73,8 @@ Import the component modules.
     VizProgressBarModule,
     VizPaginatorModule,
     VizSnackBarModule,
-    VizBottomSheetModue
+    VizBottomSheetModule,
+    VizHttpStatusModule
   } from 'viz-toolkit';
   @NgModule({
     ...
@@ -102,7 +103,7 @@ Import the component modules.
       VizProgressSpinnerModule,
       VizTableModule,
       VizSteppersModule,
-      VizBottomSheetModue,
+      VizBottomSheetModule,
       VizBreadcrumbModule,
       VizSearchModule,
       VizChartModule,
@@ -113,7 +114,8 @@ Import the component modules.
       VizProgressBarModule,
       VizPaginatorModule,
       VizSnackBarModule,
-      VizBottomSheetModue
+      VizBottomSheetModule,
+      VizHttpStatusModule
     ],
     ...
   })
@@ -188,3 +190,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Change log
+1.0.2
+- Recreate viz-select. select has been rebuild with the material component.
+- Footer's logo can program now.
+- Update checkbox disable style.
+- Update select disable style.
+- Add Component: VizHttpStatusModule for inform http error state.
