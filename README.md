@@ -194,7 +194,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Change log
 1.0.2
-- Recreate viz-select.
+- Recreate viz-select. select has been rebuild with the material component.
 - Footer's logo can program now.
 - Update checkbox disable style.
 - Update select disable style.
