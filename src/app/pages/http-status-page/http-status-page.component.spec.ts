@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HttpStatusPageComponent } from './http-status-page.component';
+import { VizHttpStatusModule } from 'libs';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('HttpStatusPageComponent', () => {
   let component: HttpStatusPageComponent;
@@ -8,7 +10,8 @@ describe('HttpStatusPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HttpStatusPageComponent ]
+      declarations: [ HttpStatusPageComponent ],
+      imports: [ VizHttpStatusModule, RouterTestingModule ]
     })
     .compileComponents();
   }));
