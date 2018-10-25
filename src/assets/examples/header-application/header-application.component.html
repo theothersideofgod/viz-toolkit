@@ -1,15 +1,26 @@
 <div class="example-container">
   <viz-header title="Application" brandLink="/" userName="Stan Lee" type="primary" application="true">
-    <div application>
-        <button mat-menu-item>
-          View Profile
-        </button>
-        <button mat-menu-item>
-          Account Settings
-        </button>
-        <button mat-menu-item routerLink="/login" >
-          Log Out
-        </button>
+    <div headerApplication>
+      <button mat-menu-item>
+        MDA Dashboard
+      </button>
+      <button mat-menu-item>
+        Operational Reports
+      </button>
+      <button mat-menu-item routerLink="/login" [matBadge]="1">
+        System Health  
+      </button>
+    </div>
+    <div headerLogin>
+      <button mat-menu-item>
+        View Profile
+      </button>
+      <button mat-menu-item>
+        Account Settings
+      </button>
+      <button mat-menu-item routerLink="/login">
+        Log Out
+      </button>
     </div>
   </viz-header>
 </div>
