@@ -125,4 +125,33 @@
       }
     }
   }
+
+
+  @media screen and (max-width: 600px) {
+    .home-wrapper {
+      height: auto;
+      .home-sec-1 {
+        .text-item {
+          width: 100%;
+          max-width: 100%;
+          padding-top: 0px;
+        }
+        .svg-item {
+          display:none;
+        }
+      }
+      .home-sec-2 {
+        flex-direction: column;
+        div {
+          .docs-feature-thumb {
+            margin: 0 auto;
+          }
+          h3,p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
 }

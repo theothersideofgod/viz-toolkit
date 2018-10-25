@@ -12,12 +12,14 @@
     padding: 0 40px;
     display: block;
   }
-
+  .footer-top {
+    top: 48px;
+  }
   .footer-center {
     font-weight: 300;
     z-index: 1;
     position: absolute;
-    top: 48px;
+    top: 0px;
     // height: 48px;
     left: 0;
     right: 0;
