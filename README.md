@@ -199,3 +199,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Update checkbox disable style.
 - Update select disable style.
 - Add Component: VizHttpStatusModule for inform http error state.
+
+1.0.3
+- Add header login dropdown function.
