@@ -193,6 +193,15 @@ const initNavList = [
     ]
   },
   {
+    name: 'Globel Errors',
+    subs: [
+      {
+        name: 'Http Status',
+        value: 'httpstatus'
+      }
+    ]
+  },
+  {
     name: 'Pages',
     subs: [
       {
