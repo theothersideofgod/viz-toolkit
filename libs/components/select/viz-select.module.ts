@@ -10,7 +10,7 @@ import {
   MatButtonModule,
   MatSelectModule
 } from '@angular/material';
-import { VizSelectComponent } from './viz-select.component';
+// import { VizSelectComponent } from './viz-select.component';
 
 // @NgModule({
 //   imports: [
