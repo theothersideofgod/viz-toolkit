@@ -74,7 +74,6 @@ export class ComponentOverview implements OnInit {
   ngOnInit() {
     // 100ms timeout is used to allow the page to settle before moving focus for screen readers.
     setTimeout(() => this.focusTarget.nativeElement.focus(), 100);
-    console.log('do i fucking rerender?');
   }
 
   onContentLoaded() {
