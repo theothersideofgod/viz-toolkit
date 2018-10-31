@@ -35,6 +35,9 @@ import {
 } from 'libs';
 
 import {
+  FormFieldAutocompleteComponent,
+  FormFieldAutocompleteData
+} from './form-field-autocomplete/form-field-autocomplete.component';import {
   MonthPickerRangeComponent,
   MonthPickerRangeData
 } from './month-picker-range/month-picker-range.component';import {
@@ -374,6 +377,10 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 export const ALL_EXAMPLE_ITEMS = {
+  'form-field-autocomplete' : {
+    component: FormFieldAutocompleteComponent,
+    data: FormFieldAutocompleteData
+  },
   'month-picker-range' : {
     component: MonthPickerRangeComponent,
     data: MonthPickerRangeData
@@ -718,6 +725,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
     MonthPickerSingleComponent,
     SliderRangeEventComponent,
@@ -845,6 +853,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
     MonthPickerSingleComponent,
     SliderRangeEventComponent,

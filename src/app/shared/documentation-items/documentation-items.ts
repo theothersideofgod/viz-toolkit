@@ -21,6 +21,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'formfieldautocomplete', name: 'FormFieldAutocomplete', examples: ['form-field-autocomplete']},
         {id: 'monthpickerrange', name: 'MonthPickerRange', examples: ['month-picker-range']},
         {id: 'monthpickersingle', name: 'MonthPickerSingle', examples: ['month-picker-single']},
         {id: 'httpstatus', name: ''},
