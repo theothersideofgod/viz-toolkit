@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit, Input, Pipe, PipeTransform, Optional, Output, EventEmitter } from '@angular/core';
-import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from 'mat-range-datepicker';
+import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from './public-api';
 
 @Component({
   selector: 'viz-date-range-picker',
@@ -12,6 +12,7 @@ export class VizDateRangePickerComponent implements OnInit {
   lastDateInput: matRangeDatepickerRangeValue<Date> | null;
   lastDateChange: matRangeDatepickerRangeValue<Date> | null;
   dateShot: matRangeDatepickerRangeValue<Date> | null;
+  typeMode: string;
 
   @Output() apply = new EventEmitter<any> ();
 

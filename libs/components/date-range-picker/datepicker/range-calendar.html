@@ -1,0 +1,65 @@
+<div class="range-calendar-wrapper">
+  <div class="from-date-sec">
+    <sat-calendar cdkTrapFocus
+      [id]="id"
+      [ngClass]="ngClass"
+      [startAt]="startAt"
+      [startView]="startView"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      [dateFilter]="dateFilter"
+      [beginDate]="beginDate"
+      [endDate]="endDate"
+      [beginMonth]="beginMonth"
+      [endMonth]="endMonth"
+      [rangeMode]="rangeMode"
+      [typeMode]="typeMode"           
+      [selected]="selected"
+      (selectedChange)="selectedChange.emit($event)"
+      (dateSelected)="_dateSelected($event)"
+      (yearSelected)="yearSelected.emit($event)"
+      (monthSelected)="monthSelected.emit($event)"
+      (monthRangesChange)="_rangeMonthSelected($event)"
+      >
+    </sat-calendar>
+  </div>
+  <div class="end-date-sec">
+    <sat-calendar cdkTrapFocus
+      [id]="id"
+      [ngClass]="ngClass"
+      [startAt]="startAt"
+      [startView]="startView"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      [dateFilter]="dateFilter"
+      [beginDate]="beginDate"
+      [endDate]="endDate"
+      [beginMonth]="beginMonth"
+      [endMonth]="endMonth"
+      [rangeMode]="rangeMode"
+      [typeMode]="typeMode"
+      [selected]="selected"
+      (selectedChange)="selectedChange.emit($event)"
+      (dateSelected)="_dateSelected($event)"
+      (yearSelected)="yearSelected.emit($event)"
+      (monthSelected)="monthSelected.emit($event)"
+      (monthRangesChange)="_rangeMonthSelected($event)"
+      [nextMonth]="true"
+      >
+    </sat-calendar>
+  </div>
+</div>
+
+<div class="quick-select-sec" *ngIf="typeMode == 'date'">
+  <span class="select-title">Quick Select</span>
+  <ul>
+    <li><button mat-button (click)="selectQuater(1)" [class.active]="checkQuarterSelected(1)">Quarter 1</button></li>
+    <li><button mat-button (click)="selectQuater(2)" [class.active]="checkQuarterSelected(2)">Quarter 2</button></li>
+    <li><button mat-button (click)="selectQuater(3)" [class.active]="checkQuarterSelected(3)">Quarter 3</button></li>
+    <li><button mat-button (click)="selectQuater(4)" [class.active]="checkQuarterSelected(4)">Quarter 4</button></li>
+  </ul>
+</div>
+<div class="calendar-button-sec">
+  <button mat-button color="primary" (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onApply()">Apply</button>
+</div>

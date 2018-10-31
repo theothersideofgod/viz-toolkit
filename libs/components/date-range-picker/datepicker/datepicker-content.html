@@ -1,0 +1,22 @@
+<range-calendar cdkTrapFocus
+              [id]="datepicker.id"
+              [ngClass]="datepicker.panelClass"
+              [startAt]="datepicker.startAt"
+              [startView]="datepicker.typeMode == 'month' ? 'year' : datepicker.startView"
+              [minDate]="datepicker._minDate"
+              [maxDate]="datepicker._maxDate"
+              [dateFilter]="datepicker._dateFilter"
+              [beginDate]="datepicker._beginDate"
+              [endDate]="datepicker._endDate"
+              [beginMonth]="datepicker._beginMonth"
+              [endMonth]="datepicker._endMonth"
+              [rangeMode]="datepicker.rangeMode"
+              [typeMode]="datepicker.typeMode"
+              [selected]="datepicker._selected"
+              (selectedChange)="datepicker._select($event)"
+              (dateRangesChange)="datepicker._selectRange($event)"
+              (monthRangesChange)="datepicker._selectMonthRange($event)"
+              (yearSelected)="datepicker._selectYear($event)"
+              (monthSelected)="datepicker._selectMonth($event)"
+              (_userSelection)="datepicker.close($event)">
+</range-calendar>
