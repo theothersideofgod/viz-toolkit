@@ -1,18 +1,32 @@
 import { Component, OnInit, AfterViewInit, Input, Pipe, PipeTransform, Optional, Output, EventEmitter } from '@angular/core';
 import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from './public-api';
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
 
 @Component({
   selector: 'viz-date-range-picker',
   templateUrl: './viz-date-range-picker.component.html',
   styleUrls: ['./viz-date-range-picker.component.scss']
 })
-export class VizDateRangePickerComponent implements OnInit {
+export class VizDateRangePickerComponent implements OnInit, AfterViewInit {
   @Input()
   date: matRangeDatepickerRangeValue<Date> ;
+
   lastDateInput: matRangeDatepickerRangeValue<Date> | null;
   lastDateChange: matRangeDatepickerRangeValue<Date> | null;
   dateShot: matRangeDatepickerRangeValue<Date> | null;
+
+  @Input()
   typeMode: string;
+
+  @Input()
+  set rangeMode(value: boolean) {
+    this._rangeMode = coerceBooleanProperty(value);
+  }
+  get rangeMode(): boolean {
+    return this._rangeMode;
+  }
+  private _rangeMode = false;
+
 
   @Output() apply = new EventEmitter<any> ();
 
@@ -22,6 +36,10 @@ export class VizDateRangePickerComponent implements OnInit {
 
   ngOnInit() {
     this.dateShot = this.date;
+  }
+
+  ngAfterViewInit() {
+    console.log(this.typeMode, this.rangeMode);
   }
 
   onDateInput = (e: matRangeDatepickerInputEvent<Date>) => {

@@ -206,6 +206,10 @@ export class SatYearView<D> implements AfterContentInit {
           this._beginDateSelected = false;
           this.selectedChange.emit(this._dateAdapter.createDate(this._dateAdapter.getYear(this.activeDate), month, 1));
         }
+      } else {
+
+
+        this.selectedChange.emit(this._dateAdapter.createDate(this._dateAdapter.getYear(this.activeDate), month, 1));
       }
     }
 

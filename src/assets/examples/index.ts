@@ -35,6 +35,12 @@ import {
 } from 'libs';
 
 import {
+  MonthPickerRangeComponent,
+  MonthPickerRangeData
+} from './month-picker-range/month-picker-range.component';import {
+  MonthPickerSingleComponent,
+  MonthPickerSingleData
+} from './month-picker-single/month-picker-single.component';import {
   SliderRangeEventComponent,
   SliderRangeEventData
 } from './slider-range-event/slider-range-event.component';
@@ -368,6 +374,14 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 export const ALL_EXAMPLE_ITEMS = {
+  'month-picker-range' : {
+    component: MonthPickerRangeComponent,
+    data: MonthPickerRangeData
+  },
+  'month-picker-single' : {
+    component: MonthPickerSingleComponent,
+    data: MonthPickerSingleData
+  },
   'slider-range-event': {
     component: SliderRangeEventComponent,
     data: SliderRangeEventData
@@ -704,6 +718,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    MonthPickerRangeComponent,
+    MonthPickerSingleComponent,
     SliderRangeEventComponent,
     SliderEventComponent,
     ToolbarColorComponent,
@@ -829,6 +845,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    MonthPickerRangeComponent,
+    MonthPickerSingleComponent,
     SliderRangeEventComponent,
     SliderEventComponent,
     ToolbarColorComponent,

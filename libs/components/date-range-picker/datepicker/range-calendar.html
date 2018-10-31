@@ -1,5 +1,5 @@
-<div class="range-calendar-wrapper">
-  <div class="from-date-sec">
+<div class="range-calendar-wrapper" [class.range-calendar-wrapper-single]="!rangeMode">
+  <div class="from-date-sec" [class.from-date-sec-single]="!rangeMode">
     <sat-calendar cdkTrapFocus
       [id]="id"
       [ngClass]="ngClass"
@@ -23,7 +23,7 @@
       >
     </sat-calendar>
   </div>
-  <div class="end-date-sec">
+  <div class="end-date-sec" *ngIf="rangeMode == true">
     <sat-calendar cdkTrapFocus
       [id]="id"
       [ngClass]="ngClass"
@@ -50,7 +50,7 @@
   </div>
 </div>
 
-<div class="quick-select-sec" *ngIf="typeMode == 'date'">
+<div class="quick-select-sec" *ngIf="typeMode == 'date' && rangeMode == true">
   <span class="select-title">Quick Select</span>
   <ul>
     <li><button mat-button (click)="selectQuater(1)" [class.active]="checkQuarterSelected(1)">Quarter 1</button></li>
