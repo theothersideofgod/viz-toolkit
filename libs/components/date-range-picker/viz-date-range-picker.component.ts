@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, Input, Pipe, PipeTransform, Optional, Output, EventEmitter } from '@angular/core';
-import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from './public-api';
+// import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from './public-api';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { matRangeDatepickerRangeValue, matRangeDatepickerInputEvent } from './datepicker/datepicker-input';
+import { DateAdapter } from './datetime/date-adapter';
 
 @Component({
   selector: 'viz-date-range-picker',
