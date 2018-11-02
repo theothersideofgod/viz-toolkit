@@ -257,19 +257,35 @@ export class SatCalendar<D> implements AfterContentInit, AfterViewChecked, OnDes
     const _today = this._dateAdapter.today();
     const _end = this.endDate || _today;
     const _start = this.beginDate || _today;
-    this.activeDate = (
-      (!this.nextMonth)
-      ?
-      _start
-      :
-      (
-        this._dateAdapter.getMonth(_end) === this._dateAdapter.getMonth(_start)
+    if (this.typeMode === 'date') {
+      this.activeDate = (
+        (!this.nextMonth)
         ?
-        this._dateAdapter.addCalendarMonths(_end, 1)
+        _start
         :
-        _end
-      )
-    );
+        (
+          this._dateAdapter.getMonth(_end) === this._dateAdapter.getMonth(_start)
+          ?
+          this._dateAdapter.addCalendarMonths(_end, 1)
+          :
+          _end
+        )
+      );
+    } else {
+      this.activeDate = (
+        (!this.nextMonth)
+        ?
+        _start
+        :
+        (
+          this._dateAdapter.getYear(_end) === this._dateAdapter.getYear(_start)
+          ?
+          this._dateAdapter.addCalendarYears(_end, 1)
+          :
+          _end
+        )
+      );
+    }
   }
 
   _initMonthStartEnd() { }
