@@ -102,6 +102,8 @@ export class matRangeDatepickerInputEvent<D> {
 })
 export class matRangeDatepickerInput<D> implements AfterContentInit, ControlValueAccessor, OnDestroy,
     Validator {
+  @Input() typeMode;
+
   /** The datepicker that this input is associated with. */
   @Input()
   set matRangeDatepicker(value: matRangeDatepicker<D>) {
@@ -139,12 +141,14 @@ export class matRangeDatepickerInput<D> implements AfterContentInit, ControlValu
           this._dateAdapter.isValid(rangeValue.begin) && this._dateAdapter.isValid(rangeValue.end);
       rangeValue.begin = this._getValidDateOrNull(rangeValue.begin);
       rangeValue.end = this._getValidDateOrNull(rangeValue.end);
-      let oldDate = <matRangeDatepickerRangeValue<D> | null>this.value;
+      const oldDate = <matRangeDatepickerRangeValue<D> | null>this.value;
       this._elementRef.nativeElement.value =
           rangeValue && rangeValue.begin && rangeValue.end
-              ? this._dateAdapter.format(rangeValue.begin, this._dateFormats.display.dateInput) +
+              ? this._dateAdapter.format(rangeValue.begin, this.typeMode === 'date'
+                ? this._dateFormats.display.dateInput : {year: 'numeric', month: 'numeric'} ) +
                 ' - ' +
-                this._dateAdapter.format(rangeValue.end, this._dateFormats.display.dateInput)
+                this._dateAdapter.format(rangeValue.end, this.typeMode === 'date'
+                ? this._dateFormats.display.dateInput : {year: 'numeric', month: 'numeric'})
               : '';
       if (oldDate == null && rangeValue != null || oldDate != null && rangeValue == null ||
           !this._dateAdapter.sameDate((<matRangeDatepickerRangeValue<D>>oldDate).begin,
@@ -164,10 +168,12 @@ export class matRangeDatepickerInput<D> implements AfterContentInit, ControlValu
       value = this._dateAdapter.deserialize(value);
       this._lastValueValid = !value || this._dateAdapter.isValid(value);
       value = this._getValidDateOrNull(value);
-      let oldDate = this.value;
+      const oldDate = this.value;
       this._value = value;
       this._elementRef.nativeElement.value =
-          value ? this._dateAdapter.format(value, this._dateFormats.display.dateInput) : '';
+          value ? (this.typeMode === 'date' ?
+          this._dateAdapter.format(value, this._dateFormats.display.dateInput) :
+          this._dateAdapter.format(value, {year: 'numeric', month: 'numeric'} ) )  : '';
       if (!this._dateAdapter.sameDate(<D>oldDate, value)) {
         this._valueChange.emit(value);
       }
@@ -469,16 +475,15 @@ export class matRangeDatepickerInput<D> implements AfterContentInit, ControlValu
   /** Formats a value and sets it on the input element. */
   private _formatValue(value: matRangeDatepickerRangeValue<D> | D | null) {
       if (value && value.hasOwnProperty('begin') && value.hasOwnProperty('end')) {
-          value = value as matRangeDatepickerRangeValue<D>
+          value = value as matRangeDatepickerRangeValue<D>;
           this._elementRef.nativeElement.value =
               value && value.begin && value.end
                   ? this._dateAdapter.format(value.begin, this._dateFormats.display.dateInput) +
                   ' - ' +
                   this._dateAdapter.format(value.end, this._dateFormats.display.dateInput)
-                  : ''
-      }
-      else {
-            value = value as D | null
+                  : '';
+      } else {
+            value = value as D | null;
           this._elementRef.nativeElement.value =
               value ? this._dateAdapter.format(value, this._dateFormats.display.dateInput) : '';
       }
