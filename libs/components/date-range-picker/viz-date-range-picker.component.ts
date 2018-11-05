@@ -10,6 +10,8 @@ import { DateAdapter } from './datetime/date-adapter';
   styleUrls: ['./viz-date-range-picker.component.scss']
 })
 export class VizDateRangePickerComponent implements OnInit, AfterViewInit {
+  @Input() placeholder: string;
+
   @Input()
   date: matRangeDatepickerRangeValue<Date> ;
 
@@ -41,7 +43,7 @@ export class VizDateRangePickerComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.typeMode, this.rangeMode);
+    console.log(this.typeMode, this.rangeMode, this.placeholder);
   }
 
   onDateInput = (e: matRangeDatepickerInputEvent<Date>) => {
@@ -69,22 +71,6 @@ export class VizDateRangePickerComponent implements OnInit, AfterViewInit {
       this.apply.emit(this.date);
     }
 
-  }
-  getPlaceholder() {
-    if (this.typeMode === 'date') {
-      if (this.rangeMode) {
-        return 'Choose a date range';
-      } else {
-        return 'Choose a date';
-      }
-    }
-    if (this.typeMode === 'month') {
-      if (this.rangeMode) {
-        return 'Choose a month and year range';
-      } else {
-        return 'Month and year';
-      }
-    }
   }
 }
 
