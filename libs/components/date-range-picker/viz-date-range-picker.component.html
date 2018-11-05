@@ -2,7 +2,7 @@
   <form class='date-range-picker vizient-input'>
     <mat-form-field>
         <input matInput
-          placeholder="Date"
+          [placeholder]="getPlaceholder()"
           [matRangeDatepicker]="resultPicker"
           [ngModel]="date"
           (ngModelChange)="onInputDate($event)"

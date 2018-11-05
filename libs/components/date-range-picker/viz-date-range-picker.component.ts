@@ -70,6 +70,22 @@ export class VizDateRangePickerComponent implements OnInit, AfterViewInit {
     }
 
   }
+  getPlaceholder() {
+    if (this.typeMode === 'date') {
+      if (this.rangeMode) {
+        return 'Choose a date range';
+      } else {
+        return 'Choose a date';
+      }
+    }
+    if (this.typeMode === 'month') {
+      if (this.rangeMode) {
+        return 'Choose a month and year range';
+      } else {
+        return 'Month and year';
+      }
+    }
+  }
 }
 
 
