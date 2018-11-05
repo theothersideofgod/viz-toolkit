@@ -12,10 +12,6 @@ export class MonthPickerRangeComponent implements OnInit {
   dateRange: matRangeDatepickerRangeValue<Date>;
 
   constructor(private _dateAdapter: DateAdapter<Date>) {
-    this.dateRange = {
-      begin: this._dateAdapter.addCalendarMonths(this._dateAdapter.today(), -3),
-      end: this._dateAdapter.today()
-    };
   }
 
   applyDateRange(event) {}
