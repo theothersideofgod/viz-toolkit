@@ -10,27 +10,6 @@ import {
   MatButtonModule,
   MatSelectModule
 } from '@angular/material';
-// import { VizSelectComponent } from './viz-select.component';
-
-// @NgModule({
-//   imports: [
-//     CommonModule,
-//     MatIconModule,
-//     MatFormFieldModule,
-//     MatListModule,
-//     MatMenuModule,
-//     MatInputModule,
-//     MatButtonModule
-//   ],
-//   exports: [
-//     VizSelectComponent
-//   ],
-//   declarations: [
-//     VizSelectComponent
-//   ],
-// })
-// export class VizSelectModule {}
-
 @NgModule({
   imports: [CommonModule],
   exports: [MatSelectModule],

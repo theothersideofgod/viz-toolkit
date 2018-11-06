@@ -1,0 +1,82 @@
+<!-- <div class="select-dropdown">
+  <form class="vizient-input">
+    <mat-form-field class="form-full-width"
+                    [ngClass]="{'mat-focused': menuShown}"
+                    [matMenuTriggerFor]="optionMenu"
+                    (menuClosed)="hideMenu()"
+                    (menuOpened)="showMenu()">
+      <input matInput
+             type="text"
+             [placeholder]="placeholder"
+             [value]="message()"
+             readonly/>
+      <mat-icon matSuffix
+                class="select-dropdown_icon"
+                [ngClass]="{'select-dropdown_icon--active' : menuShown}">{{menuShown?"arrow_drop_up":"arrow_drop_down"}}</mat-icon>
+    </mat-form-field>
+  </form>
+  <mat-menu #optionMenu="matMenu"
+            [overlapTrigger]=false
+            class="select-dropdown_menu mat-elevation-z8">
+    <div class="select-option"
+         (click)="$event.stopPropagation()">
+      <mat-list role="list"
+                class="select-option_list">
+        <mat-list-item role="listitem"
+                       class="select-option_listItem"
+                       [ngClass]="{'select-option_listItem-active' : option.title===selected}"
+                       (click)="selectOption(option)"
+                       *ngFor="let option of options">{{option.title}}</mat-list-item>
+      </mat-list>
+    </div>
+  </mat-menu>
+</div> -->
+
+
+<div class="viz-select-wrap">
+  <form class="vizient-input" *ngIf="!disabled">
+    <mat-form-field class="viz-select"
+                    [matMenuTriggerFor]="selectMenu"
+                    #selectTrigger="matMenuTrigger"
+                    [class.mat-focused]="selectTrigger.menuOpen">
+      <mat-label>{{placeholder}}</mat-label>
+      <input matInput
+             type="text"
+             placeholder="Clearable input"
+             [value]="value"
+             autocomplete="off"
+             readonly>
+      <mat-icon class="select-direction"
+                mat-button
+                matSuffix>{{selectTrigger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down'}}
+      </mat-icon>
+    </mat-form-field>
+  </form>
+
+  <form class="vizient-input" *ngIf="disabled">
+    <mat-form-field class="viz-select">
+      <mat-label>{{placeholder}}</mat-label>
+      <input matInput
+             type="text"
+             placeholder="Clearable input"
+             [value]="value"
+             autocomplete="off"
+             disabled="disabled"
+             readonly>
+      <mat-icon class="select-direction"
+                mat-button
+                matSuffix>arrow_drop_down
+      </mat-icon>
+    </mat-form-field>
+  </form>
+
+
+
+  <mat-menu #selectMenu="matMenu"
+            [overlapTrigger]=false
+            class="viz-select-option">
+    <div (click)="$event.stopPropagation()">
+      <ng-content></ng-content>
+    </div>
+  </mat-menu>
+</div>
