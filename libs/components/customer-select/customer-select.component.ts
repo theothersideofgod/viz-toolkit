@@ -19,6 +19,8 @@ export class CustomerSelectComponent implements OnInit {
   @Input()options: Array<DateType> = [];
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
   @Output() select = new EventEmitter<DateType>();
+  @Output() open = new EventEmitter();
+  @Output() close = new EventEmitter();
   @Input() value;
   selected: DateType;
 
@@ -29,9 +31,11 @@ export class CustomerSelectComponent implements OnInit {
   }
   showMenu() {
     this.trigger.openMenu();
+    this.open.emit();
   }
   hideMenu() {
     this.trigger.closeMenu();
+    this.close.emit();
   }
   selectOption(option) {
     this.selected = option;
