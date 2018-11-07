@@ -38,6 +38,8 @@
     <mat-form-field class="viz-select"
                     [matMenuTriggerFor]="selectMenu"
                     #selectTrigger="matMenuTrigger"
+                    (menuClosed)="close.emit()"
+                    (menuOpened)="open.emit()"
                     [class.mat-focused]="selectTrigger.menuOpen">
       <mat-label>{{placeholder}}</mat-label>
       <input matInput
@@ -73,7 +75,6 @@
 
 
   <mat-menu #selectMenu="matMenu"
-            
             class="viz-select-option">
     <div (click)="$event.stopPropagation()">
       <ng-content></ng-content>

@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class CustomerSelectComponent implements OnInit {
   ngOnInit() { }
   menuClose() {
-    alert('Waefawe');
+    alert('close');
+  }
+  menuOpen() {
+    alert('open');
   }
 }
 
