@@ -31,4 +31,7 @@ export class VizFooterComponent implements OnInit {
       }
     }
   }
+  isBrands() {
+    return this.brands.length > 0 || this.leftBrands.length > 0 || this.rightBrands.length > 0 ;
+  }
 }

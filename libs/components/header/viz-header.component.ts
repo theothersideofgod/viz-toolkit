@@ -25,7 +25,7 @@ export class VizHeaderComponent {
 
   rightBtnOnClick() {
     this.rightBtnClick.emit();
-    this.isDrop = !this.isDrop;
+    // this.isDrop = !this.isDrop;
   }
 
   hamburgerOnClick() {

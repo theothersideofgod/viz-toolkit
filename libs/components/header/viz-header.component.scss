@@ -124,5 +124,17 @@
   .cdk-overlay-pane .viz-header-application-dropdown{
     position: absolute;
     left: -210px;
+    .mat-menu-content .mat-menu-item:hover {
+      color: #ff4e00;
+    }
   }
+  .cdk-overlay-pane .viz-header-login-dropdown{
+    position: absolute;
+    left: -144px;
+    top: 25px;
+    .mat-menu-content .mat-menu-item:hover {
+      color: #ff4e00;
+    }
+  }
+  
 }

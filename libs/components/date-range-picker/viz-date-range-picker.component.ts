@@ -1,19 +1,42 @@
 import { Component, OnInit, AfterViewInit, Input, Pipe, PipeTransform, Optional, Output, EventEmitter } from '@angular/core';
-import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from 'mat-range-datepicker';
+// import { matRangeDatepickerInputEvent, matRangeDatepickerRangeValue, DateAdapter } from './public-api';
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { matRangeDatepickerRangeValue, matRangeDatepickerInputEvent } from './datepicker/datepicker-input';
+import { DateAdapter } from './datetime/date-adapter';
 
 @Component({
   selector: 'viz-date-range-picker',
   templateUrl: './viz-date-range-picker.component.html',
   styleUrls: ['./viz-date-range-picker.component.scss']
 })
-export class VizDateRangePickerComponent implements OnInit {
+export class VizDateRangePickerComponent implements OnInit, AfterViewInit {
+  @Input() placeholder: string;
+
   @Input()
   date: matRangeDatepickerRangeValue<Date> ;
+
   lastDateInput: matRangeDatepickerRangeValue<Date> | null;
   lastDateChange: matRangeDatepickerRangeValue<Date> | null;
   dateShot: matRangeDatepickerRangeValue<Date> | null;
 
+  @Input()
+  typeMode: string;
+
+  @Input()
+  set rangeMode(value: boolean) {
+    this._rangeMode = coerceBooleanProperty(value);
+  }
+  get rangeMode(): boolean {
+    return this._rangeMode;
+  }
+  private _rangeMode = false;
+
+
   @Output() apply = new EventEmitter<any> ();
+
+  @Output() dateChange = new EventEmitter<any> ();
+
+  @Output() dateInput = new EventEmitter<any> ();
 
   constructor(
     private _dateAdapter: DateAdapter<Date>,
@@ -23,19 +46,17 @@ export class VizDateRangePickerComponent implements OnInit {
     this.dateShot = this.date;
   }
 
-  onDateInput = (e: matRangeDatepickerInputEvent<Date>) => {
-    console.log('input', this.lastDateInput === e.value);
-    this.lastDateInput = e.value as matRangeDatepickerRangeValue<Date>;
+  ngAfterViewInit() {
+    console.log(this.typeMode, this.rangeMode, this.placeholder);
   }
-  onDateChange = (e: matRangeDatepickerInputEvent<Date>) => {
-    console.log('select', this.lastDateInput === e.value);
-    this.lastDateChange = e.value as matRangeDatepickerRangeValue<Date>;
-  }
+
+
   onInputDate($event) {
     this.date = $event;
   }
   onClose(event) {
-    console.log(this.dateShot, this.date);
+    // console.log(this.dateShot, this.date);
+    this.apply.emit(this.date);
     if (!this.dateShot || !this.date) { return; }
     if (
       this._dateAdapter.sameDate(this.dateShot.begin, this.date.begin)

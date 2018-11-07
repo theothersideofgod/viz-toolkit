@@ -193,6 +193,15 @@ const initNavList = [
     ]
   },
   {
+    name: 'Global Errors',
+    subs: [
+      {
+        name: 'HTTP Status Codes',
+        value: 'httpstatus'
+      }
+    ]
+  },
+  {
     name: 'Pages',
     subs: [
       {
@@ -225,7 +234,7 @@ export class ComponentSidenavComponent implements OnInit {
     private _router: Router,
     @Inject(DOCUMENT) private document: any
   ) {
-    console.log(_router.url);
+    // console.log(_router.url);
   }
 
   ngOnInit() {

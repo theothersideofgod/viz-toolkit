@@ -132,7 +132,7 @@ export class SketchLink implements OnInit {
 
 
     let newl = sketch_link[componentName] && sketch_link[componentName][this.example];
-    console.log(newl);
+    // console.log(newl);
     newl = newl.replace(
       splashTester,
       `<span class="sketch-link-splash">/</span>`

@@ -2,15 +2,16 @@
   <form class='date-range-picker vizient-input'>
     <mat-form-field>
         <input matInput
-          placeholder="Date"
+          [placeholder]="placeholder"
           [matRangeDatepicker]="resultPicker"
           [ngModel]="date"
           (ngModelChange)="onInputDate($event)"
           name="date"
-          (dateInput)="onDateInput($event)"
-          (dateChange)="onDateChange($event)">
+          (dateInput)="dateInput.emit($event)"
+          (dateChange)="dateChange.emit($event)"
+          [typeMode]="typeMode">
         <mat-range-datepicker
-          #resultPicker [rangeMode]="true" (closed)="this.onClose($event)">
+          #resultPicker [rangeMode]="rangeMode" (closed)="this.onClose($event)" [typeMode]="typeMode">
         </mat-range-datepicker>
         <mat-range-datepicker-toggle matSuffix [for]="resultPicker"></mat-range-datepicker-toggle>
     </mat-form-field>

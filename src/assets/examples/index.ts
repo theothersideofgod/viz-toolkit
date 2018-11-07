@@ -31,10 +31,23 @@ import {
   VizBottomSheetModule,
   VizBreadcrumbModule,
   VizSearchModule,
-  VizChartModule
+  VizChartModule,
+  CustomerSelectModule
 } from 'libs';
 
 import {
+  CustomerSelectComponent,
+  CustomerSelectData
+} from './customer-select/customer-select.component'; import {
+  FormFieldAutocompleteComponent,
+  FormFieldAutocompleteData
+} from './form-field-autocomplete/form-field-autocomplete.component'; import {
+  MonthPickerRangeComponent,
+  MonthPickerRangeData
+} from './month-picker-range/month-picker-range.component'; import {
+  MonthPickerSingleComponent,
+  MonthPickerSingleData
+} from './month-picker-single/month-picker-single.component'; import {
   SliderRangeEventComponent,
   SliderRangeEventData
 } from './slider-range-event/slider-range-event.component';
@@ -368,6 +381,22 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 export const ALL_EXAMPLE_ITEMS = {
+  'customer-select' : {
+    component: CustomerSelectComponent,
+    data: CustomerSelectData
+  },
+  'form-field-autocomplete' : {
+    component: FormFieldAutocompleteComponent,
+    data: FormFieldAutocompleteData
+  },
+  'month-picker-range' : {
+    component: MonthPickerRangeComponent,
+    data: MonthPickerRangeData
+  },
+  'month-picker-single' : {
+    component: MonthPickerSingleComponent,
+    data: MonthPickerSingleData
+  },
   'slider-range-event': {
     component: SliderRangeEventComponent,
     data: SliderRangeEventData
@@ -704,6 +733,10 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    CustomerSelectComponent,
+    FormFieldAutocompleteComponent,
+    MonthPickerRangeComponent,
+    MonthPickerSingleComponent,
     SliderRangeEventComponent,
     SliderEventComponent,
     ToolbarColorComponent,
@@ -825,10 +858,15 @@ export const ALL_EXAMPLE_ITEMS = {
     VizBottomSheetModule,
     VizBreadcrumbModule,
     VizSearchModule,
-    VizChartModule
+    VizChartModule,
+    CustomerSelectModule
   ],
   providers: [],
   entryComponents: [
+    CustomerSelectComponent,
+    FormFieldAutocompleteComponent,
+    MonthPickerRangeComponent,
+    MonthPickerSingleComponent,
     SliderRangeEventComponent,
     SliderEventComponent,
     ToolbarColorComponent,
