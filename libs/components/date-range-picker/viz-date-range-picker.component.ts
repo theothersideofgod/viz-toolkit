@@ -34,6 +34,10 @@ export class VizDateRangePickerComponent implements OnInit, AfterViewInit {
 
   @Output() apply = new EventEmitter<any> ();
 
+  @Output() dateChange = new EventEmitter<any> ();
+
+  @Output() dateInput = new EventEmitter<any> ();
+
   constructor(
     private _dateAdapter: DateAdapter<Date>,
   ) {}
@@ -46,19 +50,13 @@ export class VizDateRangePickerComponent implements OnInit, AfterViewInit {
     console.log(this.typeMode, this.rangeMode, this.placeholder);
   }
 
-  onDateInput = (e: matRangeDatepickerInputEvent<Date>) => {
-    console.log('input', this.lastDateInput === e.value);
-    this.lastDateInput = e.value as matRangeDatepickerRangeValue<Date>;
-  }
-  onDateChange = (e: matRangeDatepickerInputEvent<Date>) => {
-    console.log('select', this.lastDateInput === e.value);
-    this.lastDateChange = e.value as matRangeDatepickerRangeValue<Date>;
-  }
+
   onInputDate($event) {
     this.date = $event;
   }
   onClose(event) {
-    console.log(this.dateShot, this.date);
+    // console.log(this.dateShot, this.date);
+    this.apply.emit(this.date);
     if (!this.dateShot || !this.date) { return; }
     if (
       this._dateAdapter.sameDate(this.dateShot.begin, this.date.begin)
