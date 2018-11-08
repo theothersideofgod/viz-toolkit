@@ -102,11 +102,12 @@ const sketch_link = {
   selector: 'sketch-link',
   templateUrl: './sketch-link.html',
   styleUrls: ['./sketch-link.scss'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
 export class SketchLink implements OnInit {
-  @Input() example;
-  sketch_links: string[][];
+  @Input()
+  example;
+  sketch_links: string[][] = [[]];
   constructor(private router: Router) {
     // console.log(this.router.url)
   }
@@ -130,19 +131,18 @@ export class SketchLink implements OnInit {
 
     this.example = this.example === '' ? 0 : this.example;
 
-
-    let newl = sketch_link[componentName] && sketch_link[componentName][this.example];
-    // console.log(newl);
-    newl = newl.replace(
-      splashTester,
-      `<span class="sketch-link-splash">/</span>`
-    );
-    newl = newl.replace(
-      orTester,
-      `<span class="sketch-link-splash">or</span>`
-    );
-    this.sketch_links = newl;
-
-
+    if (sketch_link[componentName]) {
+      let newl = sketch_link[componentName][this.example];
+      // console.log(newl);
+      newl = newl.replace(
+        splashTester,
+        `<span class="sketch-link-splash">/</span>`
+      );
+      newl = newl.replace(
+        orTester,
+        `<span class="sketch-link-splash">or</span>`
+      );
+      this.sketch_links = newl;
+    }
   }
 }

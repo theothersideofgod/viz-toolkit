@@ -43,7 +43,7 @@ import {MAT_DATE_FORMATS, MatDateFormats} from '../datetime/date-formats';
 export type SatCalendarView = 'month' | 'year' | 'multi-year';
 
 
-
+/* tslint:disable */
 /**
  * A calendar that is used as part of the datepicker.
  * @docs-private

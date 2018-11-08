@@ -9,7 +9,7 @@
 import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs';
 
-
+/* tslint:disable */
 /** Datepicker data that requires internationalization. */
 @Injectable({providedIn: 'root'})
 export class matRangeDatepickerIntl {

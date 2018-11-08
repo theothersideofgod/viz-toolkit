@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-
+/* tslint:disable */
 import {Directionality} from '@angular/cdk/bidi';
 import {coerceBooleanProperty} from '@angular/cdk/coercion';
 import {ESCAPE, UP_ARROW} from '@angular/cdk/keycodes';
@@ -389,10 +389,6 @@ export class matRangeDatepicker<D> implements OnDestroy, CanColor {
     }
   }
 
-  ngAfterContentInit() {
-    this._initBeginDate = this.beginDate;
-    this._initEndDate = this.endDate;
-  }
 
   ngOnDestroy() {
     this.close();

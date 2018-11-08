@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, AnimationTriggerMetadata, state, style, transition, trigger,} from '@angular/animations'
+import {animate, AnimationTriggerMetadata, state, style, transition, trigger, } from '@angular/animations';
 
 /** Animations used by the Material datepicker. */
 export const matDatepickerAnimations: {
@@ -26,6 +26,6 @@ export const matDatepickerAnimations: {
         state('enter', style({opacity: 1})),
         transition('void => *', animate('400ms 100ms cubic-bezier(0.55, 0, 0.55, 0.2)')),
     ]),
-}
+};
 
 

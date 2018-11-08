@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {coerceBooleanProperty} from '@angular/cdk/coercion'
+import {coerceBooleanProperty} from '@angular/cdk/coercion';
 import {
     AfterContentInit,
     ChangeDetectionStrategy,
@@ -19,12 +19,12 @@ import {
     OnDestroy,
     SimpleChanges,
     ViewEncapsulation,
-} from '@angular/core'
-import {merge, of as observableOf, Subscription} from 'rxjs'
-import {matRangeDatepicker} from './datepicker'
-import {matRangeDatepickerIntl} from './datepicker-intl'
+} from '@angular/core';
+import {merge, of as observableOf, Subscription} from 'rxjs';
+import {matRangeDatepicker} from './datepicker';
+import {matRangeDatepickerIntl} from './datepicker-intl';
 
-
+/* tslint:disable */
 /** Can be used to override the icon of a `matDatepickerToggle`. */
 @Directive({
     selector: '[matDatepickerToggleIcon]',
@@ -49,14 +49,14 @@ export class matRangeDatepickerToggleIcon {
 })
 export class matRangeDatepickerToggle<D> implements AfterContentInit, OnChanges, OnDestroy {
     /** Datepicker instance that the button will toggle. */
-    @Input('for') datepicker: matRangeDatepicker<D>
+    @Input('for') datepicker: matRangeDatepicker<D>;
 
     /** Custom icon set by the consumer. */
-    @ContentChild(matRangeDatepickerToggleIcon) _customIcon: matRangeDatepickerToggleIcon
+    @ContentChild(matRangeDatepickerToggleIcon) _customIcon: matRangeDatepickerToggleIcon;
 
-    private _stateChanges = Subscription.EMPTY
+    private _stateChanges = Subscription.EMPTY;
 
-    private _disabled: boolean
+    private _disabled: boolean;
 
     constructor(public _intl: matRangeDatepickerIntl, private _changeDetectorRef: ChangeDetectorRef) {
     }
@@ -64,48 +64,48 @@ export class matRangeDatepickerToggle<D> implements AfterContentInit, OnChanges,
     /** Whether the toggle button is disabled. */
     @Input()
     get disabled(): boolean {
-        return this._disabled === undefined ? this.datepicker.disabled : !!this._disabled
+        return this._disabled === undefined ? this.datepicker.disabled : !!this._disabled;
     }
 
     set disabled(value: boolean) {
-        this._disabled = coerceBooleanProperty(value)
+        this._disabled = coerceBooleanProperty(value);
     }
 
     ngOnChanges(changes: SimpleChanges) {
         if (changes.datepicker) {
-            this._watchStateChanges()
+            this._watchStateChanges();
         }
     }
 
     ngOnDestroy() {
-        this._stateChanges.unsubscribe()
+        this._stateChanges.unsubscribe();
     }
 
     ngAfterContentInit() {
-        this._watchStateChanges()
+        this._watchStateChanges();
     }
 
     _open(event: Event): void {
         if (this.datepicker && !this.disabled) {
-            this.datepicker.open()
-            event.stopPropagation()
+            this.datepicker.open();
+            event.stopPropagation();
         }
     }
 
     private _watchStateChanges() {
-        const datepickerDisabled = this.datepicker ? this.datepicker._disabledChange : observableOf()
+        const datepickerDisabled = this.datepicker ? this.datepicker._disabledChange : observableOf();
         const inputDisabled = this.datepicker && this.datepicker._datepickerInput ?
-            this.datepicker._datepickerInput._disabledChange : observableOf()
+            this.datepicker._datepickerInput._disabledChange : observableOf();
         const datepickerToggled = this.datepicker ?
             merge(this.datepicker.openedStream, this.datepicker.closedStream) :
-            observableOf()
+            observableOf();
 
-        this._stateChanges.unsubscribe()
+        this._stateChanges.unsubscribe();
         this._stateChanges = merge(
             this._intl.changes,
             datepickerDisabled,
             inputDisabled,
             datepickerToggled,
-        ).subscribe(() => this._changeDetectorRef.markForCheck())
+        ).subscribe(() => this._changeDetectorRef.markForCheck());
     }
 }

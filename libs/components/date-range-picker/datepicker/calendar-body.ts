@@ -29,7 +29,7 @@ export class SatCalendarCell {
               public enabled: boolean) {}
 }
 
-
+/* tslint:disable */
 /**
  * An internal component used to display calendar data in a table.
  * @docs-private
