@@ -7,10 +7,10 @@ RUN apt-get update && apt-get install -y google-chrome-stable
 
 WORKDIR /app
 
-COPY package.json /app/
+COPY package.json yarn.lock /app/
 COPY libs/package.json /app/libs/
 
-RUN npm install
+RUN yarn
 
 RUN cd libs && npm install && cd /app
 
