@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'customer-select',
+  selector: 'customer-select',
   templateUrl: 'customer-select.component.html',
-  styleUrls: ['customer-select.component.css'],
+  styleUrls: ['customer-select.component.css']
 })
 export class CustomerSelectComponent implements OnInit {
-  ngOnInit() { }
+  ngOnInit() {}
   menuClose() {
     alert('close');
   }
@@ -16,5 +16,5 @@ export class CustomerSelectComponent implements OnInit {
 }
 
 export const CustomerSelectData = {
-	name: 'CustomerSelect'
+  name: 'CustomerSelect'
 };

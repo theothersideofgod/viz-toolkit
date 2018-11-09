@@ -1,19 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MonthPickerRangeComponentComponent } from './month-picker-range.component';
+import { MonthPickerRangeComponent } from './month-picker-range.component';
+import { VizDateRangePickerModule } from 'libs';
+import { DateAdapter, NativeDateAdapter } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('MonthPickerRangeComponentComponent', () => {
-  let component: MonthPickerRangeComponentComponent;
-  let fixture: ComponentFixture<MonthPickerRangeComponentComponent>;
+describe('MonthPickerRangeComponent', () => {
+  let component: MonthPickerRangeComponent;
+  let fixture: ComponentFixture<MonthPickerRangeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [MonthPickerRangeComponentComponent]
+      imports: [VizDateRangePickerModule, BrowserAnimationsModule],
+      declarations: [MonthPickerRangeComponent],
+      providers: [{ provide: DateAdapter, useClass: NativeDateAdapter }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MonthPickerRangeComponentComponent);
+    fixture = TestBed.createComponent(MonthPickerRangeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,3 +27,4 @@ describe('MonthPickerRangeComponentComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

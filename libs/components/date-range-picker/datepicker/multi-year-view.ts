@@ -56,11 +56,11 @@ export class SatMultiYearView<D> implements AfterContentInit {
   @Input()
   get activeDate(): D { return this._activeDate; }
   set activeDate(value: D) {
-    let oldActiveDate = this._activeDate;
+    const oldActiveDate = this._activeDate;
     const validDate =
         this._getValidDateOrNull(this._dateAdapter.deserialize(value)) || this._dateAdapter.today();
     this._activeDate = this._dateAdapter.clampDate(validDate, this.minDate, this.maxDate);
-    if (Math.floor(this._dateAdapter.getYear(oldActiveDate) / yearsPerPage) !=
+    if (Math.floor(this._dateAdapter.getYear(oldActiveDate) / yearsPerPage) !==
         Math.floor(this._dateAdapter.getYear(this._activeDate) / yearsPerPage)) {
       this._init();
     }
@@ -130,12 +130,12 @@ export class SatMultiYearView<D> implements AfterContentInit {
   /** Initializes this multi-year view. */
   _init() {
     this._todayYear = this._dateAdapter.getYear(this._dateAdapter.today());
-    let activeYear = this._dateAdapter.getYear(this._activeDate);
-    let activeOffset = activeYear % yearsPerPage;
+    const activeYear = this._dateAdapter.getYear(this._activeDate);
+    const activeOffset = activeYear % yearsPerPage;
     this._years = [];
     for (let i = 0, row: number[] = []; i < yearsPerPage; i++) {
       row.push(activeYear - activeOffset + i);
-      if (row.length == yearsPerRow) {
+      if (row.length === yearsPerRow) {
         this._years.push(row.map(year => this._createCellForYear(year)));
         row = [];
       }
@@ -146,8 +146,8 @@ export class SatMultiYearView<D> implements AfterContentInit {
   /** Handles when a new year is selected. */
   _yearSelected(year: number) {
     this.yearSelected.emit(this._dateAdapter.createDate(year, 0, 1));
-    let month = this._dateAdapter.getMonth(this.activeDate);
-    let daysInMonth =
+    const month = this._dateAdapter.getMonth(this.activeDate);
+    const daysInMonth =
         this._dateAdapter.getNumDaysInMonth(this._dateAdapter.createDate(year, month, 1));
     this.selectedChange.emit(this._dateAdapter.createDate(year, month,
         Math.min(this._dateAdapter.getDate(this.activeDate), daysInMonth)));
@@ -216,7 +216,7 @@ export class SatMultiYearView<D> implements AfterContentInit {
 
   /** Creates an SatCalendarCell for the given year. */
   private _createCellForYear(year: number) {
-    let yearName = this._dateAdapter.getYearName(this._dateAdapter.createDate(year, 0, 1));
+    const yearName = this._dateAdapter.getYearName(this._dateAdapter.createDate(year, 0, 1));
     return new SatCalendarCell(year, yearName, yearName, this._shouldEnableYear(year));
   }
 
@@ -237,7 +237,7 @@ export class SatMultiYearView<D> implements AfterContentInit {
     const firstOfYear = this._dateAdapter.createDate(year, 0, 1);
 
     // If any date in the year is enabled count the year as enabled.
-    for (let date = firstOfYear; this._dateAdapter.getYear(date) == year;
+    for (let date = firstOfYear; this._dateAdapter.getYear(date) === year;
       date = this._dateAdapter.addCalendarDays(date, 1)) {
       if (this.dateFilter(date)) {
         return true;

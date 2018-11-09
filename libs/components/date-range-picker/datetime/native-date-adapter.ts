@@ -12,7 +12,7 @@ import {DateAdapter, MAT_DATE_LOCALE} from './date-adapter';
 
 // TODO(mmalerba): Remove when we no longer support safari 9.
 /** Whether the browser supports the Intl API. */
-const SUPPORTS_INTL_API = typeof Intl != 'undefined';
+const SUPPORTS_INTL_API = typeof Intl !== 'undefined';
 
 
 /** The default month names to use if Intl API is not available. */
@@ -41,14 +41,14 @@ const DEFAULT_DAY_OF_WEEK_NAMES = {
  * Taken form moment.js source code https://github.com/moment/moment/tree/develop/src/locale
  */
 const FIRST_DAY_OF_WEEK = {
-  af:1, ar:6, 'ar-ly':6, 'ar-ma':6, 'ar-tn':1, az:1, be:1, bg:1, bm:1, br:1, bs:1, ca:1, cs:1, cv:1,
-  cy:1, da:1, de:1, 'de-at':1, 'de-ch':1, el:1, 'en-au':1, 'en-gb':1, 'en-ie':1, 'en-nz':1, eo:1,
-  es:1, 'es-do':1, et:1, eu:1, fa:6, fi:1, fo:1, fr:1, 'fr-ch':1, fy:1, gd:1, gl:1, 'gom-latn':1,
-  hr:1, hu:1, 'hy-am':1, id:1, is:1, it:1, jv:1, ka:1, kk:1, km:1, ky:1, lb:1, lt:1, lv:1, me:1,
-  mi:1, mk:1, ms:1, 'ms-my':1, mt:1, my:1, nb:1, nl:1, 'nl-be':1, nn:1, pl:1, pt:1, ro:1, ru:1,
-  sd:1, se:1, sk:1, sl:1, sq:1, sr:1, 'sr-cyrl':1, ss:1, sv:1, sw:1, 'tet':1, tg:1, 'tl-ph':1,
-  'tlh':1, tr:1, 'tzl':1, 'tzm':6, 'tzm-latn':6, 'ug-cn':1, uk:1, ur:1, uz:1, 'uz-latn':1, vi:1,
-  'x-pseudo':1, yo:1, 'zh-cn':1,
+  af: 1, ar: 6, 'ar-ly': 6, 'ar-ma': 6, 'ar-tn': 1, az: 1, be: 1, bg: 1, bm: 1, br: 1, bs: 1, ca: 1, cs: 1, cv: 1,
+  cy: 1, da: 1, de: 1, 'de-at': 1, 'de-ch': 1, el: 1, 'en-au': 1, 'en-gb': 1, 'en-ie': 1, 'en-nz': 1, eo: 1,
+  es: 1, 'es-do': 1, et: 1, eu: 1, fa: 6, fi: 1, fo: 1, fr: 1, 'fr-ch': 1, fy: 1, gd: 1, gl: 1, 'gom-latn': 1,
+  hr: 1, hu: 1, 'hy-am': 1, id: 1, is: 1, it: 1, jv: 1, ka: 1, kk: 1, km: 1, ky: 1, lb: 1, lt: 1, lv: 1, me: 1,
+  mi: 1, mk: 1, ms: 1, 'ms-my': 1, mt: 1, my: 1, nb: 1, nl: 1, 'nl-be': 1, nn: 1, pl: 1, pt: 1, ro: 1, ru: 1,
+  sd: 1, se: 1, sk: 1, sl: 1, sq: 1, sr: 1, 'sr-cyrl': 1, ss: 1, sv: 1, sw: 1, 'tet': 1, tg: 1, 'tl-ph': 1,
+  'tlh': 1, tr: 1, 'tzl': 1, 'tzm': 6, 'tzm-latn': 6, 'ug-cn': 1, uk: 1, ur: 1, uz: 1, 'uz-latn': 1, vi: 1,
+  'x-pseudo': 1, yo: 1, 'zh-cn': 1,
 };
 
 /**
@@ -86,7 +86,7 @@ export class NativeDateAdapter extends DateAdapter<Date> {
    * it here for sometime, just for precaution, in case we decide to revert some of these changes
    * though.
    */
-  useUtcForDisplay: boolean = true;
+  useUtcForDisplay = true;
 
   constructor(@Optional() @Inject(MAT_DATE_LOCALE) matDateLocale: string, platform: Platform) {
     super();
@@ -176,9 +176,9 @@ export class NativeDateAdapter extends DateAdapter<Date> {
       throw Error(`Invalid date "${date}". Date has to be greater than 0.`);
     }
 
-    let result = this._createDateWithOverflow(year, month, date);
+    const result = this._createDateWithOverflow(year, month, date);
     // Check that the date wasn't above the upper bound for the month, causing the month to overflow
-    if (result.getMonth() != month) {
+    if (result.getMonth() !== month) {
       throw Error(`Invalid date "${date}" for month with index "${month}".`);
     }
 
@@ -192,7 +192,7 @@ export class NativeDateAdapter extends DateAdapter<Date> {
   parse(value: any): Date | null {
     // We have no way using the native JS Date to set the parse format or locale, so we ignore these
     // parameters.
-    if (typeof value == 'number') {
+    if (typeof value === 'number') {
       return new Date(value);
     }
     return value ? new Date(Date.parse(value)) : null;
@@ -231,7 +231,7 @@ export class NativeDateAdapter extends DateAdapter<Date> {
     // month. In this case we want to go to the last day of the desired month.
     // Note: the additional + 12 % 12 ensures we end up with a positive number, since JS % doesn't
     // guarantee this.
-    if (this.getMonth(newDate) != ((this.getMonth(date) + months) % 12 + 12) % 12) {
+    if (this.getMonth(newDate) !== ((this.getMonth(date) + months) % 12 + 12) % 12) {
       newDate = this._createDateWithOverflow(this.getYear(newDate), this.getMonth(newDate), 0);
     }
 
@@ -264,7 +264,7 @@ export class NativeDateAdapter extends DateAdapter<Date> {
       // The `Date` constructor accepts formats other than ISO 8601, so we need to make sure the
       // string is the right format first.
       if (ISO_8601_REGEX.test(value)) {
-        let date = new Date(value);
+        const date = new Date(value);
         if (this.isValid(date)) {
           return date;
         }

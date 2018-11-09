@@ -11,8 +11,6 @@ import {
 export class MonthPickerRangeComponent implements OnInit {
   dateRange: matRangeDatepickerRangeValue<Date>;
 
-  constructor(private _dateAdapter: DateAdapter<Date>) {
-  }
 
   applyDateRange(event) {}
   ngOnInit() {}
