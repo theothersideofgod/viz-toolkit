@@ -54,7 +54,8 @@ td {
 
 .example-container {
   width: 500px;
-  display: inline-flex;
+  /* display: inline-flex; */
+  margin: 0 auto;
 }
 
 .example-first-col {

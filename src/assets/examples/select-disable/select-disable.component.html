@@ -1,12 +1,15 @@
-<mat-form-field>
-    <mat-select placeholder="Date Type"
-                disableOptionCentering
-                panelClass="viz-select"
-                [(value)]="selected"
-                disabled>
-        <mat-option *ngFor="let type of types"
-                    [value]="type">
-            {{type}}
-        </mat-option>
+<div class="example-centralization">
+  <mat-form-field>
+    <mat-select
+      placeholder="Date Type"
+      disableOptionCentering
+      panelClass="viz-select"
+      [(value)]="selected"
+      disabled
+    >
+      <mat-option *ngFor="let type of types" [value]="type">
+        {{ type }}
+      </mat-option>
     </mat-select>
-</mat-form-field>
+  </mat-form-field>
+</div>

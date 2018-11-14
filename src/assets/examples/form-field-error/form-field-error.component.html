@@ -1,12 +1,16 @@
-<mat-form-field class="example-full-width">
-    <input matInput
-           placeholder="Email"
-           [formControl]="emailFormControl">
-    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-        Please enter a valid email address
+<div class="example-centralization">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" [formControl]="emailFormControl" />
+    <mat-error
+      *ngIf="
+        emailFormControl.hasError('email') &&
+        !emailFormControl.hasError('required')
+      "
+    >
+      Please enter a valid email address
     </mat-error>
     <mat-error *ngIf="emailFormControl.hasError('required')">
-        Email is
-        <strong>required</strong>
+      Email is <strong>required</strong>
     </mat-error>
-</mat-form-field>
+  </mat-form-field>
+</div>

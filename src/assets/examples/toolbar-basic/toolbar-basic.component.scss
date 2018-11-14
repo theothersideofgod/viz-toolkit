@@ -4,7 +4,8 @@
   }
   .toolbarWrapper {
     display: inline-block;
-    width: 710px;
+    // width: 710px;
+    width: 100%;
   }
   .example-fill-remaining-space {
     /* This fills the remaining space, by using flexbox. 
