@@ -80,7 +80,7 @@
 }
 
 .docs-example-viewer-body {
-  padding: 60px 0;
+  padding: 40px 0;
   white-space: nowrap;
   text-align: center;
   border-bottom: 1px solid #efefef;
@@ -113,49 +113,72 @@
     }
   }
 
-  .header-basic {
-    &.desktop_mac {
-    }
-    &.tablet_mac {
-      .more {
-        display: none;
-      }
-      .navbar-welcome {
-        display: none !important;
-      }
-      .navbar-hamburger {
-        display: block !important;
-      }
-    }
-    &.phone_iphone {
-      .page-name {
-        display: none;
-      }
-      .more {
-        display: none;
-      }
-      .navbar-welcome {
-        display: none !important;
-      }
-      .navbar-hamburger {
-        display: block !important;
-      }
-    }
-  }
-  .footer-basic {
-    &.phone_iphone {
-      .footer-bar {
-        width: 320px;
-        margin: 0 auto;
-      }
-      .footer-center {
-        position: relative;
-      }
-    }
-  }
+  // .header-basic {
+  //   &.desktop_mac {
+  //   }
+  //   &.tablet_mac {
+  //     .more {
+  //       display: none;
+  //     }
+  //     .navbar-welcome {
+  //       display: none !important;
+  //     }
+  //     .navbar-hamburger {
+  //       display: block !important;
+  //     }
+  //   }
+  //   &.phone_iphone {
+  //     .page-name {
+  //       display: none;
+  //     }
+  //     .more {
+  //       display: none;
+  //     }
+  //     .navbar-welcome {
+  //       display: none !important;
+  //     }
+  //     .navbar-hamburger {
+  //       display: block !important;
+  //     }
+  //   }
+  // }
+  // .footer-basic {
+  //   &.phone_iphone {
+  //     .footer-bar {
+  //       width: 320px;
+  //       margin: 0 auto;
+  //     }
+  //     .footer-center {
+  //       position: relative;
+  //     }
+  //   }
+  // }
   .mat-tab-list {
     .mat-ink-bar {
       transition: none;
     }
+  }
+  // 'desktop_mac','tablet_mac','phone_iphone'
+  .viewport {
+    &-iframe {
+      height: 400px;
+    }
+    &_desktop_mac {
+      width: 100%
+    }
+    &_tablet_mac {
+      width: 768px;
+    }
+    &_phone_iphone {
+      width: 375px
+    }
+  }
+
+  .datepicker-viewport {
+    height: 1000px;
+  }
+
+  .dialog-viewport {
+    height: 700px;
   }
 }

@@ -1,5 +1,5 @@
 import { DocViewer } from './doc-viewer';
-import { ExampleViewer } from '../example-viewer/example-viewer';
+import { ExampleViewer, SafePipe } from '../example-viewer/example-viewer';
 import {
   MatButtonModule,
   MatIconModule,
@@ -33,9 +33,10 @@ import { SketchLink } from '../sketch-link/sketch-link';
     ExampleViewer,
     HeaderLink,
     DocViewerExtend,
-    SketchLink
+    SketchLink,
+    SafePipe
   ],
   entryComponents: [ExampleViewer, HeaderLink, DocViewerExtend, SketchLink],
-  exports: [DocViewer, ExampleViewer, HeaderLink, DocViewerExtend, SketchLink]
+  exports: [DocViewer, ExampleViewer, HeaderLink, DocViewerExtend, SketchLink, SafePipe]
 })
 export class DocViewerModule {}

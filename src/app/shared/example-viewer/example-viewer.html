@@ -8,11 +8,11 @@
     </button> -->
 
 
-    <!-- <mat-icon [ngClass]="{'active': platform == item }" *ngFor="let item of ['desktop_mac','tablet_mac','phone_iphone']; let i=index"
-      (click)="platform = item;">{{item}}</mat-icon> -->
-    
     <mat-icon [ngClass]="{'active': platform == item }" *ngFor="let item of ['desktop_mac','tablet_mac','phone_iphone']; let i=index"
-    >{{item}}</mat-icon>
+      (click)="platform = item;">{{item}}</mat-icon>
+    
+    <!-- <mat-icon [ngClass]="{'active': platform == item }" *ngFor="let item of ['desktop_mac','tablet_mac','phone_iphone']; let i=index"
+    >{{item}}</mat-icon> -->
 
 
   </div>
@@ -22,6 +22,10 @@
   <div class="docs-example-viewer-body" #exampleViewBody [ngClass]="getViewportClass()">
     <!-- <ng-container *ngComponentOutlet="exampleData.component"></ng-container> -->
     <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template>
+
+
+    <iframe class="viewport-iframe" frameborder="0" [src]="exampleURL | safe" sandbox="allow-same-origin allow-scripts allow-forms" [ngClass]="iframeClass()"></iframe>
+
   </div>
 
   <div class="docs-example-viewer-source" [@.disabled]="true">
