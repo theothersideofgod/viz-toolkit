@@ -1,0 +1,5 @@
+<button (click)="changeViewport('Desktop')">Desktop</button>
+<button (click)="changeViewport('Tablet')">Tablet</button>
+<button (click)="changeViewport('Mobile')">Mobile</button>
+
+<div><iframe [src]="exampleURL | safe" [ngClass]="viewportStyle()" class="viewport-iframe"></iframe></div>

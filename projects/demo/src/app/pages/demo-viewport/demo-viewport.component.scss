@@ -1,0 +1,14 @@
+.viewport {
+  &-iframe {
+    height: 400px;
+  }
+  &-Mobile {
+    width: 374px;
+  }
+  &-Tablet {
+    width: 767px;
+  }
+  &-Desktop {
+    width: 100%;
+  }
+}
