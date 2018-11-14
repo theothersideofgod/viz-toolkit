@@ -1,0 +1,905 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+  padding: 30px;
+}
+ol, ul, li {
+	list-style: none !important;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2px;
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.arrow.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.height-1 {
+  height: 1px;
+}
+
+.mt36 {
+  margin-bottom: 36px !important;
+}
+
+.pt40 {
+  padding-top: 40px !important;
+}
+
+.pb40 {
+  padding-bottom: 40px !important;
+}
+
+.mr40 {
+  margin-right: 40px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mt110 {
+  margin-top: 110px;
+}
+
+.w180 {
+  width: 180px;
+}
+
+.hide-section {
+  display: none !important;
+}
+
+.btn-row {
+  text-align: center;
+}
+
+.vdu-page {
+  font-family: Soleto Light;
+  height: 100%;
+  width: 100%;
+}
+
+.common-text {
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #212121;
+}
+
+.common-title {
+  line-height: 38px;
+  font-size: 24px;
+  color: #28292B;
+  margin-bottom: 25px !important;
+}
+
+.highlight-text {
+  font-family: Soleto Bold;
+  font-weight: bold;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.highlight-text.orange {
+  color: #FF4E00;
+}
+
+div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0 15px;
+  text-align: center;
+  font-family: Soleto Light;
+}
+
+.btn .arrow {
+  border-color: white;
+  position: relative;
+  top: 18px;
+  right: 3px;
+}
+
+.btn.link {
+  border: 2px solid #7F5EBA;
+  color: #7F5EBA;
+}
+
+.intro-pre {
+  display: block;
+  width: 100%;
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.diagram-box {
+  height: 700px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.diagram-box img {
+  width: 100%;
+}
+
+.btn.common {
+  background: #7F5EBA;
+  color: #fff;
+  min-width: 140px;
+}
+
+h2.content-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  line-height: 40px;
+}
+
+.vizient-footer {
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 35px;
+  margin-top: 65px;
+}
+
+.vizient-footer img {
+  width: 144px;
+}
+
+.vizient-footer .footer-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 451px;
+  height: 56px;
+  background: #EFEFF0;
+  border-radius: 2px;
+}
+
+.vizient-footer .footer-nav span {
+  font-family: Soleto;
+  font-size: 14px;
+  color: #7F5EBA;
+}
+
+.vizient-footer .common-text {
+  width: 235px;
+  font-size: 14px;
+  color: #000;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 24px;
+}
+
+img.university-logo {
+  display: inline-block !important;
+  width: 586px;
+  max-width: 586px !important;
+}
+
+.home .content-body {
+  margin: 47px 0 29px;
+  font-family: Soleto Light;
+}
+
+.home .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 482px;
+  box-sizing: border-box;
+}
+
+.vdu-page.member .common-text{
+  font-size: 14px;
+}
+
+.vdu-page.member .section{
+  margin-bottom: 45px;
+  padding-bottom: 40px;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+.profile-card {
+  text-align: left;
+  color: #212121;
+  width: 33.2%;
+  margin-bottom: 50px;
+  opacity: 0.8;
+}
+
+.profile-card .profile-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dot {
+  border-radius: 100%;
+  display: inline-block;
+  min-width: 9px;
+  min-height: 9px;
+  margin-right: 20px;
+  font-size: 0;
+  opacity: 0.8;
+}
+
+.dot.green {
+  background-color: #01ADAB;
+}
+
+.dot.orange {
+  background-color: #FF4E00;
+}
+
+.dot.large {
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.dot.profile-dot {
+  margin-top: 2px;
+}
+.profile-card .profile-desc {
+  font-size: 18px;
+  font-family: Soleto;
+  margin-bottom: 28px;
+  max-width: 300px;
+  line-height: 24px;
+}
+
+.profile-card .profile-text {
+  font-size: 14px;
+  line-height: 1.2;
+  max-width: 250px;
+}
+
+.profile-card .profile-list li  p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.profile-card .profile-list li .item-content p {
+  display: inline-block;
+}
+
+
+.profile-card .profile-list li .item-content .dot.profile-dot{
+  vertical-align: middle;
+}
+
+.profile-card .profile-list li ul {
+  margin-left: 30px;
+}
+.profile-card .profile-list li ul .dot {
+  background: none;
+  border: 2px solid #01ADAB;
+  box-sizing: border-box;
+}
+
+
+.common-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.common-list .text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.common-list .text-box span:nth-child(2) {
+  line-height: 21px;
+  font-size: 14px;
+}
+.member-type-content .common-list .common-text {
+  line-height: 24px;
+}
+.member-type-content .common-list li {
+  align-items: flex-start;
+}
+.member-structure-content .common-list {
+  padding-top: 25px;
+}
+.member-structure-content .common-list li {
+  align-items: flex-start;
+}
+.member-structure-content .common-list li .common-text {
+  position: relative;
+  top: -10px;
+}
+
+.member-structure-content .common-list li .common-text.quiz-step p {
+  display: inline;
+}
+
+.member-structure-content .link-btn {
+  display: inline-block;
+  border: 2px solid #7F5EBA;
+  border-radius: 4px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #7F5EBA;
+  text-decoration: none;
+  padding: 0 20px;
+}
+.add-note {
+  background: #fefcfa;
+  padding: 20px;
+}
+.add-note .common-list {
+  padding-top: 0;
+}
+.add-note .member-structure-content li {
+  margin-bottom: 0;
+}
+.member-columns {
+  overflow: hidden;
+}
+.member-columns pre {
+  width: 45%;
+  white-space: pre-wrap;
+  line-height: 20px;
+  text-align: justify;
+}
+.member-columns .col-left {
+  float: left;
+}
+.member-columns .col-right {
+  float: right;
+}
+
+.member-FAQ ul li {
+  margin-bottom: 20px;
+  list-style: disc !important;
+}
+.member-FAQ ul li .question {
+  margin-bottom: 5px;
+  line-height: 30px;
+  font-family: -apple-system, BlinkMacSystemFont,
+  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  font-weight: bold;
+}
+.member-FAQ ul li .answer {
+  line-height: 24px;
+}
+
+.member-FAQ ul li .answer li {
+  list-style: none !important;
+}
+
+.member-FAQ ul li .answer * {
+  display: inline;
+}
+
+.nested-pre {
+  font-family: -apple-system, BlinkMacSystemFont,
+  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #28292B;
+  margin-bottom: 35px;
+}
+.nested {
+  border-left: 2px solid #ff551a;
+  padding-left: 20px;
+}
+.nested ul {
+  border-left: 2px solid #575f74;
+  padding-left: 20px;
+  margin-left: 40px;
+}
+.nested li {
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.nested  p {
+  margin-bottom: 10px;
+  display: inline-block;
+  line-height: 1.5;
+}
+.nested  p .dot {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn.next-btn {
+  float: right;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+.section-header {
+  margin-top: 50px;
+  margin-bottom: 44px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.section-header .header-bottom {
+  height: 1px;
+  border-bottom: 1px solid #FF4E00;
+  width: 144px;
+  font-size: 0;
+  display: inline-block;
+  margin-top: 34px;
+}
+
+.section-header .common-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.vdu-page.home .rect-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 100px auto 90px;
+  max-width: 942px;
+}
+
+.vdu-page.home .rect-box .rect {
+  background-color: #EFEFF0;
+  width: 255px;
+  height: 255px;
+  color: #28292B;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.vdu-page.home .rect-box .rect .rect-icon {
+  display: block;
+  max-width: 100px;
+  margin: 0 auto;
+}
+.vdu-page.home .rect-box .rect .rect-text {
+  position: absolute;
+  top: 80%;
+}
+
+.vdu-page.home .section:first-child {
+  padding-bottom: 94px;
+}
+
+.vdu-page.university .section:first-child .container {
+  justify-content: flex-start;
+  background-image: url(../assets/img/university-logo.png?dl=0);
+  background-repeat: no-repeat;
+  background-size: 586px 462px;
+  background-position: 100% center;
+}
+
+@media screen and (max-width: 1280px) {
+  .vdu-page.university .section:first-child .container {
+    background-size: 400px 315px;
+  }
+
+  .mac-bg {
+    background-position-x: -600px !important;
+  }
+}
+@media screen and (max-width: 780px) {
+  .vdu-page.university .section:first-child .container {
+    background-size: 300px 236px;
+  }
+  .mac-bg {
+    background-position-x: -900px !important;
+  }
+}
+.vdu-page.university.detail .section:first-child .container {
+  background-image: url(../assets/img/member.png?dl=0);
+  background-size: 586px 423px;
+}
+.vdu-page.home .container:first-child .content-body {
+  max-width: 456px;
+}
+
+.vdu-page.home.detail .section:first-child {
+  padding-bottom: 0;
+}
+
+.mac-bg {
+  min-height: 595px;
+  width: 100%;
+  max-width: 1280px;
+  background-image: url(../assets/img/Macbook-mockup-vizient.png?dl=0);
+  background-repeat: no-repeat;
+  background-position-x: -300px;
+  background-position-y: center;
+  background-size: 997px 596px;
+}
+
+.intro-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 68px;
+}
+
+.intro-card {
+  color: #28292B;
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 84px;
+}
+
+.intro-card p {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.intro-card .common-text {
+  line-height: 28px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.intro-card .left-part {
+  margin-right: 46px;
+}
+
+.intro-card .left-part p{
+  font-size: 18px;
+  position: relative;
+  top: 3px;
+}
+
+.vdu-page.home .section.diagram .container {
+  flex-direction: column;
+}
+
+.vdu-page.home .section.diagram .type-box {
+  height: 102px;
+  width: 761px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.vdu-page.home .section.diagram .type-box img {
+  width: 95%;
+}
+
+.course-box {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  flex-flow: row wrap;
+}
+
+.course-box .course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 33.3%;
+  margin-bottom: 95px;
+}
+
+.course-box .course-card .course-poster {
+  width: 300px;
+  height: 168px;
+  margin-bottom: 24px;
+}
+
+.course-box .course-card .course-text-info {
+  text-align: center;
+  height: 95px;
+}
+
+.course-box .course-card .course-title {
+  width: 285px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000;
+  text-align: center;
+  font-family: Soleto;
+  margin-bottom: 10px;
+}
+.course-box .course-card .course-info {
+  margin-top: 20px;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-box .course-card .course-info img {
+  width: 14px;
+  margin-right: 5px;
+}
+.course-box .course-card .course-info .time img {
+  width: 16px;
+  margin-right: 2px;
+  position: relative;
+  top: 2px;
+}
+
+.chapter-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 33.3%;
+  margin-top: 105px;
+}
+
+.chapter-box .chapter-tip {
+  color: #000;
+  opacity: 0.5;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.chapter-box .chapter-title {
+  font-size: 22px;
+  line-height: 28px;
+  color: #000;
+  margin-bottom: 57px;
+  width: 205px;
+  text-align: center;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chapter-box .chapter-desc {
+  line-height: 30px;
+  font-size: 18px;
+  text-align: center;
+  color: #212121;
+  max-width: 305px;
+  margin-bottom: 25px;
+}
+
+.flex-start {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.flex-wrap {
+  flex-flow: row wrap !important;
+}
+
+.cover .vizient-footer{
+  margin-top: 205px;
+}
+
+.table-content-title {
+  margin: 40px 0 40px;
+  font-size: 32px;
+  color: #000;
+}
+
+.font-bold {
+  font-family: -apple-system, BlinkMacSystemFont,
+  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  font-weight: bold;
+}
+
+.member-table {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  margin-bottom: 55px;
+}
+
+.member-table .member-table-row {
+  padding: 0 28px;
+  border-bottom: 1px solid #ddd;
+}
+
+.member-table .member-table-row:last-child {
+  border-bottom: none;
+}
+
+.member-table .member-table-row.header-row {
+  height: 128px;
+  line-height: 132px;
+  background: #EFEFF0;
+  padding: 21px 28px;
+  box-sizing: content-box;
+}
+
+.member-table .member-table-row.header-row .common-text {
+  line-height: 30px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.member-table .member-table-row.header-row .header-title {
+  font-size: 24px;
+  color: #212121;
+}
+
+.member-table .member-table-row.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  position: relative;
+  padding-left: 68px;
+}
+
+.member-table .member-table-row.info img {
+  margin-right: 16px;
+  position: absolute;
+  left: 28px;
+  top: 35%;
+}
+
+.section.table {
+  padding: 0 60px;
+}
+.member-table .member-table-row.info .common-text {
+  font-size: 16px;
+}
+.member-table .member-table-row.info .confluence-embedded-file-wrapper {
+  position: static;
+}
+.member-table .member-table-row .btn {
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
+  min-width: 100px;
+  padding: 0;
+}
+
+.table-wrap {
+  font-family: Soleto;
+}
+.table-wrap table {
+  width: 100%;
+  border: 1px solid #EFEFEF;
+  font-family: "Soleto";
+}
+.table-wrap table thead {
+  background: #F8F8F8;
+  height: 69px;
+  line-height: 69px;
+  color: #A49FA8;
+  font-family: "Soleto";
+}
+.table-wrap table thead th {
+  text-align: left;
+  padding-left: 20px;
+}
+.table-wrap table tbody tr {
+  border-top: 1px solid #EFEFEF;
+}
+.table-wrap table tbody tr td {
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.confluenceTh,
+.confluenceTd {
+  border: none !important;
+}
+
+.tablesorter-header-inner {
+  color: #A49FA8 !important;
+}
+
+.confluenceTd {
+  color: #212121;
+  opacity: 0.8;
+  font-family: Soleto Light;
+}
+
+.relative-table {
+  width: 100% !important;
+}
+
+.ap-container {
+  width: 800px;
+  margin: 0 auto;
+  height: 400px;
+  overflow: auto;
+}
+
+.gray-border {
+  font-size: 0 !important;
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #e9e9e9;
+}
