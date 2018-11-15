@@ -1,6 +1,6 @@
 {
   "name": "viz-toolkit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "ngPackage": {
     "$schema": "../node_modules/ng-packagr/ng-package.schema.json",
     "lib": {
