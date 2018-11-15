@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Soleto';
+  font-style: normal;
+  src: url(../assets/fonts/SoletoRegular.ttf);
+}
+
+@font-face {
+  font-family: 'Soleto Light';
+  font-style: normal;
+  src: url(../assets/fonts/SoletoLight.ttf);
+}
+
+@font-face {
+  font-family: 'Soleto Bold';
+  font-style: normal;
+  src: url(../assets/fonts/SoletoBold.ttf);
+}
