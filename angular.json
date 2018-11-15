@@ -129,7 +129,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/vizient-toolkit/demo",
-            "baseHref": "/demo/",
+            "baseHref": "/demo/index.html",
             "deployUrl": "/demo/",
             "index": "projects/demo/src/index.html",
             "main": "projects/demo/src/main.ts",

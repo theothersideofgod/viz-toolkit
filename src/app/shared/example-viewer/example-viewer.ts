@@ -66,7 +66,7 @@ export class ExampleViewer implements OnInit {
     if (example && ALL_EXAMPLE_ITEMS[example]) {
       console.log(isDevMode());
       this._example = example;
-      this.exampleURL = isDevMode() ? `http://localhost:4400/demo/#/example/${example}` : `/demo/#/example/${example}`;
+      this.exampleURL = isDevMode() ? `http://localhost:4400/demo/#/example/${example}` : `/demo/index.html#/example/${example}`;
       this.exampleData = ALL_EXAMPLE_ITEMS[example];
       this.selectedPortal = new ComponentPortal(this.exampleData.component);
     } else {
