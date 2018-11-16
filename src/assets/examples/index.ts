@@ -36,6 +36,9 @@ import {
 } from 'libs';
 
 import {
+  ExpansionPanelAngularComponent,
+  ExpansionPanelAngularData
+} from './expansion-panel-angular/expansion-panel-angular.component';import {
   CustomerSelectComponent,
   CustomerSelectData
 } from './customer-select/customer-select.component'; import {
@@ -381,6 +384,10 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 export const ALL_EXAMPLE_ITEMS = {
+  'expansion-panel-angular' : {
+    component: ExpansionPanelAngularComponent,
+    data: ExpansionPanelAngularData
+  },
   'customer-select' : {
     component: CustomerSelectComponent,
     data: CustomerSelectData
@@ -733,6 +740,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ExpansionPanelAngularComponent,
     CustomerSelectComponent,
     FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
@@ -863,6 +871,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ExpansionPanelAngularComponent,
     CustomerSelectComponent,
     FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
