@@ -832,6 +832,16 @@ mat-datepicker-content.mat-datepicker-content {
   height: auto !important;
   width: auto;
 }
+div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
+  .mat-calendar-table{
+    margin-top: 37px;
+  }
+}
+.mat-form-field-invalid {
+  .mat-button-wrapper {
+    color: #ff3333;
+  }
+}
 
 // toolbar
 .mat-toolbar.mat-toolbar-single-row {
