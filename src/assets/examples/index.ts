@@ -38,19 +38,24 @@ import {
 import {
   ExpansionPanelAngularComponent,
   ExpansionPanelAngularData
-} from './expansion-panel-angular/expansion-panel-angular.component';import {
+} from './expansion-panel-angular/expansion-panel-angular.component';
+import {
   CustomerSelectComponent,
   CustomerSelectData
-} from './customer-select/customer-select.component'; import {
+} from './customer-select/customer-select.component';
+import {
   FormFieldAutocompleteComponent,
   FormFieldAutocompleteData
-} from './form-field-autocomplete/form-field-autocomplete.component'; import {
+} from './form-field-autocomplete/form-field-autocomplete.component';
+import {
   MonthPickerRangeComponent,
   MonthPickerRangeData
-} from './month-picker-range/month-picker-range.component'; import {
+} from './month-picker-range/month-picker-range.component';
+import {
   MonthPickerSingleComponent,
   MonthPickerSingleData
-} from './month-picker-single/month-picker-single.component'; import {
+} from './month-picker-single/month-picker-single.component';
+import {
   SliderRangeEventComponent,
   SliderRangeEventData
 } from './slider-range-event/slider-range-event.component';
@@ -377,30 +382,26 @@ import {
   LoginBasicComponent,
   LoginBasicData
 } from './login-basic/login-basic.component';
-import {
-  MatRangeDatepickerModule,
-  MatRangeNativeDateModule
-} from 'mat-range-datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 export const ALL_EXAMPLE_ITEMS = {
-  'expansion-panel-angular' : {
+  'expansion-panel-angular': {
     component: ExpansionPanelAngularComponent,
     data: ExpansionPanelAngularData
   },
-  'customer-select' : {
+  'customer-select': {
     component: CustomerSelectComponent,
     data: CustomerSelectData
   },
-  'form-field-autocomplete' : {
+  'form-field-autocomplete': {
     component: FormFieldAutocompleteComponent,
     data: FormFieldAutocompleteData
   },
-  'month-picker-range' : {
+  'month-picker-range': {
     component: MonthPickerRangeComponent,
     data: MonthPickerRangeData
   },
-  'month-picker-single' : {
+  'month-picker-single': {
     component: MonthPickerSingleComponent,
     data: MonthPickerSingleData
   },
@@ -837,8 +838,6 @@ export const ALL_EXAMPLE_ITEMS = {
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    MatRangeDatepickerModule,
-    MatRangeNativeDateModule,
     VizHeaderModule,
     VizDateRangePickerModule,
     VizSelectModule,

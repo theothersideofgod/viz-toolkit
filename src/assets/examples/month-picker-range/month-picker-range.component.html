@@ -1,8 +1,22 @@
-<div class="example-wrapper">
-  <viz-date-range-picker
-    (onApply)="applyDateRange($event)"
-    typeMode="month"
-    rangeMode
-    placeholder="Choose a month and year range"
-  ></viz-date-range-picker>
-</div>
+<form class="vizient-input example-wrapper">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Choose a month and year range"
+      [matRangeDatepicker]="resultPicker"
+      name="date"
+      typeMode="month"
+    />
+    <mat-range-datepicker
+      #resultPicker
+      [rangeMode]='true'
+      (closed)="this.onClose($event)"
+      typeMode="month"
+    >
+    </mat-range-datepicker>
+    <mat-range-datepicker-toggle
+      matSuffix
+      [for]="resultPicker"
+    ></mat-range-datepicker-toggle>
+  </mat-form-field>
+</form>

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { matRangeDatepickerRangeValue, DateAdapter } from 'mat-range-datepicker';
+import {
+  matRangeDatepickerRangeValue,
+  DateAdapter
+} from 'mat-range-datepicker';
 
 @Component({
   selector: 'app-date-picker-basic',
@@ -9,15 +12,9 @@ import { matRangeDatepickerRangeValue, DateAdapter } from 'mat-range-datepicker'
 export class DatePickerBasicComponent {
   dateRange: matRangeDatepickerRangeValue<Date>;
 
-  constructor(
-    private _dateAdapter: DateAdapter<Date>,
-  ) {
-  }
+  constructor() {}
 
-  applyDateRange(event) {
-
-  }
-
+  applyDateRange(event) {}
 }
 
 export const DatePickerBasicData = {
