@@ -21,6 +21,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'datepickersingleerror', name: 'DatePickerSingleError', examples: ['date-picker-single-error']},
         {id: 'expansionpanelangular', name: 'ExpansionPanelAngular', examples: ['expansion-panel-angular']},
         {id: 'customerselect', name: 'CustomerSelect', examples: ['customer-select']},
         {id: 'formfieldautocomplete', name: 'FormFieldAutocomplete', examples: ['form-field-autocomplete']},

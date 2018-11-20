@@ -1,0 +1,25 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {
+  FormControl,
+  Validators,
+  ValidatorFn,
+  AbstractControl
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> { DateAdapter } <span class="hljs-keyword">from</span> <span class="hljs-string">'libs/components/date-range-picker/datetime'</span>;
+<span class="hljs-keyword">import</span> { NativeDateAdapter } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'date-picker-single-error'</span>,
+  templateUrl: <span class="hljs-string">'date-picker-single-error.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'date-picker-single-error.component.scss'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatePickerSingleErrorComponent <span class="hljs-keyword">implements</span> OnInit {
+  ngOnInit() {}
+  dateFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [
+    Validators.required,
+  ]);
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DatePickerSingleErrorData = {
+  name: <span class="hljs-string">'DatePickerSingleError'</span>
+};

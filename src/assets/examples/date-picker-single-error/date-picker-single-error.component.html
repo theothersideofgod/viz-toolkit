@@ -1,0 +1,25 @@
+<form class="vizient-input example-wrapper">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Choose a date"
+      [matRangeDatepicker]="resultPicker"
+      name="date"
+      typeMode="date"
+      [formControl]="dateFormControl"
+    />
+    <mat-range-datepicker
+      #resultPicker
+      (closed)="onClose()"
+      typeMode="date"
+    >
+    </mat-range-datepicker>
+    <mat-range-datepicker-toggle
+      matSuffix
+      [for]="resultPicker"
+    ></mat-range-datepicker-toggle>
+    <mat-error *ngIf="dateFormControl.hasError('required')">
+      Date is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
