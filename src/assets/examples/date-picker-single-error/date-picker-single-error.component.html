@@ -7,7 +7,7 @@
       name="date"
       typeMode="date"
       [formControl]="dateFormControl"
-      (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)"
+      (dateInput)="inputEvent('input', $event)" (dateChange)="changeEvent('change', $event)"
     />
     <mat-range-datepicker
       #resultPicker
@@ -22,9 +22,13 @@
     <mat-error *ngIf="dateFormControl.hasError('required')">
       Date is <strong>required</strong>
     </mat-error>
+    <mat-error *ngIf="dateFormControl.hasError('notOverEighteen')">
+      Must be over 18 years old
+    </mat-error>
   </mat-form-field>
 </form>
 
 <div class="example-events">
-  <div *ngFor="let e of events">{{e}}</div>
+  <div>Text Input Event: {{cEvent}}</div>
+  <div>Calendar Input Event: {{iEvent}}</div>
 </div>

@@ -6,7 +6,19 @@
   AbstractControl
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> { DateAdapter } <span class="hljs-keyword">from</span> <span class="hljs-string">'libs/components/date-range-picker/datetime'</span>;
-<span class="hljs-keyword">import</span> { NativeDateAdapter } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> { NativeDateAdapter, MatDatepickerInputEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">notOverEighteen</span>(<span class="hljs-params">control: AbstractControl</span>) </span>{
+  <span class="hljs-keyword">if</span> (
+    control.value <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Date</span> &amp;&amp;
+    <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getFullYear() - control.value.getFullYear() &lt; <span class="hljs-number">18</span>
+  ) {
+    <span class="hljs-keyword">return</span> {
+      notOverEighteen: <span class="hljs-literal">true</span>
+    };
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+}
 
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'date-picker-single-error'</span>,
@@ -14,10 +26,17 @@
   styleUrls: [<span class="hljs-string">'date-picker-single-error.component.scss'</span>]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatePickerSingleErrorComponent <span class="hljs-keyword">implements</span> OnInit {
+  dateFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required, notOverEighteen]);
+  cEvent;
+  iEvent;
   ngOnInit() {}
-  dateFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [
-    Validators.required,
-  ]);
+  onClose() {}
+  changeEvent(<span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span>, event: MatDatepickerInputEvent&lt;<span class="hljs-built_in">Date</span>&gt;) {
+    <span class="hljs-keyword">this</span>.cEvent = <span class="hljs-string">`<span class="hljs-subst">${event.value}</span>`</span>
+  }
+  inputEvent(<span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span>, event: MatDatepickerInputEvent&lt;<span class="hljs-built_in">Date</span>&gt;) {
+    <span class="hljs-keyword">this</span>.iEvent = <span class="hljs-string">`<span class="hljs-subst">${event.value}</span>`</span>
+  }
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DatePickerSingleErrorData = {
