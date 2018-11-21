@@ -36,6 +36,9 @@ import {
 } from 'libs';
 
 import {
+  FormFieldValidationComponent,
+  FormFieldValidationData
+} from './form-field-validation/form-field-validation.component';import {
   DatePickerSingleErrorComponent,
   DatePickerSingleErrorData
 } from './date-picker-single-error/date-picker-single-error.component';
@@ -388,7 +391,12 @@ import {
 } from './login-basic/login-basic.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MatInputModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'form-field-validation' : {
+    component: FormFieldValidationComponent,
+    data: FormFieldValidationData
+  },
   'date-picker-single-error' : {
     component: DatePickerSingleErrorComponent,
     data: DatePickerSingleErrorData
@@ -749,6 +757,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
     ExpansionPanelAngularComponent,
     CustomerSelectComponent,
@@ -875,10 +884,14 @@ export const ALL_EXAMPLE_ITEMS = {
     VizBreadcrumbModule,
     VizSearchModule,
     VizChartModule,
-    CustomerSelectModule
+    CustomerSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   entryComponents: [
+    FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
     ExpansionPanelAngularComponent,
     CustomerSelectComponent,
