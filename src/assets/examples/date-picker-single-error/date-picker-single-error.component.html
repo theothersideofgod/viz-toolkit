@@ -7,6 +7,7 @@
       name="date"
       typeMode="date"
       [formControl]="dateFormControl"
+      (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)"
     />
     <mat-range-datepicker
       #resultPicker
@@ -23,3 +24,7 @@
     </mat-error>
   </mat-form-field>
 </form>
+
+<div class="example-events">
+  <div *ngFor="let e of events">{{e}}</div>
+</div>

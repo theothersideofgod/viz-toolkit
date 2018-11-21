@@ -11,6 +11,7 @@ export class MonthPickerSingleComponent implements OnInit {
 
   }
   ngOnInit() {}
+  onClose() {}
 }
 
 export const MonthPickerSingleData = {

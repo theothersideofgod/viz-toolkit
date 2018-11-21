@@ -15,6 +15,7 @@ export class DatePickerBasicComponent {
   constructor() {}
 
   applyDateRange(event) {}
+  onClose() {}
 }
 
 export const DatePickerBasicData = {

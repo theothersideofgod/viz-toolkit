@@ -19,7 +19,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 @Pipe({ name: 'safe' })
 export class SafePipe implements PipeTransform {
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer) {}
   transform(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
@@ -52,8 +52,12 @@ export class ExampleViewer implements OnInit {
   // lucas
   exampleURL: string;
 
-  datePickerRelatedExample = ['date-picker-basic','date-picker-single','month-picker-range','month-picker-single']
-
+  datePickerRelatedExample = [
+    'date-picker-basic',
+    'date-picker-single',
+    'month-picker-range',
+    'month-picker-single'
+  ];
 
   constructor(private snackbar: MatSnackBar, private copier: CopierService) {}
 
@@ -66,7 +70,9 @@ export class ExampleViewer implements OnInit {
     if (example && ALL_EXAMPLE_ITEMS[example]) {
       console.log(isDevMode());
       this._example = example;
-      this.exampleURL = isDevMode() ? `http://localhost:4400/demo/#/example/${example}` : `/demo/index.html#/example/${example}`;
+      this.exampleURL = isDevMode()
+        ? `http://localhost:4400/demo/#/example/${example}`
+        : `/demo/index.html#/example/${example}`;
       this.exampleData = ALL_EXAMPLE_ITEMS[example];
       this.selectedPortal = new ComponentPortal(this.exampleData.component);
     } else {
@@ -99,22 +105,27 @@ export class ExampleViewer implements OnInit {
   iframeClass() {
     const viewport = ['desktop_mac', 'tablet_mac', 'phone_iphone'];
     const viewportObj = {};
-    viewport.forEach((vp) => {
+    viewport.forEach(vp => {
       viewportObj[vp] = `viewport_${vp}`;
     });
 
-    //datepicker too big, viewport need to be more higher
-    
-    if(['date-picker-basic','date-picker-single','month-picker-range','month-picker-single'].indexOf(this._example) !== -1) {
+    // datepicker too big, viewport need to be more higher
+    const relatedDatepickerExamples = [
+      'date-picker-basic',
+      'date-picker-single',
+      'month-picker-range',
+      'month-picker-single',
+      'date-picker-single-error'
+    ];
+
+    if (relatedDatepickerExamples.indexOf(this._example) !== -1) {
       return viewportObj[this.platform] + ' datepicker-viewport';
     }
 
-    if(['dialog-basic'].indexOf(this._example) !== -1) {
+    if (['dialog-basic'].indexOf(this._example) !== -1) {
       return viewportObj[this.platform] + ' dialog-viewport';
     }
 
     return viewportObj[this.platform];
-
   }
-
 }

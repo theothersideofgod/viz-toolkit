@@ -10,6 +10,7 @@ export class DatePickerSingleComponent implements OnInit {
   ngOnInit() {}
   applyDateRange(date) {
   }
+  onClose() {}
 }
 
 export const DatePickerSingleData = {

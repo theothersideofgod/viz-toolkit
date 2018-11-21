@@ -6,7 +6,9 @@ import {
   AbstractControl
 } from '@angular/forms';
 import { DateAdapter } from 'libs/components/date-range-picker/datetime';
-import { NativeDateAdapter } from '@angular/material';
+import { NativeDateAdapter, MatDatepickerInputEvent } from '@angular/material';
+
+
 
 @Component({
   selector: 'date-picker-single-error',
@@ -15,8 +17,12 @@ import { NativeDateAdapter } from '@angular/material';
 })
 export class DatePickerSingleErrorComponent implements OnInit {
   dateFormControl = new FormControl('', [Validators.required]);
+  events: string[] = [];
   ngOnInit() {}
   onClose() {}
+  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.events.push(`${type}: ${event.value}`);
+  }
 }
 
 export const DatePickerSingleErrorData = {

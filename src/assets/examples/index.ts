@@ -36,6 +36,10 @@ import {
 } from 'libs';
 
 import {
+  DatePickerSingleErrorComponent,
+  DatePickerSingleErrorData
+} from './date-picker-single-error/date-picker-single-error.component';
+import {
   ExpansionPanelAngularComponent,
   ExpansionPanelAngularData
 } from './expansion-panel-angular/expansion-panel-angular.component';
@@ -385,6 +389,10 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 export const ALL_EXAMPLE_ITEMS = {
+  'date-picker-single-error' : {
+    component: DatePickerSingleErrorComponent,
+    data: DatePickerSingleErrorData
+  },
   'expansion-panel-angular': {
     component: ExpansionPanelAngularComponent,
     data: ExpansionPanelAngularData
@@ -741,6 +749,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    DatePickerSingleErrorComponent,
     ExpansionPanelAngularComponent,
     CustomerSelectComponent,
     FormFieldAutocompleteComponent,
@@ -870,6 +879,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    DatePickerSingleErrorComponent,
     ExpansionPanelAngularComponent,
     CustomerSelectComponent,
     FormFieldAutocompleteComponent,
