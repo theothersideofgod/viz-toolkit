@@ -11,7 +11,7 @@ export class VizHeaderComponent {
 
   @Input() title: String;
   @Input() userName: string;
-  @Input() brandLink: String = "";
+  @Input() brandLink: String;
   @Input() svgIcon: String;
   @Input() badge: Number = 0;
   @Input() type: VizHeaderType;
