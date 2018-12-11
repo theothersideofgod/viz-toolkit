@@ -1,49 +1,26 @@
-<!-- <div class="viz-step">
-  <div class="viz-step-header">
-    <div class="viz-step-icon viz-step-icon-finish">
-      1
-    </div>
-    <div class="viz-step-label">
-      Fill out your name
-    </div>
-  </div>
-  <div class="viz-step-horizantal-line"></div>
-  <div class="viz-step-header">
-    <div class="viz-step-icon viz-step-icon-progress">
-      2
-    </div>
-    <div class="viz-step-label">
-      Fill out your address
-    </div>
-  </div>
-  <div class="viz-step-horizantal-line"></div>
-  <div class="viz-step-header">
-    <div class="viz-step-icon viz-step-icon-waiting">
-      3
-    </div>
-    <div class="viz-step-label">
-      Done
-    </div>
-  </div>
-  <div class="viz-step-horizantal-line"></div>
-</div> -->
+<div class="viz-step" *ngIf="!vertical">
+  <!-- for horizantal -->
 
-
-
-<div class="viz-step">
-  <ng-container *ngFor="let step of steps; let i=index">
-    <div class="viz-step-header">
-      <div class="viz-step-icon" [ngClass]="{ 
-            'viz-step-icon-finish' : step.status == 'finish', 
-            'viz-step-icon-progress' : step.status == 'progress',
-            'viz-step-icon-waiting' : step.status == 'waiting' }">
-        {{step.index}}
+  <div class="viz-step-cell" *ngFor="let step of steps; let i = index">
+    <div class="viz-step-header" (click)="stepClick.emit(i)">
+      <div class="viz-step-icon" [ngClass]="getStepperStyle(step.status)">
+        {{ step.index }}
       </div>
-      <div class="viz-step-label">
-        {{step.label}}
-      </div>
+      <div class="viz-step-label">{{ step.label }}</div>
     </div>
-    <div class="viz-step-horizantal-line"></div>
-  </ng-container>
+    <div class="viz-step-horizantal-line" *ngIf="i !== steps.length - 1"></div>
+  </div>
+</div>
 
+<!-- for vertical -->
+<div class="viz-vertical-step" *ngIf="vertical">
+  <div class="viz-vertical-step-cell" *ngFor="let step of steps; let i = index">
+    <div class="viz-step-header" (click)="stepClick.emit(i)">
+      <div class="viz-step-icon" [ngClass]="getStepperStyle(step.status)">
+        {{ step.index }}
+      </div>
+      <div class="viz-step-label">{{ step.label }}</div>
+    </div>
+    <div class="viz-vertical-step-line" *ngIf="i !== steps.length - 1"></div>
+  </div>
 </div>

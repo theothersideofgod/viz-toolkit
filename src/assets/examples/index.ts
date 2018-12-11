@@ -32,13 +32,22 @@ import {
   VizBreadcrumbModule,
   VizSearchModule,
   VizChartModule,
-  CustomerSelectModule
+  CustomerSelectModule,
+  CustomStepperModule
 } from 'libs';
 
 import {
+  StepperCustomComponent,
+  StepperCustomData
+} from './stepper-custom/stepper-custom.component';import {
+  StepperVerticalComponent,
+  StepperVerticalData
+} from './stepper-vertical/stepper-vertical.component';
+import {
   FormFieldValidationComponent,
   FormFieldValidationData
-} from './form-field-validation/form-field-validation.component';import {
+} from './form-field-validation/form-field-validation.component';
+import {
   DatePickerSingleErrorComponent,
   DatePickerSingleErrorData
 } from './date-picker-single-error/date-picker-single-error.component';
@@ -391,13 +400,25 @@ import {
 } from './login-basic/login-basic.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { MatInputModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
+import {
+  MatInputModule,
+  MatFormFieldModule,
+  MatSelectModule
+} from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
-  'form-field-validation' : {
+  'stepper-custom' : {
+    component: StepperCustomComponent,
+    data: StepperCustomData
+  },
+  'stepper-vertical': {
+    component: StepperVerticalComponent,
+    data: StepperVerticalData
+  },
+  'form-field-validation': {
     component: FormFieldValidationComponent,
     data: FormFieldValidationData
   },
-  'date-picker-single-error' : {
+  'date-picker-single-error': {
     component: DatePickerSingleErrorComponent,
     data: DatePickerSingleErrorData
   },
@@ -757,6 +778,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    StepperCustomComponent,
+    StepperVerticalComponent,
     FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
     ExpansionPanelAngularComponent,
@@ -885,12 +908,15 @@ export const ALL_EXAMPLE_ITEMS = {
     VizSearchModule,
     VizChartModule,
     CustomerSelectModule,
+    CustomStepperModule,
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule
   ],
   providers: [],
   entryComponents: [
+    StepperCustomComponent,
+    StepperVerticalComponent,
     FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
     ExpansionPanelAngularComponent,

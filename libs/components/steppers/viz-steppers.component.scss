@@ -5,7 +5,13 @@
     display: flex;
     align-items: center;
 
+    &-cell {
+      display: flex;
+      align-items: center;
+    }
+
     &-header {
+      cursor: pointer;
       display: flex;
       align-items: center;
       /* ↳ Content: */
@@ -33,6 +39,7 @@
         color: $viz-blue;
       }
       &-progress {
+        border: 2px solid $viz-blue;
         background-color: $viz-blue;
       }
       &-waiting {
@@ -51,9 +58,25 @@
       border-color: $viz-extra-light-gray;
       margin-left: 8px;
 
-      &:last-child {
-        display: none;
-      }
+      // &:last-child {
+      //   display: none;
+      // }
+    }
+  }
+  .viz-vertical-step {
+    
+    min-width: 50px;
+
+
+    &-cell {
+    }
+
+    &-line {
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-color: $viz-extra-light-gray;
+      height: 56px;
+      margin: 8px 0px 8px 22px;
     }
   }
 }

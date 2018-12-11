@@ -1,0 +1,42 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+	selector: <span class="hljs-string">'stepper-vertical'</span>,
+  templateUrl: <span class="hljs-string">'stepper-vertical.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'stepper-vertical.component.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperVerticalComponent <span class="hljs-keyword">implements</span> OnInit {
+  steps = [
+    {
+      index: <span class="hljs-number">1</span>,
+      label: <span class="hljs-string">'Fill out your name'</span>,
+      status: <span class="hljs-string">'finish'</span>
+    },
+    {
+      index: <span class="hljs-number">2</span>,
+      label: <span class="hljs-string">'Fill out your address'</span>,
+      status: <span class="hljs-string">'progress'</span>
+    },
+    {
+      index: <span class="hljs-number">3</span>,
+      label: <span class="hljs-string">'Done'</span>,
+      status: <span class="hljs-string">'waiting'</span>
+    }
+  ];
+  ngOnInit() {}
+  handleClick(index) {
+    <span class="hljs-keyword">this</span>.steps.forEach(<span class="hljs-function">(<span class="hljs-params">step, i</span>) =&gt;</span> {
+      <span class="hljs-keyword">if</span> (i &lt; index) {
+        step.status = <span class="hljs-string">'finish'</span>;
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(i &gt; index) {
+        step.status = <span class="hljs-string">'waiting'</span>;
+      } <span class="hljs-keyword">else</span> {
+        step.status = <span class="hljs-string">'progress'</span>
+      }
+    });
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> StepperVerticalData = {
+	name: <span class="hljs-string">'StepperVertical'</span>
+}

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'stepper-basic',
-  templateUrl: 'stepper-basic.component.html',
-  styleUrls: ['stepper-basic.component.css']
+	selector: 'stepper-vertical',
+  templateUrl: 'stepper-vertical.component.html',
+  styleUrls: ['stepper-vertical.component.css'],
 })
-export class StepperBasicComponent implements OnInit {
+export class StepperVerticalComponent implements OnInit {
   steps = [
     {
       index: 1,
@@ -37,6 +37,6 @@ export class StepperBasicComponent implements OnInit {
   }
 }
 
-export const StepperBasicData = {
-  name: 'StepperBasic'
-};
+export const StepperVerticalData = {
+	name: 'StepperVertical'
+}
