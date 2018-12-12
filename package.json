@@ -33,7 +33,7 @@
     "mat-range-datepicker": "^1.0.5",
     "moment": "^2.22.1",
     "ng-packagr": "^4.2.0",
-    "rxjs": "^6.0.0",
+    "rxjs": "^6.3.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
