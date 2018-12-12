@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y google-chrome-stable
 
 WORKDIR /app
 
-COPY package.json package-lock.json /app/
+COPY package.json /app/
 COPY libs/package.json /app/libs/
 
 RUN npm install
