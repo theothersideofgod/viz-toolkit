@@ -204,3 +204,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Add header login dropdown function.
 - Add month picker.
 - Add Expansion Panel Angular Material Examples.
+- Add custom stepper component.
