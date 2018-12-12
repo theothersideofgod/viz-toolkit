@@ -1,0 +1,48 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { FormGroup, Validators, FormControl } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'form-field-validation'</span>,
+  templateUrl: <span class="hljs-string">'form-field-validation.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'form-field-validation.component.scss'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldValidationComponent <span class="hljs-keyword">implements</span> OnInit {
+  registerForm: FormGroup;
+  submitted = <span class="hljs-literal">false</span>;
+  message: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {}
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.registerForm = <span class="hljs-keyword">new</span> FormGroup({
+      firstName: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required]),
+      lastName: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required]),
+      email: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required, Validators.email]),
+      password: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [
+        Validators.required,
+        Validators.minLength(<span class="hljs-number">6</span>)
+      ])
+    });
+  }
+
+  <span class="hljs-comment">// convenience getter for easy access to form fields</span>
+  <span class="hljs-keyword">get</span> f() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.registerForm.controls;
+  }
+
+  onSubmit() {
+    <span class="hljs-keyword">this</span>.submitted = <span class="hljs-literal">true</span>;
+
+    <span class="hljs-comment">// stop here if form is invalid</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.registerForm.invalid) {
+      <span class="hljs-keyword">this</span>.message = <span class="hljs-string">'information need to be confirm'</span>
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">this</span>.message = <span class="hljs-string">'successed'</span>
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FormFieldValidationData = {
+  name: <span class="hljs-string">'FormFieldValidation'</span>
+};

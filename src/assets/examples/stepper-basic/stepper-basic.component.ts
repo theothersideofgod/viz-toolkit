@@ -24,6 +24,17 @@ export class StepperBasicComponent implements OnInit {
     }
   ];
   ngOnInit() {}
+  handleClick(index) {
+    this.steps.forEach((step, i) => {
+      if (i < index) {
+        step.status = 'finish';
+      } else if(i > index) {
+        step.status = 'waiting';
+      } else {
+        step.status = 'progress'
+      }
+    });
+  }
 }
 
 export const StepperBasicData = {

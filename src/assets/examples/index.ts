@@ -32,22 +32,46 @@ import {
   VizBreadcrumbModule,
   VizSearchModule,
   VizChartModule,
-  CustomerSelectModule
+  CustomerSelectModule,
+  CustomStepperModule
 } from 'libs';
 
 import {
+  StepperCustomComponent,
+  StepperCustomData
+} from './stepper-custom/stepper-custom.component';import {
+  StepperVerticalComponent,
+  StepperVerticalData
+} from './stepper-vertical/stepper-vertical.component';
+import {
+  FormFieldValidationComponent,
+  FormFieldValidationData
+} from './form-field-validation/form-field-validation.component';
+import {
+  DatePickerSingleErrorComponent,
+  DatePickerSingleErrorData
+} from './date-picker-single-error/date-picker-single-error.component';
+import {
+  ExpansionPanelAngularComponent,
+  ExpansionPanelAngularData
+} from './expansion-panel-angular/expansion-panel-angular.component';
+import {
   CustomerSelectComponent,
   CustomerSelectData
-} from './customer-select/customer-select.component'; import {
+} from './customer-select/customer-select.component';
+import {
   FormFieldAutocompleteComponent,
   FormFieldAutocompleteData
-} from './form-field-autocomplete/form-field-autocomplete.component'; import {
+} from './form-field-autocomplete/form-field-autocomplete.component';
+import {
   MonthPickerRangeComponent,
   MonthPickerRangeData
-} from './month-picker-range/month-picker-range.component'; import {
+} from './month-picker-range/month-picker-range.component';
+import {
   MonthPickerSingleComponent,
   MonthPickerSingleData
-} from './month-picker-single/month-picker-single.component'; import {
+} from './month-picker-single/month-picker-single.component';
+import {
   SliderRangeEventComponent,
   SliderRangeEventData
 } from './slider-range-event/slider-range-event.component';
@@ -374,26 +398,47 @@ import {
   LoginBasicComponent,
   LoginBasicData
 } from './login-basic/login-basic.component';
-import {
-  MatRangeDatepickerModule,
-  MatRangeNativeDateModule
-} from 'mat-range-datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import {
+  MatInputModule,
+  MatFormFieldModule,
+  MatSelectModule
+} from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
-  'customer-select' : {
+  'stepper-custom' : {
+    component: StepperCustomComponent,
+    data: StepperCustomData
+  },
+  'stepper-vertical': {
+    component: StepperVerticalComponent,
+    data: StepperVerticalData
+  },
+  'form-field-validation': {
+    component: FormFieldValidationComponent,
+    data: FormFieldValidationData
+  },
+  'date-picker-single-error': {
+    component: DatePickerSingleErrorComponent,
+    data: DatePickerSingleErrorData
+  },
+  'expansion-panel-angular': {
+    component: ExpansionPanelAngularComponent,
+    data: ExpansionPanelAngularData
+  },
+  'customer-select': {
     component: CustomerSelectComponent,
     data: CustomerSelectData
   },
-  'form-field-autocomplete' : {
+  'form-field-autocomplete': {
     component: FormFieldAutocompleteComponent,
     data: FormFieldAutocompleteData
   },
-  'month-picker-range' : {
+  'month-picker-range': {
     component: MonthPickerRangeComponent,
     data: MonthPickerRangeData
   },
-  'month-picker-single' : {
+  'month-picker-single': {
     component: MonthPickerSingleComponent,
     data: MonthPickerSingleData
   },
@@ -733,6 +778,11 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    StepperCustomComponent,
+    StepperVerticalComponent,
+    FormFieldValidationComponent,
+    DatePickerSingleErrorComponent,
+    ExpansionPanelAngularComponent,
     CustomerSelectComponent,
     FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
@@ -829,8 +879,6 @@ export const ALL_EXAMPLE_ITEMS = {
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    MatRangeDatepickerModule,
-    MatRangeNativeDateModule,
     VizHeaderModule,
     VizDateRangePickerModule,
     VizSelectModule,
@@ -859,10 +907,19 @@ export const ALL_EXAMPLE_ITEMS = {
     VizBreadcrumbModule,
     VizSearchModule,
     VizChartModule,
-    CustomerSelectModule
+    CustomerSelectModule,
+    CustomStepperModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   entryComponents: [
+    StepperCustomComponent,
+    StepperVerticalComponent,
+    FormFieldValidationComponent,
+    DatePickerSingleErrorComponent,
+    ExpansionPanelAngularComponent,
     CustomerSelectComponent,
     FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,

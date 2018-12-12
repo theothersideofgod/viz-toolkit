@@ -38,4 +38,5 @@ export * from './components/snackbar/viz-snackbar.module';
 export * from './components/bottom-sheet/viz-bottom-sheet.module';
 export * from './components/http-status/viz-http-status.module';
 export * from './components/customer-select/customer-select.module';
+export * from './components/custom-stepper/custom-stepper.module'
 export * from './util';

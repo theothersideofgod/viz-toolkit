@@ -1,3 +1,5 @@
 .example-wrapper {
-  display: inline-flex;
+  /* display: inline-flex; */
+  width: 300px;
+  margin: 0 auto;
 }

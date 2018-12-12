@@ -14,6 +14,7 @@ export class MonthPickerRangeComponent implements OnInit {
 
   applyDateRange(event) {}
   ngOnInit() {}
+  onClose() {}
 }
 
 export const MonthPickerRangeData = {

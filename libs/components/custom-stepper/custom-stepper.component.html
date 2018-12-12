@@ -1,0 +1,20 @@
+<div class="custom-stepper">
+  <div class="custom-stepper-cell" *ngFor="let step of steps; let i = index">
+    <div class="custom-stepper-header">
+      <div class="custom-stepper-icon" [ngClass]="getStepperStyle(step)">
+        {{ step.index }}
+      </div>
+      <div class="custom-stepper-label" [ngClass]="getStepLabelStyle(step)">{{ step.label }}</div>     
+    </div>
+    <div class="custom-stepper-sub-container">
+      <ng-container *ngTemplateOutlet="subStepper; context:{ $implicit: step.subSteps }"></ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #subStepper let-steps>
+  <div class="custom-stepper-sub" *ngFor="let step of steps; let i=index" [ngClass]="getSubStepStyle(step)">
+    {{ step.label }}
+    <ng-container *ngTemplateOutlet="subStepper; context:{ $implicit: step.subSteps }"></ng-container>
+  </div>
+</ng-template>

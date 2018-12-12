@@ -1,0 +1,14 @@
+.viewport-iframe-wrapper {
+    box-sizing: border-box;
+    padding-top: 15px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.viewport-iframe-container {
+    padding-top: 20px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

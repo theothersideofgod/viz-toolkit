@@ -37,6 +37,12 @@
       text-decoration: none;
     }
   }
+  @media (max-width: 375px) {
+    .viz-login {
+      width: 100%
+    }
+  }
+  
 }
 
 ::ng-deep {

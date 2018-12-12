@@ -144,3 +144,34 @@
 .mat-button.active .mat-button-focus-overlay {
   opacity: 1;
 }
+
+@media (max-width: 375px ) {
+  .mat-datepicker-popup {
+    right: auto !important;
+    left: 50% !important;
+    transform: translate(-50%);
+  }
+  .range-calendar-wrapper-single {
+    width: 100%
+  }
+  .range-calendar-wrapper {
+    width: 275px;
+    margin:0 auto;
+  }
+  .from-date-sec {
+    width: 275px;
+  }
+  .end-date-sec {
+    width: 275px;
+  }
+
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .quick-select-sec ul li {
+    margin-left: 0px;
+  }
+  .quick-select-sec {
+    height: auto;
+  }
+}

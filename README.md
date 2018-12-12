@@ -200,6 +200,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Update select disable style.
 - Add Component: VizHttpStatusModule for inform http error state.
 
-1.0.3
+1.0.5
 - Add header login dropdown function.
 - Add month picker.
+- Add Expansion Panel Angular Material Examples.
+- Add custom stepper component.

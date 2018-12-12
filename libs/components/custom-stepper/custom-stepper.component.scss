@@ -1,0 +1,54 @@
+@import '../../_viz-color.scss';
+.custom-stepper {
+  &-cell  {
+    margin-bottom: 16px;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+  }
+  &-icon {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    margin-right:12px;
+    color: white;
+    &-finish {
+      background-color: $viz-green
+    }
+    &-progress {
+      background-color: $viz-blue
+    }
+    &-waiting {
+      background-color: $viz-light-gray
+    }
+  }
+  &-label {
+    font-size: 13px;
+    color: #000000;
+    &-finish {
+      opacity: 1;
+    }
+    &-waiting {
+      opacity: 0.4;
+    }
+  }
+  &-sub-container {
+    margin-left: 40px;
+  }
+  &-sub {
+    margin-top: 14px;
+    margin-left: 12px;
+    font-size: 13px;
+    color: #000000;
+    &-waiting {
+      opacity: 0.4;
+    }
+    &-finish {
+      opacity: 1
+    }
+  }
+}

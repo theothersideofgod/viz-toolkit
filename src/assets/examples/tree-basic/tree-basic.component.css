@@ -1,5 +1,6 @@
 .example-container {
-  display: inline-flex
+  margin: 0 auto;
+  width: 150px
 }
 viz-tree {
   width: 150px;

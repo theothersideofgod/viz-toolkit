@@ -1,0 +1,34 @@
+<form class="vizient-input example-wrapper">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Choose a date"
+      [matRangeDatepicker]="resultPicker"
+      name="date"
+      typeMode="date"
+      [formControl]="dateFormControl"
+      (dateInput)="inputEvent('input', $event)" (dateChange)="changeEvent('change', $event)"
+    />
+    <mat-range-datepicker
+      #resultPicker
+      (closed)="onClose()"
+      typeMode="date"
+    >
+    </mat-range-datepicker>
+    <mat-range-datepicker-toggle
+      matSuffix
+      [for]="resultPicker"
+    ></mat-range-datepicker-toggle>
+    <mat-error *ngIf="dateFormControl.hasError('required')">
+      Date is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="dateFormControl.hasError('notOverEighteen')">
+      Must be over 18 years old
+    </mat-error>
+  </mat-form-field>
+</form>
+
+<div class="example-events">
+  <div>Text Input Event: {{cEvent}}</div>
+  <div>Calendar Input Event: {{iEvent}}</div>
+</div>

@@ -1,1 +1,21 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">viz-date-range-picker</span> (<span class="hljs-attr">onApply</span>)=<span class="hljs-string">"applyDateRange($event)"</span> <span class="hljs-attr">typeMode</span>=<span class="hljs-string">"date"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">viz-date-range-picker</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vizient-input example-wrapper"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+      <span class="hljs-attr">matInput</span>
+      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Choose a date"</span>
+      [<span class="hljs-attr">matRangeDatepicker</span>]=<span class="hljs-string">"resultPicker"</span>
+      <span class="hljs-attr">name</span>=<span class="hljs-string">"date"</span>
+      <span class="hljs-attr">typeMode</span>=<span class="hljs-string">"date"</span>
+    /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-range-datepicker</span>
+      #<span class="hljs-attr">resultPicker</span>
+      (<span class="hljs-attr">closed</span>)=<span class="hljs-string">"this.onClose($event)"</span>
+      <span class="hljs-attr">typeMode</span>=<span class="hljs-string">"date"</span>
+    &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-range-datepicker</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-range-datepicker-toggle</span>
+      <span class="hljs-attr">matSuffix</span>
+      [<span class="hljs-attr">for</span>]=<span class="hljs-string">"resultPicker"</span>
+    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-range-datepicker-toggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>

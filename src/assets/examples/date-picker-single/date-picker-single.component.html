@@ -1,1 +1,21 @@
-<viz-date-range-picker (onApply)="applyDateRange($event)" typeMode="date" placeholder="Choose a date"></viz-date-range-picker>
+<form class="vizient-input example-wrapper">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Choose a date"
+      [matRangeDatepicker]="resultPicker"
+      name="date"
+      typeMode="date"
+    />
+    <mat-range-datepicker
+      #resultPicker
+      (closed)="onClose()"
+      typeMode="date"
+    >
+    </mat-range-datepicker>
+    <mat-range-datepicker-toggle
+      matSuffix
+      [for]="resultPicker"
+    ></mat-range-datepicker-toggle>
+  </mat-form-field>
+</form>

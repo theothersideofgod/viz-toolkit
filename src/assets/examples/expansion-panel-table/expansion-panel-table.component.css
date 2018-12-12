@@ -53,8 +53,9 @@ td {
 }
 
 .example-container {
-  width: 500px;
-  display: inline-block;
+  width: 100%;
+  /* display: inline-block; */
+  margin: 0 auto;
 }
 
 .example-first-col {
