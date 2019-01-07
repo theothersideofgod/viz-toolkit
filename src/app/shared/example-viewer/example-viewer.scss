@@ -24,6 +24,7 @@
   margin-right: 24px;
   color: #c3c3c3;
   .mat-icon-button {
+    
     // margin-left: 12px;
   }
 
@@ -108,6 +109,7 @@
     }
 
     .mat-icon {
+      display: none;
       @include md-icon-size(18px);
       margin-left: 12px;
       // cursor: pointer;
