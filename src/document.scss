@@ -45,7 +45,7 @@ a {
   letter-spacing: 0;
   margin-bottom: 16px;
   height: 34px;
-  line-height:34px;
+  line-height: 34px;
 }
 .doc-desc-2 {
   /* Use in forms to togg: */
@@ -64,7 +64,7 @@ a {
 }
 .doc-desc-2-highlight-text {
   // color: #ff4e00;
-  color: $viz-purple
+  color: $viz-purple;
 }
 .doc-title-3 {
   /* Headlines: */
@@ -75,6 +75,14 @@ a {
   line-height: 30px;
   height: 30px;
   margin-bottom: 8px;
+}
+.doc-title-4 {
+  font-family: Soleto;
+  font-weight: 400;
+  font-size: 16px;
+  color: #28292b;
+  letter-spacing: 0;
+  line-height: 24px;
 }
 .doc-example-container {
   /* Rectangle 3: */
@@ -184,7 +192,7 @@ a {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 .docs-usage-spec {
@@ -321,7 +329,6 @@ a {
   visibility: hidden;
 }
 
-
 .doc-fl {
   float: left;
 }
@@ -334,7 +341,7 @@ a {
   font-size: 16px;
   color: #000000;
   font-weight: 300;
-  vertical-align:top;
+  vertical-align: top;
 }
 
 .doc-color-block {
@@ -466,7 +473,7 @@ a {
   cursor: pointer;
   margin-bottom: 16px;
   font-size: 16px;
-  display:inline-block;
+  display: inline-block;
   color: $viz-purple;
   font-weight: 300;
   z-index: 1;
@@ -478,8 +485,8 @@ a {
   width: 350px;
   display: inline-block;
   box-sizing: border-box;
-  vertical-align:top;
-  
+  vertical-align: top;
+
   span {
     font-size: 16px;
     line-height: 24px;
@@ -508,3 +515,18 @@ a {
   overflow: auto;
 }
 
+.icon-cell {
+  margin-right: 54px;
+  margin-bottom: 32px;
+  font-size: 24px;
+  width: 24px;
+}
+
+.icons-container {
+  margin-top: 24px;
+  margin-bottom: -24px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
