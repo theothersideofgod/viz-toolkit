@@ -27,6 +27,10 @@ const initNavList = [
       {
         name: 'Typography',
         value: 'typography'
+      },
+      {
+        name: 'Iconography',
+        value: 'iconography'
       }
     ]
   },
@@ -118,6 +122,10 @@ const initNavList = [
       {
         name: 'Stepper',
         value: 'stepper'
+      },
+      {
+        name: 'Divider',
+        value: 'divider'
       }
     ]
   },

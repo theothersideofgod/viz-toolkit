@@ -21,10 +21,12 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'loginokta', name: 'LoginOkta', examples: ['login-okta']},
+        {id: 'divider', name: 'Divider', examples: ['divider']},
+        {id: 'iconography', name: 'Iconography', examples: ['iconography']},
         {id: 'steppercustom', name: 'StepperCustom', examples: ['stepper-custom']},
         {id: 'customstepper', name: 'CustomStepper', examples: ['custom-stepper']},
         {id: 'steppervertical', name: 'StepperVertical', examples: ['stepper-vertical']},
-        {id: '', name: '', examples: ['undefined']},
         {id: 'formfieldvalidation', name: 'FormFieldValidation', examples: ['form-field-validation']},
         {id: 'datepickersingleerror', name: 'DatePickerSingleError', examples: ['date-picker-single-error']},
         {id: 'expansionpanelangular', name: 'ExpansionPanelAngular', examples: ['expansion-panel-angular']},

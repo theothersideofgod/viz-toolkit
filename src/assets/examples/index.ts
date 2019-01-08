@@ -37,9 +37,22 @@ import {
 } from 'libs';
 
 import {
+  LoginOktaComponent,
+  LoginOktaData
+} from './login-okta/login-okta.component';
+import {
+  DividerComponent,
+  DividerData
+} from './divider/divider.component';
+import {
+  IconographyComponent,
+  IconographyData
+} from './iconography/iconography.component';
+import {
   StepperCustomComponent,
   StepperCustomData
-} from './stepper-custom/stepper-custom.component';import {
+} from './stepper-custom/stepper-custom.component';
+import {
   StepperVerticalComponent,
   StepperVerticalData
 } from './stepper-vertical/stepper-vertical.component';
@@ -406,6 +419,18 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'login-okta' : {
+    component: LoginOktaComponent,
+    data: LoginOktaData
+  },
+  'divider' : {
+    component: DividerComponent,
+    data: DividerData
+  },
+  'iconography' : {
+    component: IconographyComponent,
+    data: IconographyData
+  },
   'stepper-custom' : {
     component: StepperCustomComponent,
     data: StepperCustomData
@@ -778,6 +803,9 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    LoginOktaComponent,
+    DividerComponent,
+    IconographyComponent,
     StepperCustomComponent,
     StepperVerticalComponent,
     FormFieldValidationComponent,
@@ -915,6 +943,9 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    LoginOktaComponent,
+    DividerComponent,
+    IconographyComponent,
     StepperCustomComponent,
     StepperVerticalComponent,
     FormFieldValidationComponent,
