@@ -5,16 +5,22 @@
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> User {
   name: <span class="hljs-built_in">string</span>;
+  icon: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'form-field-autocomplete'</span>,
-  templateUrl: <span class="hljs-string">'form-field-autocomplete.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'form-field-autocomplete.component.css'</span>]
+  selector: <span class="hljs-string">'form-field-autocomplete-icon'</span>,
+  templateUrl: <span class="hljs-string">'form-field-autocomplete-icon.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'form-field-autocomplete-icon.component.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldAutocompleteComponent <span class="hljs-keyword">implements</span> OnInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldAutocompleteIconComponent <span class="hljs-keyword">implements</span> OnInit {
   myControl = <span class="hljs-keyword">new</span> FormControl();
-  options: User[] = [{ name: <span class="hljs-string">'On'</span> }, { name: <span class="hljs-string">'Off'</span> }, { name: <span class="hljs-string">'Offline'</span> }, { name: <span class="hljs-string">'Offset'</span> }];
+  options: User[] = [
+    { name: <span class="hljs-string">'Face'</span>, icon: <span class="hljs-string">'face'</span> },
+    { name: <span class="hljs-string">'Filter'</span>, icon: <span class="hljs-string">'filter'</span> },
+    { name: <span class="hljs-string">'Folder'</span>, icon: <span class="hljs-string">'folder'</span> },
+    { name: <span class="hljs-string">'Feedback'</span>, icon: <span class="hljs-string">'feedback'</span> }
+  ];
   filteredOptions: Observable&lt;User[]&gt;;
 
   ngOnInit() {
@@ -38,6 +44,6 @@
   }
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FormFieldAutocompleteData = {
-  name: <span class="hljs-string">'FormFieldAutocomplete'</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FormFieldAutocompleteIconData = {
+  name: <span class="hljs-string">'FormFieldAutocompleteIcon'</span>
 };

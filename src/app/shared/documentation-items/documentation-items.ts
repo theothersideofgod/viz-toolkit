@@ -21,6 +21,11 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'formfieldautocompletegroup', name: 'FormFieldAutocompleteGroup', examples: ['form-field-autocomplete-group']},
+        {id: 'formfieldautocompleteicon', name: 'FormFieldAutocompleteIcon', examples: ['form-field-autocomplete-icon']},
+        {id: 'formfieldcustomphonenumber', name: 'FormFieldCustomPhoneNumber', examples: ['form-field-custom-phone-number']},
+        {id: 'formfieldprefixsuffix', name: 'FormFieldPrefixSuffix', examples: ['form-field-prefix-suffix']},
+        {id: 'formfieldclearbutton', name: 'FormFieldClearButton', examples: ['form-field-clear-button']},
         {id: 'loginokta', name: 'LoginOkta', examples: ['login-okta']},
         {id: 'divider', name: 'Divider', examples: ['divider']},
         {id: 'iconography', name: 'Iconography', examples: ['iconography']},

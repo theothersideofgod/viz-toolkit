@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['form-field-basic.component.scss']
 })
 export class FormFieldBasicComponent implements OnInit {
-  value = '';
+  value = 'Input here';
   ngOnInit() {}
 }
 

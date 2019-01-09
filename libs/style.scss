@@ -410,6 +410,11 @@ td.mat-cell,
 .mat-form-field {
   // vertical-align:middle;
   &.mat-focused {
+    .mat-form-field-prefix {
+      [matprefix] {
+        color: #000000;
+      }
+    }
     .mat-form-field-suffix {
       .mat-icon {
         color: #000000;
@@ -417,6 +422,12 @@ td.mat-cell,
     }
     .mat-hint {
       color: #7f5eba;
+    }
+  }
+
+  &.mat-form-field-disabled {
+    .mat-form-field-underline {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 100%, transparent 0%) !important
     }
   }
 
@@ -454,6 +465,11 @@ td.mat-cell,
   }
   .mat-form-field-flex {
     align-items: stretch;
+  }
+  .mat-form-field-prefix {
+    margin-top: 22px;
+    margin-right: 8px;
+    font-size: 14px;
   }
   &.mat-form-field-appearance-legacy {
     .mat-form-field-infix {
@@ -500,6 +516,61 @@ td.mat-cell,
   &:hover {
     .mat-form-field-underline {
       background-color: #000000;
+    }
+  }
+}
+
+//autocomplete
+.viz-autocomplete-dropdown {
+  .mat-option {
+    .mat-icon {
+      color: $viz-dark-gray
+    }
+    color: $viz-gray;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    height: 40px;
+    &:hover {
+      color: $viz-purple;
+      .mat-icon {
+        color: $viz-purple;
+      }
+    }
+    &.mat-selected {
+      color: $viz-purple !important;
+      .mat-icon {
+        color: $viz-purple;
+      }
+    }
+  }
+  //for group
+  .mat-optgroup {
+    .mat-optgroup-label {
+      font-weight: 300;
+      color: $viz-gray;
+    }
+    .mat-option {
+      .mat-icon {
+        color: $viz-dark-gray
+      }
+      color: $viz-gray;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+      height: 40px;
+      &:hover {
+        color: $viz-purple;
+        .mat-icon {
+          color: $viz-purple;
+        }
+      }
+      &.mat-selected {
+        color: $viz-purple !important;
+        .mat-icon {
+          color: $viz-purple;
+        }
+      }
     }
   }
 }

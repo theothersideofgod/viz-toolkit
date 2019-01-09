@@ -1,206 +1,207 @@
 <html>
-  <head></head>
 
-  <body>
-    <div class="doc-category-title">
-      Form Controls
-      <span class="docs-markdown-h3" id="contents">
-        <span header-link="contents"></span>Contents</span
-      >
-    </div>
-    <div class="doc-title-1">Form Field</div>
-    <div class="doc-desc-1">Text fields let users enter and edit text.</div>
+<head></head>
 
-    <div class="doc-divider"></div>
+<body>
+  <div class="doc-category-title">
+    Form Controls
+    <span class="docs-markdown-h3" id="contents">
+      <span header-link="contents"></span>Contents</span>
+  </div>
+  <div class="doc-title-1">Form Field</div>
+  <div class="doc-desc-1">Text fields let users enter and edit text.</div>
 
-    <div class="doc-title-2">
-      Examples
-      <span class="docs-more-example" doc-viewer-extend="exampleWrapper"></span>
+  <div class="doc-divider"></div>
 
-      <span class="docs-markdown-h3" id="examples">
-        <span header-link="examples"></span>Examples</span
-      >
-    </div>
+  <div class="doc-title-2">
+    Examples
+    <span class="docs-more-example" doc-viewer-extend="exampleWrapper"></span>
 
+    <span class="docs-markdown-h3" id="examples">
+      <span header-link="examples"></span>Examples</span>
+  </div>
+
+
+  <div class="doc-title-4 mb-8">Default Form Field</div>
+  <div class="doc-desc-2">
+    Default form fields allow users to enter text into a UI. They typically appear in forms and dialogs.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="form-field-basic"></div>
+  </div>
+
+  <div id="exampleWrapper">
+
+    <div class="doc-title-4 mb-8">Error Form Field</div>
     <div class="doc-desc-2">
-      Text fields allow users to enter text into a UI. They typically appear in
-      forms and dialogs.
+      When text input isn’t accepted, the field turns to red.
     </div>
     <div class="doc-example-container">
-      <div app-docs-example="form-field-basic"></div>
+      <div app-docs-example="form-field-error"></div>
     </div>
 
-    <div id="exampleWrapper">
-      <div class="doc-desc-2">
-        Hint text conveys additional guidance about the input field, such as how
-        it will be used.
-      </div>
-      <div class="doc-example-container">
-        <div app-docs-example="form-field-hint"></div>
-      </div>
-      <div class="doc-desc-2">
-        Area form fields are taller than default form fields and wrap overflow
-        text onto a new line. They are a fixed height and scroll vertically when
-        the cursor reaches the bottom of the field.
-      </div>
-      <div class="doc-example-container">
-        <div app-docs-example="form-field-textarea"></div>
-      </div>
-      <div class="doc-desc-2">
-        When text input isn&#x2019;t accepted, the field turns to red.
-      </div>
-      <div class="doc-example-container">
-        <div app-docs-example="form-field-error"></div>
-      </div>
-      <div class="doc-desc-2">
-        A disabled form field is unusable and un-clickable and are rendered in
-        gray by default in browsers.
-      </div>
-      <div class="doc-example-container">
-        <div app-docs-example="form-field-disable"></div>
-      </div>
-      <div class="doc-desc-2">A autocomplete form field</div>
-      <div class="doc-example-container">
-        <div app-docs-example="form-field-autocomplete"></div>
-      </div>
-      <div class="doc-desc-2">form field with form group validation</div>
-      <div class="doc-example-container">
-        <div app-docs-example="form-field-validation"></div>
-      </div>
-    </div>
-
-    <div class="doc-divider"></div>
-    <div class="doc-title-2">
-      Props
-      <span class="docs-markdown-h3" id="props">
-        <span header-link="props"></span>Props</span
-      >
-    </div>
+    <div class="doc-title-4 mb-8">Disabled Form Field</div>
     <div class="doc-desc-2">
-      To get a customized checkbox, just set
-      <span class="doc-desc-2-highlight">type/state/disabled</span>
+      A disabled form field is unusable and un-clickable and are rendered in gray by default in browsers.
     </div>
-    <table class="doc-props-table">
-      <thead>
-        <tr>
-          <th>property</th>
-          <th>description</th>
-          <th>type</th>
-          <th>default</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>onPressEnter</td>
-          <td>
-            The callback function that is triggered when Enter key is pressed.
-          </td>
-          <td>function(e)</td>
-          <td>false</td>
-        </tr>
-        <tr>
-          <td>disabled</td>
-          <td>disabled state of form field</td>
-          <td>boolean</td>
-          <td>false</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="doc-divider"></div>
-    <div class="doc-title-2">
-      Best Practice
-      <span class="docs-markdown-h3" id="best_practices">
-        <span header-link="best_practices"></span>Best Practices</span
-      >
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-disable"></div>
     </div>
 
-    <div class="doc-desc-2">
-      Form field should:
-      <ul class="doc-list">
-        <li>
-          Be clearly labeled so it&#x2019;s obvious to the users what they
-          should enter into the field
-        </li>
-        <li>Only ask for information that&#x2019;s really needed</li>
-        <li>
-          Validate input as soon as user has finished interacting with a field
-        </li>
-      </ul>
+    <div class="doc-title-4 mb-16">Form Field with a Clear Button</div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-clear-button"></div>
     </div>
 
-    <div class="doc-divider"></div>
-
-    <div class="doc-title-2">
-      Usage &amp; Content Guidelines
-      <span class="docs-markdown-h3" id="content_guidelines">
-        <span header-link="content_guidelines"></span>Content Guidelines</span
-      >
-    </div>
-    <div class="doc-desc-2">
-      Label text should be short, clear, and fully visible. It shouldn&#x2019;t
-      be truncated.
-    </div>
-    <div class="docs-guideline-group">
-      <div
-        class="docs-usage-do docs-usage-w50 docs-usage-center"
-        style="height:160px"
-      >
-        <img src="assets/img/doc/formfield-pic-1.png" alt="" />
-      </div>
-      <div
-        class="docs-usage-dont docs-usage-w50 docs-usage-center"
-        style="height:160px"
-      >
-        <img src="assets/img/doc/formfield-pic-2.png" alt="" />
-      </div>
-    </div>
-    <div class="doc-desc-2">
-      Label text shouldn&#x2019;t take up multiple lines.
-    </div>
-    <div class="docs-guideline-group">
-      <div
-        class="docs-usage-do docs-usage-w50 docs-usage-center"
-        style="height:160px"
-      >
-        <img src="assets/img/doc/formfield-pic-3.png" alt="" />
-      </div>
-      <div
-        class="docs-usage-dont docs-usage-w50 docs-usage-center"
-        style="height:160px"
-      >
-        <img src="assets/img/doc/formfield-pic-4.png" alt="" />
-      </div>
-    </div>
-    <div class="doc-divider"></div>
-    <div class="doc-title-2">
-      Design Specs
-      <span class="docs-markdown-h3" id="design_specs">
-        <span header-link="design_specs"></span>Design Specs</span
-      >
+    <div class="doc-title-4 mb-16">Form Field with Prefixes and Suffixes</div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-prefix-suffix"></div>
     </div>
 
-    <div class="docs-usage-spec docs-usage-center" style="height:280px">
-      <img src="assets/img/doc/formfield-spec.png" alt="" />
+    <div class="doc-title-4 mb-16">Form Field with Custom Telephone Number Input Control</div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-custom-phone-number"></div>
     </div>
-    
 
-    <div class="doc-divider"></div>
-    <div class="doc-title-2">
-      Component Location for Designers
-      <span class="docs-markdown-h3" id="component_location_for_designers">
-        <span header-link="component_location_for_designers"></span>Component
-        Location for Designers</span
-      >
+    <div class="doc-title-4 mb-8">Form Field with Hint</div>
+    <div class="doc-desc-2">Hint text conveys additional guidance about the input field, such as how it will be used.</div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-hint"></div>
     </div>
-    <a
-      class="doc-download-link"
-      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
-      >Download Sektch File</a
-    >
-    <div class="doc-desc-2">
-      For designers, to add this component to your design, follow this path
-      within the Sketch App UI:
+
+    <div class="doc-title-4 mb-8">Autocomplete</div>
+    <div class="doc-desc-2">An auto complete form field enables users to quickly find and select from a pre-populated list of values as they type,
+      leveraging searching and filtering.</div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-autocomplete"></div>
     </div>
-    <div sketch-link=""></div>
-  </body>
+
+    <div class="doc-title-4 mb-16">Autocomplete with Icons</div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-autocomplete-icon"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">Option Groups Autocomplete</div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-autocomplete-group"></div>
+    </div>
+
+    <div class="doc-title-4 mb-8">Area Form Field</div>
+    <div class="doc-desc-2">Area form fields are taller than default form fields and wrap overflow text onto a new line. They are a fixed height
+      and scroll vertically when the cursor reaches the bottom of the field.</div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-textarea"></div>
+    </div>
+
+  </div>
+
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Props
+    <span class="docs-markdown-h3" id="props">
+      <span header-link="props"></span>Props</span>
+  </div>
+  <div class="doc-desc-2">
+    To get a customized checkbox, just set
+    <span class="doc-desc-2-highlight">type/state/disabled</span>
+  </div>
+  <table class="doc-props-table">
+    <thead>
+      <tr>
+        <th>property</th>
+        <th>description</th>
+        <th>type</th>
+        <th>default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>onPressEnter</td>
+        <td>
+          The callback function that is triggered when Enter key is pressed.
+        </td>
+        <td>function(e)</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>disabled state of form field</td>
+        <td>boolean</td>
+        <td>false</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Best Practice
+    <span class="docs-markdown-h3" id="best_practices">
+      <span header-link="best_practices"></span>Best Practices</span>
+  </div>
+
+  <div class="doc-desc-2">
+    Form field should:
+    <ul class="doc-list">
+      <li>
+        Be clearly labeled so it&#x2019;s obvious to the users what they should enter into the field
+      </li>
+      <li>Only ask for information that&#x2019;s really needed</li>
+      <li>
+        Validate input as soon as user has finished interacting with a field
+      </li>
+    </ul>
+  </div>
+
+  <div class="doc-divider"></div>
+
+  <div class="doc-title-2">
+    Usage &amp; Content Guidelines
+    <span class="docs-markdown-h3" id="content_guidelines">
+      <span header-link="content_guidelines"></span>Content Guidelines</span>
+  </div>
+  <div class="doc-desc-2">
+    Label text should be short, clear, and fully visible. It shouldn&#x2019;t be truncated.
+  </div>
+  <div class="docs-guideline-group">
+    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/formfield-pic-1.png" alt="" />
+    </div>
+    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/formfield-pic-2.png" alt="" />
+    </div>
+  </div>
+  <div class="doc-desc-2">
+    Label text shouldn&#x2019;t take up multiple lines.
+  </div>
+  <div class="docs-guideline-group">
+    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/formfield-pic-3.png" alt="" />
+    </div>
+    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:160px">
+      <img src="assets/img/doc/formfield-pic-4.png" alt="" />
+    </div>
+  </div>
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Design Specs
+    <span class="docs-markdown-h3" id="design_specs">
+      <span header-link="design_specs"></span>Design Specs</span>
+  </div>
+
+  <div class="docs-usage-spec docs-usage-center" style="height:280px">
+    <img src="assets/img/doc/formfield-spec.png" alt="" />
+  </div>
+
+  <div class="doc-divider"></div>
+  <div class="doc-title-2">
+    Component Location for Designers
+    <span class="docs-markdown-h3" id="component_location_for_designers">
+      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
+  </div>
+  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sektch File</a>
+  <div class="doc-desc-2">
+    For designers, to add this component to your design, follow this path within the Sketch App UI:
+  </div>
+  <div sketch-link=""></div>
+</body>
+
 </html>

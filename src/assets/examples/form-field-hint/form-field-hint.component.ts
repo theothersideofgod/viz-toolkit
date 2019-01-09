@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['form-field-hint.component.css']
 })
 export class FormFieldHintComponent implements OnInit {
-  value = '';
+  value = 'Input here';
   ngOnInit() {}
 }
 

@@ -37,6 +37,27 @@ import {
 } from 'libs';
 
 import {
+  FormFieldAutocompleteGroupComponent,
+  FormFieldAutocompleteGroupData
+} from './form-field-autocomplete-group/form-field-autocomplete-group.component';
+import {
+  FormFieldAutocompleteIconComponent,
+  FormFieldAutocompleteIconData
+} from './form-field-autocomplete-icon/form-field-autocomplete-icon.component';
+import {
+  FormFieldCustomPhoneNumberComponent,
+  FormFieldCustomPhoneNumberData,
+  MyTelInput
+} from './form-field-custom-phone-number/form-field-custom-phone-number.component';
+import {
+  FormFieldPrefixSuffixComponent,
+  FormFieldPrefixSuffixData
+} from './form-field-prefix-suffix/form-field-prefix-suffix.component';
+import {
+  FormFieldClearButtonComponent,
+  FormFieldClearButtonData
+} from './form-field-clear-button/form-field-clear-button.component';
+import {
   LoginOktaComponent,
   LoginOktaData
 } from './login-okta/login-okta.component';
@@ -419,6 +440,26 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'form-field-autocomplete-group' : {
+    component: FormFieldAutocompleteGroupComponent,
+    data: FormFieldAutocompleteGroupData
+  },
+  'form-field-autocomplete-icon' : {
+    component: FormFieldAutocompleteIconComponent,
+    data: FormFieldAutocompleteIconData
+  },
+  'form-field-custom-phone-number' : {
+    component: FormFieldCustomPhoneNumberComponent,
+    data: FormFieldCustomPhoneNumberData
+  },
+  'form-field-prefix-suffix' : {
+    component: FormFieldPrefixSuffixComponent,
+    data: FormFieldPrefixSuffixData
+  },
+  'form-field-clear-button' : {
+    component: FormFieldClearButtonComponent,
+    data: FormFieldClearButtonData
+  },
   'login-okta' : {
     component: LoginOktaComponent,
     data: LoginOktaData
@@ -803,6 +844,11 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    FormFieldAutocompleteGroupComponent,
+    FormFieldAutocompleteIconComponent,
+    FormFieldCustomPhoneNumberComponent,
+    FormFieldPrefixSuffixComponent,
+    FormFieldClearButtonComponent,
     LoginOktaComponent,
     DividerComponent,
     IconographyComponent,
@@ -899,7 +945,8 @@ export const ALL_EXAMPLE_ITEMS = {
     BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
-    LoginBasicComponent
+    LoginBasicComponent,
+    MyTelInput
   ],
   imports: [
     RouterModule,
@@ -943,6 +990,11 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    FormFieldAutocompleteGroupComponent,
+    FormFieldAutocompleteIconComponent,
+    FormFieldCustomPhoneNumberComponent,
+    FormFieldPrefixSuffixComponent,
+    FormFieldClearButtonComponent,
     LoginOktaComponent,
     DividerComponent,
     IconographyComponent,
@@ -1039,7 +1091,8 @@ export const ALL_EXAMPLE_ITEMS = {
     BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
-    LoginBasicComponent
+    LoginBasicComponent,
+    MyTelInput
   ]
 })
 export class ExampleModule {}

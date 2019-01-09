@@ -5,16 +5,22 @@ import { map, startWith } from 'rxjs/operators';
 
 export interface User {
   name: string;
+  icon: string;
 }
 
 @Component({
-  selector: 'form-field-autocomplete',
-  templateUrl: 'form-field-autocomplete.component.html',
-  styleUrls: ['form-field-autocomplete.component.css']
+  selector: 'form-field-autocomplete-icon',
+  templateUrl: 'form-field-autocomplete-icon.component.html',
+  styleUrls: ['form-field-autocomplete-icon.component.css']
 })
-export class FormFieldAutocompleteComponent implements OnInit {
+export class FormFieldAutocompleteIconComponent implements OnInit {
   myControl = new FormControl();
-  options: User[] = [{ name: 'On' }, { name: 'Off' }, { name: 'Offline' }, { name: 'Offset' }];
+  options: User[] = [
+    { name: 'Face', icon: 'face' },
+    { name: 'Filter', icon: 'filter' },
+    { name: 'Folder', icon: 'folder' },
+    { name: 'Feedback', icon: 'feedback' }
+  ];
   filteredOptions: Observable<User[]>;
 
   ngOnInit() {
@@ -38,6 +44,6 @@ export class FormFieldAutocompleteComponent implements OnInit {
   }
 }
 
-export const FormFieldAutocompleteData = {
-  name: 'FormFieldAutocomplete'
+export const FormFieldAutocompleteIconData = {
+  name: 'FormFieldAutocompleteIcon'
 };
