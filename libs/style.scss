@@ -237,8 +237,15 @@ td.mat-cell,
       .mat-menu-item {
         color: #696969;
         font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        height: 40px;
         &:hover {
-          color: #8667bd;
+          color: $viz-purple;
+          background-color: #ffffff;
+          .mat-icon {
+            color: $viz-purple
+          }
         }
       }
       .mat-menu-item-submenu-trigger {

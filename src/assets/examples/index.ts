@@ -37,6 +37,10 @@ import {
 } from 'libs';
 
 import {
+  MenuIconComponent,
+  MenuIconData
+} from './menu-icon/menu-icon.component';
+import {
   DatePickerRangeValidationComponent,
   DatePickerRangeValidationData
 } from './date-picker-range-validation/date-picker-range-validation.component';
@@ -472,6 +476,10 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'menu-icon' : {
+    component: MenuIconComponent,
+    data: MenuIconData
+  },
   'date-picker-range-validation' : {
     component: DatePickerRangeValidationComponent,
     data: DatePickerRangeValidationData
@@ -908,6 +916,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    MenuIconComponent,
     DatePickerRangeValidationComponent,
     DatePickerEmulatingComponent,
     DatePickerFilterValidationComponent,
@@ -1062,6 +1071,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    MenuIconComponent,
     DatePickerRangeValidationComponent,
     DatePickerEmulatingComponent,
     DatePickerFilterValidationComponent,

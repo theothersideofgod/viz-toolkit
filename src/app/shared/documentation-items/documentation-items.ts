@@ -21,6 +21,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'menuicon', name: 'MenuIcon', examples: ['menu-icon']},
         {id: 'datepickerrangevalidation', name: 'DatePickerRangeValidation', examples: ['date-picker-range-validation']},
         {id: 'datepickeremulating', name: 'DatePickerEmulating', examples: ['date-picker-emulating']},
         {id: 'datepickerfiltervalidation', name: 'DatePickerFilterValidation', examples: ['date-picker-filter-validation']},
