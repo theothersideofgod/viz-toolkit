@@ -37,6 +37,30 @@ import {
 } from 'libs';
 
 import {
+  DatePickerRangeValidationComponent,
+  DatePickerRangeValidationData
+} from './date-picker-range-validation/date-picker-range-validation.component';
+import {
+  DatePickerEmulatingComponent,
+  DatePickerEmulatingData
+} from './date-picker-emulating/date-picker-emulating.component';
+import {
+  DatePickerFilterValidationComponent,
+  DatePickerFilterValidationData
+} from './date-picker-filter-validation/date-picker-filter-validation.component';
+import {
+  DatePickerMinMaxValidationComponent,
+  DatePickerMinMaxValidationData
+} from './date-picker-min-max-validation/date-picker-min-max-validation.component';
+import {
+  DatePickerSelectedValueComponent,
+  DatePickerSelectedValueData
+} from './date-picker-selected-value/date-picker-selected-value.component';
+import {
+  DatePickerStartDateComponent,
+  DatePickerStartDateData
+} from './date-picker-start-date/date-picker-start-date.component';
+import {
   TabsCustomLabelComponent,
   TabsCustomLabelData
 } from './tabs-custom-label/tabs-custom-label.component';
@@ -448,6 +472,30 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'date-picker-range-validation' : {
+    component: DatePickerRangeValidationComponent,
+    data: DatePickerRangeValidationData
+  },
+  'date-picker-emulating' : {
+    component: DatePickerEmulatingComponent,
+    data: DatePickerEmulatingData
+  },
+  'date-picker-filter-validation' : {
+    component: DatePickerFilterValidationComponent,
+    data: DatePickerFilterValidationData
+  },
+  'date-picker-min-max-validation' : {
+    component: DatePickerMinMaxValidationComponent,
+    data: DatePickerMinMaxValidationData
+  },
+  'date-picker-selected-value' : {
+    component: DatePickerSelectedValueComponent,
+    data: DatePickerSelectedValueData
+  },
+  'date-picker-start-date' : {
+    component: DatePickerStartDateComponent,
+    data: DatePickerStartDateData
+  },
   'tabs-custom-label' : {
     component: TabsCustomLabelComponent,
     data: TabsCustomLabelData
@@ -860,6 +908,12 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    DatePickerRangeValidationComponent,
+    DatePickerEmulatingComponent,
+    DatePickerFilterValidationComponent,
+    DatePickerMinMaxValidationComponent,
+    DatePickerSelectedValueComponent,
+    DatePickerStartDateComponent,
     TabsCustomLabelComponent,
     TabsThemeComponent,
     FormFieldAutocompleteGroupComponent,
@@ -1008,6 +1062,12 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    DatePickerRangeValidationComponent,
+    DatePickerEmulatingComponent,
+    DatePickerFilterValidationComponent,
+    DatePickerMinMaxValidationComponent,
+    DatePickerSelectedValueComponent,
+    DatePickerStartDateComponent,
     TabsCustomLabelComponent,
     TabsThemeComponent,
     FormFieldAutocompleteGroupComponent,

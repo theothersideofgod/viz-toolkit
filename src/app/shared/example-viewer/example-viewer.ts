@@ -115,7 +115,13 @@ export class ExampleViewer implements OnInit {
       'date-picker-single',
       'month-picker-range',
       'month-picker-single',
-      'date-picker-single-error'
+      'date-picker-single-error',
+      'date-picker-start-date',
+      'date-picker-selected-value',
+      'date-picker-min-max-validation',
+      'date-picker-filter-validation',
+      'date-picker-emulating',
+      'date-picker-range-validation'
     ];
 
     if (relatedDatepickerExamples.indexOf(this._example) !== -1) {

@@ -21,6 +21,12 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'datepickerrangevalidation', name: 'DatePickerRangeValidation', examples: ['date-picker-range-validation']},
+        {id: 'datepickeremulating', name: 'DatePickerEmulating', examples: ['date-picker-emulating']},
+        {id: 'datepickerfiltervalidation', name: 'DatePickerFilterValidation', examples: ['date-picker-filter-validation']},
+        {id: 'datepickerminmaxvalidation', name: 'DatePickerMinMaxValidation', examples: ['date-picker-min-max-validation']},
+        {id: 'datepickerselectedvalue', name: 'DatePickerSelectedValue', examples: ['date-picker-selected-value']},
+        {id: 'datepickerstartdate', name: 'DatePickerStartDate', examples: ['date-picker-start-date']},
         {id: 'tabscustomlabel', name: 'TabsCustomLabel', examples: ['tabs-custom-label']},
         {id: 'tabstheme', name: 'TabsTheme', examples: ['tabs-theme']},
         {id: 'formfieldautocompletegroup', name: 'FormFieldAutocompleteGroup', examples: ['form-field-autocomplete-group']},
