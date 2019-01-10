@@ -21,6 +21,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'tabscustomlabel', name: 'TabsCustomLabel', examples: ['tabs-custom-label']},
+        {id: 'tabstheme', name: 'TabsTheme', examples: ['tabs-theme']},
         {id: 'formfieldautocompletegroup', name: 'FormFieldAutocompleteGroup', examples: ['form-field-autocomplete-group']},
         {id: 'formfieldautocompleteicon', name: 'FormFieldAutocompleteIcon', examples: ['form-field-autocomplete-icon']},
         {id: 'formfieldcustomphonenumber', name: 'FormFieldCustomPhoneNumber', examples: ['form-field-custom-phone-number']},

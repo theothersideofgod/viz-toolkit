@@ -37,6 +37,14 @@ import {
 } from 'libs';
 
 import {
+  TabsCustomLabelComponent,
+  TabsCustomLabelData
+} from './tabs-custom-label/tabs-custom-label.component';
+import {
+  TabsThemeComponent,
+  TabsThemeData
+} from './tabs-theme/tabs-theme.component';
+import {
   FormFieldAutocompleteGroupComponent,
   FormFieldAutocompleteGroupData
 } from './form-field-autocomplete-group/form-field-autocomplete-group.component';
@@ -440,6 +448,14 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'tabs-custom-label' : {
+    component: TabsCustomLabelComponent,
+    data: TabsCustomLabelData
+  },
+  'tabs-theme' : {
+    component: TabsThemeComponent,
+    data: TabsThemeData
+  },
   'form-field-autocomplete-group' : {
     component: FormFieldAutocompleteGroupComponent,
     data: FormFieldAutocompleteGroupData
@@ -844,6 +860,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    TabsCustomLabelComponent,
+    TabsThemeComponent,
     FormFieldAutocompleteGroupComponent,
     FormFieldAutocompleteIconComponent,
     FormFieldCustomPhoneNumberComponent,
@@ -990,6 +1008,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TabsCustomLabelComponent,
+    TabsThemeComponent,
     FormFieldAutocompleteGroupComponent,
     FormFieldAutocompleteIconComponent,
     FormFieldCustomPhoneNumberComponent,

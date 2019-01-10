@@ -1,0 +1,14 @@
+<div class="mat-elevation-z2 tabs-wrap">
+  <mat-tab-group color="primary" backgroundColor="primary">
+    <mat-tab *ngFor="let link of navLinks; let i=index" [label]="link.label">
+      <div class="example-list">
+        <div class="example-list-item">
+          Clinical Database
+        </div>
+        <div class="example-list-item">
+          Service Line Analytics
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

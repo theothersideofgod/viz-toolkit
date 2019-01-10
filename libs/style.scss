@@ -663,6 +663,8 @@ td.mat-cell,
     .mat-tab-label {
       margin-right: 40px;
       margin-left: 0px;
+      min-width: 0px;
+      padding: 0px 0px;
     }
   }
   .mat-ink-bar {
