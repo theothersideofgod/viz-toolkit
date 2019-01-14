@@ -1,0 +1,177 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { FormControl } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> State {
+  value: <span class="hljs-built_in">string</span>;
+  viewValue: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> StateGroup {
+  disabled?: <span class="hljs-built_in">boolean</span>;
+  name: <span class="hljs-built_in">string</span>;
+  state: State[];
+}
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'select-group-option'</span>,
+  templateUrl: <span class="hljs-string">'select-group-option.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-group-option.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectGroupOptionComponent <span class="hljs-keyword">implements</span> OnInit {
+  stateControl = <span class="hljs-keyword">new</span> FormControl();
+  stateGroups: StateGroup[] = [
+    {
+      name: <span class="hljs-string">'A'</span>,
+      disabled: <span class="hljs-literal">true</span>,
+      state: [
+        { value: <span class="hljs-string">'Alabama'</span>, viewValue: <span class="hljs-string">'Alabama'</span> },
+        { value: <span class="hljs-string">'Alaska'</span>, viewValue: <span class="hljs-string">'Alaska'</span> },
+        { value: <span class="hljs-string">'Arizona'</span>, viewValue: <span class="hljs-string">'Arizona'</span> },
+        { value: <span class="hljs-string">'Arkansas'</span>, viewValue: <span class="hljs-string">'Arkansas'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'C'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [
+        { value: <span class="hljs-string">'California'</span>, viewValue: <span class="hljs-string">'California'</span> },
+        { value: <span class="hljs-string">'Colorado'</span>, viewValue: <span class="hljs-string">'Colorado'</span> },
+        { value: <span class="hljs-string">'Connecticut'</span>, viewValue: <span class="hljs-string">'Connecticut'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'D'</span>,
+      disabled: <span class="hljs-literal">true</span>,
+      state: [{ value: <span class="hljs-string">'Delaware'</span>, viewValue: <span class="hljs-string">'Delaware'</span> }]
+    },
+    {
+      name: <span class="hljs-string">'F'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [{ value: <span class="hljs-string">'Florida'</span>, viewValue: <span class="hljs-string">'Florida'</span> }]
+    },
+    {
+      name: <span class="hljs-string">'G'</span>,
+      disabled: <span class="hljs-literal">true</span>,
+      state: [{ value: <span class="hljs-string">'Georgia'</span>, viewValue: <span class="hljs-string">'Georgia'</span> }]
+    },
+    {
+      name: <span class="hljs-string">'H'</span>,
+      disabled: <span class="hljs-literal">true</span>,
+      state: [{ value: <span class="hljs-string">'Hawaii'</span>, viewValue: <span class="hljs-string">'Hawaii'</span> }]
+    },
+    {
+      name: <span class="hljs-string">'I'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [
+        { value: <span class="hljs-string">'Idaho'</span>, viewValue: <span class="hljs-string">'Idaho'</span> },
+        { value: <span class="hljs-string">'Illinois'</span>, viewValue: <span class="hljs-string">'Illinois'</span> },
+        { value: <span class="hljs-string">'Indiana'</span>, viewValue: <span class="hljs-string">'Indiana'</span> },
+        { value: <span class="hljs-string">'Iowa'</span>, viewValue: <span class="hljs-string">'Iowa'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'K'</span>,
+      disabled: <span class="hljs-literal">true</span>,
+      state: [
+        { value: <span class="hljs-string">'Kansas'</span>, viewValue: <span class="hljs-string">'Kansas'</span> },
+        { value: <span class="hljs-string">'Kentucky'</span>, viewValue: <span class="hljs-string">'Kentucky'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'L'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [{ value: <span class="hljs-string">'Louisiana'</span>, viewValue: <span class="hljs-string">'Louisiana'</span> }]
+    },
+    {
+      name: <span class="hljs-string">'M'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [
+        { value: <span class="hljs-string">'Maine'</span>, viewValue: <span class="hljs-string">'Maine'</span> },
+        { value: <span class="hljs-string">'Maryland'</span>, viewValue: <span class="hljs-string">'Maryland'</span> },
+        { value: <span class="hljs-string">'Massachusetts'</span>, viewValue: <span class="hljs-string">'Massachusetts'</span> },
+        { value: <span class="hljs-string">'Michigan'</span>, viewValue: <span class="hljs-string">'Michigan'</span> },
+        { value: <span class="hljs-string">'Minnesota'</span>, viewValue: <span class="hljs-string">'Minnesota'</span> },
+        { value: <span class="hljs-string">'Mississippi'</span>, viewValue: <span class="hljs-string">'Mississippi'</span> },
+        { value: <span class="hljs-string">'Missouri'</span>, viewValue: <span class="hljs-string">'Missouri'</span> },
+        { value: <span class="hljs-string">'Montana'</span>, viewValue: <span class="hljs-string">'Montana'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'N'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [
+        { value: <span class="hljs-string">'Nebraska'</span>, viewValue: <span class="hljs-string">'Nebraska'</span> },
+        { value: <span class="hljs-string">'Nevada'</span>, viewValue: <span class="hljs-string">'Nevada'</span> },
+        { value: <span class="hljs-string">'New Hampshire'</span>, viewValue: <span class="hljs-string">'New Hampshire'</span> },
+        { value: <span class="hljs-string">'New Jersey'</span>, viewValue: <span class="hljs-string">'New Jersey'</span> },
+        { value: <span class="hljs-string">'New Mexico'</span>, viewValue: <span class="hljs-string">'New Mexico'</span> },
+        { value: <span class="hljs-string">'New York'</span>, viewValue: <span class="hljs-string">'New York'</span> },
+        { value: <span class="hljs-string">'North Carolina'</span>, viewValue: <span class="hljs-string">'North Carolina'</span> },
+        { value: <span class="hljs-string">'North Dakota'</span>, viewValue: <span class="hljs-string">'North Dakota'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'O'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [
+        { value: <span class="hljs-string">'Ohio'</span>, viewValue: <span class="hljs-string">'Ohio'</span> },
+        { value: <span class="hljs-string">'Oklahoma'</span>, viewValue: <span class="hljs-string">'Oklahoma'</span> },
+        { value: <span class="hljs-string">'Oregon'</span>, viewValue: <span class="hljs-string">'Oregon'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'P'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [{ value: <span class="hljs-string">'Pennsylvania'</span>, viewValue: <span class="hljs-string">'Pennsylvania'</span> }]
+    },
+    {
+      name: <span class="hljs-string">'R'</span>,
+      disabled: <span class="hljs-literal">true</span>,
+      state: [{ value: <span class="hljs-string">'Rhode Island'</span>, viewValue: <span class="hljs-string">'Rhode Island'</span> }]
+    },
+    {
+      name: <span class="hljs-string">'S'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [
+        { value: <span class="hljs-string">'South Carolina'</span>, viewValue: <span class="hljs-string">'South Carolina'</span> },
+        { value: <span class="hljs-string">'South Dakota'</span>, viewValue: <span class="hljs-string">'South Dakota'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'T'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [
+        { value: <span class="hljs-string">'Tennessee'</span>, viewValue: <span class="hljs-string">'Tennessee'</span> },
+        { value: <span class="hljs-string">'Texas'</span>, viewValue: <span class="hljs-string">'Texas'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'U'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [{ value: <span class="hljs-string">'Utah'</span>, viewValue: <span class="hljs-string">'Utah'</span> }]
+    },
+    {
+      name: <span class="hljs-string">'V'</span>,
+      disabled: <span class="hljs-literal">false</span>,
+      state: [
+        { value: <span class="hljs-string">'Vermont'</span>, viewValue: <span class="hljs-string">'Vermont'</span> },
+        { value: <span class="hljs-string">'Virginia'</span>, viewValue: <span class="hljs-string">'Virginia'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'W'</span>,
+      disabled: <span class="hljs-literal">true</span>,
+      state: [
+        { value: <span class="hljs-string">'Washington'</span>, viewValue: <span class="hljs-string">'Washington'</span> },
+        { value: <span class="hljs-string">'West Virginia'</span>, viewValue: <span class="hljs-string">'West Virginia'</span> },
+        { value: <span class="hljs-string">'Wisconsin'</span>, viewValue: <span class="hljs-string">'Wisconsin'</span> },
+        { value: <span class="hljs-string">'Wyoming'</span>, viewValue: <span class="hljs-string">'Wyoming'</span> }
+      ]
+    }
+  ];
+  ngOnInit() {}
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SelectGroupOptionData = {
+  name: <span class="hljs-string">'SelectGroupOption'</span>
+};

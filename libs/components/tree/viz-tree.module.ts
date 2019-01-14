@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VizTreeComponent } from './viz-tree.component';
 import { VizTreeCellComponent } from './viz-tree-cell/viz-tree-cell.component';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule, MatTreeModule } from '@angular/material';
 import { VizTreeNodeDefDirective } from './viz-tree-node-def.directive';
 import { VizTreeLeafDefDirective } from './viz-tree-leaf-def.directive';
 
@@ -15,7 +15,8 @@ import { VizTreeLeafDefDirective } from './viz-tree-leaf-def.directive';
     VizTreeComponent,
     VizTreeCellComponent,
     VizTreeNodeDefDirective,
-    VizTreeLeafDefDirective
+    VizTreeLeafDefDirective,
+    MatTreeModule
   ],
   declarations: [
     VizTreeComponent,

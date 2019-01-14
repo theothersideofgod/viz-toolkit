@@ -37,6 +37,42 @@ import {
 } from 'libs';
 
 import {
+  SelectTriggerTextComponent,
+  SelectTriggerTextData
+} from './select-trigger-text/select-trigger-text.component';
+import {
+  SelectMultipleSelectionComponent,
+  SelectMultipleSelectionData
+} from './select-multiple-selection/select-multiple-selection.component';
+import {
+  SelectGroupOptionComponent,
+  SelectGroupOptionData
+} from './select-group-option/select-group-option.component';
+import {
+  SelectErrorStateComponent,
+  SelectErrorStateData
+} from './select-error-state/select-error-state.component';
+import {
+  TreeCheckboxMaterialComponent,
+  TreeCheckboxMaterialData
+} from './tree-checkbox-material/tree-checkbox-material.component';
+import {
+  TreePartiallyLoadedComponent,
+  TreePartiallyLoadedData
+} from './tree-partially-loaded/tree-partially-loaded.component';
+import {
+  TreeNestedNodesComponent,
+  TreeNestedNodesData
+} from './tree-nested-nodes/tree-nested-nodes.component';
+import {
+  TreeFlatNodesComponent,
+  TreeFlatNodesData
+} from './tree-flat-nodes/tree-flat-nodes.component';
+import {
+  TreeDynamicDataComponent,
+  TreeDynamicDataData
+} from './tree-dynamic-data/tree-dynamic-data.component';
+import {
   MenuIconComponent,
   MenuIconData
 } from './menu-icon/menu-icon.component';
@@ -476,6 +512,42 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'select-trigger-text' : {
+    component: SelectTriggerTextComponent,
+    data: SelectTriggerTextData
+  },
+  'select-multiple-selection' : {
+    component: SelectMultipleSelectionComponent,
+    data: SelectMultipleSelectionData
+  },
+  'select-group-option' : {
+    component: SelectGroupOptionComponent,
+    data: SelectGroupOptionData
+  },
+  'select-error-state' : {
+    component: SelectErrorStateComponent,
+    data: SelectErrorStateData
+  },
+  'tree-checkbox-material' : {
+    component: TreeCheckboxMaterialComponent,
+    data: TreeCheckboxMaterialData
+  },
+  'tree-partially-loaded' : {
+    component: TreePartiallyLoadedComponent,
+    data: TreePartiallyLoadedData
+  },
+  'tree-nested-nodes' : {
+    component: TreeNestedNodesComponent,
+    data: TreeNestedNodesData
+  },
+  'tree-flat-nodes' : {
+    component: TreeFlatNodesComponent,
+    data: TreeFlatNodesData
+  },
+  'tree-dynamic-data' : {
+    component: TreeDynamicDataComponent,
+    data: TreeDynamicDataData
+  },
   'menu-icon' : {
     component: MenuIconComponent,
     data: MenuIconData
@@ -916,6 +988,15 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    SelectTriggerTextComponent,
+    SelectMultipleSelectionComponent,
+    SelectGroupOptionComponent,
+    SelectErrorStateComponent,
+    TreeCheckboxMaterialComponent,
+    TreePartiallyLoadedComponent,
+    TreeNestedNodesComponent,
+    TreeFlatNodesComponent,
+    TreeDynamicDataComponent,
     MenuIconComponent,
     DatePickerRangeValidationComponent,
     DatePickerEmulatingComponent,
@@ -1071,6 +1152,15 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SelectTriggerTextComponent,
+    SelectMultipleSelectionComponent,
+    SelectGroupOptionComponent,
+    SelectErrorStateComponent,
+    TreeCheckboxMaterialComponent,
+    TreePartiallyLoadedComponent,
+    TreeNestedNodesComponent,
+    TreeFlatNodesComponent,
+    TreeDynamicDataComponent,
     MenuIconComponent,
     DatePickerRangeValidationComponent,
     DatePickerEmulatingComponent,

@@ -398,6 +398,18 @@ td.mat-cell,
 .mat-checkbox-frame {
   border-color: #9f9f9f !important;
 }
+
+.mat-tree {
+  .mat-tree-node {
+    color: $viz-dark-gray;
+    font-weight: 300;
+  }
+  .mat-icon-button {
+    
+  }
+}
+
+
 //input font-size
 .mat-form-field-infix {
   textarea {
@@ -1021,19 +1033,50 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
   position: absolute;
   top: 25px;
   left: 16px;
-  min-width: 280px;
+  // min-width: 280px;
   .mat-select-content {
-    min-width: 280px;
+    // min-width: 280px;
     .mat-option {
       height: 40px;
       line-height: 40px;
       font-weight: 300;
+    }
+    .mat-optgroup {
+      .mat-optgroup-label {
+        font-weight: 300;
+        color: $viz-gray;
+      }
+      .mat-option {
+        .mat-icon {
+          color: $viz-dark-gray
+        }
+        color: $viz-gray;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        height: 40px;
+        &:hover {
+          color: $viz-purple;
+          .mat-icon {
+            color: $viz-purple;
+          }
+        }
+        &.mat-selected {
+          color: $viz-purple !important;
+          .mat-icon {
+            color: $viz-purple;
+          }
+        }
+      }
     }
   }
 
   &.mat-focused {
 
   }
+}
+.mat-select-panel.viz-select.viz-select-multi {
+  left: 44px;
 }
 .mat-form-field {
   vertical-align: middle;
