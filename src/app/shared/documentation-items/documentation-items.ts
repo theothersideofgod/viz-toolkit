@@ -21,6 +21,11 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'button&indicatiors',
       name: 'Button & Indicatiors',
       items: [
+        {id: 'dialogcomplex', name: 'DialogComplex', examples: ['dialog-complex']},
+        {id: 'dialogconfirmation', name: 'DialogConfirmation', examples: ['dialog-confirmation']},
+        {id: 'dialogcontent', name: 'DialogContent', examples: ['dialog-content']},
+        {id: 'dialogdata', name: 'DialogData', examples: ['dialog-data']},
+        {id: 'dialogalert', name: 'DialogAlert', examples: ['dialog-alert']},
         {id: 'selecttriggertext', name: 'SelectTriggerText', examples: ['select-trigger-text']},
         {id: 'selectmultipleselection', name: 'SelectMultipleSelection', examples: ['select-multiple-selection']},
         {id: 'selectgroupoption', name: 'SelectGroupOption', examples: ['select-group-option']},

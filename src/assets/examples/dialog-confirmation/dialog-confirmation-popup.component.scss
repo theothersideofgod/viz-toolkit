@@ -1,0 +1,32 @@
+.dialog-content {
+  padding: 32px 24px 24px 24px;
+
+  &-title {
+    height: 25px;
+    color: #212121;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 24px;
+  }
+
+  &-message {
+    width: 352px;
+    color: #696969;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  &-input {
+    width: 100%;
+  }
+}
+.dialog-footer {
+  height: 84px;
+  padding: 24px;
+  box-sizing: border-box;
+  button {
+    float: right;
+  }
+}
+

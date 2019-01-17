@@ -121,7 +121,9 @@ export class ExampleViewer implements OnInit {
       'date-picker-min-max-validation',
       'date-picker-filter-validation',
       'date-picker-emulating',
-      'date-picker-range-validation'
+      'date-picker-range-validation',
+      'dialog-content',
+      'dialog-confirmation'
     ];
 
     if (relatedDatepickerExamples.indexOf(this._example) !== -1) {

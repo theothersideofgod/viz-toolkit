@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DatePickerRangeValidationComponent implements OnInit {
   minDate = new Date(2000, 0, 1);
   maxDate = new Date(2020, 0, 1);
+  onClose() {}
   ngOnInit() { }
 }
 

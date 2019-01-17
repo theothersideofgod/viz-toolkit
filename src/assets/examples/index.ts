@@ -37,6 +37,31 @@ import {
 } from 'libs';
 
 import {
+  DialogComplexComponent,
+  DialogComplexData,
+  DialogComplexPopupComponent
+} from './dialog-complex/dialog-complex.component';
+import {
+  DialogConfirmationComponent,
+  DialogConfirmationData,
+  DialogConfirmationPopupComponent
+} from './dialog-confirmation/dialog-confirmation.component';
+import {
+  DialogContentComponent,
+  DialogContentData,
+  DialogContentPopupComponent
+} from './dialog-content/dialog-content.component';
+import {
+  DialogDataComponent,
+  DialogDataData,
+  DialogDataPopupComponent
+} from './dialog-data/dialog-data.component';
+import {
+  DialogAlertComponent,
+  DialogAlertData,
+  DialogAlertPopupComponent
+} from './dialog-alert/dialog-alert.component';
+import {
   SelectTriggerTextComponent,
   SelectTriggerTextData
 } from './select-trigger-text/select-trigger-text.component';
@@ -512,6 +537,26 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'dialog-complex' : {
+    component: DialogComplexComponent,
+    data: DialogComplexData
+  },
+  'dialog-confirmation' : {
+    component: DialogConfirmationComponent,
+    data: DialogConfirmationData
+  },
+  'dialog-content' : {
+    component: DialogContentComponent,
+    data: DialogContentData
+  },
+  'dialog-data' : {
+    component: DialogDataComponent,
+    data: DialogDataData
+  },
+  'dialog-alert' : {
+    component: DialogAlertComponent,
+    data: DialogAlertData
+  },
   'select-trigger-text' : {
     component: SelectTriggerTextComponent,
     data: SelectTriggerTextData
@@ -988,6 +1033,11 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    DialogComplexComponent,
+    DialogConfirmationComponent,
+    DialogContentComponent,
+    DialogDataComponent,
+    DialogAlertComponent,
     SelectTriggerTextComponent,
     SelectMultipleSelectionComponent,
     SelectGroupOptionComponent,
@@ -1108,7 +1158,12 @@ export const ALL_EXAMPLE_ITEMS = {
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent,
-    MyTelInput
+    MyTelInput,
+    DialogAlertPopupComponent,
+    DialogComplexPopupComponent,
+    DialogDataPopupComponent,
+    DialogContentPopupComponent,
+    DialogConfirmationPopupComponent
   ],
   imports: [
     RouterModule,
@@ -1152,6 +1207,11 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    DialogComplexComponent,
+    DialogConfirmationComponent,
+    DialogContentComponent,
+    DialogDataComponent,
+    DialogAlertComponent,
     SelectTriggerTextComponent,
     SelectMultipleSelectionComponent,
     SelectGroupOptionComponent,
@@ -1272,7 +1332,12 @@ export const ALL_EXAMPLE_ITEMS = {
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent,
-    MyTelInput
+    MyTelInput,
+    DialogAlertPopupComponent,
+    DialogComplexPopupComponent,
+    DialogDataPopupComponent,
+    DialogContentPopupComponent,
+    DialogConfirmationPopupComponent
   ]
 })
 export class ExampleModule {}
