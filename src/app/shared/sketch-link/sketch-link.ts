@@ -98,6 +98,9 @@ const sketch_link = {
   ],
   iconography: [
     'Insert / Toolkit Material Library / ✱ / Icon / (Select desired icon)'
+  ],
+  divider: [
+    'Insert / Toolkit Material Library / ✱ / Divider'
   ]
 };
 
