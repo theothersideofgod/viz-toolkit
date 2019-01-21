@@ -490,6 +490,9 @@ td.mat-cell,
     margin-right: 8px;
     font-size: 14px;
   }
+  .mat-form-field-suffix {
+    cursor: pointer;
+  }
   &.mat-form-field-appearance-legacy {
     .mat-form-field-infix {
       // margin-bottom: 5px;
