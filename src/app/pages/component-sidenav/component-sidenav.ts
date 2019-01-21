@@ -97,7 +97,7 @@ const initNavList = [
     ]
   },
   {
-    name: 'Layout',
+    name: 'Layouts',
     subs: [
       {
         name: 'Card',
