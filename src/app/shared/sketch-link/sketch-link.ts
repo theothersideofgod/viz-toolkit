@@ -95,6 +95,9 @@ const sketch_link = {
   ],
   httpstatus: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Error States'
+  ],
+  iconography: [
+    'Insert / Toolkit Material Library / ✱ / Icon / (Select desired icon)'
   ]
 };
 
