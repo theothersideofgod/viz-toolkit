@@ -130,7 +130,7 @@ const initNavList = [
     ]
   },
   {
-    name: 'Button & Indicatiors',
+    name: 'Buttons & Indicators',
     subs: [
       {
         name: 'Button',

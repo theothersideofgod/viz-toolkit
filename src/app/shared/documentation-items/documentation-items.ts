@@ -18,8 +18,8 @@ const COMPONENTS = 'components';
 const DOCS: {[key: string]: DocCategory[]} = {
   [COMPONENTS]: [
     {
-      id: 'button&indicatiors',
-      name: 'Button & Indicatiors',
+      id: 'buttons&indicators',
+      name: 'Buttons & Indicators',
       items: [
         {id: 'dialogcomplex', name: 'DialogComplex', examples: ['dialog-complex']},
         {id: 'dialogconfirmation', name: 'DialogConfirmation', examples: ['dialog-confirmation']},
