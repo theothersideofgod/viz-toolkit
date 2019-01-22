@@ -123,7 +123,6 @@ export class ExampleViewer implements OnInit {
       'date-picker-emulating',
       'date-picker-range-validation',
       'dialog-content',
-      'dialog-confirmation'
     ];
 
     if (relatedDatepickerExamples.indexOf(this._example) !== -1) {

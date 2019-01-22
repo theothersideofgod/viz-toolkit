@@ -390,6 +390,13 @@ td.mat-cell,
     margin-left: 8px;
   }
 }
+.mat-raised-button, .mat-flat-button {
+  &.mat-primary[disabled] {
+    color: #ffffff !important;
+    background-color: $viz-purple !important;
+    opacity: 0.4;
+  }
+}
 
 //tree style
 .mat-checkbox-label {
