@@ -110,29 +110,71 @@ export class ExampleViewer implements OnInit {
     });
 
     // datepicker too big, viewport need to be more higher
-    const relatedDatepickerExamples = [
-      'date-picker-basic',
-      'date-picker-single',
-      'month-picker-range',
-      'month-picker-single',
-      'date-picker-single-error',
-      'date-picker-start-date',
-      'date-picker-selected-value',
-      'date-picker-min-max-validation',
-      'date-picker-filter-validation',
-      'date-picker-emulating',
-      'date-picker-range-validation',
-      'dialog-content',
-    ];
+    // const relatedDatepickerExamples = [
+    //   'date-picker-basic',
+    //   'date-picker-single',
+    //   'month-picker-range',
+    //   'month-picker-single',
+    //   'date-picker-single-error',
+    //   'date-picker-start-date',
+    //   'date-picker-selected-value',
+    //   'date-picker-min-max-validation',
+    //   'date-picker-filter-validation',
+    //   'date-picker-emulating',
+    //   'date-picker-range-validation',
+    //   'dialog-content',
+    // ];
 
-    if (relatedDatepickerExamples.indexOf(this._example) !== -1) {
-      return viewportObj[this.platform] + ' datepicker-viewport';
-    }
+    // if (relatedDatepickerExamples.indexOf(this._example) !== -1) {
+    //   return viewportObj[this.platform] + ' datepicker-viewport';
+    // }
 
-    if (['dialog-basic'].indexOf(this._example) !== -1) {
-      return viewportObj[this.platform] + ' dialog-viewport';
-    }
+    // if (['dialog-basic'].indexOf(this._example) !== -1) {
+    //   return viewportObj[this.platform] + ' dialog-viewport';
+    // }
 
     return viewportObj[this.platform];
   }
+
+  getIframeStyle() {
+    let heightMapper = {
+      'date-picker-basic':1000,
+      'date-picker-single':1000,
+      'month-picker-range':1000,
+      'month-picker-single':1000,
+      'date-picker-single-error':1000,
+      'date-picker-start-date':1000,
+      'date-picker-selected-value':1000,
+      'date-picker-min-max-validation':1000,
+      'date-picker-filter-validation':1000,
+      'date-picker-emulating':1000,
+      'date-picker-range-validation':1000,
+      'dialog-content':700,
+      'menu-basic':240,
+      'menu-icon':240,
+      'menu-nested': 240,
+      'header-basic':300,
+      'header-application': 300,
+      'expansion-panel-table':300,
+      'expansion-panel-angular':300,
+      'stepper-vertical':300,
+      'stepper-custom':300,
+      'select-basic':250,
+      'select-error-state': 250,
+      'select-disable': 250,
+      'select-group-option': 250,
+      'select-multiple-selection': 250,
+      'select-trigger-text': 250
+    }
+    if(heightMapper[this._example]) {
+      return {
+        height: `${heightMapper[this._example]}px`
+      }
+    }else {
+      return {
+        height: '120px'
+      }
+    }
+  }
+
 }
