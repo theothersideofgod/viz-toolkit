@@ -164,7 +164,8 @@ export class ExampleViewer implements OnInit {
       'select-disable': 250,
       'select-group-option': 250,
       'select-multiple-selection': 250,
-      'select-trigger-text': 250
+      'select-trigger-text': 250,
+      'paginator-basic': 220
     }
     if(heightMapper[this._example]) {
       return {
