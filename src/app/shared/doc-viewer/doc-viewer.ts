@@ -18,6 +18,7 @@ import { ExampleViewer } from '../example-viewer/example-viewer';
 import { HeaderLink } from './header-link';
 import { DocViewerExtend } from './doc-viewer-extend';
 import { SketchLink } from '../sketch-link/sketch-link';
+import { ModifiedLabel } from '../modified-label/modified-label';
 
 @Component({
   selector: 'doc-viewer',
@@ -77,6 +78,7 @@ export class DocViewer implements OnDestroy {
     // lucas
     this._loadComponents('doc-viewer-extend', DocViewerExtend);
     this._loadComponents('sketch-link', SketchLink);
+    this._loadComponents('modified-label', ModifiedLabel)
 
     this._fixFragmentUrls();
     this.contentLoaded.next();
@@ -100,6 +102,7 @@ export class DocViewer implements OnDestroy {
     // lucas
     this._loadComponents('doc-viewer-extend', DocViewerExtend);
     this._loadComponents('sketch-link', SketchLink);
+    this._loadComponents('modified-label', ModifiedLabel)
   }
 
   /** Instantiate a ExampleViewer for each example. */
