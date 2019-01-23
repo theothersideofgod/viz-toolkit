@@ -1,15 +1,15 @@
 <span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-meta">@Component</span>({
-	selector: <span class="hljs-string">'form-field-hint'</span>,
+  selector: <span class="hljs-string">'form-field-hint'</span>,
   templateUrl: <span class="hljs-string">'form-field-hint.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'form-field-hint.component.css'</span>],
+  styleUrls: [<span class="hljs-string">'form-field-hint.component.css'</span>]
 })
-
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldHintComponent <span class="hljs-keyword">implements</span> OnInit {
-  ngOnInit() { }
+  value = <span class="hljs-string">'Input here'</span>;
+  ngOnInit() {}
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FormFieldHintData = {
-	name: <span class="hljs-string">'FormFieldHint'</span>
-}
+  name: <span class="hljs-string">'FormFieldHint'</span>
+};

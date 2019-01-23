@@ -1,5 +1,5 @@
-<form [formGroup]="stateForm" class="example-centralization">
-  <mat-form-field>
+<form [formGroup]="stateForm" class="example-container">
+  <mat-form-field class="example-full-width">
     <input type="text" matInput placeholder="States Group" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
     <mat-autocomplete #autoGroup="matAutocomplete" class="viz-autocomplete-dropdown">
       <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">

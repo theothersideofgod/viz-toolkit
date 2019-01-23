@@ -173,7 +173,10 @@ export class ExampleViewer implements OnInit {
       'paginator-basic': 220,
       'table-native':210,
       'nodata-basic':230,
-      'divider': 250
+      'divider': 250,
+      'form-field-autocomplete':250,
+      'form-field-autocomplete-icon':250,
+      'form-field-autocomplete-group': 350
     }
     if(heightMapper[this._example]) {
       return {
