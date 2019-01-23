@@ -5,7 +5,7 @@ import { DOCUMENT } from '@angular/common';
 
 const initNavList = [
   {
-    name: 'Getting started',
+    name: 'Getting Started',
     subs: [
       {
         name: 'Designers',
