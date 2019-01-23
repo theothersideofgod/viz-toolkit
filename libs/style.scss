@@ -450,6 +450,15 @@ td.mat-cell,
       color: #7f5eba;
     }
   }
+  &.mat-form-field-should-float {
+    .mat-form-field-label {
+      height: 21.333px;
+      line-height: 21.333px;
+      font-size: 16px !important;
+    }
+  }
+
+  
 
   // &.mat-form-field-disabled {
   //   .mat-form-field-underline {
@@ -484,11 +493,7 @@ td.mat-cell,
     font-size: 14px;
     padding: 5px 0px;
   }
-  .mat-form-field-label {
-    height: 21.333px;
-    line-height: 21.333px;
-    font-size: 16px;
-  }
+  
   .mat-form-field-flex {
     align-items: stretch;
   }
@@ -533,8 +538,10 @@ td.mat-cell,
     color: #9f9f9f;
   }
 
-  .mat-form-field-appearance-legacy .mat-form-field-label {
+  &.mat-form-field-appearance-legacy .mat-form-field-label {
     color: #9f9f9f;
+    font-size: 14px;
+    top: 22px;
   }
   .mat-form-field-appearance-legacy .mat-form-field-underline {
     background-color: #c3c3c3;
