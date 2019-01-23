@@ -172,7 +172,8 @@ export class ExampleViewer implements OnInit {
       'select-trigger-text': 250,
       'paginator-basic': 220,
       'table-native':210,
-      'nodata-basic':230
+      'nodata-basic':230,
+      'divider': 250
     }
     if(heightMapper[this._example]) {
       return {
