@@ -150,6 +150,11 @@ export class ExampleViewer implements OnInit {
       'date-picker-emulating':1000,
       'date-picker-range-validation':1000,
       'dialog-content':700,
+      'dialog-alert':250,
+      'dialog-basic':650,
+      'dialog-data':250,
+      'dialog-confirmation':300,
+      'dialog-complex':300,
       'menu-basic':240,
       'menu-icon':240,
       'menu-nested': 240,
@@ -165,7 +170,9 @@ export class ExampleViewer implements OnInit {
       'select-group-option': 250,
       'select-multiple-selection': 250,
       'select-trigger-text': 250,
-      'paginator-basic': 220
+      'paginator-basic': 220,
+      'table-native':210,
+      'nodata-basic':230
     }
     if(heightMapper[this._example]) {
       return {
