@@ -1,6 +1,7 @@
 <div class="example-wrapper">
   <mat-form-field>
-    <mat-select placeholder="state" disableOptionCentering disableRipple [formControl]="stateControl" panelClass="viz-select">
+    <mat-label>State</mat-label>
+    <mat-select placeholder="Select a State" disableOptionCentering disableRipple [formControl]="stateControl" panelClass="viz-select viz-select-group">
       <mat-optgroup *ngFor="let group of stateGroups" [label]="group.name" [disabled]="group.disabled">
         <mat-option *ngFor="let state of group.state" [value]="state.value">
           {{state.viewValue}}

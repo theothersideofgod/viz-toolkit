@@ -22,7 +22,7 @@ export class SelectGroupOptionComponent implements OnInit {
   stateGroups: StateGroup[] = [
     {
       name: 'A',
-      disabled: true,
+      disabled: false,
       state: [
         { value: 'Alabama', viewValue: 'Alabama' },
         { value: 'Alaska', viewValue: 'Alaska' },
@@ -41,7 +41,7 @@ export class SelectGroupOptionComponent implements OnInit {
     },
     {
       name: 'D',
-      disabled: true,
+      disabled: false,
       state: [{ value: 'Delaware', viewValue: 'Delaware' }]
     },
     {
@@ -51,12 +51,12 @@ export class SelectGroupOptionComponent implements OnInit {
     },
     {
       name: 'G',
-      disabled: true,
+      disabled: false,
       state: [{ value: 'Georgia', viewValue: 'Georgia' }]
     },
     {
       name: 'H',
-      disabled: true,
+      disabled: false,
       state: [{ value: 'Hawaii', viewValue: 'Hawaii' }]
     },
     {
@@ -71,7 +71,7 @@ export class SelectGroupOptionComponent implements OnInit {
     },
     {
       name: 'K',
-      disabled: true,
+      disabled: false,
       state: [
         { value: 'Kansas', viewValue: 'Kansas' },
         { value: 'Kentucky', viewValue: 'Kentucky' }
@@ -126,7 +126,7 @@ export class SelectGroupOptionComponent implements OnInit {
     },
     {
       name: 'R',
-      disabled: true,
+      disabled: false,
       state: [{ value: 'Rhode Island', viewValue: 'Rhode Island' }]
     },
     {
@@ -160,7 +160,7 @@ export class SelectGroupOptionComponent implements OnInit {
     },
     {
       name: 'W',
-      disabled: true,
+      disabled: false,
       state: [
         { value: 'Washington', viewValue: 'Washington' },
         { value: 'West Virginia', viewValue: 'West Virginia' },

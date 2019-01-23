@@ -1091,6 +1091,10 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
 .mat-select-panel.viz-select.viz-select-multi {
   left: 44px;
 }
+.mat-select-panel.viz-select.viz-select-group {
+  min-width: inherit !important;
+  left: 32px;
+}
 .mat-form-field {
   vertical-align: middle;
   &.mat-form-field-disabled {
