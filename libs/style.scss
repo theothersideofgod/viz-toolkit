@@ -1108,9 +1108,15 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
     opacity: 0.4;
   }
 }
+mat-select {
+  .mat-select-arrow {
+    color: $viz-dark-gray
+  }
+}
 mat-select[aria-activedescendant] {
   .mat-select-arrow {
-    transform: rotate(180deg)
+    transform: rotate(180deg);
+    color: #000000 !important
   }
 }
 
