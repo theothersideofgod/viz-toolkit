@@ -166,7 +166,7 @@ export class ExampleViewer implements OnInit {
       'stepper-custom':300,
       'select-basic':250,
       'select-error-state': 250,
-      'select-disable': 250,
+      'select-disable': 80,
       'select-group-option': 250,
       'select-multiple-selection': 250,
       'select-trigger-text': 250,
@@ -176,15 +176,15 @@ export class ExampleViewer implements OnInit {
       'divider': 250,
       'form-field-autocomplete':250,
       'form-field-autocomplete-icon':250,
-      'form-field-autocomplete-group': 350
+      'form-field-autocomplete-group': 350,
     }
     if(heightMapper[this._example]) {
       return {
-        height: `${heightMapper[this._example]}px`
+        height: `${heightMapper[this._example] - 15 + 56 + 56}px`
       }
     }else {
       return {
-        height: '120px'
+        height: '220px'
       }
     }
   }
