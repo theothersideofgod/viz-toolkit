@@ -831,8 +831,7 @@ mat-chip {
   }
   
 }
-
-div[ng-reflect-klass="mat-select-panel mat-primary"] {
+.cdk-overlay-pane {
   .mat-select-content {
     .mat-option {
       // height: 40px;
