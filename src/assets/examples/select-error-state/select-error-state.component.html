@@ -1,5 +1,5 @@
 <div class="example-wrapper">
-  <mat-form-field>
+  <mat-form-field class="example-full-width">
     <mat-select placeholder="Choose one" disableOptionCentering disableRipple [formControl]="selected" [errorStateMatcher]="matcher"
       panelClass="viz-select">
       <mat-option *ngFor="let type of types" [value]="type">{{ type }}</mat-option>
