@@ -184,7 +184,7 @@ export class ExampleViewer implements OnInit {
       }
     }else {
       return {
-        height: '220px'
+        height: '160px'
       }
     }
   }
