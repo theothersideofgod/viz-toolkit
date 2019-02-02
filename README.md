@@ -205,3 +205,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Add month picker.
 - Add Expansion Panel Angular Material Examples.
 - Add custom stepper component.
+
+1.0.8
+- Update Component Content : Checkbox(example), Datepicker(example), Form Fields(example), Radio Button(example), Menu(example), List(exmaple), Tab(example),  Dialog (Examples, Usage & content guidelines, Design specs) 
