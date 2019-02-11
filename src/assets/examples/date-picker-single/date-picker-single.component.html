@@ -1,21 +1,7 @@
-<form class="vizient-input example-wrapper">
+<div class="example-wrapper">
   <mat-form-field>
-    <input
-      matInput
-      placeholder="Choose a date"
-      [matRangeDatepicker]="resultPicker"
-      name="date"
-      typeMode="date"
-    />
-    <mat-range-datepicker
-      #resultPicker
-      (closed)="onClose()"
-      typeMode="date"
-    >
-    </mat-range-datepicker>
-    <mat-range-datepicker-toggle
-      matSuffix
-      [for]="resultPicker"
-    ></mat-range-datepicker-toggle>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
-</form>
+</div>

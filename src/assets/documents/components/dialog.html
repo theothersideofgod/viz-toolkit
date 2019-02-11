@@ -25,15 +25,61 @@
   </div>
   <div class="doc-title-2">
     Examples
+    <span class="docs-more-example" doc-viewer-extend="exampleWrapper"></span>
     <span class="docs-markdown-h3" id="examples">
       <span header-link="examples"></span>Examples</span>
   </div>
-  <div class="doc-desc-2">
-    Dialogs should be used for: Errors that block an app&#x2019;s normal operation. Critical information that requires a specific user
-    task, decision, or acknowledgement.</div>
+
+  <div class="doc-title-4 mb-8">Alert Dialog</div>
+  <div class="doc-desc-2 mb-16">Alert dialog interrupts users with urgent information, details, or actions.</div>
   <div class="doc-example-container">
-    <div app-docs-example="dialog-basic"></div>
+    <div app-docs-example="dialog-alert"></div>
   </div>
+
+  <div id="exampleWrapper">
+
+    <div class="doc-title-4 mb-8">Basic Dialog</div>
+    <div class="doc-desc-2">Basic dialog poses a specific question, concisely explains what’s involved in the request, and provides clear actions.</div>
+    <div class="doc-example-container">
+      <div app-docs-example="dialog-complex"></div>
+    </div>
+
+    <div class="doc-title-4 mb-8">Data Dialog</div>
+    <div class="doc-desc-2">Data dialog injecting data when opening a dialog.</div>
+    <div class="doc-example-container">
+      <div app-docs-example="dialog-data"></div>
+    </div>
+
+    <div class="doc-title-4 mb-8">Dialog with Header, Scrollable Content and Actions</div>
+    <div class="doc-desc-2">
+      When a height is set on a dialog on open that forces vertical scrolling, the content should be the only thing that scrolls.
+      The header and actions should stay fixed with a border separating the containers from the content.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="dialog-content"></div>
+    </div>
+
+    <div class="doc-title-4 mb-8">Confirmation Dialog<span modified-label></span></div>
+    <div class="doc-desc-2">
+      Confirmation dialogs give users the ability to provide final confirmation of a choice before committing to it, so they have
+      a chance to change their minds if necessary. If the user confirms a choice, it’s carried out. Otherwise, the user can
+      dismiss the dialog.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="dialog-confirmation"></div>
+    </div>
+
+    <div class="doc-title-4 mb-8">Complex Dialog<span modified-label></span></div>
+    <div class="doc-desc-2">
+      Complex dialogs contains a series of tasks, such as radio buttons, checkboxes, form fields or dropdowns that require a series
+      of tasks to complete.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="dialog-basic"></div>
+    </div>
+
+  </div>
+
 
   <div class="doc-divider">
   </div>
@@ -118,8 +164,8 @@
   </div>
 
   <div class="doc-desc-2">
-    This dialog title poses a specific question, concisely explains what&#x2019;s involved in the request, and provides clear actions.
-    Don&#x2019;t use dialog titles that pose an ambiguous question.
+    This dialog title poses a specific question, concisely explains what&#x2019;s involved in the request, and provides clear
+    actions. Don&#x2019;t use dialog titles that pose an ambiguous question.
   </div>
 
   <div class="docs-guideline-group">
@@ -167,7 +213,8 @@
     Component Location for Designers
     <span class="docs-markdown-h3" id="component_location_for_designers">
       <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
-  </div><a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sektch File</a>
+  </div>
+  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sektch File</a>
 
   <div class="doc-desc-2">
     For designers, to add this component to your design, follow this path within the Sketch App UI:

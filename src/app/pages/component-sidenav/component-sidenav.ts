@@ -5,7 +5,7 @@ import { DOCUMENT } from '@angular/common';
 
 const initNavList = [
   {
-    name: 'Getting started',
+    name: 'Getting Started',
     subs: [
       {
         name: 'Designers',
@@ -27,6 +27,10 @@ const initNavList = [
       {
         name: 'Typography',
         value: 'typography'
+      },
+      {
+        name: 'Iconography',
+        value: 'iconography'
       }
     ]
   },
@@ -46,7 +50,7 @@ const initNavList = [
         value: 'formfield'
       },
       {
-        name: 'Radio Buttons',
+        name: 'Radio Button',
         value: 'radio'
       },
       {
@@ -118,11 +122,15 @@ const initNavList = [
       {
         name: 'Stepper',
         value: 'stepper'
+      },
+      {
+        name: 'Divider',
+        value: 'divider'
       }
     ]
   },
   {
-    name: 'Button & Indicatiors',
+    name: 'Buttons & Indicators',
     subs: [
       {
         name: 'Button',

@@ -14,7 +14,7 @@ export interface User {
 })
 export class FormFieldAutocompleteComponent implements OnInit {
   myControl = new FormControl();
-  options: User[] = [{ name: 'Mary' }, { name: 'Shelley' }, { name: 'Igor' }];
+  options: User[] = [{ name: 'On' }, { name: 'Off' }, { name: 'Offline' }, { name: 'Offset' }];
   filteredOptions: Observable<User[]>;
 
   ngOnInit() {

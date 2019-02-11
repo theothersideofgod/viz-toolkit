@@ -1,13 +1,11 @@
-<div class="example-centralization">
-  <mat-form-field>
+<div class="example-container">
+  <mat-form-field class="example-full-width">
     <input
       type="text"
       matInput
       autocomplete="off"
-      (focus)="value = ''"
       [(ngModel)]="value"
-      (blur)="value = 'All Member'"
-      placeholder="Member"
+      placeholder="Disable form field"
       disabled="true"
     />
   </mat-form-field>

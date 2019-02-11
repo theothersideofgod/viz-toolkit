@@ -1,0 +1,21 @@
+<div class="example-centralization">
+  <button mat-button [matMenuTriggerFor]="start">Menu Start</button>
+</div>
+<mat-menu #start="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>
+    <mat-icon>theaters</mat-icon>
+    <span>Theaters</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>emails</mat-icon>
+    <span>Emails</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>folder</mat-icon>
+    <span>Folder</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>feedback</mat-icon>
+    <span>Feedback</span>
+  </button>
+</mat-menu>

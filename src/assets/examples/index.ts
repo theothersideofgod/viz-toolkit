@@ -37,9 +37,140 @@ import {
 } from 'libs';
 
 import {
+  DialogComplexComponent,
+  DialogComplexData,
+  DialogComplexPopupComponent
+} from './dialog-complex/dialog-complex.component';
+import {
+  DialogConfirmationComponent,
+  DialogConfirmationData,
+  DialogConfirmationPopupComponent
+} from './dialog-confirmation/dialog-confirmation.component';
+import {
+  DialogContentComponent,
+  DialogContentData,
+  DialogContentPopupComponent
+} from './dialog-content/dialog-content.component';
+import {
+  DialogDataComponent,
+  DialogDataData,
+  DialogDataPopupComponent
+} from './dialog-data/dialog-data.component';
+import {
+  DialogAlertComponent,
+  DialogAlertData,
+  DialogAlertPopupComponent
+} from './dialog-alert/dialog-alert.component';
+import {
+  SelectTriggerTextComponent,
+  SelectTriggerTextData
+} from './select-trigger-text/select-trigger-text.component';
+import {
+  SelectMultipleSelectionComponent,
+  SelectMultipleSelectionData
+} from './select-multiple-selection/select-multiple-selection.component';
+import {
+  SelectGroupOptionComponent,
+  SelectGroupOptionData
+} from './select-group-option/select-group-option.component';
+import {
+  SelectErrorStateComponent,
+  SelectErrorStateData
+} from './select-error-state/select-error-state.component';
+import {
+  TreeCheckboxMaterialComponent,
+  TreeCheckboxMaterialData
+} from './tree-checkbox-material/tree-checkbox-material.component';
+import {
+  TreePartiallyLoadedComponent,
+  TreePartiallyLoadedData
+} from './tree-partially-loaded/tree-partially-loaded.component';
+import {
+  TreeNestedNodesComponent,
+  TreeNestedNodesData
+} from './tree-nested-nodes/tree-nested-nodes.component';
+import {
+  TreeFlatNodesComponent,
+  TreeFlatNodesData
+} from './tree-flat-nodes/tree-flat-nodes.component';
+import {
+  TreeDynamicDataComponent,
+  TreeDynamicDataData
+} from './tree-dynamic-data/tree-dynamic-data.component';
+import {
+  MenuIconComponent,
+  MenuIconData
+} from './menu-icon/menu-icon.component';
+import {
+  DatePickerRangeValidationComponent,
+  DatePickerRangeValidationData
+} from './date-picker-range-validation/date-picker-range-validation.component';
+import {
+  DatePickerEmulatingComponent,
+  DatePickerEmulatingData
+} from './date-picker-emulating/date-picker-emulating.component';
+import {
+  DatePickerFilterValidationComponent,
+  DatePickerFilterValidationData
+} from './date-picker-filter-validation/date-picker-filter-validation.component';
+import {
+  DatePickerMinMaxValidationComponent,
+  DatePickerMinMaxValidationData
+} from './date-picker-min-max-validation/date-picker-min-max-validation.component';
+import {
+  DatePickerSelectedValueComponent,
+  DatePickerSelectedValueData
+} from './date-picker-selected-value/date-picker-selected-value.component';
+import {
+  DatePickerStartDateComponent,
+  DatePickerStartDateData
+} from './date-picker-start-date/date-picker-start-date.component';
+import {
+  TabsCustomLabelComponent,
+  TabsCustomLabelData
+} from './tabs-custom-label/tabs-custom-label.component';
+import {
+  TabsThemeComponent,
+  TabsThemeData
+} from './tabs-theme/tabs-theme.component';
+import {
+  FormFieldAutocompleteGroupComponent,
+  FormFieldAutocompleteGroupData
+} from './form-field-autocomplete-group/form-field-autocomplete-group.component';
+import {
+  FormFieldAutocompleteIconComponent,
+  FormFieldAutocompleteIconData
+} from './form-field-autocomplete-icon/form-field-autocomplete-icon.component';
+import {
+  FormFieldCustomPhoneNumberComponent,
+  FormFieldCustomPhoneNumberData,
+  MyTelInput
+} from './form-field-custom-phone-number/form-field-custom-phone-number.component';
+import {
+  FormFieldPrefixSuffixComponent,
+  FormFieldPrefixSuffixData
+} from './form-field-prefix-suffix/form-field-prefix-suffix.component';
+import {
+  FormFieldClearButtonComponent,
+  FormFieldClearButtonData
+} from './form-field-clear-button/form-field-clear-button.component';
+import {
+  LoginOktaComponent,
+  LoginOktaData
+} from './login-okta/login-okta.component';
+import {
+  DividerComponent,
+  DividerData
+} from './divider/divider.component';
+import {
+  IconographyComponent,
+  IconographyData
+} from './iconography/iconography.component';
+import {
   StepperCustomComponent,
   StepperCustomData
-} from './stepper-custom/stepper-custom.component';import {
+} from './stepper-custom/stepper-custom.component';
+import {
   StepperVerticalComponent,
   StepperVerticalData
 } from './stepper-vertical/stepper-vertical.component';
@@ -406,6 +537,130 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'dialog-complex' : {
+    component: DialogComplexComponent,
+    data: DialogComplexData
+  },
+  'dialog-confirmation' : {
+    component: DialogConfirmationComponent,
+    data: DialogConfirmationData
+  },
+  'dialog-content' : {
+    component: DialogContentComponent,
+    data: DialogContentData
+  },
+  'dialog-data' : {
+    component: DialogDataComponent,
+    data: DialogDataData
+  },
+  'dialog-alert' : {
+    component: DialogAlertComponent,
+    data: DialogAlertData
+  },
+  'select-trigger-text' : {
+    component: SelectTriggerTextComponent,
+    data: SelectTriggerTextData
+  },
+  'select-multiple-selection' : {
+    component: SelectMultipleSelectionComponent,
+    data: SelectMultipleSelectionData
+  },
+  'select-group-option' : {
+    component: SelectGroupOptionComponent,
+    data: SelectGroupOptionData
+  },
+  'select-error-state' : {
+    component: SelectErrorStateComponent,
+    data: SelectErrorStateData
+  },
+  'tree-checkbox-material' : {
+    component: TreeCheckboxMaterialComponent,
+    data: TreeCheckboxMaterialData
+  },
+  'tree-partially-loaded' : {
+    component: TreePartiallyLoadedComponent,
+    data: TreePartiallyLoadedData
+  },
+  'tree-nested-nodes' : {
+    component: TreeNestedNodesComponent,
+    data: TreeNestedNodesData
+  },
+  'tree-flat-nodes' : {
+    component: TreeFlatNodesComponent,
+    data: TreeFlatNodesData
+  },
+  'tree-dynamic-data' : {
+    component: TreeDynamicDataComponent,
+    data: TreeDynamicDataData
+  },
+  'menu-icon' : {
+    component: MenuIconComponent,
+    data: MenuIconData
+  },
+  'date-picker-range-validation' : {
+    component: DatePickerRangeValidationComponent,
+    data: DatePickerRangeValidationData
+  },
+  'date-picker-emulating' : {
+    component: DatePickerEmulatingComponent,
+    data: DatePickerEmulatingData
+  },
+  'date-picker-filter-validation' : {
+    component: DatePickerFilterValidationComponent,
+    data: DatePickerFilterValidationData
+  },
+  'date-picker-min-max-validation' : {
+    component: DatePickerMinMaxValidationComponent,
+    data: DatePickerMinMaxValidationData
+  },
+  'date-picker-selected-value' : {
+    component: DatePickerSelectedValueComponent,
+    data: DatePickerSelectedValueData
+  },
+  'date-picker-start-date' : {
+    component: DatePickerStartDateComponent,
+    data: DatePickerStartDateData
+  },
+  'tabs-custom-label' : {
+    component: TabsCustomLabelComponent,
+    data: TabsCustomLabelData
+  },
+  'tabs-theme' : {
+    component: TabsThemeComponent,
+    data: TabsThemeData
+  },
+  'form-field-autocomplete-group' : {
+    component: FormFieldAutocompleteGroupComponent,
+    data: FormFieldAutocompleteGroupData
+  },
+  'form-field-autocomplete-icon' : {
+    component: FormFieldAutocompleteIconComponent,
+    data: FormFieldAutocompleteIconData
+  },
+  'form-field-custom-phone-number' : {
+    component: FormFieldCustomPhoneNumberComponent,
+    data: FormFieldCustomPhoneNumberData
+  },
+  'form-field-prefix-suffix' : {
+    component: FormFieldPrefixSuffixComponent,
+    data: FormFieldPrefixSuffixData
+  },
+  'form-field-clear-button' : {
+    component: FormFieldClearButtonComponent,
+    data: FormFieldClearButtonData
+  },
+  'login-okta' : {
+    component: LoginOktaComponent,
+    data: LoginOktaData
+  },
+  'divider' : {
+    component: DividerComponent,
+    data: DividerData
+  },
+  'iconography' : {
+    component: IconographyComponent,
+    data: IconographyData
+  },
   'stepper-custom' : {
     component: StepperCustomComponent,
     data: StepperCustomData
@@ -778,6 +1033,37 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    DialogComplexComponent,
+    DialogConfirmationComponent,
+    DialogContentComponent,
+    DialogDataComponent,
+    DialogAlertComponent,
+    SelectTriggerTextComponent,
+    SelectMultipleSelectionComponent,
+    SelectGroupOptionComponent,
+    SelectErrorStateComponent,
+    TreeCheckboxMaterialComponent,
+    TreePartiallyLoadedComponent,
+    TreeNestedNodesComponent,
+    TreeFlatNodesComponent,
+    TreeDynamicDataComponent,
+    MenuIconComponent,
+    DatePickerRangeValidationComponent,
+    DatePickerEmulatingComponent,
+    DatePickerFilterValidationComponent,
+    DatePickerMinMaxValidationComponent,
+    DatePickerSelectedValueComponent,
+    DatePickerStartDateComponent,
+    TabsCustomLabelComponent,
+    TabsThemeComponent,
+    FormFieldAutocompleteGroupComponent,
+    FormFieldAutocompleteIconComponent,
+    FormFieldCustomPhoneNumberComponent,
+    FormFieldPrefixSuffixComponent,
+    FormFieldClearButtonComponent,
+    LoginOktaComponent,
+    DividerComponent,
+    IconographyComponent,
     StepperCustomComponent,
     StepperVerticalComponent,
     FormFieldValidationComponent,
@@ -871,7 +1157,13 @@ export const ALL_EXAMPLE_ITEMS = {
     BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
-    LoginBasicComponent
+    LoginBasicComponent,
+    MyTelInput,
+    DialogAlertPopupComponent,
+    DialogComplexPopupComponent,
+    DialogDataPopupComponent,
+    DialogContentPopupComponent,
+    DialogConfirmationPopupComponent
   ],
   imports: [
     RouterModule,
@@ -915,6 +1207,37 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    DialogComplexComponent,
+    DialogConfirmationComponent,
+    DialogContentComponent,
+    DialogDataComponent,
+    DialogAlertComponent,
+    SelectTriggerTextComponent,
+    SelectMultipleSelectionComponent,
+    SelectGroupOptionComponent,
+    SelectErrorStateComponent,
+    TreeCheckboxMaterialComponent,
+    TreePartiallyLoadedComponent,
+    TreeNestedNodesComponent,
+    TreeFlatNodesComponent,
+    TreeDynamicDataComponent,
+    MenuIconComponent,
+    DatePickerRangeValidationComponent,
+    DatePickerEmulatingComponent,
+    DatePickerFilterValidationComponent,
+    DatePickerMinMaxValidationComponent,
+    DatePickerSelectedValueComponent,
+    DatePickerStartDateComponent,
+    TabsCustomLabelComponent,
+    TabsThemeComponent,
+    FormFieldAutocompleteGroupComponent,
+    FormFieldAutocompleteIconComponent,
+    FormFieldCustomPhoneNumberComponent,
+    FormFieldPrefixSuffixComponent,
+    FormFieldClearButtonComponent,
+    LoginOktaComponent,
+    DividerComponent,
+    IconographyComponent,
     StepperCustomComponent,
     StepperVerticalComponent,
     FormFieldValidationComponent,
@@ -1008,7 +1331,13 @@ export const ALL_EXAMPLE_ITEMS = {
     BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
-    LoginBasicComponent
+    LoginBasicComponent,
+    MyTelInput,
+    DialogAlertPopupComponent,
+    DialogComplexPopupComponent,
+    DialogDataPopupComponent,
+    DialogContentPopupComponent,
+    DialogConfirmationPopupComponent
   ]
 })
 export class ExampleModule {}

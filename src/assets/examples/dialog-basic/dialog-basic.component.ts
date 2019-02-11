@@ -147,6 +147,7 @@ export class DialogBasicComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(DialogDataExampleDialog, {
+      width: '400px',
       data: {
         animal: 'panda'
       }
