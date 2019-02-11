@@ -1,3 +1,6 @@
 import { MatBadgeModule } from '@angular/material';
-
-export const VizBadgeModule = MatBadgeModule;
+import { NgModule } from '@angular/core';
+@NgModule({
+  exports: [MatBadgeModule]
+})
+export class VizBadgeModule {}

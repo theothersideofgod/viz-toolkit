@@ -1,3 +1,9 @@
+
+
+import { NgModule } from '@angular/core';
 import { MatTooltipModule } from '@angular/material';
 
-export const VizTooltipModule = MatTooltipModule;
+@NgModule({
+  exports: [MatTooltipModule]
+})
+export class VizTooltipModule {}

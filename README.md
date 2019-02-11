@@ -205,3 +205,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Add month picker.
 - Add Expansion Panel Angular Material Examples.
 - Add custom stepper component.
+
+1.0.8
+- Upgrade angular to 7.2.x
+- fix some module error when build with '--prod'
