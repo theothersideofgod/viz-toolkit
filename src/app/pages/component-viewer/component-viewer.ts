@@ -35,8 +35,8 @@ export class ComponentViewer implements OnDestroy, OnInit {
               ) {
     // Listen to changes on the current route for the doc id (e.g. button/checkbox)
     combineLatest(_route.params).pipe(
-        map((p: [Params, Params]) => ({id: p[0]['id']})),
-        map(p => ({doc: docItems.getItemById(p.id)}),
+        map((p:any) => ({id: p[0]['id']})),
+        map((p:any) => ({doc: docItems.getItemById(p.id)}),
         takeUntil(this._destroyed))
         ).subscribe(d => {
           this.componentDocItem = d.doc;
