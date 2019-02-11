@@ -237,8 +237,15 @@ td.mat-cell,
       .mat-menu-item {
         color: #696969;
         font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        height: 40px;
         &:hover {
-          color: #8667bd;
+          color: $viz-purple;
+          background-color: #f1f1f1;
+          .mat-icon {
+            color: $viz-purple
+          }
         }
       }
       .mat-menu-item-submenu-trigger {
@@ -383,6 +390,13 @@ td.mat-cell,
     margin-left: 8px;
   }
 }
+.mat-raised-button, .mat-flat-button {
+  &.mat-primary[disabled] {
+    color: #ffffff !important;
+    background-color: $viz-purple !important;
+    opacity: 0.4;
+  }
+}
 
 //tree style
 .mat-checkbox-label {
@@ -391,6 +405,18 @@ td.mat-cell,
 .mat-checkbox-frame {
   border-color: #9f9f9f !important;
 }
+
+.mat-tree {
+  .mat-tree-node {
+    color: $viz-dark-gray;
+    font-weight: 300;
+  }
+  .mat-icon-button {
+    
+  }
+}
+
+
 //input font-size
 .mat-form-field-infix {
   textarea {
@@ -410,6 +436,11 @@ td.mat-cell,
 .mat-form-field {
   // vertical-align:middle;
   &.mat-focused {
+    .mat-form-field-prefix {
+      [matprefix] {
+        color: #000000;
+      }
+    }
     .mat-form-field-suffix {
       .mat-icon {
         color: #000000;
@@ -419,6 +450,21 @@ td.mat-cell,
       color: #7f5eba;
     }
   }
+  &.mat-form-field-should-float {
+    .mat-form-field-label {
+      height: 21.333px;
+      line-height: 21.333px;
+      font-size: 16px !important;
+    }
+  }
+
+  
+
+  // &.mat-form-field-disabled {
+  //   .mat-form-field-underline {
+  //     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 100%, transparent 0%) !important
+  //   }
+  // }
 
   input.mat-input-element {
     // height: 24px;
@@ -447,13 +493,20 @@ td.mat-cell,
     font-size: 14px;
     padding: 5px 0px;
   }
-  .mat-form-field-label {
-    height: 21.333px;
-    line-height: 21.333px;
-    font-size: 16px;
-  }
+  
   .mat-form-field-flex {
     align-items: stretch;
+  }
+  .mat-form-field-prefix {
+    margin-top: 22px;
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  .mat-form-field-suffix {
+    cursor: pointer;
+  }
+  &.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #c3c3c3;
   }
   &.mat-form-field-appearance-legacy {
     .mat-form-field-infix {
@@ -485,8 +538,10 @@ td.mat-cell,
     color: #9f9f9f;
   }
 
-  .mat-form-field-appearance-legacy .mat-form-field-label {
+  &.mat-form-field-appearance-legacy .mat-form-field-label {
     color: #9f9f9f;
+    font-size: 14px;
+    top: 22px;
   }
   .mat-form-field-appearance-legacy .mat-form-field-underline {
     background-color: #c3c3c3;
@@ -500,6 +555,61 @@ td.mat-cell,
   &:hover {
     .mat-form-field-underline {
       background-color: #000000;
+    }
+  }
+}
+
+//autocomplete
+.viz-autocomplete-dropdown {
+  .mat-option {
+    .mat-icon {
+      color: $viz-dark-gray
+    }
+    color: $viz-gray;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    height: 40px;
+    &:hover {
+      color: $viz-purple;
+      .mat-icon {
+        color: $viz-purple;
+      }
+    }
+    &.mat-selected {
+      color: $viz-purple !important;
+      .mat-icon {
+        color: $viz-purple;
+      }
+    }
+  }
+  //for group
+  .mat-optgroup {
+    .mat-optgroup-label {
+      font-weight: 300;
+      color: $viz-gray;
+    }
+    .mat-option {
+      .mat-icon {
+        color: $viz-dark-gray
+      }
+      color: $viz-gray;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+      height: 40px;
+      &:hover {
+        color: $viz-purple;
+        .mat-icon {
+          color: $viz-purple;
+        }
+      }
+      &.mat-selected {
+        color: $viz-purple !important;
+        .mat-icon {
+          color: $viz-purple;
+        }
+      }
     }
   }
 }
@@ -592,6 +702,8 @@ td.mat-cell,
     .mat-tab-label {
       margin-right: 40px;
       margin-left: 0px;
+      min-width: 0px;
+      padding: 0px 0px;
     }
   }
   .mat-ink-bar {
@@ -719,8 +831,7 @@ mat-chip {
   }
   
 }
-
-div[ng-reflect-klass="mat-select-panel mat-primary"] {
+.cdk-overlay-pane {
   .mat-select-content {
     .mat-option {
       // height: 40px;
@@ -941,13 +1052,41 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
   position: absolute;
   top: 25px;
   left: 16px;
-  min-width: 280px;
+  // min-width: 280px;
   .mat-select-content {
-    min-width: 280px;
+    // min-width: 280px;
     .mat-option {
       height: 40px;
       line-height: 40px;
       font-weight: 300;
+    }
+    .mat-optgroup {
+      .mat-optgroup-label {
+        font-weight: 300;
+        color: $viz-gray;
+      }
+      .mat-option {
+        .mat-icon {
+          color: $viz-dark-gray
+        }
+        color: $viz-gray;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        height: 40px;
+        &:hover {
+          color: $viz-purple;
+          .mat-icon {
+            color: $viz-purple;
+          }
+        }
+        &.mat-selected {
+          color: $viz-purple !important;
+          .mat-icon {
+            color: $viz-purple;
+          }
+        }
+      }
     }
   }
 
@@ -955,15 +1094,28 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
 
   }
 }
+.mat-select-panel.viz-select.viz-select-multi {
+  left: 44px;
+}
+// .mat-select-panel.viz-select.viz-select-group {
+//   min-width: inherit !important;
+//   left: 32px;
+// }
 .mat-form-field {
   vertical-align: middle;
   &.mat-form-field-disabled {
     opacity: 0.4;
   }
 }
+mat-select {
+  .mat-select-arrow {
+    color: $viz-dark-gray
+  }
+}
 mat-select[aria-activedescendant] {
   .mat-select-arrow {
-    transform: rotate(180deg)
+    transform: rotate(180deg);
+    color: #000000 !important
   }
 }
 

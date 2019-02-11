@@ -1,0 +1,13 @@
+<div class="example-wrapper">
+  <mat-form-field class="example-full-width">
+    <mat-select placeholder="Choose one" disableOptionCentering disableRipple [formControl]="selected" [errorStateMatcher]="matcher"
+      panelClass="viz-select">
+      <mat-option *ngFor="let type of types" [value]="type">{{ type }}</mat-option>
+    </mat-select>
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="selected.hasError('required')">You must make a selection</mat-error>
+    <mat-error *ngIf="selected.hasError('pattern') && !selected.hasError('required')">
+      Your selection is invalid
+    </mat-error>
+  </mat-form-field>
+</div>

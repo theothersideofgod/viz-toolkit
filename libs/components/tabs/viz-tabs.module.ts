@@ -1,3 +1,6 @@
 import { MatTabsModule } from '@angular/material';
-
-export const VizTabsModule = MatTabsModule;
+import { NgModule } from '@angular/core';
+@NgModule({
+  exports: [MatTabsModule]
+})
+export class VizTabsModule {}

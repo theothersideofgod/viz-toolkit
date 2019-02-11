@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['form-field-disable.component.css']
 })
 export class FormFieldDisableComponent implements OnInit {
-  value = '';
+  value = 'Input here';
   ngOnInit() {}
 }
 

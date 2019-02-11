@@ -12,7 +12,7 @@ import {
 } from '@angular/material';
 @NgModule({
   imports: [CommonModule],
-  exports: [MatSelectModule],
+  exports: [MatSelectModule, MatSelectModule],
   declarations: []
 })
 export class VizSelectModule {}

@@ -1,13 +1,10 @@
-<div class="example-centralization">
-  <mat-form-field>
+<div class="example-container">
+  <mat-form-field class="example-full-width">
     <input
       type="text"
       matInput
       autocomplete="off"
-      (focus)="value = ''"
-      [(ngModel)]="value"
-      (blur)="value = 'All Member'"
-      placeholder="Member"
+      placeholder="Form label with hint"
     />
     <mat-hint align="start">Form hint</mat-hint>
   </mat-form-field>

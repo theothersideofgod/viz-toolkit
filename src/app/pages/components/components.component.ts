@@ -282,12 +282,12 @@ export class ComponentsComponent implements OnInit {
         }
       ]
     },
-    {
-      title: 'pages',
-      components: [
-        { title: 'login', desc: 'Login Modal', route: 'login', img: 'login' }
-      ]
-    },
+    // {
+    //   title: 'pages',
+    //   components: [
+    //     { title: 'login', desc: 'Login Modal', route: 'login', img: 'login' }
+    //   ]
+    // },
     {
       title: 'templates',
       components: [

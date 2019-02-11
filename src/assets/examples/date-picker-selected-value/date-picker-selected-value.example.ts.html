@@ -1,0 +1,16 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-meta">@Component</span>({
+	selector: <span class="hljs-string">'date-picker-selected-value'</span>,
+  templateUrl: <span class="hljs-string">'date-picker-selected-value.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'date-picker-selected-value.component.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatePickerSelectedValueComponent <span class="hljs-keyword">implements</span> OnInit {
+  date = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+  ngOnInit() { }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DatePickerSelectedValueData = {
+	name: <span class="hljs-string">'DatePickerSelectedValue'</span>
+}
