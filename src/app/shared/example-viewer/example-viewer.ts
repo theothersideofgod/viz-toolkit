@@ -25,6 +25,21 @@ export class SafePipe implements PipeTransform {
   }
 }
 
+
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root'
+})
+export class IframeHeightService {
+  iframeHeightMapper = {};
+  setIframeHeight(iframeHeight) {
+    this.iframeHeightMapper = {...this.iframeHeightMapper, ...iframeHeight};
+  }
+  getIframeHeightByName(name) {
+    return this.iframeHeightMapper[name];
+  }
+}
+
 @Component({
   selector: 'example-viewer',
   templateUrl: './example-viewer.html',
@@ -59,7 +74,7 @@ export class ExampleViewer implements OnInit {
     'month-picker-single'
   ];
 
-  constructor(private snackbar: MatSnackBar, private copier: CopierService) {}
+  constructor(private snackbar: MatSnackBar, private copier: CopierService, private iframeHeightService: IframeHeightService) {}
 
   get example() {
     return this._example;
@@ -92,7 +107,11 @@ export class ExampleViewer implements OnInit {
     }`;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    window.addEventListener('message', (e) => {
+      this.iframeHeightService.setIframeHeight(JSON.parse(e.data));
+    });
+  }
 
   getViewportClass() {
     return `${this._example} ${this.platform}`;
@@ -137,56 +156,73 @@ export class ExampleViewer implements OnInit {
   }
 
   getIframeStyle() {
-    let heightMapper = {
-      'date-picker-basic':550,
-      'date-picker-single':450,
-      'month-picker-range':450,
-      'month-picker-single':1000,
-      'date-picker-single-error':1000,
-      'date-picker-start-date':450,
-      'date-picker-selected-value':450,
-      'date-picker-min-max-validation':450,
-      'date-picker-filter-validation':450,
-      'date-picker-emulating':450,
-      'date-picker-range-validation':550,
-      'dialog-content':700,
-      'dialog-alert':250,
-      'dialog-basic':650,
-      'dialog-data':250,
-      'dialog-confirmation':300,
-      'dialog-complex':300,
-      'menu-basic':240,
-      'menu-icon':240,
-      'menu-nested': 240,
-      'header-basic':300,
-      'header-application': 300,
-      'expansion-panel-table':300,
-      'expansion-panel-angular':300,
-      'stepper-vertical':300,
-      'stepper-custom':300,
-      'select-basic':250,
-      'select-error-state': 250,
-      'select-disable': 80,
-      'select-group-option': 250,
-      'select-multiple-selection': 300,
-      'select-trigger-text': 300,
-      'paginator-basic': 220,
-      'table-native':210,
-      'nodata-basic':230,
-      'divider': 250,
-      'form-field-autocomplete':250,
-      'form-field-autocomplete-icon':250,
-      'form-field-autocomplete-group': 350,
-    }
-    if(heightMapper[this._example]) {
+    // const heightMapper = {
+    //   'date-picker-basic': 550,
+    //   'date-picker-single': 450,
+    //   'month-picker-range': 450,
+    //   'month-picker-single': 1000,
+    //   'date-picker-single-error': 1000,
+    //   'date-picker-start-date': 450,
+    //   'date-picker-selected-value': 450,
+    //   'date-picker-min-max-validation': 450,
+    //   'date-picker-filter-validation': 450,
+    //   'date-picker-emulating': 450,
+    //   'date-picker-range-validation': 550,
+    //   'dialog-content': 700,
+    //   'dialog-alert': 250,
+    //   'dialog-basic': 650,
+    //   'dialog-data': 250,
+    //   'dialog-confirmation': 300,
+    //   'dialog-complex': 300,
+    //   'menu-basic': 240,
+    //   'menu-icon': 240,
+    //   'menu-nested': 240,
+    //   'header-basic': 300,
+    //   'header-application': 300,
+    //   'expansion-panel-table': 300,
+    //   'expansion-panel-angular': 300,
+    //   'stepper-vertical': 300,
+    //   'stepper-custom': 300,
+    //   'select-basic': 250,
+    //   'select-error-state': 250,
+    //   'select-disable': 80,
+    //   'select-group-option': 250,
+    //   'select-multiple-selection': 300,
+    //   'select-trigger-text': 300,
+    //   'paginator-basic': 220,
+    //   'table-native': 210,
+    //   'nodata-basic': 230,
+    //   'divider': 250,
+    //   'form-field-autocomplete': 250,
+    //   'form-field-autocomplete-icon': 250,
+    //   'form-field-autocomplete-group': 350,
+    //   'login-basic': 373,
+    //   'bottomsheet-basic': 293,
+    //   'tab': 153,
+    //   'tabs-narrow': 153,
+    //   'tabs-custom-label': 153,
+    //   'tabs-theme': 153
+    // };
+    // if (heightMapper[this._example]) {
+    //   return {
+    //     height: `${heightMapper[this._example] - 15 + 56 + 56}px`
+    //   };
+    // } else {
+    //   return {
+    //     height: '160px'
+    //   };
+    // }
+    const height = this.iframeHeightService.getIframeHeightByName(this._example);
+    if (height) {
       return {
-        height: `${heightMapper[this._example] - 15 + 56 + 56}px`
-      }
-    }else {
+        'height': height + 'px'
+      };
+    } else {
       return {
-        height: '160px'
-      }
+        'height': '112px'
+      };
     }
+
   }
 
 }
