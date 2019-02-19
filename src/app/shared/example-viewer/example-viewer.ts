@@ -212,16 +212,16 @@ export class ExampleViewer implements OnInit {
     //     height: '160px'
     //   };
     // }
-    const height = this.iframeHeightService.getIframeHeightByName(this._example);
-    if (height) {
-      return {
-        'height': height + 'px'
-      };
-    } else {
-      return {
-        'height': '112px'
-      };
-    }
+    // const height = this.iframeHeightService.getIframeHeightByName(this._example);
+    // if (height) {
+    //   return {
+    //     'height': height + 'px'
+    //   };
+    // } else {
+    //   return {
+    //     'height': '112px'
+    //   };
+    // }
 
   }
 

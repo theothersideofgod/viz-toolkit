@@ -32,10 +32,10 @@ export class DatePickerSingleErrorComponent implements OnInit {
   ngOnInit() {}
   onClose() {}
   changeEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-    this.cEvent = `${event.value}`
+    this.cEvent = `${event.value}`;
   }
   inputEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-    this.iEvent = `${event.value}`
+    this.iEvent = `${event.value}`;
   }
 }
 

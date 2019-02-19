@@ -561,6 +561,8 @@ td.mat-cell,
 
 //autocomplete
 .viz-autocomplete-dropdown {
+  position: absolute;
+  top: 1px;
   .mat-option {
     .mat-icon {
       color: $viz-dark-gray
@@ -1048,7 +1050,26 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
 
 
 //select
+@keyframes customSelectOpen {
+  from {
+    min-width: calc(100%);
+  }
+  to {
+    min-width: calc(100%);
+  }
+}
+@keyframes customSelectClose {
+  from {
+    min-width: calc(100%)
+  }
+  to {
+    min-width: calc(100%);
+  }
+}
 .mat-select-panel.viz-select {
+  animation: customSelectOpen 120ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1); 
   position: absolute;
   top: 25px;
   left: 16px;
@@ -1093,10 +1114,25 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
   &.mat-focused {
 
   }
+  &.ng-animating:not(.mat-select-panel-done-animating) {
+    
+  }
+  &.mat-select-panel-done-animating.ng-animating {
+    animation: customSelectClose 100ms;
+    animation-delay: 25ms;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+  }
 }
-.mat-select-panel.viz-select.viz-select-multi {
-  left: 44px;
+.mat-select-panel.viz-select {
+  &.viz-select-group {
+    left: 32px;
+  }
+  &.viz-select-multi {
+    left: 44px;
+  }
 }
+
 // .mat-select-panel.viz-select.viz-select-group {
 //   min-width: inherit !important;
 //   left: 32px;
