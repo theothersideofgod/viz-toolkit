@@ -13,10 +13,12 @@
   </div>
   <div class="doc-desc-1">
     <p>
-      Dialogs inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks.
+      Dialogs inform users about a specific task and may contain critical
+      information, require decisions, or involve multiple tasks.
     </p>
     <p>
-      Dialogs contain text and UI controls. They retain focus until dismissed or a required action has been taken. Use dialogs
+      Dialogs contain text and UI controls. They retain focus until dismissed
+      or a required action has been taken. Use dialogs
       sparingly because they are interruptive.
     </p>
   </div>
@@ -25,60 +27,68 @@
   </div>
   <div class="doc-title-2">
     Examples
-    <span class="docs-more-example" doc-viewer-extend="exampleWrapper"></span>
+    <span class="docs-more-example"></span>
     <span class="docs-markdown-h3" id="examples">
       <span header-link="examples"></span>Examples</span>
   </div>
 
   <div class="doc-title-4 mb-8">Alert Dialog</div>
-  <div class="doc-desc-2 mb-16">Alert dialog interrupts users with urgent information, details, or actions.</div>
+  <div class="doc-desc-2 mb-16">Alert dialog interrupts users with urgent
+    information, details, or actions.</div>
   <div class="doc-example-container">
     <div app-docs-example="dialog-alert"></div>
   </div>
 
-  <div id="exampleWrapper">
 
-    <div class="doc-title-4 mb-8">Basic Dialog</div>
-    <div class="doc-desc-2">Basic dialog poses a specific question, concisely explains what’s involved in the request, and provides clear actions.</div>
-    <div class="doc-example-container">
-      <div app-docs-example="dialog-complex"></div>
-    </div>
 
-    <div class="doc-title-4 mb-8">Data Dialog</div>
-    <div class="doc-desc-2">Data dialog injecting data when opening a dialog.</div>
-    <div class="doc-example-container">
-      <div app-docs-example="dialog-data"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Dialog with Header, Scrollable Content and Actions</div>
-    <div class="doc-desc-2">
-      When a height is set on a dialog on open that forces vertical scrolling, the content should be the only thing that scrolls.
-      The header and actions should stay fixed with a border separating the containers from the content.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="dialog-content"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Confirmation Dialog<span modified-label></span></div>
-    <div class="doc-desc-2">
-      Confirmation dialogs give users the ability to provide final confirmation of a choice before committing to it, so they have
-      a chance to change their minds if necessary. If the user confirms a choice, it’s carried out. Otherwise, the user can
-      dismiss the dialog.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="dialog-confirmation"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Complex Dialog<span modified-label></span></div>
-    <div class="doc-desc-2">
-      Complex dialogs contains a series of tasks, such as radio buttons, checkboxes, form fields or dropdowns that require a series
-      of tasks to complete.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="dialog-basic"></div>
-    </div>
-
+  <div class="doc-title-4 mb-8">Basic Dialog</div>
+  <div class="doc-desc-2">Basic dialog poses a specific question, concisely
+    explains what&#x2019;s involved in the request, and provides clear actions.</div>
+  <div class="doc-example-container">
+    <div app-docs-example="dialog-complex"></div>
   </div>
+
+  <div class="doc-title-4 mb-8">Data Dialog</div>
+  <div class="doc-desc-2">Data dialog injecting data when opening a dialog.</div>
+  <div class="doc-example-container">
+    <div app-docs-example="dialog-data"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Dialog with Header, Scrollable Content and
+    Actions</div>
+  <div class="doc-desc-2">
+    When a height is set on a dialog on open that forces vertical scrolling,
+    the content should be the only thing that scrolls.
+    The header and actions should stay fixed with a border separating the
+    containers from the content.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="dialog-content"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Confirmation Dialog<span modified-label=""></span></div>
+  <div class="doc-desc-2">
+    Confirmation dialogs give users the ability to provide final confirmation
+    of a choice before committing to it, so they have
+    a chance to change their minds if necessary. If the user confirms a choice,
+    it&#x2019;s carried out. Otherwise, the user can
+    dismiss the dialog.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="dialog-confirmation"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Complex Dialog<span modified-label=""></span></div>
+  <div class="doc-desc-2">
+    Complex dialogs contains a series of tasks, such as radio buttons,
+    checkboxes, form fields or dropdowns that require a series
+    of tasks to complete.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="dialog-basic"></div>
+  </div>
+
+
 
 
   <div class="doc-divider">
@@ -106,7 +116,8 @@
     <tbody>
       <tr>
         <td>afterAllClosed</td>
-        <td>Stream that emits when all open dialog have finished closing. Will emit on subscribe if there are no open dialogs
+        <td>Stream that emits when all open dialog have finished closing. Will
+          emit on subscribe if there are no open dialogs
           to begin with.
 
         </td>
@@ -138,17 +149,22 @@
   </div>
 
   <div class="doc-desc-2">
-    <p>A dialog is a type of modal window that appears in front of app content to provide critical information or ask for a
-      decision. Dialogs disable all app functionality when they appear, and remain on screen until confirmed, dismissed,
+    <p>A dialog is a type of modal window that appears in front of app content
+      to provide critical information or ask for a
+      decision. Dialogs disable all app functionality when they appear, and
+      remain on screen until confirmed, dismissed,
       or a required action has been taken.</p>
     <p>Dialogs are purposefully interruptive, so they should be used sparingly.</p>
     <ul class="doc-list">
       <li>
-        Focused: Dialogs focus user attention to ensure their content is addressed.</li>
+        Focused: Dialogs focus user attention to ensure their content is
+        addressed.</li>
       <li>
-        Direct: Dialogs should be direct in communicating information and dedicated to completing a task.</li>
+        Direct: Dialogs should be direct in communicating information and
+        dedicated to completing a task.</li>
       <li>
-        Helpful: Dialogs should appear in response to a user task or an action, with relevant or contextual information.</li>
+        Helpful: Dialogs should appear in response to a user task or an action,
+        with relevant or contextual information.</li>
     </ul>
   </div>
 
@@ -164,7 +180,8 @@
   </div>
 
   <div class="doc-desc-2">
-    This dialog title poses a specific question, concisely explains what&#x2019;s involved in the request, and provides clear
+    This dialog title poses a specific question, concisely explains
+    what&#x2019;s involved in the request, and provides clear
     actions. Don&#x2019;t use dialog titles that pose an ambiguous question.
   </div>
 
@@ -172,13 +189,15 @@
     <div class="docs-usage-do docs-usage-w100 docs-usage-center-no-scale" style="height:712px">
       <img src="assets/img/doc/dialog-title-do.png" alt="" style="width:508px;height:710px">
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16" style="height:712px">
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16"
+      style="height:712px">
       <img src="assets/img/doc/dialog-title-dont.png" alt="" style="width:508px;height:710px">
     </div>
   </div>
 
   <div class="doc-desc-2">
-    Disable confirming actions (1) until a choice is made. Dismissive actions are never disabled. Dismissive actions (1) are
+    Disable confirming actions (1) until a choice is made. Dismissive actions
+    are never disabled. Dismissive actions (1) are
     placed to the left of confirming actions.
   </div>
 
@@ -186,7 +205,8 @@
     <div class="docs-usage-do docs-usage-w100 docs-usage-center-no-scale" style="height:712px">
       <img src="assets/img/doc/dialog-confirm-do.png" alt="" style="width:550px;height:710px;margin-left: 22px">
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16" style="height:712px">
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16"
+      style="height:712px">
       <img src="assets/img/doc/dialog-confirm-dont.png" alt="" style="width:550px;height:710px;margin-left: 22px">
     </div>
   </div>
@@ -212,15 +232,20 @@
   <div class="doc-title-2">
     Component Location for Designers
     <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
+      <span header-link="component_location_for_designers"></span>Component
+      Location for Designers</span>
   </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sektch File</a>
+  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download
+    Sektch File</a>
 
   <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path within the Sketch App UI:
+    For designers, to add this component to your design, follow this path
+    within the Sketch App UI:
   </div>
 
   <div sketch-link=""></div>
+
+
 
 
 

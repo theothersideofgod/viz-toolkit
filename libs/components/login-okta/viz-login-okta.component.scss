@@ -1,0 +1,94 @@
+.viz-login-okta {
+  font-family: 'Soleto';
+  position: relative;
+  width: 400px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  &-logo {
+    margin: 31px 0px 17px 0px;
+  }
+  &-divider {
+    position: absolute;
+    top: 140px;
+    height: 1px;
+    background-color: #dddddd;
+    width: 400px;
+  }
+  &-thumbnail-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &-thumbnail {
+    border-radius: 50%;
+    border: 16px solid #ffffff;
+    z-index: 1;
+    width: 83px;
+    height: 83px;
+    margin: 0 auto;
+  }
+  &-signin {
+    margin-top: 14px;
+    margin-bottom: 20px;
+    font-family: 'Soleto';
+    font-size: 15px;
+    color: #5e5e5e;
+  }
+  &-input-wrapper {
+    background: #ffffff;
+    border: 1px solid #efefef;
+    height: 38px;
+    width: 314px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+  }
+  &-input {
+    margin-left: 8px;
+    width: 270px;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: #aaaaaa;
+    &::placeholder {
+      color: #aaaaaa;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  &-input-icon {
+    height: 14px;
+    width: 14px;
+    font-size: 14px;
+    color: #dfdfdf;
+
+
+  }
+  &-signinbtn {
+    margin-top: 10px;
+    background-image: linear-gradient(-180deg, #007dc1 0%, #0073b2 100%);
+    border: 1px solid #004b75;
+    border-radius: 3px;
+    height: 52px;
+    font-family: '.AppleSystemUIFont';
+    font-size: 14px;
+    color: #ffffff;
+    width: 312px;
+    margin: 0 auto 24px auto;
+    line-height: 52px;
+  }
+  &-help {
+    margin: 0 auto 24px auto;
+    width: 318px;
+    text-align: left;
+  }
+  &-help-link {
+    font-weight: 400;
+    font-size: 13px;
+    color: #777777;
+    font-family: "Soleto"
+  }
+}

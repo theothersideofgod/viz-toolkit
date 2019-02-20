@@ -12,14 +12,15 @@
     Tabs
   </div>
   <div class="doc-desc-1">
-    Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy.
+    Tabs organize and allow navigation between groups of content that are
+    related and at the same level of hierarchy.
   </div>
 
   <div class="doc-divider">
   </div>
   <div class="doc-title-2 mb-24">
     Examples
-    <span class="docs-more-example" doc-viewer-extend="exampleWrapper"></span>
+    <span class="docs-more-example"></span>
     <span class="docs-markdown-h3" id="examples">
       <span header-link="examples"></span>Examples</span>
   </div>
@@ -34,37 +35,37 @@
     <div app-docs-example="tabs"></div>
   </div>
 
-  <div id="exampleWrapper">
-
-    <div class="doc-title-4 mb-8">
-      Simple Tabs
-    </div>
-    <div class="doc-desc-2">
-      Simple tabs contain a few items within a narrow column. </div>
-    <div class="doc-example-container">
-      <div app-docs-example="tabs-narrow"></div>
-    </div>
-
-    <div class="doc-title-4 mb-16">
-      Customizing the Theme Options on the Tab Group
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="tabs-theme"></div>
-    </div>
 
 
-
-    <div class="doc-title-4 mb-16">
-      Using Tabs with a Custom Label Template
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="tabs-custom-label"></div>
-    </div>
-
-
-
-
+  <div class="doc-title-4 mb-8">
+    Simple Tabs
   </div>
+  <div class="doc-desc-2">
+    Simple tabs contain a few items within a narrow column. </div>
+  <div class="doc-example-container">
+    <div app-docs-example="tabs-narrow"></div>
+  </div>
+
+  <div class="doc-title-4 mb-16">
+    Customizing the Theme Options on the Tab Group
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="tabs-theme"></div>
+  </div>
+
+
+
+  <div class="doc-title-4 mb-16">
+    Using Tabs with a Custom Label Template
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="tabs-custom-label"></div>
+  </div>
+
+
+
+
+
 
 
 
@@ -97,7 +98,8 @@
       </tr>
       <tr>
         <td>ariaLabelledby</td>
-        <td>Reference to the element that the tab is labelled by. Will be cleared if aria-label is set at the same time.</td>
+        <td>Reference to the element that the tab is labelled by. Will be
+          cleared if aria-label is set at the same time.</td>
         <td>string</td>
         <td></td>
       </tr>
@@ -121,7 +123,8 @@
       </tr>
       <tr>
         <td>origin</td>
-        <td>The initial relatively index origin of the tab if it was created and selected after there was already a selected
+        <td>The initial relatively index origin of the tab if it was created
+          and selected after there was already a selected
           tab. Provides context of what position the tab should originate from.
 
         </td>
@@ -130,7 +133,8 @@
       </tr>
       <tr>
         <td>position</td>
-        <td>The relatively indexed position where 0 represents the center, negative is left, and positive represents the right.
+        <td>The relatively indexed position where 0 represents the center,
+          negative is left, and positive represents the right.
 
         </td>
         <td>number</td>
@@ -138,7 +142,8 @@
       </tr>
       <tr>
         <td>templateLabel</td>
-        <td>Content for the tab label given by &lt;ng-template mat-tab-label&gt;.
+        <td>Content for the tab label given by &lt;ng-template
+          mat-tab-label&gt;.
 
         </td>
         <td>MatTabLabel</td>
@@ -157,11 +162,15 @@
     Tabs should be:
     <ul class="doc-list">
       <li>
-        <span class="doc-bold-title">Scalable: </span>As tabs can horizontally scroll, a UI can have as many tabs as needed.</li>
+        <span class="doc-bold-title">Scalable: </span>As tabs can horizontally
+        scroll, a UI can have as many tabs as needed.</li>
       <li>
-        <span class="doc-bold-title">Informative: </span>Tabs organize content into categories to help users easily find different types of information.</li>
+        <span class="doc-bold-title">Informative: </span>Tabs organize content
+        into categories to help users easily find different types of
+        information.</li>
       <li>
-        <span class="doc-bold-title">Peers: </span>Tabs are displayed next to each other as peers, in categories of equal importance.</li>
+        <span class="doc-bold-title">Peers: </span>Tabs are displayed next to
+        each other as peers, in categories of equal importance.</li>
     </ul>
   </div>
 
@@ -177,20 +186,23 @@
   </div>
 
   <div class="doc-desc-2">
-    Don&#x2019;t use simple tabs within a wide column, even when there are just a few items.
+    Don&#x2019;t use simple tabs within a wide column, even when there are just
+    a few items.
   </div>
 
   <div class="docs-guideline-group">
     <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:282px">
       <img src="assets/img/doc/tabs-do.png" alt="">
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:282px">
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16"
+      style="height:282px">
       <img src="assets/img/doc/tabs-dont.png" alt="">
     </div>
   </div>
 
   <div class="doc-desc-2">
-    If there is not enough space for tabs within a narrow column, don&#x2019;t wrap or resize text, make the tabs scrollable
+    If there is not enough space for tabs within a narrow column, don&#x2019;t
+    wrap or resize text, make the tabs scrollable
     instead.
   </div>
 
@@ -198,7 +210,8 @@
     <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:282px">
       <img src="assets/img/doc/tabs-scroll-do.png" alt="">
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:282px">
+    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16"
+      style="height:282px">
       <img src="assets/img/doc/tabs-scroll-dont.png" alt="">
     </div>
   </div>
@@ -224,13 +237,18 @@
   <div class="doc-title-2">
     Component Location for Designers
     <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
+      <span header-link="component_location_for_designers"></span>Component
+      Location for Designers</span>
   </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sektch File</a>
+  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download
+    Sektch File</a>
   <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path within the Sketch App UI:
+    For designers, to add this component to your design, follow this path
+    within the Sketch App UI:
   </div>
   <div sketch-link=""></div>
+
+
 
 
 
