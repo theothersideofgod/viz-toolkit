@@ -1,3 +1,7 @@
 import { MatListModule } from '@angular/material';
+import { NgModule } from '@angular/core';
 
-export const VizListModule = MatListModule;
+@NgModule({
+    exports: [MatListModule]
+})
+export class VizListModule {}

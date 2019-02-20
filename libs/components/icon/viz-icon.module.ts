@@ -1,3 +1,7 @@
 import { MatIconModule } from '@angular/material';
+import { NgModule } from '@angular/core';
 
-export const VizIconModule = MatIconModule;
+@NgModule({
+    exports: [MatIconModule]
+})
+export class VizIconModule {}
