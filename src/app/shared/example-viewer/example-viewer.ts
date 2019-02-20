@@ -92,7 +92,11 @@ export class ExampleViewer implements OnInit {
     }`;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // window.addEventListener('message', (e) => {
+    //   this.iframeHeightService.setIframeHeight(JSON.parse(e.data));
+    // });
+  }
 
   getViewportClass() {
     return `${this._example} ${this.platform}`;
@@ -137,56 +141,56 @@ export class ExampleViewer implements OnInit {
   }
 
   getIframeStyle() {
-    let heightMapper = {
-      'date-picker-basic':550,
-      'date-picker-single':450,
-      'month-picker-range':450,
-      'month-picker-single':1000,
-      'date-picker-single-error':1000,
-      'date-picker-start-date':450,
-      'date-picker-selected-value':450,
-      'date-picker-min-max-validation':450,
-      'date-picker-filter-validation':450,
-      'date-picker-emulating':450,
-      'date-picker-range-validation':550,
-      'dialog-content':700,
-      'dialog-alert':250,
-      'dialog-basic':650,
-      'dialog-data':250,
-      'dialog-confirmation':300,
-      'dialog-complex':300,
-      'menu-basic':240,
-      'menu-icon':240,
-      'menu-nested': 240,
-      'header-basic':300,
-      'header-application': 300,
-      'expansion-panel-table':300,
-      'expansion-panel-angular':300,
-      'stepper-vertical':300,
-      'stepper-custom':300,
-      'select-basic':250,
-      'select-error-state': 250,
-      'select-disable': 80,
-      'select-group-option': 250,
-      'select-multiple-selection': 300,
-      'select-trigger-text': 300,
-      'paginator-basic': 220,
-      'table-native':210,
-      'nodata-basic':230,
-      'divider': 250,
-      'form-field-autocomplete':250,
-      'form-field-autocomplete-icon':250,
-      'form-field-autocomplete-group': 350,
-    }
-    if(heightMapper[this._example]) {
-      return {
-        height: `${heightMapper[this._example] - 15 + 56 + 56}px`
-      }
-    }else {
-      return {
-        height: '160px'
-      }
-    }
+    // const heightMapper = {
+    //   'date-picker-basic': 550,
+    //   'date-picker-single': 450,
+    //   'month-picker-range': 450,
+    //   'month-picker-single': 1000,
+    //   'date-picker-single-error': 1000,
+    //   'date-picker-start-date': 450,
+    //   'date-picker-selected-value': 450,
+    //   'date-picker-min-max-validation': 450,
+    //   'date-picker-filter-validation': 450,
+    //   'date-picker-emulating': 450,
+    //   'date-picker-range-validation': 550,
+    //   'dialog-content': 700,
+    //   'dialog-alert': 250,
+    //   'dialog-basic': 650,
+    //   'dialog-data': 250,
+    //   'dialog-confirmation': 300,
+    //   'dialog-complex': 300,
+    //   'menu-basic': 240,
+    //   'menu-icon': 240,
+    //   'menu-nested': 240,
+    //   'header-basic': 300,
+    //   'header-application': 300,
+    //   'expansion-panel-table': 300,
+    //   'expansion-panel-angular': 300,
+    //   'stepper-vertical': 300,
+    //   'stepper-custom': 300,
+    //   'select-basic': 250,
+    //   'select-error-state': 250,
+    //   'select-disable': 80,
+    //   'select-group-option': 250,
+    //   'select-multiple-selection': 300,
+    //   'select-trigger-text': 300,
+    //   'paginator-basic': 220,
+    //   'table-native': 210,
+    //   'nodata-basic': 230,
+    //   'divider': 250,
+    //   'form-field-autocomplete': 250,
+    //   'form-field-autocomplete-icon': 250,
+    //   'form-field-autocomplete-group': 350,
+    // };
+    // if (heightMapper[this._example]) {
+    //   return {
+    //     height: `${heightMapper[this._example] - 15 + 56 + 56}px`
+    //   };
+    // } else {
+    //   return {
+    //     height: '160px'
+    //   };
+    // }
   }
 
 }

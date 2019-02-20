@@ -1,0 +1,55 @@
+@import '../../_viz-color.scss';
+.file-upload {
+  font-family: 'Soleto';
+  &-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    border: 2px dotted $viz-light-gray;
+
+    // &:hover {
+    //   border: 1px dotted black;
+    // }
+  }
+  &-dragover {
+    border: 2px solid black;
+  }
+  &-icon {
+    height: 60px;
+    width: 60px;
+    color: $viz-light-gray;
+    font-size: 60px;
+    margin: 12px auto 16px auto;
+  }
+  &-btn {
+    height: 40px;
+    margin: 0 auto 24px auto;
+  }
+  &-description {
+    color: $viz-light-gray;
+  }
+  &-filename {
+    font-weight: bold;
+  }
+  &-icon-check {
+    height: 60px;
+    width: 60px;
+    color: $viz-green;
+    font-size: 60px;
+    margin: 12px auto 16px auto;
+  }
+  &-success-info {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    white-space: normal;
+    color: $viz-light-gray;
+    font-weight: 400;
+  }
+  &-new-file {
+    height: 40px;
+    margin: 16px auto 0px auto;
+  }
+}

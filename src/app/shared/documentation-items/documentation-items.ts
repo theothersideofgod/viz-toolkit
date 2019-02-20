@@ -21,6 +21,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'fileupload', name: 'FileUploadBasic', examples: ['file-upload-basic']},
         {id: 'dialogcomplex', name: 'DialogComplex', examples: ['dialog-complex']},
         {id: 'dialogconfirmation', name: 'DialogConfirmation', examples: ['dialog-confirmation']},
         {id: 'dialogcontent', name: 'DialogContent', examples: ['dialog-content']},

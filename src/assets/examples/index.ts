@@ -33,9 +33,19 @@ import {
   VizSearchModule,
   VizChartModule,
   CustomerSelectModule,
+<<<<<<< Updated upstream
   CustomStepperModule
+=======
+  CustomStepperModule,
+  VizLoginOktaModule,
+  VizFileUploadModule
+>>>>>>> Stashed changes
 } from 'libs';
 
+import {
+  FileUploadBasicComponent,
+  FileUploadBasicData
+} from './file-upload-basic/file-upload-basic.component';
 import {
   DialogComplexComponent,
   DialogComplexData,
@@ -537,6 +547,10 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'file-upload-basic' : {
+    component: FileUploadBasicComponent,
+    data: FileUploadBasicData
+  },
   'dialog-complex' : {
     component: DialogComplexComponent,
     data: DialogComplexData
@@ -1033,6 +1047,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    FileUploadBasicComponent,
     DialogComplexComponent,
     DialogConfirmationComponent,
     DialogContentComponent,
@@ -1203,10 +1218,17 @@ export const ALL_EXAMPLE_ITEMS = {
     CustomStepperModule,
     MatInputModule,
     MatFormFieldModule,
+<<<<<<< Updated upstream
     MatSelectModule
+=======
+    MatSelectModule,
+    VizLoginOktaModule,
+    VizFileUploadModule
+>>>>>>> Stashed changes
   ],
   providers: [],
   entryComponents: [
+    FileUploadBasicComponent,
     DialogComplexComponent,
     DialogConfirmationComponent,
     DialogContentComponent,
