@@ -20,11 +20,11 @@
 
 
   <div class="docs-example-viewer-body" #exampleViewBody [ngClass]="getViewportClass()">
-    <!-- <ng-container *ngComponentOutlet="exampleData.component"></ng-container> -->
+    <ng-container *ngComponentOutlet="exampleData.component"></ng-container>
     <!-- <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template> -->
 
 
-    <iframe class="viewport-iframe" frameborder="0" [src]="exampleURL | safe" sandbox="allow-same-origin allow-scripts allow-forms" [ngClass]="iframeClass()" [ngStyle]="getIframeStyle()"></iframe>
+    <!-- <iframe class="viewport-iframe" frameborder="0" [src]="exampleURL | safe" sandbox="allow-same-origin allow-scripts allow-forms" [ngClass]="iframeClass()" [ngStyle]="getIframeStyle()"></iframe> -->
 
   </div>
 

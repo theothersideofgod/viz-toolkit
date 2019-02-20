@@ -33,7 +33,8 @@ import {
   VizSearchModule,
   VizChartModule,
   CustomerSelectModule,
-  CustomStepperModule
+  CustomStepperModule,
+  VizLoginOktaModule
 } from 'libs';
 
 import {
@@ -1203,7 +1204,8 @@ export const ALL_EXAMPLE_ITEMS = {
     CustomStepperModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    VizLoginOktaModule
   ],
   providers: [],
   entryComponents: [

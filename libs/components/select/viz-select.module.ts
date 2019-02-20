@@ -8,8 +8,11 @@ import {
   MatMenuModule,
   MatInputModule,
   MatButtonModule,
-  MatSelectModule
+  MatSelectModule,
+  MatSelect
 } from '@angular/material';
+
+
 @NgModule({
   imports: [CommonModule],
   exports: [MatSelectModule, MatSelectModule],

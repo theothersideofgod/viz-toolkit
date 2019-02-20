@@ -77,7 +77,7 @@
 }
 
 .docs-example-viewer-body {
-  // padding: 40px 0;
+  padding: 56px 0;
   // padding-top: 40px;
   white-space: nowrap;
   text-align: center;
@@ -160,7 +160,7 @@
   // 'desktop_mac','tablet_mac','phone_iphone'
   .viewport {
     &-iframe {
-      height: 160px;
+      // height: 160px;
     }
     &_desktop_mac {
       width: 100%

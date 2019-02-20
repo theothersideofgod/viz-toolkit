@@ -10,14 +10,15 @@
   </div>
   <div class="doc-title-1">Datepicker</div>
   <div class="doc-desc-1">
-    The Datepicker component allows the user to enter a date or date range either through text input or by choosing from the
+    The Datepicker component allows the user to enter a date or date range
+    either through text input or by choosing from the
     calendar.
   </div>
 
   <div class="doc-divider"></div>
   <div class="doc-title-2 mb-24">
     Examples
-    <span class="docs-more-example" doc-viewer-extend="exampleWrapper"></span>
+    <span class="docs-more-example"></span>
     <span class="docs-markdown-h3" id="examples">
       <span header-link="examples"></span>Examples</span>
   </div>
@@ -28,77 +29,91 @@
     <div app-docs-example="date-picker-single"></div>
   </div>
 
-  <div id="exampleWrapper">
-    <div class="doc-title-4 mb-8">Datepicker Start Date</div>
-    <div class="doc-desc-2">
-      It can be set to month, year, or multi-year; by default it will open to month view. The month, year, or range of years that
-      the calendar opens to is determined by first checking if any date is currently selected, if so it will open to the
-      month or year containing that date. Otherwise it will open to the month or year containing today's date.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="date-picker-start-date"></div>
-    </div>
 
-    <div class="doc-title-4 mb-8">Datepicker Selected Value</div>
-    <div class="doc-example-container">
-      <div app-docs-example="date-picker-selected-value"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Datepicker with Min & Max Validation</div>
-    <div class="doc-desc-2">
-      There are three properties that add date validation to the datepicker input. The first two are the min and max properties.
-      In addition to enforcing validation on the input, these properties will disable all dates on the calendar popup before
-      or after the respective values and prevent the user from advancing the calendar past the month or year (depending on
-      current view) containing the min or max date.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="date-picker-min-max-validation"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Datepicker with Filter Validation</div>
-    <div class="doc-desc-2">
-      this will also disable the dates on the calendar that are invalid. However, one important difference between using this datepicker
-      vs using Datepicker with Min & Max Validation is that filtering out all dates before or after a certain point, will
-      not prevent the user from advancing the calendar past that point.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="date-picker-filter-validation"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Datepicker Emulating a Year and Month Picker</div>
-    <div class="doc-desc-2">
-      When a year or a month is selected in multi-year and year views respectively, the selected year and selected month outputs
-      emit a normalized date representing the chosen year or month. By "normalized" we mean that the dates representing years
-      will have their month set to January and their day set to the 1st. Dates representing months will have their day set
-      to the 1st of the month.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="date-picker-emulating"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Daterange Picker<span modified-label></span></div>
-    <div class="doc-desc-2">
-      This date range picker component creates a dropdown of two calendars for user selecting a range of dates, times, or predefined
-      ranges like “Quarter 1”, “Quarter 2”, “Quarter 3” and “Quarter 4”.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="date-picker-basic"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Monthrange Picker<span modified-label></span></div>
-    <div class="doc-desc-2">
-      Use in forms to let user enter a month range.
-    </div>
-    <div class="doc-example-container">
-      <div app-docs-example="month-picker-range"></div>
-    </div>
-
-    <div class="doc-title-4 mb-8">Daterange Picker with Min & Max Validation<span modified-label></span></div>
-    <div class="doc-example-container">
-      <div app-docs-example="date-picker-range-validation"></div>
-    </div>
-
+  <div class="doc-title-4 mb-8">Datepicker Start Date</div>
+  <div class="doc-desc-2">
+    It can be set to month, year, or multi-year; by default it will open to
+    month view. The month, year, or range of years that
+    the calendar opens to is determined by first checking if any date is
+    currently selected, if so it will open to the
+    month or year containing that date. Otherwise it will open to the month or
+    year containing today&apos;s date.
   </div>
+  <div class="doc-example-container">
+    <div app-docs-example="date-picker-start-date"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Datepicker Selected Value</div>
+  <div class="doc-example-container">
+    <div app-docs-example="date-picker-selected-value"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Datepicker with Min &amp; Max Validation</div>
+  <div class="doc-desc-2">
+    There are three properties that add date validation to the datepicker
+    input. The first two are the min and max properties.
+    In addition to enforcing validation on the input, these properties will
+    disable all dates on the calendar popup before
+    or after the respective values and prevent the user from advancing the
+    calendar past the month or year (depending on
+    current view) containing the min or max date.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="date-picker-min-max-validation"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Datepicker with Filter Validation</div>
+  <div class="doc-desc-2">
+    this will also disable the dates on the calendar that are invalid. However,
+    one important difference between using this datepicker
+    vs using Datepicker with Min &amp; Max Validation is that filtering out all
+    dates before or after a certain point, will
+    not prevent the user from advancing the calendar past that point.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="date-picker-filter-validation"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Datepicker Emulating a Year and Month Picker</div>
+  <div class="doc-desc-2">
+    When a year or a month is selected in multi-year and year views
+    respectively, the selected year and selected month outputs
+    emit a normalized date representing the chosen year or month. By
+    &quot;normalized&quot; we mean that the dates representing years
+    will have their month set to January and their day set to the 1st. Dates
+    representing months will have their day set
+    to the 1st of the month.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="date-picker-emulating"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Daterange Picker<span modified-label=""></span></div>
+  <div class="doc-desc-2">
+    This date range picker component creates a dropdown of two calendars for
+    user selecting a range of dates, times, or predefined
+    ranges like &#x201C;Quarter 1&#x201D;, &#x201C;Quarter 2&#x201D;,
+    &#x201C;Quarter 3&#x201D; and &#x201C;Quarter 4&#x201D;.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="date-picker-basic"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Monthrange Picker<span modified-label=""></span></div>
+  <div class="doc-desc-2">
+    Use in forms to let user enter a month range.
+  </div>
+  <div class="doc-example-container">
+    <div app-docs-example="month-picker-range"></div>
+  </div>
+
+  <div class="doc-title-4 mb-8">Daterange Picker with Min &amp; Max Validation<span
+      modified-label=""></span></div>
+  <div class="doc-example-container">
+    <div app-docs-example="date-picker-range-validation"></div>
+  </div>
+
+
 
   <div class="doc-divider"></div>
   <div class="doc-title-2">
@@ -164,10 +179,10 @@
   </div>
   <div class="docs-guideline-group">
     <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:291px">
-      <img src="assets/img/doc/datepicker-disable-do.png" alt="" />
+      <img src="assets/img/doc/datepicker-disable-do.png" alt="">
     </div>
     <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:291px">
-      <img src="assets/img/doc/datepicker-disable-dont.png" alt="" />
+      <img src="assets/img/doc/datepicker-disable-dont.png" alt="">
     </div>
   </div>
   <div class="doc-divider"></div>
@@ -178,20 +193,25 @@
   </div>
 
   <div class="docs-usage-spec docs-usage-center" style="height:635px">
-    <img src="assets/img/doc/datepicker-spec.png" alt="" />
+    <img src="assets/img/doc/datepicker-spec.png" alt="">
   </div>
 
   <div class="doc-divider"></div>
   <div class="doc-title-2">
     Component Location for Designers
     <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
+      <span header-link="component_location_for_designers"></span>Component
+      Location for Designers</span>
   </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sektch File</a>
+  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download
+    Sektch File</a>
   <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path within the Sketch App UI:
+    For designers, to add this component to your design, follow this path
+    within the Sketch App UI:
   </div>
   <div sketch-link=""></div>
+
+
 </body>
 
 </html>
