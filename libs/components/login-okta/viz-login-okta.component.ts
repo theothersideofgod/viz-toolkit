@@ -14,4 +14,10 @@ export class VizLoginOktaComponent implements OnInit {
   ngOnInit() {
   }
 
+  signIn(email, password) {
+    this.loginOnClick.emit({
+      email,
+      password
+    });
+  }
 }
