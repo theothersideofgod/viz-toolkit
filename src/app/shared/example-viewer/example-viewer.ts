@@ -108,9 +108,9 @@ export class ExampleViewer implements OnInit {
   }
 
   ngOnInit() {
-    window.addEventListener('message', (e) => {
-      this.iframeHeightService.setIframeHeight(JSON.parse(e.data));
-    });
+    // window.addEventListener('message', (e) => {
+    //   this.iframeHeightService.setIframeHeight(JSON.parse(e.data));
+    // });
   }
 
   getViewportClass() {

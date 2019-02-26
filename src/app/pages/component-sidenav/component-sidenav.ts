@@ -180,6 +180,10 @@ const initNavList = [
       {
         name: 'Bottom Sheet',
         value: 'bottomsheet'
+      },
+      {
+        name: 'Login',
+        value: 'login'
       }
     ]
   },
@@ -209,15 +213,15 @@ const initNavList = [
       }
     ]
   },
-  {
-    name: 'Pages',
-    subs: [
-      {
-        name: 'Login',
-        value: 'login'
-      }
-    ]
-  },
+  // {
+  //   name: 'Pages',
+  //   subs: [
+  //     {
+  //       name: 'Login',
+  //       value: 'login'
+  //     }
+  //   ]
+  // },
   {
     name: 'Templates',
     subs: [
@@ -251,7 +255,9 @@ export class ComponentSidenavComponent implements OnInit {
     fromEvent(this.scrollContainer, 'scroll').subscribe(() => {
       if (
         this.scrollContainer.scrollTop >=
-        this.documentContent.offsetHeight - this.scrollContainer.offsetHeight - 100
+        this.documentContent.offsetHeight -
+          this.scrollContainer.offsetHeight -
+          100
       ) {
         this.isScrollBottom = true;
       } else {

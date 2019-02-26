@@ -49,6 +49,8 @@
             </g>
           </g>
         </g>
+        <image height="100%" width="100%" mask="url(#mask-2)" [attr.xlink:href]="thumbnail"
+          preserveAspectRatio="xMidYMin slice" />
       </svg>
     </div>
     <div class="viz-login-okta-divider"></div>
@@ -63,7 +65,7 @@
       person
     </i>
     <input type="text" name="" class="viz-login-okta-input" placeholder="Primary Email Address"
-      id="">
+      id="" #email>
     <i class="material-icons viz-login-okta-input-icon">
       info
     </i>
@@ -73,13 +75,14 @@
     <i class="material-icons viz-login-okta-input-icon">
       lock
     </i>
-    <input type="text" name="" class="viz-login-okta-input" placeholder="Password" id="">
+    <input type="text" name="" class="viz-login-okta-input" placeholder="Password" id=""
+      #password>
     <i class="material-icons viz-login-okta-input-icon">
       info
     </i>
   </div>
 
-  <div class="viz-login-okta-signinbtn" (click)="loginOnClick.emit()">
+  <div class="viz-login-okta-signinbtn" (click)="signIn(email.value, password.value)">
     Sign In
   </div>
 

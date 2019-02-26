@@ -14,40 +14,42 @@ export interface Section {
 })
 export class ComponentsComponent implements OnInit {
   componentClass = [
-    [{
-      title: 'getting started',
-      components: [
-        {
-          title: 'designers',
-          desc: 'Introduction to Designers',
-          route: 'designers',
-          img: 'designers'
-        },
-        {
-          title: 'developers',
-          desc: 'Introduction to Developers',
-          route: 'developers',
-          img: 'developers'
-        }
-      ]
-    },
-    {
-      title: 'foundation',
-      components: [
-        {
-          title: 'colors',
-          desc: 'Color System',
-          route: 'colors',
-          img: 'colors'
-        },
-        {
-          title: 'typography',
-          desc: 'Typography system',
-          route: 'typography',
-          img: 'typography'
-        }
-      ]
-    }],
+    [
+      {
+        title: 'getting started',
+        components: [
+          {
+            title: 'designers',
+            desc: 'Introduction to Designers',
+            route: 'designers',
+            img: 'designers'
+          },
+          {
+            title: 'developers',
+            desc: 'Introduction to Developers',
+            route: 'developers',
+            img: 'developers'
+          }
+        ]
+      },
+      {
+        title: 'foundation',
+        components: [
+          {
+            title: 'colors',
+            desc: 'Color System',
+            route: 'colors',
+            img: 'colors'
+          },
+          {
+            title: 'typography',
+            desc: 'Typography system',
+            route: 'typography',
+            img: 'typography'
+          }
+        ]
+      }
+    ],
     {
       title: 'form controls',
       components: [
@@ -168,6 +170,12 @@ export class ComponentsComponent implements OnInit {
           desc: 'Steppers convey progress through numbered steps.',
           route: 'stepper',
           img: 'stepper'
+        },
+        {
+          title: 'divider',
+          desc: 'A line separator with various orientation options.',
+          route: 'divider',
+          img: 'divider'
         }
       ]
     },
@@ -245,7 +253,8 @@ export class ComponentsComponent implements OnInit {
             'Bottom sheets slide up from the bottom of the screen to reveal more content.',
           route: 'bottomsheet',
           img: 'bottom sheet'
-        }
+        },
+        { title: 'login', desc: 'Login Modal', route: 'login', img: 'login' }
       ]
     },
     {
