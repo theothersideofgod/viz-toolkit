@@ -34,9 +34,39 @@ import {
   VizChartModule,
   CustomerSelectModule,
   CustomStepperModule,
-  VizLoginOktaModule
+  VizLoginOktaModule,
+  VizButtonToggleModule,
+  VizFileUploadModule,
 } from 'libs';
 
+import {
+  ButtontoggleTwoIconComponent,
+  ButtontoggleTwoIconData
+} from './buttontoggle-two-icon/buttontoggle-two-icon.component';
+import {
+  ButtontoggleThreeIconComponent,
+  ButtontoggleThreeIconData
+} from './buttontoggle-three-icon/buttontoggle-three-icon.component';
+import {
+  ButtontoggleTwoTextComponent,
+  ButtontoggleTwoTextData
+} from './buttontoggle-two-text/buttontoggle-two-text.component';
+import {
+  ButtontoggleDisableComponent,
+  ButtontoggleDisableData
+} from './buttontoggle-disable/buttontoggle-disable.component';
+import {
+  ButtontoggleThreeTextComponent,
+  ButtontoggleThreeTextData
+} from './buttontoggle-three-text/buttontoggle-three-text.component';
+import {
+  ButtontoggleBasicComponent,
+  ButtontoggleBasicData
+} from './buttontoggle-basic/buttontoggle-basic.component';
+import {
+  FileUploadBasicComponent,
+  FileUploadBasicData
+} from './file-upload-basic/file-upload-basic.component';
 import {
   DialogComplexComponent,
   DialogComplexData,
@@ -538,6 +568,34 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'buttontoggle-two-icon' : {
+    component: ButtontoggleTwoIconComponent,
+    data: ButtontoggleTwoIconData
+  },
+  'buttontoggle-three-icon' : {
+    component: ButtontoggleThreeIconComponent,
+    data: ButtontoggleThreeIconData
+  },
+  'buttontoggle-two-text' : {
+    component: ButtontoggleTwoTextComponent,
+    data: ButtontoggleTwoTextData
+  },
+  'buttontoggle-disable' : {
+    component: ButtontoggleDisableComponent,
+    data: ButtontoggleDisableData
+  },
+  'buttontoggle-three-text' : {
+    component: ButtontoggleThreeTextComponent,
+    data: ButtontoggleThreeTextData
+  },
+  'buttontoggle-basic' : {
+    component: ButtontoggleBasicComponent,
+    data: ButtontoggleBasicData
+  },
+  'file-upload-basic' : {
+    component: FileUploadBasicComponent,
+    data: FileUploadBasicData
+  },
   'dialog-complex' : {
     component: DialogComplexComponent,
     data: DialogComplexData
@@ -1034,6 +1092,13 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ButtontoggleTwoIconComponent,
+    ButtontoggleThreeIconComponent,
+    ButtontoggleTwoTextComponent,
+    ButtontoggleDisableComponent,
+    ButtontoggleThreeTextComponent,
+    ButtontoggleBasicComponent,
+    FileUploadBasicComponent,
     DialogComplexComponent,
     DialogConfirmationComponent,
     DialogContentComponent,
@@ -1205,10 +1270,18 @@ export const ALL_EXAMPLE_ITEMS = {
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
-    VizLoginOktaModule
+    VizLoginOktaModule,
+    VizFileUploadModule,
   ],
   providers: [],
   entryComponents: [
+    ButtontoggleTwoIconComponent,
+    ButtontoggleThreeIconComponent,
+    ButtontoggleTwoTextComponent,
+    ButtontoggleDisableComponent,
+    ButtontoggleThreeTextComponent,
+    ButtontoggleBasicComponent,
+    FileUploadBasicComponent,
     DialogComplexComponent,
     DialogConfirmationComponent,
     DialogContentComponent,

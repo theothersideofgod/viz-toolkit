@@ -40,4 +40,7 @@ export * from './components/http-status/viz-http-status.module';
 export * from './components/customer-select/customer-select.module';
 export * from './components/custom-stepper/custom-stepper.module';
 export * from './components/login-okta/viz-login-okta.module';
+export * from './components/file-upload/viz-file-upload.module';
+export * from './components/button-toggle/viz-button-toggle.module';
 export * from './util';
+

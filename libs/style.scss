@@ -1159,6 +1159,67 @@ mat-select[aria-activedescendant] {
   color: #000000;
 }
 
+//buttontoggle
+// .mat-button-toggle-group {
+//   box-shadow: none !important;
+//   border: 1px solid $viz-purple;
+// }
+// .mat-button-toggle-group-appearance-standard {
+//   box-shadow: none !important;
+//   border: 1px solid $viz-purple;
+// }
+// .mat-button-toggle {
+//   font-size: 14px;
+//   background-color:#ffffff;
+//   color: $viz-purple;
+// }
+// .mat-button-toggle-checked {
+//   background-color: $viz-purple !important;
+//   color: #ffffff !important;
+// }
+// .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle {
+//   border-left: 1px solid $viz-purple;
+// }
+// .mat-button-toggle+.mat-button-toggle {
+//   border-left: 1px solid $viz-purple;
+// }
+.mat-button-toggle-group {
+  box-shadow: none !important;
+  border: 1px solid $viz-purple;
+  .mat-button-toggle {
+    color: $viz-purple;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #ffffff;
+    .mat-button-toggle-button {
+      .mat-button-toggle-label-content {
+        line-height: 40px;
+        padding: 0 8px;
+      }
+    }
+    &.mat-button-toggle-checked {
+      color: #ffffff;
+      background-color: $viz-purple; 
+    }
+    &.mat-button-toggle-disabled {
+      color: rgba($viz-purple, 0.5);
+    }
+    &+ .mat-button-toggle {
+      border-left: 1px solid $viz-purple;
+    }
+  }
+  &.viz-buttontoggle-text {
+    .mat-button-toggle {
+      .mat-button-toggle-button {
+        .mat-button-toggle-label-content {
+          padding: 0 16px
+        }
+      }
+    }
+  }
+}
+
+
 //checkbox
 .mat-checkbox-disabled {
   .mat-checkbox-background {

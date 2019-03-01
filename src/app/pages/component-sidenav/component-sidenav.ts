@@ -137,6 +137,10 @@ const initNavList = [
         value: 'button'
       },
       {
+        name: 'Button Toggle',
+        value: 'buttontoggle'
+      },
+      {
         name: 'Badge',
         value: 'badge'
       },
