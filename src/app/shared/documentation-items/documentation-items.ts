@@ -21,6 +21,12 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'buttontoggletwoicon', name: 'ButtontoggleTwoIcon', examples: ['buttontoggle-two-icon']},
+        {id: 'buttontogglethreeicon', name: 'ButtontoggleThreeIcon', examples: ['buttontoggle-three-icon']},
+        {id: 'buttontoggletwotext', name: 'ButtontoggleTwoText', examples: ['buttontoggle-two-text']},
+        {id: 'buttontoggledisable', name: 'ButtontoggleDisable', examples: ['buttontoggle-disable']},
+        {id: 'buttontogglethreetext', name: 'ButtontoggleThreeText', examples: ['buttontoggle-three-text']},
+        {id: 'buttontoggle', name: 'ButtontoggleBasic', examples: ['buttontoggle-basic']},
         {id: 'dialogcomplex', name: 'DialogComplex', examples: ['dialog-complex']},
         {id: 'dialogconfirmation', name: 'DialogConfirmation', examples: ['dialog-confirmation']},
         {id: 'dialogcontent', name: 'DialogContent', examples: ['dialog-content']},

@@ -189,6 +189,12 @@ export class ComponentsComponent implements OnInit {
           img: 'button'
         },
         {
+          title: 'button toggle',
+          desc: 'Toggles with the appearance of a button',
+          route: 'buttontoggle',
+          img: 'buttontoggle'
+        },
+        {
           title: 'badge',
           desc: 'Small status descriptors',
           route: 'badge',
