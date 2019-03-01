@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./viz-footer.component.scss']
 })
 export class VizFooterComponent implements OnInit {
+  year = new Date().getFullYear()
   @Input('title')
   title;
   @Input()
