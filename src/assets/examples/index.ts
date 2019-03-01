@@ -34,7 +34,9 @@ import {
   VizChartModule,
   CustomerSelectModule,
   CustomStepperModule,
-  VizLoginOktaModule
+  VizLoginOktaModule,
+  VizButtonToggleModule,
+  VizFileUploadModule,
 } from 'libs';
 
 import {
@@ -61,7 +63,10 @@ import {
   ButtontoggleBasicComponent,
   ButtontoggleBasicData
 } from './buttontoggle-basic/buttontoggle-basic.component';
-
+import {
+  FileUploadBasicComponent,
+  FileUploadBasicData
+} from './file-upload-basic/file-upload-basic.component';
 import {
   DialogComplexComponent,
   DialogComplexData,
@@ -587,6 +592,10 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ButtontoggleBasicComponent,
     data: ButtontoggleBasicData
   },
+  'file-upload-basic' : {
+    component: FileUploadBasicComponent,
+    data: FileUploadBasicData
+  },
   'dialog-complex' : {
     component: DialogComplexComponent,
     data: DialogComplexData
@@ -1089,6 +1098,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ButtontoggleDisableComponent,
     ButtontoggleThreeTextComponent,
     ButtontoggleBasicComponent,
+    FileUploadBasicComponent,
     DialogComplexComponent,
     DialogConfirmationComponent,
     DialogContentComponent,
@@ -1260,7 +1270,8 @@ export const ALL_EXAMPLE_ITEMS = {
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
-    VizLoginOktaModule
+    VizLoginOktaModule,
+    VizFileUploadModule,
   ],
   providers: [],
   entryComponents: [
@@ -1270,6 +1281,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ButtontoggleDisableComponent,
     ButtontoggleThreeTextComponent,
     ButtontoggleBasicComponent,
+    FileUploadBasicComponent,
     DialogComplexComponent,
     DialogConfirmationComponent,
     DialogContentComponent,

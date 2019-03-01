@@ -27,6 +27,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'buttontoggledisable', name: 'ButtontoggleDisable', examples: ['buttontoggle-disable']},
         {id: 'buttontogglethreetext', name: 'ButtontoggleThreeText', examples: ['buttontoggle-three-text']},
         {id: 'buttontoggle', name: 'ButtontoggleBasic', examples: ['buttontoggle-basic']},
+        {id: 'fileupload', name: 'FileUploadBasic', examples: ['file-upload-basic']},
         {id: 'dialogcomplex', name: 'DialogComplex', examples: ['dialog-complex']},
         {id: 'dialogconfirmation', name: 'DialogConfirmation', examples: ['dialog-confirmation']},
         {id: 'dialogcontent', name: 'DialogContent', examples: ['dialog-content']},

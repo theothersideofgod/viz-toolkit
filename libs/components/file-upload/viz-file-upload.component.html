@@ -1,0 +1,20 @@
+<div class="file-upload-container" [ngClass]="{'file-upload-dragover': isDragover}">
+  <ng-container *ngIf="!isUploadSuccess">
+    <mat-icon class="file-upload-icon">cloud_upload</mat-icon>
+    <button mat-stroked-button color="primary" class="file-upload-btn" (click)="addFile()">Add File</button>
+    <div class='file-upload-description'>or drop files to upload</div>
+  </ng-container>
+
+
+  <ng-container *ngIf="isUploadSuccess">
+    <mat-icon class="file-upload-icon-check">check_circle</mat-icon>
+    <div class="file-upload-success-info">
+      <span class="file-upload-filename">{{filename}}</span>
+      is successfully uploaded, you will receive an email when it's available on the system.
+    </div>
+    <button mat-button color="primary" class="file-upload-new-file" (click)="addFile()">Upload new file</button>
+  </ng-container>
+
+
+  <input type="file" hidden [multiple]="multiple" #fileUpload (change)="uploadFile($event)">
+</div>
