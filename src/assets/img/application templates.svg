@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xlock-open-outline-64</title>
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>@2xicn_applicationtemplates</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -2199.000000)">
-            <g id="Group-5" transform="translate(134.000000, 2119.000000)">
-                <g id="Login" transform="translate(3.000000, 66.000000)">
-                    <g id="lock-open-outline-64" transform="translate(0.000000, 14.000000)">
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-961.000000, -1905.000000)">
+            <g id="Templates" transform="translate(961.000000, 1825.000000)">
+                <g id="Application-Templates" transform="translate(0.000000, 66.000000)">
+                    <g id="icn_applicationtemplates" transform="translate(0.000000, 14.000000)">
                         <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        <rect id="Rectangle" stroke="#696969" stroke-width="2" x="1" y="1" width="5" height="22"></rect>
-                        <rect id="Rectangle" stroke="#696969" stroke-width="2" x="19" y="9" width="4" height="14"></rect>
-                        <rect id="Rectangle" stroke="#696969" stroke-width="2" x="10" y="1" width="13" height="4"></rect>
-                        <rect id="Rectangle" stroke="#696969" stroke-width="2" x="10" y="18" width="5" height="5"></rect>
-                        <rect id="Rectangle" stroke="#696969" stroke-width="2" x="10" y="9" width="5" height="5"></rect>
+                        <rect id="Rectangle" stroke="#018DAB" stroke-width="2" x="1" y="1" width="5" height="22"></rect>
+                        <rect id="Rectangle" stroke="#018DAB" stroke-width="2" x="19" y="9" width="4" height="14"></rect>
+                        <rect id="Rectangle" stroke="#018DAB" stroke-width="2" x="10" y="1" width="13" height="4"></rect>
+                        <rect id="Rectangle" stroke="#018DAB" stroke-width="2" x="10" y="18" width="5" height="5"></rect>
+                        <rect id="Rectangle" stroke="#018DAB" stroke-width="2" x="10" y="9" width="5" height="5"></rect>
                     </g>
                 </g>
             </g>

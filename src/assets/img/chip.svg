@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="14px" viewBox="0 0 24 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xbaseline-hdr_strong-24px</title>
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>@2xicn_chip</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -1506.000000)">
-            <g id="Button-&amp;-Indicatiors" transform="translate(134.000000, 1269.000000)">
-                <g id="Chip" transform="translate(3.000000, 218.000000)">
-                    <g id="baseline-hdr_strong-24px" transform="translate(0.000000, 14.000000)">
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-537.000000, -1316.000000)">
+            <g id="Button-&amp;-Indicatiors" transform="translate(537.000000, 1003.000000)">
+                <g id="Chip" transform="translate(0.000000, 294.000000)">
+                    <g id="icn_chip" transform="translate(0.000000, 14.000000)">
                         <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        <path d="M17,6 C13.6906181,6 11,8.69061808 11,12 C11,15.3093819 13.6906181,18 17,18 C20.3093819,18 23,15.3093819 23,12 C23,8.69061808 20.3093819,6 17,6 Z" id="Path" stroke="#696969" stroke-width="2" fill-rule="nonzero"></path>
-                        <path d="M4,9 C2.34228475,9 1,10.3422847 1,12 C1,13.6577153 2.34228475,15 4,15 C5.65771525,15 7,13.6577153 7,12 C7,10.3422847 5.65771525,9 4,9 Z" id="Path" stroke="#696969" stroke-width="2" fill-rule="nonzero"></path>
+                        <path d="M17,6 C13.6906181,6 11,8.69061808 11,12 C11,15.3093819 13.6906181,18 17,18 C20.3093819,18 23,15.3093819 23,12 C23,8.69061808 20.3093819,6 17,6 Z" id="Path" stroke="#018DAB" stroke-width="2" fill-rule="nonzero"></path>
+                        <path d="M4,9 C2.34228475,9 1,10.3422847 1,12 C1,13.6577153 2.34228475,15 4,15 C5.65771525,15 7,13.6577153 7,12 C7,10.3422847 5.65771525,9 4,9 Z" id="Path" stroke="#018DAB" stroke-width="2" fill-rule="nonzero"></path>
                     </g>
                 </g>
             </g>

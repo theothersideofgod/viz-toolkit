@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xbaseline-report-24px</title>
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>@2xicn_nodata</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-937.000000, -1525.000000)">
-            <g id="Data-Table" transform="translate(934.000000, 1269.000000)">
-                <g id="No-Data" transform="translate(3.000000, 242.000000)">
-                    <g id="baseline-report-24px" transform="translate(0.000000, 14.000000)">
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -2081.000000)">
+            <g id="Data-Table" transform="translate(137.000000, 1825.000000)">
+                <g id="No-Data" transform="translate(0.000000, 242.000000)">
+                    <g id="icn_nodata" transform="translate(0.000000, 14.000000)">
                         <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        <path d="M16.5591198,1 L7.44088023,1 L1,7.44088023 L1,16.5591198 L7.44088023,23 L16.5591198,23 L23,16.5591198 L23,7.44088023 L16.5591198,1 Z" id="Shape" stroke="#696969" stroke-width="2" fill-rule="nonzero"></path>
-                        <path d="M12,7 L12,13" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                        <rect id="Rectangle-2" fill="#696969" fill-rule="nonzero" x="11" y="15" width="2" height="2"></rect>
+                        <path d="M16.5591198,1 L7.44088023,1 L1,7.44088023 L1,16.5591198 L7.44088023,23 L16.5591198,23 L23,16.5591198 L23,7.44088023 L16.5591198,1 Z" id="Shape" stroke="#018DAB" stroke-width="2" fill-rule="nonzero"></path>
+                        <path d="M12,7 L12,13" id="Shape" stroke="#018DAB" stroke-width="2" stroke-linecap="square"></path>
+                        <rect id="Rectangle-2" fill="#018DAB" fill-rule="nonzero" x="11" y="15" width="2" height="2"></rect>
                     </g>
                 </g>
             </g>

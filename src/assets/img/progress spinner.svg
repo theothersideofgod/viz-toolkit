@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xbaseline-donut_large-24px</title>
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>@2xicn_progressspinner</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <polygon id="path-1" points="0 0 24 0 24 24 0 24"></polygon>
-    </defs>
-    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -1653.000000)">
-            <g id="Button-&amp;-Indicatiors" transform="translate(134.000000, 1269.000000)">
-                <g id="Progress-spinner" transform="translate(3.000000, 370.000000)">
-                    <g id="baseline-donut_large-24px" transform="translate(0.000000, 14.000000)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <g id="a"></g>
-                        <g id="circle" mask="url(#mask-2)" stroke="#696969" stroke-width="2">
-                            <g transform="translate(1.000000, 1.000000)" id="Shape">
-                                <path d="M0.959933333,15.5004667 C0.3432,14.1262 0,12.6030667 0,11 C0,4.92506667 4.92506667,0 11,0 C17.0749333,0 22,4.92506667 22,11 C22,17.0749333 17.0749333,22 11,22 C8.349,22 5.918,21.0628 4.01866667,19.5008"></path>
-                            </g>
-                        </g>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-537.000000, -1463.000000)">
+            <g id="Button-&amp;-Indicatiors" transform="translate(537.000000, 1003.000000)">
+                <g id="Progress-Spinner" transform="translate(0.000000, 446.000000)">
+                    <g id="icn_progressspinner" transform="translate(0.000000, 14.000000)">
+                        <polygon id="a" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M1.95993333,16.5004667 C1.3432,15.1262 1,13.6030667 1,12 C1,5.92506667 5.92506667,1 12,1 C18.0749333,1 23,5.92506667 23,12 C23,18.0749333 18.0749333,23 12,23 C9.349,23 6.918,22.0628 5.01866667,20.5008" id="Shape" stroke="#018DAB" stroke-width="2"></path>
                     </g>
                 </g>
             </g>

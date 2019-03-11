@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xbaseline-build-24px</title>
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>@2xicn_toolbar</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-537.000000, -807.000000)">
-            <g id="Navigation" transform="translate(534.000000, 575.000000)">
-                <g id="Toolbar" transform="translate(3.000000, 218.000000)">
-                    <g id="baseline-build-24px" transform="translate(0.000000, 14.000000)">
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-951.000000, -513.000000)">
+            <g id="Navigation" transform="translate(951.000000, 281.000000)">
+                <g id="Toolbar" transform="translate(0.000000, 218.000000)">
+                    <g id="icn_toolbar" transform="translate(0.000000, 14.000000)">
                         <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        <path d="M22.7543486,4.87400863 L19.7177766,7.90634327 L16.1188765,4.31246518 L19.1554485,1.28013054 C18.293212,1.01807693 17.3559984,0.905768243 16.3438077,1.09294939 C14.1319837,1.50474792 12.3325337,3.30168697 11.9201597,5.51042455 C11.732717,6.48376653 11.8076941,7.41967228 12.0701139,8.28070557 L2.17313853,16.8910385 C0.673596817,18.2387428 0.598619731,20.5597891 2.02318436,21.9823658 C3.44774899,23.4049425 5.77203865,23.3300701 7.08413765,21.7951846 L15.7065025,11.9120199 C16.568739,12.1740735 17.468464,12.248946 18.4431661,12.099201 C20.6549902,11.6874025 22.4544402,9.89046347 22.8668142,7.68172589 C23.0917455,6.70838391 23.0167684,5.73504193 22.7543486,4.87400863 Z" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M22.7543486,4.87400863 L19.7177766,7.90634327 L16.1188765,4.31246518 L19.1554485,1.28013054 C18.293212,1.01807693 17.3559984,0.905768243 16.3438077,1.09294939 C14.1319837,1.50474792 12.3325337,3.30168697 11.9201597,5.51042455 C11.732717,6.48376653 11.8076941,7.41967228 12.0701139,8.28070557 L2.17313853,16.8910385 C0.673596817,18.2387428 0.598619731,20.5597891 2.02318436,21.9823658 L2.02318436,21.9823658 C3.44774899,23.4049425 5.77203865,23.3300701 7.08413765,21.7951846 L15.7065025,11.9120199 C16.568739,12.1740735 17.468464,12.248946 18.4431661,12.099201 C20.6549902,11.6874025 22.4544402,9.89046347 22.8668142,7.68172589 C23.0917455,6.70838391 23.0167684,5.73504193 22.7543486,4.87400863 Z" id="Shape" stroke="#018DAB" stroke-width="2" stroke-linecap="square"></path>
                     </g>
                 </g>
             </g>

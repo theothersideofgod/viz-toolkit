@@ -11,9 +11,9 @@
 
       <ng-container *ngIf="!isArray(class)">
         <div class="component-header">
-          <div class="component-header-svg">
+          <!-- <div class="component-header-svg">
             <img src="assets/img/{{class.title}}.svg" alt="{{class.title}}" *ngIf="!!class.title">
-          </div>
+          </div> -->
           <div class="component-title-2">{{class.title}}</div>
         </div>
         <ul class="component-list">
@@ -32,9 +32,9 @@
       <div *ngIf="isArray(class)" class="component-sub-class-container">
         <div class="component-sub-class-wrapper" *ngFor="let subClass of class">
           <div class="component-header">
-            <div class="component-header-svg">
+            <!-- <div class="component-header-svg">
               <img src="assets/img/{{subClass.title}}.svg" alt="{{subClass.title}}" *ngIf="!!subClass.title">
-            </div>
+            </div> -->
             <div class="component-title-2">{{subClass.title}}</div>
           </div>
           <ul class="component-list">
@@ -42,6 +42,7 @@
               <div class="component-list-svg">
                 <img src="assets/img/{{component.img}}.svg" alt="{{component.title}}">
               </div>
+              
               <div class="component-item">
                 <div class="component-title-3 component-title-link">{{component.title}}</div>
                 <div class="component-sub-2">{{component.desc}}</div>

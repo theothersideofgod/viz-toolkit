@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>@2xGroup 2</title>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>@2xicn_checkbox</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-140.000000, -655.000000)">
-            <g id="Form-Controls" transform="translate(134.000000, 575.000000)">
-                <g id="Checkbox" transform="translate(6.000000, 66.000000)">
-                    <g id="Group-2" transform="translate(0.000000, 14.000000)">
-                        <path d="M1,1 L1,17 L17,17 L17,1 L1,1 Z" id="Shape" stroke="#696969" stroke-width="2"></path>
-                        <polygon id="Path" fill="#696969" fill-rule="nonzero" points="7.28571429 13.5 3 9.18138196 4.20857143 7.96353167 7.28571429 11.0556622 13.7914286 4.5 15 5.72648752"></polygon>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-537.000000, -361.000000)">
+            <g id="Form-Controls" transform="translate(537.000000, 281.000000)">
+                <g id="Checkbox" transform="translate(0.000000, 66.000000)">
+                    <g id="icn_checkbox" transform="translate(0.000000, 14.000000)">
+                        <path d="M1,1 L1,23 L23,23 L23,1 L1,1 Z" id="Shape" stroke="#018DAB" stroke-width="2"></path>
+                        <polygon id="Path" fill="#018DAB" fill-rule="nonzero" points="9.71428571 18 4 12.2418426 5.61142857 10.6180422 9.71428571 14.7408829 18.3885714 6 20 7.6353167"></polygon>
                     </g>
                 </g>
             </g>
