@@ -40,6 +40,10 @@ import {
 } from 'libs';
 
 import {
+  ButtontoggleSecondaryColorComponent,
+  ButtontoggleSecondaryColorData
+} from './buttontoggle-secondary-color/buttontoggle-secondary-color.component';
+import {
   ButtontoggleTwoIconComponent,
   ButtontoggleTwoIconData
 } from './buttontoggle-two-icon/buttontoggle-two-icon.component';
@@ -568,6 +572,10 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'buttontoggle-secondary-color' : {
+    component: ButtontoggleSecondaryColorComponent,
+    data: ButtontoggleSecondaryColorData
+  },
   'buttontoggle-two-icon' : {
     component: ButtontoggleTwoIconComponent,
     data: ButtontoggleTwoIconData
@@ -1092,6 +1100,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
     ButtontoggleTwoTextComponent,
@@ -1275,6 +1284,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
     ButtontoggleTwoTextComponent,

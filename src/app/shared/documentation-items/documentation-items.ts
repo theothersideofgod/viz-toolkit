@@ -21,6 +21,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},
         {id: 'buttontoggletwoicon', name: 'ButtontoggleTwoIcon', examples: ['buttontoggle-two-icon']},
         {id: 'buttontogglethreeicon', name: 'ButtontoggleThreeIcon', examples: ['buttontoggle-three-icon']},
         {id: 'buttontoggletwotext', name: 'ButtontoggleTwoText', examples: ['buttontoggle-two-text']},

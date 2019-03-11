@@ -1217,6 +1217,19 @@ mat-select[aria-activedescendant] {
       }
     }
   }
+  &.viz-buttontoggle-secondary {
+    border: 1px solid $viz-light-gray;
+    .mat-button-toggle {
+      color: $viz-gray;
+      &.mat-button-toggle-checked {
+        color: #000000;
+        background-color: #E0E0E0;  
+      }
+      &+ .mat-button-toggle {
+        border-left: 1px solid $viz-light-gray;
+      }
+    }
+  }
 }
 
 
