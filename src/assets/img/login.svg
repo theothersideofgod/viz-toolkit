@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
     <title>@2xlock-open-outline-64</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -2071.000000)">
-            <g id="Pages" transform="translate(134.000000, 1991.000000)">
-                <g id="Login" transform="translate(3.000000, 66.000000)">
-                    <g id="lock-open-outline-64" transform="translate(0.000000, 14.000000)">
-                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                        <rect id="Rectangle-path" stroke="#696969" stroke-width="2" x="1" y="10" width="22" height="13"></rect>
-                        <path d="M17,6.05263158 C17,3.26231579 14.76125,1 12,1 C9.23875,1 7,3.26231579 7,6.05263158 L7,9" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                        <path d="M12,18 L12,20" id="Shape" stroke="#696969" stroke-width="2" stroke-linecap="square"></path>
-                        <circle id="Oval" stroke="#696969" stroke-width="2" stroke-linecap="square" cx="12" cy="15" r="2"></circle>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="login">
+                <g id="Components">
+                    <g id="Toolkit-Documentation:-Components">
+                        <g id="Pages">
+                            <g id="Login">
+                                <g id="lock-open-outline-64">
+                                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                                    <rect id="Rectangle-path" stroke="#018DAB" stroke-width="2" x="1" y="10" width="22" height="13"></rect>
+                                    <path d="M17,6.05263158 C17,3.26231579 14.76125,1 12,1 C9.23875,1 7,3.26231579 7,6.05263158 L7,9" id="Shape" stroke="#018DAB" stroke-width="2" stroke-linecap="square"></path>
+                                    <path d="M12,18 L12,20" id="Shape" stroke="#018DAB" stroke-width="2" stroke-linecap="square"></path>
+                                    <circle id="Oval" stroke="#018DAB" stroke-width="2" stroke-linecap="square" cx="12" cy="15" r="2"></circle>
+                                </g>
+                            </g>
+                        </g>
                     </g>
                 </g>
             </g>
