@@ -700,16 +700,14 @@ td.mat-cell,
 //tabs
 .mat-tab-list {
   .mat-tab-labels {
-    padding: 0px 24px;
+    // padding: 0px 24px;
     .mat-tab-label {
-      margin-right: 40px;
-      margin-left: 0px;
-      min-width: 0px;
-      padding: 0px 0px;
+      // 
+      min-width: 0
     }
   }
   .mat-ink-bar {
-    height: 4px;
+    height: 2px;
   }
   .mat-tab-label {
     color: #c3c3c3;
@@ -718,6 +716,11 @@ td.mat-cell,
   }
   .mat-tab-label-active {
     color: #696969;
+  }
+}
+.mat-tab-nav-bar {
+  .mat-tab-link {
+    min-width: 0px;
   }
 }
 

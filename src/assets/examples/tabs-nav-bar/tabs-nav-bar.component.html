@@ -1,0 +1,15 @@
+<div class="mat-elevation-z2 tabs-wrap">
+  <nav mat-tab-nav-bar [backgroundColor]="background">
+    <a mat-tab-link *ngFor="let link of links" (click)="activeLink = link" [active]="activeLink == link">
+      {{link}} </a>
+    <a mat-tab-link disabled>Disabled</a>
+  </nav>
+  <div class="example-list">
+    <div class="example-list-item">
+      Clinical Database
+    </div>
+    <div class="example-list-item">
+      Service Line Analytics
+    </div>
+  </div>
+</div>

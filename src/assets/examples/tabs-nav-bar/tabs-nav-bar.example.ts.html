@@ -1,0 +1,20 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tabs-nav-bar'</span>,
+  templateUrl: <span class="hljs-string">'tabs-nav-bar.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'tabs-nav-bar.component.scss'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TabsNavBarComponent <span class="hljs-keyword">implements</span> OnInit {
+  links = [<span class="hljs-string">'Summary'</span>, <span class="hljs-string">'Warning'</span>, <span class="hljs-string">'Passed'</span>];
+  activeLink = <span class="hljs-keyword">this</span>.links[<span class="hljs-number">0</span>];
+  background = <span class="hljs-string">''</span>;
+  ngOnInit() {}
+  toggleBackground() {
+    <span class="hljs-keyword">this</span>.background = <span class="hljs-keyword">this</span>.background ? <span class="hljs-string">''</span> : <span class="hljs-string">'primary'</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> TabsNavBarData = {
+  name: <span class="hljs-string">'TabsNavBar'</span>
+};

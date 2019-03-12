@@ -40,6 +40,14 @@ import {
 } from 'libs';
 
 import {
+  TabsNavBarComponent,
+  TabsNavBarData
+} from './tabs-nav-bar/tabs-nav-bar.component';
+import {
+  TabsHeaderBottomComponent,
+  TabsHeaderBottomData
+} from './tabs-header-bottom/tabs-header-bottom.component';
+import {
   ButtontoggleSecondaryColorComponent,
   ButtontoggleSecondaryColorData
 } from './buttontoggle-secondary-color/buttontoggle-secondary-color.component';
@@ -572,6 +580,14 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'tabs-nav-bar' : {
+    component: TabsNavBarComponent,
+    data: TabsNavBarData
+  },
+  'tabs-header-bottom' : {
+    component: TabsHeaderBottomComponent,
+    data: TabsHeaderBottomData
+  },
   'buttontoggle-secondary-color' : {
     component: ButtontoggleSecondaryColorComponent,
     data: ButtontoggleSecondaryColorData
@@ -1100,6 +1116,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    TabsNavBarComponent,
+    TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
@@ -1284,6 +1302,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TabsNavBarComponent,
+    TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,

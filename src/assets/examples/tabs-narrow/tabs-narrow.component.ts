@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'tabs-narrow',
   templateUrl: 'tabs-narrow.component.html',
-  styleUrls: ['tabs-narrow.component.css']
+  styleUrls: ['tabs-narrow.component.scss']
 })
 export class TabsNarrowComponent implements OnInit {
   navLinks = [
