@@ -8,22 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class TabsThemeComponent implements OnInit {
   navLinks = [
     {
-      label: 'SUMMARY',
+      label: 'Summary',
       path: 'summary',
       width: '100px'
     },
     {
-      label: 'FAILED',
+      label: 'Failed',
       path: 'failed',
       width: '80px'
     },
     {
-      label: 'WARNING',
+      label: 'Warning',
       path: 'warning',
       width: '100px'
     },
     {
-      label: 'PASSED',
+      label: 'Passed',
       path: 'passed',
       width: '80px'
     }

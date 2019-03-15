@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TabsCustomLabelComponent implements OnInit {
   navLinks = [
     {
-      label: 'Fisrt',
+      label: 'First',
       path: 'summary',
       width: '100px'
     },

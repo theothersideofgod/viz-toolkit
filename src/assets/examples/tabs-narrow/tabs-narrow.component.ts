@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class TabsNarrowComponent implements OnInit {
   navLinks = [
     {
-      label: 'ALL MEMBERS',
+      label: 'All Members',
       path: 'summary',
       width: '100px'
     },
     {
-      label: 'GROUP',
+      label: 'Groups',
       path: 'failed',
       width: '80px'
     }

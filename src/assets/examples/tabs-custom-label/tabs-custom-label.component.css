@@ -12,3 +12,9 @@
   color: #696969;
   font-weight: 300;
 }
+.example-tab-icon {
+  margin-right: 4px;
+  height: 18px;
+  width: 18px;
+  font-size: 18px;
+}
