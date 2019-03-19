@@ -1,15 +1,116 @@
 <div class="example-container">
+
+  <div class="control-panel">
+    <div class="control-panel-checkbox">
+      <mat-checkbox class="example-margin" [checked]="checkbox.checked"
+        (change)="setCheckbox(checkbox)" *ngFor="let checkbox of checkboxes">
+        {{checkbox.name}}</mat-checkbox>
+    </div>
+    <mat-radio-group class="control-panel-radio" [(ngModel)]="userType">
+      <mat-radio-button value="1">User Profile</mat-radio-button>
+      <mat-radio-button value="2">Member Name</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
   <viz-header title="Application" userName="Stan Lee" type="primary">
-    <div headerLogin>
-      <button mat-menu-item>
-        View Profile
-      </button>
-      <button mat-menu-item>
-        Account Settings
-      </button>
-      <button mat-menu-item routerLink="/login">
-        Log Out
-      </button>
+
+    <div headerApplications class="header-application">
+
+      <!-- help -->
+      <div class="header-application-icon" [matMenuTriggerFor]="helpMenu"
+        #helpMenuTrigger="matMenuTrigger"
+        [class.header-application-icon-active]="helpMenuTrigger.menuOpen"
+        *ngIf="checkboxes[2].checked">
+        <mat-icon aria-label="Example icon-button with a heart icon">help
+        </mat-icon>
+      </div>
+      <mat-menu #helpMenu="matMenu" [overlapTrigger]="false"
+        class="viz-header-application-dropdown mat-elevation-z8">
+        <ul class="header-application-list">
+          <li class="header-application-list-item">User Guide</li>
+          <li class="header-application-list-item">Support Center</li>
+          <li class="header-application-list-item">Sitemap</li>
+        </ul>
+      </mat-menu>
+
+      <!-- notification -->
+      <div class="header-application-icon"
+        [matMenuTriggerFor]="notificationMenu"
+        #notificationMenuTrigger="matMenuTrigger"
+        [class.header-application-icon-active]="notificationMenuTrigger.menuOpen"
+        *ngIf="checkboxes[1].checked">
+        <mat-icon matBadge="1" matBadgePosition="above after"
+          class="header-application-icon-badge" matBadgeColor="warn"
+          matBadgeSize="small"
+          aria-label="Example icon-button with a heart icon">flag
+        </mat-icon>
+      </div>
+      <mat-menu #notificationMenu="matMenu" [overlapTrigger]="false"
+        class="viz-header-application-dropdown mat-elevation-z8">
+        <ul class="header-application-list">
+          <li class="header-application-list-item">TBD 1</li>
+          <li class="header-application-list-item">TBD 2</li>
+          <li class="header-application-list-item">TBD 3</li>
+        </ul>
+      </mat-menu>
+
+      <!-- application -->
+      <div class="header-application-icon" [matMenuTriggerFor]="application"
+        #applicationTrigger="matMenuTrigger"
+        [class.header-application-icon-active]="applicationTrigger.menuOpen"
+        *ngIf="checkboxes[0].checked">
+        <mat-icon aria-label="Example icon-button with a heart icon">apps
+        </mat-icon>
+      </div>
+      <mat-menu #application="matMenu" [overlapTrigger]="false"
+        class="viz-header-application-dropdown mat-elevation-z8">
+        <ul class="header-application-list">
+          <li class="header-application-list-item">Application 1</li>
+          <li class="header-application-list-item">Application 2</li>
+          <li class="header-application-list-item">Application 3</li>
+        </ul>
+      </mat-menu>
+
+      <!-- user -->
+      <div class="header-application-icon" [matMenuTriggerFor]="userMenu"
+        #userMenuTrigger="matMenuTrigger"
+        [class.header-application-icon-active]="userMenuTrigger.menuOpen"
+        *ngIf="userType === '1'">
+        <mat-icon aria-label="Example icon-button with a heart icon">person
+        </mat-icon>
+      </div>
+      <mat-menu #userMenu="matMenu" [overlapTrigger]="false"
+        class="viz-header-application-dropdown mat-elevation-z8">
+        <div class="login-info">
+          <div class="login-info-top">Logged In as:</div>
+          <div>Genevieve Mukherjee</div>
+        </div>
+        <ul class="header-application-list">
+          <li class="header-application-list-item">Setting</li>
+          <li class="header-application-list-item">Support</li>
+          <li class="header-application-list-item">Logout</li>
+        </ul>
+      </mat-menu>
+
+      <div class="header-application-member" *ngIf="userType === '2'"
+        [matMenuTriggerFor]="memberMenu" #memberMenuTrigger="matMenuTrigger"
+        [class.header-application-icon-active]="memberMenuTrigger.menuOpen">
+        Member Name <mat-icon class="header-application-member-icon">
+          arrow_drop_down</mat-icon>
+      </div>
+      <mat-menu #memberMenu="matMenu" [overlapTrigger]="false"
+        class="viz-header-application-dropdown viz-header-application-dropdown-member mat-elevation-z8">
+        <div class="login-info">
+          <div class="login-info-top">Logged In as:</div>
+          <div>Genevieve Mukherjee</div>
+        </div>
+        <ul class="header-application-list">
+          <li class="header-application-list-item">Setting</li>
+          <li class="header-application-list-item">Support</li>
+          <li class="header-application-list-item">Logout</li>
+        </ul>
+      </mat-menu>
+
     </div>
   </viz-header>
 </div>

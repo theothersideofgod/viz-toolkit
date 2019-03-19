@@ -1,4 +1,5 @@
 <span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { importExpr } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/compiler/src/output/output_ast'</span>;
 
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'header-basic'</span>,
@@ -6,7 +7,21 @@
   styleUrls: [<span class="hljs-string">'header-basic.component.scss'</span>]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> HeaderBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  checkboxes = [
+    { name: <span class="hljs-string">'Application Menu'</span>, checked: <span class="hljs-literal">true</span> },
+    { name: <span class="hljs-string">'Notifications'</span>, checked: <span class="hljs-literal">true</span> },
+    { name: <span class="hljs-string">'Help/Support'</span>, checked: <span class="hljs-literal">true</span> }
+  ];
+
+  userType = <span class="hljs-string">'1'</span>;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {}
+
   ngOnInit() {}
+
+  setCheckbox(item) {
+    item.checked = !item.checked;
+  }
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> HeaderBasicData = {

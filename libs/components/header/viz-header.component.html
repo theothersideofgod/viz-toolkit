@@ -15,7 +15,7 @@
       </span>
     </div>
     <div class="navbar-right">
-      <div class="more" (click)='moreOnclick()' *ngIf="application" mat-ripple [matMenuTriggerFor]="applicationMenu" #applicationMenuTrigger="matMenuTrigger">
+      <!-- <div class="more" (click)='moreOnclick()' *ngIf="application" mat-ripple [matMenuTriggerFor]="applicationMenu" #applicationMenuTrigger="matMenuTrigger">
         <mat-icon *ngIf="badge" [matBadge]="badge" matBadgePosition="above after" matBadgeColor="warn">apps</mat-icon>
         <mat-icon *ngIf="!badge" matBadgePosition="above after" matBadgeColor="warn">apps</mat-icon>
       </div>
@@ -27,16 +27,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </div>
+      </div> -->
+      <ng-content select="[headerApplications]"></ng-content>
     </div>
-    <div class="navbar-Menu" *ngIf="type === 'rightMenu'">
+    <!-- <div class="navbar-Menu" *ngIf="type === 'rightMenu'">
       <ng-content></ng-content>
-    </div>
+    </div> -->
   </div>
-  <mat-menu #applicationMenu="matMenu" [overlapTrigger]="false" class="viz-header-application-dropdown mat-elevation-z8">
+  <!-- <mat-menu #applicationMenu="matMenu" [overlapTrigger]="false" class="viz-header-application-dropdown mat-elevation-z8">
     <ng-content select="[headerApplication]"></ng-content>
   </mat-menu>
   <mat-menu #loginMenu="matMenu" [overlapTrigger]="false" class="viz-header-login-dropdown mat-elevation-z8">
     <ng-content select="[headerLogin]"></ng-content>
-  </mat-menu>
+  </mat-menu> -->
 </header>

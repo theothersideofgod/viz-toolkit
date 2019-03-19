@@ -1,15 +1,116 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">viz-header</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Application"</span> <span class="hljs-attr">brandLink</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">userName</span>=<span class="hljs-string">"Stan Lee"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">headerLogin</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>
-        View Profile
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>
-        Account Settings
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span> <span class="hljs-attr">routerLink</span>=<span class="hljs-string">"/login"</span>&gt;</span>
-        Log Out
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"control-panel"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"control-panel-checkbox"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-margin"</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"checkbox.checked"</span>
+        (<span class="hljs-attr">change</span>)=<span class="hljs-string">"setCheckbox(checkbox)"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let checkbox of checkboxes"</span>&gt;</span>
+        {{checkbox.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"control-panel-radio"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"userType"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>User Profile<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span>&gt;</span>Member Name<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">viz-header</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Application"</span> <span class="hljs-attr">userName</span>=<span class="hljs-string">"Stan Lee"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"primary"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">headerApplications</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application"</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- help --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-icon"</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"helpMenu"</span>
+        #<span class="hljs-attr">helpMenuTrigger</span>=<span class="hljs-string">"matMenuTrigger"</span>
+        [<span class="hljs-attr">class.header-application-icon-active</span>]=<span class="hljs-string">"helpMenuTrigger.menuOpen"</span>
+        *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"checkboxes[2].checked"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Example icon-button with a heart icon"</span>&gt;</span>help
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">helpMenu</span>=<span class="hljs-string">"matMenu"</span> [<span class="hljs-attr">overlapTrigger</span>]=<span class="hljs-string">"false"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-header-application-dropdown mat-elevation-z8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>User Guide<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Support Center<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Sitemap<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- notification --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-icon"</span>
+        [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"notificationMenu"</span>
+        #<span class="hljs-attr">notificationMenuTrigger</span>=<span class="hljs-string">"matMenuTrigger"</span>
+        [<span class="hljs-attr">class.header-application-icon-active</span>]=<span class="hljs-string">"notificationMenuTrigger.menuOpen"</span>
+        *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"checkboxes[1].checked"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">matBadge</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">matBadgePosition</span>=<span class="hljs-string">"above after"</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-icon-badge"</span> <span class="hljs-attr">matBadgeColor</span>=<span class="hljs-string">"warn"</span>
+          <span class="hljs-attr">matBadgeSize</span>=<span class="hljs-string">"small"</span>
+          <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Example icon-button with a heart icon"</span>&gt;</span>flag
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">notificationMenu</span>=<span class="hljs-string">"matMenu"</span> [<span class="hljs-attr">overlapTrigger</span>]=<span class="hljs-string">"false"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-header-application-dropdown mat-elevation-z8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>TBD 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>TBD 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>TBD 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- application --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-icon"</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"application"</span>
+        #<span class="hljs-attr">applicationTrigger</span>=<span class="hljs-string">"matMenuTrigger"</span>
+        [<span class="hljs-attr">class.header-application-icon-active</span>]=<span class="hljs-string">"applicationTrigger.menuOpen"</span>
+        *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"checkboxes[0].checked"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Example icon-button with a heart icon"</span>&gt;</span>apps
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">application</span>=<span class="hljs-string">"matMenu"</span> [<span class="hljs-attr">overlapTrigger</span>]=<span class="hljs-string">"false"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-header-application-dropdown mat-elevation-z8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Application 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Application 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Application 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- user --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-icon"</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"userMenu"</span>
+        #<span class="hljs-attr">userMenuTrigger</span>=<span class="hljs-string">"matMenuTrigger"</span>
+        [<span class="hljs-attr">class.header-application-icon-active</span>]=<span class="hljs-string">"userMenuTrigger.menuOpen"</span>
+        *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"userType === '1'"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Example icon-button with a heart icon"</span>&gt;</span>person
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">userMenu</span>=<span class="hljs-string">"matMenu"</span> [<span class="hljs-attr">overlapTrigger</span>]=<span class="hljs-string">"false"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-header-application-dropdown mat-elevation-z8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"login-info"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"login-info-top"</span>&gt;</span>Logged In as:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Genevieve Mukherjee<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Setting<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Support<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Logout<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-member"</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"userType === '2'"</span>
+        [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"memberMenu"</span> #<span class="hljs-attr">memberMenuTrigger</span>=<span class="hljs-string">"matMenuTrigger"</span>
+        [<span class="hljs-attr">class.header-application-icon-active</span>]=<span class="hljs-string">"memberMenuTrigger.menuOpen"</span>&gt;</span>
+        Member Name <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-member-icon"</span>&gt;</span>
+          arrow_drop_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">memberMenu</span>=<span class="hljs-string">"matMenu"</span> [<span class="hljs-attr">overlapTrigger</span>]=<span class="hljs-string">"false"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-header-application-dropdown viz-header-application-dropdown-member mat-elevation-z8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"login-info"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"login-info-top"</span>&gt;</span>Logged In as:<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Genevieve Mukherjee<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Setting<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Support<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header-application-list-item"</span>&gt;</span>Logout<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">viz-header</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
