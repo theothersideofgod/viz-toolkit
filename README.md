@@ -210,3 +210,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Upgrade angular to 7.2.x
 - fix some module error when build with '--prod'
 - Update Component Content : Checkbox(example), Datepicker(example), Form Fields(example), Radio Button(example), Menu(example), List(exmaple), Tab(example),  Dialog (Examples, Usage & content guidelines, Design specs) 
+
+1.0.9
+- Update header component.
+- Add toggle button component.
