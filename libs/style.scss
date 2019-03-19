@@ -408,7 +408,7 @@ td.mat-cell,
 
 .mat-tree {
   .mat-tree-node {
-    color: $viz-dark-gray;
+    color: $viz-gray;
     font-weight: 300;
   }
   .mat-icon-button {
@@ -703,7 +703,13 @@ td.mat-cell,
     // padding: 0px 24px;
     .mat-tab-label {
       // 
-      min-width: 0
+      min-width: 0;
+      &:hover {
+        background-color: rgba($viz-purple,0.12);
+      }
+      &.mat-tab-label-active {
+        background-color: rgba($viz-purple,0.12)
+      }
     }
   }
   .mat-ink-bar {
@@ -716,6 +722,11 @@ td.mat-cell,
   }
   .mat-tab-label-active {
     color: #696969;
+  }
+  .mat-tab-label-content {
+    .mat-ripple-element {
+      background-color: $viz-purple !important;
+    }
   }
 }
 .mat-tab-nav-bar {
