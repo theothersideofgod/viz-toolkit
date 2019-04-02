@@ -40,6 +40,26 @@ import {
 } from 'libs';
 
 import {
+  ButtonFloatingMiniComponent,
+  ButtonFloatingMiniData
+} from './button-floating-mini/button-floating-mini.component';
+import {
+  ButtonFloatingComponent,
+  ButtonFloatingData
+} from './button-floating/button-floating.component';
+import {
+  ButtonIconComponent,
+  ButtonIconData
+} from './button-icon/button-icon.component';
+import {
+  ButtonFlatComponent,
+  ButtonFlatData
+} from './button-flat/button-flat.component';
+import {
+  ButtonRaisedComponent,
+  ButtonRaisedData
+} from './button-raised/button-raised.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -580,6 +600,26 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'button-floating-mini' : {
+    component: ButtonFloatingMiniComponent,
+    data: ButtonFloatingMiniData
+  },
+  'button-floating' : {
+    component: ButtonFloatingComponent,
+    data: ButtonFloatingData
+  },
+  'button-icon' : {
+    component: ButtonIconComponent,
+    data: ButtonIconData
+  },
+  'button-flat' : {
+    component: ButtonFlatComponent,
+    data: ButtonFlatData
+  },
+  'button-raised' : {
+    component: ButtonRaisedComponent,
+    data: ButtonRaisedData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1116,6 +1156,11 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ButtonFloatingMiniComponent,
+    ButtonFloatingComponent,
+    ButtonIconComponent,
+    ButtonFlatComponent,
+    ButtonRaisedComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1302,6 +1347,11 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ButtonFloatingMiniComponent,
+    ButtonFloatingComponent,
+    ButtonIconComponent,
+    ButtonFlatComponent,
+    ButtonRaisedComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,

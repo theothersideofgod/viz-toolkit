@@ -21,6 +21,11 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'buttonfloatingmini', name: 'ButtonFloatingMini', examples: ['button-floating-mini']},
+        {id: 'buttonfloating', name: 'ButtonFloating', examples: ['button-floating']},
+        {id: 'buttonicon', name: 'ButtonIcon', examples: ['button-icon']},
+        {id: 'buttonflat', name: 'ButtonFlat', examples: ['button-flat']},
+        {id: 'buttonraised', name: 'ButtonRaised', examples: ['button-raised']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},

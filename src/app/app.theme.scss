@@ -192,10 +192,7 @@ $viz-typography: mat-typography-config(
 td.mat-cell, .mat-header-cell {
   border-bottom-color: #E9E9E9 !important;
 }
-.mat-raised-button:not([class*=mat-elevation-z]){
-  font-weight: 400;
-  box-shadow: none !important;
-}
+
 .mat-sort-header-arrow {
   margin-left: 4px !important;
 }
