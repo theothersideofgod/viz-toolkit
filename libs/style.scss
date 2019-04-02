@@ -1199,27 +1199,33 @@ mat-select[aria-activedescendant] {
 // }
 .mat-button-toggle-group {
   box-shadow: none !important;
-  border: 1px solid $viz-purple;
+  border: 1px solid $viz-purple !important;
   .mat-button-toggle {
     color: $viz-purple;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     background-color: #ffffff;
     .mat-button-toggle-button {
       .mat-button-toggle-label-content {
-        line-height: 40px;
-        padding: 0 8px;
+        // line-height: 40px;
+        padding: 0 12px;
       }
     }
     &.mat-button-toggle-checked {
       color: #ffffff;
       background-color: $viz-purple; 
+      .mat-button-toggle-focus-overlay {
+        border-bottom: solid 48px;
+      }
     }
     &.mat-button-toggle-disabled {
       color: rgba($viz-purple, 0.5);
     }
     &+ .mat-button-toggle {
-      border-left: 1px solid $viz-purple;
+      border-left: 1px solid $viz-purple !important;
+    }
+    .mat-button-toggle-appearance-standard .mat-button-toggle-focus-overlay {
+      background-color: none;
     }
   }
   &.viz-buttontoggle-text {
@@ -1232,7 +1238,7 @@ mat-select[aria-activedescendant] {
     }
   }
   &.viz-buttontoggle-secondary {
-    border: 1px solid $viz-light-gray;
+    border: 1px solid $viz-light-gray !important;
     .mat-button-toggle {
       color: $viz-gray;
       &.mat-button-toggle-checked {
@@ -1240,7 +1246,7 @@ mat-select[aria-activedescendant] {
         background-color: #E0E0E0;  
       }
       &+ .mat-button-toggle {
-        border-left: 1px solid $viz-light-gray;
+        border-left: 1px solid $viz-light-gray !important;
       }
     }
   }
