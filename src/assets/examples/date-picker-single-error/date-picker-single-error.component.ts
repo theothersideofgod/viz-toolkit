@@ -23,7 +23,7 @@ function notOverEighteen(control: AbstractControl) {
 @Component({
   selector: 'date-picker-single-error',
   templateUrl: 'date-picker-single-error.component.html',
-  styleUrls: ['date-picker-single-error.component.scss']
+  styleUrls: ['date-picker-single-error.component.css']
 })
 export class DatePickerSingleErrorComponent implements OnInit {
   dateFormControl = new FormControl('', [Validators.required, notOverEighteen]);

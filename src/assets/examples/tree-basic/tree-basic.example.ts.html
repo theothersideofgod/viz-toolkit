@@ -85,13 +85,13 @@
   ngOnInit() {}
 
   descendantsAllSelected(node) {
-    <span class="hljs-comment">//if node have children, count if checked node equal to node count</span>
+    <span class="hljs-comment">// if node have children, count if checked node equal to node count</span>
     <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
-      <span class="hljs-keyword">let</span> status = nodeCount(node) === checkedNodeCount(node);
+      <span class="hljs-keyword">const</span> status = nodeCount(node) === checkedNodeCount(node);
       node.checked = status;
       <span class="hljs-keyword">return</span> status;
     }
-    <span class="hljs-comment">//if node dont have children, just return the node check status</span>
+    <span class="hljs-comment">// if node dont have children, just return the node check status</span>
     <span class="hljs-keyword">return</span> node.checked;
   }
 
@@ -103,11 +103,11 @@
   }
 
   toggle(node) {
-    <span class="hljs-comment">//if node have children, toggle all children node status</span>
+    <span class="hljs-comment">// if node have children, toggle all children node status</span>
     <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
       toggleAllChildNode(node, !node.checked);
     }
-    <span class="hljs-comment">//if node dont have children, toggle itself</span>
+    <span class="hljs-comment">// if node dont have children, toggle itself</span>
     node.checked = !node.checked;
   }
 }

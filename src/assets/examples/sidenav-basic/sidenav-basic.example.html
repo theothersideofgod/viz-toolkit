@@ -3,13 +3,17 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-sidenav-header"</span>&gt;</span>
       Activity Overview
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-sidenav-group"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let nav of navList; let i=index"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-sidenav-group"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let nav of navList; let navIndex=index"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-sidenav-group-header"</span>&gt;</span>
         {{nav.name}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-sidenav-group-item"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let subNav of nav.subs; let i=index"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-icon"</span>&gt;</span>{{subNav.icon}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-sidenav-group-item"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let subNav of nav.subs; let i=index"</span> 
+        (<span class="hljs-attr">click</span>)=<span class="hljs-string">"redirectTo(subNav)"</span>
+        <span class="hljs-attr">routerLinkActive</span>
+        #<span class="hljs-attr">rla</span>=<span class="hljs-string">"routerLinkActive"</span> [<span class="hljs-attr">class.active</span>]=<span class="hljs-string">"subNav.isActive"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-sidenav-group-item-icon"</span>&gt;</span>{{subNav.icon}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
         {{subNav.name}}
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"subNav.removable"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-sidenav-group-item-icon-close"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"removeItem(navIndex, subNav);$event.stopPropagation();"</span>&gt;</span>close<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

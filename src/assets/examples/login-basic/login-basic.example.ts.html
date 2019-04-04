@@ -5,10 +5,12 @@
   templateUrl: <span class="hljs-string">'login-basic.component.html'</span>,
   styleUrls: [<span class="hljs-string">'login-basic.component.scss'</span>]
 })
-
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> LoginBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  ngOnInit() {}
 
-  ngOnInit() { }
-  
-  onLogin() { }
+  onLogin() {}
 }
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> LoginBasicData = {
+  name: <span class="hljs-string">'Login'</span>
+};

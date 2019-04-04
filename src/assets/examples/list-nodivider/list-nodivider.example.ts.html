@@ -1,21 +1,23 @@
 <span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-meta">@Component</span>({
-	selector: <span class="hljs-string">'list-nodivider'</span>,
+  selector: <span class="hljs-string">'list-nodivider'</span>,
   templateUrl: <span class="hljs-string">'list-nodivider.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'list-nodivider.component.css'</span>],
+  styleUrls: [<span class="hljs-string">'list-nodivider.component.css'</span>]
 })
-
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ListNodividerComponent <span class="hljs-keyword">implements</span> OnInit {
-  messages:<span class="hljs-built_in">any</span>[] = [<span class="hljs-string">'list item 1'</span>,<span class="hljs-string">'list item 2'</span>,<span class="hljs-string">'list item 3'</span>,<span class="hljs-string">'list item 4'</span>]
+  messages: <span class="hljs-built_in">any</span>[] = [
+    <span class="hljs-string">'list item 1'</span>,
+    <span class="hljs-string">'list item 2'</span>,
+    <span class="hljs-string">'list item 3'</span>,
+    <span class="hljs-string">'list item 4'</span>
+  ];
   typesOfShoes: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'Boots'</span>, <span class="hljs-string">'Clogs'</span>, <span class="hljs-string">'Loafers'</span>, <span class="hljs-string">'Moccasins'</span>];
-  ngOnInit() { }
-  
-  seachOnClick() {
-    
-  }
+  ngOnInit() {}
+
+  seachOnClick() {}
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ListNodividerData = {
-	name: <span class="hljs-string">'ListNodivider'</span>
-}
+  name: <span class="hljs-string">'ListNodivider'</span>
+};
