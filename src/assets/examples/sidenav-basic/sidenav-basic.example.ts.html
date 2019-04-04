@@ -1,5 +1,13 @@
 <span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Router } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/router'</span>;
 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Sub {
+  name: <span class="hljs-built_in">string</span>;
+  value: <span class="hljs-built_in">string</span>;
+  icon: <span class="hljs-built_in">string</span>;
+  removable: <span class="hljs-literal">false</span>;
+  isActive: <span class="hljs-literal">false</span>;
+}
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'sidenav-basic'</span>,
   templateUrl: <span class="hljs-string">'sidenav-basic.component.html'</span>,
@@ -12,39 +20,72 @@
       subs: [
         {
           name: <span class="hljs-string">'Assigned'</span>,
-          value: <span class="hljs-string">'/documentation/designers'</span>,
-          icon: <span class="hljs-string">'assignment_turned_in'</span>
+          value: <span class="hljs-string">'/documentation/menu'</span>,
+          icon: <span class="hljs-string">'assignment_turned_in'</span>,
+          removable: <span class="hljs-literal">false</span>,
+          isActive: <span class="hljs-literal">false</span>
         },
         {
           name: <span class="hljs-string">'Held Back'</span>,
-          value: <span class="hljs-string">'/documentation/developers'</span>,
-          icon: <span class="hljs-string">'inbox'</span>
+          value: <span class="hljs-string">'/documentation/slider'</span>,
+          icon: <span class="hljs-string">'inbox'</span>,
+          removable: <span class="hljs-literal">false</span>,
+          isActive: <span class="hljs-literal">false</span>
         },
         {
           name: <span class="hljs-string">'Confirmed'</span>,
-          value: <span class="hljs-string">'/documentation/developers'</span>,
-          icon: <span class="hljs-string">'confirmation_number'</span>
+          value: <span class="hljs-string">'/documentation/select'</span>,
+          icon: <span class="hljs-string">'confirmation_number'</span>,
+          removable: <span class="hljs-literal">false</span>,
+          isActive: <span class="hljs-literal">false</span>
         }
       ]
     },
     {
-      name: <span class="hljs-string">'held back'</span>,
+      name: <span class="hljs-string">'open orders'</span>,
       subs: [
         {
-          name: <span class="hljs-string">'All'</span>,
-          value: <span class="hljs-string">'/documentation/designers'</span>,
-          icon: <span class="hljs-string">'folder'</span>
+          name: <span class="hljs-string">'84738273'</span>,
+          value: <span class="hljs-string">'/documentation/colors'</span>,
+          icon: <span class="hljs-string">'warning'</span>,
+          removable: <span class="hljs-literal">true</span>,
+          isActive: <span class="hljs-literal">false</span>
         },
         {
-          name: <span class="hljs-string">'PO Nodtes'</span>,
+          name: <span class="hljs-string">'23497234'</span>,
           value: <span class="hljs-string">'/documentation/developers'</span>,
-          icon: <span class="hljs-string">'payment'</span>
+          icon: <span class="hljs-string">'warning'</span>,
+          removable: <span class="hljs-literal">true</span>,
+          isActive: <span class="hljs-literal">false</span>
+        },
+        {
+          name: <span class="hljs-string">'AH-398377'</span>,
+          value: <span class="hljs-string">'/documentation/sidenav'</span>,
+          icon: <span class="hljs-string">'warning'</span>,
+          removable: <span class="hljs-literal">true</span>,
+          isActive: <span class="hljs-literal">false</span>
         }
       ]
     }
   ];
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {}
+  lastSubItem: Sub;
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> router: Router</span>) {}
   ngOnInit() {}
+  removeItem(navIndex, targetSub) {
+    <span class="hljs-keyword">const</span> targetNav = <span class="hljs-keyword">this</span>.navList[navIndex];
+
+    <span class="hljs-keyword">this</span>.navList[navIndex].subs = targetNav.subs.filter(<span class="hljs-function"><span class="hljs-params">sub</span> =&gt;</span> {
+      <span class="hljs-keyword">return</span> sub.name !== targetSub.name;
+    });
+  }
+  redirectTo(subNav) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.lastSubItem) {
+      <span class="hljs-keyword">this</span>.lastSubItem.isActive = <span class="hljs-literal">false</span>;
+    }
+    subNav.isActive = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">this</span>.lastSubItem = subNav;
+    <span class="hljs-comment">// this.router.navigate([subNav.value]);</span>
+  }
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SidenavBasicData = {

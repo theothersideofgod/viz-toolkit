@@ -7,7 +7,7 @@
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'app-date-picker-basic'</span>,
   templateUrl: <span class="hljs-string">'./date-picker-basic.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'./date-picker-basic.component.scss'</span>]
+  styleUrls: [<span class="hljs-string">'./date-picker-basic.component.css'</span>]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatePickerBasicComponent {
   dateRange: matRangeDatepickerRangeValue&lt;<span class="hljs-built_in">Date</span>&gt;;
@@ -15,6 +15,7 @@
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {}
 
   applyDateRange(event) {}
+  onClose() {}
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DatePickerBasicData = {

@@ -1,0 +1,20 @@
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'customer-select'</span>,
+  templateUrl: <span class="hljs-string">'customer-select.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'customer-select.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CustomerSelectComponent <span class="hljs-keyword">implements</span> OnInit {
+  ngOnInit() {}
+  menuClose() {
+    alert(<span class="hljs-string">'close'</span>);
+  }
+  menuOpen() {
+    alert(<span class="hljs-string">'open'</span>);
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CustomerSelectData = {
+  name: <span class="hljs-string">'CustomerSelect'</span>
+};

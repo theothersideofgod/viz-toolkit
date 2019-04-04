@@ -1,0 +1,53 @@
+<span class="hljs-comment">&lt;!-- &lt;div class="example-container mat-elevation-z8"&gt;
+  &lt;mat-table #table [dataSource]="dataSource"&gt;
+
+    &lt;ng-container matColumnDef="position"&gt;
+      &lt;mat-header-cell *matHeaderCellDef&gt;
+        &lt;mat-icon&gt;&lt;/mat-icon&gt; No. &lt;/mat-header-cell&gt;
+      &lt;mat-cell *matCellDef="let element"&gt;
+        &lt;mat-icon&gt;arrow_drop_down&lt;/mat-icon&gt; {{element.position}} &lt;/mat-cell&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container matColumnDef="name"&gt;
+      &lt;mat-header-cell *matHeaderCellDef&gt; Name &lt;/mat-header-cell&gt;
+      &lt;mat-cell *matCellDef="let element"&gt; {{element.name}} &lt;/mat-cell&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container matColumnDef="weight"&gt;
+      &lt;mat-header-cell *matHeaderCellDef&gt; Weight &lt;/mat-header-cell&gt;
+      &lt;mat-cell *matCellDef="let element"&gt; {{element.weight}} &lt;/mat-cell&gt;
+    &lt;/ng-container&gt;
+
+    &lt;mat-header-row *matHeaderRowDef="displayedColumns"&gt;&lt;/mat-header-row&gt;
+    &lt;mat-row *matRowDef="let row; columns: displayedColumns;" class="element-row" [vizExpandRow] [vizExpandRowTpl]="tpl"&gt;
+    &lt;/mat-row&gt;
+
+
+    &lt;mat-row &gt;&lt;/mat-row&gt;
+
+  &lt;/mat-table&gt;
+&lt;/div&gt;
+
+&lt;ng-template #tpl let-element&gt;
+  &lt;mat-table #table [dataSource]="dataSource" class="mat-row" [@detailExpand] style="overflow: hidden"&gt;
+
+    &lt;ng-container matColumnDef="position"&gt;
+      &lt;mat-header-cell *matHeaderCellDef&gt; No. &lt;/mat-header-cell&gt;
+      &lt;mat-cell *matCellDef="let element"&gt;
+        &lt;mat-icon&gt;&lt;/mat-icon&gt;{{element.position}} &lt;/mat-cell&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container matColumnDef="name"&gt;
+      &lt;mat-header-cell *matHeaderCellDef&gt; Name &lt;/mat-header-cell&gt;
+      &lt;mat-cell *matCellDef="let element"&gt; {{element.name}} &lt;/mat-cell&gt;
+    &lt;/ng-container&gt;
+
+    &lt;ng-container matColumnDef="weight"&gt;
+      &lt;mat-header-cell *matHeaderCellDef&gt; Weight &lt;/mat-header-cell&gt;
+      &lt;mat-cell *matCellDef="let element"&gt; {{element.weight}} &lt;/mat-cell&gt;
+    &lt;/ng-container&gt;
+
+    &lt;mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="element-row"&gt;
+    &lt;/mat-row&gt;
+  &lt;/mat-table&gt;
+&lt;/ng-template&gt; --&gt;</span>

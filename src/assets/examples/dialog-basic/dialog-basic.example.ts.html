@@ -1,96 +1,96 @@
-import { Component, OnInit, Inject } from '@angular/core';
+<span class="hljs-keyword">import</span> { Component, OnInit, Inject } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
-import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+<span class="hljs-keyword">import</span> { MatDialog, MAT_DIALOG_DATA, MatDialogRef } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
-const nodeCount = node =&gt; {
-  return node.children.length;
+<span class="hljs-keyword">const</span> nodeCount = <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> node.children.length;
 };
 
-const checkedNodeCount = node =&gt; {
-  let count = 0;
-  node.children.forEach(subNode =&gt; {
-    if (subNode.checked) {
+<span class="hljs-keyword">const</span> checkedNodeCount = <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> {
+  <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+  node.children.forEach(<span class="hljs-function"><span class="hljs-params">subNode</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (subNode.checked) {
       count++;
     }
   });
-  return count;
+  <span class="hljs-keyword">return</span> count;
 };
 
-const toggleAllChildNode = (node, status) =&gt; {
-  node.children.forEach(subNode =&gt; {
+<span class="hljs-keyword">const</span> toggleAllChildNode = <span class="hljs-function">(<span class="hljs-params">node, status</span>) =&gt;</span> {
+  node.children.forEach(<span class="hljs-function"><span class="hljs-params">subNode</span> =&gt;</span> {
     subNode.checked = status;
     toggleAllChildNode(subNode, status);
   });
 };
 
-const partialCheckedNode = node =&gt; {
-  let checkNodes = 0;
-  if (node.children.length &gt; 0) {
-    node.children.forEach(subNode =&gt; {
+<span class="hljs-keyword">const</span> partialCheckedNode = <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> {
+  <span class="hljs-keyword">let</span> checkNodes = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
+    node.children.forEach(<span class="hljs-function"><span class="hljs-params">subNode</span> =&gt;</span> {
       checkNodes += partialCheckedNode(subNode);
     });
-  } else if (node.checked) {
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node.checked) {
     checkNodes++;
   }
-  return checkNodes;
+  <span class="hljs-keyword">return</span> checkNodes;
 };
-@Component({
-  selector: 'dialog-data-example-dialog',
-  templateUrl: 'dialog-contain.component.html',
-  styleUrls: ['dialog-contain.component.scss']
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-data-example-dialog'</span>,
+  templateUrl: <span class="hljs-string">'dialog-contain.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'dialog-contain.component.scss'</span>]
 })
-export class DialogDataExampleDialog {
-  constructor(
-    public dialogRef: MatDialogRef&lt;DialogDataExampleDialog&gt;,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) {}
-  tree: any = [
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogDataExampleDialog {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;DialogDataExampleDialog&gt;,
+    <span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: DialogData
+  </span>) {}
+  tree: <span class="hljs-built_in">any</span> = [
     {
-      name: 'Hospitals of the University of Pennsylvania-Penn Presbyterian',
-      isExpanded: true,
-      checked: false,
+      name: <span class="hljs-string">'Hospitals of the University of Pennsylvania-Penn Presbyterian'</span>,
+      isExpanded: <span class="hljs-literal">true</span>,
+      checked: <span class="hljs-literal">false</span>,
       children: []
     },
     {
-      name: 'Johns Hopkins Hospitals',
-      isExpanded: true,
-      checked: false,
+      name: <span class="hljs-string">'Johns Hopkins Hospitals'</span>,
+      isExpanded: <span class="hljs-literal">true</span>,
+      checked: <span class="hljs-literal">false</span>,
       children: [
         {
-          name: 'Facility 1',
-          isExpanded: true,
-          checked: false,
+          name: <span class="hljs-string">'Facility 1'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
           children: []
         },
         {
-          name: 'Facility 2',
-          isExpanded: true,
-          checked: false,
+          name: <span class="hljs-string">'Facility 2'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
           children: []
         },
         {
-          name: 'Facility 3',
-          isExpanded: true,
-          checked: false,
+          name: <span class="hljs-string">'Facility 3'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
           children: []
         }
       ]
     },
     {
-      name: 'New York-Presbyterian University Hospital of Columbia and Cornell',
-      isExpanded: true,
-      checked: false,
+      name: <span class="hljs-string">'New York-Presbyterian University Hospital of Columbia and Cornell'</span>,
+      isExpanded: <span class="hljs-literal">true</span>,
+      checked: <span class="hljs-literal">false</span>,
       children: [
         {
-          name: 'item3',
-          isExpanded: true,
-          checked: false,
+          name: <span class="hljs-string">'item3'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
           children: []
         },
         {
-          name: 'item4',
-          isExpanded: true,
-          checked: false,
+          name: <span class="hljs-string">'item4'</span>,
+          isExpanded: <span class="hljs-literal">true</span>,
+          checked: <span class="hljs-literal">false</span>,
           children: []
         }
       ]
@@ -98,58 +98,58 @@ export class DialogDataExampleDialog {
   ];
 
   onNoClick() {
-    this.dialogRef.close();
+    <span class="hljs-keyword">this</span>.dialogRef.close();
   }
 
   descendantsAllSelected(node) {
-    // if node have children, count if checked node equal to node count
-    if (node.children.length &gt; 0) {
-      const status = nodeCount(node) === checkedNodeCount(node);
+    <span class="hljs-comment">// if node have children, count if checked node equal to node count</span>
+    <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">const</span> status = nodeCount(node) === checkedNodeCount(node);
       node.checked = status;
-      return status;
+      <span class="hljs-keyword">return</span> status;
     }
-    // if node dont have children, just return the node check status
-    return node.checked;
+    <span class="hljs-comment">// if node dont have children, just return the node check status</span>
+    <span class="hljs-keyword">return</span> node.checked;
   }
 
   descendantsPartiallySelected(node) {
-    if (node.children.length &gt; 0) {
-      return partialCheckedNode(node) &amp;&amp; !this.descendantsAllSelected(node);
+    <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> partialCheckedNode(node) &amp;&amp; !<span class="hljs-keyword">this</span>.descendantsAllSelected(node);
     }
-    return false;
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
   }
 
   toggle(node) {
-    // if node have children, toggle all children node status
-    if (node.children.length &gt; 0) {
+    <span class="hljs-comment">// if node have children, toggle all children node status</span>
+    <span class="hljs-keyword">if</span> (node.children.length &gt; <span class="hljs-number">0</span>) {
       toggleAllChildNode(node, !node.checked);
     }
-    // if node dont have children, toggle itself
+    <span class="hljs-comment">// if node dont have children, toggle itself</span>
     node.checked = !node.checked;
   }
 
   selectAll(e) {
-    console.log(e.checked);
-    toggleAllChildNode({ children: this.tree }, e.checked);
+    <span class="hljs-built_in">console</span>.log(e.checked);
+    toggleAllChildNode({ children: <span class="hljs-keyword">this</span>.tree }, e.checked);
   }
 }
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> DialogData {
+  animal: <span class="hljs-string">'panda'</span> | <span class="hljs-string">'unicorn'</span> | <span class="hljs-string">'lion'</span>;
 }
 
-@Component({
-  selector: 'dialog-basic',
-  templateUrl: 'dialog-basic.component.html',
-  styleUrls: ['dialog-basic.component.css']
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-basic'</span>,
+  templateUrl: <span class="hljs-string">'dialog-basic.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'dialog-basic.component.css'</span>]
 })
-export class DialogBasicComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>) {}
 
   openDialog() {
-    this.dialog.open(DialogDataExampleDialog, {
-      width: '400px',
+    <span class="hljs-keyword">this</span>.dialog.open(DialogDataExampleDialog, {
+      width: <span class="hljs-string">'400px'</span>,
       data: {
-        animal: 'panda'
+        animal: <span class="hljs-string">'panda'</span>
       }
     });
   }
@@ -157,6 +157,6 @@ export class DialogBasicComponent implements OnInit {
   ngOnInit() {}
 }
 
-export const DialogBasicData = {
-  name: 'DialogBasic'
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DialogBasicData = {
+  name: <span class="hljs-string">'DialogBasic'</span>
 };

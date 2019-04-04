@@ -4,7 +4,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 @Component({
   selector: 'form-field-validation',
   templateUrl: 'form-field-validation.component.html',
-  styleUrls: ['form-field-validation.component.scss']
+  styleUrls: ['form-field-validation.component.css']
 })
 export class FormFieldValidationComponent implements OnInit {
   registerForm: FormGroup;

@@ -9,7 +9,7 @@ import {Subject} from 'rxjs';
 @Component({
   selector: 'form-field-custom-phone-number',
   templateUrl: 'form-field-custom-phone-number.component.html',
-  styleUrls: ['form-field-custom-phone-number.component.scss'],
+  styleUrls: ['form-field-custom-phone-number.component.css'],
 })
 export class FormFieldCustomPhoneNumberComponent {}
 
