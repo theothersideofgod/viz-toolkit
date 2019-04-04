@@ -1200,6 +1200,7 @@ mat-select[aria-activedescendant] {
 .mat-button-toggle-group {
   box-shadow: none !important;
   border: 1px solid $viz-purple !important;
+  transform: translateZ(0);
   .mat-button-toggle {
     color: $viz-purple;
     font-size: 16px;
