@@ -80,6 +80,10 @@ import {
   SlideToggleConfigurableData
 } from './slide-toggle-configurable/slide-toggle-configurable.component';
 import {
+  RadioWidthNgmodelComponent,
+  RadioWidthNgmodelData
+} from './radio-width-ngmodel/radio-width-ngmodel.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -660,6 +664,10 @@ export const ALL_EXAMPLE_ITEMS = {
     component: SlideToggleConfigurableComponent,
     data: SlideToggleConfigurableData
   },
+  'radio-width-ngmodel' : {
+    component: RadioWidthNgmodelComponent,
+    data: RadioWidthNgmodelData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1206,6 +1214,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ChipAutocompleteComponent,
     CheckboxConfigurableComponent,
     SlideToggleConfigurableComponent,
+    RadioWidthNgmodelComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1402,6 +1411,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ChipAutocompleteComponent,
     CheckboxConfigurableComponent,
     SlideToggleConfigurableComponent,
+    RadioWidthNgmodelComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
