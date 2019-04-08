@@ -1,15 +1,17 @@
 <span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-meta">@Component</span>({
-	selector: <span class="hljs-string">'progress-spinner-basic'</span>,
+  selector: <span class="hljs-string">'progress-spinner-basic'</span>,
   templateUrl: <span class="hljs-string">'progress-spinner-basic.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'progress-spinner-basic.component.css'</span>],
+  styleUrls: [<span class="hljs-string">'progress-spinner-basic.component.css'</span>]
 })
-
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ProgressSpinnerBasicComponent <span class="hljs-keyword">implements</span> OnInit {
-  ngOnInit() { }
+  color = <span class="hljs-string">'primary'</span>;
+  mode = <span class="hljs-string">'determinate'</span>;
+  value = <span class="hljs-number">50</span>;
+  ngOnInit() {}
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ProgressSpinnerBasicData = {
-	name: <span class="hljs-string">'ProgressSpinnerBasic'</span>
-}
+  name: <span class="hljs-string">'ProgressSpinnerBasic'</span>
+};
