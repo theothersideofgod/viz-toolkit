@@ -4,5 +4,9 @@ mat-chip-list {
   /* margin-left: 100px; */
 }
 .mat-chip {
+  width: 95px;
+  display: inline;
+}
+.mat-chip {
   margin-left: 24px;
 }
