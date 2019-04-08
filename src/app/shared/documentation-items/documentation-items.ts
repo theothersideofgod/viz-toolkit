@@ -30,6 +30,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'chipwithinput', name: 'ChipWithInput', examples: ['chip-with-input']},
         {id: 'chipautocomplete', name: 'ChipAutocomplete', examples: ['chip-autocomplete']},
         {id: 'checkboxconfigurable', name: 'CheckboxConfigurable', examples: ['checkbox-configurable']},
+        {id: 'slidetoggleconfigurable', name: 'SlideToggleConfigurable', examples: ['slide-toggle-configurable']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},

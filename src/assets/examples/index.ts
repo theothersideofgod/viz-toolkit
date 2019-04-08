@@ -76,6 +76,10 @@ import {
   CheckboxConfigurableData
 } from './checkbox-configurable/checkbox-configurable.component';
 import {
+  SlideToggleConfigurableComponent,
+  SlideToggleConfigurableData
+} from './slide-toggle-configurable/slide-toggle-configurable.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -652,6 +656,10 @@ export const ALL_EXAMPLE_ITEMS = {
     component: CheckboxConfigurableComponent,
     data: CheckboxConfigurableData
   },
+  'slide-toggle-configurable' : {
+    component: SlideToggleConfigurableComponent,
+    data: SlideToggleConfigurableData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1197,6 +1205,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ChipWithInputComponent,
     ChipAutocompleteComponent,
     CheckboxConfigurableComponent,
+    SlideToggleConfigurableComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1392,6 +1401,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ChipWithInputComponent,
     ChipAutocompleteComponent,
     CheckboxConfigurableComponent,
+    SlideToggleConfigurableComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
