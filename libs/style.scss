@@ -215,10 +215,7 @@ td.mat-cell,
 .mat-header-cell {
   border-bottom-color: #e9e9e9 !important;
 }
-.mat-raised-button:not([class*='mat-elevation-z']) {
-  font-weight: 400;
-  box-shadow: none !important;
-}
+
 .mat-sort-header-arrow {
   margin-left: 4px !important;
 }
@@ -1201,6 +1198,7 @@ mat-select[aria-activedescendant] {
   box-shadow: none !important;
   border: 1px solid $viz-purple !important;
   transform: translateZ(0);
+  overflow: auto;
   .mat-button-toggle {
     color: $viz-purple;
     font-size: 16px;
