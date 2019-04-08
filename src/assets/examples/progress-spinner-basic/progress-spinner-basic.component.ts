@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['progress-spinner-basic.component.css']
 })
 export class ProgressSpinnerBasicComponent implements OnInit {
+  color = 'primary';
+  mode = 'determinate';
+  value = 50;
   ngOnInit() {}
 }
 
