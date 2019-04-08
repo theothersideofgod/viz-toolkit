@@ -40,6 +40,18 @@ import {
 } from 'libs';
 
 import {
+  ChipStackedComponent,
+  ChipStackedData
+} from './chip-stacked/chip-stacked.component';
+import {
+  ChipWithInputComponent,
+  ChipWithInputData
+} from './chip-with-input/chip-with-input.component';
+import {
+  ChipAutocompleteComponent,
+  ChipAutocompleteData
+} from './chip-autocomplete/chip-autocomplete.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -580,6 +592,18 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'chip-stacked' : {
+    component: ChipStackedComponent,
+    data: ChipStackedData
+  },
+  'chip-with-input' : {
+    component: ChipWithInputComponent,
+    data: ChipWithInputData
+  },
+  'chip-autocomplete' : {
+    component: ChipAutocompleteComponent,
+    data: ChipAutocompleteData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1116,6 +1140,9 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ChipStackedComponent,
+    ChipWithInputComponent,
+    ChipAutocompleteComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1302,6 +1329,9 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ChipStackedComponent,
+    ChipWithInputComponent,
+    ChipAutocompleteComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,

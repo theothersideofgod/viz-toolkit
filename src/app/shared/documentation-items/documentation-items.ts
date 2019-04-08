@@ -21,6 +21,9 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'chipstacked', name: 'ChipStacked', examples: ['chip-stacked']},
+        {id: 'chipwithinput', name: 'ChipWithInput', examples: ['chip-with-input']},
+        {id: 'chipautocomplete', name: 'ChipAutocomplete', examples: ['chip-autocomplete']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},

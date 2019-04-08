@@ -1,0 +1,24 @@
+<span class="hljs-keyword">import</span> { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { ThemePalette } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> ChipColor {
+  name: <span class="hljs-built_in">string</span>;
+  color: ThemePalette;
+}
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'chip-stacked'</span>,
+  templateUrl: <span class="hljs-string">'chip-stacked.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'chip-stacked.component.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipStackedComponent {
+  availableColors: ChipColor[] = [
+    { name: <span class="hljs-string">'Primary'</span>, color: <span class="hljs-string">'primary'</span> },
+    { name: <span class="hljs-string">'Secondary'</span>, color: <span class="hljs-string">'accent'</span> },
+    { name: <span class="hljs-string">'Warn'</span>, color: <span class="hljs-string">'warn'</span> }
+  ];
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ChipStackedData = {
+  name: <span class="hljs-string">'ChipStacked'</span>
+};

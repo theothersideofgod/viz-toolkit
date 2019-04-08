@@ -1,0 +1,11 @@
+.example-chip-list {
+  width: 440px;
+  margin: auto 0px;
+}
+.example-chip-style {
+  background-color: #7f5eba;
+  color: white;
+}
+.example-chip-style .mat-icon {
+  color: white;
+}

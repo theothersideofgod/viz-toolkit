@@ -530,7 +530,7 @@ td.mat-cell,
     bottom: 0px;
   }
   .mat-icon {
-    margin-top: 17px;
+    // margin-top: 17px;
   }
   .mat-datepicker-toggle {
     margin-top: 17px;
@@ -785,7 +785,7 @@ mat-chip {
   }
   &:not([color="primary"]) {
     .mat-chip-remove {
-      color: #9f9f9f !important;
+      color: #ffffff !important;
       opacity: 1 !important;
     }
   }
