@@ -1198,6 +1198,7 @@ mat-select[aria-activedescendant] {
   box-shadow: none !important;
   border: 1px solid $viz-purple !important;
   transform: translateZ(0);
+  overflow: auto;
   .mat-button-toggle {
     color: $viz-purple;
     font-size: 16px;
