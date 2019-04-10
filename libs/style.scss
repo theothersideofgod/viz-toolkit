@@ -226,42 +226,15 @@ td.mat-cell,
 //   font-weight: 300 !important;
 // }
 // menu style
-.cdk-overlay-pane {
-  // transform: translateY(0) !important;
-  .mat-menu-panel {
-    border-radius: 0px;
-    .mat-menu-content {
-      max-width: none;
-      width: 280px;
-      padding: 0px;
-      .mat-menu-item {
-        color: #696969;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 18px;
-        height: 40px;
-        &:hover {
-          color: $viz-purple;
-          background-color: #f1f1f1;
-          .mat-icon {
-            color: $viz-purple
-          }
-        }
-      }
-      .mat-menu-item-submenu-trigger {
-        &:hover::after {
-          color: black;
-        }
-      }
+.mat-menu-content {
+  .mat-menu-item {
+    color: $viz-gray;
+    .mat-icon {
+      color: $viz-dark-gray;
     }
   }
 }
 
-.viz-menu ~ .cdk-overlay-connected-position-bounding-box  {
-  .cdk-overlay-pane {
-    transform: translateY(0) !important
-  }
-}
 //list style
 .mat-list {
   // padding-top: 0px;
