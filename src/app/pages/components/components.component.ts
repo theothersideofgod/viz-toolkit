@@ -54,6 +54,12 @@ export class ComponentsComponent implements OnInit {
       title: 'form controls',
       components: [
         {
+          title: 'autocomplete',
+          desc: '',
+          route: 'autocomplete',
+          img: 'autocomplete'
+        },
+        {
           title: 'checkbox',
           desc: 'All the states of the checkbox',
           route: 'checkbox',

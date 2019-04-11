@@ -1,0 +1,292 @@
+<html>
+  <head></head>
+
+  <body>
+    <div class="doc-category-title">
+      Form Controls
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
+    </div>
+    <div class="doc-title-1">Autocomplete</div>
+    <div class="doc-desc-1">
+      The autocomplete is a normal text input enhanced by a pancel of suggested
+      options
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-more-example"></span>
+
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
+
+    <div class="doc-title-4 mb-16">Simple autocomplete</div>
+    <div class="doc-example-container">
+      <div app-docs-example="autocomplete-simple"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">Filter autocomplete</div>
+    <div class="doc-example-container">
+      <div app-docs-example="autocomplete-filter"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">Display value autocomplete</div>
+    <div class="doc-example-container">
+      <div app-docs-example="autocomplete-display"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">Highlight the first autocomplete option</div>
+    <div class="doc-example-container">
+      <div app-docs-example="autocomplete-highlight"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">Option groups autocomplete</div>
+    <div class="doc-example-container">
+      <div app-docs-example="autocomplete-optgroup"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">Autocomplete overview</div>
+    <div class="doc-example-container">
+      <div app-docs-example="autocomplete-overview"></div>
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      To get a customized autocomplete, just set
+      <span class="doc-desc-2-highlight"
+        >autoActiveFirstOption / classList / disableRipple / displayWith /
+        panelWidth / closed / opened / optionSelected / id / isOpen / panel /
+        showPanel
+      </span>
+    </div>
+
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>autoActiveFirstOption</td>
+          <td>
+            Whether the first option should be highlighted when the autocomplete
+            panel is opened. Can be configured globally through the
+            MAT_AUTOCOMPLETE_DEFAULT_OPTIONS token.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>classList</td>
+          <td>
+            Takes classes set on the host mat-autocomplete element and applies
+            them to the panel inside the overlay container to allow for easy
+            styling.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>displayWith</td>
+          <td>
+            Function that maps an option&apos;s control value to its display
+            value in the trigger.
+          </td>
+          <td>((value: any) =&gt; string) | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>panelWidth</td>
+          <td>
+            Specify the width of the autocomplete panel. Can be any CSS sizing
+            value, otherwise it will match the width of its host.
+          </td>
+          <td>string | number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>closed</td>
+          <td>Event that is emitted when the autocomplete panel is closed.</td>
+          <td>EventEmitter<void></void></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>opened</td>
+          <td>Event that is emitted when the autocomplete panel is opened.</td>
+          <td>EventEmitter<void></void></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>optionSelected</td>
+          <td>
+            Event that is emitted whenever an option from the list is selected.
+          </td>
+          <td>
+            EventEmitter<matautocompleteselectedevent
+            ></matautocompleteselectedevent>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>id</td>
+          <td>
+            Unique ID to be used by autocomplete trigger&apos;s
+            &quot;aria-owns&quot; property.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>isOpen</td>
+          <td>Whether the autocomplete panel is open.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>panel</td>
+          <td>Element for the panel containing the autocomplete options.</td>
+          <td>ElementRef</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>showPanel</td>
+          <td>
+            Whether the autocomplete panel should be visible, depending on
+            option length.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Best Practice
+      <span class="docs-markdown-h3" id="best_practices">
+        <span header-link="best_practices"></span>Best Practices</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      Form field should:
+      <ul class="doc-list">
+        <li>
+          Be clearly labeled so it&#x2019;s obvious to the users what they
+          should enter into the field
+        </li>
+        <li>Only ask for information that&#x2019;s really needed</li>
+        <li>
+          Validate input as soon as user has finished interacting with a field
+        </li>
+      </ul>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+    <div class="doc-desc-2">
+      Label text should be short, clear, and fully visible. It shouldn&#x2019;t
+      be truncated.
+    </div>
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w50 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/formfield-pic-1.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w50 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/formfield-pic-2.png" alt="" />
+      </div>
+    </div>
+    <div class="doc-desc-2">
+      Label text shouldn&#x2019;t take up multiple lines.
+    </div>
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w50 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/formfield-pic-3.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w50 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/formfield-pic-4.png" alt="" />
+      </div>
+    </div>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:280px">
+      <img src="assets/img/doc/formfield-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sektch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+  </body>
+</html>

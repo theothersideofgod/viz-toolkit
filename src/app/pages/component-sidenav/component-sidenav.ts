@@ -38,6 +38,10 @@ const initNavList = [
     name: 'Form Controls',
     subs: [
       {
+        name: 'Autocomplete',
+        value: 'autocomplete'
+      },
+      {
         name: 'Checkbox',
         value: 'checkbox'
       },
