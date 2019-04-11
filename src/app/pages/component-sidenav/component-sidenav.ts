@@ -203,6 +203,10 @@ const initNavList = [
         value: 'table'
       },
       {
+        name: 'Sort Header',
+        value: 'sort'
+      },
+      {
         name: 'No Data',
         value: 'nodata'
       }

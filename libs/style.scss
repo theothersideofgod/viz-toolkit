@@ -864,6 +864,17 @@ mat-chip {
   }
 }
 
+//sort header 
+.mat-header-cell {
+  .mat-sort-header-arrow {
+    color: $viz-gray !important;
+  }
+  .mat-sort-header-button {
+    color: $viz-dark-gray !important;
+  }
+}
+
+
 //date picker
 mat-datepicker-content.mat-datepicker-content {
   height: auto !important;

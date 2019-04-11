@@ -35,6 +35,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'sliderconfigurable', name: 'SliderConfigurable', examples: ['slider-configurable']},
         {id: 'sliderformatting', name: 'SliderFormatting', examples: ['slider-formatting']},
         {id: 'paginatorconfigurable', name: 'PaginatorConfigurable', examples: ['paginator-configurable']},
+        {id: 'sorttable', name: 'SortTable', examples: ['sort-table']},
+        {id: 'sort', name: 'SortOverview', examples: ['sort-overview']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},
