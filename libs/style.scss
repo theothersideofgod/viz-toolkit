@@ -838,6 +838,13 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
 }
 
 
+//slide toggle
+.mat-slide-toggle {
+  .mat-slide-toggle-bar {
+    background-color: $viz-light-gray;
+  }
+}
+
 
 //select
 @keyframes customSelectOpen {
