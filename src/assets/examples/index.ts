@@ -40,6 +40,30 @@ import {
 } from 'libs';
 
 import {
+  AutocompleteOverviewComponent,
+  AutocompleteOverviewData
+} from './autocomplete-overview/autocomplete-overview.component';
+import {
+  AutocompleteOptgroupComponent,
+  AutocompleteOptgroupData
+} from './autocomplete-optgroup/autocomplete-optgroup.component';
+import {
+  AutocompleteHighlightComponent,
+  AutocompleteHighlightData
+} from './autocomplete-highlight/autocomplete-highlight.component';
+import {
+  AutocompleteDisplayComponent,
+  AutocompleteDisplayData
+} from './autocomplete-display/autocomplete-display.component';
+import {
+  AutocompleteFilterComponent,
+  AutocompleteFilterData
+} from './autocomplete-filter/autocomplete-filter.component';
+import {
+  AutocompleteSimpleComponent,
+  AutocompleteSimpleData
+} from './autocomplete-simple/autocomplete-simple.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -580,6 +604,30 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'autocomplete-overview' : {
+    component: AutocompleteOverviewComponent,
+    data: AutocompleteOverviewData
+  },
+  'autocomplete-optgroup' : {
+    component: AutocompleteOptgroupComponent,
+    data: AutocompleteOptgroupData
+  },
+  'autocomplete-highlight' : {
+    component: AutocompleteHighlightComponent,
+    data: AutocompleteHighlightData
+  },
+  'autocomplete-display' : {
+    component: AutocompleteDisplayComponent,
+    data: AutocompleteDisplayData
+  },
+  'autocomplete-filter' : {
+    component: AutocompleteFilterComponent,
+    data: AutocompleteFilterData
+  },
+  'autocomplete-simple' : {
+    component: AutocompleteSimpleComponent,
+    data: AutocompleteSimpleData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1116,6 +1164,12 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    AutocompleteOverviewComponent,
+    AutocompleteOptgroupComponent,
+    AutocompleteHighlightComponent,
+    AutocompleteDisplayComponent,
+    AutocompleteFilterComponent,
+    AutocompleteSimpleComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1302,6 +1356,12 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    AutocompleteOverviewComponent,
+    AutocompleteOptgroupComponent,
+    AutocompleteHighlightComponent,
+    AutocompleteDisplayComponent,
+    AutocompleteFilterComponent,
+    AutocompleteSimpleComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,

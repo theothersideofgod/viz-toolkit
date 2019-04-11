@@ -21,6 +21,12 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'autocompleteoverview', name: 'AutocompleteOverview', examples: ['autocomplete-overview']},
+        {id: 'autocompleteoptgroup', name: 'AutocompleteOptgroup', examples: ['autocomplete-optgroup']},
+        {id: 'autocompletehighlight', name: 'AutocompleteHighlight', examples: ['autocomplete-highlight']},
+        {id: 'autocompletedisplay', name: 'AutocompleteDisplay', examples: ['autocomplete-display']},
+        {id: 'autocompletefilter', name: 'AutocompleteFilter', examples: ['autocomplete-filter']},
+        {id: 'autocomplete', name: 'AutocompleteSimple', examples: ['autocomplete-simple']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},
