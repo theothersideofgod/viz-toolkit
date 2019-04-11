@@ -40,6 +40,14 @@ import {
 } from 'libs';
 
 import {
+  SliderConfigurableComponent,
+  SliderConfigurableData
+} from './slider-configurable/slider-configurable.component';
+import {
+  SliderFormattingComponent,
+  SliderFormattingData
+} from './slider-formatting/slider-formatting.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -580,6 +588,14 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'slider-configurable' : {
+    component: SliderConfigurableComponent,
+    data: SliderConfigurableData
+  },
+  'slider-formatting' : {
+    component: SliderFormattingComponent,
+    data: SliderFormattingData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1116,6 +1132,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    SliderConfigurableComponent,
+    SliderFormattingComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1302,6 +1320,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SliderConfigurableComponent,
+    SliderFormattingComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,

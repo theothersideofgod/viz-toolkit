@@ -1,194 +1,305 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Form Control
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Slider
-  </div>
-  <div class="doc-desc-1">
-    Sliders allow users to make selections from a range of values. </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-more-example"></span>
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Discrete sliders display a numeric value label upon pressing the thumb,
-    which allows a user to input an exact value.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="slider-basic"></div>
-  </div>
-
-
-
-  <!-- <div class="doc-desc-2">
-      Discrete sliders can get value by change event</div>
-    <div class="doc-example-container">
-      <div app-docs-example="slider-event"></div>
-    </div> -->
-  <div class="doc-desc-2">
-    Discrete sliders can be locked up with icons on both ends of the bar that
-    reflect a range of values.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="slider-basic-icon"></div>
-  </div>
-  <div class="doc-desc-2">
-    Use continuous sliders allow users to make meaningful selections that
-    don&#x2019;t require a specific value.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="slider-continue"></div>
-  </div>
-  <div class="doc-desc-2">
-    Continuous sliders can be locked up with icons on both ends of the bar that
-    reflect a range of values.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="slider-continue-icon"></div>
-  </div>
-  <div class="doc-desc-2">
-    Use range slider to select two values between minimum and maximum values at
-    once.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="slider-range"></div>
-  </div>
-  <!-- <div class="doc-desc-2">
-      Range sliders can get range value from change event</div>
-    <div class="doc-example-container">
-      <div app-docs-example="slider-range-event"></div>
-    </div> -->
-  <div class="doc-desc-2">
-    Range slider can be locked up with icons on both ends of the bar that
-    reflect a range of values.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="slider-range-icon"></div>
-  </div>
-
-
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>checked</td>
-        <td>Specifies whether the checkbox is selected</td>
-        <td>boolean</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>disabled</td>
-        <td>disabled state of checkbox</td>
-        <td>boolean</td>
-        <td>false</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Use slider to:
-    <ul class="doc-list">
-      <li>Illustrate/communicate a sliding scale of an option.</li>
-      <li>Validate input as soon as the user has finished interacting with a
-        field.</li>
-    </ul>
-  </div>
-
-  <div class="doc-divider">
-
-  </div>
-
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Do not use sliders for ranges that are too large (1-1000) or too small
-    (1-3) </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/slider-do.png" alt="">
+  <body>
+    <div class="doc-category-title ">
+      Form Control
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/slider-dont.png" alt="">
+    <div class="doc-title-1">
+      Slider
     </div>
-  </div>
+    <div class="doc-desc-1">
+      Sliders allow users to make selections from a range of values.
+    </div>
 
+    <div class="doc-divider"></div>
+    <div class="doc-title-2 mb-24">
+      Examples
+      <span class="docs-more-example"></span>
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Basic slider
+    </div>
 
+    <div class="doc-example-container">
+      <div app-docs-example="slider-basic"></div>
+    </div>
 
-  <div class="doc-divider">
+    <div class="doc-title-4 mb-16">
+      Slider with custom thumb label formatting
+    </div>
 
-  </div>
+    <div class="doc-example-container">
+      <div app-docs-example="slider-formatting"></div>
+    </div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-title-4 mb-16">
+      Slider with custom thumb label formatting
+    </div>
+    <div class="doc-desc-2 mb-16">
+      Use this configuration below to customize a slider that fit your needs
+      best:
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="slider-configurable"></div>
+    </div>
 
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
+    <div class="doc-desc-2">
+      To get a customized slider, just set
+      <span class="doc-desc-2-highlight"
+        >color / disabled / displayWith / invert / max / min / step / thumbLabel
+        / tickInterval / value / vertical / change / input / displayValue /
+        onTouched / percent / source / value</span
+      >
+    </div>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:280px">
-    <img src="assets/img/doc/slider-spec.png" alt="">
-  </div>
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>checked</td>
+          <td>Specifies whether the checkbox is selected</td>
+          <td>boolean</td>
+          <td>false</td>
+        </tr>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component
-      Location for Designers</span>
-  </div><a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download
-    Sektch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path
-    within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+        <tr>
+          <td>color</td>
+          <td>Theme color palette for the component.</td>
+          <td>ThemePalette</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>disabled</td>
+          <td>Whether the component is disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>displayWith</td>
+          <td>
+            Function that will be used to format the value before it is
+            displayed in the thumb label. Can be used to format very large
+            number in order for them to fit into the slider thumb.
+          </td>
+          <td>(value: number | null) =&gt; string | number</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>invert</td>
+          <td>Whether the slider is inverted.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>max</td>
+          <td>The maximum value that the slider can have.</td>
+          <td>number</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>min</td>
+          <td>The minimum value that the slider can have.</td>
+          <td>number</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>step</td>
+          <td>The values at which the thumb will snap.</td>
+          <td>number</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>thumbLabel</td>
+          <td>Whether or not to show the thumb label.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
-</body>
+        <tr>
+          <td>tickInterval</td>
+          <td>
+            How often to show ticks. Relative to the step so that a tick always
+            appears on a step. Ex: Tick interval of 4 with a step of 3 will draw
+            a tick every 4 steps (every 12 values).
+          </td>
+          <td>number | &quot;auto&quot;</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>value</td>
+          <td>Value of the slider.</td>
+          <td>number | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>vertical</td>
+          <td>Whether the slider is vertical.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>change</td>
+          <td>Event emitted when the slider value has changed.</td>
+          <td>EventEmitter<matsliderchange></matsliderchange></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>input</td>
+          <td>Event emitted when the slider thumb moves.</td>
+          <td>EventEmitter<matsliderchange></matsliderchange></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>displayValue</td>
+          <td>The value to be used for display purposes.</td>
+          <td>string | number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>onTouched</td>
+          <td>
+            onTouch function registered via registerOnTouch
+            (ControlValueAccessor).
+          </td>
+          <td>() =&gt; any</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>percent</td>
+          <td>The percentage of the slider that coincides with the value.</td>
+          <td>number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>source</td>
+          <td>The MatSlider that changed.</td>
+          <td>MatSlider</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>value</td>
+          <td>The new value of the source slider.</td>
+          <td>number | null</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Best Practices
+      <span class="docs-markdown-h3" id="best_practices">
+        <span header-link="best_practices"></span>Best Practices</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      Use slider to:
+      <ul class="doc-list">
+        <li>Illustrate/communicate a sliding scale of an option.</li>
+        <li>
+          Validate input as soon as the user has finished interacting with a
+          field.
+        </li>
+      </ul>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      Do not use sliders for ranges that are too large (1-1000) or too small
+      (1-3)
+    </div>
+
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w50 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/slider-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w50 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/slider-dont.png" alt="" />
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:280px">
+      <img src="assets/img/doc/slider-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sektch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+  </body>
 </html>
