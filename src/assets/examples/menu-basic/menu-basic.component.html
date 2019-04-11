@@ -1,9 +1,9 @@
 <div class="example-centralization">
-  <button mat-button [matMenuTriggerFor]="start">Menu Start</button>
+  <button mat-flat-button color="primary" [matMenuTriggerFor]="menu">Menu</button>
 </div>
-<mat-menu #start="matMenu" backdropClass="viz-menu">
-  <button mat-menu-item>Content 1</button>
-  <button mat-menu-item>Content 2</button>
-  <button mat-menu-item>Content 3</button>
-  <button mat-menu-item>Content 4</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item><div class="menu-row">Menu row 1</div></button>
+  <button mat-menu-item><div>Menu row 2</div></button>
+  <button mat-menu-item><div>Menu row 3</div></button>
+  <button mat-menu-item><div>Menu row 4</div></button>
 </mat-menu>
