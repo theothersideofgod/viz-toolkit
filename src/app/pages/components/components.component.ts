@@ -279,6 +279,12 @@ export class ComponentsComponent implements OnInit {
           img: 'table'
         },
         {
+          title: 'sort header',
+          desc: '',
+          route: 'sort',
+          img: 'sort'
+        },
+        {
           title: 'no data',
           desc: 'Notification when there is no data',
           route: 'nodata',

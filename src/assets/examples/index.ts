@@ -40,6 +40,14 @@ import {
 } from 'libs';
 
 import {
+  SortTableComponent,
+  SortTableData
+} from './sort-table/sort-table.component';
+import {
+  SortOverviewComponent,
+  SortOverviewData
+} from './sort-overview/sort-overview.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -580,6 +588,14 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'sort-table' : {
+    component: SortTableComponent,
+    data: SortTableData
+  },
+  'sort-overview' : {
+    component: SortOverviewComponent,
+    data: SortOverviewData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1116,6 +1132,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    SortTableComponent,
+    SortOverviewComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1302,6 +1320,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SortTableComponent,
+    SortOverviewComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
