@@ -32,6 +32,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'checkboxconfigurable', name: 'CheckboxConfigurable', examples: ['checkbox-configurable']},
         {id: 'slidetoggleconfigurable', name: 'SlideToggleConfigurable', examples: ['slide-toggle-configurable']},
         {id: 'radiowidthngmodel', name: 'RadioWidthNgmodel', examples: ['radio-width-ngmodel']},
+        {id: 'sliderconfigurable', name: 'SliderConfigurable', examples: ['slider-configurable']},
+        {id: 'sliderformatting', name: 'SliderFormatting', examples: ['slider-formatting']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},

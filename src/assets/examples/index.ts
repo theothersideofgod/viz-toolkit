@@ -84,6 +84,14 @@ import {
   RadioWidthNgmodelData
 } from './radio-width-ngmodel/radio-width-ngmodel.component';
 import {
+  SliderConfigurableComponent,
+  SliderConfigurableData
+} from './slider-configurable/slider-configurable.component';
+import {
+  SliderFormattingComponent,
+  SliderFormattingData
+} from './slider-formatting/slider-formatting.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -668,6 +676,14 @@ export const ALL_EXAMPLE_ITEMS = {
     component: RadioWidthNgmodelComponent,
     data: RadioWidthNgmodelData
   },
+  'slider-configurable' : {
+    component: SliderConfigurableComponent,
+    data: SliderConfigurableData
+  },
+  'slider-formatting' : {
+    component: SliderFormattingComponent,
+    data: SliderFormattingData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1215,6 +1231,8 @@ export const ALL_EXAMPLE_ITEMS = {
     CheckboxConfigurableComponent,
     SlideToggleConfigurableComponent,
     RadioWidthNgmodelComponent,
+    SliderConfigurableComponent,
+    SliderFormattingComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1412,6 +1430,8 @@ export const ALL_EXAMPLE_ITEMS = {
     CheckboxConfigurableComponent,
     SlideToggleConfigurableComponent,
     RadioWidthNgmodelComponent,
+    SliderConfigurableComponent,
+    SliderFormattingComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
