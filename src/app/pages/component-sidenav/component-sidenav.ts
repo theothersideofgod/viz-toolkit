@@ -145,7 +145,7 @@ const initNavList = [
         value: 'badge'
       },
       {
-        name: 'Chip',
+        name: 'Chips',
         value: 'chip'
       },
       {
