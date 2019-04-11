@@ -3,7 +3,7 @@ import { Location } from '@angular/common';
 
 const statusMapping = {
   400: 'Password expired',
-  401: 'Unauthourized',
+  401: 'Unauthorized',
   403: 'Forbidden',
   404: 'Not found',
   422: 'Unprocessable entity',
