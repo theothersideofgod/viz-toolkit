@@ -407,7 +407,7 @@ export class SatYearView<D> implements AfterContentInit {
       this._rangeFull = this.beginMonth && this.endMonth && !this._beginMonthNumber &&
         !this._endMonthNumber &&
         this._dateAdapter.compareDate(this.beginMonth, this.activeDate) <= 0 &&
-        this._dateAdapter.compareDate(this.activeDate, this.endMonth) <= 0;
+        this._dateAdapter.compareDate(this.activeDate, this.endMonth) < 0;
     } else {
       this._beginMonthNumber = this._endMonthNumber = null;
       this._rangeFull = false;
