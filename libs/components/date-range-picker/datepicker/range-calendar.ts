@@ -124,6 +124,7 @@ export class RangeCalendar<D> {
         this._beginMonthSelected = true;
         this.beginMonth = date;
         this.endMonth = date;
+        this.monthRangesChange.emit({begin: date, end: date});
       } else {
         this._beginMonthSelected = false;
         if (this._dateAdapter.compareDate(<D>this.beginMonth, date) <= 0) {
