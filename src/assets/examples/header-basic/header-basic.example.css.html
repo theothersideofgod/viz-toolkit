@@ -1,0 +1,121 @@
+<span class="hljs-selector-class">.example-container</span> {
+  <span class="hljs-comment">// width: 736px;</span>
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+}
+
+<span class="hljs-selector-class">.header-application</span> {
+  <span class="hljs-attribute">display</span>: inline-flex;
+}
+
+<span class="hljs-selector-class">.header-application-icon</span> {
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">72px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">72px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#e9e9e9</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+
+  &amp;-active {
+    <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-number">#ff4e00</span>, <span class="hljs-number">0.16</span>);
+  }
+  &amp;:hover {
+    <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-number">#ff4e00</span>, <span class="hljs-number">0.08</span>);
+  }
+  &amp;:active {
+    <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-number">#ff4e00</span>, <span class="hljs-number">0.12</span>);
+  }
+
+  &amp;-badge {
+    <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.mat-badge-content</span> {
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">18px</span> <span class="hljs-meta">!important</span>;
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span> <span class="hljs-meta">!important</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0px</span> <span class="hljs-meta">!important</span>;
+      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">18px</span> <span class="hljs-meta">!important</span>;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
+      <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#ffffff</span>;
+    }
+  }
+}
+
+<span class="hljs-selector-class">.header-application-list</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-comment">/* padding: 0; */</span>
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span> <span class="hljs-number">0px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0px</span>;
+
+  <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">18px</span> <span class="hljs-number">15px</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">12px</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#696969</span>;
+    <span class="hljs-attribute">font-family</span>: soleto;
+    <span class="hljs-attribute">cursor</span>: pointer;
+    &amp;:hover {
+      <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-number">#ff4e00</span>, <span class="hljs-number">0.08</span>);
+      <span class="hljs-attribute">color</span>: <span class="hljs-number">#ff4e00</span>;
+    }
+  }
+}
+
+<span class="hljs-selector-class">.login-info</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span> <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">font-family</span>: Soleto;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#696969</span>;
+  <span class="hljs-attribute">text-align</span>: left;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#ececec</span>;
+
+  &amp;-<span class="hljs-attribute">top</span> {
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+  }
+}
+
+<span class="hljs-selector-class">.control-panel</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">150px</span>;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">42px</span>;
+
+  &amp;-checkbox {
+    <span class="hljs-attribute">display</span>: inline-flex;
+    <span class="hljs-attribute">flex-direction</span>: column;
+    <span class="hljs-attribute">align-items</span>: baseline;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#696969</span>;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Soleto Trial'</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">18px</span>;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">60px</span>;
+    <span class="hljs-selector-class">.mat-checkbox</span> {
+      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20px</span>;
+    }
+  }
+  &amp;-radio {
+    <span class="hljs-attribute">display</span>: inline-flex;
+    <span class="hljs-attribute">flex-direction</span>: column;
+    <span class="hljs-attribute">align-items</span>: baseline;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#696969</span>;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Soleto Trial'</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">18px</span>;
+    <span class="hljs-selector-class">.mat-radio-button</span> {
+      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20px</span>;
+    }
+  }
+}
+
+<span class="hljs-selector-class">.header-application-member</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">72px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#e9e9e9</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  &amp;-<span class="hljs-attribute">icon</span> {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8px</span>;
+  }
+}
+

@@ -20,16 +20,18 @@
       <div class="header-application-icon" [matMenuTriggerFor]="helpMenu"
         #helpMenuTrigger="matMenuTrigger"
         [class.header-application-icon-active]="helpMenuTrigger.menuOpen"
-        *ngIf="checkboxes[2].checked">
+        *ngIf="checkboxes[2].checked"
+        matRipple matRippleColor="rgba(255,78,0,0.08)">
         <mat-icon aria-label="Example icon-button with a heart icon">help
         </mat-icon>
       </div>
       <mat-menu #helpMenu="matMenu" [overlapTrigger]="false"
         class="viz-header-application-dropdown mat-elevation-z8">
         <ul class="header-application-list">
-          <li class="header-application-list-item">User Guide</li>
+          <li class="header-application-list-item">Release Notes</li>
           <li class="header-application-list-item">Support Center</li>
           <li class="header-application-list-item">Sitemap</li>
+          <li class="header-application-list-item">User Guide</li>
         </ul>
       </mat-menu>
 
@@ -38,11 +40,12 @@
         [matMenuTriggerFor]="notificationMenu"
         #notificationMenuTrigger="matMenuTrigger"
         [class.header-application-icon-active]="notificationMenuTrigger.menuOpen"
-        *ngIf="checkboxes[1].checked">
+        *ngIf="checkboxes[1].checked"
+        matRipple matRippleColor="rgba(255,78,0,0.08)">
         <mat-icon matBadge="1" matBadgePosition="above after"
-          class="header-application-icon-badge" matBadgeColor="warn"
+          class="header-application-icon-badge" matBadgeColor="accent"
           matBadgeSize="small"
-          aria-label="Example icon-button with a heart icon">flag
+          aria-label="Example icon-button with a heart icon">notifications
         </mat-icon>
       </div>
       <mat-menu #notificationMenu="matMenu" [overlapTrigger]="false"
@@ -58,7 +61,8 @@
       <div class="header-application-icon" [matMenuTriggerFor]="application"
         #applicationTrigger="matMenuTrigger"
         [class.header-application-icon-active]="applicationTrigger.menuOpen"
-        *ngIf="checkboxes[0].checked">
+        *ngIf="checkboxes[0].checked"
+        matRipple matRippleColor="rgba(255,78,0,0.08)">
         <mat-icon aria-label="Example icon-button with a heart icon">apps
         </mat-icon>
       </div>
@@ -75,7 +79,8 @@
       <div class="header-application-icon" [matMenuTriggerFor]="userMenu"
         #userMenuTrigger="matMenuTrigger"
         [class.header-application-icon-active]="userMenuTrigger.menuOpen"
-        *ngIf="userType === '1'">
+        *ngIf="userType === '1'"
+        matRipple matRippleColor="rgba(255,78,0,0.08)">
         <mat-icon aria-label="Example icon-button with a heart icon">person
         </mat-icon>
       </div>
@@ -94,7 +99,8 @@
 
       <div class="header-application-member" *ngIf="userType === '2'"
         [matMenuTriggerFor]="memberMenu" #memberMenuTrigger="matMenuTrigger"
-        [class.header-application-icon-active]="memberMenuTrigger.menuOpen">
+        [class.header-application-icon-active]="memberMenuTrigger.menuOpen"
+        matRipple matRippleColor="rgba(255,78,0,0.08)">
         Member Name <mat-icon class="header-application-member-icon">
           arrow_drop_down</mat-icon>
       </div>
