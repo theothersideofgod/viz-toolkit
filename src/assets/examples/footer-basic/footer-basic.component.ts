@@ -10,17 +10,12 @@ export class FooterBasicComponent implements OnInit {
     {
       id: 1,
       title: 'Contact',
-      link: 'Contact'
+      link: ''
     },
     {
       id: 2,
       title: 'Vizient',
-      link: 'Vizient'
-    },
-    {
-      id: 3,
-      title: 'Additional Brands',
-      link: 'Additional Brands'
+      link: ''
     }
   ];
   ngOnInit() {}
