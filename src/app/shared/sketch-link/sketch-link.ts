@@ -52,7 +52,9 @@ const sketch_link = {
     'copy from Toolkit Material Library.sketch / Toolkit Components / Layouts: Stepper'
   ],
   button: [
-    'Insert / Toolkit Material Library / Components / Button / Default Button or Button with Left Icon or Button with Right Icon'
+    'Insert / Toolkit Material Library / Components / Button / Default',
+    'Insert / Toolkit Material Library / Components / Button / Left Icon or Right Icon',
+    'Insert / Toolkit Material Library / Components / Button / FAB',
   ],
   badge: [
     'Insert / Toolkit Material Library / Components / Badge / Short or Long'
