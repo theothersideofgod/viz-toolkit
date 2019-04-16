@@ -105,7 +105,8 @@ const sketch_link = {
     'Insert / Toolkit Material Library / ✱ / Divider'
   ],
   buttontoggle: [
-    'Insert / Toolkit Material Library / Components / Button Toggle / 2 Toggles or 3 Toggles / Icon or Text'
+    'Insert / Toolkit Material Library / Components / Button Toggle / 3 Toggles / Icon or Text',
+    'Insert / Toolkit Material Library / Components / Button Toggle / 2 Toggles / Icon or Text'
   ]
 };
 
