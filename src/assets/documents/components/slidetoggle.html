@@ -1,159 +1,300 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Form Control
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Slide Toggle </div>
-  <div class="doc-desc-1">
-    Slider Toggles are used for binary actions. They are commonly used for
-    &#x201C;On/Off&#x201D; situations. </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-more-example"></span>
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-
-  <div class="doc-title-3">
-    Basic slide-toggles
-  </div>
-  <div class="doc-desc-2">
-    Default slide toggle is an on/off control that can be toggled via clicking
-    or dragging. </div>
-  <div class="doc-example-container">
-    <div app-docs-example="slide-toggle-basic"></div>
-  </div>
-
-  <div class="doc-title-3">
-    Configurable slide-toggle
-  </div>
-  <div class="doc-desc-2">
-    Use this configuration below to customize a slide toggle that fit your needs best:</div>
-  <div class="doc-example-container">
-    <div app-docs-example="slide-toggle-configurable"></div>
-  </div>
-
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>checked</td>
-        <td>Specifies whether the checkbox is selected</td>
-        <td>boolean</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>disabled</td>
-        <td>disabled state of checkbox</td>
-        <td>boolean</td>
-        <td>false</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Slider toggle should:
-    <ul class="doc-list">
-      <li>Control over an option or feature that can be turned on or off.</li>
-      <li>Be made clear from the corresponding inline label for the option that
-        it controls.</li>
-    </ul>
-  </div>
-
-  <div class="doc-divider">
-
-  </div>
-
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Do not alternate the main color of the toggle </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:200px">
-      <img src="assets/img/doc/slidertoggle-do.png" alt="">
+  <body>
+    <div class="doc-category-title ">
+      Form Control
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:200px">
-      <img src="assets/img/doc/slidertoggle-dont.png" alt="">
+    <div class="doc-title-1">
+      Slide Toggle
     </div>
-  </div>
+    <div class="doc-desc-1">
+      Slider Toggles are used for binary actions. They are commonly used for
+      &#x201C;On/Off&#x201D; situations.
+    </div>
 
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-more-example"></span>
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
 
+    <div class="doc-title-3">
+      Basic slide toggle
+    </div>
+    <div class="doc-desc-2">
+      Default slide toggle is an on/off control that can be toggled via clicking
+      or dragging.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="slide-toggle-basic"></div>
+    </div>
 
+    <div class="doc-title-3">
+      Configurable slide-toggle
+    </div>
+    <div class="doc-desc-2">
+      Use this configuration below to customize a slide toggle that fit your
+      needs best:
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="slide-toggle-configurable"></div>
+    </div>
 
-  <div class="doc-divider">
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
 
-  </div>
+    <div class="doc-desc-2">
+      To get a customized slide-toggle, just set
+      <span class="doc-desc-2-highlight"
+        >ariaLabel / ariaLabelledby / checked / color / disableRipple / disabled
+        / id / labelPosition / name / required / change / dragChange /
+        toggleChange / defaults / inputId / checked / source / disableDragValue
+        / disableToggleValue</span
+      >
+    </div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ariaLabel</td>
+          <td>
+            Used to set the aria-label attribute on the underlying input
+            element.
+          </td>
+          <td>string | null</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>ariaLabelledby</td>
+          <td>
+            Used to set the aria-labelledby attribute on the underlying input
+            element.
+          </td>
+          <td>string | null</td>
+          <td></td>
+        </tr>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:280px">
-    <img src="assets/img/doc/slidertoggle-spec.png" alt="">
-  </div>
+        <tr>
+          <td>checked</td>
+          <td>Whether the slide-toggle element is checked or not.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component
-      Location for Designers</span>
-  </div><a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download
-    Sektch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path
-    within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+        <tr>
+          <td>color</td>
+          <td>Theme color palette for the component.</td>
+          <td>ThemePalette</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>disabled</td>
+          <td>Whether the component is disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>id</td>
+          <td>
+            A unique id for the slide-toggle input. If none is supplied, it will
+            be auto-generated.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>labelPosition</td>
+          <td>
+            Whether the label should appear after or before the slide-toggle.
+            Defaults to &apos;after&apos;.
+          </td>
+          <td>&apos;before&apos; | &apos;after&apos;</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>name</td>
+          <td>Name value will be applied to the input element if present.</td>
+          <td>string | null</td>
+          <td></td>
+        </tr>
 
-</body>
+        <tr>
+          <td>required</td>
+          <td>Whether the slide-toggle is required.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>change</td>
+          <td>
+            An event will be dispatched each time the slide-toggle changes its
+            value.
+          </td>
+          <td>EventEmitter<matslidetogglechange></matslidetogglechange></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>dragChange</td>
+          <td>
+            An event will be dispatched each time the slide-toggle is dragged.
+            This event is always emitted when the user drags the slide toggle to
+            make a change greater than 50%. It does not mean the slide
+            toggle&apos;s value is changed. The event is not emitted when the
+            user toggles the slide toggle to change its value.
+          </td>
+          <td>EventEmitter<void></void></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>toggleChange</td>
+          <td>
+            An event will be dispatched each time the slide-toggle input is
+            toggled. This event is always emitted when the user toggles the
+            slide toggle, but this does not mean the slide toggle&apos;s value
+            has changed. The event does not fire when the user drags to change
+            the slide toggle value.
+          </td>
+          <td>EventEmitter<void></void></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>defaults</td>
+          <td></td>
+          <td>MatSlideToggleDefaultOptions</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>inputId</td>
+          <td>Returns the unique id for the visual hidden input.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>checked</td>
+          <td>The new checked value of the MatSlideToggle.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>source</td>
+          <td>The source MatSlideToggle of the event.</td>
+          <td>MatSlideToggle</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableDragValue</td>
+          <td>Whether drag action triggers value changes in slide toggle.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableToggleValue</td>
+          <td>Whether toggle action triggers value changes in slide toggle.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      Do not alternate the main color of the toggle
+    </div>
+
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w50 docs-usage-center"
+        style="height:200px"
+      >
+        <img src="assets/img/doc/slidertoggle-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w50 docs-usage-center"
+        style="height:200px"
+      >
+        <img src="assets/img/doc/slidertoggle-dont.png" alt="" />
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:280px">
+      <img src="assets/img/doc/slidertoggle-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sektch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+  </body>
 </html>
