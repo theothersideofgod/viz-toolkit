@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 const sketch_link = {
-  checkbox: ['Insert / Toolkit Material Library / Components / Checkbox'],
+  checkbox: ['Insert / Toolkit Material Library / Components / Checkbox / Off or On & Indeterminate'],
   datepicker: [
     'Insert / Toolkit Material Library / Components / Daterange Picker / Default or Selected 1 or Selected 2',
     'Insert / Toolkit Material Library / Components / Datepicker / Year or Month or Date'

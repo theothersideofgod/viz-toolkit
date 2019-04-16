@@ -29,7 +29,7 @@
     </div>
 
     <div class="doc-title-4 mb-8">
-      Checkbox
+      Basic checkboxes
     </div>
 
     <div class="doc-desc-2">
@@ -45,7 +45,8 @@
       Configurable checkbox
     </div>
     <div class="doc-desc-2">
-      Use this configuration below to customize a checkbox that fit your needs best: 
+      Use this configuration below to customize a checkbox that fit your needs
+      best:
     </div>
     <div class="doc-example-container">
       <div app-docs-example="checkbox-configurable"></div>
@@ -62,7 +63,11 @@
 
     <div class="doc-desc-2">
       To get a customized checkbox, just set
-      <span class="doc-desc-2-highlight">type/state/disabled</span>
+      <span class="doc-desc-2-highlight"
+        >ariaLabel / ariaLabelledby / checked / color / disableRipple / disabled
+        / id / indeterminate / labelPosition / name / required / value / change
+        / indeterminateChange / inputId / ripple / checked / source</span
+      >
     </div>
 
     <table class="doc-props-table">
@@ -76,45 +81,160 @@
       </thead>
       <tbody>
         <tr>
-          <td>checked</td>
-          <td>Specifies whether the checkbox is selected</td>
-          <td>boolean</td>
-          <td>false</td>
+          <td>ariaLabel</td>
+          <td>
+            Attached to the aria-label attribute of the host element. In most
+            cases, arial-labelledby will take precedence so this may be omitted.
+          </td>
+          <td>string</td>
+          <td></td>
         </tr>
+
+        <tr>
+          <td>ariaLabelledby</td>
+          <td>
+            Users can specify the aria-labelledby attribute which will be
+            forwarded to the input element
+          </td>
+          <td>string | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>checked</td>
+          <td>Whether the checkbox is checked.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>color</td>
+          <td>Theme color palette for the component.</td>
+          <td>ThemePalette</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
         <tr>
           <td>disabled</td>
-          <td>disabled state of checkbox</td>
-          <td>boolean</td>
-          <td>false</td>
+          <td>
+            Whether the checkbox is disabled. This fully overrides the
+            implementation provided by mixinDisabled, but the mixin is still
+            required because mixinTabIndex requires it.
+          </td>
+          <td>any</td>
+          <td></td>
         </tr>
+
+        <tr>
+          <td>id</td>
+          <td>
+            A unique id for the checkbox input. If none is supplied, it will be
+            auto-generated.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
         <tr>
           <td>indeterminate</td>
-          <td>Whether the checkbox is indeterminate</td>
+          <td>
+            Whether the checkbox is indeterminate. This is also known as
+            &quot;mixed&quot; mode and can be used to represent a checkbox with
+            three states, e.g. a checkbox that represents a nested list of
+            checkable items. Note that whenever checkbox is manually clicked,
+            indeterminate is immediately set to false.
+          </td>
           <td>boolean</td>
-          <td>false</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>labelPosition</td>
+          <td>
+            Whether the label should appear after or before the checkbox.
+            Defaults to &apos;after&apos;
+          </td>
+          <td>&apos;before&apos; | &apos;after&apos;</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>name</td>
+          <td>Name value will be applied to the input element if present</td>
+          <td>string | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>required</td>
+          <td>Whether the checkbox is required.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>value</td>
+          <td>The value attribute of the native input element</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>change</td>
+          <td>Event emitted when the checkbox&apos;s checked value changes.</td>
+          <td>EventEmitter<matcheckboxchange></matcheckboxchange></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>indeterminateChange</td>
+          <td>
+            Event emitted when the checkbox&apos;s indeterminate value changes.
+          </td>
+          <td>EventEmitter<boolean></boolean></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>inputId</td>
+          <td>Returns the unique id for the visual hidden input.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>ripple</td>
+          <td>Reference to the ripple instance of the checkbox.</td>
+          <td>MatRipple</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>checked</td>
+          <td>The new checked value of the checkbox.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>source</td>
+          <td>The source MatCheckbox of the event.</td>
+          <td>MatCheckbox</td>
+          <td></td>
         </tr>
       </tbody>
     </table>
 
     <div class="doc-divider"></div>
 
-    <div class="doc-title-2">
-      Best Practices
-      <span class="docs-markdown-h3" id="best_practices">
-        <span header-link="best_practices"></span>Best Practices</span
-      >
-    </div>
-
-    <div class="doc-desc-2">
-      Use checkboxes to:
-      <ul class="doc-list">
-        <li>Select one or multiple items from a list</li>
-        <li>Present a list containing sub-selections</li>
-        <li>Turn an option on or off</li>
-      </ul>
-    </div>
-
-    <div class="doc-divider"></div>
+    
 
     <div class="doc-title-2">
       Usage &amp; Content Guidelines
