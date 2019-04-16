@@ -20,7 +20,7 @@ const sketch_link = {
     'copy from Toolkit Material Library.sketch / Toolkit Components / Form Controls: Slider'
   ],
   slidetoggle: [
-    'Insert / Toolkit Material Library / Components / Slide Toggle / On or Off or Range'
+    'Insert / Toolkit Material Library / Components / Slide Toggle'
   ],
   menu: ['Insert / Toolkit Material Library / Components / Dropdown Selection'],
   sidenav: [
