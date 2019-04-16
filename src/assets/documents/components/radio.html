@@ -1,161 +1,200 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Form Control
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Radio Button
-  </div>
-  <div class="doc-desc-1">
-    Radio buttons allow the user to select one option from a set. </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-more-example"></span>
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-
-  <div class="doc-title-4 mb-8">Radio Button</div>
-
-  <div class="doc-desc-2">
-    Use radio buttons where users must make a single selection. </div>
-  <div class="doc-example-container">
-    <div app-docs-example="radio-button-basic"></div>
-  </div>
-
-
-
-  <div class="doc-title-3">
-    Radios with ngModel
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="radio-width-ngmodel"></div>
-  </div>
-
-
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>checked</td>
-        <td>Specifies whether the radio is selected</td>
-        <td>boolean</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>disabled</td>
-        <td>disabled state of radio button</td>
-        <td>boolean</td>
-        <td>false</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Use radio button to:
-    <ul class="doc-list">
-      <li>Select a single option from a list
-      </li>
-      <li>Expose all available options</li>
-    </ul>
-  </div>
-
-  <div class="doc-divider">
-
-  </div>
-
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Use radio buttons when only one option can be selected from a list.
-  </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:200px">
-      <img src="assets/img/doc/radio-do.png" alt="">
+  <body>
+    <div class="doc-category-title ">
+      Form Control
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:200px">
-      <img src="assets/img/doc/radio-dont.png" alt="">
+    <div class="doc-title-1">
+      Radio Button
     </div>
-  </div>
+    <div class="doc-desc-1">
+      Radio buttons allow the user to select one option from a set.
+    </div>
 
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-more-example"></span>
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
 
+    <div class="doc-title-4 mb-8">Basic radios</div>
 
+    <div class="doc-desc-2">
+      Use radio buttons where users must make a single selection.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="radio-button-basic"></div>
+    </div>
 
-  <div class="doc-divider">
+    <div class="doc-title-3">
+      Radios with ngModel
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="radio-width-ngmodel"></div>
+    </div>
 
-  </div>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-desc-2">
+      To get a customized radio, just set
+      <span class="doc-desc-2-highlight"
+        >disabled / labelPosition / name / required / selected / value /
+        change</span
+      >
+    </div>
 
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>disabled</td>
+          <td>Whether the radio group is disabled</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:280px">
-    <img src="assets/img/doc/radio-spec.png" alt="">
-  </div>
+        <tr>
+          <td>labelPosition</td>
+          <td>
+            Whether the labels should appear after or before the radio-buttons.
+            Defaults to &apos;after&apos;
+          </td>
+          <td>&apos;before&apos; | &apos;after&apos;</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>name</td>
+          <td>
+            Name of the radio button group. All radio buttons inside this group
+            will use this name.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component
-      Location for Designers</span>
-  </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download
-    Sektch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path
-    within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+        <tr>
+          <td>required</td>
+          <td>Whether the radio group is required</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>selected</td>
+          <td>
+            The currently selected radio button. If set to a new radio button,
+            the radio group value will be updated to match the new selected
+            button.
+          </td>
+          <td>MatRadioButton</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>value</td>
+          <td>
+            Value for the radio-group. Should equal the value of the selected
+            radio button if there is a corresponding radio button with a
+            matching value. If there is not such a corresponding radio button,
+            this value persists to be applied in case a new radio button is
+            added with a matching value.
+          </td>
+          <td>any</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>change</td>
+          <td>
+            Event emitted when the group value changes. Change events are only
+            emitted when the value changes due to user interaction with a radio
+            button (the same behavior as &lt;input type-"radio"&gt).
+          </td>
+          <td>EventEmitter<matradiochange></matradiochange></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
 
+    <div class="doc-divider"></div>
 
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
 
-</body>
+    <div class="doc-desc-2">
+      Use radio buttons when only one option can be selected from a list.
+    </div>
 
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w50 docs-usage-center"
+        style="height:200px"
+      >
+        <img src="assets/img/doc/radio-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w50 docs-usage-center"
+        style="height:200px"
+      >
+        <img src="assets/img/doc/radio-dont.png" alt="" />
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:280px">
+      <img src="assets/img/doc/radio-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sektch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+  </body>
 </html>
