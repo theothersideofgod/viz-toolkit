@@ -11,7 +11,7 @@ const sketch_link = {
     'Insert / Toolkit Material Library / Components / Form / Default or Active & Error'
   ],
   radio: [
-    'Insert / Toolkit Material Library / Components / Radio Button / On or Off'
+    'Insert / Toolkit Material Library / Components / Radio Button'
   ],
   select: [
     'Insert / Toolkit Material Library / Components / Dropdown / Default or Active'
