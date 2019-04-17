@@ -3,36 +3,137 @@
 </div>
 
 <mat-menu #start="matMenu" backdropClass="viz-menu">
-  <button mat-menu-item [matMenuTriggerFor]="content1">Content 1</button>
-  <button mat-menu-item [matMenuTriggerFor]="content2">Content 2</button>
-  <button mat-menu-item [matMenuTriggerFor]="content3">Content 3</button>
-  <button mat-menu-item [matMenuTriggerFor]="content4">Content 4</button>
+  <button mat-menu-item [matMenuTriggerFor]="content1">Menu row 1</button>
+  <button mat-menu-item [matMenuTriggerFor]="content2">Menu row 2</button>
+  <button mat-menu-item [matMenuTriggerFor]="content3">Menu row 3</button>
+  <button mat-menu-item [matMenuTriggerFor]="content4">Menu row 4</button>
 </mat-menu>
 
 <mat-menu #content1="matMenu" backdropClass="viz-menu">
-  <button mat-menu-item>Content 1.1</button>
-  <button mat-menu-item>Content 1.2</button>
-  <button mat-menu-item>Content 1.3</button>
-  <button mat-menu-item>Content 1.4</button>
+  <button mat-menu-item [matMenuTriggerFor]="content11">Menu row 1.1</button>
+  <button mat-menu-item [matMenuTriggerFor]="content12">Menu row 1.2</button>
+  <button mat-menu-item [matMenuTriggerFor]="content13">Menu row 1.3</button>
+  <button mat-menu-item [matMenuTriggerFor]="content14">Menu row 1.4</button>
+</mat-menu>
+
+<mat-menu #content11="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 1.1.1</button>
+  <button mat-menu-item>Menu row 1.1.2</button>
+  <button mat-menu-item>Menu row 1.1.3</button>
+  <button mat-menu-item>Menu row 1.1.4</button>
+</mat-menu>
+<mat-menu #content12="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 1.2.1</button>
+  <button mat-menu-item>Menu row 1.2.2</button>
+  <button mat-menu-item>Menu row 1.2.3</button>
+  <button mat-menu-item>Menu row 1.2.4</button>
+</mat-menu>
+<mat-menu #content13="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 1.3.1</button>
+  <button mat-menu-item>Menu row 1.3.2</button>
+  <button mat-menu-item>Menu row 1.3.3</button>
+  <button mat-menu-item>Menu row 1.3.4</button>
+</mat-menu>
+<mat-menu #content14="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 1.4.1</button>
+  <button mat-menu-item>Menu row 1.4.2</button>
+  <button mat-menu-item>Menu row 1.4.3</button>
+  <button mat-menu-item>Menu row 1.4.4</button>
 </mat-menu>
 
 <mat-menu #content2="matMenu" backdropClass="viz-menu">
-  <button mat-menu-item>Content 2.1</button>
-  <button mat-menu-item>Content 2.2</button>
-  <button mat-menu-item>Content 2.3</button>
-  <button mat-menu-item>Content 2.4</button>
+  <button mat-menu-item [matMenuTriggerFor]="content21">Menu row 2.1</button>
+  <button mat-menu-item [matMenuTriggerFor]="content22">Menu row 2.2</button>
+  <button mat-menu-item [matMenuTriggerFor]="content23">Menu row 2.3</button>
+  <button mat-menu-item [matMenuTriggerFor]="content24">Menu row 2.4</button>
+</mat-menu>
+
+<mat-menu #content21="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 2.1.1</button>
+  <button mat-menu-item>Menu row 2.1.2</button>
+  <button mat-menu-item>Menu row 2.1.3</button>
+  <button mat-menu-item>Menu row 2.1.4</button>
+</mat-menu>
+<mat-menu #content22="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 2.2.1</button>
+  <button mat-menu-item>Menu row 2.2.2</button>
+  <button mat-menu-item>Menu row 2.2.3</button>
+  <button mat-menu-item>Menu row 2.2.4</button>
+</mat-menu>
+<mat-menu #content23="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 2.3.1</button>
+  <button mat-menu-item>Menu row 2.3.2</button>
+  <button mat-menu-item>Menu row 2.3.3</button>
+  <button mat-menu-item>Menu row 1.3.4</button>
+</mat-menu>
+<mat-menu #content24="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 2.4.1</button>
+  <button mat-menu-item>Menu row 2.4.2</button>
+  <button mat-menu-item>Menu row 2.4.3</button>
+  <button mat-menu-item>Menu row 2.4.4</button>
 </mat-menu>
 
 <mat-menu #content3="matMenu" backdropClass="viz-menu">
-  <button mat-menu-item>Content 3.1</button>
-  <button mat-menu-item>Content 3.2</button>
-  <button mat-menu-item>Content 3.3</button>
-  <button mat-menu-item>Content 3.4</button>
+  <button mat-menu-item [matMenuTriggerFor]="content31">Menu row 3.1</button>
+  <button mat-menu-item [matMenuTriggerFor]="content32">Menu row 3.2</button>
+  <button mat-menu-item [matMenuTriggerFor]="content33">Menu row 3.3</button>
+  <button mat-menu-item [matMenuTriggerFor]="content34">Menu row 3.4</button>
 </mat-menu>
 
+<mat-menu #content31="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 3.1.1</button>
+  <button mat-menu-item>Menu row 3.1.2</button>
+  <button mat-menu-item>Menu row 3.1.3</button>
+  <button mat-menu-item>Menu row 3.1.4</button>
+</mat-menu>
+<mat-menu #content32="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 3.2.1</button>
+  <button mat-menu-item>Menu row 3.2.2</button>
+  <button mat-menu-item>Menu row 3.2.3</button>
+  <button mat-menu-item>Menu row 3.2.4</button>
+</mat-menu>
+<mat-menu #content33="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 3.3.1</button>
+  <button mat-menu-item>Menu row 3.3.2</button>
+  <button mat-menu-item>Menu row 3.3.3</button>
+  <button mat-menu-item>Menu row 3.3.4</button>
+</mat-menu>
+<mat-menu #content34="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 3.4.1</button>
+  <button mat-menu-item>Menu row 3.4.2</button>
+  <button mat-menu-item>Menu row 3.4.3</button>
+  <button mat-menu-item>Menu row 3.4.4</button>
+</mat-menu>
+
+
 <mat-menu #content4="matMenu" backdropClass="viz-menu">
-  <button mat-menu-item>Content 4.1</button>
-  <button mat-menu-item>Content 4.2</button>
-  <button mat-menu-item>Content 4.3</button>
-  <button mat-menu-item>Content 4.4</button>
+  <button mat-menu-item [matMenuTriggerFor]="content41">Menu row 4.1</button>
+  <button mat-menu-item [matMenuTriggerFor]="content42">Menu row 4.2</button>
+  <button mat-menu-item [matMenuTriggerFor]="content43">Menu row 4.3</button>
+  <button mat-menu-item [matMenuTriggerFor]="content44">Menu row 4.4</button>
+</mat-menu>
+
+<mat-menu #content41="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 4.1.1</button>
+  <button mat-menu-item>Menu row 4.1.2</button>
+  <button mat-menu-item>Menu row 4.1.3</button>
+  <button mat-menu-item>Menu row 4.1.4</button>
+</mat-menu>
+<mat-menu #content42="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 4.2.1</button>
+  <button mat-menu-item>Menu row 4.2.2</button>
+  <button mat-menu-item>Menu row 4.2.3</button>
+  <button mat-menu-item>Menu row 4.2.4</button>
+</mat-menu>
+<mat-menu #content43="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 4.3.1</button>
+  <button mat-menu-item>Menu row 4.3.2</button>
+  <button mat-menu-item>Menu row 4.3.3</button>
+  <button mat-menu-item>Menu row 4.3.4</button>
+</mat-menu>
+<mat-menu #content44="matMenu" backdropClass="viz-menu">
+  <button mat-menu-item>Menu row 4.4.1</button>
+  <button mat-menu-item>Menu row 4.4.2</button>
+  <button mat-menu-item>Menu row 4.4.3</button>
+  <button mat-menu-item>Menu row 4.4.4</button>
 </mat-menu>

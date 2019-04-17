@@ -1,14 +1,16 @@
 <div class="example-centralization">
-  <button mat-flat-button color="primary" [matMenuTriggerFor]="menu">Menu</button>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon >more_horiz</mat-icon>
+  </button>
 </div>
 <mat-menu #menu="matMenu" backdropClass="viz-menu">
   <button mat-menu-item>
     <mat-icon>assignment_turned_in</mat-icon>
     <span>Assigned</span>
   </button>
-  <button mat-menu-item>
+  <button mat-menu-item disabled>
     <mat-icon>business</mat-icon>
-    <span>Work</span>
+    <span>Business</span>
   </button>
   <button mat-menu-item>
     <mat-icon>shopping_cart</mat-icon>
