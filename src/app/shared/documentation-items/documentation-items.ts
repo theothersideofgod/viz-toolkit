@@ -43,6 +43,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'autocompletedisplay', name: 'AutocompleteDisplay', examples: ['autocomplete-display']},
         {id: 'autocompletefilter', name: 'AutocompleteFilter', examples: ['autocomplete-filter']},
         {id: 'autocomplete', name: 'AutocompleteSimple', examples: ['autocomplete-simple']},
+        {id: 'cardfancy', name: 'CardFancy', examples: ['card-fancy']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},

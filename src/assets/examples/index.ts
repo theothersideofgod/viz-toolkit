@@ -128,6 +128,10 @@ import {
   AutocompleteSimpleData
 } from './autocomplete-simple/autocomplete-simple.component';
 import {
+  CardFancyComponent,
+  CardFancyData
+} from './card-fancy/card-fancy.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -756,6 +760,10 @@ export const ALL_EXAMPLE_ITEMS = {
     component: AutocompleteSimpleComponent,
     data: AutocompleteSimpleData
   },
+  'card-fancy' : {
+    component: CardFancyComponent,
+    data: CardFancyData
+  },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1314,6 +1322,7 @@ export const ALL_EXAMPLE_ITEMS = {
     AutocompleteDisplayComponent,
     AutocompleteFilterComponent,
     AutocompleteSimpleComponent,
+    CardFancyComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1522,6 +1531,7 @@ export const ALL_EXAMPLE_ITEMS = {
     AutocompleteDisplayComponent,
     AutocompleteFilterComponent,
     AutocompleteSimpleComponent,
+    CardFancyComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,

@@ -1,38 +1,59 @@
 <html>
+  <head></head>
 
-<head></head>
+  <body>
+    <div class="doc-category-title">
+      Layout
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
+    </div>
+    <div class="doc-title-1">
+      Card
+    </div>
+    <div class="doc-desc-1">
+      <p>
+        A card is a sheet of material that serves as an entry point to more
+        detailed information.
+      </p>
+      <p>
+        Cards display content composed of different elements whose size or
+        supported actions vary.
+      </p>
+      <p>
+        Cards are a convenient means of displaying content composed of different
+        elements. They&#x2019;re also well-suited for showcasing elements whose
+        size or supported actions vary, like photos with captions of variable
+        length.
+      </p>
+    </div>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
+    <div class="doc-title-4 mb-8">
+      Basic cards
+    </div>
+    <div class="doc-desc-2">
+      Although cards can support multiple actions, UI controls, and an overflow
+      menu, use restraint and remember that cards are entry points to more
+      complex and detailed information.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="card-basic"></div>
+    </div>
 
-<body>
-  <div class="doc-category-title">
-    Layout
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Card
-  </div>
-  <div class="doc-desc-1">
-    <p>A card is a sheet of material that serves as an entry point to more detailed information.
-    </p>
-    <p>Cards display content composed of different elements whose size or supported actions vary.</p>
-    <p>Cards are a convenient means of displaying content composed of different elements. They&#x2019;re also well-suited for showcasing
-      elements whose size or supported actions vary, like photos with captions of variable length.</p>
-  </div>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-  <div class="doc-desc-2">
-    Although cards can support multiple actions, UI controls, and an overflow menu, use restraint and remember that cards are
-    entry points to more complex and detailed information.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="card-basic"></div>
-  </div>
-  <div class="doc-divider">
-  </div>
-  <!-- <div class="doc-title-2">
+    <div class="doc-title-4 mb-16">
+      Card with multiple sections
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="card-fancy"></div>
+    </div>
+    <div class="doc-divider"></div>
+    <!-- <div class="doc-title-2">
     Props
     <span class="docs-markdown-h3" id="props">
       <span header-link="props"></span>Props</span>
@@ -84,68 +105,63 @@
     </tbody>
   </table>
   <div class="doc-divider"></div> -->
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
+    
 
-  <div class="doc-desc-2">
-    <p>Cards are surfaces that display content and actions on a single topic.</p>
-    <p>They should be easy to scan for relevant and actionable information. Elements, like text and images, should be placed
-      on them in a way that clearly indicates hierarchy.</p>
-    <ul class="doc-list">
-      <li>Contained: A card is identifiable as a single, contained unit.</li>
-      <li>Independent: A card can stand alone, without relying on surrounding elements for context.</li>
-      <li>Individual: A card cannot merge with another card, or divide into multiple cards.</li>
-    </ul>
-  </div>
+    <div class="doc-divider"></div>
 
-  <div class="doc-divider">
-
-  </div>
-
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-  <div class="doc-desc-2">
-    On desktop and mobile, cards can have a resting elevation of 1dp. They elevate to 8dp on hover.</div>
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:537px">
-      <img src="assets/img/doc/card-do.png" alt="">
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:537px">
-      <img src="assets/img/doc/card-dont.png" alt="">
+    <div class="doc-desc-2">
+      On desktop and mobile, cards can have a resting elevation of 1dp. They
+      elevate to 8dp on hover.
     </div>
-  </div>
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center"
+        style="height:537px"
+      >
+        <img src="assets/img/doc/card-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16"
+        style="height:537px"
+      >
+        <img src="assets/img/doc/card-dont.png" alt="" />
+      </div>
+    </div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:600px">
-    <img src="assets/img/doc/card-spec.png" alt="">
-  </div>
+    <div class="docs-usage-spec docs-usage-center" style="height:600px">
+      <img src="assets/img/doc/card-spec.png" alt="" />
+    </div>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
-  </div><a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sketch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
-
-
-
-
-</body>
-
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sektch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+  </body>
 </html>
