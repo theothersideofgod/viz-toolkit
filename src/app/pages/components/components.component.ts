@@ -55,7 +55,7 @@ export class ComponentsComponent implements OnInit {
       components: [
         {
           title: 'autocomplete',
-          desc: '',
+          desc: 'A panel of suggested options',
           route: 'autocomplete',
           img: 'autocomplete'
         },
@@ -286,9 +286,9 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'sort header',
-          desc: '',
+          desc: 'Sorting states of data table header',
           route: 'sort',
-          img: 'sort'
+          img: 'sort header'
         },
         {
           title: 'no data',

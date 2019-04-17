@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>@2xicn_paginator</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-137.000000, -2081.000000)">
+            <g id="Data-Table" transform="translate(137.000000, 1901.000000)">
+                <g id="Paginator-Copy" transform="translate(0.000000, 166.000000)">
+                    <g id="icn_paginator" transform="translate(0.000000, 14.000000)">
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        <g id="swap-vertical" transform="translate(1.000000, 2.000000)" stroke="#018DAB" stroke-width="2">
+                            <path d="M5,18 L5,0" id="Path"></path>
+                            <polyline id="Path" points="0 5 5 0 10 5"></polyline>
+                            <path d="M17,2 L17,20" id="Path"></path>
+                            <polyline id="Path" points="12 15 17 20 22 15"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
