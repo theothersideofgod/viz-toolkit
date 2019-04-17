@@ -25,3 +25,7 @@
   width: 790px;
   margin: 0 auto;
 }
+
+.example-section .mat-input-element{
+  color: #000000
+}
