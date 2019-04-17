@@ -388,7 +388,9 @@ td.mat-cell,
 
 
 //input font-size
-
+input.mat-input-element {
+  color: #000000;
+}
 
 //autocomplete
 .viz-autocomplete-dropdown {
