@@ -67,8 +67,6 @@
   height: 32px;
   border-bottom: 1px solid #ececec;
 
- 
-
   &-top {
     font-weight: 500;
   }
@@ -122,3 +120,17 @@
   }
 }
 
+::ng-deep {
+  .cdk-overlay-pane .viz-header-application-dropdown {
+    position: absolute;
+    left: -108px;
+    .mat-menu-content {
+      width: auto !important;
+      min-width: 180px;
+    }
+    .mat-menu-content .mat-menu-item:hover {
+      color: #ff4e00;
+    }
+  }
+  
+}
