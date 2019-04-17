@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 @Component({
   selector: 'viz-footer',
   templateUrl: './viz-footer.component.html',
   styleUrls: ['./viz-footer.component.scss']
 })
 export class VizFooterComponent implements OnInit {
+  constructor(private sanitizer: DomSanitizer){}
   year = new Date().getFullYear()
   @Input('title')
   title;

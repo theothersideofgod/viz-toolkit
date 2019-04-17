@@ -531,42 +531,6 @@ input.mat-input-element {
 }
 
 //tabs
-.mat-tab-list {
-  .mat-tab-labels {
-    // padding: 0px 24px;
-    .mat-tab-label {
-      // 
-      min-width: 0;
-      &:hover {
-        background-color: rgba($viz-purple,0.12);
-      }
-      &.mat-tab-label-active {
-        background-color: rgba($viz-purple,0.12)
-      }
-    }
-  }
-  .mat-ink-bar {
-    height: 2px;
-  }
-  .mat-tab-label {
-    color: #c3c3c3;
-    font-family: soleto;
-    font-weight: 500;
-  }
-  .mat-tab-label-active {
-    color: #696969;
-  }
-  .mat-tab-label-content {
-    .mat-ripple-element {
-      background-color: $viz-purple !important;
-    }
-  }
-}
-.mat-tab-nav-bar {
-  .mat-tab-link {
-    min-width: 0px;
-  }
-}
 
 //tooltip
 *[mattooltip] {

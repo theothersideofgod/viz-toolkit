@@ -132,13 +132,41 @@ import {
   CardFancyData
 } from './card-fancy/card-fancy.component';
 import {
-  TabsNavBarComponent,
-  TabsNavBarData
-} from './tabs-nav-bar/tabs-nav-bar.component';
+  TabGroupAnimationsExample
+} from './tab-group-animations/tab-group-animations-example';
 import {
-  TabsHeaderBottomComponent,
-  TabsHeaderBottomData
-} from './tabs-header-bottom/tabs-header-bottom.component';
+  TabGroupAlignExample
+} from './tab-group-align/tab-group-align-example';
+import {
+  TabNavBarBasicExample
+} from './tab-nav-bar-basic/tab-nav-bar-basic-example';
+import {
+  TabGroupAsyncExample
+} from './tab-group-async/tab-group-async-example';
+import {
+  TabGroupThemeExample
+} from './tab-group-theme/tab-group-theme-example';
+import {
+  TabGroupStretchedExample
+} from './tab-group-stretched/tab-group-stretched-example';
+import {
+  TabGroupLazyLoadedExample
+} from './tab-group-lazy-loaded/tab-group-lazy-loaded-example';
+import {
+  TabGroupHeaderBelowExample
+} from './tab-group-header-below/tab-group-header-below-example';
+import {
+  TabGroupDynamicExample
+} from './tab-group-dynamic/tab-group-dynamic-example';
+import {
+  TabGroupDynamicHeightExample
+} from './tab-group-dynamic-height/tab-group-dynamic-height-example';
+import {
+  TabGroupCustomLabelExample
+} from './tab-group-custom-label/tab-group-custom-label-example';
+import {
+  TabGroupBasicExample
+} from './tab-group-basic/tab-group-basic-example';
 import {
   ButtontoggleSecondaryColorComponent,
   ButtontoggleSecondaryColorData
@@ -260,14 +288,6 @@ import {
   DatePickerStartDateComponent,
   DatePickerStartDateData
 } from './date-picker-start-date/date-picker-start-date.component';
-import {
-  TabsCustomLabelComponent,
-  TabsCustomLabelData
-} from './tabs-custom-label/tabs-custom-label.component';
-import {
-  TabsThemeComponent,
-  TabsThemeData
-} from './tabs-theme/tabs-theme.component';
 import {
   FormFieldAutocompleteGroupComponent,
   FormFieldAutocompleteGroupData
@@ -572,11 +592,6 @@ import {
   DialogDataExampleDialog
 } from './dialog-basic/dialog-basic.component';
 import {
-  TabsNarrowComponent,
-  TabsNarrowData
-} from './tabs-narrow/tabs-narrow.component';
-import { TabsComponent, TabsData } from './tabs/tabs.component';
-import {
   ChipPrimaryComponent,
   ChipPrimaryData
 } from './chip-primary/chip-primary.component';
@@ -764,14 +779,30 @@ export const ALL_EXAMPLE_ITEMS = {
     component: CardFancyComponent,
     data: CardFancyData
   },
-  'tabs-nav-bar' : {
-    component: TabsNavBarComponent,
-    data: TabsNavBarData
-  },
-  'tabs-header-bottom' : {
-    component: TabsHeaderBottomComponent,
-    data: TabsHeaderBottomData
-  },
+  'tab-group-animations' : {
+    component: TabGroupAnimationsExample},
+  'tab-group-align' : {
+    component: TabGroupAlignExample},
+  'tab-nav-bar-basic' : {
+    component: TabNavBarBasicExample},
+  'tab-group-async' : {
+    component: TabGroupAsyncExample},
+  'tab-group-theme' : {
+    component: TabGroupThemeExample},
+  'tab-group-stretched' : {
+    component: TabGroupStretchedExample},
+  'tab-group-lazy-loaded' : {
+    component: TabGroupLazyLoadedExample},
+  'tab-group-header-below' : {
+    component: TabGroupHeaderBelowExample},
+  'tab-group-dynamic' : {
+    component: TabGroupDynamicExample},
+  'tab-group-dynamic-height' : {
+    component: TabGroupDynamicHeightExample},
+  'tab-group-custom-label' : {
+    component: TabGroupCustomLabelExample},
+  'tab-group-basic' : {
+    component: TabGroupBasicExample},
   'buttontoggle-secondary-color' : {
     component: ButtontoggleSecondaryColorComponent,
     data: ButtontoggleSecondaryColorData
@@ -887,14 +918,6 @@ export const ALL_EXAMPLE_ITEMS = {
   'date-picker-start-date' : {
     component: DatePickerStartDateComponent,
     data: DatePickerStartDateData
-  },
-  'tabs-custom-label' : {
-    component: TabsCustomLabelComponent,
-    data: TabsCustomLabelData
-  },
-  'tabs-theme' : {
-    component: TabsThemeComponent,
-    data: TabsThemeData
   },
   'form-field-autocomplete-group' : {
     component: FormFieldAutocompleteGroupComponent,
@@ -1200,14 +1223,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: DialogBasicComponent,
     data: DialogBasicData
   },
-  'tabs-narrow': {
-    component: TabsNarrowComponent,
-    data: TabsNarrowData
-  },
-  tabs: {
-    component: TabsComponent,
-    data: TabsData
-  },
   'chip-primary': {
     component: ChipPrimaryComponent,
     data: ChipPrimaryData
@@ -1323,8 +1338,18 @@ export const ALL_EXAMPLE_ITEMS = {
     AutocompleteFilterComponent,
     AutocompleteSimpleComponent,
     CardFancyComponent,
-    TabsNavBarComponent,
-    TabsHeaderBottomComponent,
+    TabGroupAnimationsExample,
+    TabGroupAlignExample,
+    TabNavBarBasicExample,
+    TabGroupAsyncExample,
+    TabGroupThemeExample,
+    TabGroupStretchedExample,
+    TabGroupLazyLoadedExample,
+    TabGroupHeaderBelowExample,
+    TabGroupDynamicExample,
+    TabGroupDynamicHeightExample,
+    TabGroupCustomLabelExample,
+    TabGroupBasicExample,
     ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
@@ -1354,8 +1379,6 @@ export const ALL_EXAMPLE_ITEMS = {
     DatePickerMinMaxValidationComponent,
     DatePickerSelectedValueComponent,
     DatePickerStartDateComponent,
-    TabsCustomLabelComponent,
-    TabsThemeComponent,
     FormFieldAutocompleteGroupComponent,
     FormFieldAutocompleteIconComponent,
     FormFieldCustomPhoneNumberComponent,
@@ -1434,8 +1457,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SnackbarBasicComponent,
     DialogDataExampleDialog,
     DialogBasicComponent,
-    TabsNarrowComponent,
-    TabsComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
     MenuNestedComponent,
@@ -1532,8 +1553,18 @@ export const ALL_EXAMPLE_ITEMS = {
     AutocompleteFilterComponent,
     AutocompleteSimpleComponent,
     CardFancyComponent,
-    TabsNavBarComponent,
-    TabsHeaderBottomComponent,
+    TabGroupAnimationsExample,
+    TabGroupAlignExample,
+    TabNavBarBasicExample,
+    TabGroupAsyncExample,
+    TabGroupThemeExample,
+    TabGroupStretchedExample,
+    TabGroupLazyLoadedExample,
+    TabGroupHeaderBelowExample,
+    TabGroupDynamicExample,
+    TabGroupDynamicHeightExample,
+    TabGroupCustomLabelExample,
+    TabGroupBasicExample,
     ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
@@ -1563,8 +1594,6 @@ export const ALL_EXAMPLE_ITEMS = {
     DatePickerMinMaxValidationComponent,
     DatePickerSelectedValueComponent,
     DatePickerStartDateComponent,
-    TabsCustomLabelComponent,
-    TabsThemeComponent,
     FormFieldAutocompleteGroupComponent,
     FormFieldAutocompleteIconComponent,
     FormFieldCustomPhoneNumberComponent,
@@ -1643,8 +1672,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SnackbarBasicComponent,
     DialogDataExampleDialog,
     DialogBasicComponent,
-    TabsNarrowComponent,
-    TabsComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
     MenuNestedComponent,

@@ -43,7 +43,8 @@ const sketch_link = {
     'Insert / Toolkit Material Library / Components / List Group / Icon Before or Icon After'
   ],
   tabs: [
-    'Insert / Toolkit Material Library / Components / Tab / One Line or Two Lines or One Line with Top Indicator'
+    'Insert / Toolkit Material Library / Components / Tab / Bottom Indicator',
+    'Insert / Toolkit Material Library / Components / Tab / Top Indicator'
   ],
   tree: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Layouts: Tree'
