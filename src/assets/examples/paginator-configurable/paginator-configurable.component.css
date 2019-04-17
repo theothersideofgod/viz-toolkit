@@ -3,5 +3,14 @@ mat-form-field {
 }
 .example-wrapper {
     white-space: normal;
-    text-align: left;
+    width: 580px;
+    margin: 0 auto;
+}
+.example-paginator-data {
+  text-align: left;
+}
+
+.example-paginator-instance {
+  width: 396px;
+  text-align: left;
 }
