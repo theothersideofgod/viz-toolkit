@@ -127,6 +127,8 @@
     .mat-menu-content {
       width: auto !important;
       min-width: 180px;
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
     .mat-menu-content .mat-menu-item:hover {
       color: #ff4e00;
