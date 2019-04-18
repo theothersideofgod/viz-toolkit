@@ -650,52 +650,7 @@ td.mat-cell,
 }
 
 //badge
-.viz-text-badge {
-  color: #251e1e;
-  font-size: 14px;
-  font-weight: 300;
-  display: inline-flex;
-  align-items: baseline;
-  span {
-    position: relative;
-    top: 0px !important;
-    right: 0px !important;
-    margin-left: 4px;
-    font-weight: 500;
-  }
-}
-.mat-badge-content {
-  width: auto !important;
-  border-radius: 12px !important;
-  // min-width: 24px;
-  height: 24px !important;
-  line-height: 24px !important;
-  padding: 0 5px;
-  min-width: 15px;
-}
-.mat-badge-medium.mat-badge-overlap {
-  &.mat-badge-after {
-    .mat-badge-content {
-      right: auto !important;
-      left: 50%;
-    }
-  }
-  &.mat-badge-above {
-    .mat-badge-content {
-      top: -50%;
-    }
-  }
-  &.mat-badge-before {
-    .mat-badge-content {
-      left: -50% !important;
-    }
-  }
-  &.mat-badge-below {
-    .mat-badge-content {
-      top: 50%;
-    }
-  }
-}
+
 
 //tabs
 .mat-tab-list {

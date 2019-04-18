@@ -55,7 +55,7 @@ const sketch_link = {
     'Insert / Toolkit Material Library / Components / Button / Default Button or Button with Left Icon or Button with Right Icon'
   ],
   badge: [
-    'Insert / Toolkit Material Library / Components / Badge / Short or Long'
+    'Insert / Toolkit Material Library / Components / Badge'
   ],
   chip: [
     'Insert / Toolkit Material Library / Components / Chip / Input or Choice'

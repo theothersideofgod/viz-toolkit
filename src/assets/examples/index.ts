@@ -40,6 +40,12 @@ import {
 } from 'libs';
 
 import {
+  BadgeButtonComponent,
+ } from './badge-button/badge-button.component';
+import {
+  BadgeTextComponent,
+ } from './badge-text/badge-text.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -303,10 +309,6 @@ import {
   ChipCloseData
 } from './chip-close/chip-close.component';
 import {
-  BadgeTabsComponent,
-  BadgeTabsData
-} from './badge-tabs/badge-tabs.component';
-import {
   BadgeIconComponent,
   BadgeIconData
 } from './badge-icon/badge-icon.component';
@@ -557,10 +559,6 @@ import {
   ChipBasicData
 } from './chip-basic/chip-basic.component';
 import {
-  BadgeBasicComponent,
-  BadgeBasicData
-} from './badge-basic/badge-basic.component';
-import {
   ProgressBarBasicComponent,
   ProgressBarBasicData
 } from './progress-bar-basic/progress-bar-basic.component';
@@ -580,6 +578,12 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'badge-button' : {
+    component: BadgeButtonComponent,
+    },
+  'badge-text' : {
+    component: BadgeTextComponent,
+    },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -840,10 +844,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ChipCloseComponent,
     data: ChipCloseData
   },
-  'badge-tabs': {
-    component: BadgeTabsComponent,
-    data: BadgeTabsData
-  },
   'badge-icon': {
     component: BadgeIconComponent,
     data: BadgeIconData
@@ -1096,10 +1096,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ChipBasicComponent,
     data: ChipBasicData
   },
-  'badge-basic': {
-    component: BadgeBasicComponent,
-    data: BadgeBasicData
-  },
   'progress-bar-basic': {
     component: ProgressBarBasicComponent,
     data: ProgressBarBasicData
@@ -1116,6 +1112,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    BadgeButtonComponent,
+    BadgeTextComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1181,7 +1179,6 @@ export const ALL_EXAMPLE_ITEMS = {
     IconSmallComponent,
     ChipDisableComponent,
     ChipCloseComponent,
-    BadgeTabsComponent,
     BadgeIconComponent,
     ButtonDisableComponent,
     ButtonIconLeftComponent,
@@ -1247,7 +1244,6 @@ export const ALL_EXAMPLE_ITEMS = {
     ToolbarBasicComponent,
     ListBasicComponent,
     ChipBasicComponent,
-    BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent,
@@ -1302,6 +1298,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    BadgeButtonComponent,
+    BadgeTextComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1367,7 +1365,6 @@ export const ALL_EXAMPLE_ITEMS = {
     IconSmallComponent,
     ChipDisableComponent,
     ChipCloseComponent,
-    BadgeTabsComponent,
     BadgeIconComponent,
     ButtonDisableComponent,
     ButtonIconLeftComponent,
@@ -1433,7 +1430,6 @@ export const ALL_EXAMPLE_ITEMS = {
     ToolbarBasicComponent,
     ListBasicComponent,
     ChipBasicComponent,
-    BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent,
