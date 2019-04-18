@@ -42,3 +42,4 @@ uploadLib.sh
 # System Files
 .DS_Store
 Thumbs.db
+exampleCodeGenerator.js

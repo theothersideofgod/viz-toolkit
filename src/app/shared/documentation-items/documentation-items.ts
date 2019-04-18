@@ -21,6 +21,13 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'steppererrors', name: 'StepperErrors', examples: ['stepper-errors']},
+        {id: 'stepperstates', name: 'StepperStates', examples: ['stepper-states']},
+        {id: 'steppereditable', name: 'StepperEditable', examples: ['stepper-editable']},
+        {id: 'stepperoptional', name: 'StepperOptional', examples: ['stepper-optional']},
+        {id: 'stepperlabelpositionbottom', name: 'StepperLabelPositionBottom', examples: ['stepper-label-position-bottom']},
+        {id: 'steppervertical', name: 'StepperVertical', examples: ['stepper-vertical']},
+        {id: 'stepperoverview', name: 'StepperOverview', examples: ['stepper-overview']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'buttontogglesecondarycolor', name: 'ButtontoggleSecondaryColor', examples: ['buttontoggle-secondary-color']},

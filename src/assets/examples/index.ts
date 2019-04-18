@@ -36,9 +36,30 @@ import {
   CustomStepperModule,
   VizLoginOktaModule,
   VizButtonToggleModule,
-  VizFileUploadModule,
+  VizFileUploadModule
 } from 'libs';
 
+import {
+  StepperErrorsComponent,
+ } from './stepper-errors/stepper-errors.component';
+import {
+  StepperStatesComponent,
+ } from './stepper-states/stepper-states.component';
+import {
+  StepperEditableComponent,
+ } from './stepper-editable/stepper-editable.component';
+import {
+  StepperOptionalComponent,
+ } from './stepper-optional/stepper-optional.component';
+import {
+  StepperLabelPositionBottomComponent,
+ } from './stepper-label-position-bottom/stepper-label-position-bottom.component';
+import {
+  StepperVerticalComponent,
+ } from './stepper-vertical/stepper-vertical.component';
+import {
+  StepperOverviewComponent,
+ } from './stepper-overview/stepper-overview.component';
 import {
   TabsNavBarComponent,
   TabsNavBarData
@@ -201,22 +222,11 @@ import {
   LoginOktaComponent,
   LoginOktaData
 } from './login-okta/login-okta.component';
-import {
-  DividerComponent,
-  DividerData
-} from './divider/divider.component';
+import { DividerComponent, DividerData } from './divider/divider.component';
 import {
   IconographyComponent,
   IconographyData
 } from './iconography/iconography.component';
-import {
-  StepperCustomComponent,
-  StepperCustomData
-} from './stepper-custom/stepper-custom.component';
-import {
-  StepperVerticalComponent,
-  StepperVerticalData
-} from './stepper-vertical/stepper-vertical.component';
 import {
   FormFieldValidationComponent,
   FormFieldValidationData
@@ -411,10 +421,6 @@ import {
   BottomsheetBasicData
 } from './bottomsheet-basic/bottomsheet-basic.component';
 import {
-  StepperBasicComponent,
-  StepperBasicData
-} from './stepper-basic/stepper-basic.component';
-import {
   ExpansionPanelTableComponent,
   ExpansionPanelTableData
 } from './expansion-panel-table/expansion-panel-table.component';
@@ -580,177 +586,190 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
-  'tabs-nav-bar' : {
+  'stepper-errors' : {
+    component: StepperErrorsComponent,
+    },
+  'stepper-states' : {
+    component: StepperStatesComponent,
+    },
+  'stepper-editable' : {
+    component: StepperEditableComponent,
+    },
+  'stepper-optional' : {
+    component: StepperOptionalComponent,
+    },
+  'stepper-label-position-bottom' : {
+    component: StepperLabelPositionBottomComponent,
+    },
+  'stepper-vertical' : {
+    component: StepperVerticalComponent,
+    },
+  'stepper-overview' : {
+    component: StepperOverviewComponent,
+    },
+  'tabs-nav-bar': {
     component: TabsNavBarComponent,
     data: TabsNavBarData
   },
-  'tabs-header-bottom' : {
+  'tabs-header-bottom': {
     component: TabsHeaderBottomComponent,
     data: TabsHeaderBottomData
   },
-  'buttontoggle-secondary-color' : {
+  'buttontoggle-secondary-color': {
     component: ButtontoggleSecondaryColorComponent,
     data: ButtontoggleSecondaryColorData
   },
-  'buttontoggle-two-icon' : {
+  'buttontoggle-two-icon': {
     component: ButtontoggleTwoIconComponent,
     data: ButtontoggleTwoIconData
   },
-  'buttontoggle-three-icon' : {
+  'buttontoggle-three-icon': {
     component: ButtontoggleThreeIconComponent,
     data: ButtontoggleThreeIconData
   },
-  'buttontoggle-two-text' : {
+  'buttontoggle-two-text': {
     component: ButtontoggleTwoTextComponent,
     data: ButtontoggleTwoTextData
   },
-  'buttontoggle-disable' : {
+  'buttontoggle-disable': {
     component: ButtontoggleDisableComponent,
     data: ButtontoggleDisableData
   },
-  'buttontoggle-three-text' : {
+  'buttontoggle-three-text': {
     component: ButtontoggleThreeTextComponent,
     data: ButtontoggleThreeTextData
   },
-  'buttontoggle-basic' : {
+  'buttontoggle-basic': {
     component: ButtontoggleBasicComponent,
     data: ButtontoggleBasicData
   },
-  'file-upload-basic' : {
+  'file-upload-basic': {
     component: FileUploadBasicComponent,
     data: FileUploadBasicData
   },
-  'dialog-complex' : {
+  'dialog-complex': {
     component: DialogComplexComponent,
     data: DialogComplexData
   },
-  'dialog-confirmation' : {
+  'dialog-confirmation': {
     component: DialogConfirmationComponent,
     data: DialogConfirmationData
   },
-  'dialog-content' : {
+  'dialog-content': {
     component: DialogContentComponent,
     data: DialogContentData
   },
-  'dialog-data' : {
+  'dialog-data': {
     component: DialogDataComponent,
     data: DialogDataData
   },
-  'dialog-alert' : {
+  'dialog-alert': {
     component: DialogAlertComponent,
     data: DialogAlertData
   },
-  'select-trigger-text' : {
+  'select-trigger-text': {
     component: SelectTriggerTextComponent,
     data: SelectTriggerTextData
   },
-  'select-multiple-selection' : {
+  'select-multiple-selection': {
     component: SelectMultipleSelectionComponent,
     data: SelectMultipleSelectionData
   },
-  'select-group-option' : {
+  'select-group-option': {
     component: SelectGroupOptionComponent,
     data: SelectGroupOptionData
   },
-  'select-error-state' : {
+  'select-error-state': {
     component: SelectErrorStateComponent,
     data: SelectErrorStateData
   },
-  'tree-checkbox-material' : {
+  'tree-checkbox-material': {
     component: TreeCheckboxMaterialComponent,
     data: TreeCheckboxMaterialData
   },
-  'tree-partially-loaded' : {
+  'tree-partially-loaded': {
     component: TreePartiallyLoadedComponent,
     data: TreePartiallyLoadedData
   },
-  'tree-nested-nodes' : {
+  'tree-nested-nodes': {
     component: TreeNestedNodesComponent,
     data: TreeNestedNodesData
   },
-  'tree-flat-nodes' : {
+  'tree-flat-nodes': {
     component: TreeFlatNodesComponent,
     data: TreeFlatNodesData
   },
-  'tree-dynamic-data' : {
+  'tree-dynamic-data': {
     component: TreeDynamicDataComponent,
     data: TreeDynamicDataData
   },
-  'menu-icon' : {
+  'menu-icon': {
     component: MenuIconComponent,
     data: MenuIconData
   },
-  'date-picker-range-validation' : {
+  'date-picker-range-validation': {
     component: DatePickerRangeValidationComponent,
     data: DatePickerRangeValidationData
   },
-  'date-picker-emulating' : {
+  'date-picker-emulating': {
     component: DatePickerEmulatingComponent,
     data: DatePickerEmulatingData
   },
-  'date-picker-filter-validation' : {
+  'date-picker-filter-validation': {
     component: DatePickerFilterValidationComponent,
     data: DatePickerFilterValidationData
   },
-  'date-picker-min-max-validation' : {
+  'date-picker-min-max-validation': {
     component: DatePickerMinMaxValidationComponent,
     data: DatePickerMinMaxValidationData
   },
-  'date-picker-selected-value' : {
+  'date-picker-selected-value': {
     component: DatePickerSelectedValueComponent,
     data: DatePickerSelectedValueData
   },
-  'date-picker-start-date' : {
+  'date-picker-start-date': {
     component: DatePickerStartDateComponent,
     data: DatePickerStartDateData
   },
-  'tabs-custom-label' : {
+  'tabs-custom-label': {
     component: TabsCustomLabelComponent,
     data: TabsCustomLabelData
   },
-  'tabs-theme' : {
+  'tabs-theme': {
     component: TabsThemeComponent,
     data: TabsThemeData
   },
-  'form-field-autocomplete-group' : {
+  'form-field-autocomplete-group': {
     component: FormFieldAutocompleteGroupComponent,
     data: FormFieldAutocompleteGroupData
   },
-  'form-field-autocomplete-icon' : {
+  'form-field-autocomplete-icon': {
     component: FormFieldAutocompleteIconComponent,
     data: FormFieldAutocompleteIconData
   },
-  'form-field-custom-phone-number' : {
+  'form-field-custom-phone-number': {
     component: FormFieldCustomPhoneNumberComponent,
     data: FormFieldCustomPhoneNumberData
   },
-  'form-field-prefix-suffix' : {
+  'form-field-prefix-suffix': {
     component: FormFieldPrefixSuffixComponent,
     data: FormFieldPrefixSuffixData
   },
-  'form-field-clear-button' : {
+  'form-field-clear-button': {
     component: FormFieldClearButtonComponent,
     data: FormFieldClearButtonData
   },
-  'login-okta' : {
+  'login-okta': {
     component: LoginOktaComponent,
     data: LoginOktaData
   },
-  'divider' : {
+  divider: {
     component: DividerComponent,
     data: DividerData
   },
-  'iconography' : {
+  iconography: {
     component: IconographyComponent,
     data: IconographyData
-  },
-  'stepper-custom' : {
-    component: StepperCustomComponent,
-    data: StepperCustomData
-  },
-  'stepper-vertical': {
-    component: StepperVerticalComponent,
-    data: StepperVerticalData
   },
   'form-field-validation': {
     component: FormFieldValidationComponent,
@@ -948,10 +967,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: BottomsheetBasicComponent,
     data: BottomsheetBasicData
   },
-  'stepper-basic': {
-    component: StepperBasicComponent,
-    data: StepperBasicData
-  },
   'expansion-panel-table': {
     component: ExpansionPanelTableComponent,
     data: ExpansionPanelTableData
@@ -1116,6 +1131,13 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    StepperErrorsComponent,
+    StepperStatesComponent,
+    StepperEditableComponent,
+    StepperOptionalComponent,
+    StepperLabelPositionBottomComponent,
+    StepperVerticalComponent,
+    StepperOverviewComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1157,8 +1179,6 @@ export const ALL_EXAMPLE_ITEMS = {
     LoginOktaComponent,
     DividerComponent,
     IconographyComponent,
-    StepperCustomComponent,
-    StepperVerticalComponent,
     FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
     ExpansionPanelAngularComponent,
@@ -1209,7 +1229,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SearchBasicComponent,
     BreadscrumbBasicComponent,
     BottomsheetBasicComponent,
-    StepperBasicComponent,
     ExpansionPanelTableComponent,
     TableNativeComponent,
     TableBasicComponent,
@@ -1298,10 +1317,17 @@ export const ALL_EXAMPLE_ITEMS = {
     MatFormFieldModule,
     MatSelectModule,
     VizLoginOktaModule,
-    VizFileUploadModule,
+    VizFileUploadModule
   ],
   providers: [],
   entryComponents: [
+    StepperErrorsComponent,
+    StepperStatesComponent,
+    StepperEditableComponent,
+    StepperOptionalComponent,
+    StepperLabelPositionBottomComponent,
+    StepperVerticalComponent,
+    StepperOverviewComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1343,8 +1369,6 @@ export const ALL_EXAMPLE_ITEMS = {
     LoginOktaComponent,
     DividerComponent,
     IconographyComponent,
-    StepperCustomComponent,
-    StepperVerticalComponent,
     FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
     ExpansionPanelAngularComponent,
@@ -1395,7 +1419,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SearchBasicComponent,
     BreadscrumbBasicComponent,
     BottomsheetBasicComponent,
-    StepperBasicComponent,
     ExpansionPanelTableComponent,
     TableNativeComponent,
     TableBasicComponent,

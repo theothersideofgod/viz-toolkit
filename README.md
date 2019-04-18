@@ -214,6 +214,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 1.0.9
 - Update header component.
 - Add toggle button component.
-
-1.1.0
-- Upgrade angular material to 7.3.6

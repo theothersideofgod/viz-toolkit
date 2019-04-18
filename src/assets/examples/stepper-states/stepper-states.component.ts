@@ -1,16 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 
 /**
- * @title Stepper vertical
+ * @title Stepper with customized states
  */
 @Component({
-  selector: 'stepper-vertical',
-  templateUrl: 'stepper-vertical.component.html',
-  styleUrls: ['stepper-vertical-example.css']
+  selector: 'stepper-states',
+  templateUrl: 'stepper-states.component.html',
+  styleUrls: ['stepper-states.component.css'],
+  providers: [{
+    provide: STEPPER_GLOBAL_OPTIONS, useValue: {displayDefaultIndicatorType: false}
+  }]
 })
-export class StepperVerticalComponent implements OnInit {
-  isLinear = false;
+export class StepperStatesComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 

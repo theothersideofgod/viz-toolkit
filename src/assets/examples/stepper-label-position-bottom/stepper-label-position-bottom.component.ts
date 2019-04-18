@@ -2,15 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 /**
- * @title Stepper vertical
+ * @title Stepper label bottom position
  */
 @Component({
-  selector: 'stepper-vertical',
-  templateUrl: 'stepper-vertical.component.html',
-  styleUrls: ['stepper-vertical-example.css']
+  selector: 'stepper-label-position-bottom',
+  templateUrl: 'stepper-label-position-bottom.component.html',
+  styleUrls: ['stepper-label-position-bottom.component.css'],
 })
-export class StepperVerticalComponent implements OnInit {
-  isLinear = false;
+export class StepperLabelPositionBottomComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 

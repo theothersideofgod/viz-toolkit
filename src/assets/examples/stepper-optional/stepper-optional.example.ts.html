@@ -2,17 +2,17 @@
 <span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
 <span class="hljs-comment">/**
- * @title Stepper vertical
+ * @title Stepper with optional steps
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'stepper-vertical'</span>,
-  templateUrl: <span class="hljs-string">'stepper-vertical.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'stepper-vertical-example.css'</span>]
+  selector: <span class="hljs-string">'stepper-optional'</span>,
+  templateUrl: <span class="hljs-string">'stepper-optional.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'stepper-optional-example.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperVerticalComponent <span class="hljs-keyword">implements</span> OnInit {
-  isLinear = <span class="hljs-literal">false</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperOptionalComponent <span class="hljs-keyword">implements</span> OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  isOptional = <span class="hljs-literal">false</span>;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>) {}
 
@@ -21,7 +21,7 @@
       firstCtrl: [<span class="hljs-string">''</span>, Validators.required]
     });
     <span class="hljs-keyword">this</span>.secondFormGroup = <span class="hljs-keyword">this</span>._formBuilder.group({
-      secondCtrl: [<span class="hljs-string">''</span>, Validators.required]
+      secondCtrl: <span class="hljs-string">''</span>
     });
   }
 }
