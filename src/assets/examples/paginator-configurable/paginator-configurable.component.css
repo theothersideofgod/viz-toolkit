@@ -8,9 +8,15 @@ mat-form-field {
 }
 .example-paginator-data {
   text-align: left;
+  margin-left: 14px;
 }
 
-.example-paginator-instance {
+.example-paginator-instance mat-paginator{
+  display: flex;
+}
+
+.example-paginator-wrapper {
   width: 396px;
-  text-align: left;
+  margin: 0 auto;
+  /* text-align: left; */
 }

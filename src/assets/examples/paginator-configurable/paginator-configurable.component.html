@@ -17,21 +17,22 @@
     />
   </mat-form-field>
 
-  <div class="example-paginator-instance">
-    <mat-paginator
-      class="example-paginator-instance"
-      [length]="length"
-      [pageSize]="pageSize"
-      [pageSizeOptions]="pageSizeOptions"
-      (page)="pageEvent = $event"
-    >
-    </mat-paginator>
-  </div>
+  <div class="example-paginator-wrapper">
+    <div class="example-paginator-instance">
+      <mat-paginator
+        [length]="length"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="pageSizeOptions"
+        (page)="pageEvent = $event"
+      >
+      </mat-paginator>
+    </div>
 
-  <div *ngIf="pageEvent" class="example-paginator-data">
-    <h5>Page Change Event Properties</h5>
-    <div>List length: {{ pageEvent.length }}</div>
-    <div>Page size: {{ pageEvent.pageSize }}</div>
-    <div>Page index: {{ pageEvent.pageIndex }}</div>
+    <div *ngIf="pageEvent" class="example-paginator-data">
+      <h5>Page Change Event Properties</h5>
+      <div>List length: {{ pageEvent.length }}</div>
+      <div>Page size: {{ pageEvent.pageSize }}</div>
+      <div>Page index: {{ pageEvent.pageIndex }}</div>
+    </div>
   </div>
 </div>
