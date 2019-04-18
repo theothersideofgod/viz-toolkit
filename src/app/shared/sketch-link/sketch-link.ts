@@ -118,7 +118,8 @@ const sketch_link = {
   ],
   ripple: [
     'Insert / Toolkit Material Library / ✱ / Ripple'
-  ]
+  ],
+  autocomplete: ['copy from Toolkit Material Library.sketch / Toolkit Components / Form Controls: Form Field, Input, Select, Autocomplete / Autocomplete']
 };
 
 @Component({
