@@ -2,14 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 /**
- * @title Stepper vertical
+ * @title Stepper overview
  */
 @Component({
-  selector: 'stepper-vertical',
-  templateUrl: 'stepper-vertical.component.html',
-  styleUrls: ['stepper-vertical.component.css']
+  selector: 'stepper-overview',
+  templateUrl: 'stepper-overview.component.html',
+  styleUrls: ['stepper-overview.component.css'],
 })
-export class StepperVerticalComponent implements OnInit {
+export class StepperOverviewComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;

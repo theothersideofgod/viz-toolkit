@@ -2,17 +2,17 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 /**
- * @title Stepper vertical
+ * @title Stepper with editable steps
  */
 @Component({
-  selector: 'stepper-vertical',
-  templateUrl: 'stepper-vertical.component.html',
-  styleUrls: ['stepper-vertical.component.css']
+  selector: 'stepper-editable',
+  templateUrl: 'stepper-editable.component.html',
+  styleUrls: ['stepper-editable.component.css']
 })
-export class StepperVerticalComponent implements OnInit {
-  isLinear = false;
+export class StepperEditableComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  isEditable = false;
 
   constructor(private _formBuilder: FormBuilder) {}
 

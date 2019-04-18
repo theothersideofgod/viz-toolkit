@@ -1,16 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 
 /**
- * @title Stepper vertical
+ * @title Stepper that displays errors in the steps
  */
 @Component({
-  selector: 'stepper-vertical',
-  templateUrl: 'stepper-vertical.component.html',
-  styleUrls: ['stepper-vertical.component.css']
+  selector: 'stepper-errors',
+  templateUrl: 'stepper-errors.component.html',
+  styleUrls: ['stepper-errors.component.css'],
+  providers: [{
+    provide: STEPPER_GLOBAL_OPTIONS, useValue: {showError: true}
+  }]
 })
-export class StepperVerticalComponent implements OnInit {
-  isLinear = false;
+export class StepperErrorsComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 

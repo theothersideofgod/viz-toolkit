@@ -2,17 +2,17 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 /**
- * @title Stepper vertical
+ * @title Stepper with optional steps
  */
 @Component({
-  selector: 'stepper-vertical',
-  templateUrl: 'stepper-vertical.component.html',
-  styleUrls: ['stepper-vertical.component.css']
+  selector: 'stepper-optional',
+  templateUrl: 'stepper-optional.component.html',
+  styleUrls: ['stepper-optional.component.css']
 })
-export class StepperVerticalComponent implements OnInit {
-  isLinear = false;
+export class StepperOptionalComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  isOptional = false;
 
   constructor(private _formBuilder: FormBuilder) {}
 
@@ -21,7 +21,7 @@ export class StepperVerticalComponent implements OnInit {
       firstCtrl: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
+      secondCtrl: ''
     });
   }
 }
