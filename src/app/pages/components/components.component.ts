@@ -229,6 +229,12 @@ export class ComponentsComponent implements OnInit {
           desc: 'Messaging for important changes or persistent conditions',
           route: 'feedbackindicator',
           img: 'feedback indicator'
+        },
+        {
+          title: 'ripple',
+          desc: '',
+          route: 'ripple',
+          img: 'ripple'
         }
       ]
     },

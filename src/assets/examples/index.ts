@@ -40,6 +40,9 @@ import {
 } from 'libs';
 
 import {
+  RippleOverviewComponent,
+ } from './ripple-overview/ripple-overview.component';
+import {
   TabsNavBarComponent,
   TabsNavBarData
 } from './tabs-nav-bar/tabs-nav-bar.component';
@@ -580,6 +583,9 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'ripple-overview' : {
+    component: RippleOverviewComponent,
+    },
   'tabs-nav-bar' : {
     component: TabsNavBarComponent,
     data: TabsNavBarData
@@ -1116,6 +1122,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    RippleOverviewComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,
@@ -1302,6 +1309,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    RippleOverviewComponent,
     TabsNavBarComponent,
     TabsHeaderBottomComponent,
     ButtontoggleSecondaryColorComponent,

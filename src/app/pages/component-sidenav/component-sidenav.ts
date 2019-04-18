@@ -163,6 +163,10 @@ const initNavList = [
       {
         name: 'Feedback Indicator',
         value: 'feedbackindicator'
+      },
+      {
+        name: 'Ripple',
+        value: 'ripple'
       }
     ]
   },

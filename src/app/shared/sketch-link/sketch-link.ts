@@ -104,6 +104,9 @@ const sketch_link = {
   ],
   buttontoggle: [
     'Insert / Toolkit Material Library / Components / Button Toggle / 2 Toggles or 3 Toggles / Icon or Text'
+  ],
+  ripple: [
+    'Insert / Toolkit Material Library / ✱ / Ripple'
   ]
 };
 
