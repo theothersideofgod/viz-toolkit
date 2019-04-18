@@ -83,7 +83,10 @@ const sketch_link = {
   bottomsheet: [
     'Insert / Toolkit Material Library / Components / Bottom Sheet'
   ],
-  paginator: ['Insert / Toolkit Material Library / Components / Pagination'],
+  paginator: [
+    'Insert / Toolkit Material Library / Components / Pagination / Default',
+    'Insert / Toolkit Material Library / Components / Pagination / Customized'
+  ],
   table: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
   ],

@@ -1,278 +1,255 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Data Table
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Paginator
-  </div>
-  <div class="doc-desc-1">
-    Paginator provides navigation for paged information, typically used with a table.
-  </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2 mb-24">
-    Examples
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-
-  <div class="doc-title-4 mb-8">
-    Basic Paginator</div>
-  <div class="doc-desc-2 mb-16">
-    The paginator displays a dropdown of page sizes for the user to choose from. </div>
-  <div class="doc-example-container">
-    <div app-docs-example="paginator-basic"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">
-    Configurable paginator</div>
-  <div class="doc-example-container">
-    <div app-docs-example="paginator-configurable"></div>
-  </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          hidePageSize
-        </td>
-        <td>
-          Whether to hide the page size selection UI from the user.
-        </td>
-        <td>
-          boolean
-        </td>
-        <td>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          length
-        </td>
-        <td>
-          The length of the total number of items that are being paginated. Defaulted to 0.
-
-
-        </td>
-        <td>
-          number
-        </td>
-        <td>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          pageIndex
-        </td>
-        <td>
-          The zero-based page index of the displayed list of items. Defaulted to 0.
-
-
-        </td>
-        <td>
-          number
-        </td>
-        <td>
-
-        </td>
-      </tr>
-      <tr>
-        <td>
-          pageSize
-        </td>
-        <td>
-          Number of items to display on a page. By default set to 50.
-
-
-        </td>
-        <td>
-          number
-        </td>
-        <td>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          pageSizeOptions
-        </td>
-        <td>
-          The set of provided page size options to display to the user.
-
-
-        </td>
-        <td>
-          number[]
-        </td>
-        <td>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          showFirstLastButtons
-        </td>
-        <td>
-          Whether to show the first/last buttons UI to the user.
-
-
-        </td>
-        <td>
-          boolean
-        </td>
-        <td>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          page
-        </td>
-        <td>
-          Event emitted when the paginator changes the page size or page index.
-
-
-        </td>
-        <td>
-          EventEmitter
-          <pageevent>
-          </pageevent>
-        </td>
-        <td>
-
-        </td>
-      </tr>
-      <tr>
-        <td>
-          initialized
-        </td>
-        <td>
-          Stream that emits once during the directive/component&apos;s ngOnInit.
-        </td>
-        <td>
-          Observable&lt;void&gt;
-          <void>
-          </void>
-        </td>
-        <td>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Each paginator instance requires:
-    <ul class="doc-list">
-      <li>
-        The number of items per page (default set to 50)
-      </li>
-      <li>
-        The total number of items being paged.
-      </li>
-      <li>
-        Displaying no fewer than n lines on the last page of a section (n is often around 5)
-      </li>
-    </ul>
-  </div>
-
-  <div class="doc-divider">
-
-  </div>
-
-  </div>
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Dropdown: Use the app&#x2019;s primary color to indicate an active selection.
-  </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:272px">
-      <img src="assets/img/doc/paginator-primary-active-do.png" alt="">
+  <body>
+    <div class="doc-category-title ">
+      Data Table
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:272px">
-      <img src="assets/img/doc/paginator-primary-active-dont.png" alt="">
+    <div class="doc-title-1">
+      Paginator
     </div>
-  </div>
-
-  <div class="doc-desc-2">
-    Don&#x2019;t break paginator to two lines
-  </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/paginator-line-do.png" alt="">
+    <div class="doc-desc-1">
+      Paginator provides navigation for paged information, typically used with a
+      table.
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:160px">
-      <img src="assets/img/doc/paginator-line-dont.png" alt="">
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2 mb-24">
+      Examples
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
     </div>
-  </div>
 
-  <div class="doc-desc-2">
-    Don’t break paginator to two lines
-  </div>
+    <div class="doc-title-4 mb-8">
+      Basic Paginator
+    </div>
+    <div class="doc-desc-2 mb-16">
+      The paginator displays a dropdown of page sizes for the user to choose
+      from.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="paginator-basic"></div>
+    </div>
 
-  <div class="doc-divider">
+    <div class="doc-title-4 mb-16">
+      Configurable paginator
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="paginator-configurable"></div>
+    </div>
 
-  </div>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
+    <div class="doc-desc-2">
+      To get a customized checkbox, just set
+      <span class="doc-desc-2-highlight">type/state/disabled</span>
+    </div>
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            hidePageSize
+          </td>
+          <td>
+            Whether to hide the page size selection UI from the user.
+          </td>
+          <td>
+            boolean
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            length
+          </td>
+          <td>
+            The length of the total number of items that are being paginated.
+            Defaulted to 0.
+          </td>
+          <td>
+            number
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            pageIndex
+          </td>
+          <td>
+            The zero-based page index of the displayed list of items. Defaulted
+            to 0.
+          </td>
+          <td>
+            number
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            pageSize
+          </td>
+          <td>
+            Number of items to display on a page. By default set to 50.
+          </td>
+          <td>
+            number
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            pageSizeOptions
+          </td>
+          <td>
+            The set of provided page size options to display to the user.
+          </td>
+          <td>
+            number[]
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            showFirstLastButtons
+          </td>
+          <td>
+            Whether to show the first/last buttons UI to the user.
+          </td>
+          <td>
+            boolean
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            page
+          </td>
+          <td>
+            Event emitted when the paginator changes the page size or page
+            index.
+          </td>
+          <td>
+            EventEmitter
+            <pageevent> </pageevent>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            initialized
+          </td>
+          <td>
+            Stream that emits once during the directive/component&apos;s
+            ngOnInit.
+          </td>
+          <td>
+            Observable&lt;void&gt;
+            <void> </void>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="doc-divider"></div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
 
+    <div class="doc-desc-2">
+      Dropdown: Use the app&#x2019;s primary color to indicate an active
+      selection.
+    </div>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:280px">
-    <img src="assets/img/doc/paginator-spec.png" alt="">
-  </div>
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center"
+        style="height:272px"
+      >
+        <img src="assets/img/doc/paginator-primary-active-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16"
+        style="height:272px"
+      >
+        <img src="assets/img/doc/paginator-primary-active-dont.png" alt="" />
+      </div>
+    </div>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
-  </div><a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sketch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+    <div class="doc-desc-2">
+      Don&#x2019;t break paginator to two lines
+    </div>
 
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/paginator-line-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/paginator-line-dont.png" alt="" />
+      </div>
+    </div>
 
-</body>
+    <div class="doc-desc-2">
+      Don’t break paginator to two lines
+    </div>
 
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:280px">
+      <img src="assets/img/doc/paginator-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sektch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+    <div sketch-link="1"></div>
+  </body>
 </html>
