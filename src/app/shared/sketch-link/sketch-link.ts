@@ -61,7 +61,8 @@ const sketch_link = {
     'Insert / Toolkit Material Library / Components / Badge'
   ],
   chip: [
-    'Insert / Toolkit Material Library / Components / Chip / Input or Choice'
+    'Insert / Toolkit Material Library / Components / Chip / Choice',
+    'Insert / Toolkit Material Library / Components / Chip / Input'
   ],
   icon: [
     'Insert / Toolkit Material Library / ✱ / Icon / (Select desired icon)'
