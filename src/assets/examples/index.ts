@@ -44,6 +44,12 @@ import {
   ButtonFloatingMiniData
 } from './button-floating-mini/button-floating-mini.component';
 import {
+  BadgeButtonComponent,
+ } from './badge-button/badge-button.component';
+import {
+  BadgeTextComponent,
+ } from './badge-text/badge-text.component';
+import {
   RippleOverviewComponent,
  } from './ripple-overview/ripple-overview.component';
 import {
@@ -418,10 +424,6 @@ import {
   ChipCloseData
 } from './chip-close/chip-close.component';
 import {
-  BadgeTabsComponent,
-  BadgeTabsData
-} from './badge-tabs/badge-tabs.component';
-import {
   BadgeIconComponent,
   BadgeIconData
 } from './badge-icon/badge-icon.component';
@@ -667,10 +669,6 @@ import {
   ChipBasicData
 } from './chip-basic/chip-basic.component';
 import {
-  BadgeBasicComponent,
-  BadgeBasicData
-} from './badge-basic/badge-basic.component';
-import {
   ProgressBarBasicComponent,
   ProgressBarBasicData
 } from './progress-bar-basic/progress-bar-basic.component';
@@ -808,6 +806,12 @@ export const ALL_EXAMPLE_ITEMS = {
     component: TabGroupBasicExample},
   'ripple-overview' : {
     component: RippleOverviewComponent,
+    },
+  'badge-button' : {
+    component: BadgeButtonComponent,
+    },
+  'badge-text' : {
+    component: BadgeTextComponent,
     },
   'buttontoggle-secondary-color' : {
     component: ButtontoggleSecondaryColorComponent,
@@ -1053,10 +1057,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ChipCloseComponent,
     data: ChipCloseData
   },
-  'badge-tabs': {
-    component: BadgeTabsComponent,
-    data: BadgeTabsData
-  },
   'badge-icon': {
     component: BadgeIconComponent,
     data: BadgeIconData
@@ -1301,10 +1301,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ChipBasicComponent,
     data: ChipBasicData
   },
-  'badge-basic': {
-    component: BadgeBasicComponent,
-    data: BadgeBasicData
-  },
   'progress-bar-basic': {
     component: ProgressBarBasicComponent,
     data: ProgressBarBasicData
@@ -1357,6 +1353,8 @@ export const ALL_EXAMPLE_ITEMS = {
     TabGroupCustomLabelExample,
     TabGroupBasicExample,
     RippleOverviewComponent,
+    BadgeButtonComponent,
+    BadgeTextComponent,
     ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
@@ -1418,7 +1416,6 @@ export const ALL_EXAMPLE_ITEMS = {
     IconSmallComponent,
     ChipDisableComponent,
     ChipCloseComponent,
-    BadgeTabsComponent,
     BadgeIconComponent,
     ButtonDisableComponent,
     ButtonIconLeftComponent,
@@ -1482,7 +1479,6 @@ export const ALL_EXAMPLE_ITEMS = {
     ToolbarBasicComponent,
     ListBasicComponent,
     ChipBasicComponent,
-    BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent,
@@ -1573,6 +1569,8 @@ export const ALL_EXAMPLE_ITEMS = {
     TabGroupCustomLabelExample,
     TabGroupBasicExample,
     RippleOverviewComponent,
+    BadgeButtonComponent,
+    BadgeTextComponent,
     ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
@@ -1634,7 +1632,6 @@ export const ALL_EXAMPLE_ITEMS = {
     IconSmallComponent,
     ChipDisableComponent,
     ChipCloseComponent,
-    BadgeTabsComponent,
     BadgeIconComponent,
     ButtonDisableComponent,
     ButtonIconLeftComponent,
@@ -1698,7 +1695,6 @@ export const ALL_EXAMPLE_ITEMS = {
     ToolbarBasicComponent,
     ListBasicComponent,
     ChipBasicComponent,
-    BadgeBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent,

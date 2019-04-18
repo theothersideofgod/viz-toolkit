@@ -45,6 +45,8 @@ const DOCS: {[key: string]: DocCategory[]} = {
         {id: 'autocomplete', name: 'AutocompleteSimple', examples: ['autocomplete-simple']},
         {id: 'cardfancy', name: 'CardFancy', examples: ['card-fancy']},
         {id: 'ripple', name: 'RippleOverview', examples: ['ripple-overview']},
+        {id: 'badgebutton', name: 'BadgeButton', examples: ['badge-button']},
+        {id: 'badgetext', name: 'BadgeText', examples: ['badge-text']},
         {id: 'tabsnavbar', name: 'TabsNavBar', examples: ['tabs-nav-bar']},
         {id: 'tabsheaderbottom', name: 'TabsHeaderBottom', examples: ['tabs-header-bottom']},
         {id: 'tabgroupanimations', name: 'TabGroupAnimations', examples: ['tab-group-animations']},
