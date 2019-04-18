@@ -1,4 +1,8 @@
 .mat-paginator {
-  width: 450px;
+  width: 400px;
   margin: 0 auto;
+}
+
+.paginator-example mat-paginator {
+  display: flex;
 }
