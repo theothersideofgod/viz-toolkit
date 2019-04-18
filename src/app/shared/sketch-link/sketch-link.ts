@@ -110,7 +110,10 @@ const sketch_link = {
   ],
   buttontoggle: [
     'Insert / Toolkit Material Library / Components / Button Toggle / 3 Toggles / Icon or Text',
-    'Insert / Toolkit Material Library / Components / Button Toggle / 2 Toggles / Icon or Text'
+    'Insert / Toolkit Material Library / Components / Button Toggle / 2 Toggles or 3 Toggles / Icon or Text'
+  ],
+  sort: [
+    'Copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
   ]
 };
 
