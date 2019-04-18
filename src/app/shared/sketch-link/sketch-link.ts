@@ -104,7 +104,8 @@ const sketch_link = {
   ],
   buttontoggle: [
     'Insert / Toolkit Material Library / Components / Button Toggle / 2 Toggles or 3 Toggles / Icon or Text'
-  ]
+  ],
+  autocomplete: ['copy from Toolkit Material Library.sketch / Toolkit Components / Form Controls: Form Field, Input, Select, Autocomplete / Autocomplete']
 };
 
 @Component({
