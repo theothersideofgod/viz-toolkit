@@ -114,6 +114,9 @@ const sketch_link = {
   ],
   sort: [
     'Copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
+  ],
+  ripple: [
+    'Insert / Toolkit Material Library / ✱ / Ripple'
   ]
 };
 

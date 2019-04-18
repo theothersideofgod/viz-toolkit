@@ -44,6 +44,12 @@ import {
   ButtonFloatingMiniData
 } from './button-floating-mini/button-floating-mini.component';
 import {
+  RippleOverviewComponent,
+ } from './ripple-overview/ripple-overview.component';
+import {
+  TabNavBarBasicExample,
+} from './tab-nav-bar-basic/tab-nav-bar-basic-example';
+import {
   ButtonFloatingComponent,
   ButtonFloatingData
 } from './button-floating/button-floating.component';
@@ -137,9 +143,6 @@ import {
 import {
   TabGroupAlignExample
 } from './tab-group-align/tab-group-align-example';
-import {
-  TabNavBarBasicExample
-} from './tab-nav-bar-basic/tab-nav-bar-basic-example';
 import {
   TabGroupAsyncExample
 } from './tab-group-async/tab-group-async-example';
@@ -803,6 +806,9 @@ export const ALL_EXAMPLE_ITEMS = {
     component: TabGroupCustomLabelExample},
   'tab-group-basic' : {
     component: TabGroupBasicExample},
+  'ripple-overview' : {
+    component: RippleOverviewComponent,
+    },
   'buttontoggle-secondary-color' : {
     component: ButtontoggleSecondaryColorComponent,
     data: ButtontoggleSecondaryColorData
@@ -1350,6 +1356,7 @@ export const ALL_EXAMPLE_ITEMS = {
     TabGroupDynamicHeightExample,
     TabGroupCustomLabelExample,
     TabGroupBasicExample,
+    RippleOverviewComponent,
     ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
@@ -1565,6 +1572,7 @@ export const ALL_EXAMPLE_ITEMS = {
     TabGroupDynamicHeightExample,
     TabGroupCustomLabelExample,
     TabGroupBasicExample,
+    RippleOverviewComponent,
     ButtontoggleSecondaryColorComponent,
     ButtontoggleTwoIconComponent,
     ButtontoggleThreeIconComponent,
