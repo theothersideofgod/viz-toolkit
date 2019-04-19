@@ -39,41 +39,32 @@ import {
   VizFileUploadModule
 } from 'libs';
 
-
-import {
-  StepperErrorsComponent,
- } from './stepper-errors/stepper-errors.component';
-import {
-  StepperStatesComponent,
- } from './stepper-states/stepper-states.component';
-import {
-  StepperEditableComponent,
- } from './stepper-editable/stepper-editable.component';
-import {
-  StepperOptionalComponent,
- } from './stepper-optional/stepper-optional.component';
-import {
-  StepperLabelPositionBottomComponent,
- } from './stepper-label-position-bottom/stepper-label-position-bottom.component';
-import {
-  StepperVerticalComponent,
- } from './stepper-vertical/stepper-vertical.component';
-import {
-  StepperOverviewComponent,
- } from './stepper-overview/stepper-overview.component';
+import { TabGroupAnimationsComponent } from './tab-group-animations/tab-group-animations.component';
+import { TabGroupAlignComponent } from './tab-group-align/tab-group-align.component';
+import { TabNavBarBasicComponent } from './tab-nav-bar-basic/tab-nav-bar-basic.component';
+import { TabGroupAsyncComponent } from './tab-group-async/tab-group-async.component';
+import { TabGroupThemeComponent } from './tab-group-theme/tab-group-theme.component';
+import { TabGroupStretchedComponent } from './tab-group-stretched/tab-group-stretched.component';
+import { TabGroupLazyLoadedComponent } from './tab-group-lazy-loaded/tab-group-lazy-loaded.component';
+import { TabGroupHeaderBelowComponent } from './tab-group-header-below/tab-group-header-below.component';
+import { TabGroupDynamicComponent } from './tab-group-dynamic/tab-group-dynamic.component';
+import { TabGroupDynamicHeightComponent } from './tab-group-dynamic-height/tab-group-dynamic-height.component';
+import { TabGroupCustomLabelComponent } from './tab-group-custom-label/tab-group-custom-label.component';
+import { TabGroupBasicComponent } from './tab-group-basic/tab-group-basic.component';
+import { StepperErrorsComponent } from './stepper-errors/stepper-errors.component';
+import { StepperStatesComponent } from './stepper-states/stepper-states.component';
+import { StepperEditableComponent } from './stepper-editable/stepper-editable.component';
+import { StepperOptionalComponent } from './stepper-optional/stepper-optional.component';
+import { StepperLabelPositionBottomComponent } from './stepper-label-position-bottom/stepper-label-position-bottom.component';
+import { StepperVerticalComponent } from './stepper-vertical/stepper-vertical.component';
+import { StepperOverviewComponent } from './stepper-overview/stepper-overview.component';
 import {
   ButtonFloatingMiniComponent,
   ButtonFloatingMiniData
 } from './button-floating-mini/button-floating-mini.component';
-import {
-  BadgeButtonComponent,
- } from './badge-button/badge-button.component';
-import {
-  BadgeTextComponent,
- } from './badge-text/badge-text.component';
-import {
-  RippleOverviewComponent,
- } from './ripple-overview/ripple-overview.component';
+import { BadgeButtonComponent } from './badge-button/badge-button.component';
+import { BadgeTextComponent } from './badge-text/badge-text.component';
+import { RippleOverviewComponent } from './ripple-overview/ripple-overview.component';
 import {
   ButtonFloatingComponent,
   ButtonFloatingData
@@ -659,128 +650,164 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
-  'button-floating-mini' : {
+  'tab-group-animations': {
+    component: TabGroupAnimationsComponent
+  },
+  'tab-group-align': {
+    component: TabGroupAlignComponent
+  },
+  'tab-nav-bar-basic': {
+    component: TabNavBarBasicComponent
+  },
+  'tab-group-async': {
+    component: TabGroupAsyncComponent
+  },
+  'tab-group-theme': {
+    component: TabGroupThemeComponent
+  },
+  'tab-group-stretched': {
+    component: TabGroupStretchedComponent
+  },
+  'tab-group-lazy-loaded': {
+    component: TabGroupLazyLoadedComponent
+  },
+  'tab-group-header-below': {
+    component: TabGroupHeaderBelowComponent
+  },
+  'tab-group-dynamic': {
+    component: TabGroupDynamicComponent
+  },
+  'tab-group-dynamic-height': {
+    component: TabGroupDynamicHeightComponent
+  },
+  'tab-group-custom-label': {
+    component: TabGroupCustomLabelComponent
+  },
+  'tab-group-basic': {
+    component: TabGroupBasicComponent
+  },
+  'button-floating-mini': {
     component: ButtonFloatingMiniComponent,
     data: ButtonFloatingMiniData
   },
-  'button-floating' : {
+  'button-floating': {
     component: ButtonFloatingComponent,
     data: ButtonFloatingData
   },
-  'button-icon' : {
+  'button-icon': {
     component: ButtonIconComponent,
     data: ButtonIconData
   },
-  'button-flat' : {
+  'button-flat': {
     component: ButtonFlatComponent,
     data: ButtonFlatData
   },
-  'button-raised' : {
+  'button-raised': {
     component: ButtonRaisedComponent,
     data: ButtonRaisedData
   },
-  'chip-stacked' : {
+  'chip-stacked': {
     component: ChipStackedComponent,
     data: ChipStackedData
   },
-  'chip-with-input' : {
+  'chip-with-input': {
     component: ChipWithInputComponent,
     data: ChipWithInputData
   },
-  'chip-autocomplete' : {
+  'chip-autocomplete': {
     component: ChipAutocompleteComponent,
     data: ChipAutocompleteData
   },
-  'checkbox-configurable' : {
+  'checkbox-configurable': {
     component: CheckboxConfigurableComponent,
     data: CheckboxConfigurableData
   },
-  'slide-toggle-configurable' : {
+  'slide-toggle-configurable': {
     component: SlideToggleConfigurableComponent,
     data: SlideToggleConfigurableData
   },
-  'radio-width-ngmodel' : {
+  'radio-width-ngmodel': {
     component: RadioWidthNgmodelComponent,
     data: RadioWidthNgmodelData
   },
-  'slider-configurable' : {
+  'slider-configurable': {
     component: SliderConfigurableComponent,
     data: SliderConfigurableData
   },
-  'slider-formatting' : {
+  'slider-formatting': {
     component: SliderFormattingComponent,
     data: SliderFormattingData
   },
-  'paginator-configurable' : {
+  'paginator-configurable': {
     component: PaginatorConfigurableComponent,
     data: PaginatorConfigurableData
   },
-  'sort-table' : {
+  'sort-table': {
     component: SortTableComponent,
     data: SortTableData
   },
-  'sort-overview' : {
+  'sort-overview': {
     component: SortOverviewComponent,
     data: SortOverviewData
   },
-  'autocomplete-overview' : {
+  'autocomplete-overview': {
     component: AutocompleteOverviewComponent,
     data: AutocompleteOverviewData
   },
-  'autocomplete-optgroup' : {
+  'autocomplete-optgroup': {
     component: AutocompleteOptgroupComponent,
     data: AutocompleteOptgroupData
   },
-  'autocomplete-highlight' : {
+  'autocomplete-highlight': {
     component: AutocompleteHighlightComponent,
     data: AutocompleteHighlightData
   },
-  'autocomplete-display' : {
+  'autocomplete-display': {
     component: AutocompleteDisplayComponent,
     data: AutocompleteDisplayData
   },
-  'autocomplete-filter' : {
+  'autocomplete-filter': {
     component: AutocompleteFilterComponent,
     data: AutocompleteFilterData
   },
-  'autocomplete-simple' : {
+  'autocomplete-simple': {
     component: AutocompleteSimpleComponent,
     data: AutocompleteSimpleData
   },
-  'card-fancy' : {
+  'card-fancy': {
     component: CardFancyComponent,
     data: CardFancyData
   },
-  'ripple-overview' : {
-    component: RippleOverviewComponent,
-    },
-  'badge-button' : {
-    component: BadgeButtonComponent,
-    },
-  'badge-text' : {
-    component: BadgeTextComponent,
-    },
-  'stepper-errors' : {
-    component: StepperErrorsComponent,
-    },
-  'stepper-states' : {
-    component: StepperStatesComponent,
-    },
-  'stepper-editable' : {
-    component: StepperEditableComponent,
-    },
-  'stepper-optional' : {
-    component: StepperOptionalComponent,
-    },
-  'stepper-label-position-bottom' : {
-    component: StepperLabelPositionBottomComponent,
-    },
-  'stepper-vertical' : {
-    component: StepperVerticalComponent,
-    },
-  'stepper-overview' : {
-    component: StepperOverviewComponent,
-    },
+  'ripple-overview': {
+    component: RippleOverviewComponent
+  },
+  'badge-button': {
+    component: BadgeButtonComponent
+  },
+  'badge-text': {
+    component: BadgeTextComponent
+  },
+  'stepper-errors': {
+    component: StepperErrorsComponent
+  },
+  'stepper-states': {
+    component: StepperStatesComponent
+  },
+  'stepper-editable': {
+    component: StepperEditableComponent
+  },
+  'stepper-optional': {
+    component: StepperOptionalComponent
+  },
+  'stepper-label-position-bottom': {
+    component: StepperLabelPositionBottomComponent
+  },
+  'stepper-vertical': {
+    component: StepperVerticalComponent
+  },
+  'stepper-overview': {
+    component: StepperOverviewComponent
+  },
   'buttontoggle-secondary-color': {
     component: ButtontoggleSecondaryColorComponent,
     data: ButtontoggleSecondaryColorData
@@ -1273,6 +1300,18 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    TabGroupAnimationsComponent,
+    TabGroupAlignComponent,
+    TabNavBarBasicComponent,
+    TabGroupAsyncComponent,
+    TabGroupThemeComponent,
+    TabGroupStretchedComponent,
+    TabGroupLazyLoadedComponent,
+    TabGroupHeaderBelowComponent,
+    TabGroupDynamicComponent,
+    TabGroupDynamicHeightComponent,
+    TabGroupCustomLabelComponent,
+    TabGroupBasicComponent,
     ButtonFloatingMiniComponent,
     ButtonFloatingComponent,
     ButtonIconComponent,
@@ -1481,6 +1520,18 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TabGroupAnimationsComponent,
+    TabGroupAlignComponent,
+    TabNavBarBasicComponent,
+    TabGroupAsyncComponent,
+    TabGroupThemeComponent,
+    TabGroupStretchedComponent,
+    TabGroupLazyLoadedComponent,
+    TabGroupHeaderBelowComponent,
+    TabGroupDynamicComponent,
+    TabGroupDynamicHeightComponent,
+    TabGroupCustomLabelComponent,
+    TabGroupBasicComponent,
     ButtonFloatingMiniComponent,
     ButtonFloatingComponent,
     ButtonIconComponent,
