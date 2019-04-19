@@ -1,6 +1,5 @@
 .example-stretched-tabs {
-  max-width: 800px;
-  margin-left: 40px;
-  margin-right: 40px;
+  max-width: 720px;
+  margin:0 auto;
   text-align: left;
 }
