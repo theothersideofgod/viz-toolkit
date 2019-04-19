@@ -486,6 +486,13 @@ input.mat-input-element {
 
 
 //tabs
+.mat-tab-label {
+  color: $viz-light-gray !important;
+  &.mat-tab-label-active {
+    color: $viz-gray !important;
+  }
+}
+
 
 //tooltip
 *[mattooltip] {
