@@ -482,6 +482,9 @@ input.mat-input-element {
 }
 
 //badge
+.mat-badge-content {
+  font-weight: 500 !important;
+}
 
 //tabs
 mat-tab-group:not([ng-reflect-color]) {
