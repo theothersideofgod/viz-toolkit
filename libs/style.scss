@@ -271,16 +271,16 @@ td.mat-cell,
         font-size: 14px;
       }
       .mat-ripple-element {
-        background-color: rgba(1,173,171, 0.16);
+        background-color: rgba(1, 173, 171, 0.16);
       }
     }
   }
   .mat-list-option {
     &:hover {
-      background-color: rgba(1,173,171, 0.04);
+      background-color: rgba(1, 173, 171, 0.04);
     }
     &.mat-list-item-focus {
-      background-color: rgba(1,173,171, 0.12);
+      background-color: rgba(1, 173, 171, 0.12);
     }
   }
 }
@@ -333,7 +333,6 @@ td.mat-cell,
   width: 463px !important;
 }
 
-
 //radio button
 .mat-radio-label-content {
   font-size: 14px;
@@ -360,7 +359,8 @@ td.mat-cell,
     margin-left: 8px;
   }
 }
-.mat-raised-button, .mat-flat-button {
+.mat-raised-button,
+.mat-flat-button {
   &.mat-primary[disabled] {
     color: #ffffff !important;
     background-color: $viz-purple !important;
@@ -382,10 +382,8 @@ td.mat-cell,
     font-weight: 300;
   }
   .mat-icon-button {
-    
   }
 }
-
 
 //input font-size
 input.mat-input-element {
@@ -398,7 +396,7 @@ input.mat-input-element {
   top: 1px;
   .mat-option {
     .mat-icon {
-      color: $viz-dark-gray
+      color: $viz-dark-gray;
     }
     color: $viz-gray;
     font-weight: 300;
@@ -426,7 +424,7 @@ input.mat-input-element {
     }
     .mat-option {
       .mat-icon {
-        color: $viz-dark-gray
+        color: $viz-dark-gray;
       }
       color: $viz-gray;
       font-weight: 300;
@@ -460,8 +458,9 @@ input.mat-input-element {
 }
 
 //card style
-.mat-card:not([class*=mat-elevation-z]) {
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 16px 0 rgba(0,0,0,.12) !important
+.mat-card:not([class*='mat-elevation-z']) {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 16px 0 rgba(0, 0, 0, 0.12) !important;
 }
 .mat-card {
   background: #ffffff;
@@ -484,15 +483,23 @@ input.mat-input-element {
 
 //badge
 
-
 //tabs
-.mat-tab-label {
-  color: $viz-light-gray !important;
-  &.mat-tab-label-active {
-    color: $viz-gray !important;
+mat-tab-group:not([ng-reflect-color]) {
+  .mat-tab-label {
+    color: $viz-light-gray !important;
+    &.mat-tab-label-active {
+      color: $viz-gray !important;
+    }
   }
 }
-
+mat-tab-group:not([ng-reflect-background-color]) {
+  .mat-tab-label {
+    color: $viz-light-gray !important;
+    &.mat-tab-label-active {
+      color: $viz-gray !important;
+    }
+  }
+}
 
 //tooltip
 *[mattooltip] {
@@ -542,13 +549,13 @@ mat-chip {
       opacity: 0.4;
     }
   }
-  &:not([color="primary"]) {
+  &:not([color='primary']) {
     .mat-chip-remove {
       color: #ffffff !important;
       opacity: 1 !important;
     }
   }
-  &[color="primary"] {
+  &[color='primary'] {
     .mat-chip-remove {
       opacity: 1 !important;
     }
@@ -556,8 +563,6 @@ mat-chip {
 }
 
 //paginator
-
-
 
 //table
 .viz-table {
@@ -663,7 +668,7 @@ mat-chip {
       color: $viz-dark-gray !important;
     }
   }
-} 
+}
 
 .mat-sort-header-container {
   .mat-sort-header-button {
@@ -680,8 +685,9 @@ mat-datepicker-content.mat-datepicker-content {
   height: auto !important;
   width: auto;
 }
-div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
-  .mat-calendar-table{
+div[ng-reflect-ng-switch='multi-year'],
+div[ng-reflect-ng-switch='year'] {
+  .mat-calendar-table {
     margin-top: 37px;
   }
 }
@@ -776,14 +782,12 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
   }
 }
 
-
 //slide toggle
 .mat-slide-toggle {
   .mat-slide-toggle-bar {
     background-color: $viz-light-gray;
   }
 }
-
 
 //select
 @keyframes customSelectOpen {
@@ -796,7 +800,7 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
 }
 @keyframes customSelectClose {
   from {
-    min-width: calc(100%)
+    min-width: calc(100%);
   }
   to {
     min-width: calc(100%);
@@ -805,7 +809,7 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
 .mat-select-panel.viz-select {
   animation: customSelectOpen 120ms;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1); 
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   position: absolute;
   top: 25px;
   left: 16px;
@@ -824,7 +828,7 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
       }
       .mat-option {
         .mat-icon {
-          color: $viz-dark-gray
+          color: $viz-dark-gray;
         }
         color: $viz-gray;
         font-weight: 300;
@@ -848,10 +852,8 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
   }
 
   &.mat-focused {
-
   }
   &.ng-animating:not(.mat-select-panel-done-animating) {
-    
   }
   &.mat-select-panel-done-animating.ng-animating {
     animation: customSelectClose 100ms;
@@ -881,13 +883,13 @@ div[ng-reflect-ng-switch="multi-year"],div[ng-reflect-ng-switch="year"] {
 }
 mat-select {
   .mat-select-arrow {
-    color: $viz-dark-gray
+    color: $viz-dark-gray;
   }
 }
 mat-select[aria-activedescendant] {
   .mat-select-arrow {
     transform: rotate(180deg);
-    color: #000000 !important
+    color: #000000 !important;
   }
 }
 
@@ -937,7 +939,7 @@ mat-select[aria-activedescendant] {
     }
     &.mat-button-toggle-checked {
       color: #ffffff;
-      background-color: $viz-purple; 
+      background-color: $viz-purple;
       .mat-button-toggle-focus-overlay {
         border-bottom: solid 48px;
       }
@@ -945,7 +947,7 @@ mat-select[aria-activedescendant] {
     &.mat-button-toggle-disabled {
       color: rgba($viz-purple, 0.5);
     }
-    &+ .mat-button-toggle {
+    & + .mat-button-toggle {
       border-left: 1px solid $viz-purple !important;
     }
     .mat-button-toggle-appearance-standard .mat-button-toggle-focus-overlay {
@@ -956,7 +958,7 @@ mat-select[aria-activedescendant] {
     .mat-button-toggle {
       .mat-button-toggle-button {
         .mat-button-toggle-label-content {
-          padding: 0 16px
+          padding: 0 16px;
         }
       }
     }
@@ -967,23 +969,22 @@ mat-select[aria-activedescendant] {
       color: $viz-gray;
       &.mat-button-toggle-checked {
         color: #000000;
-        background-color: #E0E0E0;  
+        background-color: #e0e0e0;
       }
-      &+ .mat-button-toggle {
+      & + .mat-button-toggle {
         border-left: 1px solid $viz-light-gray !important;
       }
     }
   }
 }
 
-
 //checkbox
 .mat-checkbox-disabled {
   .mat-checkbox-background {
-    background-color: rgba(1,173,171,0.4) !important
+    background-color: rgba(1, 173, 171, 0.4) !important;
   }
   .mat-checkbox-frame {
-    border-color: rgba(0,0,0,0) !important
+    border-color: rgba(0, 0, 0, 0) !important;
   }
 }
 
@@ -997,56 +998,56 @@ mat-select[aria-activedescendant] {
 //hide scrollbar
 /*webkit内核*/
 .hide-scroll::-webkit-scrollbar {
-  width:0px;
-  height:0px;
+  width: 0px;
+  height: 0px;
 }
-.hide-scroll::-webkit-scrollbar-button    {
-  background-color:rgba(0,0,0,0);
+.hide-scroll::-webkit-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0);
 }
-.hide-scroll::-webkit-scrollbar-track     {
-  background-color:rgba(0,0,0,0);
+.hide-scroll::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
 }
 .hide-scroll::-webkit-scrollbar-track-piece {
-  background-color:rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
-.hide-scroll::-webkit-scrollbar-thumb{
-  background-color:rgba(0,0,0,0);
+.hide-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
 }
 .hide-scroll::-webkit-scrollbar-corner {
-  background-color:rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
-.hide-scroll::-webkit-scrollbar-resizer  {
-  background-color:rgba(0,0,0,0);
+.hide-scroll::-webkit-scrollbar-resizer {
+  background-color: rgba(0, 0, 0, 0);
 }
 .hide-scroll::-webkit-scrollbar {
-  width:10px;
-  height:10px;
+  width: 10px;
+  height: 10px;
 }
 /*o内核*/
-.hide-scroll .-o-scrollbar{
-  -moz-appearance: none !important;   
-  background: rgba(0,255,0,0) !important;  
+.hide-scroll .-o-scrollbar {
+  -moz-appearance: none !important;
+  background: rgba(0, 255, 0, 0) !important;
 }
-.hide-scroll::-o-scrollbar-button    {
-  background-color:rgba(0,0,0,0);
+.hide-scroll::-o-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0);
 }
-.hide-scroll::-o-scrollbar-track     {
-  background-color:rgba(0,0,0,0);
+.hide-scroll::-o-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
 }
 .hide-scroll::-o-scrollbar-track-piece {
-  background-color:rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
-.hide-scroll::-o-scrollbar-thumb{
-  background-color:rgba(0,0,0,0);
+.hide-scroll::-o-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
 }
 .hide-scroll::-o-scrollbar-corner {
-  background-color:rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
-.hide-scroll::-o-scrollbar-resizer  {
-  background-color:rgba(0,0,0,0);
+.hide-scroll::-o-scrollbar-resizer {
+  background-color: rgba(0, 0, 0, 0);
 }
 /*IE10,IE11,IE12*/
-.hide-scroll{
+.hide-scroll {
   -ms-scroll-chaining: chained;
   -ms-overflow-style: none;
   -ms-content-zooming: zoom;
@@ -1058,7 +1059,6 @@ mat-select[aria-activedescendant] {
   -ms-overflow-style: none;
   overflow: auto;
 }
-
 
 //Typography: Styles
 .viz-h1 {

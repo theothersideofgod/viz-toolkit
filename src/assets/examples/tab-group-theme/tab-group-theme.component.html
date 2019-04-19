@@ -1,24 +1,31 @@
-<div>
-  <mat-button-toggle-group #colorToggle="matButtonToggleGroup"
-                           value="primary"
-                           aria-label="Change color">
-    <mat-button-toggle value="primary"> Primary </mat-button-toggle>
-    <mat-button-toggle value="accent"> Accent </mat-button-toggle>
-  </mat-button-toggle-group>
-  <span class="example-button-toggle-label"> Color </span>
+<div class="example-controller">
+  <span class="example-button-toggle-label"> Color: </span>
+  <mat-radio-group
+    aria-label="Select an option"
+    #colorToggle="matRadioGroup"
+    value="primary"
+  >
+    <mat-radio-button value="primary">Primary</mat-radio-button>
+    <mat-radio-button value="accent">Accent</mat-radio-button>
+  </mat-radio-group>
 </div>
 
-<div>
-  <mat-button-toggle-group #backgroundColorToggle="matButtonToggleGroup"
-                           value="primary"
-                           aria-label="Change color">
-    <mat-button-toggle value="primary"> Primary </mat-button-toggle>
-    <mat-button-toggle value="accent"> Accent </mat-button-toggle>
-  </mat-button-toggle-group>
-  <span class="example-button-toggle-label"> Background Color </span>
+<div class="example-controller">
+  <span class="example-button-toggle-label"> Background color: </span>
+  <mat-radio-group
+    aria-label="Select an option"
+    #backgroundColorToggle="matRadioGroup"
+    value="primary"
+  >
+    <mat-radio-button value="primary">Primary</mat-radio-button>
+    <mat-radio-button value="accent">Accent</mat-radio-button>
+  </mat-radio-group>
 </div>
 
-<mat-tab-group [color]="colorToggle.value" [backgroundColor]="backgroundColorToggle.value">
+<mat-tab-group
+  [color]="colorToggle.value"
+  [backgroundColor]="backgroundColorToggle.value"
+>
   <mat-tab label="First"> Content 1 </mat-tab>
   <mat-tab label="Second"> Content 2 </mat-tab>
   <mat-tab label="Third"> Content 3 </mat-tab>
