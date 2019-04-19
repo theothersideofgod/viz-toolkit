@@ -1,5 +1,7 @@
 .example-action-button {
   margin-bottom: 8px;
+  margin-left: 40px;
+  display: flex;
 }
 
 .mat-tab-nav-bar {

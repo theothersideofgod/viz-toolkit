@@ -500,6 +500,16 @@ mat-tab-group:not([ng-reflect-background-color]) {
     }
   }
 }
+.mat-tab-nav-bar:not(.mat-background-primary) {
+  .mat-tab-links {
+    .mat-tab-link {
+      color: $viz-light-gray !important;
+      &.mat-tab-label-active {
+        color: $viz-gray !important;
+      }
+    }
+  }
+}
 
 //tooltip
 *[mattooltip] {
