@@ -1,8 +1,9 @@
 .example-input-label,
-.example-add-tab-button,
-.example-delete-tab-button {
+.example-add-tab-button{
   margin-right: 24px;
+  margin-bottom: 24px;
 }
+
 .mat-tab-group {
   margin-left: 40px;
   margin-right: 40px;
@@ -12,4 +13,8 @@
 .example-controller {
   text-align: left;
   padding-left: 40px;
+}
+
+.example-delete-tab-button {
+  margin: 24px;
 }
