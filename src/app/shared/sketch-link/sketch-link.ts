@@ -162,10 +162,10 @@ export class SketchLink implements OnInit {
         splashTester,
         `<span class="sketch-link-splash">/</span>`
       );
-      newl = newl.replace(
-        orTester,
-        `<span class="sketch-link-splash">or</span>`
-      );
+      // newl = newl.replace(
+      //   orTester,
+      //   `<span class="sketch-link-splash">or</span>`
+      // );
       this.sketch_links = newl;
     }
   }
