@@ -75,9 +75,6 @@ import {
   RippleOverviewComponent,
  } from './ripple-overview/ripple-overview.component';
 import {
-  TabNavBarBasicExample,
-} from './tab-nav-bar-basic/tab-nav-bar-basic-example';
-import {
   ButtonFloatingComponent,
   ButtonFloatingData
 } from './button-floating/button-floating.component';
@@ -165,39 +162,6 @@ import {
   CardFancyComponent,
   CardFancyData
 } from './card-fancy/card-fancy.component';
-import {
-  TabGroupAnimationsExample
-} from './tab-group-animations/tab-group-animations-example';
-import {
-  TabGroupAlignExample
-} from './tab-group-align/tab-group-align-example';
-import {
-  TabGroupAsyncExample
-} from './tab-group-async/tab-group-async-example';
-import {
-  TabGroupThemeExample
-} from './tab-group-theme/tab-group-theme-example';
-import {
-  TabGroupStretchedExample
-} from './tab-group-stretched/tab-group-stretched-example';
-import {
-  TabGroupLazyLoadedExample
-} from './tab-group-lazy-loaded/tab-group-lazy-loaded-example';
-import {
-  TabGroupHeaderBelowExample
-} from './tab-group-header-below/tab-group-header-below-example';
-import {
-  TabGroupDynamicExample
-} from './tab-group-dynamic/tab-group-dynamic-example';
-import {
-  TabGroupDynamicHeightExample
-} from './tab-group-dynamic-height/tab-group-dynamic-height-example';
-import {
-  TabGroupCustomLabelExample
-} from './tab-group-custom-label/tab-group-custom-label-example';
-import {
-  TabGroupBasicExample
-} from './tab-group-basic/tab-group-basic-example';
 import {
   ButtontoggleSecondaryColorComponent,
   ButtontoggleSecondaryColorData
@@ -787,30 +751,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: CardFancyComponent,
     data: CardFancyData
   },
-  'tab-group-animations' : {
-    component: TabGroupAnimationsExample},
-  'tab-group-align' : {
-    component: TabGroupAlignExample},
-  'tab-nav-bar-basic' : {
-    component: TabNavBarBasicExample},
-  'tab-group-async' : {
-    component: TabGroupAsyncExample},
-  'tab-group-theme' : {
-    component: TabGroupThemeExample},
-  'tab-group-stretched' : {
-    component: TabGroupStretchedExample},
-  'tab-group-lazy-loaded' : {
-    component: TabGroupLazyLoadedExample},
-  'tab-group-header-below' : {
-    component: TabGroupHeaderBelowExample},
-  'tab-group-dynamic' : {
-    component: TabGroupDynamicExample},
-  'tab-group-dynamic-height' : {
-    component: TabGroupDynamicHeightExample},
-  'tab-group-custom-label' : {
-    component: TabGroupCustomLabelExample},
-  'tab-group-basic' : {
-    component: TabGroupBasicExample},
   'ripple-overview' : {
     component: RippleOverviewComponent,
     },
@@ -1356,18 +1296,6 @@ export const ALL_EXAMPLE_ITEMS = {
     AutocompleteFilterComponent,
     AutocompleteSimpleComponent,
     CardFancyComponent,
-    TabGroupAnimationsExample,
-    TabGroupAlignExample,
-    TabNavBarBasicExample,
-    TabGroupAsyncExample,
-    TabGroupThemeExample,
-    TabGroupStretchedExample,
-    TabGroupLazyLoadedExample,
-    TabGroupHeaderBelowExample,
-    TabGroupDynamicExample,
-    TabGroupDynamicHeightExample,
-    TabGroupCustomLabelExample,
-    TabGroupBasicExample,
     RippleOverviewComponent,
     BadgeButtonComponent,
     BadgeTextComponent,
@@ -1576,18 +1504,6 @@ export const ALL_EXAMPLE_ITEMS = {
     AutocompleteFilterComponent,
     AutocompleteSimpleComponent,
     CardFancyComponent,
-    TabGroupAnimationsExample,
-    TabGroupAlignExample,
-    TabNavBarBasicExample,
-    TabGroupAsyncExample,
-    TabGroupThemeExample,
-    TabGroupStretchedExample,
-    TabGroupLazyLoadedExample,
-    TabGroupHeaderBelowExample,
-    TabGroupDynamicExample,
-    TabGroupDynamicHeightExample,
-    TabGroupCustomLabelExample,
-    TabGroupBasicExample,
     RippleOverviewComponent,
     BadgeButtonComponent,
     BadgeTextComponent,
