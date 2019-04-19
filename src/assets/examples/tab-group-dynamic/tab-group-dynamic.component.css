@@ -1,7 +1,7 @@
 .example-input-label,
 .example-add-tab-button,
 .example-delete-tab-button {
-  margin: 8px;
+  margin-right: 24px;
 }
 .mat-tab-group {
   margin-left: 40px;
