@@ -344,6 +344,16 @@ td.mat-cell,
     color: $viz-gray;
   }
 }
+.mat-horizontal-content-container {
+  .mat-button {
+    color: $viz-purple;
+  }
+}
+.mat-vertical-content {
+  .mat-button {
+    color: $viz-purple;
+  }
+}
 
 //button
 .viz-button-left-icon {
