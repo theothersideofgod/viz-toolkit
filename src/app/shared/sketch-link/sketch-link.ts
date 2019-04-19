@@ -22,7 +22,7 @@ const sketch_link = {
   slidetoggle: [
     'Insert / Toolkit Material Library / Components / Slide Toggle'
   ],
-  menu: ['Insert / Toolkit Material Library / Components / Dropdown Selection'],
+  menu: ['Insert / Toolkit Material Library / Components / Menu'],
   sidenav: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Navigation: Sidenav'
   ],
