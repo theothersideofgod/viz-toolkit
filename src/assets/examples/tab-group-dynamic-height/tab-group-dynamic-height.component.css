@@ -16,3 +16,8 @@
   height: 300px;
   width: 300px;
 }
+
+.mat-tab-group {
+  margin-left: 40px;
+  margin-right: 40px;
+}

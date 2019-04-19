@@ -2,3 +2,8 @@
   display: inline-block;
   margin: 16px;
 }
+
+.mat-tab-group {
+  margin-left: 40px;
+  margin-right: 40px;
+}

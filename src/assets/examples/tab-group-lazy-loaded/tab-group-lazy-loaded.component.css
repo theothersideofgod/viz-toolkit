@@ -1,1 +1,4 @@
-/** No CSS for this example */
+.mat-tab-group {
+  margin-left: 40px;
+  margin-right: 40px;
+}
