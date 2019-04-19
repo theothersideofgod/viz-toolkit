@@ -25,3 +25,10 @@
 .example-ripple-form-field {
   margin: 0 12px 0 0;
 }
+
+.example-controller {
+  text-align: left;
+  width: 400px;
+  padding-left: 40px;
+  white-space: normal;
+}
