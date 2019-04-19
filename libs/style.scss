@@ -338,6 +338,13 @@ td.mat-cell,
   font-size: 14px;
 }
 
+//stepper
+.mat-step-header {
+  .mat-step-label.mat-step-label-active:not(.mat-step-label-selected) {
+    color: $viz-gray;
+  }
+}
+
 //button
 .viz-button-left-icon {
   display: inline-flex;
