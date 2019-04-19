@@ -1,1 +1,5 @@
-/** No CSS for this example */
+.example-stepper {
+  width: 240px;
+  text-align: left;
+  margin: 0 auto;
+}
