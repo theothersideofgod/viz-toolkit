@@ -231,16 +231,16 @@ export class ComponentsComponent implements OnInit {
           img: 'progress bar'
         },
         {
+          title: 'ripple',
+          desc: 'Connect user input to screen reactions',
+          route: 'ripple',
+          img: 'ripple'
+        },
+        {
           title: 'feedback indicator',
           desc: 'Messaging for important changes or persistent conditions',
           route: 'feedbackindicator',
           img: 'feedback indicator'
-        },
-        {
-          title: 'ripple',
-          desc: '',
-          route: 'ripple',
-          img: 'ripple'
         }
       ]
     },

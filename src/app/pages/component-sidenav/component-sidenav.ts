@@ -165,12 +165,12 @@ const initNavList = [
         value: 'progressbar'
       },
       {
-        name: 'Feedback Indicator',
-        value: 'feedbackindicator'
-      },
-      {
         name: 'Ripple',
         value: 'ripple'
+      },
+      {
+        name: 'Feedback Indicator',
+        value: 'feedbackindicator'
       }
     ]
   },
