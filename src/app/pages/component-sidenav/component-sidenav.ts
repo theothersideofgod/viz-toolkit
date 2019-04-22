@@ -165,7 +165,7 @@ const initNavList = [
         value: 'progressbar'
       },
       {
-        name: 'Ripple',
+        name: 'Ripples',
         value: 'ripple'
       },
       {

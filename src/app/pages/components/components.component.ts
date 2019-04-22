@@ -207,7 +207,7 @@ export class ComponentsComponent implements OnInit {
           img: 'badge'
         },
         {
-          title: 'chip',
+          title: 'chips',
           desc: 'A list of values as an individual component',
           route: 'chip',
           img: 'chip'
@@ -231,7 +231,7 @@ export class ComponentsComponent implements OnInit {
           img: 'progress bar'
         },
         {
-          title: 'ripple',
+          title: 'ripples',
           desc: 'Connect user input to screen reactions',
           route: 'ripple',
           img: 'ripple'
