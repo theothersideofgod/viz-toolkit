@@ -1,5 +1,5 @@
 <div class="example-stepper">
-  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  <button class="example-stepper-control" mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
     {{ !isLinear ? 'Enable linear mode' : 'Disable linear mode' }}
   </button>
   <mat-vertical-stepper [linear]="isLinear" #stepper>
