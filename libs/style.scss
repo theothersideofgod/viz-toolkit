@@ -504,7 +504,7 @@ input.mat-input-element {
 }
 
 //tabs
-mat-tab-group:not([ng-reflect-color]) {
+mat-tab-group:not([class*='mat-background-']) {
   .mat-tab-label {
     color: $viz-light-gray !important;
     &.mat-tab-label-active {
@@ -512,7 +512,7 @@ mat-tab-group:not([ng-reflect-color]) {
     }
   }
 }
-mat-tab-group:not([ng-reflect-background-color]) {
+mat-tab-group:not([class*='mat-background-']) {
   .mat-tab-label {
     color: $viz-light-gray !important;
     &.mat-tab-label-active {
@@ -520,7 +520,7 @@ mat-tab-group:not([ng-reflect-background-color]) {
     }
   }
 }
-.mat-tab-nav-bar:not(.mat-background-primary) {
+.mat-tab-nav-bar:not([class*='mat-background-']) {
   .mat-tab-links {
     .mat-tab-link {
       color: $viz-light-gray !important;
