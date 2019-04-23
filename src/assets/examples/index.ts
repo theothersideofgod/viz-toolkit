@@ -1530,6 +1530,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ExampleHeader,
     DatepickerDateClassComponent,
     DatepickerCustomHeaderComponent,
     DatepickerColorComponent,
