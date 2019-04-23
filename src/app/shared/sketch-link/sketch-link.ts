@@ -140,7 +140,7 @@ export class SketchLink implements OnInit {
   ngOnInit() {
     const componentName = this.router.url.split('/')[2];
     const splashTester = new RegExp('/', 'g');
-    const orTester = new RegExp('or', 'g');
+    const orTester = new RegExp(' or ', 'g');
     // this.sketch_links = sketch_link[componentName] && sketch_link[componentName][this.example].map(l => {
     //   let newl = l;
     //   newl = newl.replace(
@@ -163,10 +163,10 @@ export class SketchLink implements OnInit {
         splashTester,
         `<span class="sketch-link-splash">/</span>`
       );
-      // newl = newl.replace(
-      //   orTester,
-      //   `<span class="sketch-link-splash">or</span>`
-      // );
+      newl = newl.replace(
+        orTester,
+        `<span class="sketch-link-splash"> or </span>`
+      );
       this.sketch_links = newl;
     }
   }
