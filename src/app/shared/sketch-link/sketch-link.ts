@@ -61,7 +61,7 @@ const sketch_link = {
   badge: [
     'Insert / Toolkit Material Library / Components / Badge'
   ],
-  chip: [
+  chips: [
     'Insert / Toolkit Material Library / Components / Chip / Choice',
     'Insert / Toolkit Material Library / Components / Chip / Input'
   ],
@@ -117,7 +117,7 @@ const sketch_link = {
   sort: [
     'Copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
   ],
-  ripple: [
+  ripples: [
     'Insert / Toolkit Material Library / ✱ / Ripple'
   ],
   autocomplete: ['copy from Toolkit Material Library.sketch / Toolkit Components / Form Controls: Form Field, Input, Select, Autocomplete / Autocomplete']
