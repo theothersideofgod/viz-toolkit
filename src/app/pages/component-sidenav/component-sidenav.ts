@@ -150,7 +150,7 @@ const initNavList = [
       },
       {
         name: 'Chips',
-        value: 'chip'
+        value: 'chips'
       },
       {
         name: 'Icon',
@@ -166,7 +166,7 @@ const initNavList = [
       },
       {
         name: 'Ripples',
-        value: 'ripple'
+        value: 'ripples'
       },
       {
         name: 'Feedback Indicator',

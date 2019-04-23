@@ -209,8 +209,8 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'chips',
           desc: 'A list of values as an individual component',
-          route: 'chip',
-          img: 'chip'
+          route: 'chips',
+          img: 'chips'
         },
         {
           title: 'icon',
@@ -233,8 +233,8 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'ripples',
           desc: 'Connect user input to screen reactions',
-          route: 'ripple',
-          img: 'ripple'
+          route: 'ripples',
+          img: 'ripples'
         },
         {
           title: 'feedback indicator',
