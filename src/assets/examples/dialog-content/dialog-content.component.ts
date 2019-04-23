@@ -1,38 +1,28 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import {Component} from '@angular/core';
+import {MatDialog} from '@angular/material';
 
-@Component({
-  selector: 'dialog-content-popup',
-  templateUrl: './dialog-content-popup.component.html',
-  styleUrls: ['./dialog-content-popup.component.scss']
-})
-export class DialogContentPopupComponent {
-  constructor(public dialogRef: MatDialogRef<DialogContentPopupComponent>) {}
-
-  closeDialog(): void {
-    this.dialogRef.close();
-  }
-}
-
+/**
+ * @title Dialog with header, scrollable content and actions
+ */
 @Component({
   selector: 'dialog-content',
   templateUrl: 'dialog-content.component.html',
-  styleUrls: ['dialog-content.component.css']
+  styleUrls: ['dialog-content.component.css'],
 })
-export class DialogContentComponent implements OnInit {
+export class DialogContentComponent {
   constructor(public dialog: MatDialog) {}
+
   openDialog() {
-    const dialogRef = this.dialog.open(DialogContentPopupComponent, {
-      width: '400px'
-    });
+    const dialogRef = this.dialog.open(DialogContentExampleDialog);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      console.log(`Dialog result: ${result}`);
     });
   }
-  ngOnInit() {}
 }
 
-export const DialogContentData = {
-  name: 'DialogContent'
-};
+@Component({
+  selector: 'dialog-content-example-dialog',
+  templateUrl: 'dialog-content-example-dialog.html',
+})
+export class DialogContentExampleDialog {}

@@ -199,10 +199,10 @@ $viz-typography: mat-typography-config(
 //   background-color: #01adab;
 // }
 .mat-simple-snackbar-action {
-  color: #ff4e00;
+  color: $viz-blue;
 }
 .mat-focused .mat-form-field-required-marker {
-  color: #ff3333;
+  color: $chart-teal;
 }
 .mat-input-element,
 .mat-select-value {
@@ -288,50 +288,7 @@ td.mat-cell,
   border-top-color: rgba(215, 221, 229, 0.5) !important;
 }
 //snackbar style
-.vizient-snackbar.mat-snack-bar-container {
-  padding-left: 16px;
-  padding-right: 8px;
-}
-@media screen and (max-width: 375px) {
-  .vizient-snackbar .mat-simple-snackbar {
-    flex-direction: column;
-  }
-  .vizient-snackbar .mat-simple-snackbar-action {
-    align-self: flex-end;
-    margin-top: 16px;
-  }
-}
-@media (min-width: 375px) and (max-width: 768px) {
-  .mat-snack-bar-handset {
-    width: auto !important;
-  }
-}
-.cdk-overlay-pane {
-  .mat-snack-bar-container {
-    border-radius: 0px;
-  }
-}
 
-.viz-snackbar-mobile {
-  width: 343px !important;
-  .mat-simple-snackbar {
-    span {
-      width: 255px;
-    }
-    flex-direction: column;
-    .mat-simple-snackbar-action {
-      margin-left: 249px;
-      .mat-button {
-        min-width: auto;
-        width: fit-content;
-        padding: 0 8px;
-      }
-    }
-  }
-}
-.viz-snackbar-desktop {
-  width: 463px !important;
-}
 
 //radio button
 .mat-radio-label-content {
@@ -386,19 +343,12 @@ td.mat-cell,
 }
 
 //tree style
-.mat-checkbox-label {
-  font-size: 14px;
-}
-.mat-checkbox-frame {
-  border-color: #9f9f9f !important;
-}
-
 .mat-tree {
   .mat-tree-node {
     color: $viz-gray;
-    font-weight: 300;
   }
-  .mat-icon-button {
+  mat-icon {
+    color: #000000;
   }
 }
 
@@ -464,15 +414,7 @@ input.mat-input-element {
   }
 }
 
-//snackbar style
-.mat-simple-snackbar {
-  font-family: Soleto;
-  font-weight: 300;
 
-  .mat-button {
-    color: #ffffff;
-  }
-}
 
 //card style
 .mat-card:not([class*='mat-elevation-z']) {
@@ -491,12 +433,6 @@ input.mat-input-element {
 }
 
 //dialog (modal)
-.cdk-overlay-pane {
-  .mat-dialog-container {
-    padding: 0px;
-    border-radius: 0px;
-  }
-}
 
 //badge
 .mat-badge-content {

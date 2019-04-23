@@ -77,7 +77,7 @@ const sketch_link = {
     'Insert / Toolkit Material Library / Components / Feedback Indicator'
   ],
   dialog: [
-    'copy from Toolkit Material Library.sketch / Toolkit Components / Popups & Modals: Modal'
+    'Copy from Toolkit Material Library.sketch / Toolkit Components / Popups & Modals: Modal'
   ],
   snackbar: ['Insert / Toolkit Material Library / Components / Snackbar'],
   tooltip: ['Insert / Toolkit Material Library / Components / Tooltip'],

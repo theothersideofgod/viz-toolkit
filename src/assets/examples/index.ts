@@ -39,6 +39,28 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { TreeLoadmoreComponent } from './tree-loadmore/tree-loadmore.component';
+import { TreeNestedOverviewComponent } from './tree-nested-overview/tree-nested-overview.component';
+import { TreeChecklistComponent } from './tree-checklist/tree-checklist.component';
+import { TreeFlatOverviewComponent } from './tree-flat-overview/tree-flat-overview.component';
+import { TreeDynamicComponent } from './tree-dynamic/tree-dynamic.component';
+import {
+  DialogContentComponent,
+  DialogContentExampleDialog
+} from './dialog-content/dialog-content.component';
+import {
+  DialogDataComponent,
+  DialogDataExampleDialog
+} from './dialog-data/dialog-data.component';
+import {
+  DialogOverviewComponent,
+  DialogOverviewExampleDialog
+} from './dialog-overview/dialog-overview.component';
+import { SnackBarOverviewComponent } from './snack-bar-overview/snack-bar-overview.component';
+import {
+  SnackBarComponentComponent,
+  PizzaPartyComponent
+} from './snack-bar-component/snack-bar-component.component';
 import { TabGroupAnimationsComponent } from './tab-group-animations/tab-group-animations.component';
 import { TabGroupAlignComponent } from './tab-group-align/tab-group-align.component';
 import { TabNavBarBasicComponent } from './tab-nav-bar-basic/tab-nav-bar-basic.component';
@@ -186,31 +208,6 @@ import {
   FileUploadBasicData
 } from './file-upload-basic/file-upload-basic.component';
 import {
-  DialogComplexComponent,
-  DialogComplexData,
-  DialogComplexPopupComponent
-} from './dialog-complex/dialog-complex.component';
-import {
-  DialogConfirmationComponent,
-  DialogConfirmationData,
-  DialogConfirmationPopupComponent
-} from './dialog-confirmation/dialog-confirmation.component';
-import {
-  DialogContentComponent,
-  DialogContentData,
-  DialogContentPopupComponent
-} from './dialog-content/dialog-content.component';
-import {
-  DialogDataComponent,
-  DialogDataData,
-  DialogDataPopupComponent
-} from './dialog-data/dialog-data.component';
-import {
-  DialogAlertComponent,
-  DialogAlertData,
-  DialogAlertPopupComponent
-} from './dialog-alert/dialog-alert.component';
-import {
   SelectTriggerTextComponent,
   SelectTriggerTextData
 } from './select-trigger-text/select-trigger-text.component';
@@ -226,26 +223,6 @@ import {
   SelectErrorStateComponent,
   SelectErrorStateData
 } from './select-error-state/select-error-state.component';
-import {
-  TreeCheckboxMaterialComponent,
-  TreeCheckboxMaterialData
-} from './tree-checkbox-material/tree-checkbox-material.component';
-import {
-  TreePartiallyLoadedComponent,
-  TreePartiallyLoadedData
-} from './tree-partially-loaded/tree-partially-loaded.component';
-import {
-  TreeNestedNodesComponent,
-  TreeNestedNodesData
-} from './tree-nested-nodes/tree-nested-nodes.component';
-import {
-  TreeFlatNodesComponent,
-  TreeFlatNodesData
-} from './tree-flat-nodes/tree-flat-nodes.component';
-import {
-  TreeDynamicDataComponent,
-  TreeDynamicDataData
-} from './tree-dynamic-data/tree-dynamic-data.component';
 import {
   MenuIconComponent,
   MenuIconData
@@ -414,10 +391,6 @@ import {
   ButtonStrokedData
 } from './button-stroked/button-stroked.component';
 import {
-  TreeCheckboxComponent,
-  TreeCheckboxData
-} from './tree-checkbox/tree-checkbox.component';
-import {
   HeaderApplicationComponent,
   HeaderApplicationData
 } from './header-application/header-application.component';
@@ -554,11 +527,6 @@ import {
   SnackbarBasicData
 } from './snackbar-basic/snackbar-basic.component';
 import {
-  DialogBasicComponent,
-  DialogBasicData,
-  DialogDataExampleDialog
-} from './dialog-basic/dialog-basic.component';
-import {
   ChipPrimaryComponent,
   ChipPrimaryData
 } from './chip-primary/chip-primary.component';
@@ -598,10 +566,6 @@ import {
   RadioButtonBasicComponent,
   RadioButtonBasicData
 } from './radio-button-basic/radio-button-basic.component';
-import {
-  TreeBasicComponent,
-  TreeBasicData
-} from './tree-basic/tree-basic.component';
 import {
   SliderBasicComponent,
   SliderBasicData
@@ -650,6 +614,36 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'tree-loadmore': {
+    component: TreeLoadmoreComponent
+  },
+  'tree-nested-overview': {
+    component: TreeNestedOverviewComponent
+  },
+  'tree-checklist': {
+    component: TreeChecklistComponent
+  },
+  'tree-flat-overview': {
+    component: TreeFlatOverviewComponent
+  },
+  'tree-dynamic': {
+    component: TreeDynamicComponent
+  },
+  'dialog-content': {
+    component: DialogContentComponent
+  },
+  'dialog-data': {
+    component: DialogDataComponent
+  },
+  'dialog-overview': {
+    component: DialogOverviewComponent
+  },
+  'snack-bar-overview': {
+    component: SnackBarOverviewComponent
+  },
+  'snack-bar-component': {
+    component: SnackBarComponentComponent
+  },
   'tab-group-animations': {
     component: TabGroupAnimationsComponent
   },
@@ -840,26 +834,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: FileUploadBasicComponent,
     data: FileUploadBasicData
   },
-  'dialog-complex': {
-    component: DialogComplexComponent,
-    data: DialogComplexData
-  },
-  'dialog-confirmation': {
-    component: DialogConfirmationComponent,
-    data: DialogConfirmationData
-  },
-  'dialog-content': {
-    component: DialogContentComponent,
-    data: DialogContentData
-  },
-  'dialog-data': {
-    component: DialogDataComponent,
-    data: DialogDataData
-  },
-  'dialog-alert': {
-    component: DialogAlertComponent,
-    data: DialogAlertData
-  },
   'select-trigger-text': {
     component: SelectTriggerTextComponent,
     data: SelectTriggerTextData
@@ -875,26 +849,6 @@ export const ALL_EXAMPLE_ITEMS = {
   'select-error-state': {
     component: SelectErrorStateComponent,
     data: SelectErrorStateData
-  },
-  'tree-checkbox-material': {
-    component: TreeCheckboxMaterialComponent,
-    data: TreeCheckboxMaterialData
-  },
-  'tree-partially-loaded': {
-    component: TreePartiallyLoadedComponent,
-    data: TreePartiallyLoadedData
-  },
-  'tree-nested-nodes': {
-    component: TreeNestedNodesComponent,
-    data: TreeNestedNodesData
-  },
-  'tree-flat-nodes': {
-    component: TreeFlatNodesComponent,
-    data: TreeFlatNodesData
-  },
-  'tree-dynamic-data': {
-    component: TreeDynamicDataComponent,
-    data: TreeDynamicDataData
   },
   'menu-icon': {
     component: MenuIconComponent,
@@ -1068,10 +1022,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ButtonStrokedComponent,
     data: ButtonStrokedData
   },
-  'tree-checkbox': {
-    component: TreeCheckboxComponent,
-    data: TreeCheckboxData
-  },
   'header-application': {
     component: HeaderApplicationComponent,
     data: HeaderApplicationData
@@ -1208,10 +1158,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: SnackbarBasicComponent,
     data: SnackbarBasicData
   },
-  'dialog-basic': {
-    component: DialogBasicComponent,
-    data: DialogBasicData
-  },
   'chip-primary': {
     component: ChipPrimaryComponent,
     data: ChipPrimaryData
@@ -1251,10 +1197,6 @@ export const ALL_EXAMPLE_ITEMS = {
   'radio-button-basic': {
     component: RadioButtonBasicComponent,
     data: RadioButtonBasicData
-  },
-  'tree-basic': {
-    component: TreeBasicComponent,
-    data: TreeBasicData
   },
   'slider-basic': {
     component: SliderBasicComponent,
@@ -1300,6 +1242,20 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    TreeLoadmoreComponent,
+    TreeNestedOverviewComponent,
+    TreeChecklistComponent,
+    TreeFlatOverviewComponent,
+    TreeDynamicComponent,
+    DialogContentExampleDialog,
+    DialogDataExampleDialog,
+    DialogOverviewExampleDialog,
+    DialogContentComponent,
+    DialogDataComponent,
+    DialogOverviewComponent,
+    PizzaPartyComponent,
+    SnackBarOverviewComponent,
+    SnackBarComponentComponent,
     TabGroupAnimationsComponent,
     TabGroupAlignComponent,
     TabNavBarBasicComponent,
@@ -1353,20 +1309,12 @@ export const ALL_EXAMPLE_ITEMS = {
     ButtontoggleThreeTextComponent,
     ButtontoggleBasicComponent,
     FileUploadBasicComponent,
-    DialogComplexComponent,
-    DialogConfirmationComponent,
     DialogContentComponent,
     DialogDataComponent,
-    DialogAlertComponent,
     SelectTriggerTextComponent,
     SelectMultipleSelectionComponent,
     SelectGroupOptionComponent,
     SelectErrorStateComponent,
-    TreeCheckboxMaterialComponent,
-    TreePartiallyLoadedComponent,
-    TreeNestedNodesComponent,
-    TreeFlatNodesComponent,
-    TreeDynamicDataComponent,
     MenuIconComponent,
     DatePickerRangeValidationComponent,
     DatePickerEmulatingComponent,
@@ -1410,7 +1358,6 @@ export const ALL_EXAMPLE_ITEMS = {
     ButtonIconRightComponent,
     ButtonTextComponent,
     ButtonStrokedComponent,
-    TreeCheckboxComponent,
     HeaderApplicationComponent,
     SlideToggleDisableComponent,
     SelectDisableComponent,
@@ -1446,8 +1393,6 @@ export const ALL_EXAMPLE_ITEMS = {
     HeaderBasicComponent,
     SnackbarMobileComponent,
     SnackbarBasicComponent,
-    DialogDataExampleDialog,
-    DialogBasicComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
     MenuNestedComponent,
@@ -1458,7 +1403,6 @@ export const ALL_EXAMPLE_ITEMS = {
     MenuBasicComponent,
     FormFieldBasicComponent,
     RadioButtonBasicComponent,
-    TreeBasicComponent,
     SliderBasicComponent,
     SlideToggleBasicComponent,
     IconBasicComponent,
@@ -1469,12 +1413,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent,
-    MyTelInput,
-    DialogAlertPopupComponent,
-    DialogComplexPopupComponent,
-    DialogDataPopupComponent,
-    DialogContentPopupComponent,
-    DialogConfirmationPopupComponent
+    MyTelInput
   ],
   imports: [
     RouterModule,
@@ -1520,6 +1459,20 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TreeLoadmoreComponent,
+    TreeNestedOverviewComponent,
+    TreeChecklistComponent,
+    TreeFlatOverviewComponent,
+    TreeDynamicComponent,
+    DialogContentExampleDialog,
+    DialogDataExampleDialog,
+    DialogOverviewExampleDialog,
+    DialogContentComponent,
+    DialogDataComponent,
+    DialogOverviewComponent,
+    PizzaPartyComponent,
+    SnackBarOverviewComponent,
+    SnackBarComponentComponent,
     TabGroupAnimationsComponent,
     TabGroupAlignComponent,
     TabNavBarBasicComponent,
@@ -1573,20 +1526,12 @@ export const ALL_EXAMPLE_ITEMS = {
     ButtontoggleThreeTextComponent,
     ButtontoggleBasicComponent,
     FileUploadBasicComponent,
-    DialogComplexComponent,
-    DialogConfirmationComponent,
     DialogContentComponent,
     DialogDataComponent,
-    DialogAlertComponent,
     SelectTriggerTextComponent,
     SelectMultipleSelectionComponent,
     SelectGroupOptionComponent,
     SelectErrorStateComponent,
-    TreeCheckboxMaterialComponent,
-    TreePartiallyLoadedComponent,
-    TreeNestedNodesComponent,
-    TreeFlatNodesComponent,
-    TreeDynamicDataComponent,
     MenuIconComponent,
     DatePickerRangeValidationComponent,
     DatePickerEmulatingComponent,
@@ -1630,7 +1575,6 @@ export const ALL_EXAMPLE_ITEMS = {
     ButtonIconRightComponent,
     ButtonTextComponent,
     ButtonStrokedComponent,
-    TreeCheckboxComponent,
     HeaderApplicationComponent,
     SlideToggleDisableComponent,
     SelectDisableComponent,
@@ -1666,8 +1610,6 @@ export const ALL_EXAMPLE_ITEMS = {
     HeaderBasicComponent,
     SnackbarMobileComponent,
     SnackbarBasicComponent,
-    DialogDataExampleDialog,
-    DialogBasicComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
     MenuNestedComponent,
@@ -1678,7 +1620,6 @@ export const ALL_EXAMPLE_ITEMS = {
     MenuBasicComponent,
     FormFieldBasicComponent,
     RadioButtonBasicComponent,
-    TreeBasicComponent,
     SliderBasicComponent,
     SlideToggleBasicComponent,
     IconBasicComponent,
@@ -1689,12 +1630,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent,
-    MyTelInput,
-    DialogAlertPopupComponent,
-    DialogComplexPopupComponent,
-    DialogDataPopupComponent,
-    DialogContentPopupComponent,
-    DialogConfirmationPopupComponent
+    MyTelInput
   ]
 })
 export class ExampleModule {}

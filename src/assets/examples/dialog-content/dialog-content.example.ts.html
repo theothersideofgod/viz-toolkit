@@ -1,38 +1,28 @@
-<span class="hljs-keyword">import</span> { Component, Inject, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> { MatDialog, MatDialogRef, MAT_DIALOG_DATA } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
-<span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'dialog-content-popup'</span>,
-  templateUrl: <span class="hljs-string">'./dialog-content-popup.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'./dialog-content-popup.component.scss'</span>]
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogContentPopupComponent {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;DialogContentPopupComponent&gt;</span>) {}
-
-  closeDialog(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">this</span>.dialogRef.close();
-  }
-}
-
+<span class="hljs-comment">/**
+ * @title Dialog with header, scrollable content and actions
+ */</span>
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'dialog-content'</span>,
   templateUrl: <span class="hljs-string">'dialog-content.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'dialog-content.component.css'</span>]
+  styleUrls: [<span class="hljs-string">'dialog-content.component.css'</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogContentComponent <span class="hljs-keyword">implements</span> OnInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogContentComponent {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>) {}
+
   openDialog() {
-    <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-keyword">this</span>.dialog.open(DialogContentPopupComponent, {
-      width: <span class="hljs-string">'400px'</span>
-    });
+    <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-keyword">this</span>.dialog.open(DialogContentExampleDialog);
 
     dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The dialog was closed'</span>);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Dialog result: <span class="hljs-subst">${result}</span>`</span>);
     });
   }
-  ngOnInit() {}
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DialogContentData = {
-  name: <span class="hljs-string">'DialogContent'</span>
-};
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-content-example-dialog'</span>,
+  templateUrl: <span class="hljs-string">'dialog-content-example-dialog.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogContentExampleDialog {}

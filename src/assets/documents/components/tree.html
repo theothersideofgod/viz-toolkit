@@ -1,185 +1,346 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Layout
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Tree
-  </div>
-  <div class="doc-desc-1">
-    Trees allow navigation between groups of content that are related and at
-    the different level of hierarchy. </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-more-example"></span>
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-
-  <div class="doc-title-4 mb-8">
-    Tree with Dynamic Data
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="tree-dynamic-data"></div>
-  </div>
-
-
-
-  <div class="doc-title-4 mb-8">
-    Tree with Flat Nodes
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="tree-flat-nodes"></div>
-  </div>
-
-  <div class="doc-title-4 mb-8">
-    Tree with Checkboxes
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="tree-checkbox-material"></div>
-  </div>
-
-  <div class="doc-title-4 mb-8">
-    Tree with Nested Nodes
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="tree-nested-nodes"></div>
-  </div>
-
-  <div class="doc-title-4 mb-8">
-    Tree with Partially Loaded Data
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="tree-partially-loaded"></div>
-  </div>
-
-
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized tree, just set
-    <span class="doc-desc-2-highlight">tree</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>tree</td>
-        <td>nested data json</td>
-        <td>Object</td>
-        <td></td>
-      </tr>
-
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Trees are a continuous group of text or control components. Trees should
-    be:
-    <ul class="doc-list">
-      <li>
-        <span class="doc-list-bold">logical</span>: Trees should be sorted in
-        logical ways that make content easy to scan, such as alphabetical,
-        numerical,
-        chronological, or by user preference.
-      </li>
-      <li>
-        <span class="doc-list-bold">Actionable</span>: Trees present content in
-        a way that makes it easy to identify a specific item in a collection
-        and act on it.
-      </li>
-    </ul>
-  </div>
-
-  <div class="doc-divider">
-
-  </div>
-
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Don&#x2019;t place imagery in tree that makes the content hard to scan.
-  </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:312px">
-      <img src="assets/img/doc/tree-do.png" alt="">
+  <body>
+    <div class="doc-category-title ">
+      Layout
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center" style="height:312px;margin-top:16px">
-      <img src="assets/img/doc/tree-dont.png" alt="">
+    <div class="doc-title-1">
+      Tree
     </div>
-  </div>
+    <div class="doc-desc-1">
+      Trees allow navigation between groups of content that are related and at
+      the different level of hierarchy.
+    </div>
 
+    <div class="doc-divider"></div>
+    <div class="doc-title-2 mb-24">
+      Examples
+      <span class="docs-more-example"></span>
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Tree with flat nodes
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="tree-flat-overview"></div>
+    </div>
 
-  <div class="doc-divider">
+    <div class="doc-title-4 mb-16">
+      Tree with nested nodes
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="tree-nested-overview"></div>
+    </div>
 
-  </div>
+    <div class="doc-title-4 mb-16">
+      Tree with dynamic data
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="tree-dynamic"></div>
+    </div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-title-4 mb-16">
+      Tree with checkboxes
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="tree-checklist"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Tree with partially loaded data
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="tree-loadmore"></div>
+    </div>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:360px">
-    <img src="assets/img/doc/tree-spec.png" alt="">
-  </div>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component
-      Location for Designers</span>
-  </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sketch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path
-    within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+    <div class="doc-desc-2">
+      To get a customized tree, just set
+      <span class="doc-desc-2-highlight"
+        >disabled / role / data / when / template / disabled / node / nodeOutlet
+        / indent / level / indentUnits / dataSource / trackBy / treeControl /
+        viewChange / recursive / viewContainer / getChildren / getLevel /
+        isExpandable / transformFunction / data / data</span
+      >
+    </div>
 
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>disabled</td>
+          <td>Whether the component is disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>role</td>
+          <td></td>
+          <td>&apos;treeitem&apos; | &apos;group&apos;</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>data</td>
+          <td></td>
+          <td>T</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>when</td>
+          <td>
+            Function that should return true if this node template should be
+            used for the provided node data and index. If left undefined, this
+            node will be considered the default node template to use when no
+            other when functions return true for the data. For every node, there
+            must be at least one when function that passes or an undefined to
+            default.
+          </td>
+          <td>(index: number, nodeData: T) =&gt; boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>template</td>
+          <td></td>
+          <td>TemplateRef<any></any></td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>disabled</td>
+          <td>Whether the component is disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>node</td>
+          <td></td>
+          <td>T</td>
+          <td></td>
+        </tr>
 
-</body>
+        <tr>
+          <td>nodeOutlet</td>
+          <td>The children node placeholder.</td>
+          <td>QueryList<mattreenodeoutlet></mattreenodeoutlet></td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td>indent</td>
+          <td>
+            The indent for each level. Default number 40px from material design
+            menu sub-menu spec.
+          </td>
+          <td>number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>level</td>
+          <td>
+            The level of depth of the tree node. The padding will be level *
+            indent pixels.
+          </td>
+          <td>number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>indentUnits</td>
+          <td>CSS units used for the indentation value.</td>
+          <td>&apos;px&apos;</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>dataSource</td>
+          <td>
+            Provides a stream containing the latest data array to render.
+            Influenced by the tree&apos;s stream of view window (what dataNodes
+            are currently on screen). Data source can be an observable of data
+            array, or a data array to render.
+          </td>
+          <td>
+            DataSource<t> | Observable<t[]> | T[]</t[]></t>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>trackBy</td>
+          <td>
+            Tracking function that will be used to check the differences in data
+            changes. Used similarly to ngFor trackBy function. Optimize node
+            operations by identifying a node based on its data relative to the
+            function to know if a node should be added/removed/moved. Accepts a
+            function that takes two parameters, index and item.
+          </td>
+          <td>TrackByFunction<t></t></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>treeControl</td>
+          <td>The tree controller</td>
+          <td>TreeControl<t></t></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>viewChange</td>
+          <td>
+            Stream containing the latest information on what rows are being
+            displayed on screen. Can be used by the data source to as a
+            heuristic of what data should be provided.
+          </td>
+          <td>BehaviorSubject&lt;{ start: number; end: number; }&gt;</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>recursive</td>
+          <td></td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>viewContainer</td>
+          <td></td>
+          <td>ViewContainerRef</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>getChildren</td>
+          <td></td>
+          <td>
+            (node: T) =&gt; Observable<t[]> | T[] | undefined | null</t[]>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>getLevel</td>
+          <td></td>
+          <td>(node: F) =&gt; number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>isExpandable</td>
+          <td></td>
+          <td>(node: F) =&gt; boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>transformFunction</td>
+          <td></td>
+          <td>(node: T, level: number) =&gt; F</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>data</td>
+          <td></td>
+          <td>T[]</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>data</td>
+          <td>Data for the nested tree</td>
+          <td>T[]</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      Don&#x2019;t place imagery in tree that makes the content hard to scan.
+    </div>
+
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center"
+        style="height:312px"
+      >
+        <img src="assets/img/doc/tree-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center"
+        style="height:312px;margin-top:16px"
+      >
+        <img src="assets/img/doc/tree-dont.png" alt="" />
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:360px">
+      <img src="assets/img/doc/tree-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sketch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+  </body>
 </html>
