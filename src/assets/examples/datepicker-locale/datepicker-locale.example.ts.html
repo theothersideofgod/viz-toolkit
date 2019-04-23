@@ -1,0 +1,28 @@
+<span class="hljs-keyword">import</span> {Component} from <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from <span class="hljs-string">'@angular/material-moment-adapter'</span>;
+<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from <span class="hljs-string">'@angular/material/core'</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Datepicker with different locale */</span>
+<span class="hljs-meta">@Component</span>({
+<span class="hljs-symbol">  selector:</span> <span class="hljs-string">'datepicker-locale'</span>,
+<span class="hljs-symbol">  templateUrl:</span> <span class="hljs-string">'datepicker-locale.component.html'</span>,
+<span class="hljs-symbol">  styleUrls:</span> [<span class="hljs-string">'datepicker-locale.component.css'</span>],
+<span class="hljs-symbol">  providers:</span> [
+    <span class="hljs-comment">// The locale would typically be provided on the root module of your application. We do it at</span>
+    <span class="hljs-comment">// the component level here, due to limitations of our example generation script.</span>
+    {<span class="hljs-string">provide:</span> MAT_DATE_LOCALE, <span class="hljs-string">useValue:</span> <span class="hljs-string">'ja-JP'</span>},
+
+    <span class="hljs-comment">// `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing</span>
+    <span class="hljs-comment">// `MatMomentDateModule` in your applications root module. We provide it at the component level</span>
+    <span class="hljs-comment">// here, due to limitations of our example generation script.</span>
+    {<span class="hljs-string">provide:</span> DateAdapter, <span class="hljs-string">useClass:</span> MomentDateAdapter, <span class="hljs-string">deps:</span> [MAT_DATE_LOCALE]},
+    {<span class="hljs-string">provide:</span> MAT_DATE_FORMATS, <span class="hljs-string">useValue:</span> MAT_MOMENT_DATE_FORMATS},
+  ],
+})
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerLocaleComponent</span> {</span>
+  constructor(<span class="hljs-keyword">private</span> <span class="hljs-string">adapter:</span> DateAdapter&lt;any&gt;) {}
+
+  french() {
+    <span class="hljs-keyword">this</span>.adapter.setLocale(<span class="hljs-string">'fr'</span>);
+  }
+}

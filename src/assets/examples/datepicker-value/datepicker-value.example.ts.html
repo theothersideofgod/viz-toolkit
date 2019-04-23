@@ -1,0 +1,13 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/** @title Datepicker selected value */</span>
+@Component({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'datepicker-value'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'datepicker-value.component.html'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'datepicker-value.component.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerValueComponent</span> </span>{
+  date = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+  serializedDate = <span class="hljs-keyword">new</span> FormControl((<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).toISOString());
+}

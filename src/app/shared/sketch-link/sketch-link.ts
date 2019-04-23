@@ -4,8 +4,9 @@ import { Router } from '@angular/router';
 const sketch_link = {
   checkbox: ['Insert / Toolkit Material Library / Components / Checkbox / Off or On & Indeterminate'],
   datepicker: [
-    'Insert / Toolkit Material Library / Components / Daterange Picker / Default or Selected 1 or Selected 2',
-    'Insert / Toolkit Material Library / Components / Datepicker / Year or Month or Date'
+    'Insert / Toolkit Material Library / Components / Datepicker / Range / Default or Selected 1 or Selected 2',
+    'Insert / Toolkit Material Library / Components / Datepicker / Year Range / Year or Month or Date',
+    'Insert / Toolkit Material Library / Components / Datepicker / Single / Year or Month or Date'
   ],
   formfield: [
     'Insert / Toolkit Material Library / Components / Form / Default or Active & Error'

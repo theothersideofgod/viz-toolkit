@@ -39,6 +39,26 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { DatepickerDateClassComponent } from './datepicker-date-class/datepicker-date-class.component';
+import {
+  DatepickerCustomHeaderComponent,
+  ExampleHeader
+} from './datepicker-custom-header/datepicker-custom-header.component';
+import { DatepickerColorComponent } from './datepicker-color/datepicker-color.component';
+import { DatepickerViewsSelectionComponent } from './datepicker-views-selection/datepicker-views-selection.component';
+import { DatepickerCustomIconComponent } from './datepicker-custom-icon/datepicker-custom-icon.component';
+import { DatepickerFormatsComponent } from './datepicker-formats/datepicker-formats.component';
+import { DatepickerMomentComponent } from './datepicker-moment/datepicker-moment.component';
+import { DatepickerLocaleComponent } from './datepicker-locale/datepicker-locale.component';
+import { DatepickerApiComponent } from './datepicker-api/datepicker-api.component';
+import { DatepickerTouchComponent } from './datepicker-touch/datepicker-touch.component';
+import { DatepickerDisabledComponent } from './datepicker-disabled/datepicker-disabled.component';
+import { DatepickerEventsComponent } from './datepicker-events/datepicker-events.component';
+import { DatepickerFilterComponent } from './datepicker-filter/datepicker-filter.component';
+import { DatepickerMinMaxComponent } from './datepicker-min-max/datepicker-min-max.component';
+import { DatepickerValueComponent } from './datepicker-value/datepicker-value.component';
+import { DatepickerStartViewComponent } from './datepicker-start-view/datepicker-start-view.component';
+import { DatepickerOverviewComponent } from './datepicker-overview/datepicker-overview.component';
 import { TreeLoadmoreComponent } from './tree-loadmore/tree-loadmore.component';
 import { TreeNestedOverviewComponent } from './tree-nested-overview/tree-nested-overview.component';
 import { TreeChecklistComponent } from './tree-checklist/tree-checklist.component';
@@ -606,6 +626,57 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'datepicker-date-class': {
+    component: DatepickerDateClassComponent
+  },
+  'datepicker-custom-header': {
+    component: DatepickerCustomHeaderComponent
+  },
+  'datepicker-color': {
+    component: DatepickerColorComponent
+  },
+  'datepicker-views-selection': {
+    component: DatepickerViewsSelectionComponent
+  },
+  'datepicker-custom-icon': {
+    component: DatepickerCustomIconComponent
+  },
+  'datepicker-formats': {
+    component: DatepickerFormatsComponent
+  },
+  'datepicker-moment': {
+    component: DatepickerMomentComponent
+  },
+  'datepicker-locale': {
+    component: DatepickerLocaleComponent
+  },
+  'datepicker-api': {
+    component: DatepickerApiComponent
+  },
+  'datepicker-touch': {
+    component: DatepickerTouchComponent
+  },
+  'datepicker-disabled': {
+    component: DatepickerDisabledComponent
+  },
+  'datepicker-events': {
+    component: DatepickerEventsComponent
+  },
+  'datepicker-filter': {
+    component: DatepickerFilterComponent
+  },
+  'datepicker-min-max': {
+    component: DatepickerMinMaxComponent
+  },
+  'datepicker-value': {
+    component: DatepickerValueComponent
+  },
+  'datepicker-start-view': {
+    component: DatepickerStartViewComponent
+  },
+  'datepicker-overview': {
+    component: DatepickerOverviewComponent
+  },
   'tree-loadmore': {
     component: TreeLoadmoreComponent
   },
@@ -1226,6 +1297,24 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ExampleHeader,
+    DatepickerDateClassComponent,
+    DatepickerCustomHeaderComponent,
+    DatepickerColorComponent,
+    DatepickerViewsSelectionComponent,
+    DatepickerCustomIconComponent,
+    DatepickerFormatsComponent,
+    DatepickerMomentComponent,
+    DatepickerLocaleComponent,
+    DatepickerApiComponent,
+    DatepickerTouchComponent,
+    DatepickerDisabledComponent,
+    DatepickerEventsComponent,
+    DatepickerFilterComponent,
+    DatepickerMinMaxComponent,
+    DatepickerValueComponent,
+    DatepickerStartViewComponent,
+    DatepickerOverviewComponent,
     TreeLoadmoreComponent,
     TreeNestedOverviewComponent,
     TreeChecklistComponent,
@@ -1441,6 +1530,23 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    DatepickerDateClassComponent,
+    DatepickerCustomHeaderComponent,
+    DatepickerColorComponent,
+    DatepickerViewsSelectionComponent,
+    DatepickerCustomIconComponent,
+    DatepickerFormatsComponent,
+    DatepickerMomentComponent,
+    DatepickerLocaleComponent,
+    DatepickerApiComponent,
+    DatepickerTouchComponent,
+    DatepickerDisabledComponent,
+    DatepickerEventsComponent,
+    DatepickerFilterComponent,
+    DatepickerMinMaxComponent,
+    DatepickerValueComponent,
+    DatepickerStartViewComponent,
+    DatepickerOverviewComponent,
     TreeLoadmoreComponent,
     TreeNestedOverviewComponent,
     TreeChecklistComponent,

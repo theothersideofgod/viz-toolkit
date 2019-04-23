@@ -1,0 +1,98 @@
+<span class="hljs-keyword">import</span> {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  Inject,
+  OnDestroy
+} from <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatCalendar} from <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} from <span class="hljs-string">'@angular/material/core'</span>;
+<span class="hljs-keyword">import</span> {Subject} from <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {takeUntil} from <span class="hljs-string">'rxjs/operators'</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Datepicker with custom calendar header */</span>
+<span class="hljs-meta">@Component({
+  selector: <span class="hljs-meta-string">'datepicker-custom-header'</span>,
+  templateUrl: <span class="hljs-meta-string">'datepicker-custom-header.component.html'</span>,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})</span>
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerCustomHeaderComponent</span> </span>{
+  exampleHeader = ExampleHeader;
+}
+
+<span class="hljs-comment">/** Custom header component for datepicker. */</span>
+<span class="hljs-meta">@Component({
+  selector: <span class="hljs-meta-string">'example-header'</span>,
+  styles: [`
+    .example-header {
+      display: flex;
+      align-items: center;
+      padding: 0.5em;
+    }
+
+    .example-header-label {
+      flex: 1;
+      height: 1em;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .example-double-arrow .mat-icon {
+      margin: -22%;
+    }
+  `],
+  template: `
+    &lt;div class=<span class="hljs-meta-string">"example-header"</span>&gt;
+      &lt;button mat-icon-button class=<span class="hljs-meta-string">"example-double-arrow"</span> (click)</span>=<span class="hljs-string">"previousClicked('year')"</span>&gt;
+        &lt;mat-icon&gt;keyboard_arrow_left&lt;/mat-icon&gt;
+        &lt;mat-icon&gt;keyboard_arrow_left&lt;/mat-icon&gt;
+      &lt;/button&gt;
+      &lt;button mat-icon-button (click)=<span class="hljs-string">"previousClicked('month')"</span>&gt;
+        &lt;mat-icon&gt;keyboard_arrow_left&lt;/mat-icon&gt;
+      &lt;/button&gt;
+      &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">example</span>-<span class="hljs-title">header</span>-<span class="hljs-title">label</span>"&gt;</span>{{periodLabel}}&lt;/span&gt;
+      &lt;button mat-icon-button (click)=<span class="hljs-string">"nextClicked('month')"</span>&gt;
+        &lt;mat-icon&gt;keyboard_arrow_right&lt;/mat-icon&gt;
+      &lt;/button&gt;
+      &lt;button mat-icon-button <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">example</span>-<span class="hljs-title">double</span>-<span class="hljs-title">arrow</span>" </span>(click)=<span class="hljs-string">"nextClicked('year')"</span>&gt;
+        &lt;mat-icon&gt;keyboard_arrow_right&lt;/mat-icon&gt;
+        &lt;mat-icon&gt;keyboard_arrow_right&lt;/mat-icon&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleHeader</span>&lt;<span class="hljs-type">D</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span> </span>{
+  <span class="hljs-keyword">private</span> destroyed = new Subject&lt;void&gt;();
+
+  <span class="hljs-keyword">constructor</span>(
+      <span class="hljs-keyword">private</span> calendar: MatCalendar&lt;D&gt;, <span class="hljs-keyword">private</span> dateAdapter: DateAdapter&lt;D&gt;,
+      <span class="hljs-meta">@Inject(MAT_DATE_FORMATS)</span> <span class="hljs-keyword">private</span> dateFormats: MatDateFormats, cdr: ChangeDetectorRef) {
+    calendar.stateChanges
+        .pipe(takeUntil(<span class="hljs-keyword">this</span>.destroyed))
+        .subscribe(() =&gt; cdr.markForCheck());
+  }
+
+  ngOnDestroy() {
+    <span class="hljs-keyword">this</span>.destroyed.next();
+    <span class="hljs-keyword">this</span>.destroyed.complete();
+  }
+
+  <span class="hljs-keyword">get</span> periodLabel() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dateAdapter
+        .format(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-keyword">this</span>.dateFormats.display.monthYearLabel)
+        .toLocaleUpperCase();
+  }
+
+  previousClicked(mode: <span class="hljs-string">'month'</span> | <span class="hljs-string">'year'</span>) {
+    <span class="hljs-keyword">this</span>.calendar.activeDate = mode === <span class="hljs-string">'month'</span> ?
+        <span class="hljs-keyword">this</span>.dateAdapter.addCalendarMonths(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-number">-1</span>) :
+        <span class="hljs-keyword">this</span>.dateAdapter.addCalendarYears(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-number">-1</span>);
+  }
+
+  nextClicked(mode: <span class="hljs-string">'month'</span> | <span class="hljs-string">'year'</span>) {
+    <span class="hljs-keyword">this</span>.calendar.activeDate = mode === <span class="hljs-string">'month'</span> ?
+        <span class="hljs-keyword">this</span>.dateAdapter.addCalendarMonths(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-number">1</span>) :
+        <span class="hljs-keyword">this</span>.dateAdapter.addCalendarYears(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-number">1</span>);
+  }
+}
