@@ -519,14 +519,6 @@ import {
   HeaderBasicData
 } from './header-basic/header-basic.component';
 import {
-  SnackbarMobileComponent,
-  SnackbarMobileData
-} from './snackbar-mobile/snackbar-mobile.component';
-import {
-  SnackbarBasicComponent,
-  SnackbarBasicData
-} from './snackbar-basic/snackbar-basic.component';
-import {
   ChipPrimaryComponent,
   ChipPrimaryData
 } from './chip-primary/chip-primary.component';
@@ -1150,14 +1142,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: HeaderBasicComponent,
     data: HeaderBasicData
   },
-  'snackbar-mobile': {
-    component: SnackbarMobileComponent,
-    data: SnackbarMobileData
-  },
-  'snackbar-basic': {
-    component: SnackbarBasicComponent,
-    data: SnackbarBasicData
-  },
   'chip-primary': {
     component: ChipPrimaryComponent,
     data: ChipPrimaryData
@@ -1391,8 +1375,6 @@ export const ALL_EXAMPLE_ITEMS = {
     TooltipBasicComponent,
     FooterBasicComponent,
     HeaderBasicComponent,
-    SnackbarMobileComponent,
-    SnackbarBasicComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
     MenuNestedComponent,
@@ -1608,8 +1590,6 @@ export const ALL_EXAMPLE_ITEMS = {
     TooltipBasicComponent,
     FooterBasicComponent,
     HeaderBasicComponent,
-    SnackbarMobileComponent,
-    SnackbarBasicComponent,
     ChipPrimaryComponent,
     ListNodividerComponent,
     MenuNestedComponent,
