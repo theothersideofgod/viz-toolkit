@@ -21,6 +21,9 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'gridlistoverview', name: 'GridListOverview', examples: ['grid-list-overview']},
+        {id: 'gridlistdynamic', name: 'GridListDynamic', examples: ['grid-list-dynamic']},
+        {id: 'gridlist', name: 'GridList', examples: ['grid-list']},
         {id: 'listselection', name: 'ListSelection', examples: ['list-selection']},
         {id: 'listoverview', name: 'ListOverview', examples: ['list-overview']},
         {id: 'listsections', name: 'ListSections', examples: ['list-sections']},

@@ -1,0 +1,8 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+:host {
+  padding: 0 56px;
+  display: block;
+}

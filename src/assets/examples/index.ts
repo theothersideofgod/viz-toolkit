@@ -39,6 +39,8 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { GridListOverviewComponent } from './grid-list-overview/grid-list-overview.component';
+import { GridListDynamicComponent } from './grid-list-dynamic/grid-list-dynamic.component';
 import { ListSelectionComponent } from './list-selection/list-selection.component';
 import { ListOverviewComponent } from './list-overview/list-overview.component';
 import { ListSectionsComponent } from './list-sections/list-sections.component';
@@ -618,6 +620,12 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'grid-list-overview': {
+    component: GridListOverviewComponent
+  },
+  'grid-list-dynamic': {
+    component: GridListDynamicComponent
+  },
   'list-selection': {
     component: ListSelectionComponent
   },
@@ -1304,6 +1312,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    GridListOverviewComponent,
+    GridListDynamicComponent,
     ListSelectionComponent,
     ListOverviewComponent,
     ListSectionsComponent,
@@ -1544,6 +1554,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    GridListOverviewComponent,
+    GridListDynamicComponent,
     ListSelectionComponent,
     ListOverviewComponent,
     ListSectionsComponent,

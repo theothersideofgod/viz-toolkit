@@ -154,6 +154,12 @@ export class ComponentsComponent implements OnInit {
           img: 'expansion panel'
         },
         {
+          title: 'grid list',
+          desc: '',
+          route: 'gridlist',
+          img: 'gridlist'
+        },
+        {
           title: 'list',
           desc: 'Container that wraps and formats a series of line items',
           route: 'list',
