@@ -108,7 +108,7 @@ const sketch_link = {
     'Insert / Toolkit Material Library / ✱ / Icon / (Select desired icon)'
   ],
   divider: [
-    'Insert / Toolkit Material Library / ✱ / Divider'
+    'Insert / Toolkit Material Library / Components / Divider'
   ],
   buttontoggle: [
     'Insert / Toolkit Material Library / Components / Button Toggle / 3 Toggles / Icon or Text',

@@ -39,6 +39,7 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { DividerOverviewComponent } from './divider-overview/divider-overview.component';
 import { DatepickerDateClassComponent } from './datepicker-date-class/datepicker-date-class.component';
 import {
   DatepickerCustomHeaderComponent,
@@ -296,7 +297,6 @@ import {
   LoginOktaComponent,
   LoginOktaData
 } from './login-okta/login-okta.component';
-import { DividerComponent, DividerData } from './divider/divider.component';
 import {
   IconographyComponent,
   IconographyData
@@ -626,6 +626,9 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'divider-overview': {
+    component: DividerOverviewComponent
+  },
   'datepicker-date-class': {
     component: DatepickerDateClassComponent
   },
@@ -965,10 +968,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: LoginOktaComponent,
     data: LoginOktaData
   },
-  divider: {
-    component: DividerComponent,
-    data: DividerData
-  },
   iconography: {
     component: IconographyComponent,
     data: IconographyData
@@ -1297,6 +1296,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    DividerOverviewComponent,
     ExampleHeader,
     DatepickerDateClassComponent,
     DatepickerCustomHeaderComponent,
@@ -1401,7 +1401,6 @@ export const ALL_EXAMPLE_ITEMS = {
     FormFieldPrefixSuffixComponent,
     FormFieldClearButtonComponent,
     LoginOktaComponent,
-    DividerComponent,
     IconographyComponent,
     FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
@@ -1530,6 +1529,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    DividerOverviewComponent,
     ExampleHeader,
     DatepickerDateClassComponent,
     DatepickerCustomHeaderComponent,
@@ -1634,7 +1634,6 @@ export const ALL_EXAMPLE_ITEMS = {
     FormFieldPrefixSuffixComponent,
     FormFieldClearButtonComponent,
     LoginOktaComponent,
-    DividerComponent,
     IconographyComponent,
     FormFieldValidationComponent,
     DatePickerSingleErrorComponent,

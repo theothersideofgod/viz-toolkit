@@ -21,6 +21,7 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'divideroverview', name: 'DividerOverview', examples: ['divider-overview']},
         {id: 'datepickerdateclass', name: 'DatepickerDateClass', examples: ['datepicker-date-class']},
         {id: 'datepickercustomheader', name: 'DatepickerCustomHeader', examples: ['datepicker-custom-header']},
         {id: 'datepickercolor', name: 'DatepickerColor', examples: ['datepicker-color']},
