@@ -148,6 +148,12 @@ export class ComponentsComponent implements OnInit {
           img: 'card'
         },
         {
+          title: 'divider',
+          desc: 'A line separator with various orientation options.',
+          route: 'divider',
+          img: 'divider'
+        },
+        {
           title: 'expansion panel',
           desc: 'An expandable detail-summary view',
           route: 'expansionpanel',
@@ -166,6 +172,12 @@ export class ComponentsComponent implements OnInit {
           img: 'list'
         },
         {
+          title: 'stepper',
+          desc: 'Steppers convey progress through numbered steps.',
+          route: 'stepper',
+          img: 'stepper'
+        },
+        {
           title: 'tabs',
           desc: 'Organize content into separate views',
           route: 'tabs',
@@ -176,18 +188,6 @@ export class ComponentsComponent implements OnInit {
           desc: 'Styled tree that can be used to display hierarchy of data',
           route: 'tree',
           img: 'tree'
-        },
-        {
-          title: 'stepper',
-          desc: 'Steppers convey progress through numbered steps.',
-          route: 'stepper',
-          img: 'stepper'
-        },
-        {
-          title: 'divider',
-          desc: 'A line separator with various orientation options.',
-          route: 'divider',
-          img: 'divider'
         }
       ]
     },

@@ -108,6 +108,10 @@ const initNavList = [
         value: 'card'
       },
       {
+        name: 'Divider',
+        value: 'divider'
+      },
+      {
         name: 'Expansion Panel',
         value: 'expansionpanel'
       },
@@ -120,20 +124,16 @@ const initNavList = [
         value: 'list'
       },
       {
+        name: 'Stepper',
+        value: 'stepper'
+      },
+      {
         name: 'Tabs',
         value: 'tabs'
       },
       {
         name: 'Tree',
         value: 'tree'
-      },
-      {
-        name: 'Stepper',
-        value: 'stepper'
-      },
-      {
-        name: 'Divider',
-        value: 'divider'
       }
     ]
   },
