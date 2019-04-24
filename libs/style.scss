@@ -232,8 +232,18 @@ td.mat-cell,
   }
 }
 
-//list style
+//divider
+.mat-divider {
+  border-top-color: rgba(#d7dde5,0.5) !important
+}
 
+//list style
+.mat-list-item {
+  color: $viz-gray !important;
+  .mat-icon {
+    color: $viz-dark-gray;
+  }
+}
 
 //snackbar style
 
