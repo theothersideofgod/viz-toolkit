@@ -1,0 +1,9 @@
+.example-user-input {
+  margin-right: 24px;
+}
+
+:host {
+  display: flex;
+  padding-left: 56px;
+  align-items: baseline;
+}

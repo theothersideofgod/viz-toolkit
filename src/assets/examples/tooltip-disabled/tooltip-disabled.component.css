@@ -1,0 +1,9 @@
+.example-disabled-checkbox {
+  margin-left: 24px;
+}
+
+:host {
+  display: flex;
+  padding-left: 56px;
+  align-items: baseline;
+}

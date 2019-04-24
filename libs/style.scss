@@ -466,24 +466,6 @@ mat-tab-group:not([class*='mat-background-']) {
 }
 
 //tooltip
-*[mattooltip] {
-  cursor: pointer;
-}
-.cdk-overlay-pane.mat-tooltip-panel {
-  .mat-tooltip {
-    background-color: #696969;
-    font-family: soleto;
-    font-weight: 300;
-    color: #ffffff;
-    font-size: 12px;
-    line-height: 24px;
-    height: 24px;
-    padding: 0 8px;
-    white-space: nowrap;
-    width: auto;
-    max-width: none;
-  }
-}
 
 //icon
 // .mat-icon {

@@ -1,0 +1,13 @@
+.example-user-input {
+  margin-right: 8px;
+}
+
+:host {
+  display: flex;
+  padding-left: 56px;
+  align-items: baseline;
+}
+
+button {
+  margin-left: 24px;
+}

@@ -1,0 +1,10 @@
+.example-button {
+  display: flex;
+  margin-left: 56px;
+}
+
+.example-tooltip-red {
+  background: #b71c1c;
+}
+
+

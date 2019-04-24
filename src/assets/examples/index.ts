@@ -39,6 +39,15 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { TooltipAutoHideComponent } from './tooltip-auto-hide/tooltip-auto-hide.component';
+import { TooltipModifiedDefaultsComponent } from './tooltip-modified-defaults/tooltip-modified-defaults.component';
+import { TooltipMessageComponent } from './tooltip-message/tooltip-message.component';
+import { TooltipManualComponent } from './tooltip-manual/tooltip-manual.component';
+import { TooltipDisabledComponent } from './tooltip-disabled/tooltip-disabled.component';
+import { TooltipDelayComponent } from './tooltip-delay/tooltip-delay.component';
+import { TooltipCustomClassComponent } from './tooltip-custom-class/tooltip-custom-class.component';
+import { TooltipPositionComponent } from './tooltip-position/tooltip-position.component';
+import { TooltipOverviewComponent } from './tooltip-overview/tooltip-overview.component';
 import { DividerOverviewComponent } from './divider-overview/divider-overview.component';
 import { DatepickerDateClassComponent } from './datepicker-date-class/datepicker-date-class.component';
 import {
@@ -338,10 +347,6 @@ import {
   SliderEventData
 } from './slider-event/slider-event.component';
 import {
-  ToolbarColorComponent,
-  ToolbarColorData
-} from './toolbar-color/toolbar-color.component';
-import {
   DatePickerEventComponent,
   DatePickerEventData
 } from './date-picker-event/date-picker-event.component';
@@ -527,10 +532,6 @@ import {
   PaginatorBasicData
 } from './paginator-basic/paginator-basic.component';
 import {
-  TooltipBasicComponent,
-  TooltipBasicData
-} from './tooltip-basic/tooltip-basic.component';
-import {
   FooterBasicComponent,
   FooterBasicData
 } from './footer-basic/footer-basic.component';
@@ -595,10 +596,6 @@ import {
   ExpansionPanelBasicData
 } from './expansion-panel-basic/expansion-panel-basic.component';
 import {
-  ToolbarBasicComponent,
-  ToolbarBasicData
-} from './toolbar-basic/toolbar-basic.component';
-import {
   ListBasicComponent,
   ListBasicData
 } from './list-basic/list-basic.component';
@@ -626,6 +623,33 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'tooltip-auto-hide': {
+    component: TooltipAutoHideComponent
+  },
+  'tooltip-modified-defaults': {
+    component: TooltipModifiedDefaultsComponent
+  },
+  'tooltip-message': {
+    component: TooltipMessageComponent
+  },
+  'tooltip-manual': {
+    component: TooltipManualComponent
+  },
+  'tooltip-disabled': {
+    component: TooltipDisabledComponent
+  },
+  'tooltip-delay': {
+    component: TooltipDelayComponent
+  },
+  'tooltip-custom-class': {
+    component: TooltipCustomClassComponent
+  },
+  'tooltip-position': {
+    component: TooltipPositionComponent
+  },
+  'tooltip-overview': {
+    component: TooltipOverviewComponent
+  },
   'divider-overview': {
     component: DividerOverviewComponent
   },
@@ -1008,10 +1032,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: SliderEventComponent,
     data: SliderEventData
   },
-  'toolbar-color': {
-    component: ToolbarColorComponent,
-    data: ToolbarColorData
-  },
   'date-picker-event': {
     component: DatePickerEventComponent,
     data: DatePickerEventData
@@ -1200,10 +1220,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: PaginatorBasicComponent,
     data: PaginatorBasicData
   },
-  'tooltip-basic': {
-    component: TooltipBasicComponent,
-    data: TooltipBasicData
-  },
   'footer-basic': {
     component: FooterBasicComponent,
     data: FooterBasicData
@@ -1268,10 +1284,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ExpansionPanelBasicComponent,
     data: ExpansionPanelBasicData
   },
-  'toolbar-basic': {
-    component: ToolbarBasicComponent,
-    data: ToolbarBasicData
-  },
   'list-basic': {
     component: ListBasicComponent,
     data: ListBasicData
@@ -1296,6 +1308,15 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    TooltipAutoHideComponent,
+    TooltipModifiedDefaultsComponent,
+    TooltipMessageComponent,
+    TooltipManualComponent,
+    TooltipDisabledComponent,
+    TooltipDelayComponent,
+    TooltipCustomClassComponent,
+    TooltipPositionComponent,
+    TooltipOverviewComponent,
     DividerOverviewComponent,
     ExampleHeader,
     DatepickerDateClassComponent,
@@ -1411,7 +1432,6 @@ export const ALL_EXAMPLE_ITEMS = {
     MonthPickerSingleComponent,
     SliderRangeEventComponent,
     SliderEventComponent,
-    ToolbarColorComponent,
     DatePickerEventComponent,
     SliderRangeIconComponent,
     SliderRangeComponent,
@@ -1460,7 +1480,6 @@ export const ALL_EXAMPLE_ITEMS = {
     NodataBasicComponent,
     CardBasicComponent,
     PaginatorBasicComponent,
-    TooltipBasicComponent,
     FooterBasicComponent,
     HeaderBasicComponent,
     ChipPrimaryComponent,
@@ -1477,7 +1496,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SlideToggleBasicComponent,
     IconBasicComponent,
     ExpansionPanelBasicComponent,
-    ToolbarBasicComponent,
     ListBasicComponent,
     ChipBasicComponent,
     ProgressBarBasicComponent,
@@ -1529,6 +1547,15 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TooltipAutoHideComponent,
+    TooltipModifiedDefaultsComponent,
+    TooltipMessageComponent,
+    TooltipManualComponent,
+    TooltipDisabledComponent,
+    TooltipDelayComponent,
+    TooltipCustomClassComponent,
+    TooltipPositionComponent,
+    TooltipOverviewComponent,
     DividerOverviewComponent,
     ExampleHeader,
     DatepickerDateClassComponent,
@@ -1644,7 +1671,6 @@ export const ALL_EXAMPLE_ITEMS = {
     MonthPickerSingleComponent,
     SliderRangeEventComponent,
     SliderEventComponent,
-    ToolbarColorComponent,
     DatePickerEventComponent,
     SliderRangeIconComponent,
     SliderRangeComponent,
@@ -1693,7 +1719,6 @@ export const ALL_EXAMPLE_ITEMS = {
     NodataBasicComponent,
     CardBasicComponent,
     PaginatorBasicComponent,
-    TooltipBasicComponent,
     FooterBasicComponent,
     HeaderBasicComponent,
     ChipPrimaryComponent,
@@ -1710,7 +1735,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SlideToggleBasicComponent,
     IconBasicComponent,
     ExpansionPanelBasicComponent,
-    ToolbarBasicComponent,
     ListBasicComponent,
     ChipBasicComponent,
     ProgressBarBasicComponent,
