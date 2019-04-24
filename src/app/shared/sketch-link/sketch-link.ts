@@ -41,7 +41,8 @@ const sketch_link = {
     'copy from Toolkit Material Library.sketch / Toolkit Components / Layouts: Expansion Panel'
   ],
   list: [
-    'Insert / Toolkit Material Library / Components / List Group / Icon Before or Icon After'
+    'Insert / Toolkit Material Library / Components / List / Icon Before or Icon After',
+    'copy from Toolkit Material Library.sketch / Toolkit Components / Layouts: List / List with Sections'
   ],
   tabs: [
     'Insert / Toolkit Material Library / Components / Tab / Bottom Indicator',

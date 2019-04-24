@@ -233,57 +233,7 @@ td.mat-cell,
 }
 
 //list style
-.mat-list {
-  // padding-top: 0px;
-  .mat-list-item {
-    // color: #696969;
-    // background-color: #ffffff;
-    // border-bottom: 1px solid gray;
-    // &:first-child{
-    //   border-top: 1px solid gray;
-    // }
-    // .mat-icon{
-    //   color: #9f9f9f;
-    // }
-    .mat-list-item-content {
-      color: #696969;
-      font-family: Soleto;
-      font-weight: 300;
-      font-size: 14px;
-      .mat-icon {
-        color: #9f9f9f;
-        margin-right: 8px;
-      }
-    }
-  }
-}
-.mat-selection-list {
-  .mat-list-item {
-    .mat-list-item-content {
-      .mat-pseudo-checkbox {
-        color: #9f9f9f;
-      }
-      .mat-list-text {
-        flex-direction: row;
-        color: #696969;
-        font-family: Soleto;
-        font-weight: 300;
-        font-size: 14px;
-      }
-      .mat-ripple-element {
-        background-color: rgba(1, 173, 171, 0.16);
-      }
-    }
-  }
-  .mat-list-option {
-    &:hover {
-      background-color: rgba(1, 173, 171, 0.04);
-    }
-    &.mat-list-item-focus {
-      background-color: rgba(1, 173, 171, 0.12);
-    }
-  }
-}
+
 
 //snackbar style
 

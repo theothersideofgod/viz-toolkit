@@ -21,6 +21,11 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'listselection', name: 'ListSelection', examples: ['list-selection']},
+        {id: 'listoverview', name: 'ListOverview', examples: ['list-overview']},
+        {id: 'listsections', name: 'ListSections', examples: ['list-sections']},
+        {id: 'list', name: 'List', examples: ['list']},
+        {id: 'list', name: 'List', examples: ['list']},
         {id: 'tooltipautohide', name: 'TooltipAutoHide', examples: ['tooltip-auto-hide']},
         {id: 'tooltipmodifieddefaults', name: 'TooltipModifiedDefaults', examples: ['tooltip-modified-defaults']},
         {id: 'tooltipmessage', name: 'TooltipMessage', examples: ['tooltip-message']},

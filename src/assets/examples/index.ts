@@ -39,6 +39,9 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { ListSelectionComponent } from './list-selection/list-selection.component';
+import { ListOverviewComponent } from './list-overview/list-overview.component';
+import { ListSectionsComponent } from './list-sections/list-sections.component';
 import { TooltipAutoHideComponent } from './tooltip-auto-hide/tooltip-auto-hide.component';
 import { TooltipModifiedDefaultsComponent } from './tooltip-modified-defaults/tooltip-modified-defaults.component';
 import { TooltipMessageComponent } from './tooltip-message/tooltip-message.component';
@@ -544,10 +547,6 @@ import {
   ChipPrimaryData
 } from './chip-primary/chip-primary.component';
 import {
-  ListNodividerComponent,
-  ListNodividerData
-} from './list-nodivider/list-nodivider.component';
-import {
   MenuNestedComponent,
   MenuNestedData
 } from './menu-nested/menu-nested.component';
@@ -596,10 +595,6 @@ import {
   ExpansionPanelBasicData
 } from './expansion-panel-basic/expansion-panel-basic.component';
 import {
-  ListBasicComponent,
-  ListBasicData
-} from './list-basic/list-basic.component';
-import {
   ChipBasicComponent,
   ChipBasicData
 } from './chip-basic/chip-basic.component';
@@ -623,6 +618,15 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'list-selection': {
+    component: ListSelectionComponent
+  },
+  'list-overview': {
+    component: ListOverviewComponent
+  },
+  'list-sections': {
+    component: ListSectionsComponent
+  },
   'tooltip-auto-hide': {
     component: TooltipAutoHideComponent
   },
@@ -1232,10 +1236,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ChipPrimaryComponent,
     data: ChipPrimaryData
   },
-  'list-nodivider': {
-    component: ListNodividerComponent,
-    data: ListNodividerData
-  },
   'menu-nested': {
     component: MenuNestedComponent,
     data: MenuNestedData
@@ -1284,10 +1284,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ExpansionPanelBasicComponent,
     data: ExpansionPanelBasicData
   },
-  'list-basic': {
-    component: ListBasicComponent,
-    data: ListBasicData
-  },
   'chip-basic': {
     component: ChipBasicComponent,
     data: ChipBasicData
@@ -1308,6 +1304,9 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ListSelectionComponent,
+    ListOverviewComponent,
+    ListSectionsComponent,
     TooltipAutoHideComponent,
     TooltipModifiedDefaultsComponent,
     TooltipMessageComponent,
@@ -1483,7 +1482,6 @@ export const ALL_EXAMPLE_ITEMS = {
     FooterBasicComponent,
     HeaderBasicComponent,
     ChipPrimaryComponent,
-    ListNodividerComponent,
     MenuNestedComponent,
     ButtonBasicComponent,
     DatePickerBasicComponent,
@@ -1496,7 +1494,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SlideToggleBasicComponent,
     IconBasicComponent,
     ExpansionPanelBasicComponent,
-    ListBasicComponent,
     ChipBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
@@ -1547,6 +1544,9 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ListSelectionComponent,
+    ListOverviewComponent,
+    ListSectionsComponent,
     TooltipAutoHideComponent,
     TooltipModifiedDefaultsComponent,
     TooltipMessageComponent,
@@ -1722,7 +1722,6 @@ export const ALL_EXAMPLE_ITEMS = {
     FooterBasicComponent,
     HeaderBasicComponent,
     ChipPrimaryComponent,
-    ListNodividerComponent,
     MenuNestedComponent,
     ButtonBasicComponent,
     DatePickerBasicComponent,
@@ -1735,7 +1734,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SlideToggleBasicComponent,
     IconBasicComponent,
     ExpansionPanelBasicComponent,
-    ListBasicComponent,
     ChipBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,

@@ -1,153 +1,260 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Layout
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    List
-  </div>
-  <div class="doc-desc-1">
-    Lists are a continuous group of text or images. They are composed of items
-    containing primary and supplemental actions, which
-    are represented by icons and text. </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2 mb-24">
-    Examples
-    <span class="docs-more-example"></span>
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-
-  <div class="doc-title-4 mb-8">
-    Basic List without Divider
-  </div>
-  <div class="doc-desc-2 mb-16">
-    Single-line list items contain a maximum of one line of text without
-    divider.
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="list-nodivider"></div>
-  </div>
-
-
-  <div class="doc-title-4 mb-16">
-    Basic List with Divider
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="list-basic"></div>
-  </div>
-
-
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>disableRipple</td>
-        <td>Whether ripples are disabled.</td>
-        <td>boolean</td>
-        <td>false</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Lists are a continuous group of text. They are composed of items containing
-    primary and supplemental actions, which are represented
-    by icons and text.
-    <ul class="doc-list">
-      <li>Logical: Lists should be sorted in logical ways that make content
-        easy to scan, such as alphabetical, numerical, chronological,
-        or by user preference.</li>
-      <li>Actionable: Lists present content in a way that makes it easy to
-        identify a specific item in a collection and act on
-        it.
-      </li>
-      <li>Consistent: Lists should present icons, text, and actions in a
-        consistent format.</li>
-    </ul>
-  </div>
-
-  <div class="doc-divider"></div>
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    All items in a list should be consistent continuously.
-  </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:304px">
-      <img src="assets/img/doc/list-do.png" alt="">
+  <body>
+    <div class="doc-category-title ">
+      Layout
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center" style="height:304px;margin-top:24px">
-      <img src="assets/img/doc/list-dont.png" alt="">
+    <div class="doc-title-1">
+      List
     </div>
-  </div>
+    <div class="doc-desc-1">
+      Lists are a continuous group of text or images. They are composed of items
+      containing primary and supplemental actions, which are represented by
+      icons and text.
+    </div>
 
-  <div class="doc-divider"></div>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2 mb-24">
+      Examples
+      <span class="docs-more-example"></span>
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-title-4 mb-16">
+      Basic list
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="list-overview"></div>
+    </div>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:368px">
-    <img src="assets/img/doc/list-spec.png" alt="">
-  </div>
+    <div class="doc-title-4 mb-16">
+      List with selection
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="list-selection"></div>
+    </div>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component
-      Location for Designers</span>
-  </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sketch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path
-    within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+    <div class="doc-title-4 mb-16">
+      List with sections
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="list-sections"></div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-desc-2">
+      To get a customized list, just set
+      <span class="doc-desc-2-highlight"
+        >disableRipple / disableRipple / disableRipple / checkboxPosition /
+        disableRipple / disabled / selected / value / compareWith /
+        disableRipple / disabled / selectionChange / options / selectedOptions /
+        option / source</span
+      >
+    </div>
+
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>checkboxPosition</td>
+          <td>
+            Whether the label should appear before or after the checkbox.
+            Defaults to &apos;after&apos;
+          </td>
+          <td>&apos;before&apos; | &apos;after&apos;</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disabled</td>
+          <td>Whether the option is disabled.</td>
+          <td>any</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>selected</td>
+          <td>Whether the option is selected.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>value</td>
+          <td>Value of the option</td>
+          <td>any</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>compareWith</td>
+          <td>
+            Function used for comparing an option against the selected value
+            when determining which options should appear as selected. The first
+            argument is the value of an options. The second one is a value from
+            the selected value. A boolean must be returned.
+          </td>
+          <td>(o1: any, o2: any) =&gt; boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disabled</td>
+          <td>Whether the selection list is disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>selectionChange</td>
+          <td>
+            Emits a change event whenever the selected state of an option
+            changes.
+          </td>
+          <td>EventEmitter<matselectionlistchange></matselectionlistchange></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>options</td>
+          <td>The option components contained within this selection-list.</td>
+          <td>QueryList<matlistoption></matlistoption></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>selectedOptions</td>
+          <td>The currently selected options.</td>
+          <td>SelectionModel<matlistoption></matlistoption></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>option</td>
+          <td>Reference to the option that has been changed.</td>
+          <td>MatListOption</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>source</td>
+          <td>Reference to the selection list that emitted the event.</td>
+          <td>MatSelectionList</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+    
 
 
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
 
+    <div class="doc-desc-2">
+      All items in a list should be consistent continuously.
+    </div>
 
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center"
+        style="height:304px"
+      >
+        <img src="assets/img/doc/list-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center"
+        style="height:304px;margin-top:24px"
+      >
+        <img src="assets/img/doc/list-dont.png" alt="" />
+      </div>
+    </div>
 
-</body>
+    <div class="doc-divider"></div>
 
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:368px">
+      <img src="assets/img/doc/list-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sketch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+    <div sketch-link="1"></div>
+  </body>
 </html>
