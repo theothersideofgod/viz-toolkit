@@ -155,7 +155,7 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'grid list',
-          desc: '',
+          desc: 'List view that arranges cells into grid-based layout',
           route: 'gridlist',
           img: 'gridlist'
         },
