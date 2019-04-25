@@ -39,6 +39,8 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { ExpansionStepsComponent } from './expansion-steps/expansion-steps.component';
+import { ExpansionOverviewComponent } from './expansion-overview/expansion-overview.component';
 import { GridListOverviewComponent } from './grid-list-overview/grid-list-overview.component';
 import { GridListDynamicComponent } from './grid-list-dynamic/grid-list-dynamic.component';
 import { ListSelectionComponent } from './list-selection/list-selection.component';
@@ -324,10 +326,6 @@ import {
   DatePickerSingleErrorData
 } from './date-picker-single-error/date-picker-single-error.component';
 import {
-  ExpansionPanelAngularComponent,
-  ExpansionPanelAngularData
-} from './expansion-panel-angular/expansion-panel-angular.component';
-import {
   CustomerSelectComponent,
   CustomerSelectData
 } from './customer-select/customer-select.component';
@@ -497,10 +495,6 @@ import {
   BottomsheetBasicData
 } from './bottomsheet-basic/bottomsheet-basic.component';
 import {
-  ExpansionPanelTableComponent,
-  ExpansionPanelTableData
-} from './expansion-panel-table/expansion-panel-table.component';
-import {
   TableNativeComponent,
   TableNativeData
 } from './table-native/table-native.component';
@@ -593,10 +587,6 @@ import {
   IconBasicData
 } from './icon-basic/icon-basic.component';
 import {
-  ExpansionPanelBasicComponent,
-  ExpansionPanelBasicData
-} from './expansion-panel-basic/expansion-panel-basic.component';
-import {
   ChipBasicComponent,
   ChipBasicData
 } from './chip-basic/chip-basic.component';
@@ -620,6 +610,12 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'expansion-steps': {
+    component: ExpansionStepsComponent
+  },
+  'expansion-overview': {
+    component: ExpansionOverviewComponent
+  },
   'grid-list-overview': {
     component: GridListOverviewComponent
   },
@@ -1016,10 +1012,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: DatePickerSingleErrorComponent,
     data: DatePickerSingleErrorData
   },
-  'expansion-panel-angular': {
-    component: ExpansionPanelAngularComponent,
-    data: ExpansionPanelAngularData
-  },
   'customer-select': {
     component: CustomerSelectComponent,
     data: CustomerSelectData
@@ -1192,10 +1184,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: BottomsheetBasicComponent,
     data: BottomsheetBasicData
   },
-  'expansion-panel-table': {
-    component: ExpansionPanelTableComponent,
-    data: ExpansionPanelTableData
-  },
   'table-native': {
     component: TableNativeComponent,
     data: TableNativeData
@@ -1288,10 +1276,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: IconBasicComponent,
     data: IconBasicData
   },
-  'expansion-panel-basic': {
-    component: ExpansionPanelBasicComponent,
-    data: ExpansionPanelBasicData
-  },
   'chip-basic': {
     component: ChipBasicComponent,
     data: ChipBasicData
@@ -1312,6 +1296,8 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ExpansionStepsComponent,
+    ExpansionOverviewComponent,
     GridListOverviewComponent,
     GridListDynamicComponent,
     ListSelectionComponent,
@@ -1434,7 +1420,6 @@ export const ALL_EXAMPLE_ITEMS = {
     IconographyComponent,
     FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
-    ExpansionPanelAngularComponent,
     CustomerSelectComponent,
     FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
@@ -1479,7 +1464,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SearchBasicComponent,
     BreadscrumbBasicComponent,
     BottomsheetBasicComponent,
-    ExpansionPanelTableComponent,
     TableNativeComponent,
     TableBasicComponent,
     ProgressSpinnerBasicComponent,
@@ -1503,7 +1487,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SliderBasicComponent,
     SlideToggleBasicComponent,
     IconBasicComponent,
-    ExpansionPanelBasicComponent,
     ChipBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
@@ -1554,6 +1537,8 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ExpansionStepsComponent,
+    ExpansionOverviewComponent,
     GridListOverviewComponent,
     GridListDynamicComponent,
     ListSelectionComponent,
@@ -1676,7 +1661,6 @@ export const ALL_EXAMPLE_ITEMS = {
     IconographyComponent,
     FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
-    ExpansionPanelAngularComponent,
     CustomerSelectComponent,
     FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
@@ -1721,7 +1705,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SearchBasicComponent,
     BreadscrumbBasicComponent,
     BottomsheetBasicComponent,
-    ExpansionPanelTableComponent,
     TableNativeComponent,
     TableBasicComponent,
     ProgressSpinnerBasicComponent,
@@ -1745,7 +1728,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SliderBasicComponent,
     SlideToggleBasicComponent,
     IconBasicComponent,
-    ExpansionPanelBasicComponent,
     ChipBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,

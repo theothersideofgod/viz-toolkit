@@ -113,7 +113,7 @@ const initNavList = [
       },
       {
         name: 'Expansion Panel',
-        value: 'expansionpanel'
+        value: 'expansion'
       },
       {
         name: 'Grid List',

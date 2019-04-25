@@ -37,7 +37,7 @@ const sketch_link = {
   card: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Layouts: Cards'
   ],
-  expansionpanel: [
+  expansion: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Layouts: Expansion Panel'
   ],
   list: [

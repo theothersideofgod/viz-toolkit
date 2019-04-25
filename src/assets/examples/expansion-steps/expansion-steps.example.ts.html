@@ -1,0 +1,25 @@
+<span class="hljs-keyword">import</span> {Component} from <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title</span> Expansion panel as accordion
+ */</span>
+<span class="hljs-meta">@Component({
+  selector: <span class="hljs-meta-string">'expansion-steps'</span>,
+  templateUrl: <span class="hljs-meta-string">'expansion-steps.component.html'</span>,
+  styleUrls: [<span class="hljs-meta-string">'expansion-steps.component.css'</span>],
+})</span>
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExpansionStepsComponent</span> </span>{
+  step = <span class="hljs-number">0</span>;
+
+  setStep(index: number) {
+    <span class="hljs-keyword">this</span>.step = index;
+  }
+
+  nextStep() {
+    <span class="hljs-keyword">this</span>.step++;
+  }
+
+  prevStep() {
+    <span class="hljs-keyword">this</span>.step--;
+  }
+}

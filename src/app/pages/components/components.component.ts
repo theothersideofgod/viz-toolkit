@@ -156,7 +156,7 @@ export class ComponentsComponent implements OnInit {
         {
           title: 'expansion panel',
           desc: 'An expandable detail-summary view',
-          route: 'expansionpanel',
+          route: 'expansion',
           img: 'expansion panel'
         },
         {
