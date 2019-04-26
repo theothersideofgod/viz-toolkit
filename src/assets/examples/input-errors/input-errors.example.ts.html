@@ -1,0 +1,17 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/**
+ * @title Input with error messages
+ */</span>
+@Component({
+  selector: <span class="hljs-string">'input-errors'</span>,
+  templateUrl: <span class="hljs-string">'input-errors.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'input-errors.component.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InputErrorsComponent</span> {</span>
+  emailFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [
+    Validators.required,
+    Validators.email,
+  ]);
+}

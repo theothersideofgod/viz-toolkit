@@ -1,0 +1,250 @@
+<html>
+  <head></head>
+
+  <body>
+    <div class="doc-category-title">
+      Form Controls
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
+    </div>
+    <div class="doc-title-1">Input</div>
+    <div class="doc-desc-1">
+      Input let users enter and edit text.
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-more-example"></span>
+
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Basic Inputs
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="input-overview"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Input with a custom ErrorStateMatcher
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="input-error-state-matcher"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Auto-resizing textarea
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="text-field-autosize-textarea"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Input with a clear button
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="input-clearable"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Input with error messages
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="input-errors"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Inputs in a form
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="input-form"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Input with hints
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="input-hint"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Inputs with prefixes and suffixes
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="input-prefix-suffix"></div>
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      To get a customized input, just set
+      <span class="doc-desc-2-highlight"
+        >enabled / matAutosize / matAutosizeMaxRows / matAutosizeMinRows /
+        matTextareaAutosize / maxRows / minRows / errorStateMatcher / readonly /
+        type / errorState</span
+      >
+    </div>
+
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>enabled</td>
+          <td>Whether autosizing is enabled or not</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>matAutosize</td>
+          <td></td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>matAutosizeMaxRows</td>
+          <td></td>
+          <td>number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>matAutosizeMinRows</td>
+          <td></td>
+          <td>number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>matTextareaAutosize</td>
+          <td></td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>maxRows</td>
+          <td>Maximum amount of rows in the textarea.</td>
+          <td>number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>minRows</td>
+          <td>Minimum amount of rows in the textarea.</td>
+          <td>number</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>errorStateMatcher</td>
+          <td>An object used to control when error messages are shown.</td>
+          <td>ErrorStateMatcher</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>readonly</td>
+          <td>Whether the element is readonly.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>type</td>
+          <td>Input type of the element.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>errorState</td>
+          <td>Whether the control is in an error state.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+    <div class="doc-desc-2">
+      When using a both types of text fields, don’t use both next to each other,
+      or within the same form.
+    </div>
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center-no-scale mb-16"
+        style="height:482px"
+      >
+        <img src="assets/img/doc/input-same-do.png" alt="" style="height: 370px"/>
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale"
+        style="height:495px"
+      >
+        <img src="assets/img/doc/input-same-dont.png" alt="" style="height: 383px"/>
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center mb-16" style="height:280px">
+      <img src="assets/img/doc/input-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sketch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+    <div sketch-link="1"></div>
+    <div sketch-link="2"></div>
+    <div sketch-link="3"></div>
+  </body>
+</html>

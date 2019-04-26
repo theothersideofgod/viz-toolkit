@@ -204,10 +204,7 @@ $viz-typography: mat-typography-config(
 .mat-focused .mat-form-field-required-marker {
   color: $chart-teal;
 }
-.mat-input-element,
-.mat-select-value {
-  color: $font-grey;
-}
+
 .mat-tab-label {
   display: -ms-inline-flexbox;
 }
@@ -782,12 +779,7 @@ div[ng-reflect-ng-switch='year'] {
 //   min-width: inherit !important;
 //   left: 32px;
 // }
-.mat-form-field {
-  vertical-align: middle;
-  &.mat-form-field-disabled {
-    opacity: 0.4;
-  }
-}
+
 mat-select {
   .mat-select-arrow {
     color: $viz-dark-gray;

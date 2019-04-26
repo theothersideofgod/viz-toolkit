@@ -78,6 +78,12 @@ export class ComponentsComponent implements OnInit {
           img: 'form field'
         },
         {
+          title: 'input',
+          desc: '',
+          route: 'input',
+          img: 'input'
+        },
+        {
           title: 'radio button',
           desc: 'All states of the radio button',
           route: 'radio',

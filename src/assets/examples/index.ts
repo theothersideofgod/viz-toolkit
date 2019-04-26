@@ -39,7 +39,18 @@ import {
   VizFileUploadModule
 } from 'libs';
 
-import { FormFieldCustomControlComponent, MyTelInput } from './form-field-custom-control/form-field-custom-control.component';
+import { InputPrefixSuffixComponent } from './input-prefix-suffix/input-prefix-suffix.component';
+import { InputHintComponent } from './input-hint/input-hint.component';
+import { InputFormComponent } from './input-form/input-form.component';
+import { InputErrorsComponent } from './input-errors/input-errors.component';
+import { InputClearableComponent } from './input-clearable/input-clearable.component';
+import { TextFieldAutosizeTextareaComponent } from './text-field-autosize-textarea/text-field-autosize-textarea.component';
+import { InputErrorStateMatcherComponent } from './input-error-state-matcher/input-error-state-matcher.component';
+import { InputOverviewComponent } from './input-overview/input-overview.component';
+import {
+  FormFieldCustomControlComponent,
+  MyTelInput
+} from './form-field-custom-control/form-field-custom-control.component';
 import { FormFieldThemingComponent } from './form-field-theming/form-field-theming.component';
 import { FormFieldPrefixSuffixComponent } from './form-field-prefix-suffix/form-field-prefix-suffix.component';
 import { FormFieldErrorComponent } from './form-field-error/form-field-error.component';
@@ -569,6 +580,30 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'input-prefix-suffix': {
+    component: InputPrefixSuffixComponent
+  },
+  'input-hint': {
+    component: InputHintComponent
+  },
+  'input-form': {
+    component: InputFormComponent
+  },
+  'input-errors': {
+    component: InputErrorsComponent
+  },
+  'input-clearable': {
+    component: InputClearableComponent
+  },
+  'text-field-autosize-textarea': {
+    component: TextFieldAutosizeTextareaComponent
+  },
+  'input-error-state-matcher': {
+    component: InputErrorStateMatcherComponent
+  },
+  'input-overview': {
+    component: InputOverviewComponent
+  },
   'form-field-custom-control': {
     component: FormFieldCustomControlComponent
   },
@@ -1231,6 +1266,14 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    InputPrefixSuffixComponent,
+    InputHintComponent,
+    InputFormComponent,
+    InputErrorsComponent,
+    InputClearableComponent,
+    TextFieldAutosizeTextareaComponent,
+    InputErrorStateMatcherComponent,
+    InputOverviewComponent,
     MyTelInput,
     FormFieldCustomControlComponent,
     FormFieldThemingComponent,
@@ -1468,6 +1511,14 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    InputPrefixSuffixComponent,
+    InputHintComponent,
+    InputFormComponent,
+    InputErrorsComponent,
+    InputClearableComponent,
+    TextFieldAutosizeTextareaComponent,
+    InputErrorStateMatcherComponent,
+    InputOverviewComponent,
     MyTelInput,
     FormFieldCustomControlComponent,
     FormFieldThemingComponent,

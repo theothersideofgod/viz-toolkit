@@ -2,7 +2,9 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 const sketch_link = {
-  checkbox: ['Insert / Toolkit Material Library / Components / Checkbox / Off or On & Indeterminate'],
+  checkbox: [
+    'Insert / Toolkit Material Library / Components / Checkbox / Off or On & Indeterminate'
+  ],
   datepicker: [
     'Insert / Toolkit Material Library / Components / Datepicker / Range / Default or Selected 1 or Selected 2',
     'Insert / Toolkit Material Library / Components / Datepicker / Year Range / Year or Month or Date',
@@ -15,9 +17,7 @@ const sketch_link = {
     'Insert / Toolkit Material Library / Components / Form Field / Fill Form Field / Default or Activated',
     'Insert / Toolkit Material Library / Components / Form Field / Outline Form Field / Default or Activated'
   ],
-  radio: [
-    'Insert / Toolkit Material Library / Components / Radio Button'
-  ],
+  radio: ['Insert / Toolkit Material Library / Components / Radio Button'],
   select: [
     'Insert / Toolkit Material Library / Components / Dropdown / Default or Active'
   ],
@@ -61,11 +61,9 @@ const sketch_link = {
   button: [
     'Insert / Toolkit Material Library / Components / Button / Default',
     'Insert / Toolkit Material Library / Components / Button / Left Icon or Right Icon',
-    'Insert / Toolkit Material Library / Components / Button / FAB',
+    'Insert / Toolkit Material Library / Components / Button / FAB'
   ],
-  badge: [
-    'Insert / Toolkit Material Library / Components / Badge'
-  ],
+  badge: ['Insert / Toolkit Material Library / Components / Badge'],
   chips: [
     'Insert / Toolkit Material Library / Components / Chip / Choice',
     'Insert / Toolkit Material Library / Components / Chip / Input'
@@ -112,9 +110,7 @@ const sketch_link = {
   iconography: [
     'Insert / Toolkit Material Library / ✱ / Icon / (Select desired icon)'
   ],
-  divider: [
-    'Insert / Toolkit Material Library / Components / Divider'
-  ],
+  divider: ['Insert / Toolkit Material Library / Components / Divider'],
   buttontoggle: [
     'Insert / Toolkit Material Library / Components / Button Toggle / 3 Toggles / Icon or Text',
     'Insert / Toolkit Material Library / Components / Button Toggle / 2 Toggles or 3 Toggles / Icon or Text'
@@ -122,10 +118,16 @@ const sketch_link = {
   sort: [
     'Copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
   ],
-  ripples: [
-    'Insert / Toolkit Material Library / ✱ / Ripple'
+  ripples: ['Insert / Toolkit Material Library / ✱ / Ripple'],
+  autocomplete: [
+    'copy from Toolkit Material Library.sketch / Toolkit Components / Form Controls: Form Field, Input, Select, Autocomplete / Autocomplete'
   ],
-  autocomplete: ['copy from Toolkit Material Library.sketch / Toolkit Components / Form Controls: Form Field, Input, Select, Autocomplete / Autocomplete']
+  input: [
+    'Insert / Toolkit Material Library / Components / Textarea / Empty or Filled',
+    'Insert / Toolkit Material Library / Components / Form Field / Basic',
+    'Insert / Toolkit Material Library / Components / Form Field / Basic With Hint',
+    'Insert / Toolkit Material Library / Components / Form Field / Prefix & Suffix'
+  ]
 };
 
 @Component({

@@ -54,6 +54,10 @@ const initNavList = [
         value: 'formfield'
       },
       {
+        name: 'Input',
+        value: 'input'
+      },
+      {
         name: 'Radio Button',
         value: 'radio'
       },
