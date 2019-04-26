@@ -482,6 +482,11 @@ mat-chip {
 //paginator
 
 //table
+.mat-header-cell {
+  color: $viz-dark-gray !important;
+} 
+
+
 .viz-table {
   width: 100%;
 
