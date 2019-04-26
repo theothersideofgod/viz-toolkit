@@ -1,6 +1,6 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span>
        [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> <span class="hljs-attr">multiTemplateDataRows</span>
-       <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-elevation-z8"</span>&gt;</span>
+       &gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"{{column}}"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let column of columnsToDisplay"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> {{column}} <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element[column]}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
