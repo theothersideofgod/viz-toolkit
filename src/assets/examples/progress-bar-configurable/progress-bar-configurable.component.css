@@ -1,0 +1,26 @@
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.example-margin {
+  margin-right: 24px;
+}
+
+.example-controller {
+  padding-left: 56px;
+}
+
+.example-section-result {
+  display: flex;
+  align-items: center;
+  height: 160px;
+  width: 260px;
+  margin: 0 auto;
+}

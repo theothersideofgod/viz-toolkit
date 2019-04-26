@@ -21,6 +21,12 @@ const DOCS: {[key: string]: DocCategory[]} = {
       id: 'buttons&indicators',
       name: 'Buttons & Indicators',
       items: [
+        {id: 'progressbarquery', name: 'ProgressBarQuery', examples: ['progress-bar-query']},
+        {id: 'progressbarbuffer', name: 'ProgressBarBuffer', examples: ['progress-bar-buffer']},
+        {id: 'progressbarindeterminate', name: 'ProgressBarIndeterminate', examples: ['progress-bar-indeterminate']},
+        {id: 'progressbardeterminate', name: 'ProgressBarDeterminate', examples: ['progress-bar-determinate']},
+        {id: 'progressbarconfigurable', name: 'ProgressBarConfigurable', examples: ['progress-bar-configurable']},
+        {id: 'progressbar', name: 'ProgressBar', examples: ['progress-bar']},
         {id: 'selecterrorstatematcher', name: 'SelectErrorStateMatcher', examples: ['select-error-state-matcher']},
         {id: 'selectpanelclass', name: 'SelectPanelClass', examples: ['select-panel-class']},
         {id: 'selectnoripple', name: 'SelectNoRipple', examples: ['select-no-ripple']},

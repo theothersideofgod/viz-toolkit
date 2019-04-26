@@ -39,6 +39,11 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { ProgressBarQueryComponent } from './progress-bar-query/progress-bar-query.component';
+import { ProgressBarBufferComponent } from './progress-bar-buffer/progress-bar-buffer.component';
+import { ProgressBarIndeterminateComponent } from './progress-bar-indeterminate/progress-bar-indeterminate.component';
+import { ProgressBarDeterminateComponent } from './progress-bar-determinate/progress-bar-determinate.component';
+import { ProgressBarConfigurableComponent } from './progress-bar-configurable/progress-bar-configurable.component';
 import { SelectErrorStateMatcherComponent } from './select-error-state-matcher/select-error-state-matcher.component';
 import { SelectPanelClassComponent } from './select-panel-class/select-panel-class.component';
 import { SelectNoRippleComponent } from './select-no-ripple/select-no-ripple.component';
@@ -437,10 +442,6 @@ import {
   DotPlotChartBasicData
 } from './dot-plot-chart-basic/dot-plot-chart-basic.component';
 import {
-  ProgressBarChartBasicComponent,
-  ProgressBarChartBasicData
-} from './progress-bar-chart-basic/progress-bar-chart-basic.component';
-import {
   BarChartBasicComponent,
   BarChartBasicData
 } from './bar-chart-basic/bar-chart-basic.component';
@@ -549,10 +550,6 @@ import {
   ChipBasicData
 } from './chip-basic/chip-basic.component';
 import {
-  ProgressBarBasicComponent,
-  ProgressBarBasicData
-} from './progress-bar-basic/progress-bar-basic.component';
-import {
   HeaderFooterBasicComponent,
   HeaderFooterBasicData
 } from './header-footer-basic/header-footer-basic.component';
@@ -568,6 +565,21 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'progress-bar-query': {
+    component: ProgressBarQueryComponent
+  },
+  'progress-bar-buffer': {
+    component: ProgressBarBufferComponent
+  },
+  'progress-bar-indeterminate': {
+    component: ProgressBarIndeterminateComponent
+  },
+  'progress-bar-determinate': {
+    component: ProgressBarDeterminateComponent
+  },
+  'progress-bar-configurable': {
+    component: ProgressBarConfigurableComponent
+  },
   'select-error-state-matcher': {
     component: SelectErrorStateMatcherComponent
   },
@@ -1138,10 +1150,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: DotPlotChartBasicComponent,
     data: DotPlotChartBasicData
   },
-  'progress-bar-chart-basic': {
-    component: ProgressBarChartBasicComponent,
-    data: ProgressBarChartBasicData
-  },
   'bar-chart-basic': {
     component: BarChartBasicComponent,
     data: BarChartBasicData
@@ -1250,10 +1258,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: ChipBasicComponent,
     data: ChipBasicData
   },
-  'progress-bar-basic': {
-    component: ProgressBarBasicComponent,
-    data: ProgressBarBasicData
-  },
   'header-footer-basic': {
     component: HeaderFooterBasicComponent,
     data: HeaderFooterBasicData
@@ -1266,6 +1270,11 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ProgressBarQueryComponent,
+    ProgressBarBufferComponent,
+    ProgressBarIndeterminateComponent,
+    ProgressBarDeterminateComponent,
+    ProgressBarConfigurableComponent,
     SelectErrorStateMatcherComponent,
     SelectPanelClassComponent,
     SelectNoRippleComponent,
@@ -1440,8 +1449,6 @@ export const ALL_EXAMPLE_ITEMS = {
     BenchmarkChartBasicComponent,
     ComparativeChartBasicComponent,
     DotPlotChartBasicComponent,
-    ProgressBarChartBasicComponent,
-    ProgressBarBasicComponent,
     BarChartBasicComponent,
     LineChartBasicComponent,
     SearchBasicComponent,
@@ -1469,7 +1476,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SlideToggleBasicComponent,
     IconBasicComponent,
     ChipBasicComponent,
-    ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent
   ],
@@ -1517,6 +1523,11 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ProgressBarQueryComponent,
+    ProgressBarBufferComponent,
+    ProgressBarIndeterminateComponent,
+    ProgressBarDeterminateComponent,
+    ProgressBarConfigurableComponent,
     SelectErrorStateMatcherComponent,
     SelectPanelClassComponent,
     SelectNoRippleComponent,
@@ -1691,8 +1702,6 @@ export const ALL_EXAMPLE_ITEMS = {
     BenchmarkChartBasicComponent,
     ComparativeChartBasicComponent,
     DotPlotChartBasicComponent,
-    ProgressBarChartBasicComponent,
-    ProgressBarBasicComponent,
     BarChartBasicComponent,
     LineChartBasicComponent,
     SearchBasicComponent,
@@ -1720,7 +1729,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SlideToggleBasicComponent,
     IconBasicComponent,
     ChipBasicComponent,
-    ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
     LoginBasicComponent
   ]
