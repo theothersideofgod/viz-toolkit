@@ -2,8 +2,10 @@
   <mat-checkbox [formControl]="disableSelect">Disable select</mat-checkbox>
 </p>
 <div class="example-container">
-  <h4>mat-select</h4>
-  <mat-form-field>
+  <div class="example-title">
+    mat-select
+  </div>
+  <mat-form-field class="first-one">
     <mat-label>Choose an option</mat-label>
     <mat-select [disabled]="disableSelect.value">
       <mat-option value="option1">Option 1</mat-option>
@@ -12,7 +14,9 @@
     </mat-select>
   </mat-form-field>
 
-  <h4>native html select</h4>
+  <div class="example-title">
+    native html select
+  </div>
   <mat-form-field>
     <mat-label>Choose an option</mat-label>
     <select matNativeControl [disabled]="disableSelect.value">
