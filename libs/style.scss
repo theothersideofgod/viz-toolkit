@@ -311,6 +311,13 @@ input.mat-input-element {
 textarea.mat-input-element {
   color: #000000;
 }
+.mat-form-field-suffix {
+  .mat-icon {
+    color:#000000;
+  }
+}
+
+
 //autocomplete
 .viz-autocomplete-dropdown {
   position: absolute;
