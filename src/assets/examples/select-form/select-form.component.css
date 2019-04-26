@@ -3,3 +3,16 @@ form {
   margin: 0 auto;
   text-align: left;
 }
+
+.example-title {
+  height: 24px;
+  width: 80px;
+  color: #696969;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.example-result {
+  margin-bottom: 56px;
+}
