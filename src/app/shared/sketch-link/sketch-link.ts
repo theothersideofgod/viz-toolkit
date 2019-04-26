@@ -32,7 +32,7 @@ const sketch_link = {
   sidenav: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Navigation: Sidenav'
   ],
-  toolbar: ['-'],
+  toolbar: ['Insert / Toolkit Material Library / Components / Toolbar'],
   header: [
     'Insert / Toolkit Material Library / Components / Header / Desktop or Desktop App Switcher or Mobile or Mobile App Switcher'
   ],

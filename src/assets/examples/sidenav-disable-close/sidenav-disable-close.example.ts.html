@@ -1,0 +1,20 @@
+<span class="hljs-keyword">import</span> {Component, ViewChild} from <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatSidenav} from <span class="hljs-string">'@angular/material/sidenav'</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Sidenav with custom escape and backdrop click behavior */</span>
+<span class="hljs-meta">@Component({
+  selector: <span class="hljs-meta-string">'sidenav-disable-close'</span>,
+  templateUrl: <span class="hljs-meta-string">'sidenav-disable-close.component.html'</span>,
+  styleUrls: [<span class="hljs-meta-string">'sidenav-disable-close.component.css'</span>],
+})</span>
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavDisableCloseComponent</span> </span>{
+  <span class="hljs-meta">@ViewChild(<span class="hljs-meta-string">'sidenav'</span>)</span> sidenav: MatSidenav;
+
+  reason = <span class="hljs-string">''</span>;
+
+  close(reason: string) {
+    <span class="hljs-keyword">this</span>.reason = reason;
+    <span class="hljs-keyword">this</span>.sidenav.close();
+  }
+
+}

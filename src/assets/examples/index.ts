@@ -39,6 +39,18 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { ToolbarOverviewComponent } from './toolbar-overview/toolbar-overview.component';
+import { ToolbarMultirowComponent } from './toolbar-multirow/toolbar-multirow.component';
+import { SidenavBackdropComponent } from './sidenav-backdrop/sidenav-backdrop.component';
+import { SidenavResponsiveComponent } from './sidenav-responsive/sidenav-responsive.component';
+import { SidenavFixedComponent } from './sidenav-fixed/sidenav-fixed.component';
+import { SidenavAutosizeComponent } from './sidenav-autosize/sidenav-autosize.component';
+import { SidenavDisableCloseComponent } from './sidenav-disable-close/sidenav-disable-close.component';
+import { SidenavModeComponent } from './sidenav-mode/sidenav-mode.component';
+import { SidenavOpenCloseComponent } from './sidenav-open-close/sidenav-open-close.component';
+import { SidenavPositionComponent } from './sidenav-position/sidenav-position.component';
+import { SidenavDrawerOverviewComponent } from './sidenav-drawer-overview/sidenav-drawer-overview.component';
+import { SidenavOverviewComponent } from './sidenav-overview/sidenav-overview.component';
 import { ProgressBarQueryComponent } from './progress-bar-query/progress-bar-query.component';
 import { ProgressBarBufferComponent } from './progress-bar-buffer/progress-bar-buffer.component';
 import { ProgressBarIndeterminateComponent } from './progress-bar-indeterminate/progress-bar-indeterminate.component';
@@ -565,6 +577,42 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'toolbar-overview': {
+    component: ToolbarOverviewComponent
+  },
+  'toolbar-multirow': {
+    component: ToolbarMultirowComponent
+  },
+  'sidenav-backdrop': {
+    component: SidenavBackdropComponent
+  },
+  'sidenav-responsive': {
+    component: SidenavResponsiveComponent
+  },
+  'sidenav-fixed': {
+    component: SidenavFixedComponent
+  },
+  'sidenav-autosize': {
+    component: SidenavAutosizeComponent
+  },
+  'sidenav-disable-close': {
+    component: SidenavDisableCloseComponent
+  },
+  'sidenav-mode': {
+    component: SidenavModeComponent
+  },
+  'sidenav-open-close': {
+    component: SidenavOpenCloseComponent
+  },
+  'sidenav-position': {
+    component: SidenavPositionComponent
+  },
+  'sidenav-drawer-overview': {
+    component: SidenavDrawerOverviewComponent
+  },
+  'sidenav-overview': {
+    component: SidenavOverviewComponent
+  },
   'progress-bar-query': {
     component: ProgressBarQueryComponent
   },
@@ -1270,6 +1318,18 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    ToolbarOverviewComponent,
+    ToolbarMultirowComponent,
+    SidenavBackdropComponent,
+    SidenavResponsiveComponent,
+    SidenavFixedComponent,
+    SidenavAutosizeComponent,
+    SidenavDisableCloseComponent,
+    SidenavModeComponent,
+    SidenavOpenCloseComponent,
+    SidenavPositionComponent,
+    SidenavDrawerOverviewComponent,
+    SidenavOverviewComponent,
     ProgressBarQueryComponent,
     ProgressBarBufferComponent,
     ProgressBarIndeterminateComponent,
@@ -1523,6 +1583,18 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    ToolbarOverviewComponent,
+    ToolbarMultirowComponent,
+    SidenavBackdropComponent,
+    SidenavResponsiveComponent,
+    SidenavFixedComponent,
+    SidenavAutosizeComponent,
+    SidenavDisableCloseComponent,
+    SidenavModeComponent,
+    SidenavOpenCloseComponent,
+    SidenavPositionComponent,
+    SidenavDrawerOverviewComponent,
+    SidenavOverviewComponent,
     ProgressBarQueryComponent,
     ProgressBarBufferComponent,
     ProgressBarIndeterminateComponent,

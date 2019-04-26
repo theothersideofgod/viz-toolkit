@@ -1,0 +1,18 @@
+.example-container {
+  height: 372px;
+  text-align: left;
+}
+
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  background: rgba(255, 0, 0, 0.5);
+}
+
+:host {
+  margin: -56px 0px;
+  display: block;
+  height: 500px;
+}

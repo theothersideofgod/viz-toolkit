@@ -1,0 +1,12 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/** @title Sidenav open &amp; close behavior */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'sidenav-open-close'</span>,
+  templateUrl: <span class="hljs-string">'sidenav-open-close.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'sidenav-open-close.component.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavOpenCloseComponent {
+  events: <span class="hljs-built_in">string</span>[] = [];
+  opened: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+}

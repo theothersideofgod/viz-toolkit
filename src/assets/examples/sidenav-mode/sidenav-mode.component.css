@@ -1,0 +1,16 @@
+.example-container {
+  height: 300px;
+  margin: -56px 0px;
+  text-align: left;
+}
+
+.example-radio-group {
+  display: block;
+  border: 1px solid #555;
+  margin: 20px;
+  padding: 10px;
+}
+
+.mat-radio-button {
+  margin-left: 24px;
+}
