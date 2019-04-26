@@ -1,7 +1,9 @@
 <div class="example-container">
   <form class="example-container" [formGroup]="options">
-    <mat-checkbox formControlName="hideRequired">Hide required marker</mat-checkbox>
-    <div>
+    <mat-checkbox formControlName="hideRequired"
+      >Hide required marker</mat-checkbox
+    >
+    <div style="margin-top:24px">
       <label>Float label: </label>
       <mat-radio-group formControlName="floatLabel">
         <mat-radio-button value="auto">Auto</mat-radio-button>
@@ -11,24 +13,30 @@
     </div>
   </form>
 
-  <mat-form-field
+  <div class="example-field-container">
+    <mat-form-field
       [hideRequiredMarker]="options.value.hideRequired"
-      [floatLabel]="options.value.floatLabel">
-    <input matInput placeholder="Simple placeholder" required>
-  </mat-form-field>
+      [floatLabel]="options.value.floatLabel"
+    >
+      <input matInput placeholder="Simple placeholder" required />
+    </mat-form-field>
 
-  <mat-form-field [floatLabel]="options.value.floatLabel">
-    <mat-label>Both a label and a placeholder</mat-label>
-    <input matInput placeholder="Simple placeholder">
-  </mat-form-field>
+    <mat-form-field [floatLabel]="options.value.floatLabel">
+      <mat-label>Both a label and a placeholder</mat-label>
+      <input matInput placeholder="Simple placeholder" />
+    </mat-form-field>
 
-  <mat-form-field
+    <mat-form-field
       [hideRequiredMarker]="options.value.hideRequired"
-      [floatLabel]="options.value.floatLabel">
-    <mat-select required>
-      <mat-option>-- None --</mat-option>
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
-    <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>
-  </mat-form-field>
+      [floatLabel]="options.value.floatLabel"
+    >
+      <mat-select required>
+        <mat-option>-- None --</mat-option>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-label
+        ><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label
+      >
+    </mat-form-field>
+  </div>
 </div>

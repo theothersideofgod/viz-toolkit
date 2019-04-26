@@ -1,4 +1,11 @@
-.mat-form-field {
+.mat-form-field:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
   width: 360px;
   margin: 0 auto;
 }
+

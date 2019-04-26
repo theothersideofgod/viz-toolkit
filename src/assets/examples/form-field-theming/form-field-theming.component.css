@@ -8,3 +8,7 @@
 .example-container > * {
   width: 100%;
 }
+
+.mat-form-field:not(:last-child) {
+  margin-bottom: 36px;
+}

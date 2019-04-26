@@ -21,3 +21,7 @@ input.example-right-align::-webkit-inner-spin-button {
 input.example-right-align {
   -moz-appearance: textfield;
 }
+
+.mat-form-field:not(:last-child) {
+  margin: 0 auto 36px auto;
+}
