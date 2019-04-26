@@ -1,19 +1,18 @@
-<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> { FormControl, Validators } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Component} from <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl, Validators} from <span class="hljs-string">'@angular/forms'</span>;
 
-<span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'form-field-error'</span>,
-  templateUrl: <span class="hljs-string">'form-field-error.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'form-field-error.component.css'</span>]
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldErrorComponent <span class="hljs-keyword">implements</span> OnInit {
-  emailFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [
-    Validators.required,
-    Validators.email
-  ]);
-  ngOnInit() {}
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Form field with error messages */</span>
+<span class="hljs-meta">@Component({
+  selector: <span class="hljs-meta-string">'form-field-error'</span>,
+  templateUrl: <span class="hljs-meta-string">'form-field-error.component.html'</span>,
+  styleUrls: [<span class="hljs-meta-string">'form-field-error.component.css'</span>],
+})</span>
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldErrorComponent</span> </span>{
+  email = new FormControl(<span class="hljs-string">''</span>, [Validators.required, Validators.email]);
+
+  getErrorMessage() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.email.hasError(<span class="hljs-string">'required'</span>) ? <span class="hljs-string">'You must enter a value'</span> :
+        <span class="hljs-keyword">this</span>.email.hasError(<span class="hljs-string">'email'</span>) ? <span class="hljs-string">'Not a valid email'</span> :
+            <span class="hljs-string">''</span>;
+  }
 }
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FormFieldErrorData = {
-  name: <span class="hljs-string">'FormFieldError'</span>
-};

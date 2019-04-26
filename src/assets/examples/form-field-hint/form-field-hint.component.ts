@@ -1,14 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
+/** @title Form field with hints */
 @Component({
   selector: 'form-field-hint',
   templateUrl: 'form-field-hint.component.html',
-  styleUrls: ['form-field-hint.component.css']
+  styleUrls: ['form-field-hint.component.css'],
 })
-export class FormFieldHintComponent implements OnInit {
-  ngOnInit() {}
-}
-
-export const FormFieldHintData = {
-  name: 'FormFieldHint'
-};
+export class FormFieldHintComponent {}

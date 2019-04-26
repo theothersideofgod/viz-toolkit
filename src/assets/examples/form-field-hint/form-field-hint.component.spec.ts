@@ -1,23 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormFieldHintComponent } from './form-field-hint.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
-import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormFieldHintComponentComponent } from './form-field-hint.component';
 
-describe('FormFieldHintComponent', () => {
-  let component: FormFieldHintComponent;
-  let fixture: ComponentFixture<FormFieldHintComponent>;
+describe('FormFieldHintComponentComponent', () => {
+  let component: FormFieldHintComponentComponent;
+  let fixture: ComponentFixture<FormFieldHintComponentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatFormFieldModule, FormsModule, MatInputModule, BrowserAnimationsModule],
-      declarations: [FormFieldHintComponent]
+      declarations: [FormFieldHintComponentComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormFieldHintComponent);
+    fixture = TestBed.createComponent(FormFieldHintComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

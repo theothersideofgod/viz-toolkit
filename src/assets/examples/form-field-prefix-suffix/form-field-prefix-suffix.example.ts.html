@@ -1,14 +1,11 @@
-<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} from <span class="hljs-string">'@angular/core'</span>;
 
+<span class="hljs-comment"><span class="markdown">/<span class="hljs-emphasis">** @title Form field with prefix &amp; suffix *</span>/</span></span>
 <span class="hljs-meta">@Component</span>({
-	selector: <span class="hljs-string">'form-field-prefix-suffix'</span>,
+  selector: <span class="hljs-string">'form-field-prefix-suffix'</span>,
   templateUrl: <span class="hljs-string">'form-field-prefix-suffix.component.html'</span>,
   styleUrls: [<span class="hljs-string">'form-field-prefix-suffix.component.css'</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldPrefixSuffixComponent <span class="hljs-keyword">implements</span> OnInit {
-  ngOnInit() { }
-}
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FormFieldPrefixSuffixData = {
-	name: <span class="hljs-string">'FormFieldPrefixSuffix'</span>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldPrefixSuffixComponent</span> </span>{
+  hide = <span class="hljs-keyword">true</span>;
 }

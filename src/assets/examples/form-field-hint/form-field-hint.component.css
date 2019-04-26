@@ -1,7 +1,10 @@
-.example-full-width {
-  width: 100%;
-}
 .example-container {
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
   margin: 0 auto;
+}
+
+.example-container > * {
+  width: 100%;
 }

@@ -1,219 +1,382 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title">
-    Form Controls
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">Form Field</div>
-  <div class="doc-desc-1">Text fields let users enter and edit text.</div>
-
-  <div class="doc-divider"></div>
-
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-more-example"></span>
-
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-
-
-  <div class="doc-title-4 mb-8">Default Form Field</div>
-  <div class="doc-desc-2">
-    Default form fields allow users to enter text into a UI. They typically
-    appear in forms and dialogs.
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-basic"></div>
-  </div>
-
-
-
-  <div class="doc-title-4 mb-8">Error Form Field</div>
-  <div class="doc-desc-2">
-    When text input isn&#x2019;t accepted, the field turns to red.
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-error"></div>
-  </div>
-
-  <div class="doc-title-4 mb-8">Disabled Form Field</div>
-  <div class="doc-desc-2">
-    A disabled form field is unusable and un-clickable and are rendered in gray
-    by default in browsers.
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-disable"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">Form Field with a Clear Button</div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-clear-button"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">Form Field with Prefixes and Suffixes</div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-prefix-suffix"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">Form Field with Custom Telephone Number Input
-    Control</div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-custom-phone-number"></div>
-  </div>
-
-  <div class="doc-title-4 mb-8">Form Field with Hint</div>
-  <div class="doc-desc-2">Hint text conveys additional guidance about the input
-    field, such as how it will be used.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-hint"></div>
-  </div>
-
-  <div class="doc-title-4 mb-8">Autocomplete</div>
-  <div class="doc-desc-2">An auto complete form field enables users to quickly
-    find and select from a pre-populated list of values as they type,
-    leveraging searching and filtering.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-autocomplete"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">Autocomplete with Icons</div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-autocomplete-icon"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">Option Groups Autocomplete</div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-autocomplete-group"></div>
-  </div>
-
-  <div class="doc-title-4 mb-8">Area Form Field</div>
-  <div class="doc-desc-2">Area form fields are taller than default form fields
-    and wrap overflow text onto a new line. They are a fixed height
-    and scroll vertically when the cursor reaches the bottom of the field.</div>
-  <div class="doc-example-container">
-    <div app-docs-example="form-field-textarea"></div>
-  </div>
-
-
-
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>onPressEnter</td>
-        <td>
-          The callback function that is triggered when Enter key is pressed.
-        </td>
-        <td>function(e)</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>disabled</td>
-        <td>disabled state of form field</td>
-        <td>boolean</td>
-        <td>false</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practice
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Form field should:
-    <ul class="doc-list">
-      <li>
-        Be clearly labeled so it&#x2019;s obvious to the users what they should
-        enter into the field
-      </li>
-      <li>Only ask for information that&#x2019;s really needed</li>
-      <li>
-        Validate input as soon as user has finished interacting with a field
-      </li>
-    </ul>
-  </div>
-
-  <div class="doc-divider"></div>
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-  <div class="doc-desc-2">
-    Label text should be short, clear, and fully visible. It shouldn&#x2019;t
-    be truncated.
-  </div>
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/formfield-pic-1.png" alt="">
+  <body>
+    <div class="doc-category-title">
+      Form Controls
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/formfield-pic-2.png" alt="">
+    <div class="doc-title-1">Form Field</div>
+    <div class="doc-desc-1">
+      Form field is a component used to wrap several Angular Material components
+      and apply common text field styles such as the underline, floating label,
+      and hint messages.
     </div>
-  </div>
-  <div class="doc-desc-2">
-    Label text shouldn&#x2019;t take up multiple lines.
-  </div>
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/formfield-pic-3.png" alt="">
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-more-example"></span>
+
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/formfield-pic-4.png" alt="">
+
+    <div class="doc-title-4 mb-16">
+      Simple form field
     </div>
-  </div>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-overview"></div>
+    </div>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:280px">
-    <img src="assets/img/doc/formfield-spec.png" alt="">
-  </div>
+    <div class="doc-title-4 mb-16">
+      Form field appearance variants
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-appearance"></div>
+    </div>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component
-      Location for Designers</span>
-  </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sketch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path
-    within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+    <div class="doc-title-4 mb-8">
+      Form field with label
+    </div>
+    <div class="doc-desc-2 mb-24">
+      Use this configuration below to customize a form field that fit your needs
+      best:
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-label"></div>
+    </div>
 
+    <div class="doc-title-4 mb-8">
+      Form field with hints
+    </div>
+    <div class="doc-desc-2 mb-24">
+      Hint labels are additional descriptive text that appears below the form
+      field's underline.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-hint"></div>
+    </div>
 
-</body>
+    <div class="doc-title-4 mb-8">
+      Form field with error messages
+    </div>
+    <div class="doc-desc-2 mb-24">
+      Error messages can be shown under the form field underline by adding error
+      elements inside the form field.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-error"></div>
+    </div>
 
+    <div class="doc-title-4 mb-8">
+      Form field with prefix &amp; suffix
+    </div>
+    <div class="doc-desc-2 mb-24">
+      Custom content can be included before and after the input tag, as a prefix
+      or suffix.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-prefix-suffix"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Form field with custom telephone number input control.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-custom-control"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Form field theming
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="form-field-theming"></div>
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      To get a customized form-field, just set
+      <span class="doc-desc-2-highlight"
+        >id / appearance / color / floatLabel / hideRequiredMarker / hintLabel /
+        underlineRef / align / id / autofilled / controlType / disabled / empty
+        / errorState / focused / id / ngControl / placeholder / required /
+        shouldLabelFloat / stateChanges / value / appearance</span
+      >
+    </div>
+
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td></td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>appearance</td>
+          <td>The form-field appearance style.</td>
+          <td>MatFormFieldAppearance</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>color</td>
+          <td>Theme color palette for the component.</td>
+          <td>ThemePalette</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>floatLabel</td>
+          <td>
+            Whether the label should always float, never float or float as the
+            user types. Note: only the legacy appearance supports the never
+            option. never was originally added as a way to make the floating
+            label emulate the behavior of a standard input placeholder. However
+            the form field now supports both floating labels and placeholders.
+            Therefore in the non-legacy appearances the never option has been
+            disabled in favor of just using the placeholder.
+          </td>
+          <td>FloatLabelType</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>hideRequiredMarker</td>
+          <td>Whether the required marker should be hidden.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>hintLabel</td>
+          <td>Text for the form field hint.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>underlineRef</td>
+          <td></td>
+          <td>ElementRef</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>align</td>
+          <td>
+            Whether to align the hint label at the start or end of the line.
+          </td>
+          <td>&apos;start&apos; | &apos;end&apos;</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>id</td>
+          <td>
+            Unique ID for the hint. Used for the aria-describedby on the form
+            field control.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>autofilled</td>
+          <td>
+            Whether the input is currently in an autofilled state. If property
+            is not present on the control it is assumed to be false.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>controlType</td>
+          <td>
+            An optional name for the control type that can be used to
+            distinguish mat-form-field elements based on their control type. The
+            form field will add a class, mat-form-field-type-{{ controlType }}
+            to its root element.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disabled</td>
+          <td>Whether the control is disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>empty</td>
+          <td>Whether the control is empty.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>errorState</td>
+          <td>Whether the control is in an error state.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>focused</td>
+          <td>Whether the control is focused.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>id</td>
+          <td>The element ID for this control.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>ngControl</td>
+          <td>Gets the NgControl for this control.</td>
+          <td>NgControl | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>placeholder</td>
+          <td>The placeholder for this control.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>required</td>
+          <td>Whether the control is required.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>shouldLabelFloat</td>
+          <td>Whether the MatFormField label should try to float.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>stateChanges</td>
+          <td>
+            Stream that emits whenever the state of the control changes such
+            that the parent MatFormField needs to run change detection.
+          </td>
+          <td>Observable<void></void></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>value</td>
+          <td>The value of the control.</td>
+          <td>T | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>appearance</td>
+          <td></td>
+          <td>MatFormFieldAppearance</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+    <div class="doc-desc-2">
+      Select menu should be short, clear, and fully visible. It shouldn’t be
+      truncated.
+    </div>
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w50 docs-usage-center"
+        style="height:200px"
+      >
+        <img src="assets/img/doc/formfield-pic-1.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w50 docs-usage-center"
+        style="height:200px"
+      >
+        <img src="assets/img/doc/formfield-pic-2.png" alt="" />
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center mb-16" style="height:280px">
+      <img src="assets/img/doc/formfield-spec.png" alt="" />
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:280px">
+      <img src="assets/img/doc/formfield-special-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sketch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+    <div sketch-link="1"></div>
+    <div sketch-link="2"></div>
+    <div sketch-link="3"></div>
+    <div sketch-link="4"></div>
+  </body>
 </html>

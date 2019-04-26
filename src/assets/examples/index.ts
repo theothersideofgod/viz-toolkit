@@ -39,6 +39,14 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { FormFieldCustomControlComponent, MyTelInput } from './form-field-custom-control/form-field-custom-control.component';
+import { FormFieldThemingComponent } from './form-field-theming/form-field-theming.component';
+import { FormFieldPrefixSuffixComponent } from './form-field-prefix-suffix/form-field-prefix-suffix.component';
+import { FormFieldErrorComponent } from './form-field-error/form-field-error.component';
+import { FormFieldHintComponent } from './form-field-hint/form-field-hint.component';
+import { FormFieldAppearanceComponent } from './form-field-appearance/form-field-appearance.component';
+import { FormFieldLabelComponent } from './form-field-label/form-field-label.component';
+import { FormFieldOverviewComponent } from './form-field-overview/form-field-overview.component';
 import { ExpansionStepsComponent } from './expansion-steps/expansion-steps.component';
 import { ExpansionOverviewComponent } from './expansion-overview/expansion-overview.component';
 import { GridListOverviewComponent } from './grid-list-overview/grid-list-overview.component';
@@ -289,27 +297,6 @@ import {
   DatePickerStartDateData
 } from './date-picker-start-date/date-picker-start-date.component';
 import {
-  FormFieldAutocompleteGroupComponent,
-  FormFieldAutocompleteGroupData
-} from './form-field-autocomplete-group/form-field-autocomplete-group.component';
-import {
-  FormFieldAutocompleteIconComponent,
-  FormFieldAutocompleteIconData
-} from './form-field-autocomplete-icon/form-field-autocomplete-icon.component';
-import {
-  FormFieldCustomPhoneNumberComponent,
-  FormFieldCustomPhoneNumberData,
-  MyTelInput
-} from './form-field-custom-phone-number/form-field-custom-phone-number.component';
-import {
-  FormFieldPrefixSuffixComponent,
-  FormFieldPrefixSuffixData
-} from './form-field-prefix-suffix/form-field-prefix-suffix.component';
-import {
-  FormFieldClearButtonComponent,
-  FormFieldClearButtonData
-} from './form-field-clear-button/form-field-clear-button.component';
-import {
   LoginOktaComponent,
   LoginOktaData
 } from './login-okta/login-okta.component';
@@ -318,10 +305,6 @@ import {
   IconographyData
 } from './iconography/iconography.component';
 import {
-  FormFieldValidationComponent,
-  FormFieldValidationData
-} from './form-field-validation/form-field-validation.component';
-import {
   DatePickerSingleErrorComponent,
   DatePickerSingleErrorData
 } from './date-picker-single-error/date-picker-single-error.component';
@@ -329,10 +312,6 @@ import {
   CustomerSelectComponent,
   CustomerSelectData
 } from './customer-select/customer-select.component';
-import {
-  FormFieldAutocompleteComponent,
-  FormFieldAutocompleteData
-} from './form-field-autocomplete/form-field-autocomplete.component';
 import {
   MonthPickerRangeComponent,
   MonthPickerRangeData
@@ -434,22 +413,6 @@ import {
   RadioButtonDisableComponent,
   RadioButtonDisableData
 } from './radio-button-disable/radio-button-disable.component';
-import {
-  FormFieldDisableComponent,
-  FormFieldDisableData
-} from './form-field-disable/form-field-disable.component';
-import {
-  FormFieldErrorComponent,
-  FormFieldErrorData
-} from './form-field-error/form-field-error.component';
-import {
-  FormFieldTextareaComponent,
-  FormFieldTextareaData
-} from './form-field-textarea/form-field-textarea.component';
-import {
-  FormFieldHintComponent,
-  FormFieldHintData
-} from './form-field-hint/form-field-hint.component';
 import {
   CheckboxDisableComponent,
   CheckboxDisableData
@@ -567,10 +530,6 @@ import {
   MenuBasicData
 } from './menu-basic/menu-basic.component';
 import {
-  FormFieldBasicComponent,
-  FormFieldBasicData
-} from './form-field-basic/form-field-basic.component';
-import {
   RadioButtonBasicComponent,
   RadioButtonBasicData
 } from './radio-button-basic/radio-button-basic.component';
@@ -610,6 +569,30 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'form-field-custom-control': {
+    component: FormFieldCustomControlComponent
+  },
+  'form-field-theming': {
+    component: FormFieldThemingComponent
+  },
+  'form-field-prefix-suffix': {
+    component: FormFieldPrefixSuffixComponent
+  },
+  'form-field-error': {
+    component: FormFieldErrorComponent
+  },
+  'form-field-hint': {
+    component: FormFieldHintComponent
+  },
+  'form-field-appearance': {
+    component: FormFieldAppearanceComponent
+  },
+  'form-field-label': {
+    component: FormFieldLabelComponent
+  },
+  'form-field-overview': {
+    component: FormFieldOverviewComponent
+  },
   'expansion-steps': {
     component: ExpansionStepsComponent
   },
@@ -976,26 +959,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: DatePickerStartDateComponent,
     data: DatePickerStartDateData
   },
-  'form-field-autocomplete-group': {
-    component: FormFieldAutocompleteGroupComponent,
-    data: FormFieldAutocompleteGroupData
-  },
-  'form-field-autocomplete-icon': {
-    component: FormFieldAutocompleteIconComponent,
-    data: FormFieldAutocompleteIconData
-  },
-  'form-field-custom-phone-number': {
-    component: FormFieldCustomPhoneNumberComponent,
-    data: FormFieldCustomPhoneNumberData
-  },
-  'form-field-prefix-suffix': {
-    component: FormFieldPrefixSuffixComponent,
-    data: FormFieldPrefixSuffixData
-  },
-  'form-field-clear-button': {
-    component: FormFieldClearButtonComponent,
-    data: FormFieldClearButtonData
-  },
   'login-okta': {
     component: LoginOktaComponent,
     data: LoginOktaData
@@ -1004,10 +967,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: IconographyComponent,
     data: IconographyData
   },
-  'form-field-validation': {
-    component: FormFieldValidationComponent,
-    data: FormFieldValidationData
-  },
   'date-picker-single-error': {
     component: DatePickerSingleErrorComponent,
     data: DatePickerSingleErrorData
@@ -1015,10 +974,6 @@ export const ALL_EXAMPLE_ITEMS = {
   'customer-select': {
     component: CustomerSelectComponent,
     data: CustomerSelectData
-  },
-  'form-field-autocomplete': {
-    component: FormFieldAutocompleteComponent,
-    data: FormFieldAutocompleteData
   },
   'month-picker-range': {
     component: MonthPickerRangeComponent,
@@ -1123,22 +1078,6 @@ export const ALL_EXAMPLE_ITEMS = {
   'radio-button-disable': {
     component: RadioButtonDisableComponent,
     data: RadioButtonDisableData
-  },
-  'form-field-disable': {
-    component: FormFieldDisableComponent,
-    data: FormFieldDisableData
-  },
-  'form-field-error': {
-    component: FormFieldErrorComponent,
-    data: FormFieldErrorData
-  },
-  'form-field-textarea': {
-    component: FormFieldTextareaComponent,
-    data: FormFieldTextareaData
-  },
-  'form-field-hint': {
-    component: FormFieldHintComponent,
-    data: FormFieldHintData
   },
   'checkbox-disable': {
     component: CheckboxDisableComponent,
@@ -1256,10 +1195,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: MenuBasicComponent,
     data: MenuBasicData
   },
-  'form-field-basic': {
-    component: FormFieldBasicComponent,
-    data: FormFieldBasicData
-  },
   'radio-button-basic': {
     component: RadioButtonBasicComponent,
     data: RadioButtonBasicData
@@ -1296,6 +1231,15 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    MyTelInput,
+    FormFieldCustomControlComponent,
+    FormFieldThemingComponent,
+    FormFieldPrefixSuffixComponent,
+    FormFieldErrorComponent,
+    FormFieldHintComponent,
+    FormFieldAppearanceComponent,
+    FormFieldLabelComponent,
+    FormFieldOverviewComponent,
     ExpansionStepsComponent,
     ExpansionOverviewComponent,
     GridListOverviewComponent,
@@ -1411,17 +1355,10 @@ export const ALL_EXAMPLE_ITEMS = {
     DatePickerMinMaxValidationComponent,
     DatePickerSelectedValueComponent,
     DatePickerStartDateComponent,
-    FormFieldAutocompleteGroupComponent,
-    FormFieldAutocompleteIconComponent,
-    FormFieldCustomPhoneNumberComponent,
-    FormFieldPrefixSuffixComponent,
-    FormFieldClearButtonComponent,
     LoginOktaComponent,
     IconographyComponent,
-    FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
     CustomerSelectComponent,
-    FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
     MonthPickerSingleComponent,
     SliderRangeEventComponent,
@@ -1448,10 +1385,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SlideToggleDisableComponent,
     SelectDisableComponent,
     RadioButtonDisableComponent,
-    FormFieldDisableComponent,
-    FormFieldErrorComponent,
-    FormFieldTextareaComponent,
-    FormFieldHintComponent,
     CheckboxDisableComponent,
     CheckboxIndetermineComponent,
     BenchmarkChartBasicComponent,
@@ -1482,7 +1415,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SelectBasicComponent,
     CheckboxBasicComponent,
     MenuBasicComponent,
-    FormFieldBasicComponent,
     RadioButtonBasicComponent,
     SliderBasicComponent,
     SlideToggleBasicComponent,
@@ -1490,8 +1422,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ChipBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
-    LoginBasicComponent,
-    MyTelInput
+    LoginBasicComponent
   ],
   imports: [
     RouterModule,
@@ -1537,6 +1468,15 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    MyTelInput,
+    FormFieldCustomControlComponent,
+    FormFieldThemingComponent,
+    FormFieldPrefixSuffixComponent,
+    FormFieldErrorComponent,
+    FormFieldHintComponent,
+    FormFieldAppearanceComponent,
+    FormFieldLabelComponent,
+    FormFieldOverviewComponent,
     ExpansionStepsComponent,
     ExpansionOverviewComponent,
     GridListOverviewComponent,
@@ -1652,17 +1592,10 @@ export const ALL_EXAMPLE_ITEMS = {
     DatePickerMinMaxValidationComponent,
     DatePickerSelectedValueComponent,
     DatePickerStartDateComponent,
-    FormFieldAutocompleteGroupComponent,
-    FormFieldAutocompleteIconComponent,
-    FormFieldCustomPhoneNumberComponent,
-    FormFieldPrefixSuffixComponent,
-    FormFieldClearButtonComponent,
     LoginOktaComponent,
     IconographyComponent,
-    FormFieldValidationComponent,
     DatePickerSingleErrorComponent,
     CustomerSelectComponent,
-    FormFieldAutocompleteComponent,
     MonthPickerRangeComponent,
     MonthPickerSingleComponent,
     SliderRangeEventComponent,
@@ -1689,10 +1622,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SlideToggleDisableComponent,
     SelectDisableComponent,
     RadioButtonDisableComponent,
-    FormFieldDisableComponent,
-    FormFieldErrorComponent,
-    FormFieldTextareaComponent,
-    FormFieldHintComponent,
     CheckboxDisableComponent,
     CheckboxIndetermineComponent,
     BenchmarkChartBasicComponent,
@@ -1723,7 +1652,6 @@ export const ALL_EXAMPLE_ITEMS = {
     SelectBasicComponent,
     CheckboxBasicComponent,
     MenuBasicComponent,
-    FormFieldBasicComponent,
     RadioButtonBasicComponent,
     SliderBasicComponent,
     SlideToggleBasicComponent,
@@ -1731,8 +1659,7 @@ export const ALL_EXAMPLE_ITEMS = {
     ChipBasicComponent,
     ProgressBarBasicComponent,
     HeaderFooterBasicComponent,
-    LoginBasicComponent,
-    MyTelInput
+    LoginBasicComponent
   ]
 })
 export class ExampleModule {}

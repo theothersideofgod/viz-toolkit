@@ -1,23 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormFieldErrorComponent } from './form-field-error.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormFieldErrorComponentComponent } from './form-field-error.component';
 
-describe('FormFieldErrorComponent', () => {
-  let component: FormFieldErrorComponent;
-  let fixture: ComponentFixture<FormFieldErrorComponent>;
+describe('FormFieldErrorComponentComponent', () => {
+  let component: FormFieldErrorComponentComponent;
+  let fixture: ComponentFixture<FormFieldErrorComponentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatFormFieldModule, FormsModule, MatInputModule, BrowserAnimationsModule, ReactiveFormsModule],
-      declarations: [FormFieldErrorComponent]
+      declarations: [FormFieldErrorComponentComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormFieldErrorComponent);
+    fixture = TestBed.createComponent(FormFieldErrorComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
