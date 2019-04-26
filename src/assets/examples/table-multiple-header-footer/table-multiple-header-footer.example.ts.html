@@ -1,0 +1,32 @@
+<span class="hljs-keyword">import</span> {Component} from <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Transaction} from <span class="hljs-string">'../table-footer-row/table-footer-row.component'</span>;
+
+export <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Transaction</span> {</span>
+<span class="hljs-symbol">  item:</span> string;
+<span class="hljs-symbol">  cost:</span> number;
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title</span> Table with multiple header and footer rows
+ */</span>
+<span class="hljs-meta">@Component</span>({
+<span class="hljs-symbol">  selector:</span> <span class="hljs-string">'table-multiple-header-footer'</span>,
+<span class="hljs-symbol">  styleUrls:</span> [<span class="hljs-string">'table-multiple-header-footer.component.css'</span>],
+<span class="hljs-symbol">  templateUrl:</span> <span class="hljs-string">'table-multiple-header-footer.component.html'</span>,
+})
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableMultipleHeaderFooterComponent</span> {</span>
+<span class="hljs-symbol">  displayedColumns:</span> string[] = [<span class="hljs-string">'item'</span>, <span class="hljs-string">'cost'</span>];
+<span class="hljs-symbol">  transactions:</span> Transaction[] = [
+    {<span class="hljs-string">item:</span> <span class="hljs-string">'Beach ball'</span>, <span class="hljs-string">cost:</span> <span class="hljs-number">4</span>},
+    {<span class="hljs-string">item:</span> <span class="hljs-string">'Towel'</span>, <span class="hljs-string">cost:</span> <span class="hljs-number">5</span>},
+    {<span class="hljs-string">item:</span> <span class="hljs-string">'Frisbee'</span>, <span class="hljs-string">cost:</span> <span class="hljs-number">2</span>},
+    {<span class="hljs-string">item:</span> <span class="hljs-string">'Sunscreen'</span>, <span class="hljs-string">cost:</span> <span class="hljs-number">4</span>},
+    {<span class="hljs-string">item:</span> <span class="hljs-string">'Cooler'</span>, <span class="hljs-string">cost:</span> <span class="hljs-number">25</span>},
+    {<span class="hljs-string">item:</span> <span class="hljs-string">'Swim suit'</span>, <span class="hljs-string">cost:</span> <span class="hljs-number">15</span>},
+  ];
+
+  <span class="hljs-comment">/** Gets the total cost of all transactions. */</span>
+  getTotalCost() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.transactions.map(t =&gt; t.cost).reduce((acc, value) =&gt; acc + value, <span class="hljs-number">0</span>);
+  }
+}

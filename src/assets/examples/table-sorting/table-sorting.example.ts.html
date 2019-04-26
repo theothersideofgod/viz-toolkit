@@ -1,0 +1,41 @@
+<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} from <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatSort, MatTableDataSource} from <span class="hljs-string">'@angular/material'</span>;
+
+export <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">PeriodicElement</span> {</span>
+<span class="hljs-symbol">  name:</span> string;
+<span class="hljs-symbol">  position:</span> number;
+<span class="hljs-symbol">  weight:</span> number;
+<span class="hljs-symbol">  symbol:</span> string;
+}
+
+const <span class="hljs-string">ELEMENT_DATA:</span> PeriodicElement[] = [
+  {<span class="hljs-string">position:</span> <span class="hljs-number">1</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Hydrogen'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">1.0079</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'H'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">2</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Helium'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">4.0026</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'He'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">3</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Lithium'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">6.941</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'Li'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">4</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Beryllium'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">9.0122</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'Be'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">5</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Boron'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">10.811</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'B'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">6</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Carbon'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">12.0107</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'C'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">7</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Nitrogen'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">14.0067</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'N'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">8</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Oxygen'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">15.9994</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'O'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">9</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Fluorine'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">18.9984</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'F'</span>},
+  {<span class="hljs-string">position:</span> <span class="hljs-number">10</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'Neon'</span>, <span class="hljs-string">weight:</span> <span class="hljs-number">20.1797</span>, <span class="hljs-string">symbol:</span> <span class="hljs-string">'Ne'</span>},
+];
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title</span> Table with sorting
+ */</span>
+<span class="hljs-meta">@Component</span>({
+<span class="hljs-symbol">  selector:</span> <span class="hljs-string">'table-sorting'</span>,
+<span class="hljs-symbol">  styleUrls:</span> [<span class="hljs-string">'table-sorting.component.css'</span>],
+<span class="hljs-symbol">  templateUrl:</span> <span class="hljs-string">'table-sorting.component.html'</span>,
+})
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableSortingComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OnInit</span> {</span>
+<span class="hljs-symbol">  displayedColumns:</span> string[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
+
+  <span class="hljs-meta">@ViewChild</span>(MatSort) <span class="hljs-string">sort:</span> MatSort;
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
+  }
+}

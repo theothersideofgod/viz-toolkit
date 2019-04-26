@@ -1,175 +1,521 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Data Table
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Table
-  </div>
-  <div class="doc-desc-1">
-    Table provides a Vizient styled data-table that can be used to display rows of data. A data table contains a header row at
-    the top that lists column names, followed by rows for data.</div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-  <div class="doc-desc-2">
-    Data tables can include three or more columns. A header row at the top lists column names, and all subsequent rows contain
-    data. Data tables can include a corresponding visualization, such as a graph.
-  </div>
-  <!-- <div class="doc-example-container">
-    <div app-docs-example="table-basic"></div>
-  </div> -->
-
-  <div class="doc-example-container">
-    <div app-docs-example="table-native"></div>
-  </div>
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">bufferValue/color/mode/value/nubmer/progressbarId/</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>arrowPosition</td>
-        <td>Sets the position of the arrow that displays when sorted.
-        </td>
-        <td>string</td>
-        <td>&apos;before&apos; | &apos;after&apos;</td>
-      </tr>
-      <tr>
-        <td>disableClear</td>
-        <td>Overrides the disable clear value of the containing MatSort for this MatSortable.
-        </td>
-        <td>boolean</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>disabled</td>
-        <td>Whether the component is disabled.
-        </td>
-        <td>disabled</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>mat-sort-header</td>
-        <td>ID of this sort header. If used within the context of a CdkColumnDef, this will default to the column&apos;s name.
-        </td>
-        <td>string</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>start</td>
-        <td>Overrides the sort start value of the containing MatSort for this MatSortable.
-        </td>
-        <td>string</td>
-        <td>&apos;asc&apos; | &apos;desc&apos;</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-
-    <p>
-      Data tables display information in a way that&#x2019;s easy to scan, so that users can look for patterns and insights. They
-      can be embedded in primary content, such as cards.
-    </p>
-    <p>Data tables can include:</p>
-    <ul class="doc-list">
-      <li>A corresponding visualization
-      </li>
-      <li>Navigation</li>
-      <li>
-        Tools to query and manipulate data
-      </li>
-
-    </ul>
-  </div>
-
-  <div class="doc-divider">
-
-  </div>
-
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    As for expanded rows, use grey background color with top and bottom shadows to distinguish from main rows. </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w100 docs-usage-center" style="height:448px">
-      <img src="assets/img/doc/table-do.png" alt="">
+  <body>
+    <div class="doc-category-title ">
+      Data Table
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center docs-mt16" style="height:448px">
-      <img src="assets/img/doc/table-dont.png" alt="">
+    <div class="doc-title-1">
+      Table
     </div>
-  </div>
+    <div class="doc-desc-1">
+      <p>
+        Table provides a Vizient styled data-table that can be used to display
+        rows of data. A data table contains a header row at the top that lists
+        column names, followed by rows for data.
+      </p>
 
+      <p>
+        Table can include expandable row which can be used to display content
+        composed of different elements or components.
+      </p>
+    </div>
 
-  <div class="doc-divider"></div>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
+    <div class="doc-desc-2">
+      Data tables can include three or more columns. A header row at the top
+      lists column names, and all subsequent rows contain data. Data tables can
+      include a corresponding visualization, such as a graph.
+    </div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-title-4 mb-16">
+      Basic use of `&lt;table mat-table&gt;`
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-basic"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Basic use of `&lt;mat-table&gt;` (uses display flex)
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-basic-flex"></div>
+    </div>
 
-  <div class="docs-usage-spec docs-usage-center-no-scale" style="height:512px">
-    <img src="assets/img/doc/table-spec.png" alt="" style="height:100%">
-  </div>
+    <div class="doc-title-4 mb-16">
+      Table dynamically changing the columns displayed
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-dynamic-columns"></div>
+    </div>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
-  </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sketch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+    <div class="doc-title-4 mb-16">
+      Table with expandable rows
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-expandable-rows"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Table with filtering
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-filtering"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Footer row table
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-footer-row"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Table retrieving data through HTTP
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-http"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Table with multiple header and footer rows
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-multiple-header-footer"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Data table with sorting, pagination, and filtering.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-overview"></div>
+    </div>
 
-</body>
+    <div class="doc-title-4 mb-16">
+      Table with pagination
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-pagination"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Table showing each row context properties.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-row-context"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Table with selection
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-selection"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Table with sorting
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-sorting"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Table with sticky columns
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-sticky-columns"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Table with a sticky footer
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-sticky-footer"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Table with sticky header
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-sticky-header"></div>
+    </div>
+
+    <div class="doc-title-4 mb-8">
+      Basic Table
+    </div>
+    <div class="doc-desc-2 mb-16">
+      Data tables can include three or more columns. A header row at the top
+      lists column names, and all subsequent rows contain data.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-viz-basic"></div>
+    </div>
+
+    <div class="doc-title-4 mb-16">
+      Vizient Table with multiple Header rows
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-viz-multi-header"></div>
+    </div>
+
+    <div class="doc-title-4 mb-8">
+      Table with Expandable rows
+    </div>
+    <div class="doc-desc-2 mb-16">
+      Expandable row can be used to display multiple child rows.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-native"></div>
+    </div>
+
+    <div class="doc-desc-2 mb-16">
+      Expandable row can also be used as a container to display content composed
+      of different elements or components.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="table-viz-differ-element"></div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      To get a customized table, just set
+      <span class="doc-desc-2-highlight"
+        >name / sticky / stickyEnd / cssClassFriendlyName / dataSource /
+        multiTemplateDataRows / trackBy / stickyCssClass / sticky / sticky /
+        columns / when / data / filter / filterPredicate / filteredData /
+        paginator / sort / sortData / sortingDataAccessor</span
+      >
+    </div>
+
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Unique name for this column.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>sticky</td>
+          <td>
+            Whether this column should be sticky positioned at the start of the
+            row
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>stickyEnd</td>
+          <td>
+            Whether this column should be sticky positioned on the end of the
+            row
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>cssClassFriendlyName</td>
+          <td>
+            Transformed version of the column name that can be used as part of a
+            CSS classname. Excludes all non-alphanumeric characters and the
+            special characters &apos;-&apos; and &apos;_&apos;. Any characters
+            that do not match are replaced by the &apos;-&apos; character.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>dataSource</td>
+          <td>
+            The table&apos;s source of data, which can be provided in three ways
+            (in order of complexity): Simple data array (each object represents
+            one table row) Stream that emits a data array each time the array
+            changes DataSource object that implements the connect/disconnect
+            interface. If a data array is provided, the table must be notified
+            when the array&apos;s objects are added, removed, or moved. This can
+            be done by calling the renderRows() function which will render the
+            diff since the last table render. If the data array reference is
+            changed, the table will automatically trigger an update to the rows.
+            When providing an Observable stream, the table will trigger an
+            update automatically when the stream emits a new array of data.
+            Finally, when providing a DataSource object, the table will use the
+            Observable stream provided by the connect function and trigger
+            updates when that stream emits new data array values. During the
+            table&apos;s ngOnDestroy or when the data source is removed from the
+            table, the table will call the DataSource&apos;s disconnect function
+            (may be useful for cleaning up any subscriptions registered during
+            the connect process).
+          </td>
+          <td>CdkTableDataSourceInput<t></t></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>multiTemplateDataRows</td>
+          <td>
+            Whether to allow multiple rows per data object by evaluating which
+            rows evaluate their &apos;when&apos; predicate to true. If
+            multiTemplateDataRows is false, which is the default value, then
+            each dataobject will render the first row that evaluates its when
+            predicate to true, in the order defined in the table, or otherwise
+            the default row which does not have a when predicate.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>trackBy</td>
+          <td>
+            Tracking function that will be used to check the differences in data
+            changes. Used similarly to ngFor trackBy function. Optimize row
+            operations by identifying a row based on its data relative to the
+            function to know if a row should be added/removed/moved. Accepts a
+            function that takes two parameters, index and item.
+          </td>
+          <td>TrackByFunction<t></t></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>stickyCssClass</td>
+          <td>Overrides the sticky CSS class set by the CdkTable.</td>
+          <td>&apos;mat-table-sticky&apos;</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>sticky</td>
+          <td>Whether sticky positioning should be applied.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>sticky</td>
+          <td>Whether sticky positioning should be applied.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>columns</td>
+          <td>The columns to be displayed on this row.</td>
+          <td>Iterable<string></string></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>when</td>
+          <td>
+            Function that should return true if this row template should be used
+            for the provided index and row data. If left undefined, this row
+            will be considered the default row template to use when no other
+            when functions return true for the data. For every row, there must
+            be at least one when function that passes or an undefined to
+            default.
+          </td>
+          <td>(index: number, rowData: T) =&gt; boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>data</td>
+          <td>
+            Array of data that should be rendered by the table, where each
+            object represents one row.
+          </td>
+          <td>T[]</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>filter</td>
+          <td>
+            Filter term that should be used to filter out objects from the data
+            array. To override how data objects match to this filter string,
+            provide a custom function for filterPredicate.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>filterPredicate</td>
+          <td>
+            Checks if a data object matches the data source&apos;s filter
+            string. By default, each data object is converted to a string of its
+            properties and returns true if the filter has at least one
+            occurrence in that string. By default, the filter string has its
+            whitespace trimmed and the match is case-insensitive. May be
+            overridden for a custom implementation of filter matching.
+          </td>
+          <td>((data: T, filter: string) =&gt; boolean)</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>filteredData</td>
+          <td>
+            The filtered set of data that has been matched by the filter string,
+            or all the data if there is no filter. Useful for knowing the set of
+            data the table represents. For example, a &apos;selectAll()&apos;
+            function would likely want to select the set of filtered data shown
+            to the user rather than all the data.
+          </td>
+          <td>T[]</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>paginator</td>
+          <td>
+            Instance of the MatPaginator component used by the table to control
+            what page of the data is displayed. Page changes emitted by the
+            MatPaginator will trigger an update to the table&apos;s rendered
+            data. Note that the data source uses the paginator&apos;s properties
+            to calculate which page of data should be displayed. If the
+            paginator receives its properties as template inputs, e.g.
+            [pageLength]=100 or [pageIndex]=1, then be sure that the
+            paginator&apos;s view has been initialized before assigning it to
+            this data source.
+          </td>
+          <td>MatPaginator | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>sort</td>
+          <td>
+            Instance of the MatSort directive used by the table to control its
+            sorting. Sort changes emitted by the MatSort will trigger an update
+            to the table&apos;s rendered data.
+          </td>
+          <td>MatSort | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>sortData</td>
+          <td>
+            Gets a sorted copy of the data array based on the state of the
+            MatSort. Called after changes are made to the filtered data or when
+            sort changes are emitted from MatSort. By default, the function
+            retrieves the active sort and its direction and compares data by
+            retrieving data using the sortingDataAccessor. May be overridden for
+            a custom implementation of data ordering.
+          </td>
+          <td>((data: T[], sort: MatSort) =&gt; T[])</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>sortingDataAccessor</td>
+          <td>
+            Data accessor function that is used for accessing data properties
+            for sorting through the default sortData function. This default
+            function assumes that the sort header IDs (which defaults to the
+            column name) matches the data&apos;s properties (e.g. column Xyz
+            represents data[&apos;Xyz&apos;]). May be set to a custom function
+            for different behavior.
+          </td>
+          <td>((data: T, sortHeaderId: string) =&gt; string | number)</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      As for expanded rows, use grey background color with top and bottom
+      shadows to distinguish from main rows.
+    </div>
+
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center-no-scale"
+        style="height:346px"
+      >
+        <img src="assets/img/doc/table-do.png" alt="" style="height: 250px" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16"
+        style="height:346px"
+      >
+        <img src="assets/img/doc/table-dont.png" alt="" style="height: 250px" />
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div
+      class="docs-usage-spec docs-usage-center-no-scale"
+      style="height:353px"
+    >
+      <img src="assets/img/doc/table-spec.png" alt="" style="height:209px" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sketch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+  </body>
 </html>

@@ -1,0 +1,113 @@
+import {Component} from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
+
+/**
+ * @title Table <span class="hljs-keyword">with</span> expandable rows
+ */
+@Component({
+  selector: <span class="hljs-symbol">'table</span>-expandable-rows',
+  styleUrls: [<span class="hljs-symbol">'table</span>-expandable-rows.component.css'],
+  templateUrl: <span class="hljs-symbol">'table</span>-expandable-rows.component.html',
+  animations: [
+    trigger(<span class="hljs-symbol">'detailExpand</span>', [
+      state(<span class="hljs-symbol">'collapsed</span>', style({height: '<span class="hljs-number">0</span>px', minHeight: <span class="hljs-string">'0'</span>, display: <span class="hljs-symbol">'none</span>'})),
+      state(<span class="hljs-symbol">'expanded</span>', style({height: <span class="hljs-string">'*'</span>})),
+      transition(<span class="hljs-symbol">'expanded</span> &lt;=&gt; collapsed', animate('<span class="hljs-number">225</span>ms cubic-bezier(<span class="hljs-number">0.4</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">1</span>)')),
+    ]),
+  ],
+})
+export class TableExpandableRowsComponent {
+  dataSource = ELEMENT_DATA;
+  columnsToDisplay = [<span class="hljs-symbol">'name</span>', <span class="hljs-symbol">'weight</span>', <span class="hljs-symbol">'symbol</span>', <span class="hljs-symbol">'position</span>'];
+  expandedElement: PeriodicElement | null;
+}
+
+export <span class="hljs-keyword">interface</span> PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+  description: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {
+    position: <span class="hljs-number">1</span>,
+    name: <span class="hljs-symbol">'Hydrogen</span>',
+    weight: <span class="hljs-number">1.0079</span>,
+    symbol: <span class="hljs-string">'H'</span>,
+    description: `Hydrogen <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol H <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">1</span>. <span class="hljs-keyword">With</span> a standard
+        atomic weight <span class="hljs-keyword">of</span> <span class="hljs-number">1.008</span>, hydrogen <span class="hljs-keyword">is</span> the lightest element on the periodic table.`
+  }, {
+    position: <span class="hljs-number">2</span>,
+    name: <span class="hljs-symbol">'Helium</span>',
+    weight: <span class="hljs-number">4.0026</span>,
+    symbol: <span class="hljs-symbol">'He</span>',
+    description: `Helium <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol He <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">2</span>. It <span class="hljs-keyword">is</span> a
+        colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first <span class="hljs-keyword">in</span> the noble gas
+        group <span class="hljs-keyword">in</span> the periodic table. Its boiling point <span class="hljs-keyword">is</span> the lowest among <span class="hljs-keyword">all</span> the elements.`
+  }, {
+    position: <span class="hljs-number">3</span>,
+    name: <span class="hljs-symbol">'Lithium</span>',
+    weight: <span class="hljs-number">6.941</span>,
+    symbol: <span class="hljs-symbol">'Li</span>',
+    description: `Lithium <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol Li <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">3</span>. It <span class="hljs-keyword">is</span> a soft,
+        silvery-white alkali metal. Under standard conditions, it <span class="hljs-keyword">is</span> the lightest metal <span class="hljs-keyword">and</span> the
+        lightest solid element.`
+  }, {
+    position: <span class="hljs-number">4</span>,
+    name: <span class="hljs-symbol">'Beryllium</span>',
+    weight: <span class="hljs-number">9.0122</span>,
+    symbol: <span class="hljs-symbol">'Be</span>',
+    description: `Beryllium <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol Be <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">4</span>. It <span class="hljs-keyword">is</span> a
+        relatively rare element <span class="hljs-keyword">in</span> the universe, usually occurring as a product <span class="hljs-keyword">of</span> the spallation <span class="hljs-keyword">of</span>
+        larger atomic nuclei that have collided <span class="hljs-keyword">with</span> cosmic rays.`
+  }, {
+    position: <span class="hljs-number">5</span>,
+    name: <span class="hljs-symbol">'Boron</span>',
+    weight: <span class="hljs-number">10.811</span>,
+    symbol: <span class="hljs-string">'B'</span>,
+    description: `Boron <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol B <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">5</span>. Produced entirely
+        by cosmic ray spallation <span class="hljs-keyword">and</span> supernovae <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> by stellar nucleosynthesis, it <span class="hljs-keyword">is</span> a
+        low-abundance element <span class="hljs-keyword">in</span> the Solar system <span class="hljs-keyword">and</span> <span class="hljs-keyword">in</span> the Earth<span class="hljs-symbol">'s</span> crust.`
+  }, {
+    position: <span class="hljs-number">6</span>,
+    name: <span class="hljs-symbol">'Carbon</span>',
+    weight: <span class="hljs-number">12.0107</span>,
+    symbol: <span class="hljs-string">'C'</span>,
+    description: `Carbon <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol C <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">6</span>. It <span class="hljs-keyword">is</span> nonmetallic
+        <span class="hljs-keyword">and</span> tetravalent—making four electrons available to form covalent chemical bonds. It belongs
+        to group <span class="hljs-number">14</span> <span class="hljs-keyword">of</span> the periodic table.`
+  }, {
+    position: <span class="hljs-number">7</span>,
+    name: <span class="hljs-symbol">'Nitrogen</span>',
+    weight: <span class="hljs-number">14.0067</span>,
+    symbol: <span class="hljs-string">'N'</span>,
+    description: `Nitrogen <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol N <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">7</span>. It was first
+        discovered <span class="hljs-keyword">and</span> isolated by Scottish physician Daniel Rutherford <span class="hljs-keyword">in</span> <span class="hljs-number">1772</span>.`
+  }, {
+    position: <span class="hljs-number">8</span>,
+    name: <span class="hljs-symbol">'Oxygen</span>',
+    weight: <span class="hljs-number">15.9994</span>,
+    symbol: <span class="hljs-string">'O'</span>,
+    description: `Oxygen <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol O <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">8</span>. It <span class="hljs-keyword">is</span> a member <span class="hljs-keyword">of</span>
+         the chalcogen group on the periodic table, a highly reactive nonmetal, <span class="hljs-keyword">and</span> an oxidizing
+         agent that readily forms oxides <span class="hljs-keyword">with</span> most elements as well as <span class="hljs-keyword">with</span> other compounds.`
+  }, {
+    position: <span class="hljs-number">9</span>,
+    name: <span class="hljs-symbol">'Fluorine</span>',
+    weight: <span class="hljs-number">18.9984</span>,
+    symbol: <span class="hljs-string">'F'</span>,
+    description: `Fluorine <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol F <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">9</span>. It <span class="hljs-keyword">is</span> the
+        lightest halogen <span class="hljs-keyword">and</span> exists as a highly toxic pale yellow diatomic gas <span class="hljs-keyword">at</span> standard
+        conditions.`
+  }, {
+    position: <span class="hljs-number">10</span>,
+    name: <span class="hljs-symbol">'Neon</span>',
+    weight: <span class="hljs-number">20.1797</span>,
+    symbol: <span class="hljs-symbol">'Ne</span>',
+    description: `Neon <span class="hljs-keyword">is</span> a chemical element <span class="hljs-keyword">with</span> symbol Ne <span class="hljs-keyword">and</span> atomic number <span class="hljs-number">10</span>. It <span class="hljs-keyword">is</span> a noble gas.
+        Neon <span class="hljs-keyword">is</span> a colorless, odorless, inert monatomic gas under standard conditions, <span class="hljs-keyword">with</span> about
+        two-thirds the density <span class="hljs-keyword">of</span> air.`
+  },
+];

@@ -39,6 +39,31 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import {
+  TableVizDifferElementComponent,
+ } from './table-viz-differ-element/table-viz-differ-element.component';
+import {
+  TableVizMultiHeaderComponent,
+ } from './table-viz-multi-header/table-viz-multi-header.component';
+import {
+  TableVizBasicComponent,
+ } from './table-viz-basic/table-viz-basic.component';
+import { TableStickyHeaderComponent } from './table-sticky-header/table-sticky-header.component';
+import { TableStickyFooterComponent } from './table-sticky-footer/table-sticky-footer.component';
+import { TableStickyColumnsComponent } from './table-sticky-columns/table-sticky-columns.component';
+import { TableSortingComponent } from './table-sorting/table-sorting.component';
+import { TableSelectionComponent } from './table-selection/table-selection.component';
+import { TableRowContextComponent } from './table-row-context/table-row-context.component';
+import { TablePaginationComponent } from './table-pagination/table-pagination.component';
+import { TableOverviewComponent } from './table-overview/table-overview.component';
+import { TableMultipleHeaderFooterComponent } from './table-multiple-header-footer/table-multiple-header-footer.component';
+import { TableHttpComponent } from './table-http/table-http.component';
+import { TableFooterRowComponent } from './table-footer-row/table-footer-row.component';
+import { TableFilteringComponent } from './table-filtering/table-filtering.component';
+import { TableExpandableRowsComponent } from './table-expandable-rows/table-expandable-rows.component';
+import { TableDynamicColumnsComponent } from './table-dynamic-columns/table-dynamic-columns.component';
+import { TableBasicFlexComponent } from './table-basic-flex/table-basic-flex.component';
+import { TableBasicComponent } from './table-basic/table-basic.component';
 import { ToolbarOverviewComponent } from './toolbar-overview/toolbar-overview.component';
 import { ToolbarMultirowComponent } from './toolbar-multirow/toolbar-multirow.component';
 import { SidenavBackdropComponent } from './sidenav-backdrop/sidenav-backdrop.component';
@@ -469,15 +494,14 @@ import {
   BreadscrumbBasicComponent,
   BreadscrumbBasicData
 } from './breadscrumb-basic/breadscrumb-basic.component';
-import { BottomsheetBasicComponent, BottomSheetOverviewExampleSheet } from './bottomsheet-basic/bottomsheet-basic.component';
+import {
+  BottomsheetBasicComponent,
+  BottomSheetOverviewExampleSheet
+} from './bottomsheet-basic/bottomsheet-basic.component';
 import {
   TableNativeComponent,
   TableNativeData
 } from './table-native/table-native.component';
-import {
-  TableBasicComponent,
-  TableBasicData
-} from './table-basic/table-basic.component';
 import {
   ProgressSpinnerBasicComponent,
   ProgressSpinnerBasicData
@@ -574,6 +598,63 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'table-viz-differ-element' : {
+    component: TableVizDifferElementComponent,
+    },
+  'table-viz-multi-header' : {
+    component: TableVizMultiHeaderComponent,
+    },
+  'table-viz-basic' : {
+    component: TableVizBasicComponent,
+    },
+  'table-sticky-header': {
+    component: TableStickyHeaderComponent
+  },
+  'table-sticky-footer': {
+    component: TableStickyFooterComponent
+  },
+  'table-sticky-columns': {
+    component: TableStickyColumnsComponent
+  },
+  'table-sorting': {
+    component: TableSortingComponent
+  },
+  'table-selection': {
+    component: TableSelectionComponent
+  },
+  'table-row-context': {
+    component: TableRowContextComponent
+  },
+  'table-pagination': {
+    component: TablePaginationComponent
+  },
+  'table-overview': {
+    component: TableOverviewComponent
+  },
+  'table-multiple-header-footer': {
+    component: TableMultipleHeaderFooterComponent
+  },
+  'table-http': {
+    component: TableHttpComponent
+  },
+  'table-footer-row': {
+    component: TableFooterRowComponent
+  },
+  'table-filtering': {
+    component: TableFilteringComponent
+  },
+  'table-expandable-rows': {
+    component: TableExpandableRowsComponent
+  },
+  'table-dynamic-columns': {
+    component: TableDynamicColumnsComponent
+  },
+  'table-basic-flex': {
+    component: TableBasicFlexComponent
+  },
+  'table-basic': {
+    component: TableBasicComponent
+  },
   'toolbar-overview': {
     component: ToolbarOverviewComponent
   },
@@ -1218,10 +1299,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: TableNativeComponent,
     data: TableNativeData
   },
-  'table-basic': {
-    component: TableBasicComponent,
-    data: TableBasicData
-  },
   'progress-spinner-basic': {
     component: ProgressSpinnerBasicComponent,
     data: ProgressSpinnerBasicData
@@ -1314,6 +1391,25 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    TableVizDifferElementComponent,
+    TableVizMultiHeaderComponent,
+    TableVizBasicComponent,
+    TableStickyHeaderComponent,
+    TableStickyFooterComponent,
+    TableStickyColumnsComponent,
+    TableSortingComponent,
+    TableSelectionComponent,
+    TableRowContextComponent,
+    TablePaginationComponent,
+    TableOverviewComponent,
+    TableMultipleHeaderFooterComponent,
+    TableHttpComponent,
+    TableFooterRowComponent,
+    TableFilteringComponent,
+    TableExpandableRowsComponent,
+    TableDynamicColumnsComponent,
+    TableBasicFlexComponent,
+    TableBasicComponent,
     BottomSheetOverviewExampleSheet,
     ToolbarOverviewComponent,
     ToolbarMultirowComponent,
@@ -1580,6 +1676,25 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    TableVizDifferElementComponent,
+    TableVizMultiHeaderComponent,
+    TableVizBasicComponent,
+    TableStickyHeaderComponent,
+    TableStickyFooterComponent,
+    TableStickyColumnsComponent,
+    TableSortingComponent,
+    TableSelectionComponent,
+    TableRowContextComponent,
+    TablePaginationComponent,
+    TableOverviewComponent,
+    TableMultipleHeaderFooterComponent,
+    TableHttpComponent,
+    TableFooterRowComponent,
+    TableFilteringComponent,
+    TableExpandableRowsComponent,
+    TableDynamicColumnsComponent,
+    TableBasicFlexComponent,
+    TableBasicComponent,
     BottomSheetOverviewExampleSheet,
     ToolbarOverviewComponent,
     ToolbarMultirowComponent,

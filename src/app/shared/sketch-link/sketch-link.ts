@@ -94,7 +94,7 @@ const sketch_link = {
     'Insert / Toolkit Material Library / Components / Pagination / Customized'
   ],
   table: [
-    'copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
+    'Copy from Toolkit Material Library.sketch / Toolkit Components / Data Table: Table'
   ],
   nodata: ['Insert / Toolkit Material Library / Components / No Data'],
   login: [

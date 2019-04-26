@@ -1,0 +1,13 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+:host {
+  padding: 0 24px;
+  display: block;
+  text-align: left;
+}
