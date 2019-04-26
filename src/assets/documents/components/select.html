@@ -1,186 +1,490 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Form Control
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Select
-  </div>
-  <div class="doc-desc-1">
-    Select allows users to select from a single-option menu. Select is a form
-    control for selecting a value from a set of options.
-  </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-more-example"></span>
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-
-  <div class="doc-title-4 mb-8">Basic Select</div>
-  <div class="doc-desc-2">
-    In simple select, option menus positioned under their emitting elements
-    such that the currently selected menu item appears
-    under of the emitting element.
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="select-basic"></div>
-  </div>
-
-
-
-  <div class="doc-title-4 mb-16">Select in Error State</div>
-  <div class="doc-example-container">
-    <div app-docs-example="select-error-state"></div>
-  </div>
-
-  <div class="doc-title-4 mb-8">Disabled Select</div>
-  <div class="doc-desc-2">A disabled select is unusable and un-clickable and
-    are rendered in gray by default in browsers. </div>
-  <div class="doc-example-container">
-    <div app-docs-example="select-disable"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">Select with Option Groups</div>
-  <div class="doc-example-container">
-    <div app-docs-example="select-group-option"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">Select with Multiple Selection</div>
-  <div class="doc-example-container">
-    <div app-docs-example="select-multiple-selection"></div>
-  </div>
-
-  <div class="doc-title-4 mb-16">Select with Custom Trigger Text</div>
-  <div class="doc-example-container">
-    <div app-docs-example="select-trigger-text"></div>
-  </div>
-
-
-
-
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>options</td>
-        <td>Array of Options</td>
-        <td>Array</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>placeholder</td>
-        <td>Title of select</td>
-        <td>string</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Use radio button to:
-    <ul class="doc-list">
-      <li>Scannable: It should be visible at a glance if a selection has been
-        selected, and selected items should be more visually
-        prominent than unselected items.</li>
-      <li>Contextual: Select content should be suited to user needs.</li>
-      <li>Nimble: Selects should be easy to open, close, and interact with.</li>
-    </ul>
-  </div>
-
-  <div class="doc-divider">
-
-  </div>
-
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Select menu should be short, clear, and fully visible. It shouldn&#x2019;t
-    be truncated.
-  </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/select-do.png" alt="">
+  <body>
+    <div class="doc-category-title ">
+      Form Control
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w50 docs-usage-center" style="height:160px">
-      <img src="assets/img/doc/select-dont.png" alt="">
+    <div class="doc-title-1">
+      Select
     </div>
-  </div>
+    <div class="doc-desc-1">
+      Select allows users to select from a single-option menu. Select is a form
+      control for selecting a value from a set of options.
+    </div>
 
-  <div class="doc-divider">
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-more-example"></span>
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
+    </div>
 
-  </div>
+    <div class="doc-title-4 mb-8">
+      Basic select
+    </div>
+    <div class="doc-desc-2 mb-16">
+      In simple select, option menus positioned under their emitting elements
+      such that the currently selected menu item appears under of the emitting
+      element.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-overview"></div>
+    </div>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+    <div class="doc-title-4 mb-16">
+      Select with 2-way value binding
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-value-binding"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Select in a form
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-form"></div>
+    </div>
 
-  <div class="docs-usage-spec docs-usage-center" style="height:280px">
-    <img src="assets/img/doc/select-spec.png" alt="">
-  </div>
+    <div class="doc-title-4 mb-16">
+      Select with form field features
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-hint-error"></div>
+    </div>
 
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component
-      Location for Designers</span>
-  </div>
-  <a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sketch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path
-    within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
+    <div class="doc-title-4 mb-16">
+      Disabled select
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-disabled"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Select with reset option
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-reset"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Select with option groups
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-optgroup"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Select with multiple selection
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-multiple"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Select with custom trigger text
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-custom-trigger"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Select with no option ripple
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-no-ripple"></div>
+    </div>
 
+    <div class="doc-title-4 mb-16">
+      Select with custom panel styling
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-panel-class"></div>
+    </div>
 
-</body>
+    <div class="doc-title-4 mb-16">
+      Select with a custom ErrorStateMatcher
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="select-error-state-matcher"></div>
+    </div>
 
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      To get a customized select, just set
+      <span class="doc-desc-2-highlight"
+        >ariaLabel / ariaLabelledby / compareWith / disableOptionCentering /
+        disableRipple / disabled / errorStateMatcher / id / multiple /
+        panelClass / placeholder / required / sortComparator / value /
+        openedChange / selectionChange / autofilled / controlType /
+        customTrigger / empty / errorState / focused / ngControl / optionGroups
+        / optionSelectionChanges / options / overlayDir / panel / panelOpen /
+        selected / stateChanges / trigger / triggerValue / source / value</span
+      >
+    </div>
+
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ariaLabel</td>
+          <td>
+            Aria label of the select. If not specified, the placeholder will be
+            used as label.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>ariaLabelledby</td>
+          <td>
+            Input that can be used to specify the aria-labelledby attribute.
+          </td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>compareWith</td>
+          <td>
+            Function to compare the option values with the selected values. The
+            first argument is a value from an option. The second is a value from
+            the selection. A boolean should be returned.
+          </td>
+          <td>(o1: any, o2: any) =&gt; boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableOptionCentering</td>
+          <td>Whether to center the active option over the trigger.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableRipple</td>
+          <td>Whether ripples are disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disabled</td>
+          <td>Whether the component is disabled.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>errorStateMatcher</td>
+          <td>Object used to control when error messages are shown.</td>
+          <td>ErrorStateMatcher</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>id</td>
+          <td>Unique id of the element.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>multiple</td>
+          <td>
+            Whether the user should be allowed to select multiple options.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>panelClass</td>
+          <td>
+            Classes to be passed to the select panel. Supports the same syntax
+            as ngClass.
+          </td>
+          <td>
+            string | string[] | Set<string> | { [key: string]: any; }</string>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>placeholder</td>
+          <td>Placeholder to be shown if no value has been selected.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>required</td>
+          <td>Whether the component is required.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>sortComparator</td>
+          <td>
+            Function used to sort the values in a select in multiple mode.
+            Follows the same logic as Array.prototype.sort.
+          </td>
+          <td>
+            (a: MatOption, b: MatOption, options: MatOption[]) =&gt; number
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>value</td>
+          <td>Value of the select control.</td>
+          <td>any</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>openedChange</td>
+          <td>Event emitted when the select panel has been toggled.</td>
+          <td>EventEmitter<boolean></boolean></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>selectionChange</td>
+          <td>
+            Event emitted when the selected value has been changed by the user.
+          </td>
+          <td>EventEmitter<matselectchange></matselectchange></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>autofilled</td>
+          <td>
+            Whether the input is currently in an autofilled state. If property
+            is not present on the control it is assumed to be false.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>controlType</td>
+          <td>A name for this control that can be used by mat-form-field.</td>
+          <td>&apos;mat-select&apos;</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>customTrigger</td>
+          <td>User-supplied override of the trigger element.</td>
+          <td>MatSelectTrigger</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>empty</td>
+          <td>Whether the select has a value.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>errorState</td>
+          <td>Whether the control is in an error state.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>focused</td>
+          <td>Whether the select is focused.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>ngControl</td>
+          <td></td>
+          <td>NgControl</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>optionGroups</td>
+          <td>All of the defined groups of options.</td>
+          <td>QueryList<matoptgroup></matoptgroup></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>optionSelectionChanges</td>
+          <td>
+            Combined stream of all of the child options&apos; change events.
+          </td>
+          <td>
+            Observable<matoptionselectionchange></matoptionselectionchange>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>options</td>
+          <td>All of the defined select options.</td>
+          <td>QueryList<matoption></matoption></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>overlayDir</td>
+          <td>Overlay pane containing the options.</td>
+          <td>CdkConnectedOverlay</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>panel</td>
+          <td>Panel containing the select options.</td>
+          <td>ElementRef</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>panelOpen</td>
+          <td>Whether or not the overlay panel is open.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>selected</td>
+          <td>The currently selected option.</td>
+          <td>MatOption | MatOption[]</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>stateChanges</td>
+          <td>
+            Stream that emits whenever the state of the control changes such
+            that the parent MatFormField needs to run change detection.
+          </td>
+          <td>Observable<void></void></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>trigger</td>
+          <td>Trigger that opens the select.</td>
+          <td>ElementRef</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>triggerValue</td>
+          <td>The value displayed in the trigger.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>source</td>
+          <td>Reference to the select that emitted the change event.</td>
+          <td>MatSelect</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>value</td>
+          <td>Current value of the select that emitted the event.</td>
+          <td>any</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      Select menu should be short, clear, and fully visible. It shouldn&#x2019;t
+      be truncated.
+    </div>
+
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w50 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/select-do.png" alt="" />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w50 docs-usage-center"
+        style="height:160px"
+      >
+        <img src="assets/img/doc/select-dont.png" alt="" />
+      </div>
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center" style="height:280px">
+      <img src="assets/img/doc/select-spec.png" alt="" />
+    </div>
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sketch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+    <div sketch-link="1"></div>
+  </body>
 </html>

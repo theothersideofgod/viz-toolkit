@@ -1,0 +1,24 @@
+<span class="hljs-keyword">import</span> {Component} from <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl, Validators} from <span class="hljs-string">'@angular/forms'</span>;
+
+export <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Animal</span> {</span>
+<span class="hljs-symbol">  name:</span> string;
+<span class="hljs-symbol">  sound:</span> string;
+}
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Select with form field features */</span>
+<span class="hljs-meta">@Component</span>({
+<span class="hljs-symbol">  selector:</span> <span class="hljs-string">'select-hint-error'</span>,
+<span class="hljs-symbol">  templateUrl:</span> <span class="hljs-string">'select-hint-error.component.html'</span>,
+<span class="hljs-symbol">  styleUrls:</span> [<span class="hljs-string">'select-hint-error.component.css'</span>],
+})
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectHintErrorComponent</span> {</span>
+  animalControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required]);
+  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, Validators.required);
+<span class="hljs-symbol">  animals:</span> Animal[] = [
+    {<span class="hljs-string">name:</span> <span class="hljs-string">'Dog'</span>, <span class="hljs-string">sound:</span> <span class="hljs-string">'Woof!'</span>},
+    {<span class="hljs-string">name:</span> <span class="hljs-string">'Cat'</span>, <span class="hljs-string">sound:</span> <span class="hljs-string">'Meow!'</span>},
+    {<span class="hljs-string">name:</span> <span class="hljs-string">'Cow'</span>, <span class="hljs-string">sound:</span> <span class="hljs-string">'Moo!'</span>},
+    {<span class="hljs-string">name:</span> <span class="hljs-string">'Fox'</span>, <span class="hljs-string">sound:</span> <span class="hljs-string">'Wa-pa-pa-pa-pa-pa-pow!'</span>},
+  ];
+}

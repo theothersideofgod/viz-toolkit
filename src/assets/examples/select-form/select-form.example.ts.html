@@ -1,0 +1,36 @@
+import {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+export <span class="hljs-keyword">interface</span> <span class="hljs-title">Food</span> {
+  <span class="hljs-keyword">value</span>: <span class="hljs-keyword">string</span>;
+  viewValue: <span class="hljs-keyword">string</span>;
+}
+
+export <span class="hljs-keyword">interface</span> <span class="hljs-title">Car</span> {
+  <span class="hljs-keyword">value</span>: <span class="hljs-keyword">string</span>;
+  viewValue: <span class="hljs-keyword">string</span>;
+}
+
+<span class="hljs-comment">/**
+ * @title Select in a form
+ */</span>
+@Component({
+  selector: <span class="hljs-string">'select-form'</span>,
+  templateUrl: <span class="hljs-string">'select-form.component.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-form.component.css'</span>],
+})
+export <span class="hljs-keyword">class</span> <span class="hljs-title">SelectFormComponent</span> {
+  selectedValue: <span class="hljs-keyword">string</span>;
+  selectedCar: <span class="hljs-keyword">string</span>;
+
+  foods: Food[] = [
+    {<span class="hljs-keyword">value</span>: <span class="hljs-string">'steak-0'</span>, viewValue: <span class="hljs-string">'Steak'</span>},
+    {<span class="hljs-keyword">value</span>: <span class="hljs-string">'pizza-1'</span>, viewValue: <span class="hljs-string">'Pizza'</span>},
+    {<span class="hljs-keyword">value</span>: <span class="hljs-string">'tacos-2'</span>, viewValue: <span class="hljs-string">'Tacos'</span>}
+  ];
+
+  cars: Car[] = [
+    {<span class="hljs-keyword">value</span>: <span class="hljs-string">'volvo'</span>, viewValue: <span class="hljs-string">'Volvo'</span>},
+    {<span class="hljs-keyword">value</span>: <span class="hljs-string">'saab'</span>, viewValue: <span class="hljs-string">'Saab'</span>},
+    {<span class="hljs-keyword">value</span>: <span class="hljs-string">'mercedes'</span>, viewValue: <span class="hljs-string">'Mercedes'</span>}
+  ];
+}

@@ -39,6 +39,18 @@ import {
   VizFileUploadModule
 } from 'libs';
 
+import { SelectErrorStateMatcherComponent } from './select-error-state-matcher/select-error-state-matcher.component';
+import { SelectPanelClassComponent } from './select-panel-class/select-panel-class.component';
+import { SelectNoRippleComponent } from './select-no-ripple/select-no-ripple.component';
+import { SelectCustomTriggerComponent } from './select-custom-trigger/select-custom-trigger.component';
+import { SelectMultipleComponent } from './select-multiple/select-multiple.component';
+import { SelectOptgroupComponent } from './select-optgroup/select-optgroup.component';
+import { SelectResetComponent } from './select-reset/select-reset.component';
+import { SelectDisabledComponent } from './select-disabled/select-disabled.component';
+import { SelectHintErrorComponent } from './select-hint-error/select-hint-error.component';
+import { SelectFormComponent } from './select-form/select-form.component';
+import { SelectValueBindingComponent } from './select-value-binding/select-value-binding.component';
+import { SelectOverviewComponent } from './select-overview/select-overview.component';
 import { InputPrefixSuffixComponent } from './input-prefix-suffix/input-prefix-suffix.component';
 import { InputHintComponent } from './input-hint/input-hint.component';
 import { InputFormComponent } from './input-form/input-form.component';
@@ -264,22 +276,6 @@ import {
   FileUploadBasicData
 } from './file-upload-basic/file-upload-basic.component';
 import {
-  SelectTriggerTextComponent,
-  SelectTriggerTextData
-} from './select-trigger-text/select-trigger-text.component';
-import {
-  SelectMultipleSelectionComponent,
-  SelectMultipleSelectionData
-} from './select-multiple-selection/select-multiple-selection.component';
-import {
-  SelectGroupOptionComponent,
-  SelectGroupOptionData
-} from './select-group-option/select-group-option.component';
-import {
-  SelectErrorStateComponent,
-  SelectErrorStateData
-} from './select-error-state/select-error-state.component';
-import {
   MenuIconComponent,
   MenuIconData
 } from './menu-icon/menu-icon.component';
@@ -417,10 +413,6 @@ import {
   SlideToggleDisableData
 } from './slide-toggle-disable/slide-toggle-disable.component';
 import {
-  SelectDisableComponent,
-  SelectDisableData
-} from './select-disable/select-disable.component';
-import {
   RadioButtonDisableComponent,
   RadioButtonDisableData
 } from './radio-button-disable/radio-button-disable.component';
@@ -529,10 +521,6 @@ import {
   DatePickerBasicData
 } from './date-picker-basic/date-picker-basic.component';
 import {
-  SelectBasicComponent,
-  SelectBasicData
-} from './select-basic/select-basic.component';
-import {
   CheckboxBasicComponent,
   CheckboxBasicData
 } from './checkbox-basic/checkbox-basic.component';
@@ -580,6 +568,42 @@ import {
   MatSelectModule
 } from '@angular/material';
 export const ALL_EXAMPLE_ITEMS = {
+  'select-error-state-matcher': {
+    component: SelectErrorStateMatcherComponent
+  },
+  'select-panel-class': {
+    component: SelectPanelClassComponent
+  },
+  'select-no-ripple': {
+    component: SelectNoRippleComponent
+  },
+  'select-custom-trigger': {
+    component: SelectCustomTriggerComponent
+  },
+  'select-multiple': {
+    component: SelectMultipleComponent
+  },
+  'select-optgroup': {
+    component: SelectOptgroupComponent
+  },
+  'select-reset': {
+    component: SelectResetComponent
+  },
+  'select-disabled': {
+    component: SelectDisabledComponent
+  },
+  'select-hint-error': {
+    component: SelectHintErrorComponent
+  },
+  'select-form': {
+    component: SelectFormComponent
+  },
+  'select-value-binding': {
+    component: SelectValueBindingComponent
+  },
+  'select-overview': {
+    component: SelectOverviewComponent
+  },
   'input-prefix-suffix': {
     component: InputPrefixSuffixComponent
   },
@@ -950,22 +974,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: FileUploadBasicComponent,
     data: FileUploadBasicData
   },
-  'select-trigger-text': {
-    component: SelectTriggerTextComponent,
-    data: SelectTriggerTextData
-  },
-  'select-multiple-selection': {
-    component: SelectMultipleSelectionComponent,
-    data: SelectMultipleSelectionData
-  },
-  'select-group-option': {
-    component: SelectGroupOptionComponent,
-    data: SelectGroupOptionData
-  },
-  'select-error-state': {
-    component: SelectErrorStateComponent,
-    data: SelectErrorStateData
-  },
   'menu-icon': {
     component: MenuIconComponent,
     data: MenuIconData
@@ -1106,10 +1114,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: SlideToggleDisableComponent,
     data: SlideToggleDisableData
   },
-  'select-disable': {
-    component: SelectDisableComponent,
-    data: SelectDisableData
-  },
   'radio-button-disable': {
     component: RadioButtonDisableComponent,
     data: RadioButtonDisableData
@@ -1218,10 +1222,6 @@ export const ALL_EXAMPLE_ITEMS = {
     component: DatePickerBasicComponent,
     data: DatePickerBasicData
   },
-  'select-basic': {
-    component: SelectBasicComponent,
-    data: SelectBasicData
-  },
   'checkbox-basic': {
     component: CheckboxBasicComponent,
     data: CheckboxBasicData
@@ -1266,6 +1266,18 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    SelectErrorStateMatcherComponent,
+    SelectPanelClassComponent,
+    SelectNoRippleComponent,
+    SelectCustomTriggerComponent,
+    SelectMultipleComponent,
+    SelectOptgroupComponent,
+    SelectResetComponent,
+    SelectDisabledComponent,
+    SelectHintErrorComponent,
+    SelectFormComponent,
+    SelectValueBindingComponent,
+    SelectOverviewComponent,
     InputPrefixSuffixComponent,
     InputHintComponent,
     InputFormComponent,
@@ -1387,10 +1399,6 @@ export const ALL_EXAMPLE_ITEMS = {
     FileUploadBasicComponent,
     DialogContentComponent,
     DialogDataComponent,
-    SelectTriggerTextComponent,
-    SelectMultipleSelectionComponent,
-    SelectGroupOptionComponent,
-    SelectErrorStateComponent,
     MenuIconComponent,
     DatePickerRangeValidationComponent,
     DatePickerEmulatingComponent,
@@ -1426,7 +1434,6 @@ export const ALL_EXAMPLE_ITEMS = {
     ButtonStrokedComponent,
     HeaderApplicationComponent,
     SlideToggleDisableComponent,
-    SelectDisableComponent,
     RadioButtonDisableComponent,
     CheckboxDisableComponent,
     CheckboxIndetermineComponent,
@@ -1455,7 +1462,6 @@ export const ALL_EXAMPLE_ITEMS = {
     MenuNestedComponent,
     ButtonBasicComponent,
     DatePickerBasicComponent,
-    SelectBasicComponent,
     CheckboxBasicComponent,
     MenuBasicComponent,
     RadioButtonBasicComponent,
@@ -1511,6 +1517,18 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    SelectErrorStateMatcherComponent,
+    SelectPanelClassComponent,
+    SelectNoRippleComponent,
+    SelectCustomTriggerComponent,
+    SelectMultipleComponent,
+    SelectOptgroupComponent,
+    SelectResetComponent,
+    SelectDisabledComponent,
+    SelectHintErrorComponent,
+    SelectFormComponent,
+    SelectValueBindingComponent,
+    SelectOverviewComponent,
     InputPrefixSuffixComponent,
     InputHintComponent,
     InputFormComponent,
@@ -1632,10 +1650,6 @@ export const ALL_EXAMPLE_ITEMS = {
     FileUploadBasicComponent,
     DialogContentComponent,
     DialogDataComponent,
-    SelectTriggerTextComponent,
-    SelectMultipleSelectionComponent,
-    SelectGroupOptionComponent,
-    SelectErrorStateComponent,
     MenuIconComponent,
     DatePickerRangeValidationComponent,
     DatePickerEmulatingComponent,
@@ -1671,7 +1685,6 @@ export const ALL_EXAMPLE_ITEMS = {
     ButtonStrokedComponent,
     HeaderApplicationComponent,
     SlideToggleDisableComponent,
-    SelectDisableComponent,
     RadioButtonDisableComponent,
     CheckboxDisableComponent,
     CheckboxIndetermineComponent,
@@ -1700,7 +1713,6 @@ export const ALL_EXAMPLE_ITEMS = {
     MenuNestedComponent,
     ButtonBasicComponent,
     DatePickerBasicComponent,
-    SelectBasicComponent,
     CheckboxBasicComponent,
     MenuBasicComponent,
     RadioButtonBasicComponent,

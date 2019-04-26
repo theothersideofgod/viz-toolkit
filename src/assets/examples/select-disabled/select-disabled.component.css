@@ -1,0 +1,9 @@
+p {
+  padding-left: 56px;
+  text-align: left;
+}
+.example-container {
+  width: 200px;
+  text-align: left;
+  margin: 0 auto;
+}

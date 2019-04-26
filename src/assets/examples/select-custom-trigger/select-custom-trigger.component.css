@@ -1,0 +1,10 @@
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.mat-form-field {
+  width: 200px;
+  text-align: left;
+  margin: 0 auto;
+}

@@ -19,7 +19,8 @@ const sketch_link = {
   ],
   radio: ['Insert / Toolkit Material Library / Components / Radio Button'],
   select: [
-    'Insert / Toolkit Material Library / Components / Dropdown / Default or Active'
+    'Insert / Toolkit Material Library / Components / Select / Basic',
+    'Insert / Toolkit Material Library / Components / Select / Basic With Hint'
   ],
   slider: [
     'copy from Toolkit Material Library.sketch / Toolkit Components / Form Controls: Slider'
