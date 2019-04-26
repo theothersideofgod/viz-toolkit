@@ -1,27 +1,69 @@
 <span class="hljs-keyword">import</span> { Component, OnInit, ViewChild, TemplateRef } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> { MatBottomSheet, MatBottomSheetRef } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
-<span class="hljs-meta">@Component</span>({
+@Component({
   selector: <span class="hljs-string">'bottomsheet-basic'</span>,
   templateUrl: <span class="hljs-string">'bottomsheet-basic.component.html'</span>,
   styleUrls: [<span class="hljs-string">'bottomsheet-basic.component.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BottomsheetBasicComponent <span class="hljs-keyword">implements</span> OnInit {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'tpl'</span>)
-  tpl: TemplateRef&lt;<span class="hljs-built_in">any</span>&gt;;
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> bottomSheet: MatBottomSheet</span>) {}
-
-  openBottomSheet(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">this</span>.bottomSheet.open(<span class="hljs-keyword">this</span>.tpl);
-  }
-
-  openLink(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">this</span>.bottomSheet.dismiss();
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BottomsheetBasicComponent</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> {</span>
+  constructor(private bottomSheet: MatBottomSheet) {}
+  openBottomSheet(): void {
+    <span class="hljs-keyword">this</span>.bottomSheet.open(BottomSheetOverviewExampleSheet);
   }
 
   ngOnInit() {}
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> BottomsheetBasicData = {
-  name: <span class="hljs-string">'BottomsheetBasic'</span>
-};
+@Component({
+  selector: <span class="hljs-string">'bottom-sheet-overview-example-sheet'</span>,
+  template: `<span class="javascript">
+    &lt;mat-nav-list&gt;
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+        <span class="hljs-attr">href</span>=<span class="hljs-string">"https://keep.google.com/"</span>
+        <span class="hljs-attr">mat-list-item</span>
+        (<span class="hljs-attr">click</span>)=<span class="hljs-string">"openLink($event)"</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">mat-line</span>&gt;</span>Google Keep<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">mat-line</span>&gt;</span>Add to a note<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+
+      &lt;a
+        href=<span class="hljs-string">"https://docs.google.com/"</span>
+        mat-list-item
+        (click)=<span class="hljs-string">"openLink($event)"</span>
+      &gt;
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">mat-line</span>&gt;</span>Google Docs<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
+        &lt;span mat-line&gt;Embed <span class="hljs-keyword">in</span> a <span class="hljs-built_in">document</span>&lt;<span class="hljs-regexp">/span&gt;
+      &lt;/</span>a&gt;
+
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+        <span class="hljs-attr">href</span>=<span class="hljs-string">"https://plus.google.com/"</span>
+        <span class="hljs-attr">mat-list-item</span>
+        (<span class="hljs-attr">click</span>)=<span class="hljs-string">"openLink($event)"</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">mat-line</span>&gt;</span>Google Plus<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">mat-line</span>&gt;</span>Share with your friends<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+
+      &lt;a
+        href=<span class="hljs-string">"https://hangouts.google.com/"</span>
+        mat-list-item
+        (click)=<span class="hljs-string">"openLink($event)"</span>
+      &gt;
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">mat-line</span>&gt;</span>Google Hangouts<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
+        &lt;span mat-line&gt;Show to your coworkers&lt;<span class="hljs-regexp">/span&gt;
+      &lt;/</span>a&gt;
+    <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">mat-nav-list</span>&gt;</span>
+  </span></span>`
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BottomSheetOverviewExampleSheet</span> {</span>
+  constructor(
+    private bottomSheetRef: MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;
+  ) {}
+
+  openLink(event: MouseEvent): void {
+    <span class="hljs-keyword">this</span>.bottomSheetRef.dismiss();
+    event.preventDefault();
+  }
+}

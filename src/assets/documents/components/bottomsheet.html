@@ -1,178 +1,281 @@
 <html>
+  <head></head>
 
-<head></head>
-
-<body>
-  <div class="doc-category-title ">
-    Popups &amp; Modals
-    <span class="docs-markdown-h3" id="contents">
-      <span header-link="contents"></span>Contents</span>
-  </div>
-  <div class="doc-title-1">
-    Bottom Sheet
-  </div>
-  <div class="doc-desc-1">
-    Bottom sheets are surfaces containing supplementary content that are anchored to the bottom of the screen. Bottom sheets
-    slide up from the bottom of the screen to reveal more content.
-  </div>
-
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Examples
-    <span class="docs-markdown-h3" id="examples">
-      <span header-link="examples"></span>Examples</span>
-  </div>
-  <div class="doc-desc-2">
-    Bottom sheets are intended primarily as an interaction on mobile devices where they can be used as an alternative to
-    dialogs and menus.
-  </div>
-  <div class="doc-example-container">
-    <div app-docs-example="bottomsheet-basic"></div>
-  </div>
-  <div class="doc-divider">
-  </div>
-  <div class="doc-title-2">
-    Props
-    <span class="docs-markdown-h3" id="props">
-      <span header-link="props"></span>Props</span>
-  </div>
-  <div class="doc-desc-2">
-    To get a customized checkbox, just set
-    <span class="doc-desc-2-highlight">type/state/disabled</span>
-  </div>
-  <table class="doc-props-table">
-    <thead>
-      <tr>
-        <th>property</th>
-        <th>description</th>
-        <th>type</th>
-        <th>default</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>dismiss</td>
-        <td>Dismisses the currently-visible bottom sheet. </td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>open</td>
-        <td>Parameters</td>
-        <td>component : ComponentType
-          <br>
-          <t> config? MatBottomSheetConfig
-            <d>
-            </d>
-          </t>
-        </td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Best Practices
-    <span class="docs-markdown-h3" id="best_practices">
-      <span header-link="best_practices"></span>Best Practices</span>
-  </div>
-
-  <div class="doc-desc-2">
-    Bottom sheets should:
-    <ul class="doc-list">
-      <li>
-        Supporting: Bottom sheets contain content that supplements the screen&#x2019;s primary UI region.
-      </li>
-      <li>
-        Flexible: Bottom sheets can display a wide variety of content and layouts.
-      </li>
-      <li>
-        Ergonomic: Bottom sheets are easy to reach on a mobile device.
-      </li>
-    </ul>
-  </div>
-
-  <div class="doc-divider">
-
-  </div>
-
-
-  <div class="doc-title-2">
-    Usage &amp; Content Guidelines
-    <span class="docs-markdown-h3" id="content_guidelines">
-      <span header-link="content_guidelines"></span>Content Guidelines</span>
-  </div>
-
-  <div class="doc-desc-2">
-    A bottom sheet is anchored to the bottom edge of the screen. Don&#x2019;t inset all sides of a bottom sheet from screen edges. This
-    can make it hard to see and allow it to be confused for other components, such as snackbars.
-  </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w100 docs-usage-center-no-scale" style="height:509px">
-      <img src="assets/img/doc/bottomsheet-bottom-do.png" alt="" height="95%">
+  <body>
+    <div class="doc-category-title ">
+      Popups &amp; Modals
+      <span class="docs-markdown-h3" id="contents">
+        <span header-link="contents"></span>Contents</span
+      >
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16" style="height:509px">
-      <img src="assets/img/doc/bottomsheet-bottom-dont.png" alt="" height="95%">
+    <div class="doc-title-1">
+      Bottom Sheet
     </div>
-  </div>
-
-  <div class="doc-desc-2">
-    Use a visible scrim with modal bottom sheets to inform users they cannot interact with the rest of the screen. Don&#x2019;t use
-    an invisible scrim for modal bottom sheets. This can mislead users about their ability to interact with the rest of the
-    screen.
-  </div>
-
-  <div class="docs-guideline-group">
-    <div class="docs-usage-do docs-usage-w100 docs-usage-center-no-scale" style="height:509px">
-      <img src="assets/img/doc/bottomsheet-scrim-do.png" alt="" height="95%">
+    <div class="doc-desc-1">
+      Bottom sheets are surfaces containing supplementary content that are
+      anchored to the bottom of the screen. Bottom sheets slide up from the
+      bottom of the screen to reveal more content.
     </div>
-    <div class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16" style="height:509px">
-      <img src="assets/img/doc/bottomsheet-scrim-dont.png" alt="" height="95%">
+
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Examples
+      <span class="docs-markdown-h3" id="examples">
+        <span header-link="examples"></span>Examples</span
+      >
     </div>
-  </div>
+    <div class="doc-desc-2">
+      Bottom sheets are intended primarily as an interaction on mobile devices
+      where they can be used as an alternative to dialogs and menus.
+    </div>
+    <div class="doc-example-container">
+      <div app-docs-example="bottomsheet-basic"></div>
+    </div>
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Props
+      <span class="docs-markdown-h3" id="props">
+        <span header-link="props"></span>Props</span
+      >
+    </div>
 
-  <div class="doc-desc-2">
-    Use a visible scrim with modal bottom sheets to inform users they cannot interact with the rest of the screen. Don’t use
-    an invisible scrim for modal bottom sheets. This can mislead users about their ability to interact with the rest of the
-    screen.
-  </div>
+    <div class="doc-desc-2">
+      To get a customized bottom-sheet, just set
+      <span class="doc-desc-2-highlight"
+        >ariaLabel / autoFocus / backdropClass / closeOnNavigation / data /
+        direction / disableClose / hasBackdrop / panelClass / restoreFocus /
+        viewContainerRef / disableClose / instance</span
+      >
+    </div>
 
-  <div class="doc-divider">
+    <table class="doc-props-table">
+      <thead>
+        <tr>
+          <th>property</th>
+          <th>description</th>
+          <th>type</th>
+          <th>default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ariaLabel</td>
+          <td>Aria label to assign to the bottom sheet element.</td>
+          <td>string | null</td>
+          <td></td>
+        </tr>
 
-  </div>
+        <tr>
+          <td>autoFocus</td>
+          <td>
+            Whether the bottom sheet should focus the first focusable element on
+            open.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
 
-  <div class="doc-title-2">
-    Design Specs
-    <span class="docs-markdown-h3" id="design_specs">
-      <span header-link="design_specs"></span>Design Specs</span>
-  </div>
+        <tr>
+          <td>backdropClass</td>
+          <td>Custom class for the backdrop.</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>closeOnNavigation</td>
+          <td>
+            Whether the bottom sheet should close when the user goes
+            backwards/forwards in history. Note that this usually doesn&apos;t
+            include clicking on links (unless the user is using the
+            HashLocationStrategy).
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>data</td>
+          <td>Data being injected into the child component.</td>
+          <td>D | null</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>direction</td>
+          <td>Text layout direction for the bottom sheet.</td>
+          <td>Direction</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableClose</td>
+          <td>
+            Whether the user can use escape or clicking outside to close the
+            bottom sheet.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>hasBackdrop</td>
+          <td>Whether the bottom sheet has a backdrop.</td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>panelClass</td>
+          <td>Extra CSS classes to be added to the bottom sheet container.</td>
+          <td>string | string[]</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>restoreFocus</td>
+          <td>
+            Whether the bottom sheet should restore focus to the
+            previously-focused element, after it&apos;s closed.
+          </td>
+          <td>boolean</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>viewContainerRef</td>
+          <td>
+            The view container to place the overlay for the bottom sheet into.
+          </td>
+          <td>ViewContainerRef</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>disableClose</td>
+          <td>Whether the user is allowed to close the bottom sheet.</td>
+          <td>boolean | undefined</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>instance</td>
+          <td>
+            Instance of the component making up the content of the bottom sheet.
+          </td>
+          <td>T</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Usage &amp; Content Guidelines
+      <span class="docs-markdown-h3" id="content_guidelines">
+        <span header-link="content_guidelines"></span>Content Guidelines</span
+      >
+    </div>
+
+    <div class="doc-desc-2">
+      A bottom sheet is anchored to the bottom edge of the screen. Don&#x2019;t
+      inset all sides of a bottom sheet from screen edges. This can make it hard
+      to see and allow it to be confused for other components, such as
+      snackbars.
+    </div>
+
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center-no-scale"
+        style="height:509px"
+      >
+        <img
+          src="assets/img/doc/bottomsheet-bottom-do.png"
+          alt=""
+          height="95%"
+        />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16"
+        style="height:509px"
+      >
+        <img
+          src="assets/img/doc/bottomsheet-bottom-dont.png"
+          alt=""
+          height="95%"
+        />
+      </div>
+    </div>
+
+    <div class="doc-desc-2">
+      Use a visible scrim with modal bottom sheets to inform users they cannot
+      interact with the rest of the screen. Don&#x2019;t use an invisible scrim
+      for modal bottom sheets. This can mislead users about their ability to
+      interact with the rest of the screen.
+    </div>
+
+    <div class="docs-guideline-group">
+      <div
+        class="docs-usage-do docs-usage-w100 docs-usage-center-no-scale"
+        style="height:509px"
+      >
+        <img
+          src="assets/img/doc/bottomsheet-scrim-do.png"
+          alt=""
+          height="95%"
+        />
+      </div>
+      <div
+        class="docs-usage-dont docs-usage-w100 docs-usage-center-no-scale docs-mt16"
+        style="height:509px"
+      >
+        <img
+          src="assets/img/doc/bottomsheet-scrim-dont.png"
+          alt=""
+          height="95%"
+        />
+      </div>
+    </div>
+
+    <div class="doc-desc-2">
+      Use a visible scrim with modal bottom sheets to inform users they cannot
+      interact with the rest of the screen. Don’t use an invisible scrim for
+      modal bottom sheets. This can mislead users about their ability to
+      interact with the rest of the screen.
+    </div>
+
+    <div class="doc-divider"></div>
+
+    <div class="doc-title-2">
+      Design Specs
+      <span class="docs-markdown-h3" id="design_specs">
+        <span header-link="design_specs"></span>Design Specs</span
+      >
+    </div>
+
+    <div class="docs-usage-spec docs-usage-center-no-scale" style="height:488px">
+      <img src="assets/img/doc/bottomsheet-spec.png" style="height: 448px;" alt="" />
+    </div>
 
 
-  <div class="docs-usage-spec docs-usage-center" style="height:432px">
-    <img src="assets/img/doc/bottomsheet-spec.png" alt="">
-  </div>
-
-  <div class="docs-usage-spec docs-usage-center" style="height:432px">
-    <img src="assets/img/doc/bottomsheet-spec.png" alt="">
-  </div>
-
-  <div class="doc-divider"></div>
-  <div class="doc-title-2">
-    Component Location for Designers
-    <span class="docs-markdown-h3" id="component_location_for_designers">
-      <span header-link="component_location_for_designers"></span>Component Location for Designers</span>
-  </div><a class="doc-download-link" href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch">Download Sketch File</a>
-  <div class="doc-desc-2">
-    For designers, to add this component to your design, follow this path within the Sketch App UI:
-  </div>
-  <div sketch-link=""></div>
-
-
- 
-
-
-</body>
-
+    <div class="doc-divider"></div>
+    <div class="doc-title-2">
+      Component Location for Designers
+      <span class="docs-markdown-h3" id="component_location_for_designers">
+        <span header-link="component_location_for_designers"></span>Component
+        Location for Designers</span
+      >
+    </div>
+    <a
+      class="doc-download-link"
+      href="http://vizient-toolkit.interactivelabs.com/toolkit_material_library.sketch"
+      >Download Sketch File</a
+    >
+    <div class="doc-desc-2">
+      For designers, to add this component to your design, follow this path
+      within the Sketch App UI:
+    </div>
+    <div sketch-link=""></div>
+  </body>
 </html>

@@ -469,10 +469,7 @@ import {
   BreadscrumbBasicComponent,
   BreadscrumbBasicData
 } from './breadscrumb-basic/breadscrumb-basic.component';
-import {
-  BottomsheetBasicComponent,
-  BottomsheetBasicData
-} from './bottomsheet-basic/bottomsheet-basic.component';
+import { BottomsheetBasicComponent, BottomSheetOverviewExampleSheet } from './bottomsheet-basic/bottomsheet-basic.component';
 import {
   TableNativeComponent,
   TableNativeData
@@ -1215,8 +1212,7 @@ export const ALL_EXAMPLE_ITEMS = {
     data: BreadscrumbBasicData
   },
   'bottomsheet-basic': {
-    component: BottomsheetBasicComponent,
-    data: BottomsheetBasicData
+    component: BottomsheetBasicComponent
   },
   'table-native': {
     component: TableNativeComponent,
@@ -1318,6 +1314,7 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
+    BottomSheetOverviewExampleSheet,
     ToolbarOverviewComponent,
     ToolbarMultirowComponent,
     SidenavBackdropComponent,
@@ -1583,6 +1580,7 @@ export const ALL_EXAMPLE_ITEMS = {
   ],
   providers: [],
   entryComponents: [
+    BottomSheetOverviewExampleSheet,
     ToolbarOverviewComponent,
     ToolbarMultirowComponent,
     SidenavBackdropComponent,
