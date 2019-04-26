@@ -1,4 +1,5 @@
 .mat-toolbar {
   margin: 0 56px;
   width: calc(100% - 112px);
+  color: #696969;
 }
