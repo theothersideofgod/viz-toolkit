@@ -4,6 +4,7 @@
   text-align: left;
   overflow: auto;
   white-space: normal;
+  color: #696969;
 }
 
 .example-is-mobile .example-toolbar {
@@ -26,4 +27,12 @@ h1.example-app-name {
   /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
+}
+
+.mat-drawer {
+  color: #696969;
+}
+
+.mat-sidenav-content {
+  color: #696969;
 }

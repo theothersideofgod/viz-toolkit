@@ -1,6 +1,7 @@
 .example-container {
   height: 372px;
   text-align: left;
+  color: #696969;
 }
 
 .example-sidenav {
@@ -15,4 +16,12 @@
   margin: -56px 0px;
   display: block;
   height: 500px;
+}
+
+.mat-drawer {
+  color: #696969;
+}
+
+.mat-toolbar {
+  color: #696969;
 }

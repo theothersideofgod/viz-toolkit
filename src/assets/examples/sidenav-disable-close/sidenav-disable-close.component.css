@@ -2,4 +2,9 @@
   height: 300px;
   margin: -56px 0px;
   text-align: left;
+  color: #696969;
+}
+
+.mat-drawer {
+  color: #696969;
 }
