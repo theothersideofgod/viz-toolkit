@@ -11,6 +11,15 @@
   margin-bottom: 4px;
 }
 
-td {
+.example-full-width-half {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+td:first-child {
   padding-right: 24px;
+}
+
+p {
+  margin: 0px;
 }
