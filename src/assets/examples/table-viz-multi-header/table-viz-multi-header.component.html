@@ -1,1 +1,30 @@
-<p>TableVizMultiHeaderComponent Ready</p>
+<div class="example-container">
+  <div class="table-second-header">
+    Exceptions
+  </div>
+  <div matSort class="viz-table" (matSortChange)="sortData($event)">
+    <div class="viz-table-row ">
+      <div class="viz-table-head w70">
+        AVAILALBLE CONTRACT
+      </div>
+      <div class="viz-table-head w30">TYPE</div>
+    </div>
+
+    <ng-container *ngFor="let contract of sortedData">
+      <div class="viz-table-row">
+        <div class="viz-table-cell w70 example-first-col">
+          {{ contract.type }}
+        </div>
+        <div class="viz-table-cell w30">
+          <span class="circle-green"></span>{{ contract.priority }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <mat-paginator
+    [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+  >
+  </mat-paginator>
+</div>

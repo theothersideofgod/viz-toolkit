@@ -1,1 +1,71 @@
-<p>TableVizDifferElementComponent Ready</p>
+<div class="example-container">
+  <div
+    matSort
+    class="viz-table mat-elevation-z2"
+    (matSortChange)="sortData($event)"
+  >
+    <div class="viz-table-row ">
+      <div class="viz-table-head w70">
+        AVAILALBLE CONTRACT
+      </div>
+      <div class="viz-table-head w30">TYPE</div>
+    </div>
+
+    <ng-container *ngFor="let dessert of sortedData">
+      <div class="viz-table-row">
+        <div class="viz-table-cell w70 example-first-col" vizShowExpand #test>
+          {{ dessert.contract }}
+        </div>
+        <div class="viz-table-cell w30">{{ dessert.type }}</div>
+      </div>
+      <div
+        class="viz-table-row"
+        [vizExpand]="dessert.isExpanded"
+        style="overflow:hidden"
+      >
+        <div class="expand-row-container">
+          <nav mat-tab-nav-bar color="primary">
+            <a
+              mat-tab-link
+              *ngFor="let link of links"
+              (click)="activeLink = link"
+              [active]="activeLink == link"
+            >
+              {{ link }}
+            </a>
+            <button mat-flat-button color="primary" class="view-details">
+              View Details
+            </button>
+          </nav>
+
+          <div class="expand-row-tab-content">
+            <div class="expand-row-chart">
+              <viz-chart
+                height="200px"
+                width="200px"
+                [chartOption]="chartOption"
+              >
+              </viz-chart>
+
+              <div class="center-text" *ngIf="centerValue">
+                <div class="center-text-title">TOTAL USAGE</div>
+                <div class="center-text-value">{{ this.centerValue }}</div>
+              </div>
+            </div>
+
+            <ul class="expand-row-list">
+              <li *ngFor="let item of items; let i = index">
+                <span
+                  class="list-circle"
+                  [ngStyle]="{ backgroundColor: item.color }"
+                ></span>
+                <span>{{ item.name }}</span>
+                <span class="list-item-percent">{{ item.y }}%</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
