@@ -550,7 +550,7 @@ a {
   }
   .right {
     width: 61.8%;
-    background-color: #232f34;
+    background-color: rgba(#232f34, 0.7);
     display: inline-block;
     height: 100%;
   }
@@ -601,11 +601,19 @@ a {
     width: 62%;
     display: inline-block;
     height: 100%;
-    background-color: #232f34;
+    background-color: rgba(#232f34,0.7);
     div {
       position: absolute;
       bottom: 0px;
       right: 0px;
+      height: 18px;
+      width: 235px;
+      color: #FFFFFF;
+      font-family: "Soleto";
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 18px;
+      
     }
   }
 }

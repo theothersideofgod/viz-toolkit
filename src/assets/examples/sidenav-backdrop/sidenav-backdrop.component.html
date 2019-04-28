@@ -11,10 +11,9 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Has backdrop</mat-label>
-      <mat-select #hasBackdrop>
-        <mat-option>Unset</mat-option>
-        <mat-option [value]="true">True</mat-option>
-        <mat-option [value]="false">False</mat-option>
+      <mat-select #hasBackdrop value="1">
+        <mat-option value="1">True</mat-option>
+        <mat-option value="2">False</mat-option>
       </mat-select>
     </mat-form-field>
     <button mat-flat-button color="primary" (click)="drawer.toggle()">Toggle drawer</button>
