@@ -78,7 +78,8 @@
 
   chartOption = {
     chart: {
-      plotBackgroundColor: <span class="hljs-literal">null</span>,
+      <span class="hljs-comment">// plotBackgroundColor: '#fafafa',</span>
+      backgroundColor: <span class="hljs-string">'#fafafa'</span>,
       plotBorderWidth: <span class="hljs-number">0</span>,
       plotShadow: <span class="hljs-literal">false</span>
     },
@@ -94,6 +95,7 @@
           enabled: <span class="hljs-literal">false</span>
         },
         center: [<span class="hljs-string">'50%'</span>, <span class="hljs-string">'50%'</span>],
+        borderWidth: <span class="hljs-number">0</span>,
         point: {
           events: {
             mouseOver: <span class="hljs-keyword">this</span>.setCenterText.bind(<span class="hljs-keyword">this</span>)

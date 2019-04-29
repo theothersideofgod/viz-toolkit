@@ -78,7 +78,8 @@ export class TableVizDifferElementComponent implements OnInit {
 
   chartOption = {
     chart: {
-      plotBackgroundColor: null,
+      // plotBackgroundColor: '#fafafa',
+      backgroundColor: '#fafafa',
       plotBorderWidth: 0,
       plotShadow: false
     },
@@ -94,6 +95,7 @@ export class TableVizDifferElementComponent implements OnInit {
           enabled: false
         },
         center: ['50%', '50%'],
+        borderWidth: 0,
         point: {
           events: {
             mouseOver: this.setCenterText.bind(this)

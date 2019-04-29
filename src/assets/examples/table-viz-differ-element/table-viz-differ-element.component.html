@@ -6,7 +6,7 @@
   >
     <div class="viz-table-row ">
       <div class="viz-table-head w70">
-        AVAILALBLE CONTRACT
+        AVAILALBLE CONTRACTS
       </div>
       <div class="viz-table-head w30">TYPE</div>
     </div>
@@ -20,7 +20,7 @@
       </div>
       <div
         class="viz-table-row"
-        [vizExpand]="dessert.isExpanded"
+        [vizExpand]="test.isExpanded"
         style="overflow:hidden"
       >
         <div class="expand-row-container">
@@ -49,7 +49,7 @@
 
               <div class="center-text" *ngIf="centerValue">
                 <div class="center-text-title">TOTAL USAGE</div>
-                <div class="center-text-value">{{ this.centerValue }}</div>
+                <div class="center-text-value">${{ this.centerValue }}K</div>
               </div>
             </div>
 

@@ -14,15 +14,15 @@ export class TableVizMultiHeaderComponent implements OnInit {
   contracts = [
     {
       type: 'Admit Source',
-      priority: 'failed'
+      priority: 'Failed'
     },
     {
       type: 'Discharge Date',
-      priority: 'failed'
+      priority: 'Failed'
     },
     {
       type: 'Date of Birth',
-      priority: 'failed'
+      priority: 'Failed'
     }
   ];
 
