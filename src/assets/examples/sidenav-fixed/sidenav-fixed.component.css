@@ -1,7 +1,10 @@
 .example-container {
-  height: 372px;
   text-align: left;
   color: #696969;
+}
+
+.example-container-fixed {
+  position: initial;
 }
 
 .example-sidenav {
@@ -12,10 +15,8 @@
   background: rgba(255, 0, 0, 0.5);
 }
 
-:host {
-  margin: -56px 0px;
-  display: block;
-  height: 500px;
+.mat-sidenav-fixed {
+  position: absolute;
 }
 
 .mat-drawer {
@@ -24,4 +25,16 @@
 
 .mat-toolbar {
   color: #696969;
+}
+
+.sidenav-fixed-container-fixed {
+  position: relative;
+}
+
+.sidenav-fixed-container {
+  margin: -56px 0;
+}
+
+.mat-button {
+  margin-bottom: 101px
 }

@@ -1,7 +1,7 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">myTemplate</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sidenav-fixed-container"</span> [<span class="hljs-attr">class.sidenav-fixed-container-fixed</span>]=<span class="hljs-string">'options.value.fixed'</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-header"</span>&gt;</span>Header<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span> [<span class="hljs-attr">class.example-container-fixed</span>]=<span class="hljs-string">'options.value.fixed'</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>
       #<span class="hljs-attr">sidenav</span>
       <span class="hljs-attr">mode</span>=<span class="hljs-string">"side"</span>
@@ -45,6 +45,4 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-footer"</span>&gt;</span>Footer<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">'none'</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"500px"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100%"</span> [<span class="hljs-attr">ngeIframeOutlet</span>]=<span class="hljs-string">"myTemplate"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

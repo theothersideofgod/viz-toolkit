@@ -1,7 +1,7 @@
-<ng-template #myTemplate>
+<div class="sidenav-fixed-container" [class.sidenav-fixed-container-fixed]='options.value.fixed'>
   <mat-toolbar class="example-header">Header</mat-toolbar>
 
-  <mat-sidenav-container class="example-container">
+  <mat-sidenav-container class="example-container" [class.example-container-fixed]='options.value.fixed'>
     <mat-sidenav
       #sidenav
       mode="side"
@@ -45,6 +45,4 @@
   </mat-sidenav-container>
 
   <mat-toolbar class="example-footer">Footer</mat-toolbar>
-</ng-template>
-
-<iframe frameborder='none' height="500px" width="100%" [ngeIframeOutlet]="myTemplate"></iframe>
+</div>

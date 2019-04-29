@@ -597,7 +597,6 @@ import {
   MatFormFieldModule,
   MatSelectModule
 } from '@angular/material';
-import { IframeOutletDirective } from 'src/app/shared/iframe-outlet/iframe-outlet.directive';
 export const ALL_EXAMPLE_ITEMS = {
   'table-viz-differ-element' : {
     component: TableVizDifferElementComponent,
@@ -1392,7 +1391,6 @@ export const ALL_EXAMPLE_ITEMS = {
 // console.log(Object.keys(VizModules).join(','));
 @NgModule({
   declarations: [
-    IframeOutletDirective,
     TableVizDifferElementComponent,
     TableVizMultiHeaderComponent,
     TableVizBasicComponent,
