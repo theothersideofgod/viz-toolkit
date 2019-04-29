@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="24px" viewBox="0 0 10 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>@2xicn_input</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Toolkit-Documentation:-Components" transform="translate(-544.000000, -689.000000)">
+            <g id="Form-Controls" transform="translate(537.000000, 281.000000)">
+                <g id="Input" transform="translate(0.000000, 394.000000)">
+                    <g id="icn_input" transform="translate(0.000000, 14.000000)">
+                        <g id="Shape-2">
+                            <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                        </g>
+                        <path d="M12,5 L12,19" id="Path" stroke="#018DAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <g id="Path-2" transform="translate(8.000000, 16.500000)" stroke="#018DAB" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M-1.77635684e-15,0.5 L8,0.5" id="Path"></path>
+                        </g>
+                        <path d="M15.5,1 C13.5673,1 12,2.7912 12,5 C12,2.7912 10.4327,1 8.5,1" id="Path" stroke="#018DAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M15.5,23 C13.5673,23 12,21.2088 12,19 C12,21.2088 10.4327,23 8.5,23" id="Path" stroke="#018DAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -79,7 +79,7 @@ export class ComponentsComponent implements OnInit {
         },
         {
           title: 'input',
-          desc: '',
+          desc: 'Enter and edit text',
           route: 'input',
           img: 'input'
         },
