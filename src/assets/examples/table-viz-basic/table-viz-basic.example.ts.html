@@ -1,14 +1,70 @@
-<span class="hljs-keyword">import</span> { Component, OnInit } from <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { Sort } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Contract {
+  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span>;
+}
 <span class="hljs-meta">@Component</span>({
-	selector: <span class="hljs-string">'table-viz-basic'</span>,
+  selector: <span class="hljs-string">'table-viz-basic'</span>,
   templateUrl: <span class="hljs-string">'table-viz-basic.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'table-viz-basic.component.css'</span>],
+  styleUrls: [<span class="hljs-string">'table-viz-basic.component.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableVizBasicComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OnInit</span> </span>{
-  ngOnInit() { }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableVizBasicComponent <span class="hljs-keyword">implements</span> OnInit {
+  contracts = [
+    {
+      name: <span class="hljs-string">'Zipper Hips &amp; Knees'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>
+    },
+    {
+      name: <span class="hljs-string">'Howmedica Osteonics (Stryker) Hips &amp; Knees'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>
+    },
+    {
+      name: <span class="hljs-string">'Johnson &amp; Johnson (Dupuy Synthes)'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>
+    },
+    {
+      name: <span class="hljs-string">'Johnson &amp; Johnson'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>
+    }
+  ];
+
+  sortedData;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">this</span>.sortedData = <span class="hljs-keyword">this</span>.contracts.slice();
+  }
+
+  sortData(sort: Sort) {
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">this</span>.contracts.slice();
+    <span class="hljs-keyword">if</span> (!sort.active || sort.direction === <span class="hljs-string">''</span>) {
+      <span class="hljs-keyword">this</span>.sortedData = data;
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">this</span>.sortedData = data.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> isAsc = sort.direction === <span class="hljs-string">'asc'</span>;
+      <span class="hljs-keyword">switch</span> (sort.active) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'contract'</span>:
+          <span class="hljs-keyword">return</span> compare(a.name, b.name, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'type'</span>:
+          <span class="hljs-keyword">return</span> compare(a.type, b.type, isAsc);
+
+        <span class="hljs-keyword">default</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+      }
+    });
+
+    <span class="hljs-built_in">console</span>.log(sort);
+  }
+
+  ngOnInit(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">//Called after the constructor, initializing input properties, and the first call to ngOnChanges.</span>
+    <span class="hljs-comment">//Add 'implements OnInit' to the class.</span>
+  }
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> TableVizBasicData = {
-	name: <span class="hljs-string">'TableVizBasic'</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compare</span>(<span class="hljs-params">a, b, isAsc</span>) </span>{
+  <span class="hljs-keyword">return</span> (a &lt; b ? <span class="hljs-number">-1</span> : <span class="hljs-number">1</span>) * (isAsc ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>);
 }

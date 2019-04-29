@@ -1,1 +1,71 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>TableVizDifferElementComponent Ready<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+    <span class="hljs-attr">matSort</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-table mat-elevation-z2"</span>
+    (<span class="hljs-attr">matSortChange</span>)=<span class="hljs-string">"sortData($event)"</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-table-row "</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-table-head w70"</span>&gt;</span>
+        AVAILALBLE CONTRACT
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-table-head w30"</span>&gt;</span>TYPE<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let dessert of sortedData"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-table-row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-table-cell w70 example-first-col"</span> <span class="hljs-attr">vizShowExpand</span> #<span class="hljs-attr">test</span>&gt;</span>
+          {{ dessert.contract }}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-table-cell w30"</span>&gt;</span>{{ dessert.type }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"viz-table-row"</span>
+        [<span class="hljs-attr">vizExpand</span>]=<span class="hljs-string">"dessert.isExpanded"</span>
+        <span class="hljs-attr">style</span>=<span class="hljs-string">"overflow:hidden"</span>
+      &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"expand-row-container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">mat-tab-nav-bar</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"primary"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+              <span class="hljs-attr">mat-tab-link</span>
+              *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let link of links"</span>
+              (<span class="hljs-attr">click</span>)=<span class="hljs-string">"activeLink = link"</span>
+              [<span class="hljs-attr">active</span>]=<span class="hljs-string">"activeLink == link"</span>
+            &gt;</span>
+              {{ link }}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-flat-button</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"view-details"</span>&gt;</span>
+              View Details
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"expand-row-tab-content"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"expand-row-chart"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">viz-chart</span>
+                <span class="hljs-attr">height</span>=<span class="hljs-string">"200px"</span>
+                <span class="hljs-attr">width</span>=<span class="hljs-string">"200px"</span>
+                [<span class="hljs-attr">chartOption</span>]=<span class="hljs-string">"chartOption"</span>
+              &gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">viz-chart</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"center-text"</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"centerValue"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"center-text-title"</span>&gt;</span>TOTAL USAGE<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"center-text-value"</span>&gt;</span>{{ this.centerValue }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"expand-row-list"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of items; let i = index"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>
+                  <span class="hljs-attr">class</span>=<span class="hljs-string">"list-circle"</span>
+                  [<span class="hljs-attr">ngStyle</span>]=<span class="hljs-string">"{ backgroundColor: item.color }"</span>
+                &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ item.name }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-item-percent"</span>&gt;</span>{{ item.y }}%<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

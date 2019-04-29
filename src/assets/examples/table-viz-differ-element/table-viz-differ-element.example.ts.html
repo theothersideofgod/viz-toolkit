@@ -1,14 +1,159 @@
-<span class="hljs-keyword">import</span> { Component, OnInit } from <span class="hljs-string">'@angular/core'</span>;
-
+<span class="hljs-keyword">import</span> { Sort } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Dessert {
+  calories: <span class="hljs-built_in">number</span>;
+  carbs: <span class="hljs-built_in">number</span>;
+  fat: <span class="hljs-built_in">number</span>;
+  name: <span class="hljs-built_in">string</span>;
+  protein: <span class="hljs-built_in">number</span>;
+}
 <span class="hljs-meta">@Component</span>({
-	selector: <span class="hljs-string">'table-viz-differ-element'</span>,
+  selector: <span class="hljs-string">'table-viz-differ-element'</span>,
   templateUrl: <span class="hljs-string">'table-viz-differ-element.component.html'</span>,
-  styleUrls: [<span class="hljs-string">'table-viz-differ-element.component.css'</span>],
+  styleUrls: [<span class="hljs-string">'table-viz-differ-element.component.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableVizDifferElementComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OnInit</span> </span>{
-  ngOnInit() { }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableVizDifferElementComponent <span class="hljs-keyword">implements</span> OnInit {
+  desserts = [
+    {
+      contract: <span class="hljs-string">'Zipper Hips &amp; Knees'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      isExpanded: <span class="hljs-literal">true</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'zipper-hips_knees(3).txt'</span>
+        }
+      ]
+    },
+    {
+      contract: <span class="hljs-string">'Howmedica Ostenonics (stryker) Hips &amp; Knees'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      isExpanded: <span class="hljs-literal">false</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'howmediaca-ostenonics_knees(3).txt'</span>
+        }
+      ]
+    },
+    {
+      contract: <span class="hljs-string">'Johnson &amp; Johnson (Dupuy Synthes)'</span>,
+      <span class="hljs-keyword">type</span>: <span class="hljs-string">'Marketing'</span>,
+      isExpanded: <span class="hljs-literal">false</span>,
+      subs: [
+        {
+          file: <span class="hljs-string">'johnson-johnson(1).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'johnson-johnson(2).txt'</span>
+        },
+        {
+          file: <span class="hljs-string">'johnson-johnson(3).txt'</span>
+        }
+      ]
+    }
+  ];
+
+  sortedData;
+  links = [<span class="hljs-string">'JAN'</span>, <span class="hljs-string">'FEB'</span>, <span class="hljs-string">'MAR'</span>];
+  activeLink = <span class="hljs-keyword">this</span>.links[<span class="hljs-number">0</span>];
+
+  items = [
+    { color: <span class="hljs-string">'#00CC99'</span>, name: <span class="hljs-string">'CPT Description 01'</span>, y: <span class="hljs-number">30</span> },
+    { color: <span class="hljs-string">'#9966FF'</span>, name: <span class="hljs-string">'CPT Description 01'</span>, y: <span class="hljs-number">22</span> },
+    { color: <span class="hljs-string">'#3399FF'</span>, name: <span class="hljs-string">'CPT Description 01'</span>, y: <span class="hljs-number">20</span> },
+    { color: <span class="hljs-string">'#FF9933'</span>, name: <span class="hljs-string">'CPT Description 01'</span>, y: <span class="hljs-number">18</span> },
+    { color: <span class="hljs-string">'#99CC33'</span>, name: <span class="hljs-string">'CPT Description 01'</span>, y: <span class="hljs-number">10</span> }
+  ];
+
+  chartOption = {
+    chart: {
+      plotBackgroundColor: <span class="hljs-literal">null</span>,
+      plotBorderWidth: <span class="hljs-number">0</span>,
+      plotShadow: <span class="hljs-literal">false</span>
+    },
+    title: {
+      text: <span class="hljs-string">''</span>
+    },
+    tooltip: {
+      enabled: <span class="hljs-literal">false</span>
+    },
+    plotOptions: {
+      pie: {
+        dataLabels: {
+          enabled: <span class="hljs-literal">false</span>
+        },
+        center: [<span class="hljs-string">'50%'</span>, <span class="hljs-string">'50%'</span>],
+        point: {
+          events: {
+            mouseOver: <span class="hljs-keyword">this</span>.setCenterText.bind(<span class="hljs-keyword">this</span>)
+          }
+        },
+        events: {
+          mouseOut: <span class="hljs-keyword">this</span>.unsetCenterText.bind(<span class="hljs-keyword">this</span>)
+        }
+      }
+    },
+    series: [
+      {
+        <span class="hljs-keyword">type</span>: <span class="hljs-string">'pie'</span>,
+        name: <span class="hljs-string">'Browser share'</span>,
+        innerSize: <span class="hljs-string">'70%'</span>,
+        data: <span class="hljs-keyword">this</span>.items
+      }
+    ]
+  };
+
+  centerValue = <span class="hljs-literal">null</span>
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">this</span>.sortedData = <span class="hljs-keyword">this</span>.desserts.slice();
+  }
+
+  setCenterText(e) {
+    <span class="hljs-keyword">this</span>.centerValue = e.target.y
+  }
+
+  unsetCenterText() {
+    <span class="hljs-keyword">this</span>.centerValue = <span class="hljs-literal">null</span>
+  }
+
+
+  sortData(sort: Sort) {
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">this</span>.desserts.slice();
+    <span class="hljs-keyword">if</span> (!sort.active || sort.direction === <span class="hljs-string">''</span>) {
+      <span class="hljs-keyword">this</span>.sortedData = data;
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">this</span>.sortedData = data.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> isAsc = sort.direction === <span class="hljs-string">'asc'</span>;
+      <span class="hljs-keyword">switch</span> (sort.active) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'contract'</span>:
+          <span class="hljs-keyword">return</span> compare(a.contract, b.contract, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'type'</span>:
+          <span class="hljs-keyword">return</span> compare(a.type, b.type, isAsc);
+
+        <span class="hljs-keyword">default</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+      }
+    });
+
+    <span class="hljs-built_in">console</span>.log(sort);
+  }
+  ngOnInit() {}
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> TableVizDifferElementData = {
-	name: <span class="hljs-string">'TableVizDifferElement'</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compare</span>(<span class="hljs-params">a, b, isAsc</span>) </span>{
+  <span class="hljs-keyword">return</span> (a &lt; b ? <span class="hljs-number">-1</span> : <span class="hljs-number">1</span>) * (isAsc ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>);
 }
